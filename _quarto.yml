@@ -2,16 +2,30 @@ project:
   type: website
 
 website:
-  title: "Mrihs.Creating-the-World.github.io"
+  title: "Creating the World"
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+    right:
+      - text: "Kapitel"  
+        menu:
+          - href: Chapters/Chapter_1.qmd
+            text: Kapitel 1
+          - href: Chapters/Chapter_2.qmd
+            text: Kapitel 2
+      - text: "Folien"
+        menu: 
+          - href: Chapters/Chapter_1.qmd
+            text: Kapitel 1
+      - text: "Ressourcen"
+        menu:
+          - href: Chapters/Chapter_1.qmd
+            text: Kapitel 1
+      - href: about.qmd
+        text: Über
+
 
 format:
   html:
-    theme: cosmo
+    theme: journal
     css: styles.css
     toc: true
 

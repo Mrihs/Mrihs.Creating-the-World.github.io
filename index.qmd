@@ -1,11 +1,5 @@
 ---
-title: "Mrihs.Creating-the-World.github.io"
+title: "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender"
 ---
 
-This is a Quarto website.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```

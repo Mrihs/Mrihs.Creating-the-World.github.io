@@ -1,0 +1,282 @@
+/*-- scss:defaults --*/
+$navbar-bg: #FFA600;
+$navbar-hl: white;
+$navbar-fg: white;
+$navbar-brand-font-size: 2rem;
+$navbar-brand-height: 3rem;
+$navbar-padding-y: 1rem;
+$nav-link-font-size: 1.25rem;
+$nav-link-padding-x: 3rem;
+
+
+
+/*
+$navbar-bg: #FF8E00;
+*/
+
+
+.navbar-nav .nav-item:first-child .nav-link {
+    padding-left: 5;
+}
+
+
+
+
+
+
+
+
+
+
+/*Tipp-Box*/
+$box-icon-height: 5rem;
+$box-icon-widtht: 4.5rem;
+$box-header-text-size: 1.5rem;
+
+.tippbox {
+  margin-top: 1em;
+  margin-bottom: 1em;  
+  border-radius: .4rem;
+  border-left: solid black 0.5rem;
+  border-right: solid 1px black;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  border-left-color: #2A4D14 !important;
+}
+
+
+.tippbox-body {
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: #DCEDB9;
+
+}
+
+.tippbox-body > :last-child {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0;
+}
+
+
+.tippbox-icon {
+  height: $box-icon-height;
+  width: $box-icon-widtht;
+  display: inline-block;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: calc(#{$box-icon-height} - 1rem) calc(#{$box-icon-widtht} + 1rem);
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background-image: url('icons/info.png');
+  position: absolute;
+  left: 0; /* Positioniert das Icon immer am linken Rand */
+  top: 50%;
+  transform: translateY(-50%); /* Vertikale Zentrierung des Icons */
+}
+
+
+.tippbox-header p {
+  padding-top: 0.2em;
+  font-size: $box-header-text-size;
+  margin: 0; /* Entfernt zusätzliche Ränder */
+
+}
+
+.tippbox-header {
+  display: flex;
+  align-items: center; /* Vertikale Zentrierung */
+  justify-content: center; /* Horizontale Zentrierung des gesamten Inhalts */
+  //border-bottom: 0.5rem;
+  //margin-top: 0.5em;
+  margin-bottom: 0.0em;
+  font-weight: 800;
+  opacity: 85%;
+  font-size: 0.9rem;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: #44AF69;
+  height: calc(#{$box-icon-height} + 0.5rem) ;
+  overflow: hidden;
+  border-bottom-color: black !important;
+  border-bottom: solid black 0.1rem;
+  align-items: center; /* Vertikale Zentrierung */
+  justify-content: center; /* Horizontale Zentrierung */
+  position: relative; /* Für das absolute Positionieren des Icons */
+
+}
+
+
+
+
+
+
+
+
+
+
+/*Exercise-Box*/
+.exercisebox {
+  margin-top: 1em;
+  margin-bottom: 1em;  
+  border-radius: .4rem;
+  border-left: solid black 0.5rem;
+  border-right: solid 1px black;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  border-left-color: #314CB6 !important;
+}
+
+
+.exercisebox-body {
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: #A8E0FF;
+
+}
+
+.exercisebox-body > :last-child {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0;
+}
+
+
+.exercisebox-icon {
+  height: $box-icon-height;
+  width: $box-icon-widtht;
+  display: inline-block;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: calc(#{$box-icon-height} - 1rem) calc(#{$box-icon-widtht} + 1rem);
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background-image: url('icons/exercise.png');
+  position: absolute;
+  left: 0; /* Positioniert das Icon immer am linken Rand */
+  top: 50%;
+  transform: translateY(-50%); /* Vertikale Zentrierung des Icons */
+}
+
+
+.exercisebox-header p {
+  padding-top: 0.2em;
+  font-size: $box-header-text-size;
+  margin: 0; /* Entfernt zusätzliche Ränder */
+
+}
+
+.exercisebox-header {
+  display: flex;
+  align-items: center; /* Vertikale Zentrierung */
+  justify-content: center; /* Horizontale Zentrierung des gesamten Inhalts */
+  //border-bottom: 0.5rem;
+  //margin-top: 0.5em;
+  margin-bottom: 0.0em;
+  font-weight: 800;
+  opacity: 85%;
+  font-size: 0.9rem;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: #63ADF2;
+  height: calc(#{$box-icon-height} + 0.5rem) ;
+  overflow: hidden;
+  border-bottom-color: black !important;
+  border-bottom: solid black 0.1rem;
+  align-items: center; /* Vertikale Zentrierung */
+  justify-content: center; /* Horizontale Zentrierung */
+  position: relative; /* Für das absolute Positionieren des Icons */
+}
+
+
+
+
+
+
+
+
+
+
+/*rememberbox-Box*/
+.rememberbox {
+  margin-top: 1em;
+  margin-bottom: 1em;  
+  border-radius: .4rem;
+  border-left: solid black 0.5rem;
+  border-right: solid 1px black;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  border-left-color: #a67c00 !important;
+}
+
+
+.rememberbox-body {
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: #fff0cc;
+}
+
+.rememberbox-body > :last-child {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0;
+}
+
+
+.rememberbox-icon {
+  height: $box-icon-height;
+  width: $box-icon-widtht;
+  display: inline-block;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: calc(#{$box-icon-height} - 1rem) calc(#{$box-icon-widtht} + 1rem);
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  background-image: url('icons/remember.png');
+  position: absolute;
+  left: 0; /* Positioniert das Icon immer am linken Rand */
+  top: 50%;
+  transform: translateY(-50%); /* Vertikale Zentrierung des Icons */
+}
+
+
+.rememberbox-header p {
+  padding-top: 0.2em;
+  font-size: $box-header-text-size;
+  margin: 0; /* Entfernt zusätzliche Ränder */
+
+}
+
+.rememberbox-header {
+  display: flex;
+  align-items: center; /* Vertikale Zentrierung */
+  justify-content: center; /* Horizontale Zentrierung des gesamten Inhalts */
+  //border-bottom: 0.5rem;
+  //margin-top: 0.5em;
+  margin-bottom: 0.0em;
+  font-weight: 800;
+  opacity: 85%;
+  font-size: 0.9rem;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: #ffcf40;
+  height: calc(#{$box-icon-height} + 0.5rem) ;
+  overflow: hidden;
+  border-bottom-color: black !important;
+  border-bottom: solid black 0.1rem;
+  align-items: center; /* Vertikale Zentrierung */
+  justify-content: center; /* Horizontale Zentrierung */
+  position: relative; /* Für das absolute Positionieren des Icons */
+}

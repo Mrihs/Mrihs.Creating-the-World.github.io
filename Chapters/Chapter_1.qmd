@@ -8,34 +8,26 @@ editor: visual
 
 Um Blender auf einem Rechner zu installieren, muss das Installationspaket von Blender auf dessen Website (*www.blender.org*) unter dem Reiter «Download» heruntergeladen werden. Dort sollte bereits automatisch das Betriebssystem des Rechners erkannt und die aktuellste Version angeboten werden. Ansonsten lässt sich mittels eines Auswahlfeldes auch die entsprechende Version auswählen.
 
-::: {.column-margin}
-
+::: column-margin
 Installationsdatei herunterladen
-
 :::
 
 Unter *www.download.blender.org/release/* lassen sich zudem frühere Versionen von Blender herunterladen. Dieser Kurs ist auf Blender 3.3 ausgerichtet, weshalb der Download dieser Version empfohlen wird.
 
-::: {.column-margin}
-
+::: column-margin
 Frühere Versionen von Blender
-
 :::
 
 ### Mac
 
 Mac-Benutzer wählen den Link mit der Endung «*.dmg*». Abhängig vom Computermodell gibt es zwei Versionen. Für Apple-Computer, welche Apples hauseigenen Prozessor M1 eingebaut haben, wird die Version mit der Endung «arm64.dmg» benötigt. Für die anderen Apple-Computer die Version mit der Endung «*x64.dmg*». Um herauszufinden, welcher Prozessor/Chip im eigenen Apple-Gerät eingebaut ist, kann man im Menü «*Über diesen Mac*» (oben links beim Apfelsymbol zu finden) nachschauen. Wenn Apples eigener Chip verbaut ist, wird «*Chip Apple M1*» aufgelistet. Wenn der Computer nicht über den M1-Chipf verfügt, wird an dieser Stelle der Prozessor aufgeführt.
 
-::: {.column-margin}
-
+::: column-margin
 Installationsdatei für Mac-User
-
 :::
 
 Nach dem Download sollte das entsprechende .dmg-Paket geöffnet werden. Anschliessend öffnet sich ein Fenster, dass die Blender-Software und den Applikationsordner zeigt. Hier sollte nun die Blender-Software in den Applikationsordner gezogen werden. Anschliessend ist die Installation abgeschlossen.
 
-::: {.column-margin}
-
+::: column-margin
 Installation
-
 :::

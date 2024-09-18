@@ -5,29 +5,31 @@ website:
   title: "Creating the World"
   navbar:
     right:
-      - text: "Kapitel"  
+      - text: "Cheatsheets" 
+        icon: lightbulb
+        menu:
+          - href: Cheatsheets/cheatsheet.pdf
+            text: "Tastenkombinationen"
+      - text: Ressourcen
+        icon: folder
+      - text: "Folien"
+        icon: images
+        menu: 
+          - href: Chapters/Chapter_1.qmd
+            text: Kapitel 1
+      - text: "Skript"  
+        icon: eyeglasses
         menu:
           - href: Chapters/Chapter_1.qmd
             text: Kapitel 1
           - href: Chapters/Chapter_2.qmd
             text: Kapitel 2
-      - text: "Folien"
-        menu: 
-          - href: Chapters/Chapter_1.qmd
-            text: Kapitel 1
-      - text: "Ressourcen"
-        menu:
-          - href: Chapters/Chapter_1.qmd
-            text: Kapitel 1
       - href: about.qmd
+        icon: info-circle
         text: Über
-
 
 format:
   html:
-    theme: journal
-    css: styles.css
+    theme: [cosmos, styles.scss]
     toc: true
-
-
-
+    fontsize: 17px

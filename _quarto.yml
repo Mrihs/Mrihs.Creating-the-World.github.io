@@ -32,4 +32,6 @@ format:
   html:
     theme: [cosmos, styles.scss]
     toc: true
+    toc-title: Auf dieser Seite
     fontsize: 17px
+    lang: de

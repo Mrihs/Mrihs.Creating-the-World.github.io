@@ -280,3 +280,54 @@ $box-header-text-size: 1.5rem;
   justify-content: center; /* Horizontale Zentrierung */
   position: relative; /* Für das absolute Positionieren des Icons */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.quarto-dark .margin-caption, 
+.quarto-dark div.aside, 
+.quarto-dark aside:not(.footnotes):not(.sidebar), 
+.quarto-dark .column-margin,
+.quarto-light .margin-caption, 
+.quarto-light div.aside, 
+.quarto-light aside:not(.footnotes):not(.sidebar), 
+.quarto-light .column-margin {
+    grid-column: body-start / page-start !important;
+    z-index: 998;
+}
+
+
+body .page-columns {
+  grid-template-columns: 
+  [screen-start] 3em 
+  [screen-start-inset] 2.5fr 
+  [page-start page-start-inset] 80px 
+  [body-start-outset] 35px 
+  [body-start] 1.5em 
+  [body-content-start] minmax(500px, calc(1200px - 3em)) 
+  [body-content-end] 1.5em 
+  [body-end] 35px 
+  [body-end-outset] minmax(75px, 145px) 
+  [page-end-inset] 35px 
+  [page-end] 2fr 
+  [screen-end-inset] 1.5em 
+  [screen-end] !important;
+}
+
+
+body.fullcontent:not(.floating):not(.docked) .page-columns {
+    display:grid;
+    gap:0;
+    grid-template-columns:[screen-start] 1.5em [screen-start-inset] 5fr [page-start page-start-inset] 35px [body-start-outset] 35px [body-start] 1.5em [body-content-start] minmax(500px, calc(1850px - 3em)) [body-content-end] 1.5em [body-end] 35px [body-end-outset] 35px [page-end-inset page-end] 5fr [screen-end-inset] 1.5em [screen-end]
+   }

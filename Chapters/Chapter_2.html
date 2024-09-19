@@ -8,7 +8,7 @@
 
 <meta name="author" content="Michael Rihs">
 
-<title>Kapitel 2 – Creating the World</title>
+<title>2. Die Arbeitsoberfläche des 3D-Viewports – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,19 +108,13 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Ressourcen</span>
     </span>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-folien" role="link" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="bi bi-images" role="img">
+  <li class="nav-item">
+    <span class="nav-link">
+    <i class="bi bi-images" role="img">
 </i> 
- <span class="menu-text">Folien</span>
-    </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-folien">    
-        <li>
-    <a class="dropdown-item" href="../Chapters/Chapter_1.html">
- <span class="dropdown-text">Kapitel 1</span></a>
+<span class="menu-text">Folien</span>
+    </span>
   </li>  
-    </ul>
-  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-skript" role="link" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-eyeglasses" role="img">
@@ -154,15 +148,31 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#toolbar" id="toc-toolbar" class="nav-link active" data-scroll-target="#toolbar">Toolbar</a></li>
+  <li><a href="#sidebar" id="toc-sidebar" class="nav-link" data-scroll-target="#sidebar">Sidebar</a></li>
+  <li><a href="#header" id="toc-header" class="nav-link" data-scroll-target="#header">Header</a>
+  <ul class="collapse">
+  <li><a href="#aktions-einstellungen" id="toc-aktions-einstellungen" class="nav-link" data-scroll-target="#aktions-einstellungen">Aktions-Einstellungen</a></li>
+  <li><a href="#erweiterte-hilfsmittel-zur-bearbeitung" id="toc-erweiterte-hilfsmittel-zur-bearbeitung" class="nav-link" data-scroll-target="#erweiterte-hilfsmittel-zur-bearbeitung">Erweiterte Hilfsmittel zur Bearbeitung</a></li>
+  <li><a href="#bearbeitungsmodus" id="toc-bearbeitungsmodus" class="nav-link" data-scroll-target="#bearbeitungsmodus">Bearbeitungsmodus</a></li>
+  <li><a href="#anzeige-optionen" id="toc-anzeige-optionen" class="nav-link" data-scroll-target="#anzeige-optionen">Anzeige-Optionen</a></li>
+  </ul></li>
+  <li><a href="#letzte-aktion-verfeinern" id="toc-letzte-aktion-verfeinern" class="nav-link" data-scroll-target="#letzte-aktion-verfeinern">Letzte Aktion verfeinern</a></li>
+  <li><a href="#dargestellte-viewport-overlays" id="toc-dargestellte-viewport-overlays" class="nav-link" data-scroll-target="#dargestellte-viewport-overlays">Dargestellte Viewport-Overlays</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Kapitel 2</h1>
+<h1 class="title">2. Die Arbeitsoberfläche des 3D-Viewports</h1>
 </div>
 
 
@@ -186,7 +196,207 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Funktion des 3D-Viewports</p>
+</div></div><p>Der 3D-Viewport stellt eine der wichtigsten Arbeitsoberflächen in Blender dar. In ihm werden die 3D-Objekte sowie die Szenen, in denen sie integriert werden, angezeigt. Zudem werden im 3D-Viewport eine Reihe anderer Einstellungen dargestellt, welche in anderen Editoren konfigu-riert werden können. Die Bearbeitung der grundlegenden Struktur von 3D-Objekten erfolgt in der Regel direkt im 3D-Viewport. Der Arbeitsbereich des 3D-Viewports lässt sich in verschiede-ne Areale aufteilen, welche nachfolgend genauer betrachtet werden.</p>
+<section id="toolbar" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="toolbar">Toolbar</h2>
 
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Toolbars</p>
+</div></div><p>Die Toolbar befindet sich auf der linken Seite der 3D-View. Allerdings sind Toolbars auch in anderen Editoren anzutreffen. Die Toolbars lassen sich jeweils mit der Taste T ein- und aus-blenden. Da es auch im 3D-Viewport verschiedene Bearbeitungsmöglichkeiten gibt, variieren die Elemente in der Toolbar abhängig vom Bearbeitungsmodus. Diese sind entweder per Mausklick über diese Toolbar oder mithilfe von Tastenkombinationen aufrufbar. In diesem Kurs wird vor allem auf Tastenkombinationen verwiesen, wenn Operationen durchgeführt werden.</p>
+</section>
+<section id="sidebar" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sidebar">Sidebar</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Sidebars</p>
+</div></div><p>Die Sidebar befindet sich auf der rechten Seite des Viewport-Displays, muss allerdings noch mit der Taste N geöffnet werden. Mit dieser Taste lässt sich die Sidebar ebenfalls wieder ver-bergen. Die Sidebar ist auch in anderen Editoren anzutreffen und wird dort ebenfalls mit der Taste N ein- und ausgeblendet. Die Sidebar ist zudem anhand von Registerkarten in zusätzliche Kategorien eingeordnet. Unter dem Register «Item» können etwa Einstellungen zum aktuell ausgewählten Objekt betrachtet und verändert werden, im Register «Tool» können Einstellungen zum aktuell ausgewählten Werkzeug verfeinert werden und unter dem Register «View» können Einstellungen zur Ansicht betrachtet und verfeinert werden.</p>
+</section>
+<section id="header" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="header">Header</h2>
+<p>Im Header sind zusätzliche Einstellungen aufzufinden. Diese können nicht nur zwischen den einzelnen Editoren variieren, sondern auch zwischen den einzelnen Bearbeitungsmodi inner-halb der 3D-View.</p>
+<section id="aktions-einstellungen" class="level3">
+<h3 class="anchored" data-anchor-id="aktions-einstellungen">Aktions-Einstellungen</h3>
+<p>In der oberen linken Ecke, direkt neben dem Bedienfeld für die Auswahl des Editors, befinden sich Einstellungsmöglichkeiten, welche basierend auf der aktuell durchgeführten Aktion verfeinert werden können.</p>
+<div id="fig-2_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-2_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_2/2_1_AktionseinstellungAuswahl.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Aktions-Einstellungen am Beispiel der Aus-wahl.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="erweiterte-hilfsmittel-zur-bearbeitung" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="erweiterte-hilfsmittel-zur-bearbeitung">Erweiterte Hilfsmittel zur Bearbeitung</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Hilfsmittel zur Bearbeitung von Objekten</p>
+</div></div><p>In der Mitte des Headers befinden sich eine Reihe von erweiterten Einstellungen, welche bei der Objektbearbeitung als Hilfsmittel verwendet werden können. Hierzu gehört beispielsweise die proportionale Bearbeitung von Objekten oder das Festlegen von Bezugspunkten für Trans-formationen. Diese Hilfsmittel werden in einem späteren Kapitel ausführlich behandelt.</p>
+<div id="fig-2_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-2_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_2/2_2_Erweiterte_Hilfsmittel.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Erweiterte Hilfsmittel.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="bearbeitungsmodus" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="bearbeitungsmodus">Bearbeitungsmodus</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Auswahl des Bearbeitungsmodus</p>
+</div></div><p>In der Zeile unterhalb des Headers befindet sich links das Menü zur Auswahl des Bearbei-tungsmodus. Dabei wird definiert, wie das aktuelle Objekt bearbeitet werden soll. So kann bei-spielsweise im Object-Mode das Objekt als Ganzes bearbeitet werden, während im Edit-Mode die Struktur des Objektes bearbeitet werden kann.</p>
+<div id="fig-2_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-2_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_2/2_2_Erweiterte_Hilfsmittel.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Auswahl des Bearbeitungs-modus.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="anzeige-optionen" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="anzeige-optionen">Anzeige-Optionen</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Anzeige-Optionen</p>
+</div></div><p>In der rechten oberen Ecke befinden sich Optionen zur Darstellung der Objekte in der 3D-View. Diese umfassen: • View Object Types • Show Gizmo • Show Overlays • Toggle X-Ray • Viewport Shading</p>
+<section id="view-object-types" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="view-object-types">View Object Types</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Ein- und Ausblen-den von Objektarten</p>
+</div></div><p>Hier lassen sich verschiedene Arten von Objekten alle gemeinsam innerhalb einer Szene ver-stecken, indem das Auge zu der entsprechenden Objektart abgewählt wird. Durch das Abwäh-len des Auges neben dem Objekttyp «Camera» werde etwa alle Kameras aus der Szene un-sichtbar gemacht. Die Objekte sind allerdings noch vorhanden und weisen immer noch diesel-be Funktion auf – sie werden lediglich nicht mehr im 3D-Viewport angezeigt. Neben dem Auge lässt sich zudem anhand der Schaltfläche mit einem abgebildeten Cursor einstellen, dass die entsprechenden Objektarten nicht mehr auswählbar sind.</p>
+<div style="background-color: #d3d3d3; padding: 10px; display: inline-block;">
+<div id="fig-2_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-2_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_2/2_4_viewobjecttypes.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: View Object Types.
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="show-gizmo" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="show-gizmo">Show Gizmo</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Navigations-Tools ein- und ausblen-den</p>
+</div></div><p>Innerhalb dieser Option lassen sich in der oberen rechten Ecke Tools zur Navigation mittels der Kamera ein- und ausblenden. Zudem kann hier die Darstellung eines Gizmos bei der aktuellen Auswahl aktiviert werden. Dieses Gizmo kann verwendet werden, um Objekte mittels der Maus zu rotieren, zu skalieren oder zu bewegen.</p>
+<div style="background-color: #d3d3d3; padding: 10px; display: inline-block;">
+<div id="fig-2_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-2_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_2/2_5_Show_Gizmos.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5: Show Gizmo.
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="show-overlays" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="show-overlays">Show Overlays</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Orientierungsobjekte im Viewport ein- und ausblen-den</p>
+</div></div><p>Durch die Deaktivierung der Viewport-Overlays wird im 3D-Viewport die Ansicht bestimmter Hilfsmittel (beispielsweise die Achsen oder die Markierung der aktuellen Auswahl) ausgeschal-tet. Im Dropdown-Menü lässt sich zudem die Darstellung von einzelnen Hilfsmitteln individuell an- und abwählen.</p>
+<div style="background-color: #d3d3d3; padding: 10px; display: inline-block;">
+<div id="fig-2_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-2_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_2/2_6_showoverlays.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6: Show Overlays.
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="toggle-x-ray" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="toggle-x-ray">Toggle X-Ray</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Röntgenblick ein- und ausschalten</p>
+</div></div><p>Wenn die Schaltfläche «Toggle X-Ray» ausgewählt ist, erweitert sich die Ansicht von Objekten, sodass durch sie hindurchgesehen werden kann. Dies ermöglicht es etwa, dass auch ein Ob-jekt, welches hinter einem anderen Objekt verborgen liegt, betrachtet werden kann. Wenn die-se Option aktiviert ist, können zudem die verborgenen Objekte mittels eines Mausklicks ange-wählt werden. Die Schaltfläche kann auch mit den Tasten ¥ + Z ein- und ausgeschaltet wer-den.</p>
+<div style="background-color: #d3d3d3; padding: 10px; display: inline-block;">
+<div id="fig-2_7" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-2_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_2/2_7_xray.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;7: Toggle X-Ray
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="viewport-shading" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="viewport-shading">Viewport Shading</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Art der Objektdar-stellung im Viewport</p>
+</div></div><p>In der rechten oberen Ecke befinden sich vier Schaltflächen, um einzustellen, welche Elemen-te bei der Darstellung der Objekte berücksichtigt werden sollen. Je nach Auswahl werden dadurch die Objekte unterschiedlich dargestellt: • Wireframe: Die Objekte werden in ihrer Struktur als Gitternetz angezeigt, sodass deren Aufbaugitter klar ersichtlich wird. Hierbei werden die Flächen der Objekte nicht dargestellt. • Solid: Die Objekte werden als Ganzes dargestellt, sodass auch die Flächen sichtbar sind. Allerdings werden die verwendeten Materialien und Texturen nicht berücksichtigt. • Material Preview: Die Objekte werden als Ganzes dargestellt, inklusive deren Materialien und Texturen. Die Umgebung wird anhand von vorgefertigten Szenen und Umgebungen beleuchtet, sodass eine schnelle Vorschau möglich ist. • Rendered: Die Objekte werden als Ganzes dargestellt, inklusive deren Materialien und Tex-turen. Die Umgebung und die Beleuchtung entsprechen den Einstellungen der aktuellen Szene, sodass eine Vorschau für die gerenderte Szene möglich ist. Alternativ kann die Taste Z gedrückt werden. Dadurch erscheint beim Mauszeiger ein Menü mit allen vier Optionen zum Viewport Shading zur Auswahl.</p>
+<div style="background-color: #d3d3d3; padding: 10px; display: inline-block;">
+<div id="fig-2_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-2_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_2/2_8_shaderbuttons.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8: Schaltflächen für die Shading-Optionen im Viewport.
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="letzte-aktion-verfeinern" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="letzte-aktion-verfeinern">Letzte Aktion verfeinern</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Temporäres Menü zur Verfeinerung der letzten Aktion</p>
+</div></div><p>Wenn eine Aktion in Blender durchgeführt wird, erscheint in der linken unteren Ecke des 3D-Viewports temporär ein Menü. Dieses Menü kann aufgeklappt werden und bietet abhängig von der durchgeführten Aktion eine Reihe Verfeinerungen. Zu beachten ist jedoch, dass dieses Menü sofort wieder verschwindet, sobald ein Mausklick ausserhalb des Menüs erfolgt. Um das Menü wieder erscheinen zu lassen, muss die Aktion rückgängig gemacht und erneut durchgeführt werden.</p>
+</section>
+<section id="dargestellte-viewport-overlays" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="dargestellte-viewport-overlays">Dargestellte Viewport-Overlays</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Achsen</p>
+</div></div><p>Sofern die Ansicht der Viewport-Overlays aktiviert ist, werden im 3D-Viewport einige nützliche Dinge dargestellt. Zum einen werden die verschiedenen drei Achsen in unterschiedlichen Far-ben vom Nullpunkt der Szene aus dargestellt: • X-Achse: rot • Y-Achse: grün • Z-Achse: blau Zudem wird leicht schattiert ein Gitternetz dargestellt, bei dem jedes Quadrat eine Einheit von einem Meter darstellt. Wird aus der Szene hinausgezoomt, werden diese Quadrate zuneh-mend kleiner, dafür werden anschliessend quadratische Felder mit der Einheit von 10 Metern sichtbar.</p>
+<div id="fig-2_9" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-2_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_2/2_9_3DCursor.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;9: 3D-Cursor.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>3D-Cursor</p>
+</div></div><p>Innerhalb des 3D-Viewports ist ausserdem der 3D-Cursor sichtbar. Dieser ist an einer bestimm-ten Position in der Szene platziert und dort mittels eines rot-weissen Kreises dargestellt. Neu erstellte Objekte werden an seiner Position in die Szene eingefügt und der 3D-Cursor kann als Bezugspunkt für Transformationen verwendet werden.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -14,9 +14,6 @@ website:
         icon: folder
       - text: "Folien"
         icon: images
-        menu: 
-          - href: Chapters/Chapter_1.qmd
-            text: Kapitel 1
       - text: "Skript"  
         icon: eyeglasses
         menu:

@@ -1,10 +1,80 @@
 [
   {
+    "objectID": "Chapters/Chapter_2.html",
+    "href": "Chapters/Chapter_2.html",
+    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
+    "section": "",
+    "text": "Funktion des 3D-Viewports\nDer 3D-Viewport stellt eine der wichtigsten Arbeitsoberflächen in Blender dar. In ihm werden die 3D-Objekte sowie die Szenen, in denen sie integriert werden, angezeigt. Zudem werden im 3D-Viewport eine Reihe anderer Einstellungen dargestellt, welche in anderen Editoren konfigu-riert werden können. Die Bearbeitung der grundlegenden Struktur von 3D-Objekten erfolgt in der Regel direkt im 3D-Viewport. Der Arbeitsbereich des 3D-Viewports lässt sich in verschiede-ne Areale aufteilen, welche nachfolgend genauer betrachtet werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_2.html#toolbar",
+    "href": "Chapters/Chapter_2.html#toolbar",
+    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
+    "section": "Toolbar",
+    "text": "Toolbar\n\n\nToolbars\nDie Toolbar befindet sich auf der linken Seite der 3D-View. Allerdings sind Toolbars auch in anderen Editoren anzutreffen. Die Toolbars lassen sich jeweils mit der Taste T ein- und aus-blenden. Da es auch im 3D-Viewport verschiedene Bearbeitungsmöglichkeiten gibt, variieren die Elemente in der Toolbar abhängig vom Bearbeitungsmodus. Diese sind entweder per Mausklick über diese Toolbar oder mithilfe von Tastenkombinationen aufrufbar. In diesem Kurs wird vor allem auf Tastenkombinationen verwiesen, wenn Operationen durchgeführt werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_2.html#sidebar",
+    "href": "Chapters/Chapter_2.html#sidebar",
+    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
+    "section": "Sidebar",
+    "text": "Sidebar\n\n\nSidebars\nDie Sidebar befindet sich auf der rechten Seite des Viewport-Displays, muss allerdings noch mit der Taste N geöffnet werden. Mit dieser Taste lässt sich die Sidebar ebenfalls wieder ver-bergen. Die Sidebar ist auch in anderen Editoren anzutreffen und wird dort ebenfalls mit der Taste N ein- und ausgeblendet. Die Sidebar ist zudem anhand von Registerkarten in zusätzliche Kategorien eingeordnet. Unter dem Register «Item» können etwa Einstellungen zum aktuell ausgewählten Objekt betrachtet und verändert werden, im Register «Tool» können Einstellungen zum aktuell ausgewählten Werkzeug verfeinert werden und unter dem Register «View» können Einstellungen zur Ansicht betrachtet und verfeinert werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_2.html#header",
+    "href": "Chapters/Chapter_2.html#header",
+    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
+    "section": "Header",
+    "text": "Header\nIm Header sind zusätzliche Einstellungen aufzufinden. Diese können nicht nur zwischen den einzelnen Editoren variieren, sondern auch zwischen den einzelnen Bearbeitungsmodi inner-halb der 3D-View.\n\nAktions-Einstellungen\nIn der oberen linken Ecke, direkt neben dem Bedienfeld für die Auswahl des Editors, befinden sich Einstellungsmöglichkeiten, welche basierend auf der aktuell durchgeführten Aktion verfeinert werden können.\n\n\n\n\n\n\nAbbildung 1: Aktions-Einstellungen am Beispiel der Aus-wahl.\n\n\n\n\n\nErweiterte Hilfsmittel zur Bearbeitung\n\n\nHilfsmittel zur Bearbeitung von Objekten\nIn der Mitte des Headers befinden sich eine Reihe von erweiterten Einstellungen, welche bei der Objektbearbeitung als Hilfsmittel verwendet werden können. Hierzu gehört beispielsweise die proportionale Bearbeitung von Objekten oder das Festlegen von Bezugspunkten für Trans-formationen. Diese Hilfsmittel werden in einem späteren Kapitel ausführlich behandelt.\n\n\n\n\n\n\nAbbildung 2: Erweiterte Hilfsmittel.\n\n\n\n\n\nBearbeitungsmodus\n\n\nAuswahl des Bearbeitungsmodus\nIn der Zeile unterhalb des Headers befindet sich links das Menü zur Auswahl des Bearbei-tungsmodus. Dabei wird definiert, wie das aktuelle Objekt bearbeitet werden soll. So kann bei-spielsweise im Object-Mode das Objekt als Ganzes bearbeitet werden, während im Edit-Mode die Struktur des Objektes bearbeitet werden kann.\n\n\n\n\n\n\nAbbildung 3: Auswahl des Bearbeitungs-modus.\n\n\n\n\n\nAnzeige-Optionen\n\n\nAnzeige-Optionen\nIn der rechten oberen Ecke befinden sich Optionen zur Darstellung der Objekte in der 3D-View. Diese umfassen: • View Object Types • Show Gizmo • Show Overlays • Toggle X-Ray • Viewport Shading\n\nView Object Types\n\n\nEin- und Ausblen-den von Objektarten\nHier lassen sich verschiedene Arten von Objekten alle gemeinsam innerhalb einer Szene ver-stecken, indem das Auge zu der entsprechenden Objektart abgewählt wird. Durch das Abwäh-len des Auges neben dem Objekttyp «Camera» werde etwa alle Kameras aus der Szene un-sichtbar gemacht. Die Objekte sind allerdings noch vorhanden und weisen immer noch diesel-be Funktion auf – sie werden lediglich nicht mehr im 3D-Viewport angezeigt. Neben dem Auge lässt sich zudem anhand der Schaltfläche mit einem abgebildeten Cursor einstellen, dass die entsprechenden Objektarten nicht mehr auswählbar sind.\n\n\n\n\n\n\n\nAbbildung 4: View Object Types.\n\n\n\n\n\n\nShow Gizmo\n\n\nNavigations-Tools ein- und ausblen-den\nInnerhalb dieser Option lassen sich in der oberen rechten Ecke Tools zur Navigation mittels der Kamera ein- und ausblenden. Zudem kann hier die Darstellung eines Gizmos bei der aktuellen Auswahl aktiviert werden. Dieses Gizmo kann verwendet werden, um Objekte mittels der Maus zu rotieren, zu skalieren oder zu bewegen.\n\n\n\n\n\n\n\nAbbildung 5: Show Gizmo.\n\n\n\n\n\n\nShow Overlays\n\n\nOrientierungsobjekte im Viewport ein- und ausblen-den\nDurch die Deaktivierung der Viewport-Overlays wird im 3D-Viewport die Ansicht bestimmter Hilfsmittel (beispielsweise die Achsen oder die Markierung der aktuellen Auswahl) ausgeschal-tet. Im Dropdown-Menü lässt sich zudem die Darstellung von einzelnen Hilfsmitteln individuell an- und abwählen.\n\n\n\n\n\n\n\nAbbildung 6: Show Overlays.\n\n\n\n\n\n\nToggle X-Ray\n\n\nRöntgenblick ein- und ausschalten\nWenn die Schaltfläche «Toggle X-Ray» ausgewählt ist, erweitert sich die Ansicht von Objekten, sodass durch sie hindurchgesehen werden kann. Dies ermöglicht es etwa, dass auch ein Ob-jekt, welches hinter einem anderen Objekt verborgen liegt, betrachtet werden kann. Wenn die-se Option aktiviert ist, können zudem die verborgenen Objekte mittels eines Mausklicks ange-wählt werden. Die Schaltfläche kann auch mit den Tasten ¥ + Z ein- und ausgeschaltet wer-den.\n\n\n\n\n\n\n\nAbbildung 7: Toggle X-Ray\n\n\n\n\n\n\nViewport Shading\n\n\nArt der Objektdar-stellung im Viewport\nIn der rechten oberen Ecke befinden sich vier Schaltflächen, um einzustellen, welche Elemen-te bei der Darstellung der Objekte berücksichtigt werden sollen. Je nach Auswahl werden dadurch die Objekte unterschiedlich dargestellt: • Wireframe: Die Objekte werden in ihrer Struktur als Gitternetz angezeigt, sodass deren Aufbaugitter klar ersichtlich wird. Hierbei werden die Flächen der Objekte nicht dargestellt. • Solid: Die Objekte werden als Ganzes dargestellt, sodass auch die Flächen sichtbar sind. Allerdings werden die verwendeten Materialien und Texturen nicht berücksichtigt. • Material Preview: Die Objekte werden als Ganzes dargestellt, inklusive deren Materialien und Texturen. Die Umgebung wird anhand von vorgefertigten Szenen und Umgebungen beleuchtet, sodass eine schnelle Vorschau möglich ist. • Rendered: Die Objekte werden als Ganzes dargestellt, inklusive deren Materialien und Tex-turen. Die Umgebung und die Beleuchtung entsprechen den Einstellungen der aktuellen Szene, sodass eine Vorschau für die gerenderte Szene möglich ist. Alternativ kann die Taste Z gedrückt werden. Dadurch erscheint beim Mauszeiger ein Menü mit allen vier Optionen zum Viewport Shading zur Auswahl.\n\n\n\n\n\n\n\nAbbildung 8: Schaltflächen für die Shading-Optionen im Viewport."
+  },
+  {
+    "objectID": "Chapters/Chapter_2.html#letzte-aktion-verfeinern",
+    "href": "Chapters/Chapter_2.html#letzte-aktion-verfeinern",
+    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
+    "section": "Letzte Aktion verfeinern",
+    "text": "Letzte Aktion verfeinern\n\n\nTemporäres Menü zur Verfeinerung der letzten Aktion\nWenn eine Aktion in Blender durchgeführt wird, erscheint in der linken unteren Ecke des 3D-Viewports temporär ein Menü. Dieses Menü kann aufgeklappt werden und bietet abhängig von der durchgeführten Aktion eine Reihe Verfeinerungen. Zu beachten ist jedoch, dass dieses Menü sofort wieder verschwindet, sobald ein Mausklick ausserhalb des Menüs erfolgt. Um das Menü wieder erscheinen zu lassen, muss die Aktion rückgängig gemacht und erneut durchgeführt werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_2.html#dargestellte-viewport-overlays",
+    "href": "Chapters/Chapter_2.html#dargestellte-viewport-overlays",
+    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
+    "section": "Dargestellte Viewport-Overlays",
+    "text": "Dargestellte Viewport-Overlays\n\n\nAchsen\nSofern die Ansicht der Viewport-Overlays aktiviert ist, werden im 3D-Viewport einige nützliche Dinge dargestellt. Zum einen werden die verschiedenen drei Achsen in unterschiedlichen Far-ben vom Nullpunkt der Szene aus dargestellt: • X-Achse: rot • Y-Achse: grün • Z-Achse: blau Zudem wird leicht schattiert ein Gitternetz dargestellt, bei dem jedes Quadrat eine Einheit von einem Meter darstellt. Wird aus der Szene hinausgezoomt, werden diese Quadrate zuneh-mend kleiner, dafür werden anschliessend quadratische Felder mit der Einheit von 10 Metern sichtbar.\n\n\n\n\n\n\nAbbildung 9: 3D-Cursor.\n\n\n\n\n\n3D-Cursor\nInnerhalb des 3D-Viewports ist ausserdem der 3D-Cursor sichtbar. Dieser ist an einer bestimm-ten Position in der Szene platziert und dort mittels eines rot-weissen Kreises dargestellt. Neu erstellte Objekte werden an seiner Position in die Szene eingefügt und der 3D-Cursor kann als Bezugspunkt für Transformationen verwendet werden."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "Über",
     "section": "",
     "text": "Folgt…"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
+    "section": "",
+    "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n\n\n\n\nÜbung\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+  },
+  {
+    "objectID": "index.html#lorem",
+    "href": "index.html#lorem",
+    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
+    "section": "",
+    "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n\n\n\n\nÜbung\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+  },
+  {
+    "objectID": "index.html#lorem-ipsum-dolor",
+    "href": "index.html#lorem-ipsum-dolor",
+    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
+    "section": "Lorem ipsum dolor",
+    "text": "Lorem ipsum dolor\n\n\n\n\n\nWeiterführende Informationen\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+  },
+  {
+    "objectID": "index.html#lorem-ipsum-dolor-1",
+    "href": "index.html#lorem-ipsum-dolor-1",
+    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
+    "section": "Lorem ipsum dolor",
+    "text": "Lorem ipsum dolor\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et\n\n\n\n\n\nMerke…\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et"
   },
   {
     "objectID": "Chapters/Chapter_1.html",
@@ -54,75 +124,5 @@
     "title": "1. Vorbereitung von Blender",
     "section": "Vorgefertigte Editor-Anordnungen",
     "text": "Vorgefertigte Editor-Anordnungen\n\n\nSchnelle Auswahl von Editoren mittels Editor-Anordnungen\nIn der Menüleiste sind für verschiedene Arbeitsschritte bei der 3D-Modellierung bereits vorge-fertigte Ansichtsoptionen verfügbar. Durch einen Klick auf den Reiter «Texture Paint» wird bei-spielsweise eine Anordnung gezeigt, welche ideal dafür ist, um ein Objekt mit einer Textur zu bemalen. In diesem Falle wird beispielsweise nebst dem 3D-Viewport auch der Image Editor geöffnet. Mittels der Registerkarte «+» können zudem weitere Editor-Anordnungen basierend auf einer Vorlage für die Schnellauswahl hinzugefügt werden. Neuanordnen der Editor-Areale\n\n\nGrösse der Edito-ren verändern\nDie einzelnen Editor-Fenster können nicht nur beliebig ausgetauscht werden, sondern auch nach eigenem Belieben vergrössert oder verkleinert werden. In den Abgrenzungsbereichen zwischen den Fenstern verändert sich der Mauszeiger. Von dort aus lassen sich die Editor-Areale durch Hin- und Herziehen vergrössern oder verkleinern.\n\n\nNeue Editoren öffnen\nIn den Ecken der einzelnen Editor-Fenster gibt es zudem die Möglichkeit, durch Ziehen der Ecke in eine Richtung das Fenster in zwei Editoren aufzuteilen. Wenn dabei gleichzeitig die ƒ-Taste gedrückt wird, wird derselbe Editor in einem neuen, einzelnen Fenster geöffnet.\n\n\nEditor-Areal schliessen\nUm ein Editor-Fenster zu schliessen, wird jeweils ein anderes Editor-Fenster über das zu schliessende Fenster gezogen. Dadurch werden die beiden Fenster verbunden. Um zwei Fenster zu verbinden, wird eine der beiden Ecken, welche sich zwischen den beiden Fenstern befindet, ausgewählt und das zu behaltende Fenster über das zu entfernende Fenster gezo-gen. Dies ist manchmal etwas knifflig, da die Aktion ähnlich zum Öffnen von neuen Fenstern ist."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n\n\n\n\nÜbung\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
-  },
-  {
-    "objectID": "index.html#lorem",
-    "href": "index.html#lorem",
-    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n\n\n\n\nÜbung\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
-  },
-  {
-    "objectID": "index.html#lorem-ipsum-dolor",
-    "href": "index.html#lorem-ipsum-dolor",
-    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
-    "section": "Lorem ipsum dolor",
-    "text": "Lorem ipsum dolor\n\n\n\n\n\nWeiterführende Informationen\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
-  },
-  {
-    "objectID": "index.html#lorem-ipsum-dolor-1",
-    "href": "index.html#lorem-ipsum-dolor-1",
-    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
-    "section": "Lorem ipsum dolor",
-    "text": "Lorem ipsum dolor\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et\n\n\n\n\n\nMerke…\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et"
-  },
-  {
-    "objectID": "Chapters/Chapter_2.html",
-    "href": "Chapters/Chapter_2.html",
-    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
-    "section": "",
-    "text": "Funktion des 3D-Viewports\nDer 3D-Viewport stellt eine der wichtigsten Arbeitsoberflächen in Blender dar. In ihm werden die 3D-Objekte sowie die Szenen, in denen sie integriert werden, angezeigt. Zudem werden im 3D-Viewport eine Reihe anderer Einstellungen dargestellt, welche in anderen Editoren konfigu-riert werden können. Die Bearbeitung der grundlegenden Struktur von 3D-Objekten erfolgt in der Regel direkt im 3D-Viewport. Der Arbeitsbereich des 3D-Viewports lässt sich in verschiede-ne Areale aufteilen, welche nachfolgend genauer betrachtet werden."
-  },
-  {
-    "objectID": "Chapters/Chapter_2.html#toolbar",
-    "href": "Chapters/Chapter_2.html#toolbar",
-    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
-    "section": "Toolbar",
-    "text": "Toolbar\n\n\nToolbars\nDie Toolbar befindet sich auf der linken Seite der 3D-View. Allerdings sind Toolbars auch in anderen Editoren anzutreffen. Die Toolbars lassen sich jeweils mit der Taste T ein- und aus-blenden. Da es auch im 3D-Viewport verschiedene Bearbeitungsmöglichkeiten gibt, variieren die Elemente in der Toolbar abhängig vom Bearbeitungsmodus. Diese sind entweder per Mausklick über diese Toolbar oder mithilfe von Tastenkombinationen aufrufbar. In diesem Kurs wird vor allem auf Tastenkombinationen verwiesen, wenn Operationen durchgeführt werden."
-  },
-  {
-    "objectID": "Chapters/Chapter_2.html#sidebar",
-    "href": "Chapters/Chapter_2.html#sidebar",
-    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
-    "section": "Sidebar",
-    "text": "Sidebar\n\n\nSidebars\nDie Sidebar befindet sich auf der rechten Seite des Viewport-Displays, muss allerdings noch mit der Taste N geöffnet werden. Mit dieser Taste lässt sich die Sidebar ebenfalls wieder ver-bergen. Die Sidebar ist auch in anderen Editoren anzutreffen und wird dort ebenfalls mit der Taste N ein- und ausgeblendet. Die Sidebar ist zudem anhand von Registerkarten in zusätzliche Kategorien eingeordnet. Unter dem Register «Item» können etwa Einstellungen zum aktuell ausgewählten Objekt betrachtet und verändert werden, im Register «Tool» können Einstellungen zum aktuell ausgewählten Werkzeug verfeinert werden und unter dem Register «View» können Einstellungen zur Ansicht betrachtet und verfeinert werden."
-  },
-  {
-    "objectID": "Chapters/Chapter_2.html#header",
-    "href": "Chapters/Chapter_2.html#header",
-    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
-    "section": "Header",
-    "text": "Header\nIm Header sind zusätzliche Einstellungen aufzufinden. Diese können nicht nur zwischen den einzelnen Editoren variieren, sondern auch zwischen den einzelnen Bearbeitungsmodi inner-halb der 3D-View.\n\nAktions-Einstellungen\nIn der oberen linken Ecke, direkt neben dem Bedienfeld für die Auswahl des Editors, befinden sich Einstellungsmöglichkeiten, welche basierend auf der aktuell durchgeführten Aktion verfeinert werden können.\n\n\n\n\n\n\nAbbildung 1: Aktions-Einstellungen am Beispiel der Aus-wahl.\n\n\n\n\n\nErweiterte Hilfsmittel zur Bearbeitung\n\n\nHilfsmittel zur Bearbeitung von Objekten\nIn der Mitte des Headers befinden sich eine Reihe von erweiterten Einstellungen, welche bei der Objektbearbeitung als Hilfsmittel verwendet werden können. Hierzu gehört beispielsweise die proportionale Bearbeitung von Objekten oder das Festlegen von Bezugspunkten für Trans-formationen. Diese Hilfsmittel werden in einem späteren Kapitel ausführlich behandelt.\n\n\n\n\n\n\nAbbildung 2: Erweiterte Hilfsmittel.\n\n\n\n\n\nBearbeitungsmodus\n\n\nAuswahl des Bearbeitungsmodus\nIn der Zeile unterhalb des Headers befindet sich links das Menü zur Auswahl des Bearbei-tungsmodus. Dabei wird definiert, wie das aktuelle Objekt bearbeitet werden soll. So kann bei-spielsweise im Object-Mode das Objekt als Ganzes bearbeitet werden, während im Edit-Mode die Struktur des Objektes bearbeitet werden kann.\n\n\n\n\n\n\nAbbildung 3: Auswahl des Bearbeitungs-modus.\n\n\n\n\n\nAnzeige-Optionen\n\n\nAnzeige-Optionen\nIn der rechten oberen Ecke befinden sich Optionen zur Darstellung der Objekte in der 3D-View. Diese umfassen: • View Object Types • Show Gizmo • Show Overlays • Toggle X-Ray • Viewport Shading\n\nView Object Types\n\n\nEin- und Ausblen-den von Objektarten\nHier lassen sich verschiedene Arten von Objekten alle gemeinsam innerhalb einer Szene ver-stecken, indem das Auge zu der entsprechenden Objektart abgewählt wird. Durch das Abwäh-len des Auges neben dem Objekttyp «Camera» werde etwa alle Kameras aus der Szene un-sichtbar gemacht. Die Objekte sind allerdings noch vorhanden und weisen immer noch diesel-be Funktion auf – sie werden lediglich nicht mehr im 3D-Viewport angezeigt. Neben dem Auge lässt sich zudem anhand der Schaltfläche mit einem abgebildeten Cursor einstellen, dass die entsprechenden Objektarten nicht mehr auswählbar sind.\n\n\n\n\n\n\n\nAbbildung 4: View Object Types.\n\n\n\n\n\n\nShow Gizmo\n\n\nNavigations-Tools ein- und ausblen-den\nInnerhalb dieser Option lassen sich in der oberen rechten Ecke Tools zur Navigation mittels der Kamera ein- und ausblenden. Zudem kann hier die Darstellung eines Gizmos bei der aktuellen Auswahl aktiviert werden. Dieses Gizmo kann verwendet werden, um Objekte mittels der Maus zu rotieren, zu skalieren oder zu bewegen.\n\n\n\n\n\n\n\nAbbildung 5: Show Gizmo.\n\n\n\n\n\n\nShow Overlays\n\n\nOrientierungsobjekte im Viewport ein- und ausblen-den\nDurch die Deaktivierung der Viewport-Overlays wird im 3D-Viewport die Ansicht bestimmter Hilfsmittel (beispielsweise die Achsen oder die Markierung der aktuellen Auswahl) ausgeschal-tet. Im Dropdown-Menü lässt sich zudem die Darstellung von einzelnen Hilfsmitteln individuell an- und abwählen.\n\n\n\n\n\n\n\nAbbildung 6: Show Overlays.\n\n\n\n\n\n\nToggle X-Ray\n\n\nRöntgenblick ein- und ausschalten\nWenn die Schaltfläche «Toggle X-Ray» ausgewählt ist, erweitert sich die Ansicht von Objekten, sodass durch sie hindurchgesehen werden kann. Dies ermöglicht es etwa, dass auch ein Ob-jekt, welches hinter einem anderen Objekt verborgen liegt, betrachtet werden kann. Wenn die-se Option aktiviert ist, können zudem die verborgenen Objekte mittels eines Mausklicks ange-wählt werden. Die Schaltfläche kann auch mit den Tasten ¥ + Z ein- und ausgeschaltet wer-den.\n\n\n\n\n\n\n\nAbbildung 7: Toggle X-Ray\n\n\n\n\n\n\nViewport Shading\n\n\nArt der Objektdar-stellung im Viewport\nIn der rechten oberen Ecke befinden sich vier Schaltflächen, um einzustellen, welche Elemen-te bei der Darstellung der Objekte berücksichtigt werden sollen. Je nach Auswahl werden dadurch die Objekte unterschiedlich dargestellt: • Wireframe: Die Objekte werden in ihrer Struktur als Gitternetz angezeigt, sodass deren Aufbaugitter klar ersichtlich wird. Hierbei werden die Flächen der Objekte nicht dargestellt. • Solid: Die Objekte werden als Ganzes dargestellt, sodass auch die Flächen sichtbar sind. Allerdings werden die verwendeten Materialien und Texturen nicht berücksichtigt. • Material Preview: Die Objekte werden als Ganzes dargestellt, inklusive deren Materialien und Texturen. Die Umgebung wird anhand von vorgefertigten Szenen und Umgebungen beleuchtet, sodass eine schnelle Vorschau möglich ist. • Rendered: Die Objekte werden als Ganzes dargestellt, inklusive deren Materialien und Tex-turen. Die Umgebung und die Beleuchtung entsprechen den Einstellungen der aktuellen Szene, sodass eine Vorschau für die gerenderte Szene möglich ist. Alternativ kann die Taste Z gedrückt werden. Dadurch erscheint beim Mauszeiger ein Menü mit allen vier Optionen zum Viewport Shading zur Auswahl.\n\n\n\n\n\n\n\nAbbildung 8: Schaltflächen für die Shading-Optionen im Viewport."
-  },
-  {
-    "objectID": "Chapters/Chapter_2.html#letzte-aktion-verfeinern",
-    "href": "Chapters/Chapter_2.html#letzte-aktion-verfeinern",
-    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
-    "section": "Letzte Aktion verfeinern",
-    "text": "Letzte Aktion verfeinern\n\n\nTemporäres Menü zur Verfeinerung der letzten Aktion\nWenn eine Aktion in Blender durchgeführt wird, erscheint in der linken unteren Ecke des 3D-Viewports temporär ein Menü. Dieses Menü kann aufgeklappt werden und bietet abhängig von der durchgeführten Aktion eine Reihe Verfeinerungen. Zu beachten ist jedoch, dass dieses Menü sofort wieder verschwindet, sobald ein Mausklick ausserhalb des Menüs erfolgt. Um das Menü wieder erscheinen zu lassen, muss die Aktion rückgängig gemacht und erneut durchgeführt werden."
-  },
-  {
-    "objectID": "Chapters/Chapter_2.html#dargestellte-viewport-overlays",
-    "href": "Chapters/Chapter_2.html#dargestellte-viewport-overlays",
-    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
-    "section": "Dargestellte Viewport-Overlays",
-    "text": "Dargestellte Viewport-Overlays\n\n\nAchsen\nSofern die Ansicht der Viewport-Overlays aktiviert ist, werden im 3D-Viewport einige nützliche Dinge dargestellt. Zum einen werden die verschiedenen drei Achsen in unterschiedlichen Far-ben vom Nullpunkt der Szene aus dargestellt: • X-Achse: rot • Y-Achse: grün • Z-Achse: blau Zudem wird leicht schattiert ein Gitternetz dargestellt, bei dem jedes Quadrat eine Einheit von einem Meter darstellt. Wird aus der Szene hinausgezoomt, werden diese Quadrate zuneh-mend kleiner, dafür werden anschliessend quadratische Felder mit der Einheit von 10 Metern sichtbar.\n\n\n\n\n\n\nAbbildung 9: 3D-Cursor.\n\n\n\n\n\n3D-Cursor\nInnerhalb des 3D-Viewports ist ausserdem der 3D-Cursor sichtbar. Dieser ist an einer bestimm-ten Position in der Szene platziert und dort mittels eines rot-weissen Kreises dargestellt. Neu erstellte Objekte werden an seiner Position in die Szene eingefügt und der 3D-Cursor kann als Bezugspunkt für Transformationen verwendet werden."
   }
 ]

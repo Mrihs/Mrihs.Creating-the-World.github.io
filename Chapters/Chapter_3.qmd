@@ -1,0 +1,5 @@
+---
+title: "3. Navigation der Ansicht im 3D-Viewport"
+editor: visual
+---
+

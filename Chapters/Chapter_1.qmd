@@ -12,8 +12,6 @@ Installationsdatei herunterladen
 
 Um Blender auf einem Rechner zu installieren, muss das Installationspaket von Blender auf dessen Website (*www.blender.org*) unter dem Reiter «Download» heruntergeladen werden. Dort sollte bereits automatisch das Betriebssystem des Rechners erkannt und die aktuellste Version angeboten werden. Ansonsten lässt sich mittels eines Auswahlfeldes auch die entsprechende Version auswählen.
 
-
-
 ::: column-margin
 Frühere Versionen von Blender
 :::
@@ -35,6 +33,7 @@ Installation
 Nach dem Download sollte das entsprechende .dmg-Paket geöffnet werden. Anschliessend öffnet sich ein Fenster, dass die Blender-Software und den Applikationsordner zeigt. Hier sollte nun die Blender-Software in den Applikationsordner gezogen werden. Anschliessend ist die Installation abgeschlossen.
 
 ### Windows
+
 ::: column-margin
 Installation für Windows-User
 :::
@@ -45,34 +44,27 @@ Windows-Benutzer können den Link mit der Endung «.msi» auswählen. Nach dem D
 Blender ohne Installation nutzen
 :::
 
-Es ist auch möglich, Blender ohne eine Installation zu verwenden – hierfür muss der Link mit der Endung «.zip» ausgewählt werden. Nach dem Extrahieren der Dateien kann Blender über diesen Ordner gestartet werden. Dadurch kann Blender auf ein externes Speichermedium transferiert werden und an anderen Computern gestartet werden. Dies hat allerdings einige Nachteile. Der Computer weiss dadurch etwa nicht, mit welchem Programm er standardmässig die Dateien von Blender öffnen kann, und Blender wird auch nicht unter den installierten Pro-grammen aufgelistet.
+Es ist auch möglich, Blender ohne eine Installation zu verwenden -- hierfür muss der Link mit der Endung «.zip» ausgewählt werden. Nach dem Extrahieren der Dateien kann Blender über diesen Ordner gestartet werden. Dadurch kann Blender auf ein externes Speichermedium transferiert werden und an anderen Computern gestartet werden. Dies hat allerdings einige Nachteile. Der Computer weiss dadurch etwa nicht, mit welchem Programm er standardmässig die Dateien von Blender öffnen kann, und Blender wird auch nicht unter den installierten Pro-grammen aufgelistet.
 
 ## Der erste Start von Blender
 
-Beim ersten Start von Blender erscheint ein Quick-Setup-Menü, bei dem einige Grundeinstel-lungen eingestellt werden können. Diese können in der Regel so belassen werden, wie sie sind. Die folgenden Einstellungen stehen zur Verfügung:
-•	Language: Hier kann die Sprache eingestellt werden.
-•	Shortcuts: Hier können die Shortcut-Einstellungen ausgewählt werden. Dieser Kurs orien-tiert sich an der Default-Einstellung «Blender».
-•	Select with: Hier kann eingestellt werden, ob jeweils mit der linken oder der rechten Maus-taste Objekte ausgewählt werden können. Dieser Kurs geht davon aus, dass eine Auswahl mit der linken Maustaste erfolgt.
-•	Spacebar: Die Funktion der Leertaste kann drei verschiedenen Funktionen zugewiesen werden. Per Default wird die Leertaste verwendet, um Animationen zu starten (Option «Play»). Allerdings kann sie auch der Option «Tools» zugewiesen werden. Mittels der Ein-stellung «Search» wird durch die Leertaste ein Suchfeld geöffnet, mit dem Befehle gesucht werden können. Für diesen Kurs spielt es keine grosse Rolle, welche Funktion der Leertas-te zugewiesen wird. Die Befehlssuche ist allerdings sehr nützlich, kann aber alternativ auch mit der Taste # geöffnet werden.
-•	Theme: Hier kann das farbliche Layout von Blender angepasst werden. Grafiken in diesem Kurs wurden mit dem Theme «Blender Dark» erstellt.
-Die Arbeitsoberfläche von Blender
+Beim ersten Start von Blender erscheint ein Quick-Setup-Menü, bei dem einige Grundeinstel-lungen eingestellt werden können. Diese können in der Regel so belassen werden, wie sie sind. Die folgenden Einstellungen stehen zur Verfügung: • Language: Hier kann die Sprache eingestellt werden. • Shortcuts: Hier können die Shortcut-Einstellungen ausgewählt werden. Dieser Kurs orien-tiert sich an der Default-Einstellung «Blender». • Select with: Hier kann eingestellt werden, ob jeweils mit der linken oder der rechten Maus-taste Objekte ausgewählt werden können. Dieser Kurs geht davon aus, dass eine Auswahl mit der linken Maustaste erfolgt. • Spacebar: Die Funktion der Leertaste kann drei verschiedenen Funktionen zugewiesen werden. Per Default wird die Leertaste verwendet, um Animationen zu starten (Option «Play»). Allerdings kann sie auch der Option «Tools» zugewiesen werden. Mittels der Ein-stellung «Search» wird durch die Leertaste ein Suchfeld geöffnet, mit dem Befehle gesucht werden können. Für diesen Kurs spielt es keine grosse Rolle, welche Funktion der Leertas-te zugewiesen wird. Die Befehlssuche ist allerdings sehr nützlich, kann aber alternativ auch mit der Taste \# geöffnet werden. • Theme: Hier kann das farbliche Layout von Blender angepasst werden. Grafiken in diesem Kurs wurden mit dem Theme «Blender Dark» erstellt. Die Arbeitsoberfläche von Blender
 
-
-
-:::{.tippbox} 
-
-::::{.tippbox-header} 
-:::::{.tippbox-icon} 
-:::::
-Weiterführende Informationen
-:::: 
-::::{.tippbox-body}
-Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstützt. Microsoft unterstützt diese Systeme seit 2020 nicht mehr und auch an-dere Software-Entwickler haben den Support dieser Systeme ein-gestellt.
-:::: 
+::: tippbox
+::: tippbox-header
+::: tippbox-icon
 :::
 
+Weiterführende Informationen
+:::
+
+::: tippbox-body
+Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstützt. Microsoft unterstützt diese Systeme seit 2020 nicht mehr und auch an-dere Software-Entwickler haben den Support dieser Systeme ein-gestellt.
+:::
+:::
 
 ## Das Willkommensfenster
+
 ::: column-margin
 Optionen im Willkommensfenster
 :::
@@ -85,12 +77,7 @@ Blender begrüsst seine Nutzer mit einem Willkommensfenster. In diesem Fenster w
 Auswahl von Ansichtsvorlagen
 :::
 
-Zu den möglichen Ansichtsvorlagen gehören:
-•	General: Öffnet eine Standardvorlage für das Bearbeiten von 3D-Objekten.
-•	2D Animation: Öffnet eine Vorlage zum Erstellen von 2D-Animationen.
-•	Sculpting: Öffnet eine Vorlage, welche für das Sculpting von Objekten geeignet ist. Dabei werden Objekte anhand von Pinseln direkt in ihrer Form verändert.
-•	VFX: Öffnet eine Vorlage für die Erstellung visueller Effekte (VFX), beispielsweise in Videos.
-•	Video Editing: Öffnet eine Vorlage zum Bearbeiten von Videos.
+Zu den möglichen Ansichtsvorlagen gehören: • General: Öffnet eine Standardvorlage für das Bearbeiten von 3D-Objekten. • 2D Animation: Öffnet eine Vorlage zum Erstellen von 2D-Animationen. • Sculpting: Öffnet eine Vorlage, welche für das Sculpting von Objekten geeignet ist. Dabei werden Objekte anhand von Pinseln direkt in ihrer Form verändert. • VFX: Öffnet eine Vorlage für die Erstellung visueller Effekte (VFX), beispielsweise in Videos. • Video Editing: Öffnet eine Vorlage zum Bearbeiten von Videos.
 
 ::: column-margin
 Fokus auf «General»
@@ -104,25 +91,17 @@ Dieser Kurs wird sich auf die 3D-Modellierung fokussieren. Deshalb wird jeweils 
 Default Editoren
 :::
 
-Die verschiedenen Werkzeuge, welche Blender anbietet, sind innerhalb verschiedener Edito-ren aufzufinden. Diese Editoren werden als separate und austauschbare Areale in Blender dargestellt. Beim Start eines neuen Projekts (mit der Vorlage General) ist die Ansicht in vier Areale unterteilt:
-•	3D Viewport: Überspannt von der oberen linken Ecke den grössten Teil des Bildschirms.
-•	Outliner: Befindet sich in der oberen rechten Ecke.
-•	Properties: Befindet sich in der unteren rechten Ecke.
-•	Timeline: Befindet sich links am unteren Rand.
-Gerade der 3D-Viewport, der Outliner und die Properties sind für das Erstellen von 3D-Objekten mit Blender von hoher Bedeutung. Die Timeline wird bei Animationen verwendet.
-
+Die verschiedenen Werkzeuge, welche Blender anbietet, sind innerhalb verschiedener Edito-ren aufzufinden. Diese Editoren werden als separate und austauschbare Areale in Blender dargestellt. Beim Start eines neuen Projekts (mit der Vorlage General) ist die Ansicht in vier Areale unterteilt: • 3D Viewport: Überspannt von der oberen linken Ecke den grössten Teil des Bildschirms. • Outliner: Befindet sich in der oberen rechten Ecke. • Properties: Befindet sich in der unteren rechten Ecke. • Timeline: Befindet sich links am unteren Rand. Gerade der 3D-Viewport, der Outliner und die Properties sind für das Erstellen von 3D-Objekten mit Blender von hoher Bedeutung. Die Timeline wird bei Animationen verwendet.
 
 ![Default-Aufteilung der Arbeitsbereiche.](Images/Chapter_1/1_2_Default-Arealaufteilung.jpg){#fig-1_2 fig-align="left"}
-
-
 
 ## Übersicht über die Editor-Fenster von Blender
 
 ::: column-margin
 Editoren austauschen
 :::
-In jedem Editor-Areal befindet sich in der linken oberen Ecke eine Schaltfläche. Durch das Drücken dieser Schaltfläche wird ein Dropdown-Menü geöffnet. Darin sind alle verfügbaren Editoren aufgelistet. Indem ein anderer Editor ausgetauscht wird, wechselt die Anzeige in diesem Areal zu dem ausgewählten Editor.
 
+In jedem Editor-Areal befindet sich in der linken oberen Ecke eine Schaltfläche. Durch das Drücken dieser Schaltfläche wird ein Dropdown-Menü geöffnet. Darin sind alle verfügbaren Editoren aufgelistet. Indem ein anderer Editor ausgetauscht wird, wechselt die Anzeige in diesem Areal zu dem ausgewählten Editor.
 
 ![Die Auswahl an verschiedenen Editoren, welche Blender standardmässig mit sich bringt.](Images/Chapter_1/1_3_Editor_Select.png){#fig-1_3 fig-align="left"}
 
@@ -135,27 +114,35 @@ In jedem Editor-Areal befindet sich in der linken oberen Ecke eine Schaltfläche
 Der 3D-Viewport stellt die bearbeiteten Szenen und die dazugehörigen 3D-Objekte dar. Er bietet die Möglichkeit zur direkten Interaktion mit diesen Objekten und ist für das Modellieren von Objekten essenziell. Bei der Arbeit mit 3D-Objekten ist es der wichtigste Editor.
 
 ### Image Editor
+
 Anhand des Image-Editors können 2D-Grafiken betrachtet und bearbeitet werden. Gerenderte Bilder werden ebenfalls in diesem Editor angezeigt.
 
 ### UV Editor
+
 Der UV-Editor wird verwendet, um den Flächen von Objekten eine bestimmte Position auf einer Textur (sogenannte UVs) zuzuweisen oder dessen Zuweisung zu betrachten.
 
 ### Compositor
+
 Mithilfe des Compositors lassen sich Bilder, welche beim Rendern erstellt werden, nachträgli-chen Bearbeitungen unterziehen. Auch externe Bilder können hier bearbeitet werden. Die Bearbeitung erfolgt mittels einer visuellen Programmiersprache.
 
 ### Texture Node Editor
+
 Mithilfe des Texture-Node-Editors können Texturen anhand einer visuellen Programmierspra-che erstellt werden. Dieser Editor wird allerdings in Zukunft durch andere Bearbeitungsoptio-nen ersetzt.
 
 ### Geometry Node Editor
+
 Der Geometry-Node-Editor ermöglicht das Bearbeiten von Objekten mittels einer visuellen Pro-grammiersprache. Innerhalb dieses Editors erfolgt dabei die Programmierung der geometri-schen Figuren, während die Darstellung der Figuren im 3D-Viewport erfolgt. Bei den Geometry Nodes handelt es sich um eine neue Funktion von Blender.
 
 ### Shader Editor
+
 Mithilfe des Shader-Editors können die Materialien, welche einem dreidimensionalen Objekt zugewiesen sind, bearbeitet werden. Dadurch lässt sich bearbeiten, wie die Oberfläche eines Objektes aussieht. Die Bearbeitung erfolgt hier mittels einer visuellen Programmiersprache. Innerhalb dieses Editors werden lediglich die Einstellungen für die Materialien gemacht. Um die Auswirkungen der Materialien zu sehen, wird der 3D-Viewport verwendet.
 
 ### Video Sequencer
+
 Mithilfe des Video-Sequencers können Videoaufnahmen bearbeitet werden. Dieser Editor ver-fügt zusätzlich über eine Vorschau-Option, mit der sich die Videos direkt betrachten lassen.
 
 ### Movie Clip Editor
+
 Der Movie-Clip-Editor ermöglicht das Erfassen von Bewegungen in Filmen, sodass diese Be-wegungen beispielsweise auch auf 3D-Objekte angewendet werden können. Zudem lassen sich hier auch Videos maskieren.
 
 ### Dope Sheet
@@ -167,15 +154,19 @@ Editoren für Animationen
 Das Dope-Sheet stellt einzelne Animationspunkte eines Projektes in einem zeitlichen Ablauf tabellarisch dar. Dies basiert auf der früher angewendeten Planung von handgezeichneten Animationen.
 
 ### Timeline
+
 Die Timeline stellt einen zeitlichen Verlauf von Animationen dar. Für die ausgewählten Objekte wird hier durch Punkte dargestellt, wann eine Animation im Zeitstrang starten oder enden soll. Zudem befindet sich hier auch eine Schaltfläche, um Animationen abspielen zu lassen.
 
 ### Graph Editor
+
 Mittels des Graph-Editors können Animationen über die Zeit hinweg verfeinert werden. Hierfür werden die einzelnen Animationen mittels Grafen dargestellt. Durch eine Veränderung dieser Grafen wird die Animation verfeinert.
 
 ### Drivers
+
 Der Driver-Editor ermöglicht es, Animationen gezielt zu steuern. Dabei können die Eigenschaften eines Objektes verwendet werden, um ein anderes Objekt zu steuern.
 
 ### Nonlinear Animation
+
 Mittels des Editors für nonlineare Animationen können Animationen ausserhalb eines linearen Ablaufes gesteuert werden. Dies kommt etwa bei komplexeren Veränderungen von Szenen zum Einsatz.
 
 ### Text Editor
@@ -187,11 +178,12 @@ Editoren für Programmier-Skripte
 Im Text-Editor können Textdokumente eingesehen und erstellt werden. Diese Textdokumente können auch verwendet werden, um mittels der Programmiersprache Python Funktionen für Blender zu verfassen. Zudem können im Text-Editor auch direkt Programmfunktionen in Text-dokumenten ausgeführt werden.
 
 ### Python Console
+
 Anhand der Python-Konsole lassen sich Codes in der Programmiersprache von Python einge-ben. Blender führt diese Codes anschliessend aus.
 
 ### Info
-Im Info-Editor werden durchgeführte Aktionen in der Python-Programmiersprache nacheinan-der aufgelistet. Hier lassen sich auch Fehlermeldungen und Warnungen nachträglich einse-hen.
 
+Im Info-Editor werden durchgeführte Aktionen in der Python-Programmiersprache nacheinan-der aufgelistet. Hier lassen sich auch Fehlermeldungen und Warnungen nachträglich einse-hen.
 
 ### Outliner
 
@@ -202,17 +194,20 @@ Im Info-Editor werden durchgeführte Aktionen in der Python-Programmiersprache n
 Im Outliner werden alle Daten, welche sich in einer Blender-Datei befinden, aufgelistet. Hier lassen sich Objekte innerhalb einer Szene auswählen oder in Ordnerstrukturen (sogenannten Collections) anordnen und gruppieren.
 
 ### Properties
+
 Im Properties Editor lassen sich eine Reihe von Einstellungen machen. Es umfasst neben Ein-stellungen zu einem aktuell ausgewählten Objekt auch Einstellungen zum Rendern, zur Szenengestaltung oder zu physikalischen Simulationen.
 
 ### File Browser
+
 Mithilfe des File-Browsers lassen sich Dateien auf dem Computer darstellen und suchen. Dadurch können Dokumente direkt in die Szene hineingezogen werden, ohne dass Blender minimiert werden muss. Zudem können hier auch Dateien abgespeichert werden.
 
 ### Spreadsheet
+
 Mithilfe des Spreadsheets lassen sich alle Datenpunkte eines Objektes mitsamt deren Positio-nen in der 3D-Welt angeben. Nebst den Punkten können auch die Positionen der verschiede-nen Kanten und Flächen von Objekten angezeigt werden.
 
 ### Preferences
-Unter den Preferences lassen sich die Einstellungen von Blender bearbeiten. Die Preferences können auch unter «Edit | Preferences» geöffnet werden.
 
+Unter den Preferences lassen sich die Einstellungen von Blender bearbeiten. Die Preferences können auch unter «Edit \| Preferences» geöffnet werden.
 
 ## Vorgefertigte Editor-Anordnungen
 
@@ -220,12 +215,12 @@ Unter den Preferences lassen sich die Einstellungen von Blender bearbeiten. Die 
 Schnelle Auswahl von Editoren mittels Editor-Anordnungen
 :::
 
-In der Menüleiste sind für verschiedene Arbeitsschritte bei der 3D-Modellierung bereits vorge-fertigte Ansichtsoptionen verfügbar. Durch einen Klick auf den Reiter «Texture Paint» wird bei-spielsweise eine Anordnung gezeigt, welche ideal dafür ist, um ein Objekt mit einer Textur zu bemalen. In diesem Falle wird beispielsweise nebst dem 3D-Viewport auch der Image Editor geöffnet. Mittels der Registerkarte «+» können zudem weitere Editor-Anordnungen basierend auf einer Vorlage für die Schnellauswahl hinzugefügt werden.
-Neuanordnen der Editor-Areale
+In der Menüleiste sind für verschiedene Arbeitsschritte bei der 3D-Modellierung bereits vorge-fertigte Ansichtsoptionen verfügbar. Durch einen Klick auf den Reiter «Texture Paint» wird bei-spielsweise eine Anordnung gezeigt, welche ideal dafür ist, um ein Objekt mit einer Textur zu bemalen. In diesem Falle wird beispielsweise nebst dem 3D-Viewport auch der Image Editor geöffnet. Mittels der Registerkarte «+» können zudem weitere Editor-Anordnungen basierend auf einer Vorlage für die Schnellauswahl hinzugefügt werden. Neuanordnen der Editor-Areale
 
 ::: column-margin
 Grösse der Edito-ren verändern
 :::
+
 Die einzelnen Editor-Fenster können nicht nur beliebig ausgetauscht werden, sondern auch nach eigenem Belieben vergrössert oder verkleinert werden. In den Abgrenzungsbereichen zwischen den Fenstern verändert sich der Mauszeiger. Von dort aus lassen sich die Editor-Areale durch Hin- und Herziehen vergrössern oder verkleinern.
 
 ::: column-margin

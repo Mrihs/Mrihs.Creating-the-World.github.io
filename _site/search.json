@@ -138,5 +138,12 @@
     "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
     "section": "Dargestellte Viewport-Overlays",
     "text": "Dargestellte Viewport-Overlays\n\n\nAchsen\nSofern die Ansicht der Viewport-Overlays aktiviert ist, werden im 3D-Viewport einige nützliche Dinge dargestellt. Zum einen werden die verschiedenen drei Achsen in unterschiedlichen Far-ben vom Nullpunkt der Szene aus dargestellt: • X-Achse: rot • Y-Achse: grün • Z-Achse: blau Zudem wird leicht schattiert ein Gitternetz dargestellt, bei dem jedes Quadrat eine Einheit von einem Meter darstellt. Wird aus der Szene hinausgezoomt, werden diese Quadrate zuneh-mend kleiner, dafür werden anschliessend quadratische Felder mit der Einheit von 10 Metern sichtbar.\n\n\n\n\n\n\nAbbildung 9: 3D-Cursor.\n\n\n\n\n\n3D-Cursor\nInnerhalb des 3D-Viewports ist ausserdem der 3D-Cursor sichtbar. Dieser ist an einer bestimm-ten Position in der Szene platziert und dort mittels eines rot-weissen Kreises dargestellt. Neu erstellte Objekte werden an seiner Position in die Szene eingefügt und der 3D-Cursor kann als Bezugspunkt für Transformationen verwendet werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_3.html",
+    "href": "Chapters/Chapter_3.html",
+    "title": "3. Navigation der Ansicht im 3D-Viewport",
+    "section": "",
+    "text": "Navigation in der 3D-Ansicht\nDie Ansicht auf die Objekte im 3D-Viewport kann beliebig verändert werden. Nebst der standard- mässigen Ansichtssteuerung über die Maus kann auch das Nummernfeld der Tastatur verwendet werden. In der Regel werden beide Optionen verwendet. Die Navigation mit der Maus bietet tenden- ziell eine grössere Flexibilität, während die Navigation mit der Tastatur eine grössere Präzision ermöglicht.\n\nNavigation mit der Maus\n\n\n\n\n\nWeiterführende Informationen\n\n\nDie Default-Szene kann manuell angepasst werden. Hierfür muss zunächst eine Default-Szene er- stellt werden, welche bei jedem Start erscheinen soll. Diese kann dann unter «File | Defaults | Save Startup File» als neue Start-up- Szene gespeichert werden."
   }
 ]

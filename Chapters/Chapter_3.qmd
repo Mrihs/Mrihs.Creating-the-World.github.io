@@ -3,3 +3,30 @@ title: "3. Navigation der Ansicht im 3D-Viewport"
 editor: visual
 ---
 
+::: column-margin
+Navigation in der 3D-Ansicht
+:::
+
+Die Ansicht auf die Objekte im 3D-Viewport kann beliebig verändert werden. Nebst der standardmässigen Ansichtssteuerung über die Maus kann auch das Nummernfeld der Tastatur verwendet werden. In der Regel werden beide Optionen verwendet. Die Navigation mit der Maus bietet tendenziell eine grössere Flexibilität, während die Navigation mit der Tastatur eine grössere Präzision ermöglicht.
+
+## Navigation mit der Maus
+
+::: column-margin
+Ansicht mit der Maus verändern
+:::
+
+Je nach Aufbau der verwendeten Computermaus unterscheidet sich die Navigation durch den 3D-Viewport mit der Maus etwas. Bei einer Computermaus mit einem Mausrad erfolgt die Navigation im 3D-Viewport durch Mausbewegungen bei gedrückter Rad-Taste. Bei Trackpads oder Mäusen mit integriertem Trackpad erfolgt die Navigation mittels Wischbewegungen. Bei einer normalen Bewegung wird dabei lediglich die Ansicht entsprechend der Bewegung rotiert. Durch gleichzeitiges Drücken der {{< kbd Shift >}}-Taste wird die Ansicht in die entsprechenden Richtungen bewegt (ohne eine Rotation). Mittels gedrückter {{< kbd Ctrl >}}-Taste kann durch die Mausbewegung hinein- oder hinausgezoomt werden. Durch das Drehen des Mausrads wird die Ansicht ebenfalls hinein- oder hinausgezoomt.
+
+## Navigation mit der Tastatur
+
+::: column-margin
+Emulation des Nummernblocks
+:::
+
+Nebst der Maus kann auch die Tastatur verwendet werden, um die Ansicht zu verändern. Diese Option ergibt sich allerdings nur, wenn man über einen Nummernblock verfügt. Wenn kein Nummernblock zur Verfügung steht, lassen sich auch die Zahlen-Tasten oberhalb der Buchstaben für die Navigation verwenden. Hierfür muss allerdings in den Benutzereinstellungen («*Edit \| Preferences*») in den Einstellungen zum «*Input*» beim Keyboard-Reiter die Einstellung «*Emulate Numpad*» aktiviert werden.
+
+::: column-margin
+Rotieren und Drehen der Ansicht
+:::
+
+Mittels der Tasten{{< kbd 2 >}}, {{< kbd 4 >}}, {{< kbd 6 >}} und {{< kbd 8 >}} kann die Ansicht entsprechend ihrer relativen Anordnung auf dem Nummernblock rotiert werden: Die Taste {{< kbd 2 >}} rotiert nach unten, die Taste {{< kbd 4 >}} nach links, die Taste {{< kbd 6 >}} nach rechts und die Taste {{< kbd 8 >}} nach oben. Werden dieselben Tasten bei gedrückter {{< kbd Ctrl >}}-Taste gedrückt, wird die Ansicht in die entsprechende Richtung bewegt, ohne eine Rotation durchzuführen. Mittels gedrückter {{< kbd Shift >}}-Taste kann die Ansicht durch die Taste {{< kbd 6 >}} zudem im Uhrzeigersinn und mittels der Taste {{< kbd 4 >}} gegen den Uhrzeigersinn gedreht werden. Um näher hineinzuzoomen wird die Taste {{< kbd + >}} und zum Hinauszoomen die Taste {{< kbd - >}} verwendet.

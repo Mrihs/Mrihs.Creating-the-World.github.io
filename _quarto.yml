@@ -11,8 +11,10 @@ website:
       - text: "Cheatsheets" 
         icon: lightbulb
         menu:
-          - href: Cheatsheets/cheatsheet.pdf
+          - href: Cheatsheets/cheatsheet_keys.pdf
             text: "Tastenkombinationen"
+          - href: Cheatsheets/cheatsheet_shading.pdf
+            text: "Shading"
       - text: Ressourcen
         icon: folder
       - text: "Folien"

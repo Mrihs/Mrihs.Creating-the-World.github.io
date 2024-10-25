@@ -19,7 +19,7 @@ website:
         icon: folder
       - text: "Folien"
         icon: images
-      - text: "Skript"  
+      - text: "Skript"
         icon: eyeglasses
         menu:
           - href: Chapters/Chapter_1.qmd

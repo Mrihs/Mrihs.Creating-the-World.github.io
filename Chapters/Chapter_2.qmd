@@ -2,6 +2,8 @@
 title: "2. Die Arbeitsoberfläche des 3D-Viewports"
 author: "Michael Rihs"
 editor: visual
+categories: [Blender, UI]
+draft: false
 ---
 
 ::: column-margin

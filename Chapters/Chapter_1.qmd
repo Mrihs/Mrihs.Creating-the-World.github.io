@@ -2,6 +2,8 @@
 title: "1. Vorbereitung von Blender"
 author: "Michael Rihs"
 editor: visual
+categories: [Blender, Installation]
+draft: false
 ---
 
 ## Installation von Blender

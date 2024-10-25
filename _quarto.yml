@@ -5,6 +5,9 @@ website:
   title: "Creating the World"
   navbar:
     right:
+      - href: Sites/Overview.qmd
+        text: "Kursübersicht"
+        icon: calendar-range
       - text: "Cheatsheets" 
         icon: lightbulb
         menu:

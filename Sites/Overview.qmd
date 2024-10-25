@@ -1,0 +1,56 @@
+---
+title: "Kursübersicht"
+editor: visual
+---
+
+## Semesterplan
+
++-------+-------------------------------------------+----------------------------+--------------------------------------+----------------------------+-----------+--------+
+| Woche | Praxis                                    | Kapitel                    | Theorie                              | Literatur                  | Folien    | Abgabe |
++=======+===========================================+============================+======================================+============================+===========+========+
+| 1     | Die Arbeitsoberfläche von Blender         | 1, 2, 3, 4, 5, 6, 7, 8, 9  | Organisatorisches                    | Tarr et al. (1998)         | Sitzung 1 |        |
+|       |                                           |                            |                                      |                            |           |        |
+|       | Eigenschaften von 3D-Objekten             |                            | Bedeutung von 3D-Objekten            |                            |           |        |
++-------+-------------------------------------------+----------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 2     | Grundmechanismen der Objektbearbeitung I  | 10, 11, 12                 |                                      |                            |           |        |
++-------+-------------------------------------------+----------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 3     | Grundmechanismen der Objektbearbeitung II | 13, 14                     | Referenzbilder oder Fantasie?        | Brainbridge et al. (2021)  |           |        |
++-------+-------------------------------------------+----------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 4     | Objektbearbeitung mit Modifiers           | 15, 16                     |                                      |                            |           | 1      |
++-------+-------------------------------------------+----------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 5     | Materialien                               | 17, 18, 19, 20, 21         | Visuelle Wahrnehmung von Materialien | Flemming (2014)            |           |        |
++-------+-------------------------------------------+----------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 6     | Texturen                                  | 22, 23, 24, 25, 26, 27, 28 | Lizenzen & Lizenzarten               |                            |           | 2      |
++-------+-------------------------------------------+----------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 7     | Physical based Rendering                  | 29, 30, 31, 32, 33         | Cartoon oder Realismus?              |                            |           |        |
++-------+-------------------------------------------+----------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 8     | Beleuchtung und Welten                    | 34, 35                     | Farbwahrnehmung unter Beleuchtung    | Brainard & Hurlbert (2015) |           | 3      |
++-------+-------------------------------------------+----------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 9     | Partikel/Haare, Kamera & Rendering        | 36, 37, 38                 | Dateiformate & Hardware              | Joon (2010)                |           |        |
++-------+-------------------------------------------+----------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 10    | Workflow der Charaktererstellung          | 39, 40, 41, 42             | Uncanny Valley Effect                | Kätsyri et al. (2015)      |           | 4      |
++-------+-------------------------------------------+----------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 11    | Character Rigging                         | 43, 44, 45                 | Fotorealismus                        |                            |           |        |
++-------+-------------------------------------------+----------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 12    | Animationen                               | 46, 47                     | Wahrnehmung von Animationen          | Scholl & Tremoulet (2000)  |           | 5      |
++-------+-------------------------------------------+----------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 13    | Blender in VR                             |                            | Virtual Reality                      |                            |           | 6      |
++-------+-------------------------------------------+----------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 14    | Abschluss                                 |                            |                                      |                            |           |        |
++-------+-------------------------------------------+----------------------------+--------------------------------------+----------------------------+-----------+--------+
+
+## Literatur
+
+Brainard, D. H., & Hurlbert, A. C. (2015). Colour vision: understanding# TheDress. *Current Biology*, *25*(13), R551-R554.
+
+Bainbridge, W. A., Pounder, Z., Eardley, A. F., & Baker, C. I. (2021). Quantifying Aphantasia through drawing: Those without visual imagery show deficits in object but not spatial memory. *Cortex*, *135*, 159-172.
+
+Fleming, R. W. (2014). Visual perception of materials and their properties. *Vision research*, *94*, 62-75.
+
+Joon, J. S. (2010, August). Principles of photorealism to develop photorealistic visualisation for interface design: A review. In *2010 Seventh International Conference on Computer Graphics, Imaging and Visualization* (pp. 17-25). IEEE.
+
+Kätsyri, J., Förger, K., Mäkäräinen, M., & Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses: support for perceptual mismatch as one road to the valley of eeriness. *Frontiers in psychology*, *6*, 390.
+
+Scholl, B. J., & Tremoulet, P. D. (2000). Perceptual causality and animacy. *Trends in cognitive sciences, 4*(8), 299-309.
+
+Tarr, M. J., Williams, P., Hayward, W. G., & Gauthier, I. (1998). Three-dimensional object recognition is viewpoint dependent. *Nature neuroscience*, *1*(4), 275-277.

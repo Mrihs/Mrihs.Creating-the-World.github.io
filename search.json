@@ -70,6 +70,27 @@
     "text": "Folgt…"
   },
   {
+    "objectID": "Sites/Overview.html",
+    "href": "Sites/Overview.html",
+    "title": "Kursübersicht",
+    "section": "",
+    "text": "Woche\nPraxis\nKapitel\nTheorie\nLiteratur\nFolien\nAbgabe\n\n\n\n\n1\nDie Arbeitsoberfläche von Blender\nEigenschaften von 3D-Objekten\n1, 2, 3, 4, 5, 6, 7, 8, 9\nOrganisatorisches\nBedeutung von 3D-Objekten\nTarr et al. (1998)\nSitzung 1\n\n\n\n2\nGrundmechanismen der Objektbearbeitung I\n10, 11, 12\n\n\n\n\n\n\n3\nGrundmechanismen der Objektbearbeitung II\n13, 14\nReferenzbilder oder Fantasie?\nBrainbridge et al. (2021)\n\n\n\n\n4\nObjektbearbeitung mit Modifiers\n15, 16\n\n\n\n1\n\n\n5\nMaterialien\n17, 18, 19, 20, 21\nVisuelle Wahrnehmung von Materialien\nFlemming (2014)\n\n\n\n\n6\nTexturen\n22, 23, 24, 25, 26, 27, 28\nLizenzen & Lizenzarten\n\n\n2\n\n\n7\nPhysical based Rendering\n29, 30, 31, 32, 33\nCartoon oder Realismus?\n\n\n\n\n\n8\nBeleuchtung und Welten\n34, 35\nFarbwahrnehmung unter Beleuchtung\nBrainard & Hurlbert (2015)\n\n3\n\n\n9\nPartikel/Haare, Kamera & Rendering\n36, 37, 38\nDateiformate & Hardware\nJoon (2010)\n\n\n\n\n10\nWorkflow der Charaktererstellung\n39, 40, 41, 42\nUncanny Valley Effect\nKätsyri et al. (2015)\n\n4\n\n\n11\nCharacter Rigging\n43, 44, 45\nFotorealismus\n\n\n\n\n\n12\nAnimationen\n46, 47\nWahrnehmung von Animationen\nScholl & Tremoulet (2000)\n\n5\n\n\n13\nBlender in VR\n\nVirtual Reality\n\n\n6\n\n\n14\nAbschluss"
+  },
+  {
+    "objectID": "Sites/Overview.html#semesterplan",
+    "href": "Sites/Overview.html#semesterplan",
+    "title": "Kursübersicht",
+    "section": "",
+    "text": "Woche\nPraxis\nKapitel\nTheorie\nLiteratur\nFolien\nAbgabe\n\n\n\n\n1\nDie Arbeitsoberfläche von Blender\nEigenschaften von 3D-Objekten\n1, 2, 3, 4, 5, 6, 7, 8, 9\nOrganisatorisches\nBedeutung von 3D-Objekten\nTarr et al. (1998)\nSitzung 1\n\n\n\n2\nGrundmechanismen der Objektbearbeitung I\n10, 11, 12\n\n\n\n\n\n\n3\nGrundmechanismen der Objektbearbeitung II\n13, 14\nReferenzbilder oder Fantasie?\nBrainbridge et al. (2021)\n\n\n\n\n4\nObjektbearbeitung mit Modifiers\n15, 16\n\n\n\n1\n\n\n5\nMaterialien\n17, 18, 19, 20, 21\nVisuelle Wahrnehmung von Materialien\nFlemming (2014)\n\n\n\n\n6\nTexturen\n22, 23, 24, 25, 26, 27, 28\nLizenzen & Lizenzarten\n\n\n2\n\n\n7\nPhysical based Rendering\n29, 30, 31, 32, 33\nCartoon oder Realismus?\n\n\n\n\n\n8\nBeleuchtung und Welten\n34, 35\nFarbwahrnehmung unter Beleuchtung\nBrainard & Hurlbert (2015)\n\n3\n\n\n9\nPartikel/Haare, Kamera & Rendering\n36, 37, 38\nDateiformate & Hardware\nJoon (2010)\n\n\n\n\n10\nWorkflow der Charaktererstellung\n39, 40, 41, 42\nUncanny Valley Effect\nKätsyri et al. (2015)\n\n4\n\n\n11\nCharacter Rigging\n43, 44, 45\nFotorealismus\n\n\n\n\n\n12\nAnimationen\n46, 47\nWahrnehmung von Animationen\nScholl & Tremoulet (2000)\n\n5\n\n\n13\nBlender in VR\n\nVirtual Reality\n\n\n6\n\n\n14\nAbschluss"
+  },
+  {
+    "objectID": "Sites/Overview.html#literatur",
+    "href": "Sites/Overview.html#literatur",
+    "title": "Kursübersicht",
+    "section": "Literatur",
+    "text": "Literatur\nBrainard, D. H., & Hurlbert, A. C. (2015). Colour vision: understanding# TheDress. Current Biology, 25(13), R551-R554.\nBainbridge, W. A., Pounder, Z., Eardley, A. F., & Baker, C. I. (2021). Quantifying Aphantasia through drawing: Those without visual imagery show deficits in object but not spatial memory. Cortex, 135, 159-172.\nFleming, R. W. (2014). Visual perception of materials and their properties. Vision research, 94, 62-75.\nJoon, J. S. (2010, August). Principles of photorealism to develop photorealistic visualisation for interface design: A review. In 2010 Seventh International Conference on Computer Graphics, Imaging and Visualization (pp. 17-25). IEEE.\nKätsyri, J., Förger, K., Mäkäräinen, M., & Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses: support for perceptual mismatch as one road to the valley of eeriness. Frontiers in psychology, 6, 390.\nScholl, B. J., & Tremoulet, P. D. (2000). Perceptual causality and animacy. Trends in cognitive sciences, 4(8), 299-309.\nTarr, M. J., Williams, P., Hayward, W. G., & Gauthier, I. (1998). Three-dimensional object recognition is viewpoint dependent. Nature neuroscience, 1(4), 275-277."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",

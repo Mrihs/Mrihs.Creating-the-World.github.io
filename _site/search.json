@@ -257,5 +257,138 @@
     "title": "4. Erste Schritte",
     "section": "Speichern",
     "text": "Speichern\n\n\nZwischenspeichern mittels CtrlCtrl + SS ist unabdingbar\nBisher wurden bereits einige Tastenkombinationen angesprochen. Die wichtigste Tastenkombination stellt allerdings die Kombination für das Abspeichern des aktuellen Projekts dar: CtrlCtrl + SS. Zwischenspeichern ist bei der Arbeit mit Blender eine wichtige Empfehlung. Je nach Komplexität des Projektes kann es manchmal vorkommen, dass das Programm unerwartet abstürzt und die Fort schritte bis zum letzten Speicherpunkt verloren gehen. Aus diesem Grund empfiehlt es sich, das Projekt lieber einmal zu viel als einmal zu wenig abzuspeichern.\n\n\nKopie speichern\nAlternativ kann das Projekt auch unter «File | Save» abgespeichert werden. Nebst der Möglichkeit, dass ein Projekt unter einem neuen Namen gespeichert und fortgeführt wird («File | Save as» bzw. CtrlCtrl + AltAlt + SS), gibt es auch die Möglichkeit, mittels «File | Save Copy» ( + + ) eine Backup-Version abzuspeichern und in dem originalen File weiterzuarbeiten.\n\n\n.blend-Files\nDie Projekte werden jeweils in Blenders programmeigenem Format «.blend» abgespeichert. Diese Datei enthält alle Objekte, Animationen und Einstellungen des Projektes. Das .blend-Dateiformat kann lediglich mit Blender geöffnet werden. Wenn externe Dateien (beispielsweise Texturen, Soundeffekte oder Videos) im Projekt eingebunden werden, müssen diese ebenfalls mit dem Projekt weitergegeben werden. Es gibt jedoch die Möglichkeit, unter «File | External Data | Pack all into.blend» alle diese externen Dateien in das .blend-File einzuspeichern. Dadurch erhöht sich allerdings die Grösse des abgespeicherten Files.\n\n\nExportieren\nUm Programme auch für andere Projekte verfügbar zu machen, müssen sie in einem anderen Dateiformat ausgegeben werden. Unter «File | Export» steht eine Reihe von verschiedenen Dateiformaten zur Verfügung, welche von unterschiedlichen Programmen geöffnet werden können. Die meisten dieser Dateiformate kann Blender wiederum importieren und darstellen.\n\n\n\n\n\nMerke\n\n\nLieber einmal mehr mit der Kombination CtrlCtrl + SS, speichern, als die Fortschritte zu verlieren."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html",
+    "href": "Chapters/Chapter_5.html",
+    "title": "5. Objektarten",
+    "section": "",
+    "text": "Verschiedene Arten von Objekten\nBeim Hinzufügen von Objekten mittels der Tastenkombination ShiftShift + AA erscheint das Menü für das Hinzufügen von Objekten beim Mauszeiger. Die verschiedenen Objekte sind dabei in verschiedene Typen von Objekten unterteilt. Diese Objekte unterscheiden sich hinsichtlich ihres Aufbaus, aber auch hinsichtlich ihrer Funktion."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#mesh",
+    "href": "Chapters/Chapter_5.html#mesh",
+    "title": "5. Objektarten",
+    "section": "Mesh",
+    "text": "Mesh\n\n\nMeshes\nEin Mesh stellt ein 3D-Objekt dar. Meshes haben eine gitterähnliche Struktur aus Punkten, Linien und verbundenen Flächen, welche in ihrer Gesamtstruktur das Objekt darstellen. Der Hauptfokus dieses Kurses wird auf die Meshes gelegt, von daher werden sie später noch ausführlich beschrieben."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#curve",
+    "href": "Chapters/Chapter_5.html#curve",
+    "title": "5. Objektarten",
+    "section": "Curve",
+    "text": "Curve\n\n\nKurven\nVor der Entwicklung der Meshes wurden in Computergrafiken Kurven und Oberflächen verwendet. Sie haben den Vorteil, dass sie weniger Computerleistung benötigen. Kurven verfügen über weniger Kontrollpunkte, wodurch sie auch einfacher zu bearbeiten sind. In einigen Anwendungen werden sie heute immer noch verwendet. Blender verfügt über zwei Arten von Kurven: Bézier-Kurven und Nurbs-Kurven. Die beiden Arten von Kurven unterscheiden sich hinsichtlich ihrer zugrundeliegenden Berechnungen.\n\n\nKurven können Oberflächen enthalten\nNeu hinzugefügte Kurven beinhalten zunächst keine Oberfläche und erscheinen dadurch nicht beim Rendern. Allerdings können ihnen Oberflächen hinzugefügt werden, sodass sie auch als Objekte erkennbar werden. Zudem können Kurven auch als Hilfestellung bei Animationen verwendet werden, indem etwa Pfade für eine Animation mit ihnen vorgegeben werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#surface",
+    "href": "Chapters/Chapter_5.html#surface",
+    "title": "5. Objektarten",
+    "section": "Surface",
+    "text": "Surface\n\n\nSurfaces\nDie Surfaces sind ähnlich zu den Kurven. Während Kurven 2D-Objekte darstellen, sind die Surfaces ihre 3D-Erweiterungen. Obwohl Kurven und Surfaces somit denselben Typ von Objekten darstellen, können sie nicht gleichzeitig auftreten. In einem Objekt können somit nicht sowohl Kurven als auch Surfaces vorhanden sein."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#metaball",
+    "href": "Chapters/Chapter_5.html#metaball",
+    "title": "5. Objektarten",
+    "section": "Metaball",
+    "text": "Metaball\n\n\nMetas\nMetabälle gehören zur Objekt-Familie der Metas, welche Blender prozedural aufbaut. Anders als beispielsweise Meshes oder Kurven sind sie nicht durch Kontrollpunkte oder Gitternetze aufgebaut, sondern werden mathematisch von Blender berechnet. Wenn zwei Meta-Objekte in der Nähe voneinander sind, können sie miteinander interagieren."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#text",
+    "href": "Chapters/Chapter_5.html#text",
+    "title": "5. Objektarten",
+    "section": "Text",
+    "text": "Text\n\n\nText\nText-Objekte beinhalten einen Text, der anschliessend als Objekt dargestellt wird. Der Text hat dabei wie die Kurven oder die Oberflächen lediglich zwei Dimensionen."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#volume",
+    "href": "Chapters/Chapter_5.html#volume",
+    "title": "5. Objektarten",
+    "section": "Volume",
+    "text": "Volume\n\n\nVolumen-Objekte\nVolumen-Objekte sind lediglich Objekt-Container. Ihnen können OpenVDB-Dateien angehängt werden, um volumetrische Daten (beispielsweise Wolken oder Rauch) zu erzeugen. Diese Dateien können mithilfe von Blenders eigenen Simulationen erzeugt werden, oder in anderen Programmen erzeugt und abgespeichert werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#grease-pencil",
+    "href": "Chapters/Chapter_5.html#grease-pencil",
+    "title": "5. Objektarten",
+    "section": "Grease Pencil",
+    "text": "Grease Pencil\n\n\nGrease Pencil\nGrease Pencils sind Objekte, welche es ermöglichen, direkt in den dreidimensionalen Raum zu zeichnen. Zudem können mit ihnen 2D-Animationen erstellt werden – etwa wenn Blender für ein 2D- statt 3D-Projekt verwendet wird. Objekte der Kategorie «Grease Pencil» sind dabei eigentlich Behälter-Objekte, in welche anschliessend die Linien gezeichnet werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#armature",
+    "href": "Chapters/Chapter_5.html#armature",
+    "title": "5. Objektarten",
+    "section": "Armature",
+    "text": "Armature\n\n\nArmaturen\nArmaturen werden verwendet, um Meshes zu animieren. Hierbei wird innerhalb eines Meshes ein Gerüst erstellt, anhand dessen die Animation anschliessend erfolgen soll. Dieses Gerüst stellt sozusagen das Skelett dar, welches anschliessend für die Animation verwendet werden soll. Dementsprechend werden die einzelnen Gerüstteile auch Bones (Knochen) genannt. Armaturen werden beim Rendern nicht angezeigt. Bei ihnen handelt es sich lediglich um ein Werkzeug zur Animation."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#lattice",
+    "href": "Chapters/Chapter_5.html#lattice",
+    "title": "5. Objektarten",
+    "section": "Lattice",
+    "text": "Lattice\n\n\nLattice\nDas Lattice stellt ein dreidimensionales Gerüst aus Punkten dar, welches allerdings nicht gerendert werden kann. Es dient als Werkzeug zur komplexeren Transformation von Objekten."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#empty",
+    "href": "Chapters/Chapter_5.html#empty",
+    "title": "5. Objektarten",
+    "section": "Empty",
+    "text": "Empty\n\n\nEmpties\nEmpties sind Knotenpunkte an einem einzigen Punkt in der virtuellen Welt. Sie beinhalten weder Oberflächen noch Volumen und können auch nicht gerendert werden. Sie lassen sich allerdings beispielsweise als Bezugspunkte für Objekte verwenden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#image",
+    "href": "Chapters/Chapter_5.html#image",
+    "title": "5. Objektarten",
+    "section": "Image",
+    "text": "Image\n\n\nBilder\nBlender ermöglichet es, dass auch externe Bilddateien direkt einer Szene hinzugefügt werden können. Hierfür kann ein solches Image-Objekt erstellt und das Bild anschliessend diesem Objekt angefügt werden. Bilder können allerdings auch direkt in den Viewport-Display gezogen werden, wodurch sie anschliessend hinzugefügt werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#light",
+    "href": "Chapters/Chapter_5.html#light",
+    "title": "5. Objektarten",
+    "section": "Light",
+    "text": "Light\n\n\nLichtquellen\nLicht-Objekte stellen die Quelle für die Beleuchtung von Szenen dar. Sie sind nicht als Mesh oder Kurve modellierbar, sondern stellen vielmehr einen Punkt oder Bereich dar, von dem die Beleuchtung ausgeht."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#light-probe",
+    "href": "Chapters/Chapter_5.html#light-probe",
+    "title": "5. Objektarten",
+    "section": "Light-Probe",
+    "text": "Light-Probe\n\n\nLight Probes\nLight Probes werden in der Eevee-Render-Engine als Hilfsobjekte verwendet. Dabei werden beispielsweise Informationen über indirekte Beleuchtungseffekte gespeichert. Diese Informationen werden anschliessend im finalen Render berücksichtigt, während das Light-Probe-Objekt als solches nicht im finalen Render dargestellt wird."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#camera",
+    "href": "Chapters/Chapter_5.html#camera",
+    "title": "5. Objektarten",
+    "section": "Camera",
+    "text": "Camera\n\n\nKamera\nKameras stellen den Punkt dar, von dem aus die Welt in der gerenderten Szene betrachtet wird. Die Kameras als solche sind in den gerenderten Bildern nicht sichtbar."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#speaker",
+    "href": "Chapters/Chapter_5.html#speaker",
+    "title": "5. Objektarten",
+    "section": "Speaker",
+    "text": "Speaker\n\n\nLautsprecher\nSpeaker werden verwendet, um an bestimmten Positionen in der Szene Töne erklingen zu lassen. So wie die Lichtquellen sind die Speaker nicht modellierbar, sondern stellen einen Punkt in der drei dimensionalen Welt dar, von dessen Position ein Klang ausgeht."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#force-field",
+    "href": "Chapters/Chapter_5.html#force-field",
+    "title": "5. Objektarten",
+    "section": "Force Field",
+    "text": "Force Field\n\n\nKraftfelder\nForce Fields sind Objekte, welche in Simulationen Kräfte auf andere Objekte ausüben können. So können andere Objekte beispielsweise angezogen oder absorbiert werden. Beim Rendern sind diese Objekte als solche nicht sichtbar, allerdings die Auswirkungen, welche deren Kräfte auf Objekte haben können."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#collection-instance",
+    "href": "Chapters/Chapter_5.html#collection-instance",
+    "title": "5. Objektarten",
+    "section": "Collection Instance",
+    "text": "Collection Instance\n\n\nCollections\nCollections sind Einheiten, um Objekte anzuordnen und zu gruppieren. Sie erscheinen nicht im Viewport, sind aber im Outliner aufzufinden. Sie können wie Dateiordner verstanden werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#zusammenfassung-der-objektarten",
+    "href": "Chapters/Chapter_5.html#zusammenfassung-der-objektarten",
+    "title": "5. Objektarten",
+    "section": "Zusammenfassung der Objektarten",
+    "text": "Zusammenfassung der Objektarten\n\n\nVerschiedene Objektarten\nDie verschiedenen Objektarten dienen also entweder der Darstellung von Objekten, der Darstellung von externen Dateien, der Darstellung der Szene oder haben vor allem unterstützende Funktionen:\n\nRenderbare Objekte\n\n\n\n\n\n\n\n\n\n\n\nGitter-basiert\nKurven-basiert\nMetas\nLinien\nSzenen-Tools\nExterne Daten\nHilfs-Werkzeuge\n\n\n\n\nMesh\nCurve\nMetaball\nGrease Pencil\nCamera\nVolume\nArmature\n\n\n\nSurface\n\n\nLight\nImage\nLattice\n\n\n\nText\n\n\nSpeaker\n\nEmpty\n\n\n\n\n\n\n\n\nForce Field\n\n\n\n\n\n\n\n\nSpeaker\n\n\n\n\n\n\n\n\nLight Probe\n\n\n\n\n\n\n\n\nCollection Instance"
   }
 ]

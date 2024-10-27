@@ -15,7 +15,7 @@ Beim Start eins neuen Projekts erscheint eine Default-Szene. Diese Szene beinhal
 
 -   **Kamera**: Von der Kamera aus wird eine Szene nach deren Verarbeitung (z.B. in einem geren derten Bild oder einem Video) betrachtet. In der Default-Szene ist die Kamera auf den Würfel gerichtet.
 
--   **Lichtquelle**: Die Lichtquelle wird dafür benötigt, dass der Würfel in der gerenderten Aufnahme be leuchtet wird. Ohne eine Lichtquelle sind die 3D-Objekte beim anschliessenden Rendern nicht sichtbar – es sei denn, sie stellen selbst eine Lichtquelle dar.
+-   **Lichtquelle**: Die Lichtquelle wird dafür benötigt, dass der Würfel in der gerenderten Aufnahme beleuchtet wird. Ohne eine Lichtquelle sind die 3D-Objekte beim anschliessenden Rendern nicht sichtbar – es sei denn, sie stellen selbst eine Lichtquelle dar.
 
 :::::: tippbox
 :::: tippbox-header
@@ -34,47 +34,97 @@ Die Default-Szene kann manuell angepasst werden. Hierfür muss zunächst eine De
 Auswahl und Abwahl mittels Mausklick
 :::
 
-Durch das Anklicken mittels der -Taste können Objekte im 3D-Viewport ausgewählt werden. Die ausgewählten Objekte sind anschliessend anhand einer farblichen Markierung erkennbar. Durch das Klicken in den leeren Raum des Viewport-Displays lassen sich die Objekte wieder abwählen. Zudem wird durch die Auswahl eines anderen Objektes das vorher ausgewählte Objekt abgewählt.
+Durch das Anklicken mittels der linken Maustaste können Objekte im 3D-Viewport ausgewählt werden. Die ausgewählten Objekte sind anschliessend anhand einer farblichen Markierung erkennbar. Durch das Klicken in den leeren Raum des Viewport-Displays lassen sich die Objekte wieder abwählen. Zudem wird durch die Auswahl eines anderen Objektes das vorher ausgewählte Objekt abgewählt.
 
 ::: column-margin
-Mehrfachwahl mittels
+Mehrfachwahl mittels {{< kbd Shift >}}
 :::
 
-Um mehrere Objekte gleichzeitig auszuwählen, gibt es verschiedene Möglichkeiten. Eine Möglichkeit besteht darin, dass nacheinander Objekte bei gedrückter -Taste angeklickt und so zur Auswahl hinzugefügt werden. Durch die Auswahl von mehreren Objekten wird das zuletzt ausgewählt Objekt mit einer orangen und die vorherig ausgewählten Objekte mittels einer roten Farbe markiert.
+Um mehrere Objekte gleichzeitig auszuwählen, gibt es verschiedene Möglichkeiten. Eine Möglichkeit besteht darin, dass nacheinander Objekte bei gedrückter {{< kbd Shift >}}-Taste angeklickt und so zur Auswahl hinzugefügt werden. Durch die Auswahl von mehreren Objekten wird das zuletzt ausgewählt Objekt mit einer orangen und die vorherig ausgewählten Objekte mittels einer roten Farbe markiert.
 
 ::: column-margin
 Aktives Objekt
 :::
 
-Die Markierung mit einer orangen Farbe gibt jeweils an, dass es sich bei diesem Objekt um das aktive Objekt handelt. Diese Unterscheidung wird in späteren Kapiteln noch von Bedeutung sein, etwa wenn Merkmale vom aktiven Objekt auf andere Objekte übertragen werden sollen, oder wenn ein Objekt in Bezug zum aktiven Objekt verändert werden soll. Für den aktuellen Stand ist jedoch vor allem wichtig, wie die Objekte ausgewählt werden, und hierfür macht die rote oder orange Mar kierung noch keinen Unterschied aus.
+Die Markierung mit einer orangen Farbe gibt jeweils an, dass es sich bei diesem Objekt um das aktive Objekt handelt. Diese Unterscheidung wird in späteren Kapiteln noch von Bedeutung sein, etwa wenn Merkmale vom aktiven Objekt auf andere Objekte übertragen werden sollen, oder wenn ein Objekt in Bezug zum aktiven Objekt verändert werden soll. Für den aktuellen Stand ist jedoch vor allem wichtig, wie die Objekte ausgewählt werden, und hierfür macht die rote oder orange Markierung noch keinen Unterschied aus.
 
 ::: column-margin
-Box-Selection mittels
+Box-Selection mittels {{< kbd B >}}
 :::
 
-Alternativ kann auf den Box-Select-Modus zurückgegriffen werden. Dieser wird mit der Taste ak tiviert. Durch das Gedrückthalten der -Taste lässt sich anschliessend ein Viereck über den Bildschirm ziehen. Alle Objekte, welche sich anschliessend innerhalb dieser Box befinden, werden nach dem Loslassen der -Taste ausgewählt. Mittels der Taste oder lässt sich die Box-Selection abbrechen.
+Alternativ kann auf den Box-Select-Modus zurückgegriffen werden. Dieser wird mit der {{< kbd B >}} Taste aktiviert. Durch das Gedrückthalten der linken Maustaste lässt sich anschliessend ein Viereck über den Bildschirm ziehen. Alle Objekte, welche sich anschliessend innerhalb dieser Box befinden, werden nach dem Loslassen der linken Maustaste ausgewählt. Mittels der Taste {{< kbd esc >}} oder der rechten Maustaste lässt sich die Box-Selection abbrechen.
 
 ::: column-margin
-Circle-Selection mittels
+Circle-Selection mittels {{< kbd C >}}
 :::
 
-Alternativ können Objekte auch mit dem Circle-Select-Modus ausgewählt werden. Der Circle-Select Modus wird mit der Taste aktiviert. Bei der Verwendung des Circle-Select-Modus ist der Mauszei ger von einem Kreis umgeben. Mithilfe des Mausrads kann die Grösse des Kreises eingestellt werden. Durch einen Klick mit der -Taste werden die Objekte, welche sich innerhalb dieses Kreises befinden, alle ausgewählt. Durch das Bewegen des Mauszeigers bei gedrückter -Taste können so eine Reihe weiterer Objekte ausgewählt werden. Der Circle-Select-Modus muss allerdings aktiv be endet werden, da ein weiterer Klick mit der -Taste zu einer weiteren Auswahl von Objekten führt. Um den Circle-Select-Modus wieder zu verlassen, kann die Taste , oder gedrückt werden. Anschliessend sind alle Objekte, welche im Circle-Select-Modus angeklickt wurden, ausgewählt.
+Alternativ können Objekte auch mit dem Circle-Select-Modus ausgewählt werden. Der Circle-Select Modus wird mit der Taste {{< kbd C >}} aktiviert. Bei der Verwendung des Circle-Select-Modus ist der Mauszeiger von einem Kreis umgeben. Mithilfe des Mausrads kann die Grösse des Kreises eingestellt werden. Durch einen Klick mit der linken Maustaste werden die Objekte, welche sich innerhalb dieses Kreises befinden, alle ausgewählt. Durch das Bewegen des Mauszeigers bei gedrückter linken Maustaste können so eine Reihe weiterer Objekte ausgewählt werden. Der Circle-Select-Modus muss allerdings aktiv beendet werden, da ein weiterer Klick mit der linken Maustaste zu einer weiteren Auswahl von Objekten führt. Um den Circle-Select-Modus wieder zu verlassen, kann die Taste {{< kbd Enter >}}, {{< kbd esc >}} oder der rechten Maustaste gedrückt werden. Anschliessend sind alle Objekte, welche im Circle-Select-Modus angeklickt wurden, ausgewählt.
 
 ::: column-margin
 Auswahl umkehren
 :::
 
-Mittels der Tastenkombination + ist es möglich, die Auswahl umzukehren. Dadurch werden alle ausgewählten Objekte abgewählt und alle anderen Objekte ausgewählt. Wenn alle Objekte innerhalb einer Szene ausgewählt werden sollen, kann die Taste gedrückt werden. Dadurch werden auch Objekte, die möglicherweise ausserhalb des gerade sichtbaren Bereichs liegen, ausgewählt.
+Mittels der Tastenkombination {{< kbd Ctrl >}} + {{< kbd I >}} ist es möglich, die Auswahl umzukehren. Dadurch werden alle ausgewählten Objekte abgewählt und alle anderen Objekte ausgewählt. Wenn alle Objekte innerhalb einer Szene ausgewählt werden sollen, kann die Taste {{< kbd A >}} gedrückt werden. Dadurch werden auch Objekte, die möglicherweise ausserhalb des gerade sichtbaren Bereichs liegen, ausgewählt.
 
 ::: column-margin
 Auswahl von Objekten im Outliner
 :::
 
+<<<<<<< Updated upstream
 Im Outliner auf der rechten Seite wird mittels einer blauen Markierung angezeigt, welches Objekt gerade ausgewählt ist. Zudem lassen sich auch hier Objekte auswählen, indem sie mittels der Taste angeklickt werden. Die Auswahl von mehreren Objekten kann analog wie im Viewport-Display mittels des Gedrückthaltens der -Taste getroffen werden oder durch eine Box-Auswahl mittels der Taste . Auch hier können alle Objekte mittels der Taste gemeinsam ausgewählt werden. Der Circle-Select-Modus funktioniert allerdings nicht im Outliner.
+=======
+Im Outliner auf der rechten Seite wird mittels einer blauen Markierung angezeigt, welches Objekt gerade ausgewählt ist. Zudem lassen sich auch hier Objekte auswählen, indem sie mittels der linken Maustaste angeklickt werden. Die Auswahl von mehreren Objekten kann analog wie im Viewport-Display mittels des Gedrückthaltens der {{< kbd Shift >}}-Taste getroffen werden oder durch eine Box-Auswahl mittels der Taste {{< kbd B >}} . Auch hier können alle Objekte mittels der Taste {{< kbd A >}} gemeinsam ausgewählt werden. Der Circle-Select-Modus funktioniert allerdings nicht im Outliner.
+>>>>>>> Stashed changes
 
 ## Hinzufügen von Objekten
 
 ::: column-margin
+<<<<<<< Updated upstream
 Hinzufügen von Objekten mittels  
 :::
 
+=======
+Hinzufügen von Objekten mittels {{< kbd Shift >}} + {{< kbd A >}}
+:::
+
+Mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd A >}} erscheint beim Mauszeiger das Menü-Feld «*Add*». Dabei han delt es sich um dasselbe Menü-Feld, welches auch unter dem Reiter «*Add*» in der linken oberen Ecke aufgerufen werden kann. Mithilfe dieses Menü-Felds können eine Reihe von verschiedenen Objekten im Viewport Display hinzugefügt werden. Es gibt eine Reihe verschiedener Objektarten, welche hinzugefügt werden können. Beispielsweise kann unter «*Mesh* \| *Cube*» ein Würfel in die Szene hinzugefügt werden. Ein neues Objekt wird jeweils an der Position des 3D-Cursors eingefügt.
+
+::: column-margin
+Neue Objekte anpassen
+:::
+
+Wenn ein neues Objekt hinzugefügt wird, wird dieses Objekt direkt angewählt und farblich markiert. Zudem erscheint in der unteren linken Ecke des Viewport-Displays ein Kontext-Menü-Feld. Dieses Menü-Feld kann aufgeklappt werden und beinhaltet Einstellungen zum Objekt, welche noch spezifiziert werden können. Beim Hinzufügen eines Würfels besteht etwa die Möglichkeit, dass man dessen Grösse (Size), seine Position und seine Rotation entlang der X-, Y- und Z-Achse anpassen kann. Da das Objekt jeweils an der Stelle des 3D-Cursors erscheint, entspricht die Position des Objektes in diesem Menü jeweils auch der Position des 3D-Cursors.
+
+::: column-margin
+Kontext-Menü zum neuen Objekt
+:::
+
+Das Kontext-Menü, welches beim Hinzufügen von Objekten erscheint, ist nur temporär vorhanden. Sobald mit der linken Maustaste in einen Bereich ausserhalb des Kontext-Menüs geklickt wird, verschwindet das Menü-Feld. Es gibt keine Möglichkeit, dieses Menü-Feld zurückzuholen – es ist für immer für dieses Objekt verschwunden. Wenn das Menü nochmals benötigt werden sollte, muss das entsprechende Objekt erneut zur Szene hinzugefügt werden.
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Merke
+::::
+
+::: tippbox-body
+Kontext-Menü-Felder erscheinen in der linken unteren Ecke des Viewport-Displays und sind nur temporär verfügbar. Nach einem Klick ausserhalb des Menü-Feldes verschwinden dieses Felder und können nicht mehr zurückgeholt werden.
+:::
+::::::
+
+## Objekte vervielfältigen
+
+::: column-margin
+Methoden zur Vervielfältigung von Objekten
+:::
+
+Ausgewählte Objekte können auf verschiedene Arten dupliziert werden. Jede diese Arten hat ihre eigenen Besonderheiten:
+
+-   Duplizieren des Objektes
+
+-   Verbundene Duplikate erstellen
+
+-   Einfügen einer Kopie des Objektes mittels Copy-Paste
+>>>>>>> Stashed changes

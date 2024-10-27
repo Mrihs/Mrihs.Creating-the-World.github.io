@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -162,6 +164,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#die-default-szene" id="toc-die-default-szene" class="nav-link active" data-scroll-target="#die-default-szene">Die Default-Szene</a></li>
   <li><a href="#auswahl-von-objekten" id="toc-auswahl-von-objekten" class="nav-link" data-scroll-target="#auswahl-von-objekten">Auswahl von Objekten</a></li>
+  <li><a href="#hinzufügen-von-objekten" id="toc-hinzufügen-von-objekten" class="nav-link" data-scroll-target="#hinzufügen-von-objekten">Hinzufügen von Objekten</a></li>
   </ul>
 </nav>
     </div>
@@ -196,7 +199,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p><strong>Würfel</strong>: Genau in der Mitte der Szene befindet sich der Default-Cube. Bei diesem Würfel handelt es sich um ein 3D-Objekt. Er hat eine Grösse von 2x2x2 Metern.</p></li>
 <li><p><strong>Kamera</strong>: Von der Kamera aus wird eine Szene nach deren Verarbeitung (z.B. in einem geren derten Bild oder einem Video) betrachtet. In der Default-Szene ist die Kamera auf den Würfel gerichtet.</p></li>
-<li><p><strong>Lichtquelle</strong>: Die Lichtquelle wird dafür benötigt, dass der Würfel in der gerenderten Aufnahme be leuchtet wird. Ohne eine Lichtquelle sind die 3D-Objekte beim anschliessenden Rendern nicht sichtbar – es sei denn, sie stellen selbst eine Lichtquelle dar.</p></li>
+<li><p><strong>Lichtquelle</strong>: Die Lichtquelle wird dafür benötigt, dass der Würfel in der gerenderten Aufnahme beleuchtet wird. Ohne eine Lichtquelle sind die 3D-Objekte beim anschliessenden Rendern nicht sichtbar – es sei denn, sie stellen selbst eine Lichtquelle dar.</p></li>
 </ul>
 <div class="tippbox">
 <div class="tippbox-header">
@@ -214,31 +217,57 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Auswahl und Abwahl mittels Mausklick</p>
-</div></div><p>Durch das Anklicken mittels der -Taste können Objekte im 3D-Viewport ausgewählt werden. Die ausgewählten Objekte sind anschliessend anhand einer farblichen Markierung erkennbar. Durch das Klicken in den leeren Raum des Viewport-Displays lassen sich die Objekte wieder abwählen. Zudem wird durch die Auswahl eines anderen Objektes das vorher ausgewählte Objekt abgewählt.</p>
+</div></div><p>Durch das Anklicken mittels der linken Maustaste können Objekte im 3D-Viewport ausgewählt werden. Die ausgewählten Objekte sind anschliessend anhand einer farblichen Markierung erkennbar. Durch das Klicken in den leeren Raum des Viewport-Displays lassen sich die Objekte wieder abwählen. Zudem wird durch die Auswahl eines anderen Objektes das vorher ausgewählte Objekt abgewählt.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Mehrfachwahl mittels</p>
-</div></div><p>Um mehrere Objekte gleichzeitig auszuwählen, gibt es verschiedene Möglichkeiten. Eine Möglichkeit besteht darin, dass nacheinander Objekte bei gedrückter -Taste angeklickt und so zur Auswahl hinzugefügt werden. Durch die Auswahl von mehreren Objekten wird das zuletzt ausgewählt Objekt mit einer orangen und die vorherig ausgewählten Objekte mittels einer roten Farbe markiert.</p>
+<p>Mehrfachwahl mittels <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span></p>
+</div></div><p>Um mehrere Objekte gleichzeitig auszuwählen, gibt es verschiedene Möglichkeiten. Eine Möglichkeit besteht darin, dass nacheinander Objekte bei gedrückter <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste angeklickt und so zur Auswahl hinzugefügt werden. Durch die Auswahl von mehreren Objekten wird das zuletzt ausgewählt Objekt mit einer orangen und die vorherig ausgewählten Objekte mittels einer roten Farbe markiert.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Aktives Objekt</p>
-</div></div><p>Die Markierung mit einer orangen Farbe gibt jeweils an, dass es sich bei diesem Objekt um das aktive Objekt handelt. Diese Unterscheidung wird in späteren Kapiteln noch von Bedeutung sein, etwa wenn Merkmale vom aktiven Objekt auf andere Objekte übertragen werden sollen, oder wenn ein Objekt in Bezug zum aktiven Objekt verändert werden soll. Für den aktuellen Stand ist jedoch vor allem wichtig, wie die Objekte ausgewählt werden, und hierfür macht die rote oder orange Mar kierung noch keinen Unterschied aus.</p>
+</div></div><p>Die Markierung mit einer orangen Farbe gibt jeweils an, dass es sich bei diesem Objekt um das aktive Objekt handelt. Diese Unterscheidung wird in späteren Kapiteln noch von Bedeutung sein, etwa wenn Merkmale vom aktiven Objekt auf andere Objekte übertragen werden sollen, oder wenn ein Objekt in Bezug zum aktiven Objekt verändert werden soll. Für den aktuellen Stand ist jedoch vor allem wichtig, wie die Objekte ausgewählt werden, und hierfür macht die rote oder orange Markierung noch keinen Unterschied aus.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Box-Selection mittels</p>
-</div></div><p>Alternativ kann auf den Box-Select-Modus zurückgegriffen werden. Dieser wird mit der Taste ak tiviert. Durch das Gedrückthalten der -Taste lässt sich anschliessend ein Viereck über den Bildschirm ziehen. Alle Objekte, welche sich anschliessend innerhalb dieser Box befinden, werden nach dem Loslassen der -Taste ausgewählt. Mittels der Taste oder lässt sich die Box-Selection abbrechen.</p>
+<p>Box-Selection mittels <kbd aria-hidden="true">B</kbd><span class="visually-hidden">B</span></p>
+</div></div><p>Alternativ kann auf den Box-Select-Modus zurückgegriffen werden. Dieser wird mit der <kbd aria-hidden="true">B</kbd><span class="visually-hidden">B</span> Taste aktiviert. Durch das Gedrückthalten der linken Maustaste lässt sich anschliessend ein Viereck über den Bildschirm ziehen. Alle Objekte, welche sich anschliessend innerhalb dieser Box befinden, werden nach dem Loslassen der linken Maustaste ausgewählt. Mittels der Taste <kbd aria-hidden="true">esc</kbd><span class="visually-hidden">esc</span> oder der rechten Maustaste lässt sich die Box-Selection abbrechen.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Circle-Selection mittels</p>
-</div></div><p>Alternativ können Objekte auch mit dem Circle-Select-Modus ausgewählt werden. Der Circle-Select Modus wird mit der Taste aktiviert. Bei der Verwendung des Circle-Select-Modus ist der Mauszei ger von einem Kreis umgeben. Mithilfe des Mausrads kann die Grösse des Kreises eingestellt werden. Durch einen Klick mit der -Taste werden die Objekte, welche sich innerhalb dieses Kreises befinden, alle ausgewählt. Durch das Bewegen des Mauszeigers bei gedrückter -Taste können so eine Reihe weiterer Objekte ausgewählt werden. Der Circle-Select-Modus muss allerdings aktiv be endet werden, da ein weiterer Klick mit der -Taste zu einer weiteren Auswahl von Objekten führt. Um den Circle-Select-Modus wieder zu verlassen, kann die Taste , oder gedrückt werden. Anschliessend sind alle Objekte, welche im Circle-Select-Modus angeklickt wurden, ausgewählt.</p>
+<p>Circle-Selection mittels <kbd aria-hidden="true">C</kbd><span class="visually-hidden">C</span></p>
+</div></div><p>Alternativ können Objekte auch mit dem Circle-Select-Modus ausgewählt werden. Der Circle-Select Modus wird mit der Taste <kbd aria-hidden="true">C</kbd><span class="visually-hidden">C</span> aktiviert. Bei der Verwendung des Circle-Select-Modus ist der Mauszeiger von einem Kreis umgeben. Mithilfe des Mausrads kann die Grösse des Kreises eingestellt werden. Durch einen Klick mit der linken Maustaste werden die Objekte, welche sich innerhalb dieses Kreises befinden, alle ausgewählt. Durch das Bewegen des Mauszeigers bei gedrückter linken Maustaste können so eine Reihe weiterer Objekte ausgewählt werden. Der Circle-Select-Modus muss allerdings aktiv beendet werden, da ein weiterer Klick mit der linken Maustaste zu einer weiteren Auswahl von Objekten führt. Um den Circle-Select-Modus wieder zu verlassen, kann die Taste <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span>, <kbd aria-hidden="true">esc</kbd><span class="visually-hidden">esc</span> oder der rechten Maustaste gedrückt werden. Anschliessend sind alle Objekte, welche im Circle-Select-Modus angeklickt wurden, ausgewählt.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Auswahl umkehren</p>
-</div></div><p>Mittels der Tastenkombination + ist es möglich, die Auswahl umzukehren. Dadurch werden alle ausgewählten Objekte abgewählt und alle anderen Objekte ausgewählt. Wenn alle Objekte innerhalb einer Szene ausgewählt werden sollen, kann die Taste gedrückt werden. Dadurch werden auch Objekte, die möglicherweise ausserhalb des gerade sichtbaren Bereichs liegen, ausgewählt.</p>
+</div></div><p>Mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> ist es möglich, die Auswahl umzukehren. Dadurch werden alle ausgewählten Objekte abgewählt und alle anderen Objekte ausgewählt. Wenn alle Objekte innerhalb einer Szene ausgewählt werden sollen, kann die Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> gedrückt werden. Dadurch werden auch Objekte, die möglicherweise ausserhalb des gerade sichtbaren Bereichs liegen, ausgewählt.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Auswahl von Objekten im Outliner</p>
-</div></div><p>Im Outliner auf der rechten Seite wird mittels einer blauen Markierung angezeigt, welches Objekt gerade ausgewählt ist. Zudem lassen sich auch hier Objekte auswählen, indem sie mittels der Taste angeklickt werden. Die Auswahl von mehreren Objekten kann analog wie im Viewport-Display mittels des Gedrückthaltens der -Taste getroffen werden oder durch eine Box-Auswahl mittels der Taste . Auch hier können alle Objekte mittels der Taste gemeinsam ausgewählt werden. Der Circle-Select-Modus funktioniert allerdings nicht im Outliner.</p>
+</div></div><p>Im Outliner auf der rechten Seite wird mittels einer blauen Markierung angezeigt, welches Objekt gerade ausgewählt ist. Zudem lassen sich auch hier Objekte auswählen, indem sie mittels der linken Maustaste angeklickt werden. Die Auswahl von mehreren Objekten kann analog wie im Viewport-Display mittels des Gedrückthaltens der <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste getroffen werden oder durch eine Box-Auswahl mittels der Taste <kbd aria-hidden="true">B</kbd><span class="visually-hidden">B</span> . Auch hier können alle Objekte mittels der Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> gemeinsam ausgewählt werden. Der Circle-Select-Modus funktioniert allerdings nicht im Outliner.</p>
+</section>
+<section id="hinzufügen-von-objekten" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="hinzufügen-von-objekten">Hinzufügen von Objekten</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Hinzufügen von Objekten mittels <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span></p>
+</div></div><p>Mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> erscheint beim Mauszeiger das Menü-Feld «<em>Add</em>». Dabei han delt es sich um dasselbe Menü-Feld, welches auch unter dem Reiter «<em>Add</em>» in der linken oberen Ecke aufgerufen werden kann. Mithilfe dieses Menü-Felds können eine Reihe von verschiedenen Objekten im Viewport Display hinzugefügt werden. Es gibt eine Reihe verschiedener Objektarten, welche hinzugefügt werden können. Beispielsweise kann unter «<em>Mesh</em> | <em>Cube</em>» ein Würfel in die Szene hinzugefügt werden. Ein neues Objekt wird jeweils an der Position des 3D-Cursors eingefügt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Neue Objekte anpassen</p>
+</div></div><p>Wenn ein neues Objekt hinzugefügt wird, wird dieses Objekt direkt angewählt und farblich markiert. Zudem erscheint in der unteren linken Ecke des Viewport-Displays ein Kontext-Menü-Feld. Dieses Menü-Feld kann aufgeklappt werden und beinhaltet Einstellungen zum Objekt, welche noch spezifiziert werden können. Beim Hinzufügen eines Würfels besteht etwa die Möglichkeit, dass man dessen Grösse (Size), seine Position und seine Rotation entlang der X-, Y- und Z-Achse anpassen kann. Da das Objekt jeweils an der Stelle des 3D-Cursors erscheint, entspricht die Position des Objektes in diesem Menü jeweils auch der Position des 3D-Cursors.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kontext-Menü zum neuen Objekt</p>
+</div></div><p>Das Kontext-Menü, welches beim Hinzufügen von Objekten erscheint, ist nur temporär vorhanden. Sobald mit der linken Maustaste in einen Bereich ausserhalb des Kontext-Menüs geklickt wird, verschwindet das Menü-Feld. Es gibt keine Möglichkeit, dieses Menü-Feld zurückzuholen – es ist für immer für dieses Objekt verschwunden. Wenn das Menü nochmals benötigt werden sollte, muss das entsprechende Objekt erneut zur Szene hinzugefügt werden.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Merke</p>
+</div>
+<div class="tippbox-body">
+<p>Kontext-Menü-Felder erscheinen in der linken unteren Ecke des Viewport-Displays und sind nur temporär verfügbar. Nach einem Klick ausserhalb des Menü-Feldes verschwinden dieses Felder und können nicht mehr zurückgeholt werden.</p>
+</div>
+</div>
 
 
 </section>

@@ -32,34 +32,29 @@ Rotieren und Drehen der Ansicht
 Mittels der Tasten{{< kbd 2 >}}, {{< kbd 4 >}}, {{< kbd 6 >}} und {{< kbd 8 >}} kann die Ansicht entsprechend ihrer relativen Anordnung auf dem Nummernblock rotiert werden: Die Taste {{< kbd 2 >}} rotiert nach unten, die Taste {{< kbd 4 >}} nach links, die Taste {{< kbd 6 >}} nach rechts und die Taste {{< kbd 8 >}} nach oben. Werden dieselben Tasten bei gedrückter {{< kbd Ctrl >}}-Taste gedrückt, wird die Ansicht in die entsprechende Richtung bewegt, ohne eine Rotation durchzuführen. Mittels gedrückter {{< kbd Shift >}}-Taste kann die Ansicht durch die Taste {{< kbd 6 >}} zudem im Uhrzeigersinn und mittels der Taste {{< kbd 4 >}} gegen den Uhrzeigersinn gedreht werden. Um näher hineinzuzoomen wird die Taste {{< kbd + >}} und zum Hinauszoomen die Taste {{< kbd - >}} verwendet.
 
 ::: column-margin
-Präzise Ansichten ansteuern 
+Präzise Ansichten ansteuern
 :::
 
-Mittels der Taste {{< kbd 1 >}} kann die Ansicht direkt in die Vorderansicht gedreht werden. Die Ansicht erfolgt anschliessend entlang der Y-Achse. Die Rückansicht ist mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd 1 >}} einstellbar. Mittels der Taste  wird die Seitenansicht – von der rechten Seite aus zum Objekt hingewählt. Das Objekt wird in diesem Falle entlang der X-Achse betrachtet. Mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd 3 >}}
-ist die Seitenansicht von der linken Seite aus einstellbar. Um die Szene aus der Vogelperspektive zu betrachten, kann die Taste {{< kbd 7 >}} gedrückt werden. Hierbei erfolgt die Ansicht der Z-Achse entlang. 
-Mittels der Tastenkombination {{< kbd Ctrl >}} + {{< kbd 7 >}} erfolgt die Ansicht von unten.
+Mittels der Taste {{< kbd 1 >}} kann die Ansicht direkt in die Vorderansicht gedreht werden. Die Ansicht erfolgt anschliessend entlang der Y-Achse. Die Rückansicht ist mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd 1 >}} einstellbar. Mittels der Taste wird die Seitenansicht – von der rechten Seite aus zum Objekt hingewählt. Das Objekt wird in diesem Falle entlang der X-Achse betrachtet. Mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd 3 >}} ist die Seitenansicht von der linken Seite aus einstellbar. Um die Szene aus der Vogelperspektive zu betrachten, kann die Taste {{< kbd 7 >}} gedrückt werden. Hierbei erfolgt die Ansicht der Z-Achse entlang. Mittels der Tastenkombination {{< kbd Ctrl >}} + {{< kbd 7 >}} erfolgt die Ansicht von unten.
 
 ::: column-margin
-Perspektivische und orthogonale Darstelung 
+Perspektivische und orthogonale Darstelung
 :::
 
-Jede der Ansichten kann auf zwei Arten erfolgen: perspektivisch oder orthogonal. Die perspektivische Ansicht berücksichtigt Tiefeninformationen, sodass weiter entfernte Objekte kleiner dargestellt werden. Die orthogonale Perspektive ignoriert die Tiefeninformationen, wodurch weiter entfernte Objekte gleich gross angezeigt werden wie nähere gleich grosse Objekte auf der entsprechenden Achse. Diese Perspektive hat den Vorteil, dass Objekte in ihrer geometrischen Form in 2D betrachtet 
-werden können. Mittels der Taste {{< kbd 5 >}} kann zwischen diesen beiden Ansichtsmodi gewechselt werden. 
+Jede der Ansichten kann auf zwei Arten erfolgen: perspektivisch oder orthogonal. Die perspektivische Ansicht berücksichtigt Tiefeninformationen, sodass weiter entfernte Objekte kleiner dargestellt werden. Die orthogonale Perspektive ignoriert die Tiefeninformationen, wodurch weiter entfernte Objekte gleich gross angezeigt werden wie nähere gleich grosse Objekte auf der entsprechenden Achse. Diese Perspektive hat den Vorteil, dass Objekte in ihrer geometrischen Form in 2D betrachtet werden können. Mittels der Taste {{< kbd 5 >}} kann zwischen diesen beiden Ansichtsmodi gewechselt werden.
 
 ::: column-margin
-Kamera-Ansicht  
+Kamera-Ansicht
 :::
 
-Mittels der Taste {{< kbd 1 >}} kann die Ansicht direkt in die Position der Kamera gelegt werden. Dadurch wird die Szene genau so betrachtet, wie sie im finalen Render 
-betrachtet werden wird. Wenn in einer Szene keine Kamera vorhanden ist, steht diese Ansicht nicht zur Verfügung.Wenn mehrere 
-Kameras vorhanden sind, wird jeweils die Kamera, welche die aktive Render Kamera darstellt, anvisiert. Um die Kameraperspektive zu verlassen kann die Ansicht mittels der Maus bewegt werden, oder erneut die Taste {{< kbd 0 >}}gedrückt werden.
-
+Mittels der Taste {{< kbd 1 >}} kann die Ansicht direkt in die Position der Kamera gelegt werden. Dadurch wird die Szene genau so betrachtet, wie sie im finalen Render betrachtet werden wird. Wenn in einer Szene keine Kamera vorhanden ist, steht diese Ansicht nicht zur Verfügung.Wenn mehrere Kameras vorhanden sind, wird jeweils die Kamera, welche die aktive Render Kamera darstellt, anvisiert. Um die Kameraperspektive zu verlassen kann die Ansicht mittels der Maus bewegt werden, oder erneut die Taste {{< kbd 0 >}} gedrückt werden.
 
 ::: column-margin
-Fokus auf ein Objekt   
+Fokus auf ein Objekt
 :::
 
-In komplexeren Szenen kann es sein, dass man die Übersicht über die Objekte verliert, oder dass sie sich gegenseitig im Weg stehen bei der Ansicht. Mittels der Taste {{< kbd . >}} auf dem Nummernblock wird die Ansicht direkt auf ein ausgewähltes Objekt gezoomt. Diese Aktion lässt sich nicht mit der Taste {{< kbd + .}} ausserhalb des Nummernblocks emulieren. Mittels der Taste {{< kbd + /}} kann zudem die lokale Ansicht aktiviert werden. In dieser Ansicht wird lediglich 
-das ausgewählte Objekt dargestellt, sodass es in komplexen Szenen besser betrachtet werden kann. Allerdings muss anschliessend die Taste  erneut gedrückt werden, um die lokale Ansicht wieder zu verlassen. Auch diese Aktion lässt sich nicht mit einer anderen Taste ausserhalb des 
-Nummernblocks emulieren. 
+In komplexeren Szenen kann es sein, dass man die Übersicht über die Objekte verliert, oder dass sie sich gegenseitig im Weg stehen bei der Ansicht. Mittels der Taste {{< kbd . >}} auf dem Nummernblock wird die Ansicht direkt auf ein ausgewähltes Objekt gezoomt. Diese Aktion lässt sich nicht mit der Taste {{< kbd . >}} ausserhalb des Nummernblocks emulieren. Mittels der Taste {{< kbd / >}} kann zudem die lokale Ansicht aktiviert werden. In dieser Ansicht wird lediglich das ausgewählte Objekt dargestellt, sodass es in komplexen Szenen besser betrachtet werden kann. Allerdings muss anschliessend die Taste erneut gedrückt werden, um die lokale Ansicht wieder zu verlassen. Auch diese Aktion lässt sich nicht mit einer anderen Taste ausserhalb des Nummernblocks emulieren.
 
+## Navigation mittels Gizmos
+
+Auf der rechten Seite des 3D-Viewports lassen sich zudem Schaltflächen anzeigen, mit denen die Ansicht gesteuert werden kann. Um diese anzeigen zu lassen, müssen die Gizmos eingeschaltet sein. Wird die linke Maustaste auf das Kamera-Icon angewendet, wird die Kamera-Ansicht aktiviert. Das Icon darunter, welches ein Gitternetz darstellt, dient dem Wechsel zwischen perspektivischer und orthogonaler Ansicht. Die beiden oberen Icons dienen dem Zoomen (mittels der Lupe) und dem Bewegen der Ansicht (Hand). Hierfür muss das Icon angeklickt und die Maus anschliessend bei weiterhin gedrückter Maustaste bewegt werden. Zuoberst findet sich zudem ein Koordinatensystem, mit dem die Perspektive per Mausklick oder mittels gedrückter Maustaste verändert werden kann.

@@ -1,0 +1,73 @@
+---
+title: "4. Erste Schritte "
+editor: visual
+---
+
+## Die Default-Szene
+
+::: column-margin
+Objekte in der Default-Szene
+:::
+
+Beim Start eins neuen Projekts erscheint eine Default-Szene. Diese Szene beinhaltet bereits die wesentlichen Dinge, welche für eine 3D-Szene benötigt werden:
+
+-   **Würfel**: Genau in der Mitte der Szene befindet sich der Default-Cube. Bei diesem Würfel handelt es sich um ein 3D-Objekt. Er hat eine Grösse von 2x2x2 Metern.
+
+-   **Kamera**: Von der Kamera aus wird eine Szene nach deren Verarbeitung (z.B. in einem geren derten Bild oder einem Video) betrachtet. In der Default-Szene ist die Kamera auf den Würfel gerichtet.
+
+-   **Lichtquelle**: Die Lichtquelle wird dafür benötigt, dass der Würfel in der gerenderten Aufnahme be leuchtet wird. Ohne eine Lichtquelle sind die 3D-Objekte beim anschliessenden Rendern nicht sichtbar – es sei denn, sie stellen selbst eine Lichtquelle dar.
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+::::
+
+::: tippbox-body
+Die Default-Szene kann manuell angepasst werden. Hierfür muss zunächst eine Default-Szene erstellt werden, welche bei jedem Start erscheinen soll. Diese kann dann unter «*File* \| *Defaults* \| *Save Startup File*» als neue Start-up Szene gespeichert werden.
+:::
+::::::
+
+## Auswahl von Objekten
+
+::: column-margin
+Auswahl und Abwahl mittels Mausklick
+:::
+
+Durch das Anklicken mittels der -Taste können Objekte im 3D-Viewport ausgewählt werden. Die ausgewählten Objekte sind anschliessend anhand einer farblichen Markierung erkennbar. Durch das Klicken in den leeren Raum des Viewport-Displays lassen sich die Objekte wieder abwählen. Zudem wird durch die Auswahl eines anderen Objektes das vorher ausgewählte Objekt abgewählt.
+
+::: column-margin
+Mehrfachwahl mittels
+:::
+
+Um mehrere Objekte gleichzeitig auszuwählen, gibt es verschiedene Möglichkeiten. Eine Möglichkeit besteht darin, dass nacheinander Objekte bei gedrückter -Taste angeklickt und so zur Auswahl hinzugefügt werden. Durch die Auswahl von mehreren Objekten wird das zuletzt ausgewählt Objekt mit einer orangen und die vorherig ausgewählten Objekte mittels einer roten Farbe markiert.
+
+::: column-margin
+Aktives Objekt
+:::
+
+Die Markierung mit einer orangen Farbe gibt jeweils an, dass es sich bei diesem Objekt um das aktive Objekt handelt. Diese Unterscheidung wird in späteren Kapiteln noch von Bedeutung sein, etwa wenn Merkmale vom aktiven Objekt auf andere Objekte übertragen werden sollen, oder wenn ein Objekt in Bezug zum aktiven Objekt verändert werden soll. Für den aktuellen Stand ist jedoch vor allem wichtig, wie die Objekte ausgewählt werden, und hierfür macht die rote oder orange Mar kierung noch keinen Unterschied aus.
+
+::: column-margin
+Box-Selection mittels
+:::
+
+Alternativ kann auf den Box-Select-Modus zurückgegriffen werden. Dieser wird mit der Taste ak tiviert. Durch das Gedrückthalten der -Taste lässt sich anschliessend ein Viereck über den Bildschirm ziehen. Alle Objekte, welche sich anschliessend innerhalb dieser Box befinden, werden nach dem Loslassen der -Taste ausgewählt. Mittels der Taste oder lässt sich die Box-Selection abbrechen.
+
+::: column-margin
+Circle-Selection mittels
+:::
+
+Alternativ können Objekte auch mit dem Circle-Select-Modus ausgewählt werden. Der Circle-Select Modus wird mit der Taste aktiviert. Bei der Verwendung des Circle-Select-Modus ist der Mauszei ger von einem Kreis umgeben. Mithilfe des Mausrads kann die Grösse des Kreises eingestellt werden. Durch einen Klick mit der -Taste werden die Objekte, welche sich innerhalb dieses Kreises befinden, alle ausgewählt. Durch das Bewegen des Mauszeigers bei gedrückter -Taste können so eine Reihe weiterer Objekte ausgewählt werden. Der Circle-Select-Modus muss allerdings aktiv be endet werden, da ein weiterer Klick mit der -Taste zu einer weiteren Auswahl von Objekten führt. Um den Circle-Select-Modus wieder zu verlassen, kann die Taste , oder gedrückt werden. Anschliessend sind alle Objekte, welche im Circle-Select-Modus angeklickt wurden, ausgewählt.
+
+:::column-margin
+Auswahl umkehren
+::: 
+
+Mittels der Tastenkombination + ist es möglich, die Auswahl umzukehren. Dadurch werden alle ausgewählten Objekte abgewählt und alle anderen Objekte ausgewählt. Wenn alle Objekte innerhalb einer Szene ausgewählt werden sollen, kann die Taste gedrückt werden. Dadurch werden auch Objekte, die möglicherweise ausserhalb des gerade sichtbaren Bereichs liegen, ausgewählt.
+
+:::column-margin
+Auswahl von Objekten im Outliner
+:::
+
+Im Outliner auf der rechten Seite wird mittels einer blauen Markierung angezeigt, welches Objekt gerade ausgewählt ist. Zudem lassen sich auch hier Objekte auswählen, indem sie mittels der Taste angeklickt werden. Die Auswahl von mehreren Objekten kann analog wie im Viewport-Display mittels des Gedrückthaltens der -Taste getroffen werden oder durch eine Box-Auswahl mittels der Taste . Auch hier können alle Objekte mittels der Taste gemeinsam ausgewählt werden. Der Circle-Select-Modus funktioniert allerdings nicht im Outliner.

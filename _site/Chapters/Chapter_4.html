@@ -165,6 +165,17 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#die-default-szene" id="toc-die-default-szene" class="nav-link active" data-scroll-target="#die-default-szene">Die Default-Szene</a></li>
   <li><a href="#auswahl-von-objekten" id="toc-auswahl-von-objekten" class="nav-link" data-scroll-target="#auswahl-von-objekten">Auswahl von Objekten</a></li>
   <li><a href="#hinzufügen-von-objekten" id="toc-hinzufügen-von-objekten" class="nav-link" data-scroll-target="#hinzufügen-von-objekten">Hinzufügen von Objekten</a></li>
+  <li><a href="#löschen-von-objekten" id="toc-löschen-von-objekten" class="nav-link" data-scroll-target="#löschen-von-objekten">Löschen von Objekten</a></li>
+  <li><a href="#objekte-vervielfältigen" id="toc-objekte-vervielfältigen" class="nav-link" data-scroll-target="#objekte-vervielfältigen">Objekte vervielfältigen</a>
+  <ul class="collapse">
+  <li><a href="#objekte-duplizieren" id="toc-objekte-duplizieren" class="nav-link" data-scroll-target="#objekte-duplizieren">Objekte duplizieren</a></li>
+  <li><a href="#verbundene-duplikate-erstellen" id="toc-verbundene-duplikate-erstellen" class="nav-link" data-scroll-target="#verbundene-duplikate-erstellen">Verbundene Duplikate erstellen</a></li>
+  <li><a href="#copy-paste-von-objekten" id="toc-copy-paste-von-objekten" class="nav-link" data-scroll-target="#copy-paste-von-objekten">Copy-Paste von Objekten</a></li>
+  </ul></li>
+  <li><a href="#verbinden-von-objekten" id="toc-verbinden-von-objekten" class="nav-link" data-scroll-target="#verbinden-von-objekten">Verbinden von Objekten</a></li>
+  <li><a href="#verstecken-von-objekten" id="toc-verstecken-von-objekten" class="nav-link" data-scroll-target="#verstecken-von-objekten">Verstecken von Objekten</a></li>
+  <li><a href="#anordnen-in-collections" id="toc-anordnen-in-collections" class="nav-link" data-scroll-target="#anordnen-in-collections">Anordnen in Collections</a></li>
+  <li><a href="#speichern" id="toc-speichern" class="nav-link" data-scroll-target="#speichern">Speichern</a></li>
   </ul>
 </nav>
     </div>
@@ -266,6 +277,142 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="tippbox-body">
 <p>Kontext-Menü-Felder erscheinen in der linken unteren Ecke des Viewport-Displays und sind nur temporär verfügbar. Nach einem Klick ausserhalb des Menü-Feldes verschwinden dieses Felder und können nicht mehr zurückgeholt werden.</p>
+</div>
+</div>
+</section>
+<section id="löschen-von-objekten" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="löschen-von-objekten">Löschen von Objekten</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Löschen von Objekten mittels <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span></p>
+</div></div><p>Wenn ein Objekt gelöscht werden soll, muss dieses zunächst ausgewählt werden. Mittels der Taste <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> wird der Befehl für die Löschung des ausgewählten Objektes gegeben. Dieser muss anschliessend bestätigt werden, entweder mit einem Mausklick auf das daraufhin beim Mauszeiger erscheinende «<em>Delete</em>»-Feld oder mittels der Taste <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span>. Alternativ kann auch die Taste <kbd aria-hidden="true">Delete</kbd><span class="visually-hidden">Delete</span> verwendet werden – hierbei wird das Objekt direkt gelöscht, ohne dass eine Bestätigung nötig ist.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Übung 2: Hinzufügen und Löschen</p>
+</div>
+<div class="tippbox-body">
+<p>Übung 2.1<br>
+Löschen Sie alle Objekte aus der Szene.</p>
+<p>Übung 2.2<br>
+Erstellen Sie einen neuen Würfel mit der Grösse 1 und einer Rotation von 90°. Welche Achse Sie hierfür wählen, spielt keine Rolle.</p>
+</div>
+</div>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Merke</p>
+</div>
+<div class="tippbox-body">
+<p>Mittels <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> erscheint beim Mauszeiger das Menü zum Hinzufügen von Objekten.</p>
+<p>Um Objekte zu löschen, müssen sie zunächst ausgewählt werden und können anschliessend mit der Taste <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> oder <kbd aria-hidden="true">Delete</kbd><span class="visually-hidden">Delete</span> gelöscht werden.</p>
+</div>
+</div>
+</section>
+<section id="objekte-vervielfältigen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="objekte-vervielfältigen">Objekte vervielfältigen</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Methoden zur Vervielfältigung von Objekten</p>
+</div></div><p>Ausgewählte Objekte können auf verschiedene Arten dupliziert werden. Jede diese Arten hat ihre eigenen Besonderheiten:</p>
+<ul>
+<li><p>Duplizieren des Objektes</p></li>
+<li><p>Verbundene Duplikate erstellen</p></li>
+<li><p>Einfügen einer Kopie des Objektes mittels Copy-Paste</p></li>
+</ul>
+<section id="objekte-duplizieren" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="objekte-duplizieren">Objekte duplizieren</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Duplikat eines Objektes erstellen mittels <kbd aria-hidden="true">shift</kbd><span class="visually-hidden">shift</span> + <kbd aria-hidden="true">D</kbd><span class="visually-hidden">D</span></p>
+</div></div><p>Die schnellste Methode, um Objekte zu duplizieren, besteht darin, dass die entsprechenden Objekte, welche dupliziert werden sollen, ausgewählt werden und anschliessend mit der Tastenkombination <kbd aria-hidden="true">shift</kbd><span class="visually-hidden">shift</span> + <kbd aria-hidden="true">D</kbd><span class="visually-hidden">D</span> der Befehl zur Duplikation der Objekte gegeben wird. Dadurch entsteht an der Position des originalen Objekts ein Duplikat, welches mit der Bewegung des Mauszeigers im Raum bewegt werden kann. Durch einen Klick mit der linken Maustaste, <kbd aria-hidden="true">Space</kbd><span class="visually-hidden">Space</span> oder <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span>-Taste wird das Objekt anschliessend platziert. Die Bewegung des duplizierten Objekts kann auch mittels abgebrochen werden. Dadurch wird das Duplikat allerdings nicht gelöscht, sondern an derselben Position wie das Original platziert.</p>
+</section>
+<section id="verbundene-duplikate-erstellen" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="verbundene-duplikate-erstellen">Verbundene Duplikate erstellen</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Verbundene Duplikate erstellen mittels <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">D</kbd><span class="visually-hidden">D</span></p>
+</div></div><p>Nebst einem normalen Duplikat kann auch ein verbundenes Duplikat erstellt werden. Hierfür wird nach der Auswahl der zu duplizierenden Objekte die Tastenkombination <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">D</kbd><span class="visually-hidden">D</span> gedrückt. Auch bei dieser Methode kann das Objekt mit der Maus im Raum bewegt und mittels der linken Maustaste oder <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span>Taste platziert werden. Wird nun in weiteren Arbeitsschritten entweder das originale oder das verbunden duplizierte Objekt bearbeitet, führt dies dazu, dass dieselben Veränderungen gleichzeitig auch bei allen verbundenen Objekten durchgeführt werden.</p>
+</section>
+<section id="copy-paste-von-objekten" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="copy-paste-von-objekten">Copy-Paste von Objekten</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Objekte mittels Copy-Paste vervielfältigen</p>
+</div></div><p>Eine weitere Methode zur Vervielfältigung von Objekten besteht darin, dass die zu vervielfältigenden Objekte ausgewählt und mittels <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">C</kbd><span class="visually-hidden">C</span> kopiert und anschliessend mittels <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">V</kbd><span class="visually-hidden">V</span> wieder eingefügt werden. Im Gegensatz zur normalen und zur verbundenen Duplizierung werden die eingefügten Objekte direkt platziert und müssen durch weitere Befehle verschoben werden. Zudem werden bei dieser Methode auch von den Materialien des Objektes eine Kopie erstellt, welche dann dem neu eingefügten Objekt zugewiesen wird. Dadurch führt eine Bearbeitung des Materials des originalen Objekts nicht zu einer Veränderung des Materials des neu eingefügten Objekts. Allerdings kann dem eingefügten Objekt auch wieder das originale Material zugewiesen werden.</p>
+</section>
+</section>
+<section id="verbinden-von-objekten" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="verbinden-von-objekten">Verbinden von Objekten</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Join mittels <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">J</kbd><span class="visually-hidden">J</span></p>
+</div></div><p>Mehrere Objekte lassen sich auch verbinden, sodass sie zu einem Objekt werden. Hierfür müssen die zu verbindenden Objekte markiert werden. Die Verbindung der Objekte erfolgt anschliessend mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">J</kbd><span class="visually-hidden">J</span> . Wichtig ist dabei, dass eines der markierten Objekte das aktive Objekt darstellt. Üblicherweise handelt es sich dabei um das zuletzt ausgewählte Objekt. Das aktive Objekt ist jeweils anhand einer orangen statt einer roten Markierung ersichtlich. Die anderen Objekte werden anschliessend zum aktiven Objekt hinzugefügt. Wenn mehrere Objekte ausgewählt sind, allerdings kein Objekt der Auswahl das aktive Objekt darstellt, wird das Verbinden von Objekten nicht durchgeführt.</p>
+</section>
+<section id="verstecken-von-objekten" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="verstecken-von-objekten">Verstecken von Objekten</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Verstecken von Objekten mittels <kbd aria-hidden="true">H</kbd><span class="visually-hidden">H</span></p>
+</div></div><p>Gerade bei sehr komplexen Szenen kann es vorkommen, dass sich die Objekte gegenseitig verdecken und die Bearbeitung etwas schwieriger wird. In diesem Falle gibt es die Möglichkeit, Objekte in der Ansicht zu verstecken. Ausgewählte Objekte können mittels der Taste versteckt werden. Im Outliner sind die Objekte nach wie vor noch angegeben, allerdings grau hinterlegt. Mittels der Tastenkombi nation <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">H</kbd><span class="visually-hidden">H</span> werden alle versteckten Objekte wieder angezeigt. Mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">H</kbd><span class="visually-hidden">H</span> lassen sich zudem alle Objekte, ausser den ausgewählten Objekten, verstecken. Dadurch sind nur noch die markierten Objekte sichtbar.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Merke</p>
+</div>
+<div class="tippbox-body">
+<p>Statt Objekte in einer Szene zu verstecken kann alternativ auch die lokale Ansicht mittels der Taste <kbd aria-hidden="true">/</kbd><span class="visually-hidden">/</span> auf diese Objekte angewendet werden. In dieser Ansicht werden alle anderen Objekte ausgeblendet. Um wieder in die normale Ansicht zu gelangen, muss erneut die Taste <kbd aria-hidden="true">/</kbd><span class="visually-hidden">/</span> gedrückt werden.</p>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Versteckte Objekte im Outliner aufdecken</p>
+</div></div><p>Um einzelne Objekte wieder anzeigen zu lassen, kann im Outliner das geschlossene Auge neben dem entsprechenden Objekt angewählt werden. Analog kann auch ein geöffnetes Auge angewählt werden, um die Objekte zu verstecken. Das Verstecken von Objekten bezieht sich nur auf den Viewport-Display. In einem finalen Render werden die Objekte trotzdem gerendert und sind dementsprechend sichtbar.</p>
+</section>
+<section id="anordnen-in-collections" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="anordnen-in-collections">Anordnen in Collections</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Collections</p>
+</div></div><p>Im Outliner lassen sich die verschiedenen Objekte in Collections anordnen. Hierfür werden die Objekte jeweils in eine Collection hineingezogen. Anschliessend werden die Objekte innerhalb dieser Collection aufgelistet. Auch andere Collections können in eine Collection hineingezogen werden. Somit können mithilfe der Collections Ordnerstrukturen im Outliner erstellt werden. Dies ermöglicht, dass die Objekte innerhalb einer Collection als gemeinsame Gruppe für komplexere Vorhaben verwendet werden können – etwa für Partikel-Effekte.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Hinzufügen und Deaktivieren von Collections</p>
+</div></div><p>Mithilfe der Schaltfläche oben rechts in der Ecke des Outliners können neue Collections hinzugefügt werden. Hierfür muss je nach Bildschirmgrösse allenfalls der Header des Outliners nach rechts gescrollt oder der Outliner vergrössert werden. Mittelt dem Kontrollkästchen neben einer Collection lassen sich die Objekte innerhalb einer Collection deaktivieren. Die entsprechenden Objekte werden anschliessend im Viewport nicht mehr angezeigt und auch beim Rendern nicht mehr berücksichtig.</p>
+</section>
+<section id="speichern" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="speichern">Speichern</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Zwischenspeichern mittels <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> ist unabdingbar</p>
+</div></div><p>Bisher wurden bereits einige Tastenkombinationen angesprochen. Die wichtigste Tastenkombination stellt allerdings die Kombination für das Abspeichern des aktuellen Projekts dar: <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span>. Zwischenspeichern ist bei der Arbeit mit Blender eine wichtige Empfehlung. Je nach Komplexität des Projektes kann es manchmal vorkommen, dass das Programm unerwartet abstürzt und die Fort schritte bis zum letzten Speicherpunkt verloren gehen. Aus diesem Grund empfiehlt es sich, das Projekt lieber einmal zu viel als einmal zu wenig abzuspeichern.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kopie speichern</p>
+</div></div><p>Alternativ kann das Projekt auch unter «<em>File</em> | <em>Save</em>» abgespeichert werden. Nebst der Möglichkeit, dass ein Projekt unter einem neuen Namen gespeichert und fortgeführt wird («<em>File</em> | <em>Save</em> as» bzw. <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span>), gibt es auch die Möglichkeit, mittels «<em>File</em> | <em>Save Copy</em>» ( + + ) eine Backup-Version abzuspeichern und in dem originalen File weiterzuarbeiten.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>.blend-Files</p>
+</div></div><p>Die Projekte werden jeweils in Blenders programmeigenem Format «<em>.blend</em>» abgespeichert. Diese Datei enthält alle Objekte, Animationen und Einstellungen des Projektes. Das .blend-Dateiformat kann lediglich mit Blender geöffnet werden. Wenn externe Dateien (beispielsweise Texturen, Soundeffekte oder Videos) im Projekt eingebunden werden, müssen diese ebenfalls mit dem Projekt weitergegeben werden. Es gibt jedoch die Möglichkeit, unter «<em>File</em> | <em>External Data</em> | <em>Pack all into.blend</em>» alle diese externen Dateien in das .blend-File einzuspeichern. Dadurch erhöht sich allerdings die Grösse des abgespeicherten Files.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Exportieren</p>
+</div></div><p>Um Programme auch für andere Projekte verfügbar zu machen, müssen sie in einem anderen Dateiformat ausgegeben werden. Unter «<em>File</em> | <em>Export</em>» steht eine Reihe von verschiedenen Dateiformaten zur Verfügung, welche von unterschiedlichen Programmen geöffnet werden können. Die meisten dieser Dateiformate kann Blender wiederum importieren und darstellen.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Merke</p>
+</div>
+<div class="tippbox-body">
+<p>Lieber einmal mehr mit der Kombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span>, speichern, als die Fortschritte zu verlieren.</p>
 </div>
 </div>
 

@@ -23,6 +23,7 @@ Beim Start eins neuen Projekts erscheint eine Default-Szene. Diese Szene beinhal
 :::
 ::::
 
+
 ::: tippbox-body
 Die Default-Szene kann manuell angepasst werden. Hierfür muss zunächst eine Default-Szene erstellt werden, welche bei jedem Start erscheinen soll. Diese kann dann unter «*File* \| *Defaults* \| *Save Startup File*» als neue Start-up Szene gespeichert werden.
 :::
@@ -70,20 +71,11 @@ Mittels der Tastenkombination {{< kbd Ctrl >}} + {{< kbd I >}} ist es möglich, 
 Auswahl von Objekten im Outliner
 :::
 
-<<<<<<< Updated upstream
-Im Outliner auf der rechten Seite wird mittels einer blauen Markierung angezeigt, welches Objekt gerade ausgewählt ist. Zudem lassen sich auch hier Objekte auswählen, indem sie mittels der Taste angeklickt werden. Die Auswahl von mehreren Objekten kann analog wie im Viewport-Display mittels des Gedrückthaltens der -Taste getroffen werden oder durch eine Box-Auswahl mittels der Taste . Auch hier können alle Objekte mittels der Taste gemeinsam ausgewählt werden. Der Circle-Select-Modus funktioniert allerdings nicht im Outliner.
-=======
 Im Outliner auf der rechten Seite wird mittels einer blauen Markierung angezeigt, welches Objekt gerade ausgewählt ist. Zudem lassen sich auch hier Objekte auswählen, indem sie mittels der linken Maustaste angeklickt werden. Die Auswahl von mehreren Objekten kann analog wie im Viewport-Display mittels des Gedrückthaltens der {{< kbd Shift >}}-Taste getroffen werden oder durch eine Box-Auswahl mittels der Taste {{< kbd B >}} . Auch hier können alle Objekte mittels der Taste {{< kbd A >}} gemeinsam ausgewählt werden. Der Circle-Select-Modus funktioniert allerdings nicht im Outliner.
->>>>>>> Stashed changes
 
 ## Hinzufügen von Objekten
 
 ::: column-margin
-<<<<<<< Updated upstream
-Hinzufügen von Objekten mittels  
-:::
-
-=======
 Hinzufügen von Objekten mittels {{< kbd Shift >}} + {{< kbd A >}}
 :::
 
@@ -105,12 +97,56 @@ Das Kontext-Menü, welches beim Hinzufügen von Objekten erscheint, ist nur temp
 :::: tippbox-header
 ::: tippbox-icon
 :::
-
 Merke
+
 ::::
 
 ::: tippbox-body
-Kontext-Menü-Felder erscheinen in der linken unteren Ecke des Viewport-Displays und sind nur temporär verfügbar. Nach einem Klick ausserhalb des Menü-Feldes verschwinden dieses Felder und können nicht mehr zurückgeholt werden.
+Kontext-Menü-Felder erscheinen in der linken unteren Ecke des 
+Viewport-Displays und sind nur temporär verfügbar. Nach einem 
+Klick ausserhalb des Menü-Feldes verschwinden dieses Felder 
+und können nicht mehr zurückgeholt werden. 
+:::
+::::::
+
+## Löschen von Objekten
+
+::: column-margin
+Löschen von Objekten mittels {{< kbd X >}}
+:::
+
+Wenn ein Objekt gelöscht werden soll, muss dieses zunächst ausgewählt werden. Mittels der Taste {{< kbd X >}} wird der Befehl für die Löschung des ausgewählten Objektes gegeben. Dieser muss anschliessend bestätigt werden, entweder mit einem Mausklick auf das daraufhin beim Mauszeiger erscheinende «*Delete*»-Feld oder mittels der Taste {{< kbd Enter >}}. Alternativ kann auch die Taste {{< kbd Delete >}} verwendet werden – hierbei wird das Objekt direkt gelöscht, ohne dass eine Bestätigung nötig ist.
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+Übung 2: Hinzufügen und Löschen 
+
+::::
+
+::: tippbox-body
+Übung 2.1  
+Löschen Sie alle Objekte aus der Szene. 
+
+Übung 2.2  
+Erstellen Sie einen neuen Würfel mit der Grösse 1 und einer Rotation von 90°. Welche Achse Sie hierfür wählen, spielt keine Rolle.  
+:::
+::::::
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+Merke
+
+::::
+
+::: tippbox-body
+Mittels {{< kbd Shift >}} + {{< kbd 
+A >}} erscheint beim Mauszeiger das Menü zum Hinzufügen von Objekten.
+
+Um Objekte zu löschen, müssen sie zunächst ausgewählt werden und können anschliessend mit der Taste {{< kbd X >}} oder {{< kbd Delete >}} gelöscht werden. 
 :::
 ::::::
 
@@ -127,4 +163,119 @@ Ausgewählte Objekte können auf verschiedene Arten dupliziert werden. Jede dies
 -   Verbundene Duplikate erstellen
 
 -   Einfügen einer Kopie des Objektes mittels Copy-Paste
->>>>>>> Stashed changes
+
+### Objekte duplizieren
+
+::: column-margin
+Duplikat eines Objektes erstellen mittels {{< kbd shift >}} + {{< kbd D >}}
+:::
+
+Die schnellste Methode, um Objekte zu duplizieren, besteht darin, dass die entsprechenden Objekte, welche dupliziert werden sollen, ausgewählt werden und anschliessend mit der Tastenkombination {{< kbd shift >}} + {{< kbd D >}} der Befehl zur Duplikation der Objekte gegeben wird. Dadurch entsteht an der Position des originalen Objekts ein Duplikat, welches mit der Bewegung des Mauszeigers im Raum bewegt werden kann. Durch einen Klick mit der linken Maustaste, {{< kbd Space >}} oder {{< kbd Enter >}}-Taste wird das Objekt anschliessend platziert. Die Bewegung des duplizierten Objekts kann auch mittels abgebrochen werden. Dadurch wird das Duplikat allerdings nicht gelöscht, sondern an derselben Position wie das Original platziert.
+
+### Verbundene Duplikate erstellen
+
+::: column-margin
+Verbundene Duplikate erstellen mittels {{< kbd Alt >}} + {{< kbd D >}}
+:::
+
+Nebst einem normalen Duplikat kann auch ein verbundenes Duplikat erstellt werden. Hierfür wird nach der Auswahl der zu duplizierenden Objekte die Tastenkombination {{< kbd Alt >}} + {{< kbd D >}} gedrückt. Auch bei dieser Methode kann das Objekt mit der Maus im Raum bewegt und mittels der linken Maustaste oder {{< kbd Enter >}}Taste platziert werden. Wird nun in weiteren Arbeitsschritten entweder das originale oder das verbunden duplizierte Objekt bearbeitet, führt dies dazu, dass dieselben Veränderungen gleichzeitig auch bei allen verbundenen Objekten durchgeführt werden.
+
+### Copy-Paste von Objekten
+
+::: column-margin
+Objekte mittels Copy-Paste vervielfältigen
+:::
+
+Eine weitere Methode zur Vervielfältigung von Objekten besteht darin, dass die zu vervielfältigenden Objekte ausgewählt und mittels {{< kbd Ctrl >}} + {{< kbd C >}} kopiert und anschliessend mittels {{< kbd Ctrl >}} + {{< kbd V >}} wieder eingefügt werden. Im Gegensatz zur normalen und zur verbundenen Duplizierung werden die eingefügten Objekte direkt platziert und müssen durch weitere Befehle verschoben werden. Zudem werden bei dieser Methode auch von den Materialien des Objektes eine Kopie erstellt, welche dann dem neu eingefügten Objekt zugewiesen wird. Dadurch führt eine Bearbeitung des Materials des originalen Objekts nicht zu einer Veränderung des Materials des neu eingefügten Objekts. Allerdings kann dem eingefügten Objekt auch wieder das originale Material zugewiesen werden.
+
+## Verbinden von Objekten
+
+::: column-margin
+Join mittels {{< kbd Ctrl >}} + {{< kbd J >}}
+:::
+
+Mehrere Objekte lassen sich auch verbinden, sodass sie zu einem Objekt werden. Hierfür müssen die zu verbindenden Objekte markiert werden. Die Verbindung der Objekte erfolgt anschliessend mittels der Tastenkombination {{< kbd Ctrl >}} + {{< kbd J >}} . Wichtig ist dabei, dass eines der markierten Objekte das aktive Objekt darstellt. Üblicherweise handelt es sich dabei um das zuletzt ausgewählte Objekt. Das aktive Objekt ist jeweils anhand einer orangen statt einer roten Markierung ersichtlich. Die anderen Objekte werden anschliessend zum aktiven Objekt hinzugefügt. Wenn mehrere Objekte ausgewählt sind, allerdings kein Objekt der Auswahl das aktive Objekt darstellt, wird das Verbinden von Objekten nicht durchgeführt.
+
+## Verstecken von Objekten
+
+::: column-margin
+Verstecken von Objekten mittels {{< kbd H >}}
+:::
+
+Gerade bei sehr komplexen Szenen kann es vorkommen, dass sich die Objekte gegenseitig verdecken und die Bearbeitung etwas schwieriger wird. In diesem Falle gibt es die Möglichkeit, Objekte in der Ansicht zu verstecken. Ausgewählte Objekte können mittels der Taste versteckt werden. Im Outliner sind die Objekte nach wie vor noch angegeben, allerdings grau hinterlegt. Mittels der Tastenkombi nation {{< kbd Alt >}} + {{< kbd H >}} werden alle versteckten Objekte wieder angezeigt. Mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd H >}} lassen sich zudem alle Objekte, ausser den ausgewählten Objekten, verstecken. Dadurch sind nur noch die markierten Objekte sichtbar.
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Merke
+::::
+
+::: tippbox-body
+Statt Objekte in einer Szene zu verstecken kann alternativ auch die 
+lokale Ansicht mittels der Taste {{< kbd / >}} auf diese Objekte angewendet werden. 
+In dieser Ansicht werden alle anderen Objekte ausgeblendet. Um wieder in 
+die normale Ansicht zu gelangen, muss erneut die Taste {{< kbd / >}} gedrückt 
+werden. 
+:::
+::::::
+
+::: column-margin
+Versteckte Objekte im Outliner aufdecken
+:::
+
+Um einzelne Objekte wieder anzeigen zu lassen, kann im Outliner das geschlossene Auge neben dem entsprechenden Objekt angewählt werden. Analog kann auch ein geöffnetes Auge angewählt werden, um die Objekte zu verstecken. Das Verstecken von Objekten bezieht sich nur auf den Viewport-Display. In einem finalen Render werden die Objekte trotzdem gerendert und sind dementsprechend sichtbar.
+
+## Anordnen in Collections
+
+::: column-margin
+Collections
+:::
+
+Im Outliner lassen sich die verschiedenen Objekte in Collections anordnen. Hierfür werden die Objekte jeweils in eine Collection hineingezogen. Anschliessend werden die Objekte innerhalb dieser Collection aufgelistet. Auch andere Collections können in eine Collection hineingezogen werden. Somit können mithilfe der Collections Ordnerstrukturen im Outliner erstellt werden. Dies ermöglicht, dass die Objekte innerhalb einer Collection als gemeinsame Gruppe für komplexere Vorhaben verwendet werden können – etwa für Partikel-Effekte.
+
+::: column-margin
+Hinzufügen und Deaktivieren von Collections
+:::
+
+Mithilfe der Schaltfläche oben rechts in der Ecke des Outliners können neue Collections hinzugefügt werden. Hierfür muss je nach Bildschirmgrösse allenfalls der Header des Outliners nach rechts gescrollt oder der Outliner vergrössert werden. Mittelt dem Kontrollkästchen neben einer Collection lassen sich die Objekte innerhalb einer Collection deaktivieren. Die entsprechenden Objekte werden anschliessend im Viewport nicht mehr angezeigt und auch beim Rendern nicht mehr berücksichtig.
+
+## Speichern
+
+::: column-margin
+Zwischenspeichern mittels {{< kbd Ctrl >}} + {{< kbd S >}} ist unabdingbar
+:::
+
+Bisher wurden bereits einige Tastenkombinationen angesprochen. Die wichtigste Tastenkombination stellt allerdings die Kombination für das Abspeichern des aktuellen Projekts dar: {{< kbd Ctrl >}} + {{< kbd S >}}. Zwischenspeichern ist bei der Arbeit mit Blender eine wichtige Empfehlung. Je nach Komplexität des Projektes kann es manchmal vorkommen, dass das Programm unerwartet abstürzt und die Fort schritte bis zum letzten Speicherpunkt verloren gehen. Aus diesem Grund empfiehlt es sich, das Projekt lieber einmal zu viel als einmal zu wenig abzuspeichern.
+
+::: column-margin
+Kopie speichern
+:::
+
+Alternativ kann das Projekt auch unter «*File* \| *Save*» abgespeichert werden. Nebst der Möglichkeit, dass ein Projekt unter einem neuen Namen gespeichert und fortgeführt wird («*File* \| *Save* as» bzw. {{< kbd Ctrl >}} + {{< kbd Alt >}} + {{< kbd S >}}), gibt es auch die Möglichkeit, mittels «*File* \| *Save Copy*» ( + + ) eine Backup-Version abzuspeichern und in dem originalen File weiterzuarbeiten.
+
+::: column-margin
+.blend-Files
+:::
+
+Die Projekte werden jeweils in Blenders programmeigenem Format «*.blend*» abgespeichert. Diese Datei enthält alle Objekte, Animationen und Einstellungen des Projektes. Das .blend-Dateiformat kann lediglich mit Blender geöffnet werden. Wenn externe Dateien (beispielsweise Texturen, Soundeffekte oder Videos) im Projekt eingebunden werden, müssen diese ebenfalls mit dem Projekt weitergegeben werden. Es gibt jedoch die Möglichkeit, unter «*File* \| *External Data* \| *Pack all into.blend*» alle diese externen Dateien in das .blend-File einzuspeichern. Dadurch erhöht sich allerdings die Grösse des abgespeicherten Files.
+
+::: column-margin
+Exportieren
+:::
+
+Um Programme auch für andere Projekte verfügbar zu machen, müssen sie in einem anderen Dateiformat ausgegeben werden. Unter «*File* \| *Export*» steht eine Reihe von verschiedenen Dateiformaten zur Verfügung, welche von unterschiedlichen Programmen geöffnet werden können. Die meisten dieser Dateiformate kann Blender wiederum importieren und darstellen.
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Merke
+::::
+
+::: tippbox-body
+Lieber einmal mehr mit der Kombination {{< kbd Ctrl >}} + {{< kbd S >}}, speichern, als die Fortschritte zu verlieren. 
+:::
+::::::

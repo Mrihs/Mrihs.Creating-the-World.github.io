@@ -46,6 +46,19 @@ Blender ohne Installation nutzen
 
 Es ist auch möglich, Blender ohne eine Installation zu verwenden -- hierfür muss der Link mit der Endung «*.zip*» ausgewählt werden. Nach dem Extrahieren der Dateien kann Blender über diesen Ordner gestartet werden. Dadurch kann Blender auf ein externes Speichermedium transferiert werden und an anderen Computern gestartet werden. Dies hat allerdings einige Nachteile. Der Computer weiss dadurch etwa nicht, mit welchem Programm er standardmässig die Dateien von Blender öffnen kann, und Blender wird auch nicht unter den installierten Programmen aufgelistet.
 
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Weiterführende Informationen
+::::
+
+::: tippbox-body
+Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstützt. Microsoft unterstützt diese Systeme seit 2020 nicht mehr und auch andere Software-Entwickler haben den Support dieser Systeme eingestellt.
+:::
+::::::
+
 ## Der erste Start von Blender
 
 Beim ersten Start von Blender erscheint ein Quick-Setup-Menü, bei dem einige Grundeinstellungen eingestellt werden können. Diese können in der Regel so belassen werden, wie sie sind. Die folgenden Einstellungen stehen zur Verfügung:
@@ -60,18 +73,6 @@ Beim ersten Start von Blender erscheint ein Quick-Setup-Menü, bei dem einige Gr
 
 -   **Theme**: Hier kann das farbliche Layout von Blender angepasst werden. Grafiken in diesem Kurs wurden mit dem Theme «*Blender Dark*» erstellt.
 
-:::::: tippbox
-:::: tippbox-header
-::: tippbox-icon
-:::
-
-Weiterführende Informationen
-::::
-
-::: tippbox-body
-Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstützt. Microsoft unterstützt diese Systeme seit 2020 nicht mehr und auch andere Software-Entwickler haben den Support dieser Systeme eingestellt.
-:::
-::::::
 
 ## Die Arbeitsoberfläche von Blender
 

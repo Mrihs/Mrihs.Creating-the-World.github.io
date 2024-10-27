@@ -60,14 +60,21 @@ Circle-Selection mittels
 
 Alternativ können Objekte auch mit dem Circle-Select-Modus ausgewählt werden. Der Circle-Select Modus wird mit der Taste aktiviert. Bei der Verwendung des Circle-Select-Modus ist der Mauszei ger von einem Kreis umgeben. Mithilfe des Mausrads kann die Grösse des Kreises eingestellt werden. Durch einen Klick mit der -Taste werden die Objekte, welche sich innerhalb dieses Kreises befinden, alle ausgewählt. Durch das Bewegen des Mauszeigers bei gedrückter -Taste können so eine Reihe weiterer Objekte ausgewählt werden. Der Circle-Select-Modus muss allerdings aktiv be endet werden, da ein weiterer Klick mit der -Taste zu einer weiteren Auswahl von Objekten führt. Um den Circle-Select-Modus wieder zu verlassen, kann die Taste , oder gedrückt werden. Anschliessend sind alle Objekte, welche im Circle-Select-Modus angeklickt wurden, ausgewählt.
 
-:::column-margin
+::: column-margin
 Auswahl umkehren
-::: 
+:::
 
 Mittels der Tastenkombination + ist es möglich, die Auswahl umzukehren. Dadurch werden alle ausgewählten Objekte abgewählt und alle anderen Objekte ausgewählt. Wenn alle Objekte innerhalb einer Szene ausgewählt werden sollen, kann die Taste gedrückt werden. Dadurch werden auch Objekte, die möglicherweise ausserhalb des gerade sichtbaren Bereichs liegen, ausgewählt.
 
-:::column-margin
+::: column-margin
 Auswahl von Objekten im Outliner
 :::
 
 Im Outliner auf der rechten Seite wird mittels einer blauen Markierung angezeigt, welches Objekt gerade ausgewählt ist. Zudem lassen sich auch hier Objekte auswählen, indem sie mittels der Taste angeklickt werden. Die Auswahl von mehreren Objekten kann analog wie im Viewport-Display mittels des Gedrückthaltens der -Taste getroffen werden oder durch eine Box-Auswahl mittels der Taste . Auch hier können alle Objekte mittels der Taste gemeinsam ausgewählt werden. Der Circle-Select-Modus funktioniert allerdings nicht im Outliner.
+
+## Hinzufügen von Objekten
+
+::: column-margin
+Hinzufügen von Objekten mittels  
+:::
+

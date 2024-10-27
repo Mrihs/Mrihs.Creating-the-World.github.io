@@ -130,7 +130,7 @@ Art der Objektdar-stellung im Viewport
 
 In der rechten oberen Ecke befinden sich vier Schaltflächen, um einzustellen, welche Elemente bei der Darstellung der Objekte berücksichtigt werden sollen. Je nach Auswahl werden dadurch die Objekte unterschiedlich dargestellt:
 
--    **Wireframe**: Die Objekte werden in ihrer Struktur als Gitternetz angezeigt, sodass deren Aufbaugitter klar ersichtlich wird. Hierbei werden die Flächen der Objekte nicht dargestellt.
+-   **Wireframe**: Die Objekte werden in ihrer Struktur als Gitternetz angezeigt, sodass deren Aufbaugitter klar ersichtlich wird. Hierbei werden die Flächen der Objekte nicht dargestellt.
 
 -   **Solid**: Die Objekte werden als Ganzes dargestellt, sodass auch die Flächen sichtbar sind. Allerdings werden die verwendeten Materialien und Texturen nicht berücksichtigt.
 

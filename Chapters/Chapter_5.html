@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Michael Rihs">
 
-<title>2. Die Arbeitsoberfläche des 3D-Viewports – Creating the World</title>
+<title>5. Objektarten – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -176,17 +175,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#toolbar" id="toc-toolbar" class="nav-link active" data-scroll-target="#toolbar">Toolbar</a></li>
-  <li><a href="#sidebar" id="toc-sidebar" class="nav-link" data-scroll-target="#sidebar">Sidebar</a></li>
-  <li><a href="#header" id="toc-header" class="nav-link" data-scroll-target="#header">Header</a>
-  <ul class="collapse">
-  <li><a href="#aktions-einstellungen" id="toc-aktions-einstellungen" class="nav-link" data-scroll-target="#aktions-einstellungen">Aktions-Einstellungen</a></li>
-  <li><a href="#erweiterte-hilfsmittel-zur-bearbeitung" id="toc-erweiterte-hilfsmittel-zur-bearbeitung" class="nav-link" data-scroll-target="#erweiterte-hilfsmittel-zur-bearbeitung">Erweiterte Hilfsmittel zur Bearbeitung</a></li>
-  <li><a href="#bearbeitungsmodus" id="toc-bearbeitungsmodus" class="nav-link" data-scroll-target="#bearbeitungsmodus">Bearbeitungsmodus</a></li>
-  <li><a href="#anzeige-optionen" id="toc-anzeige-optionen" class="nav-link" data-scroll-target="#anzeige-optionen">Anzeige-Optionen</a></li>
-  </ul></li>
-  <li><a href="#letzte-aktion-verfeinern" id="toc-letzte-aktion-verfeinern" class="nav-link" data-scroll-target="#letzte-aktion-verfeinern">Letzte Aktion verfeinern</a></li>
-  <li><a href="#dargestellte-viewport-overlays" id="toc-dargestellte-viewport-overlays" class="nav-link" data-scroll-target="#dargestellte-viewport-overlays">Dargestellte Viewport-Overlays</a></li>
+  <li><a href="#mesh" id="toc-mesh" class="nav-link active" data-scroll-target="#mesh">Mesh</a></li>
+  <li><a href="#curve" id="toc-curve" class="nav-link" data-scroll-target="#curve">Curve</a></li>
+  <li><a href="#surface" id="toc-surface" class="nav-link" data-scroll-target="#surface">Surface</a></li>
+  <li><a href="#metaball" id="toc-metaball" class="nav-link" data-scroll-target="#metaball">Metaball</a></li>
+  <li><a href="#text" id="toc-text" class="nav-link" data-scroll-target="#text">Text</a></li>
+  <li><a href="#volume" id="toc-volume" class="nav-link" data-scroll-target="#volume">Volume</a></li>
+  <li><a href="#grease-pencil" id="toc-grease-pencil" class="nav-link" data-scroll-target="#grease-pencil">Grease Pencil</a></li>
+  <li><a href="#armature" id="toc-armature" class="nav-link" data-scroll-target="#armature">Armature</a></li>
+  <li><a href="#lattice" id="toc-lattice" class="nav-link" data-scroll-target="#lattice">Lattice</a></li>
+  <li><a href="#empty" id="toc-empty" class="nav-link" data-scroll-target="#empty">Empty</a></li>
+  <li><a href="#image" id="toc-image" class="nav-link" data-scroll-target="#image">Image</a></li>
+  <li><a href="#light" id="toc-light" class="nav-link" data-scroll-target="#light">Light</a></li>
+  <li><a href="#light-probe" id="toc-light-probe" class="nav-link" data-scroll-target="#light-probe">Light-Probe</a></li>
+  <li><a href="#camera" id="toc-camera" class="nav-link" data-scroll-target="#camera">Camera</a></li>
+  <li><a href="#speaker" id="toc-speaker" class="nav-link" data-scroll-target="#speaker">Speaker</a></li>
+  <li><a href="#force-field" id="toc-force-field" class="nav-link" data-scroll-target="#force-field">Force Field</a></li>
+  <li><a href="#collection-instance" id="toc-collection-instance" class="nav-link" data-scroll-target="#collection-instance">Collection Instance</a></li>
+  <li><a href="#zusammenfassung-der-objektarten" id="toc-zusammenfassung-der-objektarten" class="nav-link" data-scroll-target="#zusammenfassung-der-objektarten">Zusammenfassung der Objektarten</a></li>
   </ul>
 </nav>
     </div>
@@ -195,23 +201,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">2. Die Arbeitsoberfläche des 3D-Viewports</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">Blender</div>
-    <div class="quarto-category">UI</div>
-  </div>
-  </div>
+<h1 class="title">5. Objektarten</h1>
+</div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor:in</div>
-    <div class="quarto-title-meta-contents">
-             <p>Michael Rihs </p>
-          </div>
-  </div>
     
   
     
@@ -224,223 +220,225 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Funktion des 3D-Viewports</p>
-</div></div><p>Der 3D-Viewport stellt eine der wichtigsten Arbeitsoberflächen in Blender dar. In ihm werden die 3D-Objekte sowie die Szenen, in denen sie integriert werden, angezeigt. Zudem werden im 3D-Viewport eine Reihe anderer Einstellungen dargestellt, welche in anderen Editoren konfiguriert werden können. Die Bearbeitung der grundlegenden Struktur von 3D-Objekten erfolgt in der Regel direkt im 3D-Viewport. Der Arbeitsbereich des 3D-Viewports lässt sich in verschiedene Areale aufteilen, welche nachfolgend genauer betrachtet werden.</p>
-<section id="toolbar" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="toolbar">Toolbar</h2>
+<p>Verschiedene Arten von Objekten</p>
+</div></div><p>Beim Hinzufügen von Objekten mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> erscheint das Menü für das Hinzufügen von Objekten beim Mauszeiger. Die verschiedenen Objekte sind dabei in verschiedene Typen von Objekten unterteilt. Diese Objekte unterscheiden sich hinsichtlich ihres Aufbaus, aber auch hinsichtlich ihrer Funktion.</p>
+<section id="mesh" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="mesh">Mesh</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Toolbars</p>
-</div></div><p>Die Toolbar befindet sich auf der linken Seite der 3D-View. Allerdings sind Toolbars auch in anderen Editoren anzutreffen. Die Toolbars lassen sich jeweils mit der Taste <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> ein- und aus-blenden. Da es auch im 3D-Viewport verschiedene Bearbeitungsmöglichkeiten gibt, variieren die Elemente in der Toolbar abhängig vom Bearbeitungsmodus. Diese sind entweder per Mausklick über diese Toolbar oder mithilfe von Tastenkombinationen aufrufbar. In diesem Kurs wird vor allem auf Tastenkombinationen verwiesen, wenn Operationen durchgeführt werden.</p>
+<p>Meshes</p>
+</div></div><p>Ein Mesh stellt ein 3D-Objekt dar. Meshes haben eine gitterähnliche Struktur aus Punkten, Linien und verbundenen Flächen, welche in ihrer Gesamtstruktur das Objekt darstellen. Der Hauptfokus dieses Kurses wird auf die Meshes gelegt, von daher werden sie später noch ausführlich beschrieben.</p>
 </section>
-<section id="sidebar" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="sidebar">Sidebar</h2>
+<section id="curve" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="curve">Curve</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Sidebars</p>
-</div></div><p>Die Sidebar befindet sich auf der rechten Seite des Viewport-Displays, muss allerdings noch mit der Taste <kbd aria-hidden="true">N</kbd><span class="visually-hidden">N</span> geöffnet werden. Mit dieser Taste lässt sich die Sidebar ebenfalls wieder verbergen. Die Sidebar ist auch in anderen Editoren anzutreffen und wird dort ebenfalls mit der Taste<kbd aria-hidden="true">N</kbd><span class="visually-hidden">N</span> ein- und ausgeblendet. Die Sidebar ist zudem anhand von Registerkarten in zusätzliche Kategorien eingeordnet. Unter dem Register «<em>Item</em>» können etwa Einstellungen zum aktuell ausgewählten Objekt betrachtet und verändert werden, im Register «<em>Tool</em>» können Einstellungen zum aktuell ausgewählten Werkzeug verfeinert werden und unter dem Register «<em>View</em>» können Einstellungen zur Ansicht betrachtet und verfeinert werden.</p>
-</section>
-<section id="header" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="header">Header</h2>
-<p>Im Header sind zusätzliche Einstellungen aufzufinden. Diese können nicht nur zwischen den einzelnen Editoren variieren, sondern auch zwischen den einzelnen Bearbeitungsmodi inner-halb der 3D-View.</p>
-<section id="aktions-einstellungen" class="level3">
-<h3 class="anchored" data-anchor-id="aktions-einstellungen">Aktions-Einstellungen</h3>
-<p>In der oberen linken Ecke, direkt neben dem Bedienfeld für die Auswahl des Editors, befinden sich Einstellungsmöglichkeiten, welche basierend auf der aktuell durchgeführten Aktion verfeinert werden können.</p>
-<div id="fig-2_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_1_AktionseinstellungAuswahl.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Aktions-Einstellungen am Beispiel der Auswahl.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="erweiterte-hilfsmittel-zur-bearbeitung" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="erweiterte-hilfsmittel-zur-bearbeitung">Erweiterte Hilfsmittel zur Bearbeitung</h3>
+<p>Kurven</p>
+</div></div><p>Vor der Entwicklung der Meshes wurden in Computergrafiken Kurven und Oberflächen verwendet. Sie haben den Vorteil, dass sie weniger Computerleistung benötigen. Kurven verfügen über weniger Kontrollpunkte, wodurch sie auch einfacher zu bearbeiten sind. In einigen Anwendungen werden sie heute immer noch verwendet. Blender verfügt über zwei Arten von Kurven: Bézier-Kurven und Nurbs-Kurven. Die beiden Arten von Kurven unterscheiden sich hinsichtlich ihrer zugrundeliegenden Berechnungen.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Hilfsmittel zur Bearbeitung von Objekten</p>
-</div></div><p>In der Mitte des Headers befinden sich eine Reihe von erweiterten Einstellungen, welche bei der Objektbearbeitung als Hilfsmittel verwendet werden können. Hierzu gehört beispielsweise die proportionale Bearbeitung von Objekten oder das Festlegen von Bezugspunkten für Transformationen. Diese Hilfsmittel werden in einem späteren Kapitel ausführlich behandelt.</p>
-<div id="fig-2_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_2_Erweiterte_Hilfsmittel.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Erweiterte Hilfsmittel.
-</figcaption>
-</figure>
-</div>
+<p>Kurven können Oberflächen enthalten</p>
+</div></div><p>Neu hinzugefügte Kurven beinhalten zunächst keine Oberfläche und erscheinen dadurch nicht beim Rendern. Allerdings können ihnen Oberflächen hinzugefügt werden, sodass sie auch als Objekte erkennbar werden. Zudem können Kurven auch als Hilfestellung bei Animationen verwendet werden, indem etwa Pfade für eine Animation mit ihnen vorgegeben werden.</p>
 </section>
-<section id="bearbeitungsmodus" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="bearbeitungsmodus">Bearbeitungsmodus</h3>
+<section id="surface" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="surface">Surface</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Auswahl des Bearbeitungsmodus</p>
-</div></div><p>In der Zeile unterhalb des Headers befindet sich links das Menü zur Auswahl des Bearbeitungsmodus. Dabei wird definiert, wie das aktuelle Objekt bearbeitet werden soll. So kann bei-spielsweise im Object-Mode das Objekt als Ganzes bearbeitet werden, während im Edit-Mode die Struktur des Objektes bearbeitet werden kann.</p>
-<div id="fig-2_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_2_Erweiterte_Hilfsmittel.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Auswahl des Bearbeitungsmodus.
-</figcaption>
-</figure>
-</div>
+<p>Surfaces</p>
+</div></div><p>Die Surfaces sind ähnlich zu den Kurven. Während Kurven 2D-Objekte darstellen, sind die Surfaces ihre 3D-Erweiterungen. Obwohl Kurven und Surfaces somit denselben Typ von Objekten darstellen, können sie nicht gleichzeitig auftreten. In einem Objekt können somit nicht sowohl Kurven als auch Surfaces vorhanden sein.</p>
 </section>
-<section id="anzeige-optionen" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="anzeige-optionen">Anzeige-Optionen</h3>
+<section id="metaball" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="metaball">Metaball</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Anzeige-Optionen</p>
-</div></div><p>In der rechten oberen Ecke befinden sich Optionen zur Darstellung der Objekte in der 3D-View. Diese umfassen:</p>
-<ul>
-<li><p>View Object Types</p></li>
-<li><p>Show Gizmo</p></li>
-<li><p>Show Overlay</p></li>
-<li><p>Toggle X-Ray</p></li>
-<li><p>Viewport Shading</p></li>
-</ul>
-<section id="view-object-types" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="view-object-types">View Object Types</h4>
+<p>Metas</p>
+</div></div><p>Metabälle gehören zur Objekt-Familie der Metas, welche Blender prozedural aufbaut. Anders als beispielsweise Meshes oder Kurven sind sie nicht durch Kontrollpunkte oder Gitternetze aufgebaut, sondern werden mathematisch von Blender berechnet. Wenn zwei Meta-Objekte in der Nähe voneinander sind, können sie miteinander interagieren.</p>
+</section>
+<section id="text" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="text">Text</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Ein- und Ausblen-den von Objektarten</p>
-</div></div><p>Hier lassen sich verschiedene Arten von Objekten alle gemeinsam innerhalb einer Szene verstecken, indem das Auge zu der entsprechenden Objektart abgewählt wird. Durch das Abwählen des Auges neben dem Objekttyp «<em>Camera</em>» werde etwa alle Kameras aus der Szene unsichtbar gemacht. Die Objekte sind allerdings noch vorhanden und weisen immer noch dieselbe Funktion auf – sie werden lediglich nicht mehr im 3D-Viewport angezeigt. Neben dem Auge lässt sich zudem anhand der Schaltfläche mit einem abgebildeten Cursor einstellen, dass die entsprechenden Objektarten nicht mehr auswählbar sind.</p>
-<div style="background-color: #d3d3d3; padding: 10px; display: inline-block;">
-<div id="fig-2_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_4_viewobjecttypes.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4: View Object Types.
-</figcaption>
-</figure>
-</div>
-</div>
+<p>Text</p>
+</div></div><p>Text-Objekte beinhalten einen Text, der anschliessend als Objekt dargestellt wird. Der Text hat dabei wie die Kurven oder die Oberflächen lediglich zwei Dimensionen.</p>
 </section>
-<section id="show-gizmo" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="show-gizmo">Show Gizmo</h4>
+<section id="volume" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="volume">Volume</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Navigations-Tools ein- und ausblen-den</p>
-</div></div><p>Innerhalb dieser Option lassen sich in der oberen rechten Ecke Tools zur Navigation mittels der Kamera ein- und ausblenden. Zudem kann hier die Darstellung eines Gizmos bei der aktuellen Auswahl aktiviert werden. Dieses Gizmo kann verwendet werden, um Objekte mittels der Maus zu rotieren, zu skalieren oder zu bewegen.</p>
-<div style="background-color: #d3d3d3; padding: 10px; display: inline-block;">
-<div id="fig-2_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_5_Show_Gizmos.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5: Show Gizmo.
-</figcaption>
-</figure>
-</div>
-</div>
+<p>Volumen-Objekte</p>
+</div></div><p>Volumen-Objekte sind lediglich Objekt-Container. Ihnen können OpenVDB-Dateien angehängt werden, um volumetrische Daten (beispielsweise Wolken oder Rauch) zu erzeugen. Diese Dateien können mithilfe von Blenders eigenen Simulationen erzeugt werden, oder in anderen Programmen erzeugt und abgespeichert werden.</p>
 </section>
-<section id="show-overlays" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="show-overlays">Show Overlays</h4>
+<section id="grease-pencil" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="grease-pencil">Grease Pencil</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Orientierungsobjekte im Viewport ein- und ausblen-den</p>
-</div></div><p>Durch die Deaktivierung der Viewport-Overlays wird im 3D-Viewport die Ansicht bestimmter Hilfsmittel (beispielsweise die Achsen oder die Markierung der aktuellen Auswahl) ausgeschal-tet. Im Dropdown-Menü lässt sich zudem die Darstellung von einzelnen Hilfsmitteln individuell an- und abwählen.</p>
-<div style="background-color: #d3d3d3; padding: 10px; display: inline-block;">
-<div id="fig-2_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_6_showoverlays.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6: Show Overlays.
-</figcaption>
-</figure>
-</div>
-</div>
+<p>Grease Pencil</p>
+</div></div><p>Grease Pencils sind Objekte, welche es ermöglichen, direkt in den dreidimensionalen Raum zu zeichnen. Zudem können mit ihnen 2D-Animationen erstellt werden – etwa wenn Blender für ein 2D- statt 3D-Projekt verwendet wird. Objekte der Kategorie «Grease Pencil» sind dabei eigentlich Behälter-Objekte, in welche anschliessend die Linien gezeichnet werden.</p>
 </section>
-<section id="toggle-x-ray" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="toggle-x-ray">Toggle X-Ray</h4>
+<section id="armature" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="armature">Armature</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Röntgenblick ein- und ausschalten</p>
-</div></div><p>Wenn die Schaltfläche «Toggle X-Ray» ausgewählt ist, erweitert sich die Ansicht von Objekten, sodass durch sie hindurchgesehen werden kann. Dies ermöglicht es etwa, dass auch ein Objekt, welches hinter einem anderen Objekt verborgen liegt, betrachtet werden kann. Wenn diese Option aktiviert ist, können zudem die verborgenen Objekte mittels eines Mausklicks angewählt werden. Die Schaltfläche kann auch mit den Tasten <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> ein- und ausgeschaltet werden.</p>
-<div style="background-color: #d3d3d3; padding: 10px; display: inline-block;">
-<div id="fig-2_7" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_7_xray.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;7: Toggle X-Ray.
-</figcaption>
-</figure>
-</div>
-</div>
+<p>Armaturen</p>
+</div></div><p>Armaturen werden verwendet, um Meshes zu animieren. Hierbei wird innerhalb eines Meshes ein Gerüst erstellt, anhand dessen die Animation anschliessend erfolgen soll. Dieses Gerüst stellt sozusagen das Skelett dar, welches anschliessend für die Animation verwendet werden soll. Dementsprechend werden die einzelnen Gerüstteile auch Bones (Knochen) genannt. Armaturen werden beim Rendern nicht angezeigt. Bei ihnen handelt es sich lediglich um ein Werkzeug zur Animation.</p>
 </section>
-<section id="viewport-shading" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="viewport-shading">Viewport Shading</h4>
+<section id="lattice" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="lattice">Lattice</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Art der Objektdar-stellung im Viewport</p>
-</div></div><p>In der rechten oberen Ecke befinden sich vier Schaltflächen, um einzustellen, welche Elemente bei der Darstellung der Objekte berücksichtigt werden sollen. Je nach Auswahl werden dadurch die Objekte unterschiedlich dargestellt:</p>
-<ul>
-<li><p><strong>Wireframe</strong>: Die Objekte werden in ihrer Struktur als Gitternetz angezeigt, sodass deren Aufbaugitter klar ersichtlich wird. Hierbei werden die Flächen der Objekte nicht dargestellt.</p></li>
-<li><p><strong>Solid</strong>: Die Objekte werden als Ganzes dargestellt, sodass auch die Flächen sichtbar sind. Allerdings werden die verwendeten Materialien und Texturen nicht berücksichtigt.</p></li>
-<li><p><strong>Material Preview</strong>: Die Objekte werden als Ganzes dargestellt, inklusive deren Materialien und Texturen. Die Umgebung wird anhand von vorgefertigten Szenen und Umgebungen beleuchtet, sodass eine schnelle Vorschau möglich ist.</p></li>
-<li><p><strong>Rendered</strong>: Die Objekte werden als Ganzes dargestellt, inklusive deren Materialien und Texturen. Die Umgebung und die Beleuchtung entsprechen den Einstellungen der aktuellen Szene, sodass eine Vorschau für die gerenderte Szene möglich ist.</p></li>
-</ul>
-<p>Alternativ kann die Taste <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> gedrückt werden. Dadurch erscheint beim Mauszeiger ein Menü mit allen vier Optionen zum Viewport Shading zur Auswahl.</p>
-<div style="background-color: #d3d3d3; padding: 10px; display: inline-block;">
-<div id="fig-2_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_8_shaderbuttons.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;8: Schaltflächen für die Shading-Optionen im Viewport.
-</figcaption>
-</figure>
-</div>
-</div>
+<p>Lattice</p>
+</div></div><p>Das Lattice stellt ein dreidimensionales Gerüst aus Punkten dar, welches allerdings nicht gerendert werden kann. Es dient als Werkzeug zur komplexeren Transformation von Objekten.</p>
 </section>
-</section>
-</section>
-<section id="letzte-aktion-verfeinern" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="letzte-aktion-verfeinern">Letzte Aktion verfeinern</h2>
+<section id="empty" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="empty">Empty</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Temporäres Menü zur Verfeinerung der letzten Aktion</p>
-</div></div><p>Wenn eine Aktion in Blender durchgeführt wird, erscheint in der linken unteren Ecke des 3D-Viewports temporär ein Menü. Dieses Menü kann aufgeklappt werden und bietet abhängig von der durchgeführten Aktion eine Reihe Verfeinerungen. Zu beachten ist jedoch, dass dieses Menü sofort wieder verschwindet, sobald ein Mausklick ausserhalb des Menüs erfolgt. Um das Menü wieder erscheinen zu lassen, muss die Aktion rückgängig gemacht und erneut durchgeführt werden.</p>
+<p>Empties</p>
+</div></div><p>Empties sind Knotenpunkte an einem einzigen Punkt in der virtuellen Welt. Sie beinhalten weder Oberflächen noch Volumen und können auch nicht gerendert werden. Sie lassen sich allerdings beispielsweise als Bezugspunkte für Objekte verwenden.</p>
 </section>
-<section id="dargestellte-viewport-overlays" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="dargestellte-viewport-overlays">Dargestellte Viewport-Overlays</h2>
+<section id="image" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="image">Image</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Achsen</p>
-</div></div><p>Sofern die Ansicht der Viewport-Overlays aktiviert ist, werden im 3D-Viewport einige nützliche Dinge dargestellt. Zum einen werden die verschiedenen drei Achsen in unterschiedlichen Farben vom Nullpunkt der Szene aus dargestellt:</p>
-<ul>
-<li><p>X-Achse: rot</p></li>
-<li><p>Y-Achse: grün</p></li>
-<li><p>Z-Achse: blau</p></li>
-</ul>
-<p>Zudem wird leicht schattiert ein Gitternetz dargestellt, bei dem jedes Quadrat eine Einheit von einem Meter darstellt. Wird aus der Szene hinausgezoomt, werden diese Quadrate zunehmend kleiner, dafür werden anschliessend quadratische Felder mit der Einheit von 10 Metern sichtbar.</p>
-<div id="fig-2_9" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_9_3DCursor.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;9: 3D-Cursor.
-</figcaption>
-</figure>
-</div>
+<p>Bilder</p>
+</div></div><p>Blender ermöglichet es, dass auch externe Bilddateien direkt einer Szene hinzugefügt werden können. Hierfür kann ein solches Image-Objekt erstellt und das Bild anschliessend diesem Objekt angefügt werden. Bilder können allerdings auch direkt in den Viewport-Display gezogen werden, wodurch sie anschliessend hinzugefügt werden.</p>
+</section>
+<section id="light" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="light">Light</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>3D-Cursor</p>
-</div></div><p>Innerhalb des 3D-Viewports ist ausserdem der 3D-Cursor sichtbar. Dieser ist an einer bestimmten Position in der Szene platziert und dort mittels eines rot-weissen Kreises dargestellt. Neu erstellte Objekte werden an seiner Position in die Szene eingefügt und der 3D-Cursor kann als Bezugspunkt für Transformationen verwendet werden.</p>
+<p>Lichtquellen</p>
+</div></div><p>Licht-Objekte stellen die Quelle für die Beleuchtung von Szenen dar. Sie sind nicht als Mesh oder Kurve modellierbar, sondern stellen vielmehr einen Punkt oder Bereich dar, von dem die Beleuchtung ausgeht.</p>
+</section>
+<section id="light-probe" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="light-probe">Light-Probe</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Light Probes</p>
+</div></div><p>Light Probes werden in der Eevee-Render-Engine als Hilfsobjekte verwendet. Dabei werden beispielsweise Informationen über indirekte Beleuchtungseffekte gespeichert. Diese Informationen werden anschliessend im finalen Render berücksichtigt, während das Light-Probe-Objekt als solches nicht im finalen Render dargestellt wird.</p>
+</section>
+<section id="camera" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="camera">Camera</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kamera</p>
+</div></div><p>Kameras stellen den Punkt dar, von dem aus die Welt in der gerenderten Szene betrachtet wird. Die Kameras als solche sind in den gerenderten Bildern nicht sichtbar.</p>
+</section>
+<section id="speaker" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="speaker">Speaker</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Lautsprecher</p>
+</div></div><p>Speaker werden verwendet, um an bestimmten Positionen in der Szene Töne erklingen zu lassen. So wie die Lichtquellen sind die Speaker nicht modellierbar, sondern stellen einen Punkt in der drei dimensionalen Welt dar, von dessen Position ein Klang ausgeht.</p>
+</section>
+<section id="force-field" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="force-field">Force Field</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kraftfelder</p>
+</div></div><p>Force Fields sind Objekte, welche in Simulationen Kräfte auf andere Objekte ausüben können. So können andere Objekte beispielsweise angezogen oder absorbiert werden. Beim Rendern sind diese Objekte als solche nicht sichtbar, allerdings die Auswirkungen, welche deren Kräfte auf Objekte haben können.</p>
+</section>
+<section id="collection-instance" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="collection-instance">Collection Instance</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Collections</p>
+</div></div><p>Collections sind Einheiten, um Objekte anzuordnen und zu gruppieren. Sie erscheinen nicht im Viewport, sind aber im Outliner aufzufinden. Sie können wie Dateiordner verstanden werden.</p>
+</section>
+<section id="zusammenfassung-der-objektarten" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="zusammenfassung-der-objektarten">Zusammenfassung der Objektarten</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Verschiedene Objektarten</p>
+</div></div><p>Die verschiedenen Objektarten dienen also entweder der Darstellung von Objekten, der Darstellung von externen Dateien, der Darstellung der Szene oder haben vor allem unterstützende Funktionen:</p>
+<table class="caption-top table">
+<caption>Renderbare Objekte</caption>
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Gitter-basiert</th>
+<th>Kurven-basiert</th>
+<th><strong>Metas</strong></th>
+<th>Linien</th>
+<th>Szenen-Tools</th>
+<th>Externe Daten</th>
+<th>Hilfs-Werkzeuge</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Mesh</strong></td>
+<td>Curve</td>
+<td>Metaball</td>
+<td>Grease Pencil</td>
+<td>Camera</td>
+<td>Volume</td>
+<td>Armature</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Surface</td>
+<td></td>
+<td></td>
+<td>Light</td>
+<td>Image</td>
+<td>Lattice</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Text</td>
+<td></td>
+<td></td>
+<td>Speaker</td>
+<td></td>
+<td>Empty</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Force Field</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Speaker</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Light Probe</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Collection Instance</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>

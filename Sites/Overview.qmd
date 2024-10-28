@@ -1,0 +1,108 @@
+---
+title: "Kursübersicht"
+editor: visual
+---
+
+## Semesterplan
+
++-------+-------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------+----------------------------+-----------+--------+
+| Woche | Praxis                                    | Kapitel                                                                             | Theorie                              | Literatur                  | Folien    | Abgabe |
++=======+===========================================+=====================================================================================+======================================+============================+===========+========+
+| 1     | Die Arbeitsoberfläche von Blender         | [1](../Chapters/Chapter_1.qmd), [2](../Chapters/Chapter_2.qmd), 3, 4, 5, 6, 7, 8, 9 | Organisatorisches                    | Tarr et al. (1998)         | Sitzung 1 |        |
+|       |                                           |                                                                                     |                                      |                            |           |        |
+|       | Eigenschaften von 3D-Objekten             |                                                                                     | Bedeutung von 3D-Objekten            |                            |           |        |
++-------+-------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 2     | Grundmechanismen der Objektbearbeitung I  | 10, 11, 12                                                                          |                                      |                            |           |        |
++-------+-------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 3     | Grundmechanismen der Objektbearbeitung II | 13, 14                                                                              | Referenzbilder oder Fantasie?        | Brainbridge et al. (2021)  |           |        |
++-------+-------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 4     | Objektbearbeitung mit Modifiers           | 15, 16                                                                              |                                      |                            |           | 1      |
++-------+-------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 5     | Materialien                               | 17, 18, 19, 20, 21                                                                  | Visuelle Wahrnehmung von Materialien | Flemming (2014)            |           |        |
++-------+-------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 6     | Texturen                                  | 22, 23, 24, 25, 26, 27, 28                                                          | Lizenzen & Lizenzarten               |                            |           | 2      |
++-------+-------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 7     | Physical based Rendering                  | 29, 30, 31, 32, 33                                                                  | Cartoon oder Realismus?              |                            |           |        |
++-------+-------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 8     | Beleuchtung und Welten                    | 34, 35                                                                              | Farbwahrnehmung unter Beleuchtung    | Brainard & Hurlbert (2015) |           | 3      |
++-------+-------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 9     | Partikel/Haare, Kamera & Rendering        | 36, 37, 38                                                                          | Dateiformate & Hardware              | Joon (2010)                |           |        |
++-------+-------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 10    | Workflow der Charaktererstellung          | 39, 40, 41, 42                                                                      | Uncanny Valley Effect                | Kätsyri et al. (2015)      |           | 4      |
++-------+-------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 11    | Character Rigging                         | 43, 44, 45                                                                          | Fotorealismus                        |                            |           |        |
++-------+-------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 12    | Animationen                               | 46, 47                                                                              | Wahrnehmung von Animationen          | Scholl & Tremoulet (2000)  |           | 5      |
++-------+-------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 13    | Blender in VR                             |                                                                                     | Virtual Reality                      |                            |           | 6      |
++-------+-------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------+----------------------------+-----------+--------+
+| 14    | Abschluss                                 |                                                                                     |                                      |                            |           |        |
++-------+-------------------------------------------+-------------------------------------------------------------------------------------+--------------------------------------+----------------------------+-----------+--------+
+
+## Skript-Kapitel:
+
+1.  [Vorbereitung von Blender](../Chapters/Chapter_1.qmd)
+2.  [Die Arbeitsoberfläche des 3D-Viewports](../Chapters/Chapter_2.qmd)
+3.  Navigation der Ansicht im 3D-Viewport
+4.  Erste Schritte
+5.  Objektarten
+6.  Primitive Meshes
+7.  Methoden der Objekt-Transformation
+8.  Objekte im Viewport-Display transformieren
+9.  Object- und Edit-Mode
+10. Einstieg in den Edit-Mode
+11. Methoden der Objektbearbeitung im Edit-Mode
+12. Hilfestellungen für die Objektbearbeitung
+13. Tutorial: Erstellen eines Glases
+14. Objekterstellung mittels Modifiern
+15. Eigenschaften innerhalb eines Meshes definieren
+16. Materialien, Texturen und Shader
+17. Materialien
+18. Der Shader-Editor
+19. Grundlegende Eigenschaften von Materialien
+20. Tutorial: Strandball
+21. Texturen
+22. UVs
+23. Texturen zu einem Material hinzufügen
+24. Texturen für Parameter verwenden
+25. Welche Bilder eignen sich als Texturen?
+26. Arten von Texturen
+27. Tutorial: Einen Hammer texturieren
+28. Displacement mit dem Displacement-Modifier erstellen
+29. Erstellen von Landschaften
+30. Tutorial: Erstellen einer Düne
+31. Parameter im Principled-BSDF-Shader
+32. Der Wechsel von Eevee zu Cycles am Beispiel von Glas
+33. Lichtquellen in einer Szene
+34. Lichtobjekte
+35. Welten
+36. Kamera
+37. Rendern
+38. Tutorial: Ein Glas mit Wasser erstellen
+39. Bäume mittels Add-on erstellen
+40. Workflows der Charaktererstellung
+41. Character-Modeling
+42. Tutorial: Eine Cartoon-Katze als Charakter erstellen
+43. Was ist Rigging?
+44. Objekte mit Armaturen verformen
+45. Charakter-Rigging
+46. Vom Bild zur Animation
+47. Animationen erstellen
+48. Animationen verfeinern
+49. Animationen rendern
+
+## Literatur
+
+Brainard, D. H., & Hurlbert, A. C. (2015). Colour vision: understanding# TheDress. *Current Biology*, *25*(13), R551-R554.
+
+Bainbridge, W. A., Pounder, Z., Eardley, A. F., & Baker, C. I. (2021). Quantifying Aphantasia through drawing: Those without visual imagery show deficits in object but not spatial memory. *Cortex*, *135*, 159-172.
+
+Fleming, R. W. (2014). Visual perception of materials and their properties. *Vision research*, *94*, 62-75.
+
+Joon, J. S. (2010, August). Principles of photorealism to develop photorealistic visualisation for interface design: A review. In *2010 Seventh International Conference on Computer Graphics, Imaging and Visualization* (pp. 17-25). IEEE.
+
+Kätsyri, J., Förger, K., Mäkäräinen, M., & Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses: support for perceptual mismatch as one road to the valley of eeriness. *Frontiers in psychology*, *6*, 390.
+
+Scholl, B. J., & Tremoulet, P. D. (2000). Perceptual causality and animacy. *Trends in cognitive sciences, 4*(8), 299-309.
+
+Tarr, M. J., Williams, P., Hayward, W. G., & Gauthier, I. (1998). Three-dimensional object recognition is viewpoint dependent. *Nature neuroscience*, *1*(4), 275-277.

@@ -5,16 +5,21 @@ website:
   title: "Creating the World"
   navbar:
     right:
+      - href: Sites/Overview.qmd
+        text: "Kursübersicht"
+        icon: calendar-range
       - text: "Cheatsheets" 
         icon: lightbulb
         menu:
-          - href: Cheatsheets/cheatsheet.pdf
+          - href: Cheatsheets/cheatsheet_keys.pdf
             text: "Tastenkombinationen"
+          - href: Cheatsheets/cheatsheet_shading.pdf
+            text: "Shading"
       - text: Ressourcen
         icon: folder
       - text: "Folien"
         icon: images
-      - text: "Skript"  
+      - text: "Skript"
         icon: eyeglasses
         menu:
           - href: Chapters/Chapter_1.qmd

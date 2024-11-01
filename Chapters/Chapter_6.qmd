@@ -1,0 +1,113 @@
+---
+title: "6. Primitive Meshes"
+editor: visual
+---
+
+::: column-margin
+Primitives
+:::
+
+Wie bereits erwähnt fokussiert sich dieser Kurs auf den Umgang mit Meshes. In der Auswahl zum Hinzufügen werden verschiedene grundlegende Formen von Meshes bereitgestellt. Diese grundlegenden Formen werden als Primitives bezeichnet.
+Zu den Primitives gehören:
+
+-   Plane
+
+-   Cube
+
+-   Circle
+
+-   UV Sphere
+
+-   Ico Sphere
+
+-   Cylinder
+
+-   Cone
+
+-   Torus
+
+-   Grid
+
+-   Monkey
+
+## Plane
+
+::: column-margin
+Fläche
+:::
+
+Die Plane stellt das grundlegendste Primitive dar. Es handelt sich dabei lediglich um eine einzelne Fläche, bestehend aus einer Fläche mit vier Eckpunkten. Per Default hat die Plane eine Dimensionalität von 2x2x0 Metern.
+
+## Cube
+
+::: column-margin
+Würfel
+:::
+
+Der Cube entspricht dem Standardwürfel, den Blender bei der Default-Szene anzeigt. Per Default hat der Würfel eine Dimensionalität von 2x2x2 Metern.
+
+## Circle
+
+::: column-margin
+Kreis
+:::
+
+Der Circle entspricht einem runden Kreis mit dem Radius von einem Meter, wodurch er eine Dimensionalität von 2x2x2 Metern innehat. Der Kreis besteht lediglich aus mit Linien verbundenen Punkten, ohne eine innere Fläche. Allerdings kann im Kontext-Menü zum Hinzufügen des Kreises auch eine Füllfläche erstellt werden.
+
+## UV Sphere
+
+::: column-margin
+Kugel bestehend aus Vierecken
+:::
+
+Die UV-Sphere stellt eine Kugel dar, mit der Dimensionalität von 2x2x2 Metern. Die Kugel besteht aus viereckigen Flächen, wobei sie an den Endpunkten der Z-Achse durch dreieckige Flächen verbunden ist. Die Anzahl der Segmente um die Kugel herum sowie die Anzahl Ringe lassen sich im Kontext-Menü beim Erstellen der Kugel einstellen. Die Segmente beschreiben dabei die Anzahl Unterteilungen, welche ein Ring entlang der XY-Achse der Kugel beinhaltet, während die Anzahl Ringe beschreibt, wie oft die Kugel der Z-Achse entlang unterteilt werden soll.
+
+## Ico Sphere
+
+::: column-margin
+Kugel bestehend aus Dreiecken
+:::
+
+Die Ico-Sphere stellt ebenfalls eine Kugel dar, allerdings mit den Dimensionen 1.9x2x2 Meter. Anders als die UV-Sphere besteht sie nur aus dreieckigen Flächen. Dies hat den Vorteil, dass die Form der Faces über die ganze Kugel hinweg etwa gleich bleibt. Im Kontext-Menü zur Erstellung der Ico Sphere kann mit der Anzahl Subdivisions eingestellt werden, wie oft die Dreiecke dieser Kugel unterteilt werden sollen. Mit zunehmenden Subdivisions nähert sich die X-Dimensionalität auch 2 Metern an.
+
+## Cylinder
+
+::: column-margin
+Zylinder
+:::
+
+Der Zylinder stellt zwei Kreise dar, welche durch Flächen miteinander verbunden sind. Seine Dimensionalität entspricht 2x2x2 Metern mit einem Radius der Kreise von 1 Meter. Im Kontext-Menü zur Erstellung des Zylinders lässt sich die Anzahl Unterteilungen im Kreis einstellen. Zudem lässt sich hier analog zum Kreis einstellen, ob die Kreisfläche mit einer Füllfläche versehen werden soll und mit welcher Art von Füllfläche.
+
+## Cone
+
+::: column-margin
+Kegel
+:::
+
+Der Kegel stellt einen Spezialfall des Zylinders dar, bei dem die Radien der beiden Enden variiert werden können und einer der beiden Kreise einen Radius von 0 innehat. Auch hier kann wieder eingestellt werden, wie viele Unterteilungen die Kreise innehaben sollen und wie die Kreisflächen gestaltet werden sollen.
+
+## Torus
+
+::: column-margin
+Torus
+:::
+
+Der Torus stellt eine ringförmige Gestalt dar, welche aus einer Major- und einer Minor-Komponente besteht. Die Major-Komponente beschreibt dabei den Kreis von der Vogelperspektive herab auf den Torus und die Minor-Komponente den Kreis, welcher sich aus dem Querschnitt des Torus ergibt. Für beide Komponenten kann die Anzahl Unterteilungen über das Segment-Feld im Kontext-Menü eingegeben werden. Die Dimensionalität kann entweder hinsichtlich der Major- und Minor-Komponente festgelegt werden oder alternativ als Radius des inneren und des äusseren Ringes.
+
+![Major- und Minor-Komponente des Torus](Images/Chapter_6/1.%20Major%20Minor%20Torus.png){#fig-1_1 fig-align="left"}
+
+## Grid
+
+::: column-margin
+Gitternetz
+:::
+
+Das Grid stellt eine Alternative zur glatten Fläche dar, ist allerdings bereits in weitere kleine viereckige Flächen unterteilt. Im Kontext-Menü lässt sich anhand der Subdivisions eingeben, wie viele Unterteilungen das Gitternetz entlang der X- und der Y-Achse haben soll. Die  Dimensionalität des Grids ist analog zur Plane per Default 2x2x0 Meter.
+
+## Monkey
+
+::: column-margin
+Suzanne 
+:::
+
+Bei der Auswahl des Monkeys generiert Blender das Modell eines Affenkopfs. Dabei handelt es sich um Suzanne, das Maskottchen von Blender.

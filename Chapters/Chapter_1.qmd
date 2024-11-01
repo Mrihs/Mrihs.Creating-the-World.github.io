@@ -75,7 +75,6 @@ Beim ersten Start von Blender erscheint ein Quick-Setup-Menü, bei dem einige Gr
 
 -   **Theme**: Hier kann das farbliche Layout von Blender angepasst werden. Grafiken in diesem Kurs wurden mit dem Theme «*Blender Dark*» erstellt.
 
-
 ## Die Arbeitsoberfläche von Blender
 
 ### Das Willkommensfenster

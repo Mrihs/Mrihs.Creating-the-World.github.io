@@ -18,14 +18,14 @@
     "href": "Chapters/Chapter_1.html",
     "title": "1. Vorbereitung von Blender",
     "section": "",
-    "text": "Installationsdatei herunterladen\nUm Blender auf einem Rechner zu installieren, muss das Installationspaket von Blender auf dessen Website (www.blender.org) unter dem Reiter «Download» heruntergeladen werden. Dort sollte bereits automatisch das Betriebssystem des Rechners erkannt und die aktuellste Version angeboten werden. Ansonsten lässt sich mittels eines Auswahlfeldes auch die entsprechende Version auswählen.\n\n\nFrühere Versionen von Blender\nUnter www.download.blender.org/release/ lassen sich zudem frühere Versionen von Blender herunterladen. Dieser Kurs ist auf Blender 3.3 ausgerichtet, weshalb der Download dieser Version empfohlen wird.\n\n\n\n\nInstallationsdatei für Mac-User\nMac-Benutzer wählen den Link mit der Endung «.dmg». Abhängig vom Computermodell gibt es zwei Versionen. Für Apple-Computer, welche Apples hauseigenen Prozessor M1 eingebaut haben, wird die Version mit der Endung «arm64.dmg» benötigt. Für die anderen Apple-Computer die Version mit der Endung «x64.dmg». Um herauszufinden, welcher Prozessor/Chip im eigenen Apple-Gerät eingebaut ist, kann man im Menü «Über diesen Mac» (oben links beim Apfelsymbol zu finden) nachschauen. Wenn Apples eigener Chip verbaut ist, wird «Chip Apple M1» aufgelistet. Wenn der Computer nicht über den M1-Chipf verfügt, wird an dieser Stelle der Prozessor aufgeführt.\n\n\nInstallation\nNach dem Download sollte das entsprechende .dmg-Paket geöffnet werden. Anschliessend öffnet sich ein Fenster, dass die Blender-Software und den Applikationsordner zeigt. Hier sollte nun die Blender-Software in den Applikationsordner gezogen werden. Anschliessend ist die Installation abgeschlossen.\n\n\n\n\n\nInstallation für Windows-User\nWindows-Benutzer können den Link mit der Endung «.msi» auswählen. Nach dem Download kann die Datei geöffnet werden und die Installation konfiguriert werden.\n\n\nBlender ohne Installation nutzen\nEs ist auch möglich, Blender ohne eine Installation zu verwenden – hierfür muss der Link mit der Endung «.zip» ausgewählt werden. Nach dem Extrahieren der Dateien kann Blender über diesen Ordner gestartet werden. Dadurch kann Blender auf ein externes Speichermedium transferiert werden und an anderen Computern gestartet werden. Dies hat allerdings einige Nachteile. Der Computer weiss dadurch etwa nicht, mit welchem Programm er standardmässig die Dateien von Blender öffnen kann, und Blender wird auch nicht unter den installierten Programmen aufgelistet."
+    "text": "Installationsdatei herunterladen\nUm Blender auf einem Rechner zu installieren, muss das Installationspaket von Blender auf dessen Website https://www.blender.org/ unter dem Reiter «Download» heruntergeladen werden. Dort sollte bereits automatisch das Betriebssystem des Rechners erkannt und die aktuellste Version angeboten werden. Ansonsten lässt sich mittels eines Auswahlfeldes auch die entsprechende Version auswählen.\n\n\nFrühere Versionen von Blender\nUnter https://www.blender.org/download/releases/ lassen sich zudem frühere Versionen von Blender herunterladen. Dieser Kurs ist auf Blender 3.3 ausgerichtet, weshalb der Download dieser Version empfohlen wird.\n\n\n\n\nInstallationsdatei für Mac-User\nMac-Benutzer wählen den Link mit der Endung «.dmg». Abhängig vom Computermodell gibt es zwei Versionen. Für Apple-Computer, welche Apples hauseigenen Prozessor M1 eingebaut haben, wird die Version mit der Endung «arm64.dmg» benötigt. Für die anderen Apple-Computer die Version mit der Endung «x64.dmg». Um herauszufinden, welcher Prozessor/Chip im eigenen Apple-Gerät eingebaut ist, kann man im Menü «Über diesen Mac» (oben links beim Apfelsymbol zu finden) nachschauen. Wenn Apples eigener Chip verbaut ist, wird «Chip Apple M1» aufgelistet. Wenn der Computer nicht über den M1-Chipf verfügt, wird an dieser Stelle der Prozessor aufgeführt.\n\n\nInstallation\nNach dem Download sollte das entsprechende .dmg-Paket geöffnet werden. Anschliessend öffnet sich ein Fenster, dass die Blender-Software und den Applikationsordner zeigt. Hier sollte nun die Blender-Software in den Applikationsordner gezogen werden. Anschliessend ist die Installation abgeschlossen.\n\n\n\n\n\nInstallation für Windows-User\nWindows-Benutzer können den Link mit der Endung «.msi» auswählen. Nach dem Download kann die Datei geöffnet werden und die Installation konfiguriert werden.\n\n\nBlender ohne Installation nutzen\nEs ist auch möglich, Blender ohne eine Installation zu verwenden – hierfür muss der Link mit der Endung «.zip» ausgewählt werden. Nach dem Extrahieren der Dateien kann Blender über diesen Ordner gestartet werden. Dadurch kann Blender auf ein externes Speichermedium transferiert werden und an anderen Computern gestartet werden. Dies hat allerdings einige Nachteile. Der Computer weiss dadurch etwa nicht, mit welchem Programm er standardmässig die Dateien von Blender öffnen kann, und Blender wird auch nicht unter den installierten Programmen aufgelistet.\n\n\n\n\n\nWeiterführende Informationen\n\n\nSeit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstützt. Microsoft unterstützt diese Systeme seit 2020 nicht mehr und auch andere Software-Entwickler haben den Support dieser Systeme eingestellt."
   },
   {
     "objectID": "Chapters/Chapter_1.html#installation-von-blender",
     "href": "Chapters/Chapter_1.html#installation-von-blender",
     "title": "1. Vorbereitung von Blender",
     "section": "",
-    "text": "Installationsdatei herunterladen\nUm Blender auf einem Rechner zu installieren, muss das Installationspaket von Blender auf dessen Website (www.blender.org) unter dem Reiter «Download» heruntergeladen werden. Dort sollte bereits automatisch das Betriebssystem des Rechners erkannt und die aktuellste Version angeboten werden. Ansonsten lässt sich mittels eines Auswahlfeldes auch die entsprechende Version auswählen.\n\n\nFrühere Versionen von Blender\nUnter www.download.blender.org/release/ lassen sich zudem frühere Versionen von Blender herunterladen. Dieser Kurs ist auf Blender 3.3 ausgerichtet, weshalb der Download dieser Version empfohlen wird.\n\n\n\n\nInstallationsdatei für Mac-User\nMac-Benutzer wählen den Link mit der Endung «.dmg». Abhängig vom Computermodell gibt es zwei Versionen. Für Apple-Computer, welche Apples hauseigenen Prozessor M1 eingebaut haben, wird die Version mit der Endung «arm64.dmg» benötigt. Für die anderen Apple-Computer die Version mit der Endung «x64.dmg». Um herauszufinden, welcher Prozessor/Chip im eigenen Apple-Gerät eingebaut ist, kann man im Menü «Über diesen Mac» (oben links beim Apfelsymbol zu finden) nachschauen. Wenn Apples eigener Chip verbaut ist, wird «Chip Apple M1» aufgelistet. Wenn der Computer nicht über den M1-Chipf verfügt, wird an dieser Stelle der Prozessor aufgeführt.\n\n\nInstallation\nNach dem Download sollte das entsprechende .dmg-Paket geöffnet werden. Anschliessend öffnet sich ein Fenster, dass die Blender-Software und den Applikationsordner zeigt. Hier sollte nun die Blender-Software in den Applikationsordner gezogen werden. Anschliessend ist die Installation abgeschlossen.\n\n\n\n\n\nInstallation für Windows-User\nWindows-Benutzer können den Link mit der Endung «.msi» auswählen. Nach dem Download kann die Datei geöffnet werden und die Installation konfiguriert werden.\n\n\nBlender ohne Installation nutzen\nEs ist auch möglich, Blender ohne eine Installation zu verwenden – hierfür muss der Link mit der Endung «.zip» ausgewählt werden. Nach dem Extrahieren der Dateien kann Blender über diesen Ordner gestartet werden. Dadurch kann Blender auf ein externes Speichermedium transferiert werden und an anderen Computern gestartet werden. Dies hat allerdings einige Nachteile. Der Computer weiss dadurch etwa nicht, mit welchem Programm er standardmässig die Dateien von Blender öffnen kann, und Blender wird auch nicht unter den installierten Programmen aufgelistet."
+    "text": "Installationsdatei herunterladen\nUm Blender auf einem Rechner zu installieren, muss das Installationspaket von Blender auf dessen Website https://www.blender.org/ unter dem Reiter «Download» heruntergeladen werden. Dort sollte bereits automatisch das Betriebssystem des Rechners erkannt und die aktuellste Version angeboten werden. Ansonsten lässt sich mittels eines Auswahlfeldes auch die entsprechende Version auswählen.\n\n\nFrühere Versionen von Blender\nUnter https://www.blender.org/download/releases/ lassen sich zudem frühere Versionen von Blender herunterladen. Dieser Kurs ist auf Blender 3.3 ausgerichtet, weshalb der Download dieser Version empfohlen wird.\n\n\n\n\nInstallationsdatei für Mac-User\nMac-Benutzer wählen den Link mit der Endung «.dmg». Abhängig vom Computermodell gibt es zwei Versionen. Für Apple-Computer, welche Apples hauseigenen Prozessor M1 eingebaut haben, wird die Version mit der Endung «arm64.dmg» benötigt. Für die anderen Apple-Computer die Version mit der Endung «x64.dmg». Um herauszufinden, welcher Prozessor/Chip im eigenen Apple-Gerät eingebaut ist, kann man im Menü «Über diesen Mac» (oben links beim Apfelsymbol zu finden) nachschauen. Wenn Apples eigener Chip verbaut ist, wird «Chip Apple M1» aufgelistet. Wenn der Computer nicht über den M1-Chipf verfügt, wird an dieser Stelle der Prozessor aufgeführt.\n\n\nInstallation\nNach dem Download sollte das entsprechende .dmg-Paket geöffnet werden. Anschliessend öffnet sich ein Fenster, dass die Blender-Software und den Applikationsordner zeigt. Hier sollte nun die Blender-Software in den Applikationsordner gezogen werden. Anschliessend ist die Installation abgeschlossen.\n\n\n\n\n\nInstallation für Windows-User\nWindows-Benutzer können den Link mit der Endung «.msi» auswählen. Nach dem Download kann die Datei geöffnet werden und die Installation konfiguriert werden.\n\n\nBlender ohne Installation nutzen\nEs ist auch möglich, Blender ohne eine Installation zu verwenden – hierfür muss der Link mit der Endung «.zip» ausgewählt werden. Nach dem Extrahieren der Dateien kann Blender über diesen Ordner gestartet werden. Dadurch kann Blender auf ein externes Speichermedium transferiert werden und an anderen Computern gestartet werden. Dies hat allerdings einige Nachteile. Der Computer weiss dadurch etwa nicht, mit welchem Programm er standardmässig die Dateien von Blender öffnen kann, und Blender wird auch nicht unter den installierten Programmen aufgelistet.\n\n\n\n\n\nWeiterführende Informationen\n\n\nSeit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstützt. Microsoft unterstützt diese Systeme seit 2020 nicht mehr und auch andere Software-Entwickler haben den Support dieser Systeme eingestellt."
   },
   {
     "objectID": "index.html#section",
@@ -67,7 +67,7 @@
     "href": "Chapters/Chapter_1.html#der-erste-start-von-blender",
     "title": "1. Vorbereitung von Blender",
     "section": "Der erste Start von Blender",
-    "text": "Der erste Start von Blender\nBeim ersten Start von Blender erscheint ein Quick-Setup-Menü, bei dem einige Grundeinstellungen eingestellt werden können. Diese können in der Regel so belassen werden, wie sie sind. Die folgenden Einstellungen stehen zur Verfügung:\n\nLanguage: Hier kann die Sprache eingestellt werden.\nShortcuts: Hier können die Shortcut-Einstellungen ausgewählt werden. Dieser Kurs orientiert sich an der Default-Einstellung «Blender».\nSelect with: Hier kann eingestellt werden, ob jeweils mit der linken oder der rechten Maustaste Objekte ausgewählt werden können. Dieser Kurs geht davon aus, dass eine Auswahl mit der linken Maustaste erfolgt.\nSpacebar: Die Funktion der Leertaste kann drei verschiedenen Funktionen zugewiesen werden. Per Default wird die Leertaste verwendet, um Animationen zu starten (Option «Play»). Allerdings kann sie auch der Option «Tools» zugewiesen werden. Mittels der Einstellung «Search» wird durch die Leertaste ein Suchfeld geöffnet, mit dem Befehle gesucht werden können. Für diesen Kurs spielt es keine grosse Rolle, welche Funktion der Leertaste zugewiesen wird. Die Befehlssuche ist allerdings sehr nützlich, kann aber alternativ auch mit der Taste F3F3 geöffnet werden.\nTheme: Hier kann das farbliche Layout von Blender angepasst werden. Grafiken in diesem Kurs wurden mit dem Theme «Blender Dark» erstellt.\n\n\n\n\n\n\nWeiterführende Informationen\n\n\nSeit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstützt. Microsoft unterstützt diese Systeme seit 2020 nicht mehr und auch andere Software-Entwickler haben den Support dieser Systeme eingestellt."
+    "text": "Der erste Start von Blender\nBeim ersten Start von Blender erscheint ein Quick-Setup-Menü, bei dem einige Grundeinstellungen eingestellt werden können. Diese können in der Regel so belassen werden, wie sie sind. Die folgenden Einstellungen stehen zur Verfügung:\n\nLanguage: Hier kann die Sprache eingestellt werden.\nShortcuts: Hier können die Shortcut-Einstellungen ausgewählt werden. Dieser Kurs orientiert sich an der Default-Einstellung «Blender».\nSelect with: Hier kann eingestellt werden, ob jeweils mit der linken oder der rechten Maustaste Objekte ausgewählt werden können. Dieser Kurs geht davon aus, dass eine Auswahl mit der linken Maustaste erfolgt.\nSpacebar: Die Funktion der Leertaste kann drei verschiedenen Funktionen zugewiesen werden. Per Default wird die Leertaste verwendet, um Animationen zu starten (Option «Play»). Allerdings kann sie auch der Option «Tools» zugewiesen werden. Mittels der Einstellung «Search» wird durch die Leertaste ein Suchfeld geöffnet, mit dem Befehle gesucht werden können. Für diesen Kurs spielt es keine grosse Rolle, welche Funktion der Leertaste zugewiesen wird. Die Befehlssuche ist allerdings sehr nützlich, kann aber alternativ auch mit der Taste F3F3 geöffnet werden.\nTheme: Hier kann das farbliche Layout von Blender angepasst werden. Grafiken in diesem Kurs wurden mit dem Theme «Blender Dark» erstellt."
   },
   {
     "objectID": "Chapters/Chapter_1.html#das-willkommensfenster",
@@ -236,5 +236,215 @@
     "title": "Kursübersicht",
     "section": "Skript-Kapitel:",
     "text": "Skript-Kapitel:\n\nVorbereitung von Blender\nDie Arbeitsoberfläche des 3D-Viewports\nNavigation der Ansicht im 3D-Viewport\nErste Schritte\nObjektarten\nPrimitive Meshes\nMethoden der Objekt-Transformation\nObjekte im Viewport-Display transformieren\nObject- und Edit-Mode\nEinstieg in den Edit-Mode\nMethoden der Objektbearbeitung im Edit-Mode\nHilfestellungen für die Objektbearbeitung\nTutorial: Erstellen eines Glases\nObjekterstellung mittels Modifiern\nEigenschaften innerhalb eines Meshes definieren\nMaterialien, Texturen und Shader\nMaterialien\nDer Shader-Editor\nGrundlegende Eigenschaften von Materialien\nTutorial: Strandball\nTexturen\nUVs\nTexturen zu einem Material hinzufügen\nTexturen für Parameter verwenden\nWelche Bilder eignen sich als Texturen?\nArten von Texturen\nTutorial: Einen Hammer texturieren\nDisplacement mit dem Displacement-Modifier erstellen\nErstellen von Landschaften\nTutorial: Erstellen einer Düne\nParameter im Principled-BSDF-Shader\nDer Wechsel von Eevee zu Cycles am Beispiel von Glas\nLichtquellen in einer Szene\nLichtobjekte\nWelten\nKamera\nRendern\nTutorial: Ein Glas mit Wasser erstellen\nBäume mittels Add-on erstellen\nWorkflows der Charaktererstellung\nCharacter-Modeling\nTutorial: Eine Cartoon-Katze als Charakter erstellen\nWas ist Rigging?\nObjekte mit Armaturen verformen\nCharakter-Rigging\nVom Bild zur Animation\nAnimationen erstellen\nAnimationen verfeinern\nAnimationen rendern"
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html",
+    "href": "Chapters/Chapter_6.html",
+    "title": "6. Primitive Meshes",
+    "section": "",
+    "text": "Primitives\nWie bereits erwähnt fokussiert sich dieser Kurs auf den Umgang mit Meshes. In der Auswahl zum Hinzufügen werden verschiedene grundlegende Formen von Meshes bereitgestellt. Diese grundlegenden Formen werden als Primitives bezeichnet. Zu den Primitives gehören:"
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#plane",
+    "href": "Chapters/Chapter_6.html#plane",
+    "title": "6. Primitive Meshes",
+    "section": "Plane",
+    "text": "Plane\n\n\nFläche\nDie Plane stellt das grundlegendste Primitive dar. Es handelt sich dabei lediglich um eine einzelne Fläche, bestehend aus einer Fläche mit vier Eckpunkten. Per Default hat die Plane eine Dimensionalität von 2x2x0 Metern."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#cube",
+    "href": "Chapters/Chapter_6.html#cube",
+    "title": "6. Primitive Meshes",
+    "section": "Cube",
+    "text": "Cube\n\n\nWürfel\nDer Cube entspricht dem Standardwürfel, den Blender bei der Default-Szene anzeigt. Per Default hat der Würfel eine Dimensionalität von 2x2x2 Metern."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#circle",
+    "href": "Chapters/Chapter_6.html#circle",
+    "title": "6. Primitive Meshes",
+    "section": "Circle",
+    "text": "Circle\n\n\nKreis\nDer Circle entspricht einem runden Kreis mit dem Radius von einem Meter, wodurch er eine Dimensionalität von 2x2x2 Metern innehat. Der Kreis besteht lediglich aus mit Linien verbundenen Punkten, ohne eine innere Fläche. Allerdings kann im Kontext-Menü zum Hinzufügen des Kreises auch eine Füllfläche erstellt werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#uv-sphere",
+    "href": "Chapters/Chapter_6.html#uv-sphere",
+    "title": "6. Primitive Meshes",
+    "section": "UV Sphere",
+    "text": "UV Sphere\n\n\nKugel bestehend aus Vierecken\nDie UV-Sphere stellt eine Kugel dar, mit der Dimensionalität von 2x2x2 Metern. Die Kugel besteht aus viereckigen Flächen, wobei sie an den Endpunkten der Z-Achse durch dreieckige Flächen verbunden ist. Die Anzahl der Segmente um die Kugel herum sowie die Anzahl Ringe lassen sich im Kontext-Menü beim Erstellen der Kugel einstellen. Die Segmente beschreiben dabei die Anzahl Unterteilungen, welche ein Ring entlang der XY-Achse der Kugel beinhaltet, während die Anzahl Ringe beschreibt, wie oft die Kugel der Z-Achse entlang unterteilt werden soll."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#ico-sphere",
+    "href": "Chapters/Chapter_6.html#ico-sphere",
+    "title": "6. Primitive Meshes",
+    "section": "Ico Sphere",
+    "text": "Ico Sphere\n\n\nKugel bestehend aus Dreiecken\nDie Ico-Sphere stellt ebenfalls eine Kugel dar, allerdings mit den Dimensionen 1.9x2x2 Meter. Anders als die UV-Sphere besteht sie nur aus dreieckigen Flächen. Dies hat den Vorteil, dass die Form der Faces über die ganze Kugel hinweg etwa gleich bleibt. Im Kontext-Menü zur Erstellung der Ico Sphere kann mit der Anzahl Subdivisions eingestellt werden, wie oft die Dreiecke dieser Kugel unterteilt werden sollen. Mit zunehmenden Subdivisions nähert sich die X-Dimensionalität auch 2 Metern an."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#cylinder",
+    "href": "Chapters/Chapter_6.html#cylinder",
+    "title": "6. Primitive Meshes",
+    "section": "Cylinder",
+    "text": "Cylinder\n\n\nZylinder\nDer Zylinder stellt zwei Kreise dar, welche durch Flächen miteinander verbunden sind. Seine Dimensionalität entspricht 2x2x2 Metern mit einem Radius der Kreise von 1 Meter. Im Kontext-Menü zur Erstellung des Zylinders lässt sich die Anzahl Unterteilungen im Kreis einstellen. Zudem lässt sich hier analog zum Kreis einstellen, ob die Kreisfläche mit einer Füllfläche versehen werden soll und mit welcher Art von Füllfläche."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#cone",
+    "href": "Chapters/Chapter_6.html#cone",
+    "title": "6. Primitive Meshes",
+    "section": "Cone",
+    "text": "Cone\n\n\nKegel\nDer Kegel stellt einen Spezialfall des Zylinders dar, bei dem die Radien der beiden Enden variiert werden können und einer der beiden Kreise einen Radius von 0 innehat. Auch hier kann wieder eingestellt werden, wie viele Unterteilungen die Kreise innehaben sollen und wie die Kreisflächen gestaltet werden sollen."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#torus",
+    "href": "Chapters/Chapter_6.html#torus",
+    "title": "6. Primitive Meshes",
+    "section": "Torus",
+    "text": "Torus\n\n\nTorus\nDer Torus stellt eine ringförmige Gestalt dar, welche aus einer Major- und einer Minor-Komponente besteht. Die Major-Komponente beschreibt dabei den Kreis von der Vogelperspektive herab auf den Torus und die Minor-Komponente den Kreis, welcher sich aus dem Querschnitt des Torus ergibt. Für beide Komponenten kann die Anzahl Unterteilungen über das Segment-Feld im Kontext-Menü eingegeben werden. Die Dimensionalität kann entweder hinsichtlich der Major- und Minor-Komponente festgelegt werden oder alternativ als Radius des inneren und des äusseren Ringes.\n\n\n\n\n\n\nAbbildung 1: Major- und Minor-Komponente des Torus"
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#grid",
+    "href": "Chapters/Chapter_6.html#grid",
+    "title": "6. Primitive Meshes",
+    "section": "Grid",
+    "text": "Grid\n\n\nGitternetz\nDas Grid stellt eine Alternative zur glatten Fläche dar, ist allerdings bereits in weitere kleine viereckige Flächen unterteilt. Im Kontext-Menü lässt sich anhand der Subdivisions eingeben, wie viele Unterteilungen das Gitternetz entlang der X- und der Y-Achse haben soll. Die Dimensionalität des Grids ist analog zur Plane per Default 2x2x0 Meter."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#monkey",
+    "href": "Chapters/Chapter_6.html#monkey",
+    "title": "6. Primitive Meshes",
+    "section": "Monkey",
+    "text": "Monkey\n\n\nSuzanne\nBei der Auswahl des Monkeys generiert Blender das Modell eines Affenkopfs. Dabei handelt es sich um Suzanne, das Maskottchen von Blender."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html",
+    "href": "Chapters/Chapter_5.html",
+    "title": "5. Objektarten",
+    "section": "",
+    "text": "Verschiedene Arten von Objekten\nBeim Hinzufügen von Objekten mittels der Tastenkombination ShiftShift + AA erscheint das Menü für das Hinzufügen von Objekten beim Mauszeiger. Die verschiedenen Objekte sind dabei in verschiedene Typen von Objekten unterteilt. Diese Objekte unterscheiden sich hinsichtlich ihres Aufbaus, aber auch hinsichtlich ihrer Funktion."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#mesh",
+    "href": "Chapters/Chapter_5.html#mesh",
+    "title": "5. Objektarten",
+    "section": "Mesh",
+    "text": "Mesh\n\n\nMeshes\nEin Mesh stellt ein 3D-Objekt dar. Meshes haben eine gitterähnliche Struktur aus Punkten, Linien und verbundenen Flächen, welche in ihrer Gesamtstruktur das Objekt darstellen. Der Hauptfokus dieses Kurses wird auf die Meshes gelegt, von daher werden sie später noch ausführlich beschrieben."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#curve",
+    "href": "Chapters/Chapter_5.html#curve",
+    "title": "5. Objektarten",
+    "section": "Curve",
+    "text": "Curve\n\n\nKurven\nVor der Entwicklung der Meshes wurden in Computergrafiken Kurven und Oberflächen verwendet. Sie haben den Vorteil, dass sie weniger Computerleistung benötigen. Kurven verfügen über weniger Kontrollpunkte, wodurch sie auch einfacher zu bearbeiten sind. In einigen Anwendungen werden sie heute immer noch verwendet. Blender verfügt über zwei Arten von Kurven: Bézier-Kurven und Nurbs-Kurven. Die beiden Arten von Kurven unterscheiden sich hinsichtlich ihrer zugrundeliegenden Berechnungen.\n\n\nKurven können Oberflächen enthalten\nNeu hinzugefügte Kurven beinhalten zunächst keine Oberfläche und erscheinen dadurch nicht beim Rendern. Allerdings können ihnen Oberflächen hinzugefügt werden, sodass sie auch als Objekte erkennbar werden. Zudem können Kurven auch als Hilfestellung bei Animationen verwendet werden, indem etwa Pfade für eine Animation mit ihnen vorgegeben werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#surface",
+    "href": "Chapters/Chapter_5.html#surface",
+    "title": "5. Objektarten",
+    "section": "Surface",
+    "text": "Surface\n\n\nSurfaces\nDie Surfaces sind ähnlich zu den Kurven. Während Kurven 2D-Objekte darstellen, sind die Surfaces ihre 3D-Erweiterungen. Obwohl Kurven und Surfaces somit denselben Typ von Objekten darstellen, können sie nicht gleichzeitig auftreten. In einem Objekt können somit nicht sowohl Kurven als auch Surfaces vorhanden sein."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#metaball",
+    "href": "Chapters/Chapter_5.html#metaball",
+    "title": "5. Objektarten",
+    "section": "Metaball",
+    "text": "Metaball\n\n\nMetas\nMetabälle gehören zur Objekt-Familie der Metas, welche Blender prozedural aufbaut. Anders als beispielsweise Meshes oder Kurven sind sie nicht durch Kontrollpunkte oder Gitternetze aufgebaut, sondern werden mathematisch von Blender berechnet. Wenn zwei Meta-Objekte in der Nähe voneinander sind, können sie miteinander interagieren."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#text",
+    "href": "Chapters/Chapter_5.html#text",
+    "title": "5. Objektarten",
+    "section": "Text",
+    "text": "Text\n\n\nText\nText-Objekte beinhalten einen Text, der anschliessend als Objekt dargestellt wird. Der Text hat dabei wie die Kurven oder die Oberflächen lediglich zwei Dimensionen."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#volume",
+    "href": "Chapters/Chapter_5.html#volume",
+    "title": "5. Objektarten",
+    "section": "Volume",
+    "text": "Volume\n\n\nVolumen-Objekte\nVolumen-Objekte sind lediglich Objekt-Container. Ihnen können OpenVDB-Dateien angehängt werden, um volumetrische Daten (beispielsweise Wolken oder Rauch) zu erzeugen. Diese Dateien können mithilfe von Blenders eigenen Simulationen erzeugt werden, oder in anderen Programmen erzeugt und abgespeichert werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#grease-pencil",
+    "href": "Chapters/Chapter_5.html#grease-pencil",
+    "title": "5. Objektarten",
+    "section": "Grease Pencil",
+    "text": "Grease Pencil\n\n\nGrease Pencil\nGrease Pencils sind Objekte, welche es ermöglichen, direkt in den dreidimensionalen Raum zu zeichnen. Zudem können mit ihnen 2D-Animationen erstellt werden – etwa wenn Blender für ein 2D- statt 3D-Projekt verwendet wird. Objekte der Kategorie «Grease Pencil» sind dabei eigentlich Behälter-Objekte, in welche anschliessend die Linien gezeichnet werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#armature",
+    "href": "Chapters/Chapter_5.html#armature",
+    "title": "5. Objektarten",
+    "section": "Armature",
+    "text": "Armature\n\n\nArmaturen\nArmaturen werden verwendet, um Meshes zu animieren. Hierbei wird innerhalb eines Meshes ein Gerüst erstellt, anhand dessen die Animation anschliessend erfolgen soll. Dieses Gerüst stellt sozusagen das Skelett dar, welches anschliessend für die Animation verwendet werden soll. Dementsprechend werden die einzelnen Gerüstteile auch Bones (Knochen) genannt. Armaturen werden beim Rendern nicht angezeigt. Bei ihnen handelt es sich lediglich um ein Werkzeug zur Animation."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#lattice",
+    "href": "Chapters/Chapter_5.html#lattice",
+    "title": "5. Objektarten",
+    "section": "Lattice",
+    "text": "Lattice\n\n\nLattice\nDas Lattice stellt ein dreidimensionales Gerüst aus Punkten dar, welches allerdings nicht gerendert werden kann. Es dient als Werkzeug zur komplexeren Transformation von Objekten."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#empty",
+    "href": "Chapters/Chapter_5.html#empty",
+    "title": "5. Objektarten",
+    "section": "Empty",
+    "text": "Empty\n\n\nEmpties\nEmpties sind Knotenpunkte an einem einzigen Punkt in der virtuellen Welt. Sie beinhalten weder Oberflächen noch Volumen und können auch nicht gerendert werden. Sie lassen sich allerdings beispielsweise als Bezugspunkte für Objekte verwenden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#image",
+    "href": "Chapters/Chapter_5.html#image",
+    "title": "5. Objektarten",
+    "section": "Image",
+    "text": "Image\n\n\nBilder\nBlender ermöglichet es, dass auch externe Bilddateien direkt einer Szene hinzugefügt werden können. Hierfür kann ein solches Image-Objekt erstellt und das Bild anschliessend diesem Objekt angefügt werden. Bilder können allerdings auch direkt in den Viewport-Display gezogen werden, wodurch sie anschliessend hinzugefügt werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#light",
+    "href": "Chapters/Chapter_5.html#light",
+    "title": "5. Objektarten",
+    "section": "Light",
+    "text": "Light\n\n\nLichtquellen\nLicht-Objekte stellen die Quelle für die Beleuchtung von Szenen dar. Sie sind nicht als Mesh oder Kurve modellierbar, sondern stellen vielmehr einen Punkt oder Bereich dar, von dem die Beleuchtung ausgeht."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#light-probe",
+    "href": "Chapters/Chapter_5.html#light-probe",
+    "title": "5. Objektarten",
+    "section": "Light-Probe",
+    "text": "Light-Probe\n\n\nLight Probes\nLight Probes werden in der Eevee-Render-Engine als Hilfsobjekte verwendet. Dabei werden beispielsweise Informationen über indirekte Beleuchtungseffekte gespeichert. Diese Informationen werden anschliessend im finalen Render berücksichtigt, während das Light-Probe-Objekt als solches nicht im finalen Render dargestellt wird."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#camera",
+    "href": "Chapters/Chapter_5.html#camera",
+    "title": "5. Objektarten",
+    "section": "Camera",
+    "text": "Camera\n\n\nKamera\nKameras stellen den Punkt dar, von dem aus die Welt in der gerenderten Szene betrachtet wird. Die Kameras als solche sind in den gerenderten Bildern nicht sichtbar."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#speaker",
+    "href": "Chapters/Chapter_5.html#speaker",
+    "title": "5. Objektarten",
+    "section": "Speaker",
+    "text": "Speaker\n\n\nLautsprecher\nSpeaker werden verwendet, um an bestimmten Positionen in der Szene Töne erklingen zu lassen. So wie die Lichtquellen sind die Speaker nicht modellierbar, sondern stellen einen Punkt in der drei dimensionalen Welt dar, von dessen Position ein Klang ausgeht."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#force-field",
+    "href": "Chapters/Chapter_5.html#force-field",
+    "title": "5. Objektarten",
+    "section": "Force Field",
+    "text": "Force Field\n\n\nKraftfelder\nForce Fields sind Objekte, welche in Simulationen Kräfte auf andere Objekte ausüben können. So können andere Objekte beispielsweise angezogen oder absorbiert werden. Beim Rendern sind diese Objekte als solche nicht sichtbar, allerdings die Auswirkungen, welche deren Kräfte auf Objekte haben können."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#collection-instance",
+    "href": "Chapters/Chapter_5.html#collection-instance",
+    "title": "5. Objektarten",
+    "section": "Collection Instance",
+    "text": "Collection Instance\n\n\nCollections\nCollections sind Einheiten, um Objekte anzuordnen und zu gruppieren. Sie erscheinen nicht im Viewport, sind aber im Outliner aufzufinden. Sie können wie Dateiordner verstanden werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#zusammenfassung-der-objektarten",
+    "href": "Chapters/Chapter_5.html#zusammenfassung-der-objektarten",
+    "title": "5. Objektarten",
+    "section": "Zusammenfassung der Objektarten",
+    "text": "Zusammenfassung der Objektarten\n\n\nVerschiedene Objektarten\nDie verschiedenen Objektarten dienen also entweder der Darstellung von Objekten, der Darstellung von externen Dateien, der Darstellung der Szene oder haben vor allem unterstützende Funktionen:\n\nRenderbare Objekte\n\n\n\n\n\n\n\n\n\n\n\nGitter-basiert\nKurven-basiert\nMetas\nLinien\nSzenen-Tools\nExterne Daten\nHilfs-Werkzeuge\n\n\n\n\nMesh\nCurve\nMetaball\nGrease Pencil\nCamera\nVolume\nArmature\n\n\n\nSurface\n\n\nLight\nImage\nLattice\n\n\n\nText\n\n\nSpeaker\n\nEmpty\n\n\n\n\n\n\n\n\nForce Field\n\n\n\n\n\n\n\n\nSpeaker\n\n\n\n\n\n\n\n\nLight Probe\n\n\n\n\n\n\n\n\nCollection Instance"
   }
 ]

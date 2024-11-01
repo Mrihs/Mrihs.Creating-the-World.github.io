@@ -70,137 +70,81 @@
     "text": "Speichern\n\n\nZwischenspeichern mittels CtrlCtrl + SS ist unabdingbar\nBisher wurden bereits einige Tastenkombinationen angesprochen. Die wichtigste Tastenkombination stellt allerdings die Kombination für das Abspeichern des aktuellen Projekts dar: CtrlCtrl + SS. Zwischenspeichern ist bei der Arbeit mit Blender eine wichtige Empfehlung. Je nach Komplexität des Projektes kann es manchmal vorkommen, dass das Programm unerwartet abstürzt und die Fort schritte bis zum letzten Speicherpunkt verloren gehen. Aus diesem Grund empfiehlt es sich, das Projekt lieber einmal zu viel als einmal zu wenig abzuspeichern.\n\n\nKopie speichern\nAlternativ kann das Projekt auch unter «File | Save» abgespeichert werden. Nebst der Möglichkeit, dass ein Projekt unter einem neuen Namen gespeichert und fortgeführt wird («File | Save as» bzw. CtrlCtrl + AltAlt + SS), gibt es auch die Möglichkeit, mittels «File | Save Copy» ( + + ) eine Backup-Version abzuspeichern und in dem originalen File weiterzuarbeiten.\n\n\n.blend-Files\nDie Projekte werden jeweils in Blenders programmeigenem Format «.blend» abgespeichert. Diese Datei enthält alle Objekte, Animationen und Einstellungen des Projektes. Das .blend-Dateiformat kann lediglich mit Blender geöffnet werden. Wenn externe Dateien (beispielsweise Texturen, Soundeffekte oder Videos) im Projekt eingebunden werden, müssen diese ebenfalls mit dem Projekt weitergegeben werden. Es gibt jedoch die Möglichkeit, unter «File | External Data | Pack all into.blend» alle diese externen Dateien in das .blend-File einzuspeichern. Dadurch erhöht sich allerdings die Grösse des abgespeicherten Files.\n\n\nExportieren\nUm Programme auch für andere Projekte verfügbar zu machen, müssen sie in einem anderen Dateiformat ausgegeben werden. Unter «File | Export» steht eine Reihe von verschiedenen Dateiformaten zur Verfügung, welche von unterschiedlichen Programmen geöffnet werden können. Die meisten dieser Dateiformate kann Blender wiederum importieren und darstellen.\n\n\n\n\n\nMerke\n\n\nLieber einmal mehr mit der Kombination CtrlCtrl + SS, speichern, als die Fortschritte zu verlieren."
   },
   {
-    "objectID": "Chapters/Chapter_2.html",
-    "href": "Chapters/Chapter_2.html",
-    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
+    "objectID": "Chapters/Chapter_6.html",
+    "href": "Chapters/Chapter_6.html",
+    "title": "6. Primitive Meshes",
     "section": "",
-    "text": "Funktion des 3D-Viewports\nDer 3D-Viewport stellt eine der wichtigsten Arbeitsoberflächen in Blender dar. In ihm werden die 3D-Objekte sowie die Szenen, in denen sie integriert werden, angezeigt. Zudem werden im 3D-Viewport eine Reihe anderer Einstellungen dargestellt, welche in anderen Editoren konfiguriert werden können. Die Bearbeitung der grundlegenden Struktur von 3D-Objekten erfolgt in der Regel direkt im 3D-Viewport. Der Arbeitsbereich des 3D-Viewports lässt sich in verschiedene Areale aufteilen, welche nachfolgend genauer betrachtet werden."
+    "text": "Primitives\nWie bereits erwähnt fokussiert sich dieser Kurs auf den Umgang mit Meshes. In der Auswahl zum Hinzufügen werden verschiedene grundlegende Formen von Meshes bereitgestellt. Diese grundlegenden Formen werden als Primitives bezeichnet. Zu den Primitives gehören:"
   },
   {
-    "objectID": "Chapters/Chapter_2.html#toolbar",
-    "href": "Chapters/Chapter_2.html#toolbar",
-    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
-    "section": "Toolbar",
-    "text": "Toolbar\n\n\nToolbars\nDie Toolbar befindet sich auf der linken Seite der 3D-View. Allerdings sind Toolbars auch in anderen Editoren anzutreffen. Die Toolbars lassen sich jeweils mit der Taste TT ein- und aus-blenden. Da es auch im 3D-Viewport verschiedene Bearbeitungsmöglichkeiten gibt, variieren die Elemente in der Toolbar abhängig vom Bearbeitungsmodus. Diese sind entweder per Mausklick über diese Toolbar oder mithilfe von Tastenkombinationen aufrufbar. In diesem Kurs wird vor allem auf Tastenkombinationen verwiesen, wenn Operationen durchgeführt werden."
+    "objectID": "Chapters/Chapter_6.html#plane",
+    "href": "Chapters/Chapter_6.html#plane",
+    "title": "6. Primitive Meshes",
+    "section": "Plane",
+    "text": "Plane\n\n\nFläche\nDie Plane stellt das grundlegendste Primitive dar. Es handelt sich dabei lediglich um eine einzelne Fläche, bestehend aus einer Fläche mit vier Eckpunkten. Per Default hat die Plane eine Dimensionalität von 2x2x0 Metern."
   },
   {
-    "objectID": "Chapters/Chapter_2.html#sidebar",
-    "href": "Chapters/Chapter_2.html#sidebar",
-    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
-    "section": "Sidebar",
-    "text": "Sidebar\n\n\nSidebars\nDie Sidebar befindet sich auf der rechten Seite des Viewport-Displays, muss allerdings noch mit der Taste NN geöffnet werden. Mit dieser Taste lässt sich die Sidebar ebenfalls wieder verbergen. Die Sidebar ist auch in anderen Editoren anzutreffen und wird dort ebenfalls mit der TasteNN ein- und ausgeblendet. Die Sidebar ist zudem anhand von Registerkarten in zusätzliche Kategorien eingeordnet. Unter dem Register «Item» können etwa Einstellungen zum aktuell ausgewählten Objekt betrachtet und verändert werden, im Register «Tool» können Einstellungen zum aktuell ausgewählten Werkzeug verfeinert werden und unter dem Register «View» können Einstellungen zur Ansicht betrachtet und verfeinert werden."
+    "objectID": "Chapters/Chapter_6.html#cube",
+    "href": "Chapters/Chapter_6.html#cube",
+    "title": "6. Primitive Meshes",
+    "section": "Cube",
+    "text": "Cube\n\n\nWürfel\nDer Cube entspricht dem Standardwürfel, den Blender bei der Default-Szene anzeigt. Per Default hat der Würfel eine Dimensionalität von 2x2x2 Metern."
   },
   {
-    "objectID": "Chapters/Chapter_2.html#header",
-    "href": "Chapters/Chapter_2.html#header",
-    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
-    "section": "Header",
-    "text": "Header\nIm Header sind zusätzliche Einstellungen aufzufinden. Diese können nicht nur zwischen den einzelnen Editoren variieren, sondern auch zwischen den einzelnen Bearbeitungsmodi inner-halb der 3D-View.\n\nAktions-Einstellungen\nIn der oberen linken Ecke, direkt neben dem Bedienfeld für die Auswahl des Editors, befinden sich Einstellungsmöglichkeiten, welche basierend auf der aktuell durchgeführten Aktion verfeinert werden können.\n\n\n\n\n\n\nAbbildung 1: Aktions-Einstellungen am Beispiel der Auswahl.\n\n\n\n\n\nErweiterte Hilfsmittel zur Bearbeitung\n\n\nHilfsmittel zur Bearbeitung von Objekten\nIn der Mitte des Headers befinden sich eine Reihe von erweiterten Einstellungen, welche bei der Objektbearbeitung als Hilfsmittel verwendet werden können. Hierzu gehört beispielsweise die proportionale Bearbeitung von Objekten oder das Festlegen von Bezugspunkten für Transformationen. Diese Hilfsmittel werden in einem späteren Kapitel ausführlich behandelt.\n\n\n\n\n\n\nAbbildung 2: Erweiterte Hilfsmittel.\n\n\n\n\n\nBearbeitungsmodus\n\n\nAuswahl des Bearbeitungsmodus\nIn der Zeile unterhalb des Headers befindet sich links das Menü zur Auswahl des Bearbeitungsmodus. Dabei wird definiert, wie das aktuelle Objekt bearbeitet werden soll. So kann bei-spielsweise im Object-Mode das Objekt als Ganzes bearbeitet werden, während im Edit-Mode die Struktur des Objektes bearbeitet werden kann.\n\n\n\n\n\n\nAbbildung 3: Auswahl des Bearbeitungsmodus.\n\n\n\n\n\nAnzeige-Optionen\n\n\nAnzeige-Optionen\nIn der rechten oberen Ecke befinden sich Optionen zur Darstellung der Objekte in der 3D-View. Diese umfassen:\n\nView Object Types\nShow Gizmo\nShow Overlay\nToggle X-Ray\nViewport Shading\n\n\nView Object Types\n\n\nEin- und Ausblen-den von Objektarten\nHier lassen sich verschiedene Arten von Objekten alle gemeinsam innerhalb einer Szene verstecken, indem das Auge zu der entsprechenden Objektart abgewählt wird. Durch das Abwählen des Auges neben dem Objekttyp «Camera» werde etwa alle Kameras aus der Szene unsichtbar gemacht. Die Objekte sind allerdings noch vorhanden und weisen immer noch dieselbe Funktion auf – sie werden lediglich nicht mehr im 3D-Viewport angezeigt. Neben dem Auge lässt sich zudem anhand der Schaltfläche mit einem abgebildeten Cursor einstellen, dass die entsprechenden Objektarten nicht mehr auswählbar sind.\n\n\n\n\n\n\n\nAbbildung 4: View Object Types.\n\n\n\n\n\n\nShow Gizmo\n\n\nNavigations-Tools ein- und ausblen-den\nInnerhalb dieser Option lassen sich in der oberen rechten Ecke Tools zur Navigation mittels der Kamera ein- und ausblenden. Zudem kann hier die Darstellung eines Gizmos bei der aktuellen Auswahl aktiviert werden. Dieses Gizmo kann verwendet werden, um Objekte mittels der Maus zu rotieren, zu skalieren oder zu bewegen.\n\n\n\n\n\n\n\nAbbildung 5: Show Gizmo.\n\n\n\n\n\n\nShow Overlays\n\n\nOrientierungsobjekte im Viewport ein- und ausblen-den\nDurch die Deaktivierung der Viewport-Overlays wird im 3D-Viewport die Ansicht bestimmter Hilfsmittel (beispielsweise die Achsen oder die Markierung der aktuellen Auswahl) ausgeschal-tet. Im Dropdown-Menü lässt sich zudem die Darstellung von einzelnen Hilfsmitteln individuell an- und abwählen.\n\n\n\n\n\n\n\nAbbildung 6: Show Overlays.\n\n\n\n\n\n\nToggle X-Ray\n\n\nRöntgenblick ein- und ausschalten\nWenn die Schaltfläche «Toggle X-Ray» ausgewählt ist, erweitert sich die Ansicht von Objekten, sodass durch sie hindurchgesehen werden kann. Dies ermöglicht es etwa, dass auch ein Objekt, welches hinter einem anderen Objekt verborgen liegt, betrachtet werden kann. Wenn diese Option aktiviert ist, können zudem die verborgenen Objekte mittels eines Mausklicks angewählt werden. Die Schaltfläche kann auch mit den Tasten AltAlt + ZZ ein- und ausgeschaltet werden.\n\n\n\n\n\n\n\nAbbildung 7: Toggle X-Ray.\n\n\n\n\n\n\nViewport Shading\n\n\nArt der Objektdar-stellung im Viewport\nIn der rechten oberen Ecke befinden sich vier Schaltflächen, um einzustellen, welche Elemente bei der Darstellung der Objekte berücksichtigt werden sollen. Je nach Auswahl werden dadurch die Objekte unterschiedlich dargestellt:\n\nWireframe: Die Objekte werden in ihrer Struktur als Gitternetz angezeigt, sodass deren Aufbaugitter klar ersichtlich wird. Hierbei werden die Flächen der Objekte nicht dargestellt.\nSolid: Die Objekte werden als Ganzes dargestellt, sodass auch die Flächen sichtbar sind. Allerdings werden die verwendeten Materialien und Texturen nicht berücksichtigt.\nMaterial Preview: Die Objekte werden als Ganzes dargestellt, inklusive deren Materialien und Texturen. Die Umgebung wird anhand von vorgefertigten Szenen und Umgebungen beleuchtet, sodass eine schnelle Vorschau möglich ist.\nRendered: Die Objekte werden als Ganzes dargestellt, inklusive deren Materialien und Texturen. Die Umgebung und die Beleuchtung entsprechen den Einstellungen der aktuellen Szene, sodass eine Vorschau für die gerenderte Szene möglich ist.\n\nAlternativ kann die Taste ZZ gedrückt werden. Dadurch erscheint beim Mauszeiger ein Menü mit allen vier Optionen zum Viewport Shading zur Auswahl.\n\n\n\n\n\n\n\nAbbildung 8: Schaltflächen für die Shading-Optionen im Viewport."
+    "objectID": "Chapters/Chapter_6.html#circle",
+    "href": "Chapters/Chapter_6.html#circle",
+    "title": "6. Primitive Meshes",
+    "section": "Circle",
+    "text": "Circle\n\n\nKreis\nDer Circle entspricht einem runden Kreis mit dem Radius von einem Meter, wodurch er eine Dimensionalität von 2x2x2 Metern innehat. Der Kreis besteht lediglich aus mit Linien verbundenen Punkten, ohne eine innere Fläche. Allerdings kann im Kontext-Menü zum Hinzufügen des Kreises auch eine Füllfläche erstellt werden."
   },
   {
-    "objectID": "Chapters/Chapter_2.html#letzte-aktion-verfeinern",
-    "href": "Chapters/Chapter_2.html#letzte-aktion-verfeinern",
-    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
-    "section": "Letzte Aktion verfeinern",
-    "text": "Letzte Aktion verfeinern\n\n\nTemporäres Menü zur Verfeinerung der letzten Aktion\nWenn eine Aktion in Blender durchgeführt wird, erscheint in der linken unteren Ecke des 3D-Viewports temporär ein Menü. Dieses Menü kann aufgeklappt werden und bietet abhängig von der durchgeführten Aktion eine Reihe Verfeinerungen. Zu beachten ist jedoch, dass dieses Menü sofort wieder verschwindet, sobald ein Mausklick ausserhalb des Menüs erfolgt. Um das Menü wieder erscheinen zu lassen, muss die Aktion rückgängig gemacht und erneut durchgeführt werden."
+    "objectID": "Chapters/Chapter_6.html#uv-sphere",
+    "href": "Chapters/Chapter_6.html#uv-sphere",
+    "title": "6. Primitive Meshes",
+    "section": "UV Sphere",
+    "text": "UV Sphere\n\n\nKugel bestehend aus Vierecken\nDie UV-Sphere stellt eine Kugel dar, mit der Dimensionalität von 2x2x2 Metern. Die Kugel besteht aus viereckigen Flächen, wobei sie an den Endpunkten der Z-Achse durch dreieckige Flächen verbunden ist. Die Anzahl der Segmente um die Kugel herum sowie die Anzahl Ringe lassen sich im Kontext-Menü beim Erstellen der Kugel einstellen. Die Segmente beschreiben dabei die Anzahl Unterteilungen, welche ein Ring entlang der XY-Achse der Kugel beinhaltet, während die Anzahl Ringe beschreibt, wie oft die Kugel der Z-Achse entlang unterteilt werden soll."
   },
   {
-    "objectID": "Chapters/Chapter_2.html#dargestellte-viewport-overlays",
-    "href": "Chapters/Chapter_2.html#dargestellte-viewport-overlays",
-    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
-    "section": "Dargestellte Viewport-Overlays",
-    "text": "Dargestellte Viewport-Overlays\n\n\nAchsen\nSofern die Ansicht der Viewport-Overlays aktiviert ist, werden im 3D-Viewport einige nützliche Dinge dargestellt. Zum einen werden die verschiedenen drei Achsen in unterschiedlichen Farben vom Nullpunkt der Szene aus dargestellt:\n\nX-Achse: rot\nY-Achse: grün\nZ-Achse: blau\n\nZudem wird leicht schattiert ein Gitternetz dargestellt, bei dem jedes Quadrat eine Einheit von einem Meter darstellt. Wird aus der Szene hinausgezoomt, werden diese Quadrate zunehmend kleiner, dafür werden anschliessend quadratische Felder mit der Einheit von 10 Metern sichtbar.\n\n\n\n\n\n\nAbbildung 9: 3D-Cursor.\n\n\n\n\n\n3D-Cursor\nInnerhalb des 3D-Viewports ist ausserdem der 3D-Cursor sichtbar. Dieser ist an einer bestimmten Position in der Szene platziert und dort mittels eines rot-weissen Kreises dargestellt. Neu erstellte Objekte werden an seiner Position in die Szene eingefügt und der 3D-Cursor kann als Bezugspunkt für Transformationen verwendet werden."
+    "objectID": "Chapters/Chapter_6.html#ico-sphere",
+    "href": "Chapters/Chapter_6.html#ico-sphere",
+    "title": "6. Primitive Meshes",
+    "section": "Ico Sphere",
+    "text": "Ico Sphere\n\n\nKugel bestehend aus Dreiecken\nDie Ico-Sphere stellt ebenfalls eine Kugel dar, allerdings mit den Dimensionen 1.9x2x2 Meter. Anders als die UV-Sphere besteht sie nur aus dreieckigen Flächen. Dies hat den Vorteil, dass die Form der Faces über die ganze Kugel hinweg etwa gleich bleibt. Im Kontext-Menü zur Erstellung der Ico Sphere kann mit der Anzahl Subdivisions eingestellt werden, wie oft die Dreiecke dieser Kugel unterteilt werden sollen. Mit zunehmenden Subdivisions nähert sich die X-Dimensionalität auch 2 Metern an."
   },
   {
-    "objectID": "Chapters/Chapter_3.html",
-    "href": "Chapters/Chapter_3.html",
-    "title": "3. Navigation der Ansicht im 3D-Viewport",
-    "section": "",
-    "text": "Navigation in der 3D-Ansicht\nDie Ansicht auf die Objekte im 3D-Viewport kann beliebig verändert werden. Nebst der standardmässigen Ansichtssteuerung über die Maus kann auch das Nummernfeld der Tastatur verwendet werden. In der Regel werden beide Optionen verwendet. Die Navigation mit der Maus bietet tendenziell eine grössere Flexibilität, während die Navigation mit der Tastatur eine grössere Präzision ermöglicht."
+    "objectID": "Chapters/Chapter_6.html#cylinder",
+    "href": "Chapters/Chapter_6.html#cylinder",
+    "title": "6. Primitive Meshes",
+    "section": "Cylinder",
+    "text": "Cylinder\n\n\nZylinder\nDer Zylinder stellt zwei Kreise dar, welche durch Flächen miteinander verbunden sind. Seine Dimensionalität entspricht 2x2x2 Metern mit einem Radius der Kreise von 1 Meter. Im Kontext-Menü zur Erstellung des Zylinders lässt sich die Anzahl Unterteilungen im Kreis einstellen. Zudem lässt sich hier analog zum Kreis einstellen, ob die Kreisfläche mit einer Füllfläche versehen werden soll und mit welcher Art von Füllfläche."
   },
   {
-    "objectID": "Chapters/Chapter_3.html#navigation-mit-der-maus",
-    "href": "Chapters/Chapter_3.html#navigation-mit-der-maus",
-    "title": "3. Navigation der Ansicht im 3D-Viewport",
-    "section": "Navigation mit der Maus",
-    "text": "Navigation mit der Maus\n\n\nAnsicht mit der Maus verändern\nJe nach Aufbau der verwendeten Computermaus unterscheidet sich die Navigation durch den 3D-Viewport mit der Maus etwas. Bei einer Computermaus mit einem Mausrad erfolgt die Navigation im 3D-Viewport durch Mausbewegungen bei gedrückter Rad-Taste. Bei Trackpads oder Mäusen mit integriertem Trackpad erfolgt die Navigation mittels Wischbewegungen. Bei einer normalen Bewegung wird dabei lediglich die Ansicht entsprechend der Bewegung rotiert. Durch gleichzeitiges Drücken der ShiftShift-Taste wird die Ansicht in die entsprechenden Richtungen bewegt (ohne eine Rotation). Mittels gedrückter CtrlCtrl-Taste kann durch die Mausbewegung hinein- oder hinausgezoomt werden. Durch das Drehen des Mausrads wird die Ansicht ebenfalls hinein- oder hinausgezoomt."
+    "objectID": "Chapters/Chapter_6.html#cone",
+    "href": "Chapters/Chapter_6.html#cone",
+    "title": "6. Primitive Meshes",
+    "section": "Cone",
+    "text": "Cone\n\n\nKegel\nDer Kegel stellt einen Spezialfall des Zylinders dar, bei dem die Radien der beiden Enden variiert werden können und einer der beiden Kreise einen Radius von 0 innehat. Auch hier kann wieder eingestellt werden, wie viele Unterteilungen die Kreise innehaben sollen und wie die Kreisflächen gestaltet werden sollen."
   },
   {
-    "objectID": "Chapters/Chapter_3.html#navigation-mit-der-tastatur",
-    "href": "Chapters/Chapter_3.html#navigation-mit-der-tastatur",
-    "title": "3. Navigation der Ansicht im 3D-Viewport",
-    "section": "Navigation mit der Tastatur",
-    "text": "Navigation mit der Tastatur\n\n\nEmulation des Nummernblocks\nNebst der Maus kann auch die Tastatur verwendet werden, um die Ansicht zu verändern. Diese Option ergibt sich allerdings nur, wenn man über einen Nummernblock verfügt. Wenn kein Nummernblock zur Verfügung steht, lassen sich auch die Zahlen-Tasten oberhalb der Buchstaben für die Navigation verwenden. Hierfür muss allerdings in den Benutzereinstellungen («Edit | Preferences») in den Einstellungen zum «Input» beim Keyboard-Reiter die Einstellung «Emulate Numpad» aktiviert werden.\n\n\nRotieren und Drehen der Ansicht\nMittels der Tasten22, 44, 66 und 88 kann die Ansicht entsprechend ihrer relativen Anordnung auf dem Nummernblock rotiert werden: Die Taste 22 rotiert nach unten, die Taste 44 nach links, die Taste 66 nach rechts und die Taste 88 nach oben. Werden dieselben Tasten bei gedrückter CtrlCtrl-Taste gedrückt, wird die Ansicht in die entsprechende Richtung bewegt, ohne eine Rotation durchzuführen. Mittels gedrückter ShiftShift-Taste kann die Ansicht durch die Taste 66 zudem im Uhrzeigersinn und mittels der Taste 44 gegen den Uhrzeigersinn gedreht werden. Um näher hineinzuzoomen wird die Taste ++ und zum Hinauszoomen die Taste -- verwendet.\n\n\nPräzise Ansichten ansteuern\nMittels der Taste 11 kann die Ansicht direkt in die Vorderansicht gedreht werden. Die Ansicht erfolgt anschliessend entlang der Y-Achse. Die Rückansicht ist mit der Tastenkombination CtrlCtrl + 11 einstellbar. Mittels der Taste wird die Seitenansicht – von der rechten Seite aus zum Objekt hingewählt. Das Objekt wird in diesem Falle entlang der X-Achse betrachtet. Mit der Tastenkombination CtrlCtrl + 33 ist die Seitenansicht von der linken Seite aus einstellbar. Um die Szene aus der Vogelperspektive zu betrachten, kann die Taste 77 gedrückt werden. Hierbei erfolgt die Ansicht der Z-Achse entlang. Mittels der Tastenkombination CtrlCtrl + 77 erfolgt die Ansicht von unten.\n\n\nPerspektivische und orthogonale Darstelung\nJede der Ansichten kann auf zwei Arten erfolgen: perspektivisch oder orthogonal. Die perspektivische Ansicht berücksichtigt Tiefeninformationen, sodass weiter entfernte Objekte kleiner dargestellt werden. Die orthogonale Perspektive ignoriert die Tiefeninformationen, wodurch weiter entfernte Objekte gleich gross angezeigt werden wie nähere gleich grosse Objekte auf der entsprechenden Achse. Diese Perspektive hat den Vorteil, dass Objekte in ihrer geometrischen Form in 2D betrachtet werden können. Mittels der Taste 55 kann zwischen diesen beiden Ansichtsmodi gewechselt werden.\n\n\nKamera-Ansicht\nMittels der Taste 11 kann die Ansicht direkt in die Position der Kamera gelegt werden. Dadurch wird die Szene genau so betrachtet, wie sie im finalen Render betrachtet werden wird. Wenn in einer Szene keine Kamera vorhanden ist, steht diese Ansicht nicht zur Verfügung.Wenn mehrere Kameras vorhanden sind, wird jeweils die Kamera, welche die aktive Render Kamera darstellt, anvisiert. Um die Kameraperspektive zu verlassen kann die Ansicht mittels der Maus bewegt werden, oder erneut die Taste 00 gedrückt werden.\n\n\nFokus auf ein Objekt\nIn komplexeren Szenen kann es sein, dass man die Übersicht über die Objekte verliert, oder dass sie sich gegenseitig im Weg stehen bei der Ansicht. Mittels der Taste .. auf dem Nummernblock wird die Ansicht direkt auf ein ausgewähltes Objekt gezoomt. Diese Aktion lässt sich nicht mit der Taste .. ausserhalb des Nummernblocks emulieren. Mittels der Taste // kann zudem die lokale Ansicht aktiviert werden. In dieser Ansicht wird lediglich das ausgewählte Objekt dargestellt, sodass es in komplexen Szenen besser betrachtet werden kann. Allerdings muss anschliessend die Taste erneut gedrückt werden, um die lokale Ansicht wieder zu verlassen. Auch diese Aktion lässt sich nicht mit einer anderen Taste ausserhalb des Nummernblocks emulieren."
+    "objectID": "Chapters/Chapter_6.html#torus",
+    "href": "Chapters/Chapter_6.html#torus",
+    "title": "6. Primitive Meshes",
+    "section": "Torus",
+    "text": "Torus\n\n\nTorus\nDer Torus stellt eine ringförmige Gestalt dar, welche aus einer Major- und einer Minor-Komponente besteht. Die Major-Komponente beschreibt dabei den Kreis von der Vogelperspektive herab auf den Torus und die Minor-Komponente den Kreis, welcher sich aus dem Querschnitt des Torus ergibt. Für beide Komponenten kann die Anzahl Unterteilungen über das Segment-Feld im Kontext-Menü eingegeben werden. Die Dimensionalität kann entweder hinsichtlich der Major- und Minor-Komponente festgelegt werden oder alternativ als Radius des inneren und des äusseren Ringes.\n\n\n\n\n\n\nAbbildung 1: Major- und Minor-Komponente des Torus"
   },
   {
-    "objectID": "Chapters/Chapter_3.html#navigation-mittels-gizmos",
-    "href": "Chapters/Chapter_3.html#navigation-mittels-gizmos",
-    "title": "3. Navigation der Ansicht im 3D-Viewport",
-    "section": "Navigation mittels Gizmos",
-    "text": "Navigation mittels Gizmos\nAuf der rechten Seite des 3D-Viewports lassen sich zudem Schaltflächen anzeigen, mit denen die Ansicht gesteuert werden kann. Um diese anzeigen zu lassen, müssen die Gizmos eingeschaltet sein. Wird die linke Maustaste auf das Kamera-Icon angewendet, wird die Kamera-Ansicht aktiviert. Das Icon darunter, welches ein Gitternetz darstellt, dient dem Wechsel zwischen perspektivischer und orthogonaler Ansicht. Die beiden oberen Icons dienen dem Zoomen (mittels der Lupe) und dem Bewegen der Ansicht (Hand). Hierfür muss das Icon angeklickt und die Maus anschliessend bei weiterhin gedrückter Maustaste bewegt werden. Zuoberst findet sich zudem ein Koordinatensystem, mit dem die Perspektive per Mausklick oder mittels gedrückter Maustaste verändert werden kann."
+    "objectID": "Chapters/Chapter_6.html#grid",
+    "href": "Chapters/Chapter_6.html#grid",
+    "title": "6. Primitive Meshes",
+    "section": "Grid",
+    "text": "Grid\n\n\nGitternetz\nDas Grid stellt eine Alternative zur glatten Fläche dar, ist allerdings bereits in weitere kleine viereckige Flächen unterteilt. Im Kontext-Menü lässt sich anhand der Subdivisions eingeben, wie viele Unterteilungen das Gitternetz entlang der X- und der Y-Achse haben soll. Die Dimensionalität des Grids ist analog zur Plane per Default 2x2x0 Meter."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Über",
-    "section": "",
-    "text": "Folgt…"
-  },
-  {
-    "objectID": "Sites/Overview.html",
-    "href": "Sites/Overview.html",
-    "title": "Kursübersicht",
-    "section": "",
-    "text": "Woche\nPraxis\nKapitel\nTheorie\nLiteratur\nFolien\nAbgabe\n\n\n\n\n1\nDie Arbeitsoberfläche von Blender\nEigenschaften von 3D-Objekten\n1, 2, 3, 4, 5, 6, 7, 8, 9\nOrganisatorisches\nBedeutung von 3D-Objekten\nTarr et al. (1998)\nSitzung 1\n\n\n\n2\nGrundmechanismen der Objektbearbeitung I\n10, 11, 12\n\n\n\n\n\n\n3\nGrundmechanismen der Objektbearbeitung II\n13, 14\nReferenzbilder oder Fantasie?\nBrainbridge et al. (2021)\n\n\n\n\n4\nObjektbearbeitung mit Modifiers\n15, 16\n\n\n\n1\n\n\n5\nMaterialien\n17, 18, 19, 20, 21\nVisuelle Wahrnehmung von Materialien\nFlemming (2014)\n\n\n\n\n6\nTexturen\n22, 23, 24, 25, 26, 27, 28\nLizenzen & Lizenzarten\n\n\n2\n\n\n7\nPhysical based Rendering\n29, 30, 31, 32, 33\nCartoon oder Realismus?\n\n\n\n\n\n8\nBeleuchtung und Welten\n34, 35\nFarbwahrnehmung unter Beleuchtung\nBrainard & Hurlbert (2015)\n\n3\n\n\n9\nPartikel/Haare, Kamera & Rendering\n36, 37, 38\nDateiformate & Hardware\nJoon (2010)\n\n\n\n\n10\nWorkflow der Charaktererstellung\n39, 40, 41, 42\nUncanny Valley Effect\nKätsyri et al. (2015)\n\n4\n\n\n11\nCharacter Rigging\n43, 44, 45\nFotorealismus\n\n\n\n\n\n12\nAnimationen\n46, 47\nWahrnehmung von Animationen\nScholl & Tremoulet (2000)\n\n5\n\n\n13\nBlender in VR\n\nVirtual Reality\n\n\n6\n\n\n14\nAbschluss"
-  },
-  {
-    "objectID": "Sites/Overview.html#semesterplan",
-    "href": "Sites/Overview.html#semesterplan",
-    "title": "Kursübersicht",
-    "section": "",
-    "text": "Woche\nPraxis\nKapitel\nTheorie\nLiteratur\nFolien\nAbgabe\n\n\n\n\n1\nDie Arbeitsoberfläche von Blender\nEigenschaften von 3D-Objekten\n1, 2, 3, 4, 5, 6, 7, 8, 9\nOrganisatorisches\nBedeutung von 3D-Objekten\nTarr et al. (1998)\nSitzung 1\n\n\n\n2\nGrundmechanismen der Objektbearbeitung I\n10, 11, 12\n\n\n\n\n\n\n3\nGrundmechanismen der Objektbearbeitung II\n13, 14\nReferenzbilder oder Fantasie?\nBrainbridge et al. (2021)\n\n\n\n\n4\nObjektbearbeitung mit Modifiers\n15, 16\n\n\n\n1\n\n\n5\nMaterialien\n17, 18, 19, 20, 21\nVisuelle Wahrnehmung von Materialien\nFlemming (2014)\n\n\n\n\n6\nTexturen\n22, 23, 24, 25, 26, 27, 28\nLizenzen & Lizenzarten\n\n\n2\n\n\n7\nPhysical based Rendering\n29, 30, 31, 32, 33\nCartoon oder Realismus?\n\n\n\n\n\n8\nBeleuchtung und Welten\n34, 35\nFarbwahrnehmung unter Beleuchtung\nBrainard & Hurlbert (2015)\n\n3\n\n\n9\nPartikel/Haare, Kamera & Rendering\n36, 37, 38\nDateiformate & Hardware\nJoon (2010)\n\n\n\n\n10\nWorkflow der Charaktererstellung\n39, 40, 41, 42\nUncanny Valley Effect\nKätsyri et al. (2015)\n\n4\n\n\n11\nCharacter Rigging\n43, 44, 45\nFotorealismus\n\n\n\n\n\n12\nAnimationen\n46, 47\nWahrnehmung von Animationen\nScholl & Tremoulet (2000)\n\n5\n\n\n13\nBlender in VR\n\nVirtual Reality\n\n\n6\n\n\n14\nAbschluss"
-  },
-  {
-    "objectID": "Sites/Overview.html#skript-kapitel",
-    "href": "Sites/Overview.html#skript-kapitel",
-    "title": "Kursübersicht",
-    "section": "Skript-Kapitel:",
-    "text": "Skript-Kapitel:\n\nVorbereitung von Blender\nDie Arbeitsoberfläche des 3D-Viewports\nNavigation der Ansicht im 3D-Viewport\nErste Schritte\nObjektarten\nPrimitive Meshes\nMethoden der Objekt-Transformation\nObjekte im Viewport-Display transformieren\nObject- und Edit-Mode\nEinstieg in den Edit-Mode\nMethoden der Objektbearbeitung im Edit-Mode\nHilfestellungen für die Objektbearbeitung\nTutorial: Erstellen eines Glases\nObjekterstellung mittels Modifiern\nEigenschaften innerhalb eines Meshes definieren\nMaterialien, Texturen und Shader\nMaterialien\nDer Shader-Editor\nGrundlegende Eigenschaften von Materialien\nTutorial: Strandball\nTexturen\nUVs\nTexturen zu einem Material hinzufügen\nTexturen für Parameter verwenden\nWelche Bilder eignen sich als Texturen?\nArten von Texturen\nTutorial: Einen Hammer texturieren\nDisplacement mit dem Displacement-Modifier erstellen\nErstellen von Landschaften\nTutorial: Erstellen einer Düne\nParameter im Principled-BSDF-Shader\nDer Wechsel von Eevee zu Cycles am Beispiel von Glas\nLichtquellen in einer Szene\nLichtobjekte\nWelten\nKamera\nRendern\nTutorial: Ein Glas mit Wasser erstellen\nBäume mittels Add-on erstellen\nWorkflows der Charaktererstellung\nCharacter-Modeling\nTutorial: Eine Cartoon-Katze als Charakter erstellen\nWas ist Rigging?\nObjekte mit Armaturen verformen\nCharakter-Rigging\nVom Bild zur Animation\nAnimationen erstellen\nAnimationen verfeinern\nAnimationen rendern"
-  },
-  {
-    "objectID": "Sites/Overview.html#literatur",
-    "href": "Sites/Overview.html#literatur",
-    "title": "Kursübersicht",
-    "section": "Literatur",
-    "text": "Literatur\nBrainard, D. H., & Hurlbert, A. C. (2015). Colour vision: understanding# TheDress. Current Biology, 25(13), R551-R554.\nBainbridge, W. A., Pounder, Z., Eardley, A. F., & Baker, C. I. (2021). Quantifying Aphantasia through drawing: Those without visual imagery show deficits in object but not spatial memory. Cortex, 135, 159-172.\nFleming, R. W. (2014). Visual perception of materials and their properties. Vision research, 94, 62-75.\nJoon, J. S. (2010, August). Principles of photorealism to develop photorealistic visualisation for interface design: A review. In 2010 Seventh International Conference on Computer Graphics, Imaging and Visualization (pp. 17-25). IEEE.\nKätsyri, J., Förger, K., Mäkäräinen, M., & Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses: support for perceptual mismatch as one road to the valley of eeriness. Frontiers in psychology, 6, 390.\nScholl, B. J., & Tremoulet, P. D. (2000). Perceptual causality and animacy. Trends in cognitive sciences, 4(8), 299-309.\nTarr, M. J., Williams, P., Hayward, W. G., & Gauthier, I. (1998). Three-dimensional object recognition is viewpoint dependent. Nature neuroscience, 1(4), 275-277."
-  },
-  {
-    "objectID": "Sites/chapter_overview.html#skript-kapitel",
-    "href": "Sites/chapter_overview.html#skript-kapitel",
-    "title": "Kursübersicht",
-    "section": "Skript-Kapitel:",
-    "text": "Skript-Kapitel:\n\nVorbereitung von Blender\nDie Arbeitsoberfläche des 3D-Viewports\nNavigation der Ansicht im 3D-Viewport\nErste Schritte\nObjektarten\nPrimitive Meshes\nMethoden der Objekt-Transformation\nObjekte im Viewport-Display transformieren\nObject- und Edit-Mode\nEinstieg in den Edit-Mode\nMethoden der Objektbearbeitung im Edit-Mode\nHilfestellungen für die Objektbearbeitung\nTutorial: Erstellen eines Glases\nObjekterstellung mittels Modifiern\nEigenschaften innerhalb eines Meshes definieren\nMaterialien, Texturen und Shader\nMaterialien\nDer Shader-Editor\nGrundlegende Eigenschaften von Materialien\nTutorial: Strandball\nTexturen\nUVs\nTexturen zu einem Material hinzufügen\nTexturen für Parameter verwenden\nWelche Bilder eignen sich als Texturen?\nArten von Texturen\nTutorial: Einen Hammer texturieren\nDisplacement mit dem Displacement-Modifier erstellen\nErstellen von Landschaften\nTutorial: Erstellen einer Düne\nParameter im Principled-BSDF-Shader\nDer Wechsel von Eevee zu Cycles am Beispiel von Glas\nLichtquellen in einer Szene\nLichtobjekte\nWelten\nKamera\nRendern\nTutorial: Ein Glas mit Wasser erstellen\nBäume mittels Add-on erstellen\nWorkflows der Charaktererstellung\nCharacter-Modeling\nTutorial: Eine Cartoon-Katze als Charakter erstellen\nWas ist Rigging?\nObjekte mit Armaturen verformen\nCharakter-Rigging\nVom Bild zur Animation\nAnimationen erstellen\nAnimationen verfeinern\nAnimationen rendern"
-  },
-  {
-    "objectID": "index.html#lorem",
-    "href": "index.html#lorem",
-    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
-    "section": "Lorem",
-    "text": "Lorem\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n\n\n\n\nÜbung\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
-  },
-  {
-    "objectID": "index.html#lorem-ipsum-dolor",
-    "href": "index.html#lorem-ipsum-dolor",
-    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
-    "section": "Lorem ipsum dolor",
-    "text": "Lorem ipsum dolor\n\n\n\n\n\nWeiterführende Informationen\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
-  },
-  {
-    "objectID": "index.html#lorem-ipsum-dolor-1",
-    "href": "index.html#lorem-ipsum-dolor-1",
-    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
-    "section": "Lorem ipsum dolor",
-    "text": "Lorem ipsum dolor\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et\n\n\n\n\n\nMerke…\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et"
+    "objectID": "Chapters/Chapter_6.html#monkey",
+    "href": "Chapters/Chapter_6.html#monkey",
+    "title": "6. Primitive Meshes",
+    "section": "Monkey",
+    "text": "Monkey\n\n\nSuzanne\nBei der Auswahl des Monkeys generiert Blender das Modell eines Affenkopfs. Dabei handelt es sich um Suzanne, das Maskottchen von Blender."
   },
   {
     "objectID": "Chapters/Chapter_1.html",
@@ -250,6 +194,139 @@
     "title": "1. Vorbereitung von Blender",
     "section": "Neuanordnen der Editor-Areale",
     "text": "Neuanordnen der Editor-Areale\n\n\nGrösse der Edito-ren verändern\nDie einzelnen Editor-Fenster können nicht nur beliebig ausgetauscht werden, sondern auch nach eigenem Belieben vergrössert oder verkleinert werden. In den Abgrenzungsbereichen zwischen den Fenstern verändert sich der Mauszeiger. Von dort aus lassen sich die Editor-Areale durch Hin- und Herziehen vergrössern oder verkleinern.\n\n\nNeue Editoren öffnen\nIn den Ecken der einzelnen Editor-Fenster gibt es zudem die Möglichkeit, durch Ziehen der Ecke in eine Richtung das Fenster in zwei Editoren aufzuteilen. Wenn dabei gleichzeitig die ShiftShift-Taste gedrückt wird, wird derselbe Editor in einem neuen, einzelnen Fenster geöffnet.\n\n\nEditor-Areal schliessen\nUm ein Editor-Fenster zu schliessen, wird jeweils ein anderes Editor-Fenster über das zu schliessende Fenster gezogen. Dadurch werden die beiden Fenster verbunden. Um zwei Fenster zu verbinden, wird eine der beiden Ecken, welche sich zwischen den beiden Fenstern befindet, ausgewählt und das zu behaltende Fenster über das zu entfernende Fenster gezogen. Dies ist manchmal etwas knifflig, da die Aktion ähnlich zum Öffnen von neuen Fenstern ist."
+  },
+  {
+    "objectID": "index.html#lorem",
+    "href": "index.html#lorem",
+    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
+    "section": "Lorem",
+    "text": "Lorem\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n\n\n\n\nÜbung\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+  },
+  {
+    "objectID": "index.html#lorem-ipsum-dolor",
+    "href": "index.html#lorem-ipsum-dolor",
+    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
+    "section": "Lorem ipsum dolor",
+    "text": "Lorem ipsum dolor\n\n\n\n\n\nWeiterführende Informationen\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+  },
+  {
+    "objectID": "index.html#lorem-ipsum-dolor-1",
+    "href": "index.html#lorem-ipsum-dolor-1",
+    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
+    "section": "Lorem ipsum dolor",
+    "text": "Lorem ipsum dolor\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et\n\n\n\n\n\nMerke…\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et"
+  },
+  {
+    "objectID": "Sites/chapter_overview.html#skript-kapitel",
+    "href": "Sites/chapter_overview.html#skript-kapitel",
+    "title": "Kursübersicht",
+    "section": "Skript-Kapitel:",
+    "text": "Skript-Kapitel:\n\nVorbereitung von Blender\nDie Arbeitsoberfläche des 3D-Viewports\nNavigation der Ansicht im 3D-Viewport\nErste Schritte\nObjektarten\nPrimitive Meshes\nMethoden der Objekt-Transformation\nObjekte im Viewport-Display transformieren\nObject- und Edit-Mode\nEinstieg in den Edit-Mode\nMethoden der Objektbearbeitung im Edit-Mode\nHilfestellungen für die Objektbearbeitung\nTutorial: Erstellen eines Glases\nObjekterstellung mittels Modifiern\nEigenschaften innerhalb eines Meshes definieren\nMaterialien, Texturen und Shader\nMaterialien\nDer Shader-Editor\nGrundlegende Eigenschaften von Materialien\nTutorial: Strandball\nTexturen\nUVs\nTexturen zu einem Material hinzufügen\nTexturen für Parameter verwenden\nWelche Bilder eignen sich als Texturen?\nArten von Texturen\nTutorial: Einen Hammer texturieren\nDisplacement mit dem Displacement-Modifier erstellen\nErstellen von Landschaften\nTutorial: Erstellen einer Düne\nParameter im Principled-BSDF-Shader\nDer Wechsel von Eevee zu Cycles am Beispiel von Glas\nLichtquellen in einer Szene\nLichtobjekte\nWelten\nKamera\nRendern\nTutorial: Ein Glas mit Wasser erstellen\nBäume mittels Add-on erstellen\nWorkflows der Charaktererstellung\nCharacter-Modeling\nTutorial: Eine Cartoon-Katze als Charakter erstellen\nWas ist Rigging?\nObjekte mit Armaturen verformen\nCharakter-Rigging\nVom Bild zur Animation\nAnimationen erstellen\nAnimationen verfeinern\nAnimationen rendern"
+  },
+  {
+    "objectID": "Sites/Overview.html",
+    "href": "Sites/Overview.html",
+    "title": "Kursübersicht",
+    "section": "",
+    "text": "Woche\nPraxis\nKapitel\nTheorie\nLiteratur\nFolien\nAbgabe\n\n\n\n\n1\nDie Arbeitsoberfläche von Blender\nEigenschaften von 3D-Objekten\n1, 2, 3, 4, 5, 6, 7, 8, 9\nOrganisatorisches\nBedeutung von 3D-Objekten\nTarr et al. (1998)\nSitzung 1\n\n\n\n2\nGrundmechanismen der Objektbearbeitung I\n10, 11, 12\n\n\n\n\n\n\n3\nGrundmechanismen der Objektbearbeitung II\n13, 14\nReferenzbilder oder Fantasie?\nBrainbridge et al. (2021)\n\n\n\n\n4\nObjektbearbeitung mit Modifiers\n15, 16\n\n\n\n1\n\n\n5\nMaterialien\n17, 18, 19, 20, 21\nVisuelle Wahrnehmung von Materialien\nFlemming (2014)\n\n\n\n\n6\nTexturen\n22, 23, 24, 25, 26, 27, 28\nLizenzen & Lizenzarten\n\n\n2\n\n\n7\nPhysical based Rendering\n29, 30, 31, 32, 33\nCartoon oder Realismus?\n\n\n\n\n\n8\nBeleuchtung und Welten\n34, 35\nFarbwahrnehmung unter Beleuchtung\nBrainard & Hurlbert (2015)\n\n3\n\n\n9\nPartikel/Haare, Kamera & Rendering\n36, 37, 38\nDateiformate & Hardware\nJoon (2010)\n\n\n\n\n10\nWorkflow der Charaktererstellung\n39, 40, 41, 42\nUncanny Valley Effect\nKätsyri et al. (2015)\n\n4\n\n\n11\nCharacter Rigging\n43, 44, 45\nFotorealismus\n\n\n\n\n\n12\nAnimationen\n46, 47\nWahrnehmung von Animationen\nScholl & Tremoulet (2000)\n\n5\n\n\n13\nBlender in VR\n\nVirtual Reality\n\n\n6\n\n\n14\nAbschluss"
+  },
+  {
+    "objectID": "Sites/Overview.html#semesterplan",
+    "href": "Sites/Overview.html#semesterplan",
+    "title": "Kursübersicht",
+    "section": "",
+    "text": "Woche\nPraxis\nKapitel\nTheorie\nLiteratur\nFolien\nAbgabe\n\n\n\n\n1\nDie Arbeitsoberfläche von Blender\nEigenschaften von 3D-Objekten\n1, 2, 3, 4, 5, 6, 7, 8, 9\nOrganisatorisches\nBedeutung von 3D-Objekten\nTarr et al. (1998)\nSitzung 1\n\n\n\n2\nGrundmechanismen der Objektbearbeitung I\n10, 11, 12\n\n\n\n\n\n\n3\nGrundmechanismen der Objektbearbeitung II\n13, 14\nReferenzbilder oder Fantasie?\nBrainbridge et al. (2021)\n\n\n\n\n4\nObjektbearbeitung mit Modifiers\n15, 16\n\n\n\n1\n\n\n5\nMaterialien\n17, 18, 19, 20, 21\nVisuelle Wahrnehmung von Materialien\nFlemming (2014)\n\n\n\n\n6\nTexturen\n22, 23, 24, 25, 26, 27, 28\nLizenzen & Lizenzarten\n\n\n2\n\n\n7\nPhysical based Rendering\n29, 30, 31, 32, 33\nCartoon oder Realismus?\n\n\n\n\n\n8\nBeleuchtung und Welten\n34, 35\nFarbwahrnehmung unter Beleuchtung\nBrainard & Hurlbert (2015)\n\n3\n\n\n9\nPartikel/Haare, Kamera & Rendering\n36, 37, 38\nDateiformate & Hardware\nJoon (2010)\n\n\n\n\n10\nWorkflow der Charaktererstellung\n39, 40, 41, 42\nUncanny Valley Effect\nKätsyri et al. (2015)\n\n4\n\n\n11\nCharacter Rigging\n43, 44, 45\nFotorealismus\n\n\n\n\n\n12\nAnimationen\n46, 47\nWahrnehmung von Animationen\nScholl & Tremoulet (2000)\n\n5\n\n\n13\nBlender in VR\n\nVirtual Reality\n\n\n6\n\n\n14\nAbschluss"
+  },
+  {
+    "objectID": "Sites/Overview.html#skript-kapitel",
+    "href": "Sites/Overview.html#skript-kapitel",
+    "title": "Kursübersicht",
+    "section": "Skript-Kapitel:",
+    "text": "Skript-Kapitel:\n\nVorbereitung von Blender\nDie Arbeitsoberfläche des 3D-Viewports\nNavigation der Ansicht im 3D-Viewport\nErste Schritte\nObjektarten\nPrimitive Meshes\nMethoden der Objekt-Transformation\nObjekte im Viewport-Display transformieren\nObject- und Edit-Mode\nEinstieg in den Edit-Mode\nMethoden der Objektbearbeitung im Edit-Mode\nHilfestellungen für die Objektbearbeitung\nTutorial: Erstellen eines Glases\nObjekterstellung mittels Modifiern\nEigenschaften innerhalb eines Meshes definieren\nMaterialien, Texturen und Shader\nMaterialien\nDer Shader-Editor\nGrundlegende Eigenschaften von Materialien\nTutorial: Strandball\nTexturen\nUVs\nTexturen zu einem Material hinzufügen\nTexturen für Parameter verwenden\nWelche Bilder eignen sich als Texturen?\nArten von Texturen\nTutorial: Einen Hammer texturieren\nDisplacement mit dem Displacement-Modifier erstellen\nErstellen von Landschaften\nTutorial: Erstellen einer Düne\nParameter im Principled-BSDF-Shader\nDer Wechsel von Eevee zu Cycles am Beispiel von Glas\nLichtquellen in einer Szene\nLichtobjekte\nWelten\nKamera\nRendern\nTutorial: Ein Glas mit Wasser erstellen\nBäume mittels Add-on erstellen\nWorkflows der Charaktererstellung\nCharacter-Modeling\nTutorial: Eine Cartoon-Katze als Charakter erstellen\nWas ist Rigging?\nObjekte mit Armaturen verformen\nCharakter-Rigging\nVom Bild zur Animation\nAnimationen erstellen\nAnimationen verfeinern\nAnimationen rendern"
+  },
+  {
+    "objectID": "Sites/Overview.html#literatur",
+    "href": "Sites/Overview.html#literatur",
+    "title": "Kursübersicht",
+    "section": "Literatur",
+    "text": "Literatur\nBrainard, D. H., & Hurlbert, A. C. (2015). Colour vision: understanding# TheDress. Current Biology, 25(13), R551-R554.\nBainbridge, W. A., Pounder, Z., Eardley, A. F., & Baker, C. I. (2021). Quantifying Aphantasia through drawing: Those without visual imagery show deficits in object but not spatial memory. Cortex, 135, 159-172.\nFleming, R. W. (2014). Visual perception of materials and their properties. Vision research, 94, 62-75.\nJoon, J. S. (2010, August). Principles of photorealism to develop photorealistic visualisation for interface design: A review. In 2010 Seventh International Conference on Computer Graphics, Imaging and Visualization (pp. 17-25). IEEE.\nKätsyri, J., Förger, K., Mäkäräinen, M., & Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses: support for perceptual mismatch as one road to the valley of eeriness. Frontiers in psychology, 6, 390.\nScholl, B. J., & Tremoulet, P. D. (2000). Perceptual causality and animacy. Trends in cognitive sciences, 4(8), 299-309.\nTarr, M. J., Williams, P., Hayward, W. G., & Gauthier, I. (1998). Three-dimensional object recognition is viewpoint dependent. Nature neuroscience, 1(4), 275-277."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Über",
+    "section": "",
+    "text": "Folgt…"
+  },
+  {
+    "objectID": "Chapters/Chapter_3.html",
+    "href": "Chapters/Chapter_3.html",
+    "title": "3. Navigation der Ansicht im 3D-Viewport",
+    "section": "",
+    "text": "Navigation in der 3D-Ansicht\nDie Ansicht auf die Objekte im 3D-Viewport kann beliebig verändert werden. Nebst der standardmässigen Ansichtssteuerung über die Maus kann auch das Nummernfeld der Tastatur verwendet werden. In der Regel werden beide Optionen verwendet. Die Navigation mit der Maus bietet tendenziell eine grössere Flexibilität, während die Navigation mit der Tastatur eine grössere Präzision ermöglicht."
+  },
+  {
+    "objectID": "Chapters/Chapter_3.html#navigation-mit-der-maus",
+    "href": "Chapters/Chapter_3.html#navigation-mit-der-maus",
+    "title": "3. Navigation der Ansicht im 3D-Viewport",
+    "section": "Navigation mit der Maus",
+    "text": "Navigation mit der Maus\n\n\nAnsicht mit der Maus verändern\nJe nach Aufbau der verwendeten Computermaus unterscheidet sich die Navigation durch den 3D-Viewport mit der Maus etwas. Bei einer Computermaus mit einem Mausrad erfolgt die Navigation im 3D-Viewport durch Mausbewegungen bei gedrückter Rad-Taste. Bei Trackpads oder Mäusen mit integriertem Trackpad erfolgt die Navigation mittels Wischbewegungen. Bei einer normalen Bewegung wird dabei lediglich die Ansicht entsprechend der Bewegung rotiert. Durch gleichzeitiges Drücken der ShiftShift-Taste wird die Ansicht in die entsprechenden Richtungen bewegt (ohne eine Rotation). Mittels gedrückter CtrlCtrl-Taste kann durch die Mausbewegung hinein- oder hinausgezoomt werden. Durch das Drehen des Mausrads wird die Ansicht ebenfalls hinein- oder hinausgezoomt."
+  },
+  {
+    "objectID": "Chapters/Chapter_3.html#navigation-mit-der-tastatur",
+    "href": "Chapters/Chapter_3.html#navigation-mit-der-tastatur",
+    "title": "3. Navigation der Ansicht im 3D-Viewport",
+    "section": "Navigation mit der Tastatur",
+    "text": "Navigation mit der Tastatur\n\n\nEmulation des Nummernblocks\nNebst der Maus kann auch die Tastatur verwendet werden, um die Ansicht zu verändern. Diese Option ergibt sich allerdings nur, wenn man über einen Nummernblock verfügt. Wenn kein Nummernblock zur Verfügung steht, lassen sich auch die Zahlen-Tasten oberhalb der Buchstaben für die Navigation verwenden. Hierfür muss allerdings in den Benutzereinstellungen («Edit | Preferences») in den Einstellungen zum «Input» beim Keyboard-Reiter die Einstellung «Emulate Numpad» aktiviert werden.\n\n\nRotieren und Drehen der Ansicht\nMittels der Tasten22, 44, 66 und 88 kann die Ansicht entsprechend ihrer relativen Anordnung auf dem Nummernblock rotiert werden: Die Taste 22 rotiert nach unten, die Taste 44 nach links, die Taste 66 nach rechts und die Taste 88 nach oben. Werden dieselben Tasten bei gedrückter CtrlCtrl-Taste gedrückt, wird die Ansicht in die entsprechende Richtung bewegt, ohne eine Rotation durchzuführen. Mittels gedrückter ShiftShift-Taste kann die Ansicht durch die Taste 66 zudem im Uhrzeigersinn und mittels der Taste 44 gegen den Uhrzeigersinn gedreht werden. Um näher hineinzuzoomen wird die Taste ++ und zum Hinauszoomen die Taste -- verwendet.\n\n\nPräzise Ansichten ansteuern\nMittels der Taste 11 kann die Ansicht direkt in die Vorderansicht gedreht werden. Die Ansicht erfolgt anschliessend entlang der Y-Achse. Die Rückansicht ist mit der Tastenkombination CtrlCtrl + 11 einstellbar. Mittels der Taste wird die Seitenansicht – von der rechten Seite aus zum Objekt hingewählt. Das Objekt wird in diesem Falle entlang der X-Achse betrachtet. Mit der Tastenkombination CtrlCtrl + 33 ist die Seitenansicht von der linken Seite aus einstellbar. Um die Szene aus der Vogelperspektive zu betrachten, kann die Taste 77 gedrückt werden. Hierbei erfolgt die Ansicht der Z-Achse entlang. Mittels der Tastenkombination CtrlCtrl + 77 erfolgt die Ansicht von unten.\n\n\nPerspektivische und orthogonale Darstelung\nJede der Ansichten kann auf zwei Arten erfolgen: perspektivisch oder orthogonal. Die perspektivische Ansicht berücksichtigt Tiefeninformationen, sodass weiter entfernte Objekte kleiner dargestellt werden. Die orthogonale Perspektive ignoriert die Tiefeninformationen, wodurch weiter entfernte Objekte gleich gross angezeigt werden wie nähere gleich grosse Objekte auf der entsprechenden Achse. Diese Perspektive hat den Vorteil, dass Objekte in ihrer geometrischen Form in 2D betrachtet werden können. Mittels der Taste 55 kann zwischen diesen beiden Ansichtsmodi gewechselt werden.\n\n\nKamera-Ansicht\nMittels der Taste 11 kann die Ansicht direkt in die Position der Kamera gelegt werden. Dadurch wird die Szene genau so betrachtet, wie sie im finalen Render betrachtet werden wird. Wenn in einer Szene keine Kamera vorhanden ist, steht diese Ansicht nicht zur Verfügung.Wenn mehrere Kameras vorhanden sind, wird jeweils die Kamera, welche die aktive Render Kamera darstellt, anvisiert. Um die Kameraperspektive zu verlassen kann die Ansicht mittels der Maus bewegt werden, oder erneut die Taste 00 gedrückt werden.\n\n\nFokus auf ein Objekt\nIn komplexeren Szenen kann es sein, dass man die Übersicht über die Objekte verliert, oder dass sie sich gegenseitig im Weg stehen bei der Ansicht. Mittels der Taste .. auf dem Nummernblock wird die Ansicht direkt auf ein ausgewähltes Objekt gezoomt. Diese Aktion lässt sich nicht mit der Taste .. ausserhalb des Nummernblocks emulieren. Mittels der Taste // kann zudem die lokale Ansicht aktiviert werden. In dieser Ansicht wird lediglich das ausgewählte Objekt dargestellt, sodass es in komplexen Szenen besser betrachtet werden kann. Allerdings muss anschliessend die Taste erneut gedrückt werden, um die lokale Ansicht wieder zu verlassen. Auch diese Aktion lässt sich nicht mit einer anderen Taste ausserhalb des Nummernblocks emulieren."
+  },
+  {
+    "objectID": "Chapters/Chapter_3.html#navigation-mittels-gizmos",
+    "href": "Chapters/Chapter_3.html#navigation-mittels-gizmos",
+    "title": "3. Navigation der Ansicht im 3D-Viewport",
+    "section": "Navigation mittels Gizmos",
+    "text": "Navigation mittels Gizmos\nAuf der rechten Seite des 3D-Viewports lassen sich zudem Schaltflächen anzeigen, mit denen die Ansicht gesteuert werden kann. Um diese anzeigen zu lassen, müssen die Gizmos eingeschaltet sein. Wird die linke Maustaste auf das Kamera-Icon angewendet, wird die Kamera-Ansicht aktiviert. Das Icon darunter, welches ein Gitternetz darstellt, dient dem Wechsel zwischen perspektivischer und orthogonaler Ansicht. Die beiden oberen Icons dienen dem Zoomen (mittels der Lupe) und dem Bewegen der Ansicht (Hand). Hierfür muss das Icon angeklickt und die Maus anschliessend bei weiterhin gedrückter Maustaste bewegt werden. Zuoberst findet sich zudem ein Koordinatensystem, mit dem die Perspektive per Mausklick oder mittels gedrückter Maustaste verändert werden kann."
+  },
+  {
+    "objectID": "Chapters/Chapter_2.html",
+    "href": "Chapters/Chapter_2.html",
+    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
+    "section": "",
+    "text": "Funktion des 3D-Viewports\nDer 3D-Viewport stellt eine der wichtigsten Arbeitsoberflächen in Blender dar. In ihm werden die 3D-Objekte sowie die Szenen, in denen sie integriert werden, angezeigt. Zudem werden im 3D-Viewport eine Reihe anderer Einstellungen dargestellt, welche in anderen Editoren konfiguriert werden können. Die Bearbeitung der grundlegenden Struktur von 3D-Objekten erfolgt in der Regel direkt im 3D-Viewport. Der Arbeitsbereich des 3D-Viewports lässt sich in verschiedene Areale aufteilen, welche nachfolgend genauer betrachtet werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_2.html#toolbar",
+    "href": "Chapters/Chapter_2.html#toolbar",
+    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
+    "section": "Toolbar",
+    "text": "Toolbar\n\n\nToolbars\nDie Toolbar befindet sich auf der linken Seite der 3D-View. Allerdings sind Toolbars auch in anderen Editoren anzutreffen. Die Toolbars lassen sich jeweils mit der Taste TT ein- und aus-blenden. Da es auch im 3D-Viewport verschiedene Bearbeitungsmöglichkeiten gibt, variieren die Elemente in der Toolbar abhängig vom Bearbeitungsmodus. Diese sind entweder per Mausklick über diese Toolbar oder mithilfe von Tastenkombinationen aufrufbar. In diesem Kurs wird vor allem auf Tastenkombinationen verwiesen, wenn Operationen durchgeführt werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_2.html#sidebar",
+    "href": "Chapters/Chapter_2.html#sidebar",
+    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
+    "section": "Sidebar",
+    "text": "Sidebar\n\n\nSidebars\nDie Sidebar befindet sich auf der rechten Seite des Viewport-Displays, muss allerdings noch mit der Taste NN geöffnet werden. Mit dieser Taste lässt sich die Sidebar ebenfalls wieder verbergen. Die Sidebar ist auch in anderen Editoren anzutreffen und wird dort ebenfalls mit der TasteNN ein- und ausgeblendet. Die Sidebar ist zudem anhand von Registerkarten in zusätzliche Kategorien eingeordnet. Unter dem Register «Item» können etwa Einstellungen zum aktuell ausgewählten Objekt betrachtet und verändert werden, im Register «Tool» können Einstellungen zum aktuell ausgewählten Werkzeug verfeinert werden und unter dem Register «View» können Einstellungen zur Ansicht betrachtet und verfeinert werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_2.html#header",
+    "href": "Chapters/Chapter_2.html#header",
+    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
+    "section": "Header",
+    "text": "Header\nIm Header sind zusätzliche Einstellungen aufzufinden. Diese können nicht nur zwischen den einzelnen Editoren variieren, sondern auch zwischen den einzelnen Bearbeitungsmodi inner-halb der 3D-View.\n\nAktions-Einstellungen\nIn der oberen linken Ecke, direkt neben dem Bedienfeld für die Auswahl des Editors, befinden sich Einstellungsmöglichkeiten, welche basierend auf der aktuell durchgeführten Aktion verfeinert werden können.\n\n\n\n\n\n\nAbbildung 1: Aktions-Einstellungen am Beispiel der Auswahl.\n\n\n\n\n\nErweiterte Hilfsmittel zur Bearbeitung\n\n\nHilfsmittel zur Bearbeitung von Objekten\nIn der Mitte des Headers befinden sich eine Reihe von erweiterten Einstellungen, welche bei der Objektbearbeitung als Hilfsmittel verwendet werden können. Hierzu gehört beispielsweise die proportionale Bearbeitung von Objekten oder das Festlegen von Bezugspunkten für Transformationen. Diese Hilfsmittel werden in einem späteren Kapitel ausführlich behandelt.\n\n\n\n\n\n\nAbbildung 2: Erweiterte Hilfsmittel.\n\n\n\n\n\nBearbeitungsmodus\n\n\nAuswahl des Bearbeitungsmodus\nIn der Zeile unterhalb des Headers befindet sich links das Menü zur Auswahl des Bearbeitungsmodus. Dabei wird definiert, wie das aktuelle Objekt bearbeitet werden soll. So kann bei-spielsweise im Object-Mode das Objekt als Ganzes bearbeitet werden, während im Edit-Mode die Struktur des Objektes bearbeitet werden kann.\n\n\n\n\n\n\nAbbildung 3: Auswahl des Bearbeitungsmodus.\n\n\n\n\n\nAnzeige-Optionen\n\n\nAnzeige-Optionen\nIn der rechten oberen Ecke befinden sich Optionen zur Darstellung der Objekte in der 3D-View. Diese umfassen:\n\nView Object Types\nShow Gizmo\nShow Overlay\nToggle X-Ray\nViewport Shading\n\n\nView Object Types\n\n\nEin- und Ausblen-den von Objektarten\nHier lassen sich verschiedene Arten von Objekten alle gemeinsam innerhalb einer Szene verstecken, indem das Auge zu der entsprechenden Objektart abgewählt wird. Durch das Abwählen des Auges neben dem Objekttyp «Camera» werde etwa alle Kameras aus der Szene unsichtbar gemacht. Die Objekte sind allerdings noch vorhanden und weisen immer noch dieselbe Funktion auf – sie werden lediglich nicht mehr im 3D-Viewport angezeigt. Neben dem Auge lässt sich zudem anhand der Schaltfläche mit einem abgebildeten Cursor einstellen, dass die entsprechenden Objektarten nicht mehr auswählbar sind.\n\n\n\n\n\n\n\nAbbildung 4: View Object Types.\n\n\n\n\n\n\nShow Gizmo\n\n\nNavigations-Tools ein- und ausblen-den\nInnerhalb dieser Option lassen sich in der oberen rechten Ecke Tools zur Navigation mittels der Kamera ein- und ausblenden. Zudem kann hier die Darstellung eines Gizmos bei der aktuellen Auswahl aktiviert werden. Dieses Gizmo kann verwendet werden, um Objekte mittels der Maus zu rotieren, zu skalieren oder zu bewegen.\n\n\n\n\n\n\n\nAbbildung 5: Show Gizmo.\n\n\n\n\n\n\nShow Overlays\n\n\nOrientierungsobjekte im Viewport ein- und ausblen-den\nDurch die Deaktivierung der Viewport-Overlays wird im 3D-Viewport die Ansicht bestimmter Hilfsmittel (beispielsweise die Achsen oder die Markierung der aktuellen Auswahl) ausgeschal-tet. Im Dropdown-Menü lässt sich zudem die Darstellung von einzelnen Hilfsmitteln individuell an- und abwählen.\n\n\n\n\n\n\n\nAbbildung 6: Show Overlays.\n\n\n\n\n\n\nToggle X-Ray\n\n\nRöntgenblick ein- und ausschalten\nWenn die Schaltfläche «Toggle X-Ray» ausgewählt ist, erweitert sich die Ansicht von Objekten, sodass durch sie hindurchgesehen werden kann. Dies ermöglicht es etwa, dass auch ein Objekt, welches hinter einem anderen Objekt verborgen liegt, betrachtet werden kann. Wenn diese Option aktiviert ist, können zudem die verborgenen Objekte mittels eines Mausklicks angewählt werden. Die Schaltfläche kann auch mit den Tasten AltAlt + ZZ ein- und ausgeschaltet werden.\n\n\n\n\n\n\n\nAbbildung 7: Toggle X-Ray.\n\n\n\n\n\n\nViewport Shading\n\n\nArt der Objektdar-stellung im Viewport\nIn der rechten oberen Ecke befinden sich vier Schaltflächen, um einzustellen, welche Elemente bei der Darstellung der Objekte berücksichtigt werden sollen. Je nach Auswahl werden dadurch die Objekte unterschiedlich dargestellt:\n\nWireframe: Die Objekte werden in ihrer Struktur als Gitternetz angezeigt, sodass deren Aufbaugitter klar ersichtlich wird. Hierbei werden die Flächen der Objekte nicht dargestellt.\nSolid: Die Objekte werden als Ganzes dargestellt, sodass auch die Flächen sichtbar sind. Allerdings werden die verwendeten Materialien und Texturen nicht berücksichtigt.\nMaterial Preview: Die Objekte werden als Ganzes dargestellt, inklusive deren Materialien und Texturen. Die Umgebung wird anhand von vorgefertigten Szenen und Umgebungen beleuchtet, sodass eine schnelle Vorschau möglich ist.\nRendered: Die Objekte werden als Ganzes dargestellt, inklusive deren Materialien und Texturen. Die Umgebung und die Beleuchtung entsprechen den Einstellungen der aktuellen Szene, sodass eine Vorschau für die gerenderte Szene möglich ist.\n\nAlternativ kann die Taste ZZ gedrückt werden. Dadurch erscheint beim Mauszeiger ein Menü mit allen vier Optionen zum Viewport Shading zur Auswahl.\n\n\n\n\n\n\n\nAbbildung 8: Schaltflächen für die Shading-Optionen im Viewport."
+  },
+  {
+    "objectID": "Chapters/Chapter_2.html#letzte-aktion-verfeinern",
+    "href": "Chapters/Chapter_2.html#letzte-aktion-verfeinern",
+    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
+    "section": "Letzte Aktion verfeinern",
+    "text": "Letzte Aktion verfeinern\n\n\nTemporäres Menü zur Verfeinerung der letzten Aktion\nWenn eine Aktion in Blender durchgeführt wird, erscheint in der linken unteren Ecke des 3D-Viewports temporär ein Menü. Dieses Menü kann aufgeklappt werden und bietet abhängig von der durchgeführten Aktion eine Reihe Verfeinerungen. Zu beachten ist jedoch, dass dieses Menü sofort wieder verschwindet, sobald ein Mausklick ausserhalb des Menüs erfolgt. Um das Menü wieder erscheinen zu lassen, muss die Aktion rückgängig gemacht und erneut durchgeführt werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_2.html#dargestellte-viewport-overlays",
+    "href": "Chapters/Chapter_2.html#dargestellte-viewport-overlays",
+    "title": "2. Die Arbeitsoberfläche des 3D-Viewports",
+    "section": "Dargestellte Viewport-Overlays",
+    "text": "Dargestellte Viewport-Overlays\n\n\nAchsen\nSofern die Ansicht der Viewport-Overlays aktiviert ist, werden im 3D-Viewport einige nützliche Dinge dargestellt. Zum einen werden die verschiedenen drei Achsen in unterschiedlichen Farben vom Nullpunkt der Szene aus dargestellt:\n\nX-Achse: rot\nY-Achse: grün\nZ-Achse: blau\n\nZudem wird leicht schattiert ein Gitternetz dargestellt, bei dem jedes Quadrat eine Einheit von einem Meter darstellt. Wird aus der Szene hinausgezoomt, werden diese Quadrate zunehmend kleiner, dafür werden anschliessend quadratische Felder mit der Einheit von 10 Metern sichtbar.\n\n\n\n\n\n\nAbbildung 9: 3D-Cursor.\n\n\n\n\n\n3D-Cursor\nInnerhalb des 3D-Viewports ist ausserdem der 3D-Cursor sichtbar. Dieser ist an einer bestimmten Position in der Szene platziert und dort mittels eines rot-weissen Kreises dargestellt. Neu erstellte Objekte werden an seiner Position in die Szene eingefügt und der 3D-Cursor kann als Bezugspunkt für Transformationen verwendet werden."
   },
   {
     "objectID": "Chapters/Chapter_5.html",

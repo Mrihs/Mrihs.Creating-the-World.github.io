@@ -1,0 +1,112 @@
+---
+title: "8. Objekte im Viewport-Display transformieren"
+editor: visual
+---
+
+::: column-margin
+Befehle für Transformationen
+:::
+
+Statt mit der Sidebar können Objekte auch direkt im 3D-Viewport-Display transformiert werden. Sobald ein Objekt – oder auch mehrere Objekte – ausgewählt sind, lassen sich die Objekte direkt im Viewport mittels der folgenden Befehle transformieren:
+
+-   Position: {{< kbd G >}} («Grab»)
+
+-   Rotation: {{< kbd R >}}
+
+-   Skalierung: {{< kbd s >}}
+
+## Position
+
+::: column-margin
+Objekte bewegen mittels {{< kbd G >}}
+:::
+
+Durch das Drücken der Taste {{< kbd G >}} lässt sich ein ausgewähltes Objekt mit der Maus im Raum verschieben. Blender aktualisiert parallel die Position des Objektes in der Sidebar, sodass diese klar nachvollziehbar ist.
+
+::: column-margin
+Bewegung entlang einer Achse
+:::
+
+Es ist auch im Viewport möglich, ein Objekt nur entlang einer Achse zu bewegen. Hierfür wird nach dem Drücken der Taste {{< kbd G >}} die Taste für die entsprechende Achse festgelegt ({{< kbd X >}},{{< kbd Y >}} oder {{< kbd Z >}}). Der farbige Strich im Viewport-Display, welcher die entsprechende Achse markiert, leuchtet dadurch heller auf. Wenn die Maus nun bewegt wird, bewegt sich das Objekt lediglich entlang dieser Achse. Um die Bewegung zu beenden oder zu bestätigen, wird entweder die linke Maustaste oder die {{< kbd Enter >}}-Taste gedrückt. Um die Transformation abzubrechen, kann die rechte Maustaste oder die {{< kbd esc >}}-Taste gedrückt werden. Das Objekt wird dadurch wieder in seine Ursprungsposition zurückgestellt.
+
+::: column-margin
+Bewegung entlang einer Achse sperren
+:::
+
+Es ist auch möglich, zwei Achsen gleichzeitig für eine Bewegung auszuwählen. Dabei wird die Bewegung entlang einer Achse gesperrt, sodass nur die beiden anderen Achsen für eine Bewegung freigegeben werden. Hierfür wird die Taste {{< kbd Shift >}}in Kombination mit der Taste für die zu sperrende Achse ({{< kbd X >}},{{< kbd y >}} oder {{< kbd Z >}}) gedrückt. Wenn ein Objekt also lediglich entlang der X- und Y-Achse bewegt werden soll, aber die Z-Achse nicht verändert werden soll, kann nach dem Drücken der Taste {{< kbd G >}} bei gedrückter {{< kbd Shift >}}-Taste die Z-Achse mittels der Taste {{< kbd Z >}} gesperrt werden.
+
+::: column-margin
+Bewegung mittels Zahlen präzise angeben
+:::
+
+Statt mit der Maus kann während des Bewegungsvorgangs eine Zahl eingegeben werden, um eine Bewegung zu quantifizieren. Soll ein Objekt etwa um 2 Meter entlang der X-Achse verschoben werden, so wird, nachdem die Bewegung mittels der Taste {{< kbd G >}} gestartet und mittels der Taste {{< kbd X >}} auf die X-Achse festgelegt wird, die Taste {{< kbd 2 >}} gedrückt, um die Bewegung auf 2 Meter festzulegen. Durch das gleichzeitige Drücken der Taste {{< kbd - >}} können auch negative Werte eingegeben werden, sodass die Bewegung in die entgegengesetzte Richtung geschieht. In der linken oberen Ecke des Viewport Displays wird jeweils die entsprechende Zahl angezeigt. Es ist zudem möglich, Zahlenangaben mit Dezimalstellen für Bewegungen einzugeben.
+
+## Rotation
+
+::: column-margin
+Objekte rotieren mittels {{< kbd R >}}
+:::
+
+Um ein ausgewähltes Objekt mit der Maus zu rotieren, wird die Taste {{< kbd R >}} gedrückt. Wie auch bei der Bewegung lässt sich eine Transformation entlang einer Achse ansteuern, indem die Taste für die entsprechende Achse gedrückt wird ({{< kbd X >}},{{< kbd Y >}} oder {{< kbd Z >}}). Ebenso lässt sich eine Achse für die Rotation sperren, indem die entsprechende Taste für diese Achse bei gedrückter {{< kbd Shift >}}-Taste gedrückt wird. Wenn nun also ein Objekt entlang der Z-Achse rotiert werden soll, wird zunächst das entsprechende Objekt ausgewählt und anschliessend die Taste {{< kbd R >}}für den Befehl der Rotation gedrückt. Indem die Taste {{< kbd R >}} anschliessend gedrückt wird, lässt sich das Objekt nun lediglich entlang der Z-Achse rotieren. Während der Rotation verändert sich die Form der Maus und sie ist mit einem Strich zu dem Punkt, um den die Rotation erfolgt, verbunden. In der Regel handelt es sich dabei um den Ursprung des Objektes. Allerdings kann die Rotation im Viewport-Display auch hinsichtlich anderer Punkte im Raum erfolgen – dies wird in einem späteren Kapitel ausführlicher beschrieben.
+
+::: column-margin
+Präzise Rotation mittels Zahlen
+:::
+
+Auch während der Rotation kann mit der Eingabe von Zahlen gearbeitet werden. Um ein Objekt beispielsweise um 45 Grad entlang der Z-Achse zu drehen, wird nach dem Start der Rotation mittels der Taste {{< kbd R >}} und der Festlegung der Z-Achse mit der Taste {{< kbd Z >}} die Zahl 45 mittels der Tasten {{< kbd 4 >}}{{< kbd 5 >}}eingegeben. Auch hier lässt sich die Richtung umkehren, indem die Taste {{< kbd - >}} gedrückt wird.
+
+## Scale
+
+::: column-margin
+Objekte Skalieren mittels {{< kbd S >}}
+:::
+
+Um ein ausgewähltes Objekt mit der Maus zu skalieren, wird die Taste {{< kbd S >}} gedrückt. Wie auch bei der Bewegung und der Rotation lässt sich eine Transformation entlang einer einzelnen Achse ansteuern, indem die Taste für die entsprechende Achse gedrückt wird ({{< kbd X >}},{{< kbd Y >}} oder {{< kbd Z >}}). Ebenso lässt sich eine Achse für die Rotation sperren, indem die entsprechende Taste für diese Achse bei gedrückter {{< kbd Shift >}}-Taste gedrückt wird.
+
+::: column-margin
+Skalierung entlang einer Achse
+:::
+
+Um ein Objekt nur entlang der X-Achse zu vergrössern oder zu verkleinern, wird nach der Auswahl des Objektes die Taste {{< kbd S >}} gedrückt, um mit der Skalierung zu starten. Anschliessend kann durch das Drücken der Taste {{< kbd X >}} festgelegt werden, dass die Transformation lediglich entlang der X-Achse vollzogen werden soll. Während der Skalierung verändert sich der Mauszeiger ebenfalls. Zudem ist er mittels eines Striches mit dem Punkt verbunden, zudem hin sich die Skalierung orientiert. Wird die Maus näher zu diesem Punkt bewegt, verkleinert sich das Objekt. Wenn die Maus von diesem Punkt weiter entfernt wird, vergrössert sich das Objekt.
+
+::: column-margin
+Präzise Skalierung mittels Zahlen
+:::
+
+Die Skalierung kann mittels Zahleneingaben ebenfalls sehr genau vorgenommen werden. Um ein Objekt etwa in seiner Grösse zu verdoppeln, kann nach dem Start der Transformation mittels der Taste {{< kbd S >}} die Zahl {{< kbd 2 >}}eingegeben werden. Dadurch wird das Objekt um den Faktor 2 vergrössert. Auch hier lässt sich ein negativer Wert mittels der Taste {{< kbd - >}} festlegen. Dies führt dazu, dass das Objekt durch seinen Bezugspunkt hindurch in die andere Richtung skaliert und gespiegelt wird. Während dies bei symmetrischen Objekten zu keinem bemerkbaren Unterschied führt, wird der Effekt bei asymmetrischen Objekten deutlich.
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Übung 4 : Objekttransformationen
+::::
+
+::: tippbox-body
+Übung 4.1\
+Skalieren Sie einen Würfel entlang der X-Achse auf seine halbe Grösse.
+
+Übung 4.2\
+Bilden Sie das rechts abgebildete Objekt nach.
+:::
+::::::
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Merke...
+::::
+
+::: tippbox-body
+Mittels der Tasten {{< kbd G >}},{{< kbd R >}} und {{< kbd S >}} lassen sich Objekte auch im Viewport-Display bewegen, rotieren und skalieren.
+
+Mittels der Eingabe von Zahlen können Bewegungen, Rotationen und Skalierungen genau vorgenommen werden.
+
+Mittels der Tasten {{< kbd X >}},{{< kbd Y >}} und {{< kbd Z >}} können Transformationen auf der eine Achse festgelegt werden.
+
+Mittels der Tasten {{< kbd X >}},{{< kbd Y >}} und {{< kbd Z >}} bei gedrückter {{< kbd Shift >}}-Taste können Transformationen auf der entsprechenden Achse unterbunden werden.
+:::
+::::::

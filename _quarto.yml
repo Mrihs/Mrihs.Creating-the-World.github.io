@@ -34,6 +34,8 @@ website:
             text: Kapitel 5
           - href: Chapters/Chapter_6.qmd
             text: Kapitel 6
+          - href: Chapters/Chapter_7.qmd
+            text: Kapitel 7
       - href: about.qmd
         icon: info-circle
         text: Über

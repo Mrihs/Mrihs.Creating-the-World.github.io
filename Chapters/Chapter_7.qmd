@@ -1,0 +1,141 @@
+---
+title: "7. Methoden der Objekt-Transformation"
+editor: visual
+---
+
+## Die drei grundlegenden Objekt-Transformationen
+
+::: column-margin
+Grundlegende Transformationen
+:::
+
+Jegliche 3D-Meshes beinhalten drei grundlegende Eigenschaften. Diese Grundeigenschaften können jederzeit variiert werden. Es handelt sich dabei um:
+
+-   Position
+
+-   Rotation
+
+-   Skalierung
+
+Alle drei Optionen sind in der Sidebar (ein /ausblenden mittels {{< kbd N >}}) unter dem Menü «*Item*» unter dem Reiter «*Transform*» sichtbar. Die Eigenschaften beziehen sich jeweils auf das ausgewählte Objekt. Wenn kein Objekt ausgewählt ist, beziehen sie sich auf das zuletzt ausgewählte Objekt. Mittels der Einstellungen in der Sidebar lassen sich diese drei Eigenschaften beliebig durch die Eingabe von Zahlen variieren.
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+
+::::
+
+::: tippbox-body
+Statt Zahlen können auch mathematische Berechnungen in die Felder eingegeben werden. Dadurch lassen sich komplexere 
+Positionen ermitteln. Wenn etwa ein Objekt genau mittig zwischen einem Objekt mit einer Position von X = 4 und einem Objekt mit einer Position von X = 17 platziert werden soll, kann der X-Wert des zu platzierenden Objektes auf X = 4 + ((17 – 4) / 2) festgelegt werden. Das Objekt wird anschliessend mittig der beiden Objekte (X = 10.5) platziert. 
+:::
+::::::
+
+## Location
+
+::: column-margin
+Position
+:::
+
+Die Location beschreibt die Position eines 
+3D-Meshes in der dreidimensionalen Welt. Die Position wird mittels drei Werten angegeben: einem Wert für die X-Achse, einem für die Y-Achse und einem für die Z-Achse. Jeder dieser drei Werte lässt sich individuell verändern. Durch das Verschieben des X
+Wertes verschiebt sich das Objekt beispielsweise der X-Achse entlang.
+
+![Der orangene Punkt markiert den Ursprung (Origin) eines Objektes](Images/Chapter_7/1. Origin.png){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Position befindet sich am Ursprung des Objekts
+:::
+
+Die genaue Position des Objektes wird anhand eines kleinen orangen Punktes im Viewport-Display angezeigt. Bei diesem Punkt handelt es sich um den Ursprung des Objektes (Origin). Die Position eines Objektes bezieht sich immer auf diesen orangen Punkt, selbst wenn das Mesh selbst diese Position gar nicht abdeckt.
+
+## Rotation
+
+::: column-margin
+Rotation
+:::
+
+Die Rotation eines Objektes beschreibt, wie sehr das Objekt entlang der drei Achsen rotiert wird. Analog zur Position ist die Rotation ebenfalls in die drei Achsen X, Y und Z aufgeteilt. Beispielsweise führt eine Veränderung der Rotation beim Wert X dazu, dass das Objekt entsprechend entlang der 
+X-Achse rotiert wird. Durch die Verwendung aller drei Achsen können so komplexe Rotationen erfolgen. Indem alle Werte erneut auf 0 gesetzt werden, befindet sich das Objekt wieder in seiner Grundposition.
+
+::: column-margin
+Drehpunkt der Rotation
+:::
+
+Der Ursprung des Objektes stellt den Drehpunkt für die Rotation mittels der Sidebar dar. Das heisst, die Objekte werden jeweils um den Ursprungspunkt herumrotiert. Dies wird beispielsweise deutlich, wenn sich der Ursprungspunkt ausserhalb des Objektes befindet.
+
+## Scale
+
+::: column-margin
+Skalierung
+:::
+
+Die Skalierung eines Objekts beschreibt, wie stark ein Objekt vergrössert oder verkleinert wird. Diese Objekteigenschaft lässt sich ebenfalls individuell für alle drei Achsen einstellen. So kann ein Objekt 
+entlang der X-Achse vergrössert werden, indem der dazugehörige X-Wert auf einen Wert über 1 festgelegt wird. Werte im Bereich von grösser als 0 und kleiner als 1 führen zu einer Verkleinerung des Objektes entlang der entsprechenden Achse. Ein Wert von 0 führt dazu, dass das Objekt entlang der entsprechenden Achse keine Grösse mehr hat und aus der entsprechenden Perspektive dem
+entsprechend nicht mehr sichtbar ist. 
+
+::: column-margin
+Bezugspunkt der Skalierung
+:::
+
+Analog zu der Position und der Rotation bezieht sich die Skalierung ebenfalls auf den Ursprung des Objektes. Wenn sich das Mesh ausserhalb des Ursprungs befindet, führt dies dazu, dass auch der Leerraum zwischen dem Mesh und dem Ursprung entsprechend skaliert wird. Befindet sich die Grenze eines Objektes etwa um den Wert 1 vom Ursprung entfernt, führt eine Skalierung um den Wert 2 dazu, dass das Mesh selbst verdoppelt wird – allerdings wird die Distanz zum Ursprung des Objektes ebenfalls verdoppelt.
+
+## Dimension
+
+::: column-margin
+Dimensionen von Objekten
+:::
+
+Unterhalb des Eingabefeldes für die Skalierung befindet sich ein weiteres Feld, welches die Dimensionen eines 3D-Meshes basierend auf den drei Achsen angibt. Die Dimensionen des Objektes sind 
+direkt mit der Skalierung des Objektes verbunden. Eine Veränderung der X-Achsen-Dimension führt dazu, dass die Skalierung anhand der X-Achse so angepasst wird, dass sie der eingegebenen Grösse des Objektes entsprechen. Dadurch kann etwa direkt bestimmt werden, dass ein Objekt 
+entlang der verschiedenen Achsen eine bestimmte Grösse innehat, ohne dass die Skalierung der entsprechenden Grösse angepasst wird. 
+
+## Transformationen sperren
+
+::: column-margin
+Transformationen sperren
+:::
+
+Neben den Werten für die Position, Rotation und Skalierung befinden sich drei aufgeschlossene Schlösser. Durch das Anklicken dieser Schlösser lässt sich die dazugehörige Eigenschaft auf einer Achse sperren, sodass sie nicht mehr verändert werden kann. Das entsprechende Symbol verändert sich dadurch zu einem geschlossenen Schloss. 
+
+::: column-margin
+Sperrung gilt nur für Viewport-Display
+:::
+
+Die Werte links neben dem Schloss lassen sich allerdings immer noch verändern, was kontraintuitiv wirken mag. Dies liegt daran, dass sich diese Sperrung auf Veränderungen mittels des Viewport
+Displays bezieht, welche nun als Nächstes betrachtet werden.
+
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Übung 3. Verwendung der Sidebar
+::::
+
+::: tippbox-body
+Übung 3.1  
+Versuchen Sie den Standardwürfel so zu skalieren, dass er entsprechend der Abbildung einen in die Höhe ragenden Quader darstellt. 
+
+Übung 3.2  
+Versuchen Sie den Standardwürfel so zu verändern, dass er aus der orthogonalen (Taste ) Vorder/Rück-Ansicht (Taste ) nicht mehr sichtbar ist. 
+:::
+::::::
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Merke...
+::::
+
+::: tippbox-body
+Die drei Transformationen Location, Rotation und Scale aus der Sidebar beziehen sich alle drei jeweils auf den Ursprung des Objektes. 
+
+Dimension des Objektes hängt mit dessen Skalierung zusammen.
+:::
+::::::

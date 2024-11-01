@@ -446,5 +446,54 @@
     "title": "5. Objektarten",
     "section": "Zusammenfassung der Objektarten",
     "text": "Zusammenfassung der Objektarten\n\n\nVerschiedene Objektarten\nDie verschiedenen Objektarten dienen also entweder der Darstellung von Objekten, der Darstellung von externen Dateien, der Darstellung der Szene oder haben vor allem unterstützende Funktionen:\n\nRenderbare Objekte\n\n\n\n\n\n\n\n\n\n\n\nGitter-basiert\nKurven-basiert\nMetas\nLinien\nSzenen-Tools\nExterne Daten\nHilfs-Werkzeuge\n\n\n\n\nMesh\nCurve\nMetaball\nGrease Pencil\nCamera\nVolume\nArmature\n\n\n\nSurface\n\n\nLight\nImage\nLattice\n\n\n\nText\n\n\nSpeaker\n\nEmpty\n\n\n\n\n\n\n\n\nForce Field\n\n\n\n\n\n\n\n\nSpeaker\n\n\n\n\n\n\n\n\nLight Probe\n\n\n\n\n\n\n\n\nCollection Instance"
+  },
+  {
+    "objectID": "Chapters/Chapter_7.html",
+    "href": "Chapters/Chapter_7.html",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "",
+    "text": "Grundlegende Transformationen\nJegliche 3D-Meshes beinhalten drei grundlegende Eigenschaften. Diese Grundeigenschaften können jederzeit variiert werden. Es handelt sich dabei um:\n\nPosition\nRotation\nSkalierung\n\nAlle drei Optionen sind in der Sidebar (ein /ausblenden mittels NN) unter dem Menü «Item» unter dem Reiter «Transform» sichtbar. Die Eigenschaften beziehen sich jeweils auf das ausgewählte Objekt. Wenn kein Objekt ausgewählt ist, beziehen sie sich auf das zuletzt ausgewählte Objekt. Mittels der Einstellungen in der Sidebar lassen sich diese drei Eigenschaften beliebig durch die Eingabe von Zahlen variieren.\n\n\n\n\n\n\n\nStatt Zahlen können auch mathematische Berechnungen in die Felder eingegeben werden. Dadurch lassen sich komplexere Positionen ermitteln. Wenn etwa ein Objekt genau mittig zwischen einem Objekt mit einer Position von X = 4 und einem Objekt mit einer Position von X = 17 platziert werden soll, kann der X-Wert des zu platzierenden Objektes auf X = 4 + ((17 – 4) / 2) festgelegt werden. Das Objekt wird anschliessend mittig der beiden Objekte (X = 10.5) platziert."
+  },
+  {
+    "objectID": "Chapters/Chapter_7.html#die-drei-grundlegenden-objekt-transformationen",
+    "href": "Chapters/Chapter_7.html#die-drei-grundlegenden-objekt-transformationen",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "",
+    "text": "Grundlegende Transformationen\nJegliche 3D-Meshes beinhalten drei grundlegende Eigenschaften. Diese Grundeigenschaften können jederzeit variiert werden. Es handelt sich dabei um:\n\nPosition\nRotation\nSkalierung\n\nAlle drei Optionen sind in der Sidebar (ein /ausblenden mittels NN) unter dem Menü «Item» unter dem Reiter «Transform» sichtbar. Die Eigenschaften beziehen sich jeweils auf das ausgewählte Objekt. Wenn kein Objekt ausgewählt ist, beziehen sie sich auf das zuletzt ausgewählte Objekt. Mittels der Einstellungen in der Sidebar lassen sich diese drei Eigenschaften beliebig durch die Eingabe von Zahlen variieren.\n\n\n\n\n\n\n\nStatt Zahlen können auch mathematische Berechnungen in die Felder eingegeben werden. Dadurch lassen sich komplexere Positionen ermitteln. Wenn etwa ein Objekt genau mittig zwischen einem Objekt mit einer Position von X = 4 und einem Objekt mit einer Position von X = 17 platziert werden soll, kann der X-Wert des zu platzierenden Objektes auf X = 4 + ((17 – 4) / 2) festgelegt werden. Das Objekt wird anschliessend mittig der beiden Objekte (X = 10.5) platziert."
+  },
+  {
+    "objectID": "Chapters/Chapter_7.html#location",
+    "href": "Chapters/Chapter_7.html#location",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "Location",
+    "text": "Location\n\n\nPosition\nDie Location beschreibt die Position eines 3D-Meshes in der dreidimensionalen Welt. Die Position wird mittels drei Werten angegeben: einem Wert für die X-Achse, einem für die Y-Achse und einem für die Z-Achse. Jeder dieser drei Werte lässt sich individuell verändern. Durch das Verschieben des X Wertes verschiebt sich das Objekt beispielsweise der X-Achse entlang.\n\n\n\n\n\n\nAbbildung 1: Der orangene Punkt markiert den Ursprung (Origin) eines Objektes\n\n\n\n\n\nPosition befindet sich am Ursprung des Objekts\nDie genaue Position des Objektes wird anhand eines kleinen orangen Punktes im Viewport-Display angezeigt. Bei diesem Punkt handelt es sich um den Ursprung des Objektes (Origin). Die Position eines Objektes bezieht sich immer auf diesen orangen Punkt, selbst wenn das Mesh selbst diese Position gar nicht abdeckt."
+  },
+  {
+    "objectID": "Chapters/Chapter_7.html#rotation",
+    "href": "Chapters/Chapter_7.html#rotation",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "Rotation",
+    "text": "Rotation\n\n\nRotation\nDie Rotation eines Objektes beschreibt, wie sehr das Objekt entlang der drei Achsen rotiert wird. Analog zur Position ist die Rotation ebenfalls in die drei Achsen X, Y und Z aufgeteilt. Beispielsweise führt eine Veränderung der Rotation beim Wert X dazu, dass das Objekt entsprechend entlang der X-Achse rotiert wird. Durch die Verwendung aller drei Achsen können so komplexe Rotationen erfolgen. Indem alle Werte erneut auf 0 gesetzt werden, befindet sich das Objekt wieder in seiner Grundposition.\n\n\nDrehpunkt der Rotation\nDer Ursprung des Objektes stellt den Drehpunkt für die Rotation mittels der Sidebar dar. Das heisst, die Objekte werden jeweils um den Ursprungspunkt herumrotiert. Dies wird beispielsweise deutlich, wenn sich der Ursprungspunkt ausserhalb des Objektes befindet."
+  },
+  {
+    "objectID": "Chapters/Chapter_7.html#scale",
+    "href": "Chapters/Chapter_7.html#scale",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "Scale",
+    "text": "Scale\n\n\nSkalierung\nDie Skalierung eines Objekts beschreibt, wie stark ein Objekt vergrössert oder verkleinert wird. Diese Objekteigenschaft lässt sich ebenfalls individuell für alle drei Achsen einstellen. So kann ein Objekt entlang der X-Achse vergrössert werden, indem der dazugehörige X-Wert auf einen Wert über 1 festgelegt wird. Werte im Bereich von grösser als 0 und kleiner als 1 führen zu einer Verkleinerung des Objektes entlang der entsprechenden Achse. Ein Wert von 0 führt dazu, dass das Objekt entlang der entsprechenden Achse keine Grösse mehr hat und aus der entsprechenden Perspektive dem entsprechend nicht mehr sichtbar ist.\n\nBezugspunkt der Skalierung\n\nAnalog zu der Position und der Rotation bezieht sich die Skalierung ebenfalls auf den Ursprung des Objektes. Wenn sich das Mesh ausserhalb des Ursprungs befindet, führt dies dazu, dass auch der Leerraum zwischen dem Mesh und dem Ursprung entsprechend skaliert wird. Befindet sich die Grenze eines Objektes etwa um den Wert 1 vom Ursprung entfernt, führt eine Skalierung um den Wert 2 dazu, dass das Mesh selbst verdoppelt wird – allerdings wird die Distanz zum Ursprung des Objektes ebenfalls verdoppelt."
+  },
+  {
+    "objectID": "Chapters/Chapter_7.html#dimension",
+    "href": "Chapters/Chapter_7.html#dimension",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "Dimension",
+    "text": "Dimension\n\n\nDimensionen von Objekten\nUnterhalb des Eingabefeldes für die Skalierung befindet sich ein weiteres Feld, welches die Dimensionen eines 3D-Meshes basierend auf den drei Achsen angibt. Die Dimensionen des Objektes sind direkt mit der Skalierung des Objektes verbunden. Eine Veränderung der X-Achsen-Dimension führt dazu, dass die Skalierung anhand der X-Achse so angepasst wird, dass sie der eingegebenen Grösse des Objektes entsprechen. Dadurch kann etwa direkt bestimmt werden, dass ein Objekt entlang der verschiedenen Achsen eine bestimmte Grösse innehat, ohne dass die Skalierung der entsprechenden Grösse angepasst wird."
+  },
+  {
+    "objectID": "Chapters/Chapter_7.html#transformationen-sperren",
+    "href": "Chapters/Chapter_7.html#transformationen-sperren",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "Transformationen sperren",
+    "text": "Transformationen sperren\n\n\nTransformationen sperren\nNeben den Werten für die Position, Rotation und Skalierung befinden sich drei aufgeschlossene Schlösser. Durch das Anklicken dieser Schlösser lässt sich die dazugehörige Eigenschaft auf einer Achse sperren, sodass sie nicht mehr verändert werden kann. Das entsprechende Symbol verändert sich dadurch zu einem geschlossenen Schloss.\n\n\nSperrung gilt nur für Viewport-Display\nDie Werte links neben dem Schloss lassen sich allerdings immer noch verändern, was kontraintuitiv wirken mag. Dies liegt daran, dass sich diese Sperrung auf Veränderungen mittels des Viewport Displays bezieht, welche nun als Nächstes betrachtet werden.\n\n\n\n\n\nÜbung 3. Verwendung der Sidebar\n\n\nÜbung 3.1\nVersuchen Sie den Standardwürfel so zu skalieren, dass er entsprechend der Abbildung einen in die Höhe ragenden Quader darstellt.\nÜbung 3.2\nVersuchen Sie den Standardwürfel so zu verändern, dass er aus der orthogonalen (Taste ) Vorder/Rück-Ansicht (Taste ) nicht mehr sichtbar ist.\n\n\n\n\n\n\n\nMerke…\n\n\nDie drei Transformationen Location, Rotation und Scale aus der Sidebar beziehen sich alle drei jeweils auf den Ursprung des Objektes.\nDimension des Objektes hängt mit dessen Skalierung zusammen."
   }
 ]

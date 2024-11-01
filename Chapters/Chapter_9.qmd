@@ -1,0 +1,270 @@
+---
+title: "9. Object- und Edit-Mode"
+editor: visual
+---
+
+## Die verschiedenen Bearbeitungs-Modi
+
+::: column-margin
+Object-Mode
+:::
+
+Die bisherigen Transformationen, die an Objekten gemacht wurden, haben sich immer auf den Object-Mode bezogen. Dabei wurden grundlegende Eigenschaften von Objekten (Position, Rotation und Skalierung) verändert. Die Form des Objektes selbst wurde dabei nicht verändert, sondern lediglich seine Darstellungsweise. Durch das Zurücksetzen der Werte in der Sidebar erscheint das Objekt wieder in seiner ursprünglichen Form.
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+::::
+
+::: tippbox-body
+Das Zurücksetzen der Transformationen kann direkt mittels folgenden Shortcuts erfolgen: Zurücksetzen der Position: {{< kbd Alt >}} + {{< kbd G >}}
+
+Zurücksetzen der Rotation: {{< kbd Alt >}} + {{< kbd R >}}
+
+Zurücksetzen der Skalierung: {{< kbd Alt >}} + {{< kbd S >}}
+:::
+::::::
+
+Durch die bisherigen Transformationen wurde das Objekt als Ganzes bearbeitet. Dies zeichnet die Transformationen im Object-Mode aus. Nebst dem Object-Mode gibt es noch eine Reihe anderer Modi. In der oberen linken Ecke des Viewports ist jeweils ersichtlich, welcher Modus gerade verwendet wird. Durch einen Klick auf das Dropdown-Menü erscheint eine Liste der verfügbaren Modi:
+
+::: column-margin
+Die verschiedenen Bearbeitungs-Modi
+:::
+
+-   **Object Mode**: In diesem Modus können die Objekte in einer Szene als Ganzes transformiert und angeordnet werden.
+
+-   **Edit Mode**: In diesem Modus können die einzelnen Bestandteile des Objekts anvisiert und bearbeitet werden.
+
+-   **Sculpt Mode**: In diesem Modus kann das Objekt anhand von Sculpting-Tools bearbeitet werden.
+
+-   **Vertex Paint**: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen.
+
+-   **Weight Paint**: In diesem Modus werden dem Objekt verschiedene Gewichte aufgemalt, welche anschliessend für weitere Funktionen verwendet werden können.
+
+::: column-margin
+Wechsel zwischen Object- und Edit-Mode
+:::
+
+-   **Texture Paint**: In diesem Modus ist es möglich, ein Objekt mit einer Textur zu bemalen. Im Rahmen dieses Kurses wird vorwiegend mit dem Object- und dem Edit-Mode gearbeitet. Der Wechsel zwischen diesen beiden Modi stellt einen wichtigen Wechsel zwischen den Modi dar. Deshalb ist es möglich, mittels einer einzigen Taste zwischen dem Object- und dem Edit-Mode hin- und herzuwechseln – nämlich mittels der Taste {{< kbd Tab >}} . Dabei wird in den Edit-Mode für das aktuell ausgewählte Objekt gewechselt. Für Objekte, welche nicht aus einzelnen Komponenten bestehen (beispielsweise Kameras oder Lichtquellen), ist kein Edit-Mode verfügbar.
+
+## Struktur von 3D-Meshes
+
+::: column-margin
+Der Gitteraufbau von 3D-Meshes
+:::
+
+Beim Wechseln in den Edit-Mode erscheint das Mesh in seiner Struktur, bestehend aus mehreren Polygonen. Dabei handelt es sich um einzelne Oberflächenstrukturen der Meshes. Die Polygone – und somit auch das Mesh – bestehen in ihrer Struktur aus folgenden Elementen:
+
+-   **Vertices**: Einzelne Punkte in einem Mesh
+
+-   **Edges**: Linien zwischen zwei Vertices in einem Mesh
+
+-   **Faces**: Flächen zwischen mehreren Edges/Vertices in einem Mesh
+
+![Vertices, Edges und Faces.](Images/Chapter_9/1.%20Vertices,%20Edges%20and%20Faces.png){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Select-Modus wechseln
+:::
+
+Im Edit-Mode können wahlweise Vertices, Edges oder Faces ausgewählt werden, je nachdem in welchem Select-Modus man sich befindet. Die drei Select-Modi sind in der linken oberen Ecke direkt neben dem Auswahlfeld für den Bearbeitungs-Modus (in dem Fall der Edit-Mode) aufzufinden.
+
+![Schaltfläche für den Vertex-, Edge- und Face-Select-Modus in der linken oberen Ecke des Edit-Modes.](Images/Chapter_9/2.%20Select_Mode_Auswahl.png){#fig-1_2 fig-align="left"}
+
+### Vertices
+
+::: column-margin
+Vertices
+:::
+
+Ein Vertex (Mehrzahl: Vertices) stellt die grundlegendste Einheit in einem Mesh dar. Jeder Vertex beschreibt einen Punkt in einem Mesh. Anders als die Objekte als Ganzes, verfügen Vertices nur über das Merkmal ihrer jeweiligen Position. Die Merkmale Skalierung und Rotation gibt es für Vertices nicht. Ein Vertex hat deshalb auch keine Dimensionen.
+
+::: column-margin
+Auswahl von Vertices
+:::
+
+Werden zwei miteinander verbundene Vertices ausgewählt, so wird automatisch auch das dazwischenliegende Edge ausgewählt. Ebenso wird automatisch das dazugehörige Face mit ausgewählt, wenn alle Vertices dieses Faces ausgewählt werden. Ein einzelner Vertex kann lediglich im Vertex Select-Modus angewählt werden.
+
+### Edges
+
+::: column-margin
+Edges
+:::
+
+Edges beschreiben Linien, welche zwischen zwei Vertices liegen. Da ein Edge genau der Verbindung zwischen zwei Vertices entspricht, ist dessen Mittelpunkt identisch zur Mitte zwischen den beiden Vertices.
+
+::: column-margin
+Auswahl von Edges
+:::
+
+Im Edge-Select-Modus können die Edges als solche ausgewählt werden. Dabei werden automatisch auch die beiden zum Edge dazugehörigen Vertices ausgewählt. Wenn alle Edges eines Faces ausgewählt werden, dann wird automatisch auch das dazugehörige Face ausgewählt.
+
+### Faces
+
+::: column-margin
+Faces
+:::
+
+Faces stellen die Flächen zwischen verbundenen Edges/Vertices dar. Die Position des Faces entspricht dem Mittelpunkt dieser Fläche und somit dem Mittelpunkt der dazugehörigen Vertices. Es ist allerdings auch möglich, dass mehrere Vertices mittels Edges verbunden sind, ohne eine Fläche zu beinhalten.
+
+Mittels des Face-Select-Modus können Faces direkt angewählt werden. Alternativ kann ein Face auch angewählt werden, indem im Vertex-Select-Modus alle zum Face dazugehörigen Vertices ausgewählt werden, oder indem im Edge-Select-Modus alle zum Face dazugehörigen Edges ausgewählt werden.
+
+## Anzahl Vertices in einem Face
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+::::
+
+::: tippbox-body
+Polygone und Faces sind in ihrer Bedeutung praktisch deckungsgleich. Faces beschreiben jedoch eher die Fläche eines Polygons, während das Polygon eher die Gesamtheit von Vertices, Edges und Faces beschreibt. Der Begriff Polygon wird innerhalb von Blender allerdings selten verwendet.
+:::
+::::::
+
+::: column-margin
+Anzahl Vertices in einem Face
+:::
+
+Der Default-Cube, den Blender jeweils beim Start eines neuen Projektes zur Verfügung stellt, besteht aus sechs Faces. Jedes dieser Faces beinhaltet vier Vertices. Es ist allerdings auch möglich, dass ein Face aus mehr oder weniger Vertices besteht. Es gibt verschiedene Begriffe, basierend auf der Anzahl Vertices in einem Face:
+
+::: column-margin
+Bezeichnung von Faces aufgrund Anzahl Vertices
+:::
+
+-   **Triangles** (**Tris**): Faces, die aus drei Vertices bestehen
+
+-   **Quadrangles** (**Quads**): Faces, die aus vier Vertices bestehen
+
+-   **N-Gons**: Faces, die aus n Vertices bestehen
+
+![Der Standardwürfel bestehend aus Tris statt aus Quads.](Images/Chapter_9/3.%20Cube%20by%20Tris.png){#fig-1_3 fig-align="left"}
+
+::: column-margin
+Tris aus Quads ableiten
+:::
+
+Aus Quads lassen sich sehr einfach Tris bilden. Hierfür muss lediglich jedes Quad zwischen zwei gegenüberliegenden Vertices zerschnitten werden, sodass die Fläche in zwei Dreiecke unterteilt wird. Beim Rendern von Bildern werden Quads in den 3D-Objekten automatisch in Tris unterteilt, was im Normalfall für den Benutzer jedoch kaum ersichtlich ist.
+
+::: column-margin
+Bevorzugung von Quads
+:::
+
+Trotzdem ist es sinnvoll, sich beim Modellieren von 3D-Objekten eher an die Verwendung von Quads zu gewöhnen. Viele Tricks und Kniffe der Objektbearbeitung lassen sich einfacher oder teilweise sogar nur auf Quads anwenden. Somit erleichtert die Arbeit mit Quads den Arbeitsprozess erheblich. Weiterhin sind Quads auch in vielen Animationsstudios der Standard.
+
+![Links eine gerenderte 3D-Figur und rechts die Figur in ihrer Gitterstruktur](Images/Chapter_9/4.%20Prof%20Figures.png){#fig-1_4 fig-align="left"}
+
+::: column-margin
+Anwendung von Tris
+:::
+
+Arbeiten mit Tris ist trotzdem durchaus möglich und vereinzelte Tris in Objekten sind auch nicht problematisch. In manchen Situationen sind Tris sogar flexibler als Quads. Wenn allerdings die Objekte komplett aus Tris bestehen sollen, macht dies gerade in gemeinschaftlichen Prozessen nur Sinn, wenn alle beteiligten Personen mit Tris umgehen können.
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Merke...
+::::
+
+::: tippbox-body
+Vertices beschreiben die einzelnen Punkte in einem 3D-Objekt.
+
+Edges beschreiben die verbundenen Punkte in einem 3D-Objekt.
+
+Faces beschreiben Flächen zwischen mehr als zwei verbundenen Vertices.
+
+Faces mit vier Vertices (Quads) sind gegenüber Faces mit drei Vertices (Tris) in den meisten Fällen zu bevorzugen.
+:::
+::::::
+
+## Auswahl von Vertices, Edges und Faces im Edit-Mode
+
+::: column-margin
+Auswahl von Vertices, Edges und Faces im Edit-Mode
+:::
+
+Abhängig davon, welcher Select-Modus gerade aktiviert ist, lassen sich entweder die Vertices, Edges oder Faces auswählen. Die Auswahl der jeweiligen Elemente geschieht mittels der linken Maustaste. Wie auch im Object-Mode können bei gedrückter {{< kbd Shift >}}-Taste zusätzliche Elemente ausgewählt werden. Ebenso können mit der Taste {{< kbd C >}} der Circle-Select-Modus und mittels der Taste {{< kbd B >}} der Box-Select-Modus verwendet werden. Zudem kann mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd I >}} die Auswahl umgekehrt werden.
+
+::: column-margin
+Select linked mittels {{< kbd L >}}
+:::
+
+Im Edit-Mode gibt es weitere Auswahl-Optionen. Wenn sich der Mauszeiger über einem Element eines Objekts befindet, können mit der Taste {{< kbd L >}} alle Elemente, welche über Edges damit verbunden sind, ausgewählt werden. Dies ermöglicht es, alle verbundenen Elemente auszuwählen. Um alle Elemente eines Objektes – also auch unverbundene Elemente – auszuwählen, kann die Taste {{< kbd A >}} gedrückt werden.
+
+::: column-margin
+Edge-Loop-Select bei gedrückter Taste {{< kbd Alt >}}
+:::
+
+Weiterhin lassen sich ganze Verbindungen von Edges auswählen, wenn die Taste {{< kbd Alt >}} während der Auswahl gedrückt wird. Dadurch werden alle Edges, die gemeinsam eine Linie mit dem gerade ausgewählten Element bilden, ausgewählt. Dies ist auch im Vertex-Select-Modus möglich. Im Face-Select-Modus werden alle Faces, die gemeinsam eine Linie bilden, ausgewählt (hierfür muss der Mausklick allerdings bei einem Edge erfolgen – nicht in der Fläche des Faces).
+
+## Das Innere des Objekts
+
+::: column-margin
+Virtuelle Objekte haben meist keine Füllung
+:::
+
+So wie auch in der realen Welt haben virtuelle 3D-Objekte Flächen, welche aus mindestens drei Kanten bestehen und mindestens drei Ecken. Im Gegensatz zu Objekten in der realen Welt bestehen virtuelle Objekte nicht aus einer Füllung. Wird ein realer Apfel mit einem Messer in der Mitte geteilt, so wird der Inhalt unter der Schale – etwa das Fruchtfleisch oder das Kerngehäuse – sichtbar. Bei einem 3D-Mesh gibt es jedoch kein Inneres, sodass lediglich die Oberflächen der äusseren Struktur von der anderen Seite aus ersichtlich werden. Das Mesh besteht somit nur aus der Oberfläche, welche ein leeres Volumen überdeckt.
+
+Aus dem Umgang mit realen Objekten ist der Mensch sich gewohnt, dass Objekte einen Inhalt haben. Dies trifft auf digitale Objekte selten zu. Als Betrachter von digitalen Objekten ist dieser Sachverhalt nur in den seltensten Fällen bemerkbar. Dadurch wird durch fehlende Auseinandersetzung mit dieser Thematik die Illusion eines möglichen Inhaltes verstärkt.
+
+::: column-margin
+Wenn das Innere sichtbar wird
+:::
+
+In Videospielen kann es vorkommen, dass die Kamera durch einen Fehler in ein Objekt hineingelangt. Dadurch wird das Objekt anschliessend von der Innenseite aus betrachtet. Dies muss allerdings nicht immer der Fall sein. In manchen Situationen ist dieses Objekt gar nicht mehr sichtbar, wenn es von innen betrachtet wird.
+
+## Normalen: die richtige Seite der Faces finden
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+::::
+
+::: tippbox-body
+Bei bestimmten Einstellungen werden die Rückseiten der Oberflächen von Objekten fehlerhaft dargestellt. In diesen Fällen hilft es oftmals, die Ausrichtung der Normalen zu überprüfen und bei Bedarf anzupassen.
+
+In manchen Game-Engines werden die Rückseiten von Objekten in den Grundeinstellungen gar nicht angezeigt. Dadurch blickt man bei den Oberflächen mit der falschen Ausrichtung durch das Objekt hindurch. Dies vermittelt den Eindruck, dass ein Teil des Objekts fehlen würde. Dieser Teil ist noch da – allerdings der falschen Richtung zugewendet.
+:::
+::::::
+
+::: column-margin
+Die zwei Seiten von Faces
+:::
+
+Da 3D-Meshes keinen inneren Hohlraum haben, bilden die Faces die Oberfläche, welche das Objekt abdeckt. Dies bedeutet aber auch, dass es zwei Seiten von dieser Oberfläche geben muss: eine Seite, die betrachtet werden soll, und eine, die nicht betrachtet werden soll. In den meisten Fällen ist schnell klar, welche Seite eines Objektes von Bedeutung ist. Einen Apfel betrachtet man jeweils von aussen, also ist die nach aussen gerichtete Seite jene Seite, welche betrachtet werden soll. Ebenso verhält es sich bei einem Charakter. In diesem Fall ist ebenfalls die nach aussen gerichtete Seite von Bedeutung und nicht das Innere seines Körpers.
+
+::: column-margin
+Die zu betrachtende Seite eines Würfels
+:::
+
+Wie verhält es sich bei Blenders Standardwürfel? Bei diesem wird zunächst die Aussenseite betrachtet. Allerdings wäre es auch möglich, dass der Default-Cube von innen betrachtet werden soll – etwa, wenn eine Szene im Inneren eines Raumes dargestellt werden soll und der Würfel die Wände, den Boden und die Decke des Raumes darstellt. In diesem Fall ist nicht mehr die Aussenseite des Würfels relevant, sondern die Innenseite.
+
+::: column-margin
+Normalen
+:::
+
+Die Normalen eines Objektes geben jeweils an, in welche Richtung Vertices, Edges und Faces gerichtet sind. Wenn ein Würfel etwa von innen betrachtet werden soll, müssen die Normalen nach innen gekehrt werden. Wenn der Würfel allerdings als solcher von aussen betrachtet werden soll, dann müssen die Normalen nach aussen gekehrt sein.
+
+::: column-margin
+Normalen darstellen
+:::
+
+Die Normalen eines 3D-Objektes lassen sich im Edit-Mode betrachten, indem die entsprechende Ansicht aktiviert wird. Diese wird im Dropdown-Menü zu den Viewport-Overlays in der rechten oberen Ecke des 3D-Viewports unter dem Abschnitt «*Normals*» mit der Schaltfläche «*Display Normals*» aktiviert. Anschliessend erscheinen in den Faces kleine blaue Striche, welche in diejenige Richtung zeigen, gegen die das Face dargestellt ist.
+
+![Icon zur Darstellung der Normalen in den Viewport-Overlays.](Images/Chapter_9/5.%20Icon_Normals.png){#fig-1_5 fig-align="left"}
+
+::: column-margin
+Face-Orientation darstellen
+:::
+
+Es ist auch möglich, in den Viewport-Overlays die «*Face Orientation*» zu aktivieren. Dadurch werden die Oberflächen eines Objekts in blauer Farbe dargestellt, wenn es sich um die Seite der Normalen handelt, oder in roter Farbe, wenn es sich um die Seite ohne Normalen handelt. Diese Ansicht ist auch im Object-Mode verfügbar, allerdings nur in der Solid-Ansicht und wenn X-Ray deaktiviert ist.
+
+::: column-margin
+Normalen umkehren und neu berechnen
+:::
+
+Wenn alle Faces innerhalb eines Objekts ausgewählt werden, kann mittels der Tastenkombination {{< kbd Alt >}} + {{< kbd N >}} das Menü «*Normals*» beim Mauszeiger geöffnet werden. Mit der Option «*Flip*» können anschliessend alle Normalen in die umgekehrte Richtung gekehrt werden. Zudem können die Normalen mittels der Option «*Recalculate Outside*» zur äusseren Seite hin oder mittels «*Recalculate Inside*» zur inneren Seite hin berechnet werden.

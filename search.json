@@ -196,32 +196,60 @@
     "text": "Neuanordnen der Editor-Areale\n\n\nGrösse der Edito-ren verändern\nDie einzelnen Editor-Fenster können nicht nur beliebig ausgetauscht werden, sondern auch nach eigenem Belieben vergrössert oder verkleinert werden. In den Abgrenzungsbereichen zwischen den Fenstern verändert sich der Mauszeiger. Von dort aus lassen sich die Editor-Areale durch Hin- und Herziehen vergrössern oder verkleinern.\n\n\nNeue Editoren öffnen\nIn den Ecken der einzelnen Editor-Fenster gibt es zudem die Möglichkeit, durch Ziehen der Ecke in eine Richtung das Fenster in zwei Editoren aufzuteilen. Wenn dabei gleichzeitig die ShiftShift-Taste gedrückt wird, wird derselbe Editor in einem neuen, einzelnen Fenster geöffnet.\n\n\nEditor-Areal schliessen\nUm ein Editor-Fenster zu schliessen, wird jeweils ein anderes Editor-Fenster über das zu schliessende Fenster gezogen. Dadurch werden die beiden Fenster verbunden. Um zwei Fenster zu verbinden, wird eine der beiden Ecken, welche sich zwischen den beiden Fenstern befindet, ausgewählt und das zu behaltende Fenster über das zu entfernende Fenster gezogen. Dies ist manchmal etwas knifflig, da die Aktion ähnlich zum Öffnen von neuen Fenstern ist."
   },
   {
-    "objectID": "index.html#lorem",
-    "href": "index.html#lorem",
-    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
-    "section": "Lorem",
-    "text": "Lorem\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n\n\n\n\nÜbung\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+    "objectID": "Chapters/Chapter_7.html",
+    "href": "Chapters/Chapter_7.html",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "",
+    "text": "Grundlegende Transformationen\nJegliche 3D-Meshes beinhalten drei grundlegende Eigenschaften. Diese Grundeigenschaften können jederzeit variiert werden. Es handelt sich dabei um:\n\nPosition\nRotation\nSkalierung\n\nAlle drei Optionen sind in der Sidebar (ein /ausblenden mittels NN) unter dem Menü «Item» unter dem Reiter «Transform» sichtbar. Die Eigenschaften beziehen sich jeweils auf das ausgewählte Objekt. Wenn kein Objekt ausgewählt ist, beziehen sie sich auf das zuletzt ausgewählte Objekt. Mittels der Einstellungen in der Sidebar lassen sich diese drei Eigenschaften beliebig durch die Eingabe von Zahlen variieren.\n\n\n\n\n\n\n\nStatt Zahlen können auch mathematische Berechnungen in die Felder eingegeben werden. Dadurch lassen sich komplexere Positionen ermitteln. Wenn etwa ein Objekt genau mittig zwischen einem Objekt mit einer Position von X = 4 und einem Objekt mit einer Position von X = 17 platziert werden soll, kann der X-Wert des zu platzierenden Objektes auf X = 4 + ((17 – 4) / 2) festgelegt werden. Das Objekt wird anschliessend mittig der beiden Objekte (X = 10.5) platziert."
   },
   {
-    "objectID": "index.html#lorem-ipsum-dolor",
-    "href": "index.html#lorem-ipsum-dolor",
-    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
-    "section": "Lorem ipsum dolor",
-    "text": "Lorem ipsum dolor\n\n\n\n\n\nWeiterführende Informationen\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+    "objectID": "Chapters/Chapter_7.html#die-drei-grundlegenden-objekt-transformationen",
+    "href": "Chapters/Chapter_7.html#die-drei-grundlegenden-objekt-transformationen",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "",
+    "text": "Grundlegende Transformationen\nJegliche 3D-Meshes beinhalten drei grundlegende Eigenschaften. Diese Grundeigenschaften können jederzeit variiert werden. Es handelt sich dabei um:\n\nPosition\nRotation\nSkalierung\n\nAlle drei Optionen sind in der Sidebar (ein /ausblenden mittels NN) unter dem Menü «Item» unter dem Reiter «Transform» sichtbar. Die Eigenschaften beziehen sich jeweils auf das ausgewählte Objekt. Wenn kein Objekt ausgewählt ist, beziehen sie sich auf das zuletzt ausgewählte Objekt. Mittels der Einstellungen in der Sidebar lassen sich diese drei Eigenschaften beliebig durch die Eingabe von Zahlen variieren.\n\n\n\n\n\n\n\nStatt Zahlen können auch mathematische Berechnungen in die Felder eingegeben werden. Dadurch lassen sich komplexere Positionen ermitteln. Wenn etwa ein Objekt genau mittig zwischen einem Objekt mit einer Position von X = 4 und einem Objekt mit einer Position von X = 17 platziert werden soll, kann der X-Wert des zu platzierenden Objektes auf X = 4 + ((17 – 4) / 2) festgelegt werden. Das Objekt wird anschliessend mittig der beiden Objekte (X = 10.5) platziert."
   },
   {
-    "objectID": "index.html#lorem-ipsum-dolor-1",
-    "href": "index.html#lorem-ipsum-dolor-1",
-    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
-    "section": "Lorem ipsum dolor",
-    "text": "Lorem ipsum dolor\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et\n\n\n\n\n\nMerke…\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et"
+    "objectID": "Chapters/Chapter_7.html#location",
+    "href": "Chapters/Chapter_7.html#location",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "Location",
+    "text": "Location\n\n\nPosition\nDie Location beschreibt die Position eines 3D-Meshes in der dreidimensionalen Welt. Die Position wird mittels drei Werten angegeben: einem Wert für die X-Achse, einem für die Y-Achse und einem für die Z-Achse. Jeder dieser drei Werte lässt sich individuell verändern. Durch das Verschieben des X Wertes verschiebt sich das Objekt beispielsweise der X-Achse entlang.\n\n\n\n\n\n\nAbbildung 1: Der orangene Punkt markiert den Ursprung (Origin) eines Objektes\n\n\n\n\n\nPosition befindet sich am Ursprung des Objekts\nDie genaue Position des Objektes wird anhand eines kleinen orangen Punktes im Viewport-Display angezeigt. Bei diesem Punkt handelt es sich um den Ursprung des Objektes (Origin). Die Position eines Objektes bezieht sich immer auf diesen orangen Punkt, selbst wenn das Mesh selbst diese Position gar nicht abdeckt."
   },
   {
-    "objectID": "Sites/chapter_overview.html#skript-kapitel",
-    "href": "Sites/chapter_overview.html#skript-kapitel",
-    "title": "Kursübersicht",
-    "section": "Skript-Kapitel:",
-    "text": "Skript-Kapitel:\n\nVorbereitung von Blender\nDie Arbeitsoberfläche des 3D-Viewports\nNavigation der Ansicht im 3D-Viewport\nErste Schritte\nObjektarten\nPrimitive Meshes\nMethoden der Objekt-Transformation\nObjekte im Viewport-Display transformieren\nObject- und Edit-Mode\nEinstieg in den Edit-Mode\nMethoden der Objektbearbeitung im Edit-Mode\nHilfestellungen für die Objektbearbeitung\nTutorial: Erstellen eines Glases\nObjekterstellung mittels Modifiern\nEigenschaften innerhalb eines Meshes definieren\nMaterialien, Texturen und Shader\nMaterialien\nDer Shader-Editor\nGrundlegende Eigenschaften von Materialien\nTutorial: Strandball\nTexturen\nUVs\nTexturen zu einem Material hinzufügen\nTexturen für Parameter verwenden\nWelche Bilder eignen sich als Texturen?\nArten von Texturen\nTutorial: Einen Hammer texturieren\nDisplacement mit dem Displacement-Modifier erstellen\nErstellen von Landschaften\nTutorial: Erstellen einer Düne\nParameter im Principled-BSDF-Shader\nDer Wechsel von Eevee zu Cycles am Beispiel von Glas\nLichtquellen in einer Szene\nLichtobjekte\nWelten\nKamera\nRendern\nTutorial: Ein Glas mit Wasser erstellen\nBäume mittels Add-on erstellen\nWorkflows der Charaktererstellung\nCharacter-Modeling\nTutorial: Eine Cartoon-Katze als Charakter erstellen\nWas ist Rigging?\nObjekte mit Armaturen verformen\nCharakter-Rigging\nVom Bild zur Animation\nAnimationen erstellen\nAnimationen verfeinern\nAnimationen rendern"
+    "objectID": "Chapters/Chapter_7.html#rotation",
+    "href": "Chapters/Chapter_7.html#rotation",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "Rotation",
+    "text": "Rotation\n\n\nRotation\nDie Rotation eines Objektes beschreibt, wie sehr das Objekt entlang der drei Achsen rotiert wird. Analog zur Position ist die Rotation ebenfalls in die drei Achsen X, Y und Z aufgeteilt. Beispielsweise führt eine Veränderung der Rotation beim Wert X dazu, dass das Objekt entsprechend entlang der X-Achse rotiert wird. Durch die Verwendung aller drei Achsen können so komplexe Rotationen erfolgen. Indem alle Werte erneut auf 0 gesetzt werden, befindet sich das Objekt wieder in seiner Grundposition.\n\n\nDrehpunkt der Rotation\nDer Ursprung des Objektes stellt den Drehpunkt für die Rotation mittels der Sidebar dar. Das heisst, die Objekte werden jeweils um den Ursprungspunkt herumrotiert. Dies wird beispielsweise deutlich, wenn sich der Ursprungspunkt ausserhalb des Objektes befindet."
+  },
+  {
+    "objectID": "Chapters/Chapter_7.html#scale",
+    "href": "Chapters/Chapter_7.html#scale",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "Scale",
+    "text": "Scale\n\n\nSkalierung\nDie Skalierung eines Objekts beschreibt, wie stark ein Objekt vergrössert oder verkleinert wird. Diese Objekteigenschaft lässt sich ebenfalls individuell für alle drei Achsen einstellen. So kann ein Objekt entlang der X-Achse vergrössert werden, indem der dazugehörige X-Wert auf einen Wert über 1 festgelegt wird. Werte im Bereich von grösser als 0 und kleiner als 1 führen zu einer Verkleinerung des Objektes entlang der entsprechenden Achse. Ein Wert von 0 führt dazu, dass das Objekt entlang der entsprechenden Achse keine Grösse mehr hat und aus der entsprechenden Perspektive dem entsprechend nicht mehr sichtbar ist.\n\n\nBezugspunkt der Skalierung\nAnalog zu der Position und der Rotation bezieht sich die Skalierung ebenfalls auf den Ursprung des Objektes. Wenn sich das Mesh ausserhalb des Ursprungs befindet, führt dies dazu, dass auch der Leerraum zwischen dem Mesh und dem Ursprung entsprechend skaliert wird. Befindet sich die Grenze eines Objektes etwa um den Wert 1 vom Ursprung entfernt, führt eine Skalierung um den Wert 2 dazu, dass das Mesh selbst verdoppelt wird – allerdings wird die Distanz zum Ursprung des Objektes ebenfalls verdoppelt."
+  },
+  {
+    "objectID": "Chapters/Chapter_7.html#dimension",
+    "href": "Chapters/Chapter_7.html#dimension",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "Dimension",
+    "text": "Dimension\n\n\nDimensionen von Objekten\nUnterhalb des Eingabefeldes für die Skalierung befindet sich ein weiteres Feld, welches die Dimensionen eines 3D-Meshes basierend auf den drei Achsen angibt. Die Dimensionen des Objektes sind direkt mit der Skalierung des Objektes verbunden. Eine Veränderung der X-Achsen-Dimension führt dazu, dass die Skalierung anhand der X-Achse so angepasst wird, dass sie der eingegebenen Grösse des Objektes entsprechen. Dadurch kann etwa direkt bestimmt werden, dass ein Objekt entlang der verschiedenen Achsen eine bestimmte Grösse innehat, ohne dass die Skalierung der entsprechenden Grösse angepasst wird."
+  },
+  {
+    "objectID": "Chapters/Chapter_7.html#transformationen-sperren",
+    "href": "Chapters/Chapter_7.html#transformationen-sperren",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "Transformationen sperren",
+    "text": "Transformationen sperren\n\n\nTransformationen sperren\nNeben den Werten für die Position, Rotation und Skalierung befinden sich drei aufgeschlossene Schlösser. Durch das Anklicken dieser Schlösser lässt sich die dazugehörige Eigenschaft auf einer Achse sperren, sodass sie nicht mehr verändert werden kann. Das entsprechende Symbol verändert sich dadurch zu einem geschlossenen Schloss.\n\n\nSperrung gilt nur für Viewport-Display\nDie Werte links neben dem Schloss lassen sich allerdings immer noch verändern, was kontraintuitiv wirken mag. Dies liegt daran, dass sich diese Sperrung auf Veränderungen mittels des Viewport Displays bezieht, welche nun als Nächstes betrachtet werden.\n\n\n\n\n\nÜbung 3. Verwendung der Sidebar\n\n\nÜbung 3.1\nVersuchen Sie den Standardwürfel so zu skalieren, dass er entsprechend der Abbildung einen in die Höhe ragenden Quader darstellt.\nÜbung 3.2\nVersuchen Sie den Standardwürfel so zu verändern, dass er aus der orthogonalen (Taste ) Vorder/Rück-Ansicht (Taste ) nicht mehr sichtbar ist.\n\n\n\n\n\n\n\nMerke…\n\n\nDie drei Transformationen Location, Rotation und Scale aus der Sidebar beziehen sich alle drei jeweils auf den Ursprung des Objektes.\nDimension des Objektes hängt mit dessen Skalierung zusammen."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Über",
+    "section": "",
+    "text": "Folgt…"
   },
   {
     "objectID": "Sites/Overview.html",
@@ -252,11 +280,32 @@
     "text": "Literatur\nBrainard, D. H., & Hurlbert, A. C. (2015). Colour vision: understanding# TheDress. Current Biology, 25(13), R551-R554.\nBainbridge, W. A., Pounder, Z., Eardley, A. F., & Baker, C. I. (2021). Quantifying Aphantasia through drawing: Those without visual imagery show deficits in object but not spatial memory. Cortex, 135, 159-172.\nFleming, R. W. (2014). Visual perception of materials and their properties. Vision research, 94, 62-75.\nJoon, J. S. (2010, August). Principles of photorealism to develop photorealistic visualisation for interface design: A review. In 2010 Seventh International Conference on Computer Graphics, Imaging and Visualization (pp. 17-25). IEEE.\nKätsyri, J., Förger, K., Mäkäräinen, M., & Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses: support for perceptual mismatch as one road to the valley of eeriness. Frontiers in psychology, 6, 390.\nScholl, B. J., & Tremoulet, P. D. (2000). Perceptual causality and animacy. Trends in cognitive sciences, 4(8), 299-309.\nTarr, M. J., Williams, P., Hayward, W. G., & Gauthier, I. (1998). Three-dimensional object recognition is viewpoint dependent. Nature neuroscience, 1(4), 275-277."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Über",
-    "section": "",
-    "text": "Folgt…"
+    "objectID": "Sites/chapter_overview.html#skript-kapitel",
+    "href": "Sites/chapter_overview.html#skript-kapitel",
+    "title": "Kursübersicht",
+    "section": "Skript-Kapitel:",
+    "text": "Skript-Kapitel:\n\nVorbereitung von Blender\nDie Arbeitsoberfläche des 3D-Viewports\nNavigation der Ansicht im 3D-Viewport\nErste Schritte\nObjektarten\nPrimitive Meshes\nMethoden der Objekt-Transformation\nObjekte im Viewport-Display transformieren\nObject- und Edit-Mode\nEinstieg in den Edit-Mode\nMethoden der Objektbearbeitung im Edit-Mode\nHilfestellungen für die Objektbearbeitung\nTutorial: Erstellen eines Glases\nObjekterstellung mittels Modifiern\nEigenschaften innerhalb eines Meshes definieren\nMaterialien, Texturen und Shader\nMaterialien\nDer Shader-Editor\nGrundlegende Eigenschaften von Materialien\nTutorial: Strandball\nTexturen\nUVs\nTexturen zu einem Material hinzufügen\nTexturen für Parameter verwenden\nWelche Bilder eignen sich als Texturen?\nArten von Texturen\nTutorial: Einen Hammer texturieren\nDisplacement mit dem Displacement-Modifier erstellen\nErstellen von Landschaften\nTutorial: Erstellen einer Düne\nParameter im Principled-BSDF-Shader\nDer Wechsel von Eevee zu Cycles am Beispiel von Glas\nLichtquellen in einer Szene\nLichtobjekte\nWelten\nKamera\nRendern\nTutorial: Ein Glas mit Wasser erstellen\nBäume mittels Add-on erstellen\nWorkflows der Charaktererstellung\nCharacter-Modeling\nTutorial: Eine Cartoon-Katze als Charakter erstellen\nWas ist Rigging?\nObjekte mit Armaturen verformen\nCharakter-Rigging\nVom Bild zur Animation\nAnimationen erstellen\nAnimationen verfeinern\nAnimationen rendern"
+  },
+  {
+    "objectID": "index.html#lorem",
+    "href": "index.html#lorem",
+    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
+    "section": "Lorem",
+    "text": "Lorem\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n\n\n\n\nÜbung\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+  },
+  {
+    "objectID": "index.html#lorem-ipsum-dolor",
+    "href": "index.html#lorem-ipsum-dolor",
+    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
+    "section": "Lorem ipsum dolor",
+    "text": "Lorem ipsum dolor\n\n\n\n\n\nWeiterführende Informationen\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+  },
+  {
+    "objectID": "index.html#lorem-ipsum-dolor-1",
+    "href": "index.html#lorem-ipsum-dolor-1",
+    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
+    "section": "Lorem ipsum dolor",
+    "text": "Lorem ipsum dolor\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et\n\n\n\n\n\nMerke…\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et"
   },
   {
     "objectID": "Chapters/Chapter_3.html",

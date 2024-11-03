@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9. Object- und Edit-Mode – Creating the World</title>
+<title>10. Einstieg in den Edit-Mode – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -195,17 +195,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#die-verschiedenen-bearbeitungs-modi" id="toc-die-verschiedenen-bearbeitungs-modi" class="nav-link active" data-scroll-target="#die-verschiedenen-bearbeitungs-modi">Die verschiedenen Bearbeitungs-Modi</a></li>
-  <li><a href="#struktur-von-3d-meshes" id="toc-struktur-von-3d-meshes" class="nav-link" data-scroll-target="#struktur-von-3d-meshes">Struktur von 3D-Meshes</a>
-  <ul class="collapse">
-  <li><a href="#vertices" id="toc-vertices" class="nav-link" data-scroll-target="#vertices">Vertices</a></li>
-  <li><a href="#edges" id="toc-edges" class="nav-link" data-scroll-target="#edges">Edges</a></li>
-  <li><a href="#faces" id="toc-faces" class="nav-link" data-scroll-target="#faces">Faces</a></li>
-  </ul></li>
-  <li><a href="#anzahl-vertices-in-einem-face" id="toc-anzahl-vertices-in-einem-face" class="nav-link" data-scroll-target="#anzahl-vertices-in-einem-face">Anzahl Vertices in einem Face</a></li>
-  <li><a href="#auswahl-von-vertices-edges-und-faces-im-edit-mode" id="toc-auswahl-von-vertices-edges-und-faces-im-edit-mode" class="nav-link" data-scroll-target="#auswahl-von-vertices-edges-und-faces-im-edit-mode">Auswahl von Vertices, Edges und Faces im Edit-Mode</a></li>
-  <li><a href="#das-innere-des-objekts" id="toc-das-innere-des-objekts" class="nav-link" data-scroll-target="#das-innere-des-objekts">Das Innere des Objekts</a></li>
-  <li><a href="#normalen-die-richtige-seite-der-faces-finden" id="toc-normalen-die-richtige-seite-der-faces-finden" class="nav-link" data-scroll-target="#normalen-die-richtige-seite-der-faces-finden">Normalen: die richtige Seite der Faces finden</a></li>
+  <li><a href="#grab-scale-rotate" id="toc-grab-scale-rotate" class="nav-link active" data-scroll-target="#grab-scale-rotate">Grab, Scale, Rotate</a></li>
+  <li><a href="#add-delete-dissolve" id="toc-add-delete-dissolve" class="nav-link" data-scroll-target="#add-delete-dissolve">Add, Delete, Dissolve</a></li>
+  <li><a href="#duplicate" id="toc-duplicate" class="nav-link" data-scroll-target="#duplicate">Duplicate</a></li>
+  <li><a href="#globale-vs.-lokale-koordinaten" id="toc-globale-vs.-lokale-koordinaten" class="nav-link" data-scroll-target="#globale-vs.-lokale-koordinaten">Globale vs.&nbsp;lokale Koordinaten</a></li>
   </ul>
 </nav>
     </div>
@@ -214,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">9. Object- und Edit-Mode</h1>
+<h1 class="title">10. Einstieg in den Edit-Mode</h1>
 </div>
 
 
@@ -231,164 +224,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="die-verschiedenen-bearbeitungs-modi" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="die-verschiedenen-bearbeitungs-modi">Die verschiedenen Bearbeitungs-Modi</h2>
+<p>Ein Grossteil der Bearbeitungsmöglichkeiten, welche im Object-Mode mit Objekten möglich sind, kann im Edit-Mode auch auf die Strukturelemente der Objekte angewendet werden.</p>
+<section id="grab-scale-rotate" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="grab-scale-rotate">Grab, Scale, Rotate</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Object-Mode</p>
-</div></div><p>Die bisherigen Transformationen, die an Objekten gemacht wurden, haben sich immer auf den Object-Mode bezogen. Dabei wurden grundlegende Eigenschaften von Objekten (Position, Rotation und Skalierung) verändert. Die Form des Objektes selbst wurde dabei nicht verändert, sondern lediglich seine Darstellungsweise. Durch das Zurücksetzen der Werte in der Sidebar erscheint das Objekt wieder in seiner ursprünglichen Form.</p>
-<div class="tippbox">
-<div class="tippbox-header">
-<div class="tippbox-icon">
-
-</div>
-</div>
-<div class="tippbox-body">
-<p>Das Zurücksetzen der Transformationen kann direkt mittels folgenden Shortcuts erfolgen: Zurücksetzen der Position: <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span></p>
-<p>Zurücksetzen der Rotation: <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span></p>
-<p>Zurücksetzen der Skalierung: <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span></p>
-</div>
-</div>
-<p>Durch die bisherigen Transformationen wurde das Objekt als Ganzes bearbeitet. Dies zeichnet die Transformationen im Object-Mode aus. Nebst dem Object-Mode gibt es noch eine Reihe anderer Modi. In der oberen linken Ecke des Viewports ist jeweils ersichtlich, welcher Modus gerade verwendet wird. Durch einen Klick auf das Dropdown-Menü erscheint eine Liste der verfügbaren Modi:</p>
+<p>Ein Vertex kann nur bewegt werden</p>
+</div></div><p>Wenn ein einzelner Vertex ausgewählt wird, sind die Transformationsmöglichkeiten relativ beschränkt. Mittels der Taste lässt sich der Vertex im dreidimensionalen Raum verschieben. Da der Vertex allerdings nur einen isolierten Punkt ohne eine Dimension darstellt, kann er weder skaliert, noch rotiert werden. Dementsprechend wird in der Sidebar lediglich die Position des Vertex angegeben, während die Skalierung und Rotation – anders als im Object-Mode – nicht angegeben werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Die verschiedenen Bearbeitungs-Modi</p>
-</div></div><ul>
-<li><p><strong>Object Mode</strong>: In diesem Modus können die Objekte in einer Szene als Ganzes transformiert und angeordnet werden.</p></li>
-<li><p><strong>Edit Mode</strong>: In diesem Modus können die einzelnen Bestandteile des Objekts anvisiert und bearbeitet werden.</p></li>
-<li><p><strong>Sculpt Mode</strong>: In diesem Modus kann das Objekt anhand von Sculpting-Tools bearbeitet werden.</p></li>
-<li><p><strong>Vertex Paint</strong>: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen.</p></li>
-<li><p><strong>Weight Paint</strong>: In diesem Modus werden dem Objekt verschiedene Gewichte aufgemalt, welche anschliessend für weitere Funktionen verwendet werden können.</p></li>
-</ul>
+<p>Skalierung und Rotation geschieht um den Median der Auswahl</p>
+</div></div><p>Sobald zwei Vertices ausgewählt werden, wird in der Sidebar nicht mehr die Position der einzelnen Vertices angegeben, sondern die Position des Medians zwischen diesen beiden Vertices. Dies ist unabhängig davon, ob die Vertices mittels Edges oder Faces miteinander verbunden sind oder nicht. Mittels der Taste <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span> oder <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> kann die Auswahl rotiert oder skaliert werden. Beide Transformationen beziehen sich dabei auf den Median zwischen diesen beiden Vertices. Wird also beispielsweise eine Skalierung um den Faktor 2 getätigt (mittels der Tasten <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> und <kbd aria-hidden="true">2</kbd><span class="visually-hidden">2</span>), verdoppelt sich der Abstand der beiden Vertices zum Median. Rotationen führen dazu, dass die Vertices ebenfalls um den Median rotiert werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Wechsel zwischen Object- und Edit-Mode</p>
-</div></div><ul>
-<li><strong>Texture Paint</strong>: In diesem Modus ist es möglich, ein Objekt mit einer Textur zu bemalen. Im Rahmen dieses Kurses wird vorwiegend mit dem Object- und dem Edit-Mode gearbeitet. Der Wechsel zwischen diesen beiden Modi stellt einen wichtigen Wechsel zwischen den Modi dar. Deshalb ist es möglich, mittels einer einzigen Taste zwischen dem Object- und dem Edit-Mode hin- und herzuwechseln – nämlich mittels der Taste <kbd aria-hidden="true">Tab</kbd><span class="visually-hidden">Tab</span> . Dabei wird in den Edit-Mode für das aktuell ausgewählte Objekt gewechselt. Für Objekte, welche nicht aus einzelnen Komponenten bestehen (beispielsweise Kameras oder Lichtquellen), ist kein Edit-Mode verfügbar.</li>
-</ul>
-</section>
-<section id="struktur-von-3d-meshes" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="struktur-von-3d-meshes">Struktur von 3D-Meshes</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Der Gitteraufbau von 3D-Meshes</p>
-</div></div><p>Beim Wechseln in den Edit-Mode erscheint das Mesh in seiner Struktur, bestehend aus mehreren Polygonen. Dabei handelt es sich um einzelne Oberflächenstrukturen der Meshes. Die Polygone – und somit auch das Mesh – bestehen in ihrer Struktur aus folgenden Elementen:</p>
-<ul>
-<li><p><strong>Vertices</strong>: Einzelne Punkte in einem Mesh</p></li>
-<li><p><strong>Edges</strong>: Linien zwischen zwei Vertices in einem Mesh</p></li>
-<li><p><strong>Faces</strong>: Flächen zwischen mehreren Edges/Vertices in einem Mesh</p></li>
-</ul>
-<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/1. Vertices, Edges and Faces.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Vertices, Edges und Faces.
-</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Select-Modus wechseln</p>
-</div></div><p>Im Edit-Mode können wahlweise Vertices, Edges oder Faces ausgewählt werden, je nachdem in welchem Select-Modus man sich befindet. Die drei Select-Modi sind in der linken oberen Ecke direkt neben dem Auswahlfeld für den Bearbeitungs-Modus (in dem Fall der Edit-Mode) aufzufinden.</p>
-<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/2. Select_Mode_Auswahl.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Schaltfläche für den Vertex-, Edge- und Face-Select-Modus in der linken oberen Ecke des Edit-Modes.
-</figcaption>
-</figure>
-</div>
-<section id="vertices" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="vertices">Vertices</h3>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Vertices</p>
-</div></div><p>Ein Vertex (Mehrzahl: Vertices) stellt die grundlegendste Einheit in einem Mesh dar. Jeder Vertex beschreibt einen Punkt in einem Mesh. Anders als die Objekte als Ganzes, verfügen Vertices nur über das Merkmal ihrer jeweiligen Position. Die Merkmale Skalierung und Rotation gibt es für Vertices nicht. Ein Vertex hat deshalb auch keine Dimensionen.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Auswahl von Vertices</p>
-</div></div><p>Werden zwei miteinander verbundene Vertices ausgewählt, so wird automatisch auch das dazwischenliegende Edge ausgewählt. Ebenso wird automatisch das dazugehörige Face mit ausgewählt, wenn alle Vertices dieses Faces ausgewählt werden. Ein einzelner Vertex kann lediglich im Vertex Select-Modus angewählt werden.</p>
-</section>
-<section id="edges" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="edges">Edges</h3>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Edges</p>
-</div></div><p>Edges beschreiben Linien, welche zwischen zwei Vertices liegen. Da ein Edge genau der Verbindung zwischen zwei Vertices entspricht, ist dessen Mittelpunkt identisch zur Mitte zwischen den beiden Vertices.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Auswahl von Edges</p>
-</div></div><p>Im Edge-Select-Modus können die Edges als solche ausgewählt werden. Dabei werden automatisch auch die beiden zum Edge dazugehörigen Vertices ausgewählt. Wenn alle Edges eines Faces ausgewählt werden, dann wird automatisch auch das dazugehörige Face ausgewählt.</p>
-</section>
-<section id="faces" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="faces">Faces</h3>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Faces</p>
-</div></div><p>Faces stellen die Flächen zwischen verbundenen Edges/Vertices dar. Die Position des Faces entspricht dem Mittelpunkt dieser Fläche und somit dem Mittelpunkt der dazugehörigen Vertices. Es ist allerdings auch möglich, dass mehrere Vertices mittels Edges verbunden sind, ohne eine Fläche zu beinhalten.</p>
-<p>Mittels des Face-Select-Modus können Faces direkt angewählt werden. Alternativ kann ein Face auch angewählt werden, indem im Vertex-Select-Modus alle zum Face dazugehörigen Vertices ausgewählt werden, oder indem im Edge-Select-Modus alle zum Face dazugehörigen Edges ausgewählt werden.</p>
-</section>
-</section>
-<section id="anzahl-vertices-in-einem-face" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="anzahl-vertices-in-einem-face">Anzahl Vertices in einem Face</h2>
-<div class="tippbox">
-<div class="tippbox-header">
-<div class="tippbox-icon">
-
-</div>
-</div>
-<div class="tippbox-body">
-<p>Polygone und Faces sind in ihrer Bedeutung praktisch deckungsgleich. Faces beschreiben jedoch eher die Fläche eines Polygons, während das Polygon eher die Gesamtheit von Vertices, Edges und Faces beschreibt. Der Begriff Polygon wird innerhalb von Blender allerdings selten verwendet.</p>
-</div>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Anzahl Vertices in einem Face</p>
-</div></div><p>Der Default-Cube, den Blender jeweils beim Start eines neuen Projektes zur Verfügung stellt, besteht aus sechs Faces. Jedes dieser Faces beinhaltet vier Vertices. Es ist allerdings auch möglich, dass ein Face aus mehr oder weniger Vertices besteht. Es gibt verschiedene Begriffe, basierend auf der Anzahl Vertices in einem Face:</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Bezeichnung von Faces aufgrund Anzahl Vertices</p>
-</div></div><ul>
-<li><p><strong>Triangles</strong> (<strong>Tris</strong>): Faces, die aus drei Vertices bestehen</p></li>
-<li><p><strong>Quadrangles</strong> (<strong>Quads</strong>): Faces, die aus vier Vertices bestehen</p></li>
-<li><p><strong>N-Gons</strong>: Faces, die aus n Vertices bestehen</p></li>
-</ul>
-<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/3. Cube by Tris.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Der Standardwürfel bestehend aus Tris statt aus Quads.
-</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Tris aus Quads ableiten</p>
-</div></div><p>Aus Quads lassen sich sehr einfach Tris bilden. Hierfür muss lediglich jedes Quad zwischen zwei gegenüberliegenden Vertices zerschnitten werden, sodass die Fläche in zwei Dreiecke unterteilt wird. Beim Rendern von Bildern werden Quads in den 3D-Objekten automatisch in Tris unterteilt, was im Normalfall für den Benutzer jedoch kaum ersichtlich ist.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Bevorzugung von Quads</p>
-</div></div><p>Trotzdem ist es sinnvoll, sich beim Modellieren von 3D-Objekten eher an die Verwendung von Quads zu gewöhnen. Viele Tricks und Kniffe der Objektbearbeitung lassen sich einfacher oder teilweise sogar nur auf Quads anwenden. Somit erleichtert die Arbeit mit Quads den Arbeitsprozess erheblich. Weiterhin sind Quads auch in vielen Animationsstudios der Standard.</p>
-<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/4. Prof Figures.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4: Links eine gerenderte 3D-Figur und rechts die Figur in ihrer Gitterstruktur
-</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Anwendung von Tris</p>
-</div></div><p>Arbeiten mit Tris ist trotzdem durchaus möglich und vereinzelte Tris in Objekten sind auch nicht problematisch. In manchen Situationen sind Tris sogar flexibler als Quads. Wenn allerdings die Objekte komplett aus Tris bestehen sollen, macht dies gerade in gemeinschaftlichen Prozessen nur Sinn, wenn alle beteiligten Personen mit Tris umgehen können.</p>
+<p>Skalierung und Rotation verändert Position von Vertices</p>
+</div></div><p>Dadurch lässt sich bereits ein wichtiges Merkmal der Bearbeitung im Edit-Mode betrachten: Mittels einer Skalierung lässt sich die Distanz zwischen zwei Vertices verändern und dadurch auch ihre Position. Ebenso werden Vertices bei der Rotation relativ zueinander im Raum rotiert und so in ihren Positionen verändert. Dies macht auch einen Abschnitt für die Skalierung oder Rotation in der Sidebar obsolet, da jegliche Transformation lediglich zu einer Veränderung der individuellen Platzierung der Vertices führt.</p>
+<p>Anstatt der Vertices können auch Edges und Faces direkt angewählt werden. Dabei werden automatisch die dazugehörigen Vertices mit ausgewählt. Die Transformationen beziehen sich immer noch auf den räumlichen Mittelpunkt zwischen den einzelnen Vertices, weshalb auch in diesem Modus eine Skalierung oder Rotation zu einer Veränderung der Positionen dieser Vertices führen.</p>
 <div class="tippbox">
 <div class="tippbox-header">
 <div class="tippbox-icon">
@@ -397,87 +248,69 @@ Abbildung&nbsp;4: Links eine gerenderte 3D-Figur und rechts die Figur in ihrer G
 <p>Merke…</p>
 </div>
 <div class="tippbox-body">
-<p>Vertices beschreiben die einzelnen Punkte in einem 3D-Objekt.</p>
-<p>Edges beschreiben die verbundenen Punkte in einem 3D-Objekt.</p>
-<p>Faces beschreiben Flächen zwischen mehr als zwei verbundenen Vertices.</p>
-<p>Faces mit vier Vertices (Quads) sind gegenüber Faces mit drei Vertices (Tris) in den meisten Fällen zu bevorzugen.</p>
+<p>Wie auch im Object-Mode können Vertices, Edges und Faces mittels der Taste <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span> bewegt, mittels der Taste <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> und mittels der Taste <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span> rotiert werden.</p>
+<p>Skalierungen und Rotationen im Edit-Mode führen lediglich zu einer Veränderung der Positionen der einzelnen Vertices basierend auf dem Median der Vertex-Positionen.</p>
 </div>
 </div>
 </section>
-<section id="auswahl-von-vertices-edges-und-faces-im-edit-mode" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="auswahl-von-vertices-edges-und-faces-im-edit-mode">Auswahl von Vertices, Edges und Faces im Edit-Mode</h2>
+<section id="add-delete-dissolve" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="add-delete-dissolve">Add, Delete, Dissolve</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Auswahl von Vertices, Edges und Faces im Edit-Mode</p>
-</div></div><p>Abhängig davon, welcher Select-Modus gerade aktiviert ist, lassen sich entweder die Vertices, Edges oder Faces auswählen. Die Auswahl der jeweiligen Elemente geschieht mittels der linken Maustaste. Wie auch im Object-Mode können bei gedrückter <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste zusätzliche Elemente ausgewählt werden. Ebenso können mit der Taste <kbd aria-hidden="true">C</kbd><span class="visually-hidden">C</span> der Circle-Select-Modus und mittels der Taste <kbd aria-hidden="true">B</kbd><span class="visually-hidden">B</span> der Box-Select-Modus verwendet werden. Zudem kann mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> die Auswahl umgekehrt werden.</p>
+<p>Primitives innerhalb eines Objektes hinzufügen</p>
+</div></div><p>Innerhalb eines Objektes im Edit-Mode können weitere Mesh-Primitives hinzugefügt werden. Dies geschieht wie im Object-Mode mit der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span>. Die Auswahl ist allerdings nur noch auf Mesh-Primitives beschränkt. Dementsprechend ist es nicht möglich, einem Mesh im Edit-Mode ein Kurven-Objekt anzufügen. Allerdings stehen alle primitiven Formen der Meshes zur Verfügung. Wie auch im Object-Mode werden die Objekte an der Position des 3D-Cursors hinzugefügt.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Select linked mittels <kbd aria-hidden="true">L</kbd><span class="visually-hidden">L</span></p>
-</div></div><p>Im Edit-Mode gibt es weitere Auswahl-Optionen. Wenn sich der Mauszeiger über einem Element eines Objekts befindet, können mit der Taste <kbd aria-hidden="true">L</kbd><span class="visually-hidden">L</span> alle Elemente, welche über Edges damit verbunden sind, ausgewählt werden. Dies ermöglicht es, alle verbundenen Elemente auszuwählen. Um alle Elemente eines Objektes – also auch unverbundene Elemente – auszuwählen, kann die Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> gedrückt werden.</p>
+<p>Elemente löschen mit <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span></p>
+</div></div><p>Wie auch im Object-Mode können im Edit-Mode ausgewählte Elemente gelöscht werden, indem die Taste <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> oder <kbd aria-hidden="true">Delete</kbd><span class="visually-hidden">Delete</span> gedrückt wird. Anders als im Object-Mode erscheint bei beiden Tasten ein Menü beim Mauszeiger, allerdings weil in diesem Fall der Löschvorgang präzisiert werden muss. So lassen sich jeweils die ausgewählten Faces, die ausgewählten Edges oder die ausgewählten Vertices löschen.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Edge-Loop-Select bei gedrückter Taste <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span></p>
-</div></div><p>Weiterhin lassen sich ganze Verbindungen von Edges auswählen, wenn die Taste <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> während der Auswahl gedrückt wird. Dadurch werden alle Edges, die gemeinsam eine Linie mit dem gerade ausgewählten Element bilden, ausgewählt. Dies ist auch im Vertex-Select-Modus möglich. Im Face-Select-Modus werden alle Faces, die gemeinsam eine Linie bilden, ausgewählt (hierfür muss der Mausklick allerdings bei einem Edge erfolgen – nicht in der Fläche des Faces).</p>
+<p>Elemente, welche beim Löschen eben falls entfernt werden</p>
+</div></div><p>Wird etwa beim Default-Cube eine einzelne Fläche ausgewählt und das Face gelöscht, so bleiben die Edges, welche sich um die Fläche bilden, erhalten – lediglich das ausgewählte Face wird gelöscht. Wenn allerdings die Edges gelöscht werden, verschwinden alle Edges, welche das ausgewählte Face bilden – lediglich die Vertices bleiben bestehen. Durch die fehlenden Edges verschwinden nun allerdings auch die angrenzenden Faces, da diesen nun je ein Edge fehlt. Wenn stattdessen die Vertices gelöscht werden, fehlen auch für die angrenzenden Edges die Bezugspunkte. Als Folge bleibt nur noch die gegenüberliegende Fläche bestehen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Faces und Edges isoliert löschen</p>
+</div></div><p>Bei der Auswahl von mehreren Flächen oder Edges kann das Löschen von Elementen zu grösseren Veränderungen führen. So werden beim Löschen von mehreren aneinandergereihten Faces auch die Edges, welche die Faces abgrenzen, gelöscht. Um dies zu verhindern kann beim Löschen die Option «Only Faces» ausgewählt werden. Dadurch bleiben die Edges bestehen. Zudem gibt es die Option «Only Edges &amp; Faces» um lediglich die einzelnen Vertices zu erhalten.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Elemente auflösen</p>
+</div></div><p>Nebst dem Löschen von Elementen besteht auch die Auswahl, dass Elemente aufgelöst werden. Hierfür wird die Option «<em>Dissolve</em>» im Lösch-Menü angeboten. Dadurch werden die ausgewählten Elemente gelöscht und die benachbarten Elemente anschliessend verbunden. Wird ein einzelnes Edge ausgewählt, welches zwischen zwei Faces liegt, werden die beiden Faces durch das Auflösen zu einem Face kombiniert. Ähnlich verhält es sich beim Auflösen von Faces und Vertices.</p>
 </section>
-<section id="das-innere-des-objekts" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="das-innere-des-objekts">Das Innere des Objekts</h2>
+<section id="duplicate" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="duplicate">Duplicate</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Virtuelle Objekte haben meist keine Füllung</p>
-</div></div><p>So wie auch in der realen Welt haben virtuelle 3D-Objekte Flächen, welche aus mindestens drei Kanten bestehen und mindestens drei Ecken. Im Gegensatz zu Objekten in der realen Welt bestehen virtuelle Objekte nicht aus einer Füllung. Wird ein realer Apfel mit einem Messer in der Mitte geteilt, so wird der Inhalt unter der Schale – etwa das Fruchtfleisch oder das Kerngehäuse – sichtbar. Bei einem 3D-Mesh gibt es jedoch kein Inneres, sodass lediglich die Oberflächen der äusseren Struktur von der anderen Seite aus ersichtlich werden. Das Mesh besteht somit nur aus der Oberfläche, welche ein leeres Volumen überdeckt.</p>
-<p>Aus dem Umgang mit realen Objekten ist der Mensch sich gewohnt, dass Objekte einen Inhalt haben. Dies trifft auf digitale Objekte selten zu. Als Betrachter von digitalen Objekten ist dieser Sachverhalt nur in den seltensten Fällen bemerkbar. Dadurch wird durch fehlende Auseinandersetzung mit dieser Thematik die Illusion eines möglichen Inhaltes verstärkt.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Wenn das Innere sichtbar wird</p>
-</div></div><p>In Videospielen kann es vorkommen, dass die Kamera durch einen Fehler in ein Objekt hineingelangt. Dadurch wird das Objekt anschliessend von der Innenseite aus betrachtet. Dies muss allerdings nicht immer der Fall sein. In manchen Situationen ist dieses Objekt gar nicht mehr sichtbar, wenn es von innen betrachtet wird.</p>
+<p>Duplizieren mittels <kbd aria-hidden="true">D</kbd><span class="visually-hidden">D</span></p>
+</div></div><p>Auch im Edit-Mode können Elemente mittels der Taste dupliziert werden, wenn sie vorgängig ausgewählt wurden. Nach dem Tastendruck ist es direkt möglich, die Objekte zu bewegen und mittels der linken Maustaste, <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span>- oder <kbd aria-hidden="true">Space</kbd><span class="visually-hidden">Space</span>-Taste zu platzieren. Mittels der Taste <kbd aria-hidden="true">esc</kbd><span class="visually-hidden">esc</span> oder der rechten Linktaste kann diese Bewegung abgebrochen werden und das Objekt wird an seine ursprüngliche Position zurückgesetzt. Dadurch ist allerdings oftmals nicht mehr ersichtlich, dass sich ein Duplikat an der Stelle des Originals befindet. Deshalb ist es sinnvoll, in einem solchen Fall die letzte Aktion – also das Duplizieren – ruckgängig zu machen oder das Duplikat direkt zu löschen. Empfehlenswert ist es auch, die Elemente trotzdem an einer anderen Stelle zu platzieren und sie dann erst zu löschen. Dadurch lässt sich erkennen, dass die Elemente dupliziert wurden und noch gelöscht werden müssen.</p>
 </section>
-<section id="normalen-die-richtige-seite-der-faces-finden" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="normalen-die-richtige-seite-der-faces-finden">Normalen: die richtige Seite der Faces finden</h2>
+<section id="globale-vs.-lokale-koordinaten" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="globale-vs.-lokale-koordinaten">Globale vs.&nbsp;lokale Koordinaten</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Globale Koordinaten</p>
+</div></div><p>Im Edit-Mode gibt es zwei Arten von 3D-Koordinaten, mit denen die Position eines Vertex – respektive der Median der Auswahl mehrerer Vertices – angegeben wird: die globalen und die lokalen Koordinaten. Die globalen Koordinaten entsprechen denselben Koordinaten, die auch im Object Mode verwendet werden. Diese beziehen sich auf den Ursprung der Welt, welcher sich an der Position 0 aller drei Achsen befindet. Dabei handelt es sich auch um den Punkt, an dem sich die Achsen im 3D-Viewport kreuzen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Lokale Koordinaten</p>
+</div></div><p>Die lokalen Koordinaten beziehen sich jeweils auf die Koordinaten des aktuellen Objektes. Das heisst, dass diese Koordinaten sich immer auf den Ursprung des Objektes beziehen. Wenn sich der Ursprung des Objektes am Nullpunkt aller drei Achsen befindet und keine Skalierung oder Rotation auf das Objekt angewendet wird, dann sind die globalen und die lokalen Koordinaten identisch. Wenn sich der Ursprung allerdings an einer anderen Stelle im Raum befindet, beziehen sich die lokalen Koordinaten immer auf den Ursprung des Objektes als Nullpunkt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Skalierung und Rotation des Objekts sind unabhängig vom Edit-Mode</p>
+</div></div><p>Zudem bleiben die lokalen Koordinaten auch unangetastet von Skalierungen und Rotationen, welche im Object-Mode für ein Objekt angegeben wurden. Wird der Default-Cube im Object-Mode gedreht, verändert sich die Position der Vertices also in den globalen Koordinaten, allerdings nicht in den lokalen Koordinaten.</p>
 <div class="tippbox">
 <div class="tippbox-header">
 <div class="tippbox-icon">
 
 </div>
+<p>Übung 5: Edit-Mode</p>
 </div>
 <div class="tippbox-body">
-<p>Bei bestimmten Einstellungen werden die Rückseiten der Oberflächen von Objekten fehlerhaft dargestellt. In diesen Fällen hilft es oftmals, die Ausrichtung der Normalen zu überprüfen und bei Bedarf anzupassen.</p>
-<p>In manchen Game-Engines werden die Rückseiten von Objekten in den Grundeinstellungen gar nicht angezeigt. Dadurch blickt man bei den Oberflächen mit der falschen Ausrichtung durch das Objekt hindurch. Dies vermittelt den Eindruck, dass ein Teil des Objekts fehlen würde. Dieser Teil ist noch da – allerdings der falschen Richtung zugewendet.</p>
+<p>Übung 5.1<br>
+Verändern Sie den Default-Cube so, dass die Position der einzelnen Vertices in der globalen Koordinate gegenüber der lokalen Koordinate doppelt so hohe absolute Beträge aufweisen.</p>
+<p>Übung 5.2<br>
+Verändern Sie den Default-Cube so, dass sich sein Ursprung nicht mehr in der Mitte seines Volumens befindet, sondern in der Mitte seiner unteren Fläche.</p>
 </div>
 </div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Die zwei Seiten von Faces</p>
-</div></div><p>Da 3D-Meshes keinen inneren Hohlraum haben, bilden die Faces die Oberfläche, welche das Objekt abdeckt. Dies bedeutet aber auch, dass es zwei Seiten von dieser Oberfläche geben muss: eine Seite, die betrachtet werden soll, und eine, die nicht betrachtet werden soll. In den meisten Fällen ist schnell klar, welche Seite eines Objektes von Bedeutung ist. Einen Apfel betrachtet man jeweils von aussen, also ist die nach aussen gerichtete Seite jene Seite, welche betrachtet werden soll. Ebenso verhält es sich bei einem Charakter. In diesem Fall ist ebenfalls die nach aussen gerichtete Seite von Bedeutung und nicht das Innere seines Körpers.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Die zu betrachtende Seite eines Würfels</p>
-</div></div><p>Wie verhält es sich bei Blenders Standardwürfel? Bei diesem wird zunächst die Aussenseite betrachtet. Allerdings wäre es auch möglich, dass der Default-Cube von innen betrachtet werden soll – etwa, wenn eine Szene im Inneren eines Raumes dargestellt werden soll und der Würfel die Wände, den Boden und die Decke des Raumes darstellt. In diesem Fall ist nicht mehr die Aussenseite des Würfels relevant, sondern die Innenseite.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Normalen</p>
-</div></div><p>Die Normalen eines Objektes geben jeweils an, in welche Richtung Vertices, Edges und Faces gerichtet sind. Wenn ein Würfel etwa von innen betrachtet werden soll, müssen die Normalen nach innen gekehrt werden. Wenn der Würfel allerdings als solcher von aussen betrachtet werden soll, dann müssen die Normalen nach aussen gekehrt sein.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Normalen darstellen</p>
-</div></div><p>Die Normalen eines 3D-Objektes lassen sich im Edit-Mode betrachten, indem die entsprechende Ansicht aktiviert wird. Diese wird im Dropdown-Menü zu den Viewport-Overlays in der rechten oberen Ecke des 3D-Viewports unter dem Abschnitt «<em>Normals</em>» mit der Schaltfläche «<em>Display Normals</em>» aktiviert. Anschliessend erscheinen in den Faces kleine blaue Striche, welche in diejenige Richtung zeigen, gegen die das Face dargestellt ist.</p>
-<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/5. Icon_Normals.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5: Icon zur Darstellung der Normalen in den Viewport-Overlays.
-</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Face-Orientation darstellen</p>
-</div></div><p>Es ist auch möglich, in den Viewport-Overlays die «<em>Face Orientation</em>» zu aktivieren. Dadurch werden die Oberflächen eines Objekts in blauer Farbe dargestellt, wenn es sich um die Seite der Normalen handelt, oder in roter Farbe, wenn es sich um die Seite ohne Normalen handelt. Diese Ansicht ist auch im Object-Mode verfügbar, allerdings nur in der Solid-Ansicht und wenn X-Ray deaktiviert ist.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Normalen umkehren und neu berechnen</p>
-</div></div><p>Wenn alle Faces innerhalb eines Objekts ausgewählt werden, kann mittels der Tastenkombination <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">N</kbd><span class="visually-hidden">N</span> das Menü «<em>Normals</em>» beim Mauszeiger geöffnet werden. Mit der Option «<em>Flip</em>» können anschliessend alle Normalen in die umgekehrte Richtung gekehrt werden. Zudem können die Normalen mittels der Option «<em>Recalculate Outside</em>» zur äusseren Seite hin oder mittels «<em>Recalculate Inside</em>» zur inneren Seite hin berechnet werden.</p>
 
 
 </section>

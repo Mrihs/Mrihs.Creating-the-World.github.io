@@ -201,6 +201,23 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#fill" id="toc-fill" class="nav-link active" data-scroll-target="#fill">Fill</a></li>
   <li><a href="#extrude" id="toc-extrude" class="nav-link" data-scroll-target="#extrude">Extrude</a></li>
+  <li><a href="#knife" id="toc-knife" class="nav-link" data-scroll-target="#knife">Knife</a></li>
+  <li><a href="#loop-cut" id="toc-loop-cut" class="nav-link" data-scroll-target="#loop-cut">Loop Cut</a></li>
+  <li><a href="#edge-slide" id="toc-edge-slide" class="nav-link" data-scroll-target="#edge-slide">Edge Slide</a></li>
+  <li><a href="#subdivide" id="toc-subdivide" class="nav-link" data-scroll-target="#subdivide">Subdivide</a></li>
+  <li><a href="#bevel" id="toc-bevel" class="nav-link" data-scroll-target="#bevel">Bevel</a></li>
+  <li><a href="#inset-faces" id="toc-inset-faces" class="nav-link" data-scroll-target="#inset-faces">Inset Faces</a></li>
+  <li><a href="#spin" id="toc-spin" class="nav-link" data-scroll-target="#spin">Spin</a></li>
+  <li><a href="#merge" id="toc-merge" class="nav-link" data-scroll-target="#merge">Merge</a></li>
+  <li><a href="#weitere-operationen-in-der-toolbar" id="toc-weitere-operationen-in-der-toolbar" class="nav-link" data-scroll-target="#weitere-operationen-in-der-toolbar">Weitere Operationen in der Toolbar</a>
+  <ul class="collapse">
+  <li><a href="#add-cube" id="toc-add-cube" class="nav-link" data-scroll-target="#add-cube">Add Cube</a></li>
+  <li><a href="#poly-build" id="toc-poly-build" class="nav-link" data-scroll-target="#poly-build">Poly Build</a></li>
+  <li><a href="#smooth" id="toc-smooth" class="nav-link" data-scroll-target="#smooth">Smooth</a></li>
+  <li><a href="#shrinkfatten" id="toc-shrinkfatten" class="nav-link" data-scroll-target="#shrinkfatten">Shrink/Fatten</a></li>
+  <li><a href="#shear" id="toc-shear" class="nav-link" data-scroll-target="#shear">Shear</a></li>
+  <li><a href="#rip-region" id="toc-rip-region" class="nav-link" data-scroll-target="#rip-region">Rip Region</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -245,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
 <img src="Images/Chapter_11/1. Icon_Extrude" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Extrude-Icon
+Abbildung&nbsp;1: Extrude-Icon.
 </figcaption>
 </figure>
 </div>
@@ -260,11 +277,12 @@ Abbildung&nbsp;1: Extrude-Icon
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Extrudieren präzisieren</p>
-</div></div><p>Wie auch bei Transformationen kann die Extrusion mittels der Tasten <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span>, <kbd aria-hidden="true">Y</kbd><span class="visually-hidden">Y</span> oder <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> auf einzelne Achsen beschränkt werden und mittels der Angabe von Zahlen angegeben werden, wie gross die Distanz zum originalen Median der Auswahl sein soll. Zudem kann das Extrudieren auch mittels der Taste mit einer Skalierung verbunden werden.</p>
+</div></div><p>Wie auch bei Transformationen kann die Extrusion mittels der Tasten <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span>, <kbd aria-hidden="true">Y</kbd><span class="visually-hidden">Y</span> oder <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> auf einzelne Achsen beschränkt werden und mittels der Angabe von Zahlen angegeben werden, wie gross die Distanz zum originalen Median der Auswahl sein soll. Zudem kann das Extrudieren auch mittels der Taste <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> mit einer Skalierung verbunden werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Faces werden per Default entlang Normalen extrudiert</p>
-</div></div><div class="tippbox">
+</div></div><p>Beim Extrudieren von Faces erfolgt die Bearbeitung per Default entlang der Normalen des Faces. Dadurch wird automatisch entlang der Ausrichtung der Faces extrudiert. Dies ist bei Vertices und Edges nicht der Fall.</p>
+<div class="tippbox">
 <div class="tippbox-header">
 <div class="tippbox-icon">
 
@@ -281,8 +299,346 @@ Erstellen Sie folgende Objekte ausgehend von einem Würfel.</p>
 </div>
 </div>
 </div>
+</section>
+<section id="knife" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="knife">Knife</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Schneiden mittels <kbd aria-hidden="true">K</kbd><span class="visually-hidden">K</span></p>
+</div></div><p>Es ist möglich, Faces und Edges mittels des Befehls «Knife» zu zerschneiden. Dadurch resultieren neue Vertices und Edges innerhalb von Flächen und Kanten. Diese Operation lässt sich ebenfalls in der Toolbar auswählen. Allerdings ist es auch möglich, mittels der Taste <kbd aria-hidden="true">K</kbd><span class="visually-hidden">K</span> diese Operation direkt auf der Tastatur anzuwählen.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_11/2. Icon_Knife" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Knife-Icon.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Ansicht im Schnitt-Modus</p>
+</div></div><p>Sobald das Knife-Werkzeug über die Toolbar oder die Taste <kbd aria-hidden="true">K</kbd><span class="visually-hidden">K</span> aktiviert wird, verwandelt sich der Mauszeiger in ein Messer. Wird die Maus nun über das Objekt bewegt, wird mittels eines grünen Vierecks angezeigt, an welcher Stelle am Objekt gerade geschnitten werden kann. Befindet sich an dieser Stelle zudem ein Vertex, wird dies durch eine rote Umrandung des grünen Vierecks signalisiert. Befindet sich das grüne Viereck an einem Edge, wird dieses Edge grün markiert.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Schnitte setzen</p>
+</div></div><p>Um Schnitte zu platzieren, wird die linke Maustaste gedrückt. Die Schnittpositionen werden anhand eines Vierecks markiert und weitere Schnitte können ebenfalls mit der linken Maustaste an der entsprechenden Position gesetzt werden. Dabei werden automatisch Edges zwischen den einzelnen Schnittpunkten erzeugt. Passieren Schnittpunkte ein Edge, wird an der Schnittstelle des Edges zudem automatisch ein Vertex erzeugt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Schnitte bestätigen oder abbrechen</p>
+</div></div><p>Mittels der Taste <kbd aria-hidden="true">Space</kbd><span class="visually-hidden">Space</span> oder <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span> wird der Schneidevorgang bestätigt. Dadurch wird der Schneidmodus verlassen und die entsprechenden Vertices und Edges werden gesetzt. Um den Schneideprozess abzubrechen, kann die rechte Maustaste oder <kbd aria-hidden="true">esc</kbd><span class="visually-hidden">esc</span>-Taste gedrückt werden.</p>
+</section>
+<section id="loop-cut" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="loop-cut">Loop Cut</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Prinzip des Loop Cuts</p>
+</div></div><p>Das Messer-Werkzeug ist nützlich, um kreativ und flexibel Schnitte zu erzeugen. Oftmals werden allerdings gerade Schnitte entlang einer ganzen Fläche benötigt, idealerweise auch in der Mitte der Fläche. Hierfür ist das Loop-Cut-Werkzeug geeignet. Nebst der exakten Mitte können auch andere Schnitteinheiten exakt berücksichtig werden, beispielsweise dass ein Bereich exakt nach einem Zehntel der Länge geschnitten werden soll.</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_11/3. Icon_LoopCut" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Loop-Cut-Icon.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Loop Cut mittels <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span></p>
+</div></div><p>Das Loop-Cut-Tool kann entweder in der Toolbar oder mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span> aktiviert werden. Wird anschliessend der Mauszeiger über die Oberfläche des Objekts bewegt, werden Vorschläge dargestellt, wie das Objekt gerade durchtrennt werden kann. Dabei werden aneinandergrenzende Faces als Loop berücksichtig, sodass sie durchtrennt werden können.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Mehrere Schnitte im Loop Cut setzen</p>
+</div></div><p>Es können auch mehrere parallele Schnitte gemacht werden. Hierfür wird die Anzahl Schnitte als Zahl über die Tastatur eingegeben. So kann etwa der Standardwürfel entlang einer Flächenreihe in vier gleich grosse Flächen unterteilt werden, indem die Taste <kbd aria-hidden="true">3</kbd><span class="visually-hidden">3</span> gedrückt wird. Dadurch werden drei Linien angezeigt, welche den Bereich in vier gleich grosse Teile unterteilen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Loop Cut bestätigen oder abbrechen</p>
+</div></div><p>Durch einen Klick mit der linken Maustaste oder <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span>-Taste wird bestätigt, dass das Objekt entlang der dargestellten Linie zerschnitten werden soll. Um den Schneideprozess abzubrechen, kann die rechte Maustaste, <kbd aria-hidden="true">Delete</kbd><span class="visually-hidden">Delete</span> oder <kbd aria-hidden="true">esc</kbd><span class="visually-hidden">esc</span> gedrückt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Loop Cut justieren</p>
+</div></div><p>Wenn die Auswahl der Linie bestätigt wird, kann anschliessend noch justiert werden, in welchem Bereich der Schnitt gemacht werden soll. Per Default liegt der Schnitt genau in der Mitte. Mittels einer Bewegung mit dem Mauszeiger kann der Schnitt entlang des Loops verschoben werden. Alternativ kann auch mittels einer Zahleneingabe über die Tastatur definiert werden, in welchem Bereich der Schnitt erfolgen soll. Mit einem Wert von 0.5 wird ein einzelner Schnitt prozentual um die Hälfte in die eine Richtung verschoben, mit einem Wert von -0.5 um die Hälfte in die andere Richtung. Durch einen Klick mit der linken Maustaste oder <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span>-Taste wird die Linie bestätigt und die Schnitte werden gesetzt. Durch das Drücken der <kbd aria-hidden="true">Delete</kbd><span class="visually-hidden">Delete</span>- oder <kbd aria-hidden="true">esc</kbd><span class="visually-hidden">esc</span>-Taste wird der Schnitt in der Mitte des Loops vollzogen.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+</div>
+<div class="tippbox-body">
+<p>Der Loop Cut kann auch auf Edges angewendet werden, die noch nicht Teil eines Faces sind. Dabei wird das Edge genau in der Mitte durch einen Vertex in zwei Edges unterteilt.</p>
+</div>
+</div>
+</section>
+<section id="edge-slide" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="edge-slide">Edge Slide</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Edge Slide</p>
+</div></div><p>Der Loop Cut beinhaltet somit zwei Schritte: Die Festlegung eines Schnittes innerhalb eines Loops und zusätzlich die Festlegung, in welchem Bereich des Face-Loops der Cut erfolgen soll. Letzterer Prozess kann bei der Auswahl eines Loops an bereits gesetzten Edges direkt erfolgen. Dieser Prozess wird als Edge Slide bezeichnet und ist in der Toolbar verfügbar. Dadurch lässt sich eine Reihe von Edges proportional entlang anderer Edges verschieben.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_11/4. Icon_EdgeSlide" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Edge-Slide-Icon.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="subdivide" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="subdivide">Subdivide</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Unterteilung mittels Loop Cut</p>
+</div></div><p>Dank des Loop Cuts ist es möglich, dass der Standardwürfel in gleich grosse Unterwürfel unterteilt wird. Hierfür muss lediglich auf alle drei Loops – also entlang der X-, Y- und Z-Achse – des Würfels ein Cut angewendet werden. Anschliessend ist jede Seite des Würfels in vier Faces unterteilt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Subdivision, um Objekte zu unterteilen</p>
+</div></div><p>Statt alle drei Loop Cuts einzeln zu erstellen, kann der Würfel mittels des Befehls «<em>Subdivide</em>» unterteilt werden. Dieser ist über das Menü «<em>Edge | Subdivide</em>» verfügbar. Anschliessend werden alle ausgewählten Faces entlang zweier Achsen unterteilt, sodass sie aus vier einzelnen Faces bestehen. Diese Aktion kann auch auf Edges angewendet werden, die nicht Teil eines Faces sind. Im Kontext-Menü zur letzten durchgeführten Aktion kann zudem die Anzahl Unterteilungen erhöht werden.</p>
+</section>
+<section id="bevel" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="bevel">Bevel</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Abrunden mittels <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">B</kbd><span class="visually-hidden">B</span></p>
+</div></div><p>Mithilfe der Bevel-Transformation können Kanten abgerundet werden. Hierfür wird das entsprechende Edge durch mehrere Edges ersetzt, sodass eine Abrundung der Kante erfolgt. Der Befehl für das Abschrägen kann über die Toolbar erfolgen oder mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">B</kbd><span class="visually-hidden">B</span>.</p>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_11/5. Icon_Bevel" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5: Bevel-Icon.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Abrundung durchführen</p>
+</div></div><p>Um eine Kante abrunden zu können, muss das entsprechende Edge zunächst ausgewählt werden. Nach der Auswahl kann die Bearbeitung mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">B</kbd><span class="visually-hidden">B</span> gestartet werden. Dadurch erscheint am Mauszeiger ein Faden, welcher zum Median der Auswahl führt. Durch das Bewegen des Mauszeigers vom Median weg werden die ausgewählten Edges in je zwei Edges aufgeteilt, die sich von den originalen Edges wegentfernen und dabei eine Abrundung bilden. Durch einen Klick mit der linken Maustaste oder <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span>-Taste wird die Abrundung zu einer bestimmten Position bestätigt. Durch das Drücken der rechten Maustaste, <kbd aria-hidden="true">Delete</kbd><span class="visually-hidden">Delete</span>- oder <kbd aria-hidden="true">esc</kbd><span class="visually-hidden">esc</span>-Taste wird der Vorgang abgebrochen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Abrundung verfeinern</p>
+</div></div><p>Im Kontext-Menü zur letzten durchgeführten Aktion sind weitere Optionen zur Abrundung möglich. So können die Anzahl Segmente, mit der die Abrundung erfolgt, noch erhöht werden. Je mehr Segmente, desto glatter wirkt die Abrundung. Zudem kann die Form anhand des Faktors für die «<em>Shape</em>» bearbeitet werden. Je näher dieser Faktor gegen 0 strebt, desto mehr erfolgt die Abrundung hin zum Inneren des Objektes, und je näher der Faktor gegen 1 strebt, desto mehr erfolgt die Abrundung hin zum Äusseren des Objektes.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Vertices abrunden</p>
+</div></div><p>Die Bevel-Transformation kann sowohl für Edges als auch für Vertices angewendet werden. Hierfür muss im Kontext-Menü zur letzten durchgeführten Aktion eingestellt werden, dass die Vertices bearbeitet werden anstelle der Edges. Hierfür werden unter der Zeile «<em>Affect</em>» die Vertices ausgewählt. Dadurch lassen sich Ecken abrunden. Durch die Auswahl von Edges bei der Zeile «<em>Affect</em>» werden die Kanten abgerundet.</p>
+</section>
+<section id="inset-faces" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="inset-faces">Inset Faces</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Intrusion mittels <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span></p>
+</div></div><p>Die Transformation «<em>Inset Faces</em>» stellt einen Spezialfall der Extrusion dar. Dabei wird eine Fläche unterteilt in zusätzliche Flächen innerhalb dieser Fläche. Wie auch bei der Extrusion werden dabei neue Vertices erstellt, welche direkt an den originalen Vertices andocken. Unterschiedlich ist allerdings, dass die neuen Vertices einen Teil der originalen Faces darstellen und somit entlang der Ausrichtung der Fläche vergrössert oder verkleinert werden können. Die Bearbeitung mittels Inset Faces kann entweder über die Toolbar oder mittels der Taste <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> erfolgen.</p>
+<div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_11/6. Icon_Inset_Faces" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6: Inset-Faces-Icon.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Intrusion durchführen</p>
+</div></div><p>Um die Bearbeitung zu starten, muss mindestens ein Face ausgewählt werden und die Taste <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> gedrückt werden. Wie auch beim Skalieren von Elementen ist der Mauszeiger nun mittels eines Fadens zum Median der Auswahl verbunden. Wenn die Maus näher zum Median hin bewegt wird, erscheinen zusätzliche Faces innerhalb der Auswahl, die jeweils kleiner werden, je näher der Mauszeiger dem Median kommt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Dicke der Intrusion</p>
+</div></div><p>Die Intrusion wird anhand der Breite der neu erstellten Faces beschrieben. Wird beispielsweise nach dem Drücken der Taste <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> die Taste <kbd aria-hidden="true">1</kbd><span class="visually-hidden">1</span> gedrückt, sind die neuen Faces jeweils um einen Meter von ihren ursprünglichen Edges entfernt. Durch zu hohe Zahlen kann dies dazu führen, dass sich die Faces kreuzen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Individuelle Intrusion</p>
+</div></div><p>Die Funktion Inset Faces kann zudem auf die Faces individuell angewendet werden. Im Normallfall werden zwei nebeneinander ausgewählte Faces gemeinsam bearbeitet. Es ist jedoch auch möglich, die Faces individuell anzusteuern, sodass die ausgewählten Faces individuell bearbeitet werden. Hierfür muss im Kontext-Menü zur letzten durchgeführten Aktion die Option «<em>Individual</em>» angewählt werden.</p>
+</section>
+<section id="spin" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="spin">Spin</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Spin</p>
+</div></div><p>Mittels «<em>Spin</em>» können einzelne oder mehrere Vertices in einer kreisförmigen Anordnung extrudiert werden. Wenn diese Transformation ausgewählt ist, erscheint in der Nähe des 3D-Cursors ein Gizmo, welches eine abgerundete Linie mit einem Plus-Symbol an beiden Enden darstellt. Falls dieses Gizmo nicht angezeigt wird, sollte überprüft werden, ob die Darstellung der Gizmos im 3D-Viewport aktiviert ist.</p>
+<div id="fig-1_7" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_11/7. Icon_Spin" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;7: Spin-Icon.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Spin durchführen</p>
+</div></div><p>Um Vertices nun kreisförmig zu extrudieren, müssen Sie zunächst ausgewählt werden. Anschliessend kann an einem der beiden Pluszeichen gezogen werden und die Vertices werden kreisförmig um den 3D-Cursor herum extrudiert. Dabei werden per Default zwölf Vertices erstellt – unabhängig davon, wie weit im Kreis extrudiert wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Spin verfeinern</p>
+</div></div><p>Im Kontext-Menü zur letzten durchgeführten Aktion kann die Aktion noch bearbeitet werden, sodass etwa die Anzahl extrudierter Vertices unter «<em>Steps</em>» verändert werden kann. Je mehr Vertices extrudiert werden, desto glatter wirkt der Kreis. Unter «<em>Angle</em>» kann mittels einer Winkelangabe eingestellt werden, wie weit die Extrusion um den 3D-Cursor herum erfolgen soll. Wenn die Zeile «<em>Auto Merge</em>» aktiviert ist, werden Vertices an derselben Position – beispielsweise die Vertices am Anfang und Ende einer 360°-Umdrehung – zu einem Vertex kombiniert.</p>
+</section>
+<section id="merge" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="merge">Merge</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Verbinden mittels <kbd aria-hidden="true">M</kbd><span class="visually-hidden">M</span></p>
+</div></div><p>In den bisherigen Transformationen wurden jeweils neue Vertices, Edges oder Faces hinzugefügt. Manchmal kommt es vor, dass einige Elemente wieder entfernt werden müssen, oder dass sie an einer Stelle verbunden werden müssen. Hierfür kann der Befehl «<em>Merge</em>» verwendet werden. Dieser lässt sich mittels der Taste innerhalb eines Menüs beim Mauszeiger auswählen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Elemente beim Median verbinden</p>
+</div></div><p>Wenn beispielsweise zwei Vertices ausgewählt werden und die Taste <kbd aria-hidden="true">M</kbd><span class="visually-hidden">M</span> gedrückt wird, können die Vertices durch «<em>At Center</em>» beim Median zwischen den beiden Vertices verbunden werden. Dabei werden die beiden Vertices zusammengeführt zu einem Vertex, welches alle Edges und Faces der originalen Vertices aufnimmt. Das Mergen kann zudem mit beliebig vielen Vertices vollzogen werden. Bei der Auswahl von Edges und Faces werden dabei die beteiligten Vertices zur Zusammenführung verwendet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Andere Verbindungspunkte</p>
+</div></div><p>Nebst dem Medianpunkt der Vertices können auch folgende Positionen zur Zusammenführung ausgewählt werden:</p>
+<ul>
+<li><p><strong>At Cursor</strong>: Die Vertices werden an der Position des 3D-Cursors zusammengeführt.</p></li>
+<li><p><strong>At First</strong>: Die Vertices werden beim Vertex, welcher als Erstes ausgewählt wurde, zusammengeführt.</p></li>
+<li><p><strong>At Last</strong>: Die Vertices werden beim Vertex, welcher als Letztes ausgewählt wurde, zusammengeführt.</p></li>
+<li><p><strong>Collapse</strong>: Wenn mehrere Edges ausgewählt werden, die nicht miteinander verbunden sind, werden die Vertices jeweils in der Mitte des jeweiligen Edges zusammengeführt. Das Zusammenführen erfolgt also hierbei einzeln für jedes Edge in dessen Mitte (bei den anderen Optionen werden alle Vertices an demselben Punkt zusammengeführt).</p></li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Merge by Distance</p>
+</div></div><p>Eine besondere Rolle kommt der Funktion «<em>Merge by Distance</em>» zu. Dabei werden alle Vertices zusammen verbunden, deren Distanz geringer als die vorgegebene Distanz ist. Im Kontext-Menü zur letzten Aktion lässt sich die Distanz, unterhalb derer alle Vertices verbunden werden sollen, an passen. Die Funktion wird allerdings nur auf die ausgewählten Vertices angewendet. In der Fussleiste von Blender wird temporär angegeben, wie viele Vertices bei dieser Aktion aufgelöst werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Merge erfolgt nur auf Auswahl</p>
+</div></div><p>Diese Methode ist besonders geeignet, um allfällige Vertices, welche an derselben Position wie andere Vertices liegen, zu eliminieren oder zu verbinden. Da die Aktion allerdings nur auf ausgewählte Vertices angewendet wird, empfiehlt es sich, vorgängig alle Vertices direkt mit der Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> auszuwählen.</p>
+</section>
+<section id="weitere-operationen-in-der-toolbar" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="weitere-operationen-in-der-toolbar">Weitere Operationen in der Toolbar</h2>
+<p>Nebst den bisher behandelten Operationen zur Objektbearbeitung im Edit-Mode bietet die Toolbar noch eine Reihe weiterer Optionen, welche der Vollständigkeit halber noch kurz aufgeführt werden.</p>
+<section id="add-cube" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="add-cube">Add Cube</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Würfel hinzufügen</p>
+</div></div><p>Mittels des Befehls «<em>Add Cube</em>» kann ein neuer Würfel erstellt werden. Um den Maus zeiger herum erscheint dadurch ein Gitternetz, um zu signalisieren, wo der Würfel erstellt wird. Anschliessend kann mittels gedrückter linken Maustaste der Grundriss des Würfels erstellt werden. Nachdem die linke Maustaste losgelassen wurde, lässt sich anschliessend noch die Höhe des Würfels einstellen, welche anschliessend mit bestätigt werden muss. Mit <kbd aria-hidden="true">esc</kbd><span class="visually-hidden">esc</span> oder die rechte Maustaste lässt sich der Vorgang abbrechen.</p>
+<div id="fig-1_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_11/8. Icon_AddCube" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8: Add-Cube-Icon.
+</figcaption>
+</figure>
+</div>
+<p>Die neu erstellten Würfel werden im Edit-Mode zu Bestandteilen des Objekts, welches gerade bearbeitet wird. Der Befehl «<em>Add Cube</em>» steht allerdings auch im Object-Mode zur Verfügung. Werden dort neue Würfel erstellt, bilden diese jeweils eigenständige Objekte.</p>
+</section>
+<section id="poly-build" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="poly-build">Poly Build</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Poly-Build-Modus</p>
+</div></div><p>Beim Poly Build handelt es sich um einen interaktiven Modus, um Geometrien zu erweitern. Dabei schlägt Blender bei gedrückter <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span>-Taste vor, wie neue Elemente erstellt werden können, und durch einen Klick mittels der linken Maustaste wird die Erstellung bestätigt. Mittels gedrückter linken Maustaste können Vertices bewegt werden und mittels der Kombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + linke Maustaste.</p>
+<div id="fig-1_9" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_11/9. Icon_PolyBuild" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;9: Poly-Build-Icon.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="smooth" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="smooth">Smooth</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Objekte glätten</p>
+</div></div><p>Mittels des Befehls «<em>Smooth</em>» können Objekte glatter gemacht werden. Dies geschieht, indem die Winkel der Edges gemittelt werden. Statt eines 90°-Winkels entsteht dann ein flacherer Winkel. Es ist allerdings auch möglich, den gegenteiligen Effekt zu erzielen und Winkel spitzer zu machen.</p>
+<div id="fig-1_10" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_11/10. Icon_Smooth" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;10: Smooth-Icon.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="shrinkfatten" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="shrinkfatten">Shrink/Fatten</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Objekte zusammenziehen oder aufblähen</p>
+</div></div><p>Beim Befehl «<em>Shrink/Fatten</em>» werden die ausgewählten Vertices entlang ihrer eigenen Normalen bewegt. Dadurch kann das Objekt aufgebläht oder zusammengezogen werden. Dies ist beispielsweise nützlich, wenn der Mantel eines Zylinders ausgewählt und sein Radius vergrössert werden soll, ohne dessen Höhe zu verändern.</p>
+<div id="fig-1_11" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_11/11. Icon_ShrinkenFatten" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;11: Shrink/Fatten-Icon.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="shear" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="shear">Shear</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Objekte auseinanderziehen</p>
+</div></div><p>Mittels der Shear-Transformation werden die ausgewählten Punkte in einer Achse aus einandergezogen. Die Transformation geschieht dabei so, dass parallel verlaufende Linien geschert und in entgegengesetzte Richtungen auf einer Achse verschoben werden.</p>
+<div id="fig-1_12" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_11/12. Icon_Shear" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;12: Shear-Icon.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="rip-region" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="rip-region">Rip Region</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Regionen aufteilen</p>
+</div></div><p>Mittels des Befehls «<em>Rip Region</em>» können Vertices, welche an mehreren Faces andocken, aufgeteilt werden. Die Faces werden dabei an der Stelle der entsprechenden Vertices getrennt und durch Vertices, welche sozusagen von den originalen Vertices abgezogen werden, neu gebildet.</p>
+<div id="fig-1_13" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_11/13. Icon_RipRegion" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13: Rip-Region-Icon.
+</figcaption>
+</figure>
+</div>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Übung 7: Objektbearbeitung</p>
+</div>
+<div class="tippbox-body">
+<p>Übung 7.1<br>
+Verändern Sie den Standardwürfel im Edit-Mode so, dass er die Form eines Hauses hat.</p>
+<p>Übung 7.2<br>
+Erstellen Sie eine Vase. Die Vase sollte rund sein und eine Öffnung haben – ansonsten sind Sie frei in Ihrer Gestaltung. Achten Sie zudem darauf, dass Sie unterschiedliche Faces für den Innenbereich und für den Aussenbereich der Vase verwenden, sodass die Vase ein gewisse Dicke besitzt.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Images/Chapter_11/Übung_7.2 vase.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
+</figure>
+</div>
+</div>
 
 
+</div>
+</section>
 </section>
 
 </main> <!-- /main -->

@@ -336,69 +336,6 @@
     "text": "Transformationen sperren\n\n\nTransformationen sperren\nNeben den Werten für die Position, Rotation und Skalierung befinden sich drei aufgeschlossene Schlösser. Durch das Anklicken dieser Schlösser lässt sich die dazugehörige Eigenschaft auf einer Achse sperren, sodass sie nicht mehr verändert werden kann. Das entsprechende Symbol verändert sich dadurch zu einem geschlossenen Schloss.\n\n\nSperrung gilt nur für Viewport-Display\nDie Werte links neben dem Schloss lassen sich allerdings immer noch verändern, was kontraintuitiv wirken mag. Dies liegt daran, dass sich diese Sperrung auf Veränderungen mittels des Viewport Displays bezieht, welche nun als Nächstes betrachtet werden.\n\n\n\n\n\nÜbung 3: Verwendung der Sidebar\n\n\nÜbung 3.1\nVersuchen Sie den Standardwürfel so zu skalieren, dass er entsprechend der Abbildung einen in die Höhe ragenden Quader darstellt.\nÜbung 3.2\nVersuchen Sie den Standardwürfel so zu verändern, dass er aus der orthogonalen (Taste ) Vorder/Rück-Ansicht (Taste ) nicht mehr sichtbar ist.\n\n\n\n\n\n\n\nMerke…\n\n\nDie drei Transformationen Location, Rotation und Scale aus der Sidebar beziehen sich alle drei jeweils auf den Ursprung des Objektes.\nDimension des Objektes hängt mit dessen Skalierung zusammen."
   },
   {
-    "objectID": "index.html#lorem",
-    "href": "index.html#lorem",
-    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
-    "section": "Lorem",
-    "text": "Lorem\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n\n\n\n\nÜbung\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
-  },
-  {
-    "objectID": "index.html#lorem-ipsum-dolor",
-    "href": "index.html#lorem-ipsum-dolor",
-    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
-    "section": "Lorem ipsum dolor",
-    "text": "Lorem ipsum dolor\n\n\n\n\n\nWeiterführende Informationen\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
-  },
-  {
-    "objectID": "index.html#lorem-ipsum-dolor-1",
-    "href": "index.html#lorem-ipsum-dolor-1",
-    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
-    "section": "Lorem ipsum dolor",
-    "text": "Lorem ipsum dolor\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et\n\n\n\n\n\nMerke…\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et"
-  },
-  {
-    "objectID": "Sites/chapter_overview.html#skript-kapitel",
-    "href": "Sites/chapter_overview.html#skript-kapitel",
-    "title": "Kursübersicht",
-    "section": "Skript-Kapitel:",
-    "text": "Skript-Kapitel:\n\nVorbereitung von Blender\nDie Arbeitsoberfläche des 3D-Viewports\nNavigation der Ansicht im 3D-Viewport\nErste Schritte\nObjektarten\nPrimitive Meshes\nMethoden der Objekt-Transformation\nObjekte im Viewport-Display transformieren\nObject- und Edit-Mode\nEinstieg in den Edit-Mode\nMethoden der Objektbearbeitung im Edit-Mode\nHilfestellungen für die Objektbearbeitung\nTutorial: Erstellen eines Glases\nObjekterstellung mittels Modifiern\nEigenschaften innerhalb eines Meshes definieren\nMaterialien, Texturen und Shader\nMaterialien\nDer Shader-Editor\nGrundlegende Eigenschaften von Materialien\nTutorial: Strandball\nTexturen\nUVs\nTexturen zu einem Material hinzufügen\nTexturen für Parameter verwenden\nWelche Bilder eignen sich als Texturen?\nArten von Texturen\nTutorial: Einen Hammer texturieren\nDisplacement mit dem Displacement-Modifier erstellen\nErstellen von Landschaften\nTutorial: Erstellen einer Düne\nParameter im Principled-BSDF-Shader\nDer Wechsel von Eevee zu Cycles am Beispiel von Glas\nLichtquellen in einer Szene\nLichtobjekte\nWelten\nKamera\nRendern\nTutorial: Ein Glas mit Wasser erstellen\nBäume mittels Add-on erstellen\nWorkflows der Charaktererstellung\nCharacter-Modeling\nTutorial: Eine Cartoon-Katze als Charakter erstellen\nWas ist Rigging?\nObjekte mit Armaturen verformen\nCharakter-Rigging\nVom Bild zur Animation\nAnimationen erstellen\nAnimationen verfeinern\nAnimationen rendern"
-  },
-  {
-    "objectID": "Sites/Overview.html",
-    "href": "Sites/Overview.html",
-    "title": "Kursübersicht",
-    "section": "",
-    "text": "Woche\nPraxis\nKapitel\nTheorie\nLiteratur\nFolien\nAbgabe\n\n\n\n\n1\nDie Arbeitsoberfläche von Blender\nEigenschaften von 3D-Objekten\n1, 2, 3, 4, 5, 6, 7, 8, 9\nOrganisatorisches\nBedeutung von 3D-Objekten\nTarr et al. (1998)\nSitzung 1\n\n\n\n2\nGrundmechanismen der Objektbearbeitung I\n10, 11, 12\n\n\n\n\n\n\n3\nGrundmechanismen der Objektbearbeitung II\n13, 14\nReferenzbilder oder Fantasie?\nBrainbridge et al. (2021)\n\n\n\n\n4\nObjektbearbeitung mit Modifiers\n15, 16\n\n\n\n1\n\n\n5\nMaterialien\n17, 18, 19, 20, 21\nVisuelle Wahrnehmung von Materialien\nFlemming (2014)\n\n\n\n\n6\nTexturen\n22, 23, 24, 25, 26, 27, 28\nLizenzen & Lizenzarten\n\n\n2\n\n\n7\nPhysical based Rendering\n29, 30, 31, 32, 33\nCartoon oder Realismus?\n\n\n\n\n\n8\nBeleuchtung und Welten\n34, 35\nFarbwahrnehmung unter Beleuchtung\nBrainard & Hurlbert (2015)\n\n3\n\n\n9\nPartikel/Haare, Kamera & Rendering\n36, 37, 38\nDateiformate & Hardware\nJoon (2010)\n\n\n\n\n10\nWorkflow der Charaktererstellung\n39, 40, 41, 42\nUncanny Valley Effect\nKätsyri et al. (2015)\n\n4\n\n\n11\nCharacter Rigging\n43, 44, 45\nFotorealismus\n\n\n\n\n\n12\nAnimationen\n46, 47\nWahrnehmung von Animationen\nScholl & Tremoulet (2000)\n\n5\n\n\n13\nBlender in VR\n\nVirtual Reality\n\n\n6\n\n\n14\nAbschluss"
-  },
-  {
-    "objectID": "Sites/Overview.html#semesterplan",
-    "href": "Sites/Overview.html#semesterplan",
-    "title": "Kursübersicht",
-    "section": "",
-    "text": "Woche\nPraxis\nKapitel\nTheorie\nLiteratur\nFolien\nAbgabe\n\n\n\n\n1\nDie Arbeitsoberfläche von Blender\nEigenschaften von 3D-Objekten\n1, 2, 3, 4, 5, 6, 7, 8, 9\nOrganisatorisches\nBedeutung von 3D-Objekten\nTarr et al. (1998)\nSitzung 1\n\n\n\n2\nGrundmechanismen der Objektbearbeitung I\n10, 11, 12\n\n\n\n\n\n\n3\nGrundmechanismen der Objektbearbeitung II\n13, 14\nReferenzbilder oder Fantasie?\nBrainbridge et al. (2021)\n\n\n\n\n4\nObjektbearbeitung mit Modifiers\n15, 16\n\n\n\n1\n\n\n5\nMaterialien\n17, 18, 19, 20, 21\nVisuelle Wahrnehmung von Materialien\nFlemming (2014)\n\n\n\n\n6\nTexturen\n22, 23, 24, 25, 26, 27, 28\nLizenzen & Lizenzarten\n\n\n2\n\n\n7\nPhysical based Rendering\n29, 30, 31, 32, 33\nCartoon oder Realismus?\n\n\n\n\n\n8\nBeleuchtung und Welten\n34, 35\nFarbwahrnehmung unter Beleuchtung\nBrainard & Hurlbert (2015)\n\n3\n\n\n9\nPartikel/Haare, Kamera & Rendering\n36, 37, 38\nDateiformate & Hardware\nJoon (2010)\n\n\n\n\n10\nWorkflow der Charaktererstellung\n39, 40, 41, 42\nUncanny Valley Effect\nKätsyri et al. (2015)\n\n4\n\n\n11\nCharacter Rigging\n43, 44, 45\nFotorealismus\n\n\n\n\n\n12\nAnimationen\n46, 47\nWahrnehmung von Animationen\nScholl & Tremoulet (2000)\n\n5\n\n\n13\nBlender in VR\n\nVirtual Reality\n\n\n6\n\n\n14\nAbschluss"
-  },
-  {
-    "objectID": "Sites/Overview.html#skript-kapitel",
-    "href": "Sites/Overview.html#skript-kapitel",
-    "title": "Kursübersicht",
-    "section": "Skript-Kapitel:",
-    "text": "Skript-Kapitel:\n\nVorbereitung von Blender\nDie Arbeitsoberfläche des 3D-Viewports\nNavigation der Ansicht im 3D-Viewport\nErste Schritte\nObjektarten\nPrimitive Meshes\nMethoden der Objekt-Transformation\nObjekte im Viewport-Display transformieren\nObject- und Edit-Mode\nEinstieg in den Edit-Mode\nMethoden der Objektbearbeitung im Edit-Mode\nHilfestellungen für die Objektbearbeitung\nTutorial: Erstellen eines Glases\nObjekterstellung mittels Modifiern\nEigenschaften innerhalb eines Meshes definieren\nMaterialien, Texturen und Shader\nMaterialien\nDer Shader-Editor\nGrundlegende Eigenschaften von Materialien\nTutorial: Strandball\nTexturen\nUVs\nTexturen zu einem Material hinzufügen\nTexturen für Parameter verwenden\nWelche Bilder eignen sich als Texturen?\nArten von Texturen\nTutorial: Einen Hammer texturieren\nDisplacement mit dem Displacement-Modifier erstellen\nErstellen von Landschaften\nTutorial: Erstellen einer Düne\nParameter im Principled-BSDF-Shader\nDer Wechsel von Eevee zu Cycles am Beispiel von Glas\nLichtquellen in einer Szene\nLichtobjekte\nWelten\nKamera\nRendern\nTutorial: Ein Glas mit Wasser erstellen\nBäume mittels Add-on erstellen\nWorkflows der Charaktererstellung\nCharacter-Modeling\nTutorial: Eine Cartoon-Katze als Charakter erstellen\nWas ist Rigging?\nObjekte mit Armaturen verformen\nCharakter-Rigging\nVom Bild zur Animation\nAnimationen erstellen\nAnimationen verfeinern\nAnimationen rendern"
-  },
-  {
-    "objectID": "Sites/Overview.html#literatur",
-    "href": "Sites/Overview.html#literatur",
-    "title": "Kursübersicht",
-    "section": "Literatur",
-    "text": "Literatur\nBrainard, D. H., & Hurlbert, A. C. (2015). Colour vision: understanding# TheDress. Current Biology, 25(13), R551-R554.\nBainbridge, W. A., Pounder, Z., Eardley, A. F., & Baker, C. I. (2021). Quantifying Aphantasia through drawing: Those without visual imagery show deficits in object but not spatial memory. Cortex, 135, 159-172.\nFleming, R. W. (2014). Visual perception of materials and their properties. Vision research, 94, 62-75.\nJoon, J. S. (2010, August). Principles of photorealism to develop photorealistic visualisation for interface design: A review. In 2010 Seventh International Conference on Computer Graphics, Imaging and Visualization (pp. 17-25). IEEE.\nKätsyri, J., Förger, K., Mäkäräinen, M., & Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses: support for perceptual mismatch as one road to the valley of eeriness. Frontiers in psychology, 6, 390.\nScholl, B. J., & Tremoulet, P. D. (2000). Perceptual causality and animacy. Trends in cognitive sciences, 4(8), 299-309.\nTarr, M. J., Williams, P., Hayward, W. G., & Gauthier, I. (1998). Three-dimensional object recognition is viewpoint dependent. Nature neuroscience, 1(4), 275-277."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Über",
-    "section": "",
-    "text": "Folgt…"
-  },
-  {
     "objectID": "Chapters/Chapter_10.html",
     "href": "Chapters/Chapter_10.html",
     "title": "10. Einstieg in den Edit-Mode",
@@ -432,6 +369,90 @@
     "title": "10. Einstieg in den Edit-Mode",
     "section": "Globale vs. lokale Koordinaten",
     "text": "Globale vs. lokale Koordinaten\n\n\nGlobale Koordinaten\nIm Edit-Mode gibt es zwei Arten von 3D-Koordinaten, mit denen die Position eines Vertex – respektive der Median der Auswahl mehrerer Vertices – angegeben wird: die globalen und die lokalen Koordinaten. Die globalen Koordinaten entsprechen denselben Koordinaten, die auch im Object Mode verwendet werden. Diese beziehen sich auf den Ursprung der Welt, welcher sich an der Position 0 aller drei Achsen befindet. Dabei handelt es sich auch um den Punkt, an dem sich die Achsen im 3D-Viewport kreuzen.\n\n\nLokale Koordinaten\nDie lokalen Koordinaten beziehen sich jeweils auf die Koordinaten des aktuellen Objektes. Das heisst, dass diese Koordinaten sich immer auf den Ursprung des Objektes beziehen. Wenn sich der Ursprung des Objektes am Nullpunkt aller drei Achsen befindet und keine Skalierung oder Rotation auf das Objekt angewendet wird, dann sind die globalen und die lokalen Koordinaten identisch. Wenn sich der Ursprung allerdings an einer anderen Stelle im Raum befindet, beziehen sich die lokalen Koordinaten immer auf den Ursprung des Objektes als Nullpunkt.\n\n\nSkalierung und Rotation des Objekts sind unabhängig vom Edit-Mode\nZudem bleiben die lokalen Koordinaten auch unangetastet von Skalierungen und Rotationen, welche im Object-Mode für ein Objekt angegeben wurden. Wird der Default-Cube im Object-Mode gedreht, verändert sich die Position der Vertices also in den globalen Koordinaten, allerdings nicht in den lokalen Koordinaten.\n\n\n\n\n\nÜbung 5: Edit-Mode\n\n\nÜbung 5.1\nVerändern Sie den Default-Cube so, dass die Position der einzelnen Vertices in der globalen Koordinate gegenüber der lokalen Koordinate doppelt so hohe absolute Beträge aufweisen.\nÜbung 5.2\nVerändern Sie den Default-Cube so, dass sich sein Ursprung nicht mehr in der Mitte seines Volumens befindet, sondern in der Mitte seiner unteren Fläche."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "Über",
+    "section": "",
+    "text": "Folgt…"
+  },
+  {
+    "objectID": "Sites/Overview.html",
+    "href": "Sites/Overview.html",
+    "title": "Kursübersicht",
+    "section": "",
+    "text": "Woche\nPraxis\nKapitel\nTheorie\nLiteratur\nFolien\nAbgabe\n\n\n\n\n1\nDie Arbeitsoberfläche von Blender\nEigenschaften von 3D-Objekten\n1, 2, 3, 4, 5, 6, 7, 8, 9\nOrganisatorisches\nBedeutung von 3D-Objekten\nTarr et al. (1998)\nSitzung 1\n\n\n\n2\nGrundmechanismen der Objektbearbeitung I\n10, 11, 12\n\n\n\n\n\n\n3\nGrundmechanismen der Objektbearbeitung II\n13, 14\nReferenzbilder oder Fantasie?\nBrainbridge et al. (2021)\n\n\n\n\n4\nObjektbearbeitung mit Modifiers\n15, 16\n\n\n\n1\n\n\n5\nMaterialien\n17, 18, 19, 20, 21\nVisuelle Wahrnehmung von Materialien\nFlemming (2014)\n\n\n\n\n6\nTexturen\n22, 23, 24, 25, 26, 27, 28\nLizenzen & Lizenzarten\n\n\n2\n\n\n7\nPhysical based Rendering\n29, 30, 31, 32, 33\nCartoon oder Realismus?\n\n\n\n\n\n8\nBeleuchtung und Welten\n34, 35\nFarbwahrnehmung unter Beleuchtung\nBrainard & Hurlbert (2015)\n\n3\n\n\n9\nPartikel/Haare, Kamera & Rendering\n36, 37, 38\nDateiformate & Hardware\nJoon (2010)\n\n\n\n\n10\nWorkflow der Charaktererstellung\n39, 40, 41, 42\nUncanny Valley Effect\nKätsyri et al. (2015)\n\n4\n\n\n11\nCharacter Rigging\n43, 44, 45\nFotorealismus\n\n\n\n\n\n12\nAnimationen\n46, 47\nWahrnehmung von Animationen\nScholl & Tremoulet (2000)\n\n5\n\n\n13\nBlender in VR\n\nVirtual Reality\n\n\n6\n\n\n14\nAbschluss"
+  },
+  {
+    "objectID": "Sites/Overview.html#semesterplan",
+    "href": "Sites/Overview.html#semesterplan",
+    "title": "Kursübersicht",
+    "section": "",
+    "text": "Woche\nPraxis\nKapitel\nTheorie\nLiteratur\nFolien\nAbgabe\n\n\n\n\n1\nDie Arbeitsoberfläche von Blender\nEigenschaften von 3D-Objekten\n1, 2, 3, 4, 5, 6, 7, 8, 9\nOrganisatorisches\nBedeutung von 3D-Objekten\nTarr et al. (1998)\nSitzung 1\n\n\n\n2\nGrundmechanismen der Objektbearbeitung I\n10, 11, 12\n\n\n\n\n\n\n3\nGrundmechanismen der Objektbearbeitung II\n13, 14\nReferenzbilder oder Fantasie?\nBrainbridge et al. (2021)\n\n\n\n\n4\nObjektbearbeitung mit Modifiers\n15, 16\n\n\n\n1\n\n\n5\nMaterialien\n17, 18, 19, 20, 21\nVisuelle Wahrnehmung von Materialien\nFlemming (2014)\n\n\n\n\n6\nTexturen\n22, 23, 24, 25, 26, 27, 28\nLizenzen & Lizenzarten\n\n\n2\n\n\n7\nPhysical based Rendering\n29, 30, 31, 32, 33\nCartoon oder Realismus?\n\n\n\n\n\n8\nBeleuchtung und Welten\n34, 35\nFarbwahrnehmung unter Beleuchtung\nBrainard & Hurlbert (2015)\n\n3\n\n\n9\nPartikel/Haare, Kamera & Rendering\n36, 37, 38\nDateiformate & Hardware\nJoon (2010)\n\n\n\n\n10\nWorkflow der Charaktererstellung\n39, 40, 41, 42\nUncanny Valley Effect\nKätsyri et al. (2015)\n\n4\n\n\n11\nCharacter Rigging\n43, 44, 45\nFotorealismus\n\n\n\n\n\n12\nAnimationen\n46, 47\nWahrnehmung von Animationen\nScholl & Tremoulet (2000)\n\n5\n\n\n13\nBlender in VR\n\nVirtual Reality\n\n\n6\n\n\n14\nAbschluss"
+  },
+  {
+    "objectID": "Sites/Overview.html#skript-kapitel",
+    "href": "Sites/Overview.html#skript-kapitel",
+    "title": "Kursübersicht",
+    "section": "Skript-Kapitel:",
+    "text": "Skript-Kapitel:\n\nVorbereitung von Blender\nDie Arbeitsoberfläche des 3D-Viewports\nNavigation der Ansicht im 3D-Viewport\nErste Schritte\nObjektarten\nPrimitive Meshes\nMethoden der Objekt-Transformation\nObjekte im Viewport-Display transformieren\nObject- und Edit-Mode\nEinstieg in den Edit-Mode\nMethoden der Objektbearbeitung im Edit-Mode\nHilfestellungen für die Objektbearbeitung\nTutorial: Erstellen eines Glases\nObjekterstellung mittels Modifiern\nEigenschaften innerhalb eines Meshes definieren\nMaterialien, Texturen und Shader\nMaterialien\nDer Shader-Editor\nGrundlegende Eigenschaften von Materialien\nTutorial: Strandball\nTexturen\nUVs\nTexturen zu einem Material hinzufügen\nTexturen für Parameter verwenden\nWelche Bilder eignen sich als Texturen?\nArten von Texturen\nTutorial: Einen Hammer texturieren\nDisplacement mit dem Displacement-Modifier erstellen\nErstellen von Landschaften\nTutorial: Erstellen einer Düne\nParameter im Principled-BSDF-Shader\nDer Wechsel von Eevee zu Cycles am Beispiel von Glas\nLichtquellen in einer Szene\nLichtobjekte\nWelten\nKamera\nRendern\nTutorial: Ein Glas mit Wasser erstellen\nBäume mittels Add-on erstellen\nWorkflows der Charaktererstellung\nCharacter-Modeling\nTutorial: Eine Cartoon-Katze als Charakter erstellen\nWas ist Rigging?\nObjekte mit Armaturen verformen\nCharakter-Rigging\nVom Bild zur Animation\nAnimationen erstellen\nAnimationen verfeinern\nAnimationen rendern"
+  },
+  {
+    "objectID": "Sites/Overview.html#literatur",
+    "href": "Sites/Overview.html#literatur",
+    "title": "Kursübersicht",
+    "section": "Literatur",
+    "text": "Literatur\nBrainard, D. H., & Hurlbert, A. C. (2015). Colour vision: understanding# TheDress. Current Biology, 25(13), R551-R554.\nBainbridge, W. A., Pounder, Z., Eardley, A. F., & Baker, C. I. (2021). Quantifying Aphantasia through drawing: Those without visual imagery show deficits in object but not spatial memory. Cortex, 135, 159-172.\nFleming, R. W. (2014). Visual perception of materials and their properties. Vision research, 94, 62-75.\nJoon, J. S. (2010, August). Principles of photorealism to develop photorealistic visualisation for interface design: A review. In 2010 Seventh International Conference on Computer Graphics, Imaging and Visualization (pp. 17-25). IEEE.\nKätsyri, J., Förger, K., Mäkäräinen, M., & Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses: support for perceptual mismatch as one road to the valley of eeriness. Frontiers in psychology, 6, 390.\nScholl, B. J., & Tremoulet, P. D. (2000). Perceptual causality and animacy. Trends in cognitive sciences, 4(8), 299-309.\nTarr, M. J., Williams, P., Hayward, W. G., & Gauthier, I. (1998). Three-dimensional object recognition is viewpoint dependent. Nature neuroscience, 1(4), 275-277."
+  },
+  {
+    "objectID": "Sites/chapter_overview.html#skript-kapitel",
+    "href": "Sites/chapter_overview.html#skript-kapitel",
+    "title": "Kursübersicht",
+    "section": "Skript-Kapitel:",
+    "text": "Skript-Kapitel:\n\nVorbereitung von Blender\nDie Arbeitsoberfläche des 3D-Viewports\nNavigation der Ansicht im 3D-Viewport\nErste Schritte\nObjektarten\nPrimitive Meshes\nMethoden der Objekt-Transformation\nObjekte im Viewport-Display transformieren\nObject- und Edit-Mode\nEinstieg in den Edit-Mode\nMethoden der Objektbearbeitung im Edit-Mode\nHilfestellungen für die Objektbearbeitung\nTutorial: Erstellen eines Glases\nObjekterstellung mittels Modifiern\nEigenschaften innerhalb eines Meshes definieren\nMaterialien, Texturen und Shader\nMaterialien\nDer Shader-Editor\nGrundlegende Eigenschaften von Materialien\nTutorial: Strandball\nTexturen\nUVs\nTexturen zu einem Material hinzufügen\nTexturen für Parameter verwenden\nWelche Bilder eignen sich als Texturen?\nArten von Texturen\nTutorial: Einen Hammer texturieren\nDisplacement mit dem Displacement-Modifier erstellen\nErstellen von Landschaften\nTutorial: Erstellen einer Düne\nParameter im Principled-BSDF-Shader\nDer Wechsel von Eevee zu Cycles am Beispiel von Glas\nLichtquellen in einer Szene\nLichtobjekte\nWelten\nKamera\nRendern\nTutorial: Ein Glas mit Wasser erstellen\nBäume mittels Add-on erstellen\nWorkflows der Charaktererstellung\nCharacter-Modeling\nTutorial: Eine Cartoon-Katze als Charakter erstellen\nWas ist Rigging?\nObjekte mit Armaturen verformen\nCharakter-Rigging\nVom Bild zur Animation\nAnimationen erstellen\nAnimationen verfeinern\nAnimationen rendern"
+  },
+  {
+    "objectID": "index.html#lorem",
+    "href": "index.html#lorem",
+    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
+    "section": "Lorem",
+    "text": "Lorem\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\n\n\n\n\nÜbung\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+  },
+  {
+    "objectID": "index.html#lorem-ipsum-dolor",
+    "href": "index.html#lorem-ipsum-dolor",
+    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
+    "section": "Lorem ipsum dolor",
+    "text": "Lorem ipsum dolor\n\n\n\n\n\nWeiterführende Informationen\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+  },
+  {
+    "objectID": "index.html#lorem-ipsum-dolor-1",
+    "href": "index.html#lorem-ipsum-dolor-1",
+    "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender",
+    "section": "Lorem ipsum dolor",
+    "text": "Lorem ipsum dolor\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et\n\n\n\n\n\nMerke…\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam\n\n\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et"
+  },
+  {
+    "objectID": "Chapters/Chapter_11.html",
+    "href": "Chapters/Chapter_11.html",
+    "title": "11. Methoden der Objektbearbeitung im Edit-Mode",
+    "section": "",
+    "text": "Elemente verbinden mittels FF\nWie bereits angesprochen können Elemente mittels der Taste DD dupliziert werden und an einer anderen Stelle platziert werden. Diese neuen Elemente sind weder durch Edges noch durch Faces mit der originalen Struktur verbunden. Hierfür kann der Befehl «Fill» benutzt werden, um Elemente zu verbinden. Mittels der Taste FF wird der Befehl «Fill» gegeben. Werden etwa zwei einzelne Vertices ausgewählt, werden diese mit diesem Befehl durch ein Edge verbunden. Werden drei einzelne Vertices ausgewählt, werden diese nicht nur durch Edges verbunden, sondern zugleich auch mit einem Face."
+  },
+  {
+    "objectID": "Chapters/Chapter_11.html#fill",
+    "href": "Chapters/Chapter_11.html#fill",
+    "title": "11. Methoden der Objektbearbeitung im Edit-Mode",
+    "section": "",
+    "text": "Elemente verbinden mittels FF\nWie bereits angesprochen können Elemente mittels der Taste DD dupliziert werden und an einer anderen Stelle platziert werden. Diese neuen Elemente sind weder durch Edges noch durch Faces mit der originalen Struktur verbunden. Hierfür kann der Befehl «Fill» benutzt werden, um Elemente zu verbinden. Mittels der Taste FF wird der Befehl «Fill» gegeben. Werden etwa zwei einzelne Vertices ausgewählt, werden diese mit diesem Befehl durch ein Edge verbunden. Werden drei einzelne Vertices ausgewählt, werden diese nicht nur durch Edges verbunden, sondern zugleich auch mit einem Face."
+  },
+  {
+    "objectID": "Chapters/Chapter_11.html#extrude",
+    "href": "Chapters/Chapter_11.html#extrude",
+    "title": "11. Methoden der Objektbearbeitung im Edit-Mode",
+    "section": "Extrude",
+    "text": "Extrude\n\n\nExtrudieren mittels EE\nWenn Elemente dupliziert werden, wird jeweils die Fill-Funktion verwendet, um sie wieder mit ihren ursprünglichen Elementen zu verbinden. Dies ist beschwerlich. Zudem muss auch darauf geachtet werden, dass allfällige innere Faces wieder entfernt werden. Deshalb wird selten mit dem Duplizieren gearbeitet, sondern mit der Funktion «Extrude». Diese Funktion ist in der Toolbar verfügbar, kann aber auch direkt mit der Taste EE ausgewählt werden.\n\n\n\n\n\n\nAbbildung 1: Extrude-Icon\n\n\n\n\n\nExtrusion verbindet Elemente direkt\nBeim Extrudieren von Elementen werden diese Elemente nicht nur dupliziert, sondern auch automatisch mit den originalen Elementen verbunden. Wird bei der Auswahl eines Faces die Taste gedrückt, wird dieses Face von der originalen Position gelöst und kann verschoben werden. Gleichzeitig ist es allerdings über weitere Faces noch mit den Vertices des originalen Faces verbunden. Beim Extrudieren werden also die ausgewählten Elemente aus dem Objekt herausgezogen, ohne die originalen Vertices zu löschen.\n\n\nBeim Extrudieren erzeugte Elemente\nNebst Faces lassen sich auch Vertices und Edges extrudieren. Wenn ein einzelner Vertex extrudiert wird, generiert Blender automatisch ein Edge zwischen dem originalen Vertex und dem extrudierten Vertex. Wenn ein Edge extrudiert wird, generiert Blender automatisch ein Face zwischen dem originalen Edge und dem neuen Edge. Wird ein Face extrudiert, werden automatisch Faces zwischen den originalen Vertices/Edges und den neuen Vertices/Edges erstellt.\n\n\nExtrudieren präzisieren\nWie auch bei Transformationen kann die Extrusion mittels der Tasten XX, YY oder ZZ auf einzelne Achsen beschränkt werden und mittels der Angabe von Zahlen angegeben werden, wie gross die Distanz zum originalen Median der Auswahl sein soll. Zudem kann das Extrudieren auch mittels der Taste mit einer Skalierung verbunden werden.\n\n\nFaces werden per Default entlang Normalen extrudiert\n\n\n\n\n\nÜbung 6: Extrudieren\n\n\nÜbung 6.1\nErstellen Sie folgende Objekte ausgehend von einem Würfel."
   },
   {
     "objectID": "Chapters/Chapter_3.html",

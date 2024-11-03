@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6. Primitive Meshes – Creating the World</title>
+<title>11. Methoden der Objektbearbeitung im Edit-Mode – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -197,16 +199,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#plane" id="toc-plane" class="nav-link active" data-scroll-target="#plane">Plane</a></li>
-  <li><a href="#cube" id="toc-cube" class="nav-link" data-scroll-target="#cube">Cube</a></li>
-  <li><a href="#circle" id="toc-circle" class="nav-link" data-scroll-target="#circle">Circle</a></li>
-  <li><a href="#uv-sphere" id="toc-uv-sphere" class="nav-link" data-scroll-target="#uv-sphere">UV Sphere</a></li>
-  <li><a href="#ico-sphere" id="toc-ico-sphere" class="nav-link" data-scroll-target="#ico-sphere">Ico Sphere</a></li>
-  <li><a href="#cylinder" id="toc-cylinder" class="nav-link" data-scroll-target="#cylinder">Cylinder</a></li>
-  <li><a href="#cone" id="toc-cone" class="nav-link" data-scroll-target="#cone">Cone</a></li>
-  <li><a href="#torus" id="toc-torus" class="nav-link" data-scroll-target="#torus">Torus</a></li>
-  <li><a href="#grid" id="toc-grid" class="nav-link" data-scroll-target="#grid">Grid</a></li>
-  <li><a href="#monkey" id="toc-monkey" class="nav-link" data-scroll-target="#monkey">Monkey</a></li>
+  <li><a href="#fill" id="toc-fill" class="nav-link active" data-scroll-target="#fill">Fill</a></li>
+  <li><a href="#extrude" id="toc-extrude" class="nav-link" data-scroll-target="#extrude">Extrude</a></li>
   </ul>
 </nav>
     </div>
@@ -215,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">6. Primitive Meshes</h1>
+<h1 class="title">11. Methoden der Objektbearbeitung im Edit-Mode</h1>
 </div>
 
 
@@ -232,101 +226,61 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="fill" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="fill">Fill</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Primitives</p>
-</div></div><p>Wie bereits erwähnt fokussiert sich dieser Kurs auf den Umgang mit Meshes. In der Auswahl zum Hinzufügen werden verschiedene grundlegende Formen von Meshes bereitgestellt. Diese grundlegenden Formen werden als Primitives bezeichnet. Zu den Primitives gehören:</p>
-<ul>
-<li><p>Plane</p></li>
-<li><p>Cube</p></li>
-<li><p>Circle</p></li>
-<li><p>UV Sphere</p></li>
-<li><p>Ico Sphere</p></li>
-<li><p>Cylinder</p></li>
-<li><p>Cone</p></li>
-<li><p>Torus</p></li>
-<li><p>Grid</p></li>
-<li><p>Monkey</p></li>
-</ul>
-<section id="plane" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="plane">Plane</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Fläche</p>
-</div></div><p>Die Plane stellt das grundlegendste Primitive dar. Es handelt sich dabei lediglich um eine einzelne Fläche, bestehend aus einer Fläche mit vier Eckpunkten. Per Default hat die Plane eine Dimensionalität von 2x2x0 Metern.</p>
+<p>Elemente verbinden mittels <kbd aria-hidden="true">F</kbd><span class="visually-hidden">F</span></p>
+</div></div><p>Wie bereits angesprochen können Elemente mittels der Taste <kbd aria-hidden="true">D</kbd><span class="visually-hidden">D</span> dupliziert werden und an einer anderen Stelle platziert werden. Diese neuen Elemente sind weder durch Edges noch durch Faces mit der originalen Struktur verbunden. Hierfür kann der Befehl «<em>Fill</em>» benutzt werden, um Elemente zu verbinden. Mittels der Taste <kbd aria-hidden="true">F</kbd><span class="visually-hidden">F</span> wird der Befehl «<em>Fill</em>» gegeben. Werden etwa zwei einzelne Vertices ausgewählt, werden diese mit diesem Befehl durch ein Edge verbunden. Werden drei einzelne Vertices ausgewählt, werden diese nicht nur durch Edges verbunden, sondern zugleich auch mit einem Face.</p>
 </section>
-<section id="cube" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="cube">Cube</h2>
+<section id="extrude" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="extrude">Extrude</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Würfel</p>
-</div></div><p>Der Cube entspricht dem Standardwürfel, den Blender bei der Default-Szene anzeigt. Per Default hat der Würfel eine Dimensionalität von 2x2x2 Metern.</p>
-</section>
-<section id="circle" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="circle">Circle</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Kreis</p>
-</div></div><p>Der Circle entspricht einem runden Kreis mit dem Radius von einem Meter, wodurch er eine Dimensionalität von 2x2x2 Metern innehat. Der Kreis besteht lediglich aus mit Linien verbundenen Punkten, ohne eine innere Fläche. Allerdings kann im Kontext-Menü zum Hinzufügen des Kreises auch eine Füllfläche erstellt werden.</p>
-</section>
-<section id="uv-sphere" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="uv-sphere">UV Sphere</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Kugel bestehend aus Vierecken</p>
-</div></div><p>Die UV-Sphere stellt eine Kugel dar, mit der Dimensionalität von 2x2x2 Metern. Die Kugel besteht aus viereckigen Flächen, wobei sie an den Endpunkten der Z-Achse durch dreieckige Flächen verbunden ist. Die Anzahl der Segmente um die Kugel herum sowie die Anzahl Ringe lassen sich im Kontext-Menü beim Erstellen der Kugel einstellen. Die Segmente beschreiben dabei die Anzahl Unterteilungen, welche ein Ring entlang der XY-Achse der Kugel beinhaltet, während die Anzahl Ringe beschreibt, wie oft die Kugel der Z-Achse entlang unterteilt werden soll.</p>
-</section>
-<section id="ico-sphere" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="ico-sphere">Ico Sphere</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Kugel bestehend aus Dreiecken</p>
-</div></div><p>Die Ico-Sphere stellt ebenfalls eine Kugel dar, allerdings mit den Dimensionen 1.9x2x2 Meter. Anders als die UV-Sphere besteht sie nur aus dreieckigen Flächen. Dies hat den Vorteil, dass die Form der Faces über die ganze Kugel hinweg etwa gleich bleibt. Im Kontext-Menü zur Erstellung der Ico Sphere kann mit der Anzahl Subdivisions eingestellt werden, wie oft die Dreiecke dieser Kugel unterteilt werden sollen. Mit zunehmenden Subdivisions nähert sich die X-Dimensionalität auch 2 Metern an.</p>
-</section>
-<section id="cylinder" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="cylinder">Cylinder</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Zylinder</p>
-</div></div><p>Der Zylinder stellt zwei Kreise dar, welche durch Flächen miteinander verbunden sind. Seine Dimensionalität entspricht 2x2x2 Metern mit einem Radius der Kreise von 1 Meter. Im Kontext-Menü zur Erstellung des Zylinders lässt sich die Anzahl Unterteilungen im Kreis einstellen. Zudem lässt sich hier analog zum Kreis einstellen, ob die Kreisfläche mit einer Füllfläche versehen werden soll und mit welcher Art von Füllfläche.</p>
-</section>
-<section id="cone" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="cone">Cone</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Kegel</p>
-</div></div><p>Der Kegel stellt einen Spezialfall des Zylinders dar, bei dem die Radien der beiden Enden variiert werden können und einer der beiden Kreise einen Radius von 0 innehat. Auch hier kann wieder eingestellt werden, wie viele Unterteilungen die Kreise innehaben sollen und wie die Kreisflächen gestaltet werden sollen.</p>
-</section>
-<section id="torus" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="torus">Torus</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Torus</p>
-</div></div><p>Der Torus stellt eine ringförmige Gestalt dar, welche aus einer Major- und einer Minor-Komponente besteht. Die Major-Komponente beschreibt dabei den Kreis von der Vogelperspektive herab auf den Torus und die Minor-Komponente den Kreis, welcher sich aus dem Querschnitt des Torus ergibt. Für beide Komponenten kann die Anzahl Unterteilungen über das Segment-Feld im Kontext-Menü eingegeben werden. Die Dimensionalität kann entweder hinsichtlich der Major- und Minor-Komponente festgelegt werden oder alternativ als Radius des inneren und des äusseren Ringes.</p>
+<p>Extrudieren mittels <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span></p>
+</div></div><p>Wenn Elemente dupliziert werden, wird jeweils die Fill-Funktion verwendet, um sie wieder mit ihren ursprünglichen Elementen zu verbinden. Dies ist beschwerlich. Zudem muss auch darauf geachtet werden, dass allfällige innere Faces wieder entfernt werden. Deshalb wird selten mit dem Duplizieren gearbeitet, sondern mit der Funktion «<em>Extrude</em>». Diese Funktion ist in der Toolbar verfügbar, kann aber auch direkt mit der Taste <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span> ausgewählt werden.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_6/1. Major Minor Torus.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_11/1. Icon_Extrude" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Major- und Minor-Komponente des Torus
+Abbildung&nbsp;1: Extrude-Icon
 </figcaption>
 </figure>
 </div>
-</section>
-<section id="grid" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="grid">Grid</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Gitternetz</p>
-</div></div><p>Das Grid stellt eine Alternative zur glatten Fläche dar, ist allerdings bereits in weitere kleine viereckige Flächen unterteilt. Im Kontext-Menü lässt sich anhand der Subdivisions eingeben, wie viele Unterteilungen das Gitternetz entlang der X- und der Y-Achse haben soll. Die Dimensionalität des Grids ist analog zur Plane per Default 2x2x0 Meter.</p>
-</section>
-<section id="monkey" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="monkey">Monkey</h2>
+<p>Extrusion verbindet Elemente direkt</p>
+</div></div><p>Beim Extrudieren von Elementen werden diese Elemente nicht nur dupliziert, sondern auch automatisch mit den originalen Elementen verbunden. Wird bei der Auswahl eines Faces die Taste gedrückt, wird dieses Face von der originalen Position gelöst und kann verschoben werden. Gleichzeitig ist es allerdings über weitere Faces noch mit den Vertices des originalen Faces verbunden. Beim Extrudieren werden also die ausgewählten Elemente aus dem Objekt herausgezogen, ohne die originalen Vertices zu löschen.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Suzanne</p>
-</div></div><p>Bei der Auswahl des Monkeys generiert Blender das Modell eines Affenkopfs. Dabei handelt es sich um Suzanne, das Maskottchen von Blender.</p>
+<p>Beim Extrudieren erzeugte Elemente</p>
+</div></div><p>Nebst Faces lassen sich auch Vertices und Edges extrudieren. Wenn ein einzelner Vertex extrudiert wird, generiert Blender automatisch ein Edge zwischen dem originalen Vertex und dem extrudierten Vertex. Wenn ein Edge extrudiert wird, generiert Blender automatisch ein Face zwischen dem originalen Edge und dem neuen Edge. Wird ein Face extrudiert, werden automatisch Faces zwischen den originalen Vertices/Edges und den neuen Vertices/Edges erstellt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Extrudieren präzisieren</p>
+</div></div><p>Wie auch bei Transformationen kann die Extrusion mittels der Tasten <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span>, <kbd aria-hidden="true">Y</kbd><span class="visually-hidden">Y</span> oder <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> auf einzelne Achsen beschränkt werden und mittels der Angabe von Zahlen angegeben werden, wie gross die Distanz zum originalen Median der Auswahl sein soll. Zudem kann das Extrudieren auch mittels der Taste mit einer Skalierung verbunden werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Faces werden per Default entlang Normalen extrudiert</p>
+</div></div><div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Übung 6: Extrudieren</p>
+</div>
+<div class="tippbox-body">
+<p>Übung 6.1<br>
+Erstellen Sie folgende Objekte ausgehend von einem Würfel.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Images/Chapter_11/Übung_6.1 Extrude.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 </section>

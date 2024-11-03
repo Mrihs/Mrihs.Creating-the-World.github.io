@@ -1,0 +1,62 @@
+---
+title: "11. Methoden der Objektbearbeitung im Edit-Mode"
+editor: visual
+---
+
+## Fill
+
+::: column-margin
+Elemente verbinden mittels {{< kbd F >}}
+:::
+
+Wie bereits angesprochen können Elemente mittels der Taste {{< kbd D >}} dupliziert werden und an einer anderen Stelle platziert werden. Diese neuen Elemente sind weder durch Edges noch durch Faces mit der originalen Struktur verbunden. Hierfür kann der Befehl «*Fill*» benutzt werden, um Elemente zu verbinden.
+Mittels der Taste {{< kbd F >}} wird der Befehl «*Fill*» gegeben. Werden etwa zwei einzelne Vertices ausgewählt, werden diese mit diesem Befehl durch ein Edge verbunden. Werden drei einzelne Vertices ausgewählt, werden diese nicht nur durch Edges verbunden, sondern zugleich auch mit einem Face.
+
+## Extrude
+
+::: column-margin
+Extrudieren mittels {{< kbd E >}}
+:::
+
+Wenn Elemente dupliziert werden, wird jeweils die Fill-Funktion verwendet, um sie wieder mit ihren ursprünglichen Elementen zu verbinden. Dies ist beschwerlich. Zudem muss auch darauf geachtet werden, dass allfällige innere Faces wieder entfernt werden.
+Deshalb wird selten mit dem Duplizieren gearbeitet, sondern mit der Funktion «*Extrude*». Diese Funktion ist in der Toolbar verfügbar, kann aber auch direkt mit der Taste {{< kbd E >}} ausgewählt werden.
+
+![Extrude-Icon](Images/Chapter_11/1. Icon_Extrude){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Extrusion verbindet Elemente direkt
+:::
+
+Beim Extrudieren von Elementen werden diese Elemente nicht nur dupliziert, sondern auch automatisch mit den originalen Elementen verbunden. Wird bei der Auswahl eines Faces die Taste  gedrückt, wird dieses Face von der originalen Position gelöst und kann verschoben werden. Gleichzeitig ist es allerdings über weitere Faces noch mit den Vertices des originalen Faces verbunden. 
+Beim Extrudieren werden also die ausgewählten Elemente aus dem Objekt herausgezogen, ohne die originalen Vertices zu löschen.
+
+::: column-margin
+Beim Extrudieren erzeugte Elemente
+:::
+
+Nebst Faces lassen sich auch Vertices und Edges extrudieren. Wenn ein einzelner Vertex extrudiert wird, generiert Blender automatisch ein Edge zwischen dem originalen Vertex und dem extrudierten Vertex. Wenn ein Edge extrudiert wird, generiert Blender automatisch ein Face zwischen dem originalen Edge und dem neuen Edge. Wird ein Face extrudiert, werden automatisch Faces zwischen den originalen Vertices/Edges und den neuen Vertices/Edges erstellt. 
+
+::: column-margin
+Extrudieren präzisieren
+:::
+
+Wie auch bei Transformationen kann die Extrusion mittels der Tasten {{< kbd X >}}, {{< kbd Y >}} oder {{< kbd Z >}} auf einzelne Achsen beschränkt werden und mittels der Angabe von Zahlen angegeben werden, wie gross die Distanz zum originalen Median der Auswahl sein soll. Zudem kann das Extrudieren auch mittels der Taste  mit einer Skalierung verbunden werden.
+
+::: column-margin
+Faces werden per Default entlang Normalen extrudiert
+:::
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+Übung 6: Extrudieren
+::::
+
+::: tippbox-body
+Übung 6.1  
+Erstellen Sie folgende Objekte ausgehend von einem Würfel.
+
+![](Images/Chapter_11/Übung_6.1 Extrude.png){fig-align="left"}
+:::
+::::::

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>12. Hilfestellungen für die Objektbearbeitung – Creating the World</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Creating the World</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Suchen"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navigation umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../Sites/Overview.html"> <i class="bi bi-calendar-range" role="img">
+</i> 
+<span class="menu-text">Kursübersicht</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cheatsheets" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-lightbulb" role="img">
+</i> 
+ <span class="menu-text">Cheatsheets</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-cheatsheets">    
+        <li>
+    <a class="dropdown-item" href="../Cheatsheets/cheatsheet_keys.pdf">
+ <span class="dropdown-text">Tastenkombinationen</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Cheatsheets/cheatsheet_shading.pdf">
+ <span class="dropdown-text">Shading</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <span class="nav-link">
+    <i class="bi bi-folder" role="img">
+</i> 
+<span class="menu-text">Ressourcen</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+    <i class="bi bi-images" role="img">
+</i> 
+<span class="menu-text">Folien</span>
+    </span>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-skript" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-eyeglasses" role="img">
+</i> 
+ <span class="menu-text">Skript</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-skript">    
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_1.html">
+ <span class="dropdown-text">Kapitel 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_2.html">
+ <span class="dropdown-text">Kapitel 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_3.html">
+ <span class="dropdown-text">Kapitel 3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_4.html">
+ <span class="dropdown-text">Kapitel 4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_5.html">
+ <span class="dropdown-text">Kapitel 5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_6.html">
+ <span class="dropdown-text">Kapitel 6</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_7.html">
+ <span class="dropdown-text">Kapitel 7</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_8.html">
+ <span class="dropdown-text">Kapitel 8</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_9.html">
+ <span class="dropdown-text">Kapitel 9</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_10.html">
+ <span class="dropdown-text">Kapitel 10</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_11.html">
+ <span class="dropdown-text">Kapitel 11</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_12.html">
+ <span class="dropdown-text">Kapitel 12</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> <i class="bi bi-info-circle" role="img">
+</i> 
+<span class="menu-text">Über</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#die-position-des-3d-cursors-verändern" id="toc-die-position-des-3d-cursors-verändern" class="nav-link active" data-scroll-target="#die-position-des-3d-cursors-verändern">Die Position des 3D-Cursors verändern</a></li>
+  <li><a href="#transform-orientation" id="toc-transform-orientation" class="nav-link" data-scroll-target="#transform-orientation">Transform Orientation</a>
+  <ul class="collapse">
+  <li><a href="#global" id="toc-global" class="nav-link" data-scroll-target="#global">Global</a></li>
+  <li><a href="#local" id="toc-local" class="nav-link" data-scroll-target="#local">Local</a></li>
+  <li><a href="#normal" id="toc-normal" class="nav-link" data-scroll-target="#normal">Normal</a></li>
+  <li><a href="#gimbal" id="toc-gimbal" class="nav-link" data-scroll-target="#gimbal">Gimbal</a></li>
+  <li><a href="#view" id="toc-view" class="nav-link" data-scroll-target="#view">View</a></li>
+  <li><a href="#cursor" id="toc-cursor" class="nav-link" data-scroll-target="#cursor">Cursor</a></li>
+  <li><a href="#custom" id="toc-custom" class="nav-link" data-scroll-target="#custom">Custom</a></li>
+  </ul></li>
+  <li><a href="#pivot-point" id="toc-pivot-point" class="nav-link" data-scroll-target="#pivot-point">Pivot Point</a>
+  <ul class="collapse">
+  <li><a href="#bounding-box-center" id="toc-bounding-box-center" class="nav-link" data-scroll-target="#bounding-box-center">Bounding Box Center</a></li>
+  <li><a href="#d-cursor" id="toc-d-cursor" class="nav-link" data-scroll-target="#d-cursor">3D Cursor</a></li>
+  <li><a href="#individual-origins" id="toc-individual-origins" class="nav-link" data-scroll-target="#individual-origins">Individual Origins</a></li>
+  <li><a href="#median-point" id="toc-median-point" class="nav-link" data-scroll-target="#median-point">Median Point</a></li>
+  <li><a href="#active-element" id="toc-active-element" class="nav-link" data-scroll-target="#active-element">Active Element</a></li>
+  </ul></li>
+  <li><a href="#snap" id="toc-snap" class="nav-link" data-scroll-target="#snap">Snap</a>
+  <ul class="collapse">
+  <li><a href="#increment" id="toc-increment" class="nav-link" data-scroll-target="#increment">Increment</a></li>
+  <li><a href="#vertex" id="toc-vertex" class="nav-link" data-scroll-target="#vertex">Vertex</a></li>
+  <li><a href="#edge" id="toc-edge" class="nav-link" data-scroll-target="#edge">Edge</a></li>
+  <li><a href="#face" id="toc-face" class="nav-link" data-scroll-target="#face">Face</a></li>
+  <li><a href="#volume" id="toc-volume" class="nav-link" data-scroll-target="#volume">Volume</a></li>
+  <li><a href="#edge-center" id="toc-edge-center" class="nav-link" data-scroll-target="#edge-center">Edge Center</a></li>
+  <li><a href="#edge-perpendicular" id="toc-edge-perpendicular" class="nav-link" data-scroll-target="#edge-perpendicular">Edge Perpendicular</a></li>
+  <li><a href="#was-wird-angedockt" id="toc-was-wird-angedockt" class="nav-link" data-scroll-target="#was-wird-angedockt">Was wird angedockt?</a></li>
+  </ul></li>
+  <li><a href="#proportional-editing" id="toc-proportional-editing" class="nav-link" data-scroll-target="#proportional-editing">Proportional Editing</a></li>
+  <li><a href="#weitere-optionen" id="toc-weitere-optionen" class="nav-link" data-scroll-target="#weitere-optionen">Weitere Optionen</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">12. Hilfestellungen für die Objektbearbeitung</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Blender bietet eine Reihe von Hilfestellungen, welche nützlich für die Erstellung von 3D-Objekten sind. Einige dieser Hilfestellungen sind im Header des 3D-Viewports aufzufinden.</p>
+<section id="die-position-des-3d-cursors-verändern" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="die-position-des-3d-cursors-verändern">Die Position des 3D-Cursors verändern</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>3D-Cursor verschieben und rotieren</p>
+</div></div><p>Der 3D-Cursor wird für einige der Hilfsmittel benötigt. Deshalb ist es sinnvoll, sich damit zu befassen, wie der 3D-Cursor bewegt werden kann. In der Sidebar, welche mit der Taste <kbd aria-hidden="true">N</kbd><span class="visually-hidden">N</span> ein- und ausgeblendet werden kann, befindet sich unter dem Register «<em>View</em>» ein Abschnitt zum 3D-Cursor. An dieser Stelle kann die Position des Cursors im dreidimensionalen Raum anhand der X-, Y- und Z-Achse definiert werden. Nebst der Position verfügt der 3D-Cursor über eine Rotation, welche ebenfalls an dieser Stelle definiert werden kann. Durch eine Veränderung der Rotation des 3D-Cursors verändert sich auch die Rotation der Linien, welche den 3D-Cursor im 3D-Viewport kreuzen. Diese Linien stellen die Rotation des 3D-Cursors dar.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_12/1. Snap_Menue.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Snap-Menü.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Snap-Menü</p>
+</div></div><p>Mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> lässt sich das sogenannte «Snap»-Menü öffnen. Dieses sich erscheint direkt beim Mauszeiger und ermöglicht es, ausgewählte Objekte oder den 3D-Cursor an bestimmte Positionen zu verschieben. Das Menü beinhaltet folgende Optionen:</p>
+<ul>
+<li><p><strong>Cursor to Grid</strong>: Dadurch wird der 3D-Cursor an die nächstliegende Position des Koordinatengitters verschoben, welches als Viewport-Overlay angezeigt wird.</p></li>
+<li><p><strong>Cursor to World Origin</strong>: Dadurch wird der 3D-Cursor an den Ursprung der Welt positioniert. Dies entspricht dem Nullpunkt aller drei Achsen.</p></li>
+<li><p><strong>Cursor to Selected</strong>: Der 3D-Cursor wird an der Position des ausgewählten Objektes respektive dem Median der aktuellen Auswahl positioniert.</p></li>
+<li><p><strong>Cursor to Active</strong>: Der 3D-Cursor wird an der Position des aktiven Elementes positioniert.</p></li>
+<li><p><strong>Selection to Cursor (Keep Offset)</strong>: Alle ausgewählten Elemente werden zum 3D-Cursor verschoben, sodass sich der Median der ausgewählten Elemente an der Position des 3D-Cursors befindet. Die Relationen zwischen den ausgewählten Objekten bleiben dabei bestehen.</p></li>
+<li><p><strong>Selection to Cursor</strong>: Alle ausgewählten Elemente werden zum 3D-Cursor verschoben, sodass sich die Position jedes individuellen Elementes an der Position des 3D-Cursors befindet. Im Edit Mode führt dies dazu, dass alle ausgewählten Vertices auf der Position des 3D-Cursors liegen.</p></li>
+<li><p><strong>Selection to Active</strong>: Die Auswahl wird an die Position des aktiven Objektes verschoben. Im Edit Mode führt dies dazu, dass alle ausgewählten Vertices auf derselben Position liegen.</p></li>
+<li><p><strong>Selection to Grid</strong>: Das ausgewählte Element oder der Median der ausgewählten Elemente wird an die nächstliegende Position des Koordinatengitters verschoben, welches als Viewport-Overlay angezeigt wird. Im Edit-Mode werden die ausgewählten Elemente ebenfalls an die nächstliegende Position des Koordinatengitters verschoben. Wenn die Ansicht jedoch zu weit hinausgezoomt wird und die Elemente dadurch visuell an derselben Stelle zu sein scheinen, werden alle ausgewählten Vertices dabei an derselben Position platziert.</p></li>
+</ul>
+</section>
+<section id="transform-orientation" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="transform-orientation">Transform Orientation</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Verschiedene Orientierungen für Transformationen</p>
+</div></div><p>Bei Transformationen können die X-, Y- und Z-Achsen zu Hilfe genommen werden. Diese Achsen scheinen fix festgelegt zu sein. Es gibt allerdings verschiedene Orientierungen für diese Achsen. Die Transform-Orientation beschreibt diese Orientierung der Achsen. Es stehen folgende Orientierungen zur Verfügung:</p>
+<ul>
+<li><p>Global</p></li>
+<li><p>Local</p></li>
+<li><p>Normal</p></li>
+<li><p>Gimbal</p></li>
+<li><p>View</p></li>
+<li><p>Cursor</p></li>
+</ul>
+<div id="fig-1_" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_12/2. Transform_orientation.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Auswahl der Transform-Orientation.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Gizmos helfen bei der Orientierung</p>
+</div></div><p>Um ein besseres Verständnis für die Unterschiede in den Transform-Orientierungen zu bekommen, ist es sinnvoll, unter dem Dropdown-Menü für die Viewport-Gizmos das Gizmo für die Bewegung einzuschalten. Dadurch erscheint ein Gizmo, welches vorgibt, in welche Richtung die Achsen durch die Transform-Orientierung verlaufen.</p>
+<section id="global" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="global">Global</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Globale Orientierung</p>
+</div></div><p>Die globale Orientierung entspricht immer genau den Achsen der Welt. Das heisst, man kann sich dabei immer an den vorgegebenen Achsen im Viewport-Overlay orientieren.</p>
+</section>
+<section id="local" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="local">Local</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Lokale Orientierung</p>
+</div></div><p>Die lokale Orientierung entspricht jeweils der Orientierung eines Objektes. Wenn ein Objekt im Object-Mode um 20° rotiert wurde, sind auch die Achsen um diese 20° rotiert. Dies Einstellung gilt sowohl für den Object- als auch für den Edit-Mode. Im Object-Mode unterscheiden sich die Gizmos zwischen den verschiedenen Objekten, je nach deren Rotation.</p>
+</section>
+<section id="normal" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="normal">Normal</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Orientierung entlang der Normalen</p>
+</div></div><p>Die Orientierung anhand der Normalen verläuft im Edit-Mode so, dass die Z-Achse immer den Normalen der ausgewählten Einheiten entspricht. Die X- und Y-Achse beschreiben dann die Achsen im Verhältnis zu den Normalen. Wenn mehrere Elemente ausgewählt sind, entspricht die Z-Achse dem Mittelwert der Normalen. Im Object-Mode ist diese Orientierung äquivalent zur lokalen Orientierung.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+</div>
+<div class="tippbox-body">
+<p>Beim Extrudieren mittels <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span> schlägt Blender eine Extrusion entlang der Z-Achse in der Normal-Orientierung vor. Deshalb muss jeweils zweimal die Taste <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span>gedrückt werden, um entlang der globalen Z-Achse zu extrudieren – einmal, um die Z-Achse entlang der Normal-Orientierung abzuwählen, und einmal, um die Z-Achse entlang der eingestellten Orientierung auszuwählen.</p>
+</div>
+</div>
+</section>
+<section id="gimbal" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="gimbal">Gimbal</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Gimbal-Orientierung</p>
+</div></div><p>Die Gimbal-Orientierung stellt eine fortgeschrittene Orientierungsmethode dar, welche bei Euler-Rotationen von Nutzen sein kann. Im Rahmen dieses Kurses werden Euler-Rotationen nicht behandelt, weshalb nicht weiter auf diese Orientierung eingegangen wird.</p>
+</section>
+<section id="view" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="view">View</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Orientierung entlang der Ansicht</p>
+</div></div><p>Die View-Orientierung entspricht der Orientierung entsprechend der Ansicht auf dem Bildschirm. Die X-Achse verläuft horizontal über den Bildschirm und die Y-Achse vertikal. Die Z-Achse beschreibt die Achse der eigenen Ansicht nach näher oder weiter weg.</p>
+</section>
+<section id="cursor" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="cursor">Cursor</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Orientierung entsprechend dem 3D-Cursor</p>
+</div></div><p>Die 3D-Cursor-Orientierung verläuft entlang des 3D-Cursors. Dabei wird die Rotation des 3D-Cursors berücksichtig, sodass die Achsen entsprechend der 3D-Cursor-Rotierung verlaufen.</p>
+</section>
+<section id="custom" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="custom">Custom</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Eigene Orientierung hinzufügen</p>
+</div></div><p>Mittels der Plus-Schaltfläche ist es möglich, eigene Orientierungen zu erstellen. So kann die lokale Orientierung eines Objekts abgespeichert werden, um sie bei Objekten, die eigentlich eine andere lokale Orientierung aufweisen, ebenfalls verwenden zu können.</p>
+</section>
+</section>
+<section id="pivot-point" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="pivot-point">Pivot Point</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Verschiedene Drehpunkte</p>
+</div></div><p>Eine Reihe von Transformationen orientieren sich an einem bestimmten Drehpunkt im dreidimensionalen Raum. Wenn vom Standardwürfel etwa zwei gegenüberliegende Faces ausgewählt werden, orientiert sich eine Skalierung der Faces anhand der Medianposition der Vertices. Mittels des Menüreiters «<em>Transform Pivot Point</em>» können auch andere Drehpunkte ausgewählt werden. Die Optionen sind dabei:</p>
+<ul>
+<li><p>Bounding Box</p></li>
+<li><p>Center</p></li>
+<li><p>3D Cursor</p></li>
+<li><p>Individual Origins</p></li>
+<li><p>Median Point</p></li>
+<li><p>Active Element</p></li>
+</ul>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_12/3. Icon_Pivot_Point.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Icon für den Pivot-Point in der Default-Auswahl (Median-Point.)
+</figcaption>
+</figure>
+</div>
+<section id="bounding-box-center" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="bounding-box-center">Bounding Box Center</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bounding Box Center als Drehpunkt</p>
+</div></div><p>Die Option «<em>Bounding Box Center</em>» berechnet jeweils eine dreidimensionale Box um die ausgewählten Einheiten, welche gerade so gross ist, dass sich die gesamte Auswahl darin befindet. Der Mittelpunkt dieser Box wird als Drehpunkt für Transformationen verwendet. Im Object-Mode werden lediglich die Ursprünge von Objekten für die Berechnung der Box verwendet, nicht die Meshes. Im Edit-Mode wird die Box um alle ausgewählten Einheiten berechnet.</p>
+</section>
+<section id="d-cursor" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="d-cursor">3D Cursor</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>3D-Cursor als Drehpunkt</p>
+</div></div><p>Die Option «<em>3D Cursor</em>» verwendet die Position des 3D-Cursors als Drehpunkt für Transformationen. Der 3D-Cursor kann in seiner Position verändert werden, wodurch sich jede beliebige Stelle im drei dimensionalen Raum als Drehpunkt verwenden lässt. Ein Objekt, das sich an einer anderen Stelle als der 3D-Cursor befindet, würde bei dieser Einstellung um den 3D-Cursor rotiert.</p>
+</section>
+<section id="individual-origins" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="individual-origins">Individual Origins</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Individual Origin als Drehpunkt</p>
+</div></div><p>Die Option «<em>Individual Origins</em>» benutzt für jede ausgewählte Einheit den individuellen Ursprung als Drehpunkt. Wenn im Object-Mode mehrere Objekte ausgewählt sind, deren Ursprünge sich an verschiedenen Positionen befinden, verwendet jedes Objekt seinen eigenen Ursprung als Drehpunkt. Im Edit-Mode werden ausgewählte Einheiten, die nicht direkt miteinander verbunden sind, als individuelle Einheiten betrachtet. Diese verwenden den Median der Auswahl als Drehpunkt für Transformationen. Werden vom Default-Cube beispielsweise zwei gegenüberliegende Faces ausgewählt, wird von jedem Face individuell der Median berechnet und dieser für das jeweilige Face als Drehpunkt verwendet. Wenn mehrere Faces, die direkt nebeneinander liegen, ausgewählt sind, werden die aneinanderliegenden Faces zusammengefasst und für diese gemeinsam ein individueller Ursprung berechnet und als Drehpunkt verwendet.</p>
+</section>
+<section id="median-point" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="median-point">Median Point</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Median als Drehpunkt</p>
+</div></div><p>Die Option «*Median Point**» wird bei neuen Projekten als Default-Auswahl für den Drehpunkt von Transformationen verwendet. Dabei handelt es sich um die mittlere Position zwischen allen ausgewählten Vertices im Edit-Mode. Wenn mehrere Objekte im Object-Mode ausgewählt sind, wird der Median zwischen den Objekt-Ursprungspositionen als Drehpunkt verwendet.</p>
+</section>
+<section id="active-element" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="active-element">Active Element</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Ursprung des aktiven Elements als Drehpunkt</p>
+</div></div><p>Die Option «<em>Active Element</em>» verwendet den Ursprung des aktiven Elements als Drehpunkt für Transformationen. Beim aktiven Element handelt es sich um das zuletzt ausgewählte Objekt, welches mit einer orangen Umrandung gekennzeichnet ist. Der Ursprungspunkt dieses Objekts wird als Drehpunkt für Transformationen verwendet. Im Edit-Mode ist das aktive Element mit einer weissen Einfärbung markiert. Dieses Element, respektive der entsprechende Median bei mehreren Edges, Faces oder Vertices, wird anschliessend als Drehpunkt für Transformationen verwendet.</p>
+</section>
+</section>
+<section id="snap" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="snap">Snap</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Elemente an anderen Elementen andocken lassen</p>
+</div></div><p>Die Option «<em>Snap</em>» ist bei der Verschiebung von Objekten nützlich. Dadurch können andere Elemente benutzt werden, um die zu verschiebenden Objekte direkt an deren Struktur andocken zu lassen. So müssen nicht die etwaigen Koordinaten ermittelt werden, sondern Blender rastet die zu bewegenden Objekte direkt an anderen Objekten ein. Die anvisierten Strukturen können dabei im Edit-Mode Teil des eigenen Objektes sein, aber auch Teil eines anderen Objektes. Im Object-Mode wird zudem jeweils der Ursprung des Objektes zum Andocken verwendet. Im Dropdown-Menü kann ein gestellt werden, an welchen Stellen jeweils angedockt werden soll:</p>
+<ul>
+<li><p>Increment</p></li>
+<li><p>Vertex</p></li>
+<li><p>Edge</p></li>
+<li><p>Face</p></li>
+<li><p>Volume</p></li>
+<li><p>Edge Center</p></li>
+<li><p>Edge Perpendicular</p></li>
+</ul>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_12/3. Icon_Snap.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Snap-Icon.)
+</figcaption>
+</figure>
+</div>
+<section id="increment" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="increment">Increment</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Snap auf ein Inkrement</p>
+</div></div><p>Ist Snap auf «<em>Increment</em>» eingestellt, so werden die Inkremente der Welt verwendet, um Objekte anders zu platzieren. Mit diesen Inkrementen sind die Gitterraster im Hintergrund der 3D-Ansicht gemeint. Jedes Viereck stellt dabei ein Inkrement dar. Durch stärkeres Hinein- oder Hinauszoomen im 3D-Viewport werden jeweils grössere oder kleinere Inkremente sichtbar. Die ausgewählten Objekte rasten proportional zueinander an der Stelle in einem Inkrement ein.</p>
+</section>
+<section id="vertex" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="vertex">Vertex</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Snap auf Vertices</p>
+</div></div><p>Ist Snap auf «<em>Vertex</em>» eingestellt, so können andere Vertices angesteuert werden und Blender verbindet die Auswahl direkt auf der entsprechenden Position. Dabei können auch die Vertices von anderen Objekten angesteuert werden, selbst wenn diese nicht innerhalb des Edit-Modes mitaktiviert wurden.</p>
+</section>
+<section id="edge" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="edge">Edge</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Snap auf Edges</p>
+</div></div><p>Ist Snap auf «<em>Edge</em>» eingestellt, so können andere Edges als Ziel angesteuert werden und die Auswahl wird direkt passend auf eine Position auf dem Edge eingestellt. Dabei kann die ganze Länge eines Edges ausgewählt werden. Es können zudem Edges von anderen Objekten angesteuert werden, selbst wenn diese nicht innerhalb des Edit-Modes aktiviert wurden.</p>
+</section>
+<section id="face" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="face">Face</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Snap auf Faces</p>
+</div></div><p>Ist Snap auf «<em>Face</em>» eingestellt, so versucht Blender, die Auswahl direkt an der Position von anderen Faces anzudocken. Dabei kann jeder Punkt auf einem Face ausgewählt werden. Zudem können auch hier die Faces von anderen Objekten angesteuert werden.</p>
+</section>
+<section id="volume" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="volume">Volume</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Snap auf das Volumen</p>
+</div></div><p>Mittels der Einstellung von Snap auf «<em>Volume</em>» lässt sich das Volumen eines Objektes als genaues Ziel zum Einrasten einer Auswahl verwenden. Oft ist nicht klar ersichtlich, wo genau das Objekt nun einrastet, da das Volumen eines Objektes häufig durch die Faces verdeckt wird. Hierbei kann die Wireframe-Ansicht helfen.</p>
+</section>
+<section id="edge-center" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="edge-center">Edge Center</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Snap auf die Mitte von Edges</p>
+</div></div><p>Mittels der Einstellung von Snap auf «<em>Edge Center</em>» werden jeweils die Mittelpunkte von Edges anvisiert. Hierbei werden also keine Vertices anvisiert, sondern der Median des Edges. Andere Punkte auf dem Edge werden nicht zum Einhaken angeboten.</p>
+</section>
+<section id="edge-perpendicular" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="edge-perpendicular">Edge Perpendicular</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Snap auf senkrechte Edges</p>
+</div></div><p>Mittels der Einstellung von Snap auf «<em>Edge Perpendicular</em>» wird die Auswahl bei dem Punkt eines Edges eingerastet, welcher im Lot zur aktuellen Auswahl steht. Dabei können nicht alle Edges verwendet werden, da nicht alle einen solchen Winkel zur Auswahl aufweisen.</p>
+</section>
+<section id="was-wird-angedockt" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="was-wird-angedockt">Was wird angedockt?</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Quelle des Snaps einstellen</p>
+</div></div><p>Wenn lediglich ein einzelner Vertex ausgewählt und verschoben wird, ist klar, welcher Punkt jeweils an den anvisierten Stellen andockt: der ausgewählte Vertex. Wenn allerdings mehrere Elemente ausgewählt wurden, benutzt Blender per Default das jeweils ursprünglich am nächsten liegende Element zum Andocken. Es kann allerdings eingestellt werden, dass der Median der aktivierten Auswahl oder das aktive Element verwendet wird. Dies kann unter «<em>Snap With</em>» eingestellt werden. Zusätzlich gibt es noch die Auswahl «<em>Center</em>», welche zusätzlich noch weitere Abweichungen vom Drehpunkt mitberücksichtigt (beispielsweise die ursprüngliche Abweichung vom 3D-Cursor).</p>
+</section>
+</section>
+<section id="proportional-editing" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="proportional-editing">Proportional Editing</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Proportionale Bearbeitung mittels <kbd aria-hidden="true">O</kbd><span class="visually-hidden">O</span> aktivieren</p>
+</div></div><p>Die Option «<em>Proportional Editing</em>» ermöglicht es, dass nahe beieinanderliegende Elemente proportional zu ihrer Nähe bearbeitet werden können. Diese Option kann auch mit der Taste <kbd aria-hidden="true">O</kbd><span class="visually-hidden">O</span> aktiviert oder deaktiviert werden. Wenn diese Option aktiviert ist und eine Transformation durchgeführt wird (z.B. eine Rotation), erscheint um den Bezugspunkt ein Kreis. Alle Elemente, welche sich innerhalb dieses Kreises befinden, werden diese Transformation nun ebenfalls durchführen. Der Radius des Kreises kann mittels des Mausrads vergrössert oder verkleinert werden. Dadurch wird der Erfassungsbereich der proportionalen Bearbeitung variiert. Alternativ kann die Taste <kbd aria-hidden="true">PageUp</kbd><span class="visually-hidden">PageUp</span> zum Vergrössern des Kreises oder <kbd aria-hidden="true">PageDown</kbd><span class="visually-hidden">PageDown</span> zum Verkleinern des Kreises gedrückt werden.</p>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_12/4. Icon_Proportional Editing.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5: Icon für Proportional Editing.)
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Proportionale Bearbeitung im Object-Mode</p>
+</div></div><p>Im Object-Mode müssen jeweils die Ursprünge der Objekte, welche proportional transformiert werden sollen, innerhalb des Erfassungskreises liegen. Dabei spielt es keine Rolle, ob das Mesh des Objektes ebenfalls erfasst wird oder nicht. Im Edit-Mode können lediglich die Vertices der aktuell ausgewählten Objekte proportional mittransformiert werden. Zudem gibt es im Edit-Mode die Möglichkeit, im Dropdown-Menü des Proportional Editings die Option «<em>Connected Only</em>» anzuwählen. Dadurch werden lediglich Vertices bei der proportionalen Bearbeitung berücksichtigt, die über Edges mit den zu bearbeitenden Vertices verbunden sind.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Form der proportionalen Bearbeitung</p>
+</div></div><p>Die Elemente, welche sich innerhalb des Erfassungskreises befinden, werden anschliessend alle proportional mittransformiert. Die Proportion erfolgt dabei einer vorgegebenen Kurve, welche sich anhand des Dropdown-Menüs genauer definieren lässt. Mithilfe der proportionalen Bearbeitung lassen sich durch die Bearbeitung eines einzigen Vertex komplexe Strukturen erstellen.</p>
+<div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_12/5. Proportional Editing Examples.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6: Die verschiedenen Formen zur proportionalen Bearbeitung im Vergleich. Beispiele zeigen eine Fläche von 2x2 Metern, bestehend aus 16x16 Faces. Diese Faces wurden mittig um 0.5 Meter entlang der Z-Achse bewegt.)
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Anwendungsbereiche für proportionale Bearbeitung</p>
+</div></div><p>Gerade natürliche Objekte (Früchte, Landschaften, Bäume, Blumen, usw.) sind selten symmetrisch. Oftmals gibt es Dellen oder andere Verformungen. Mittels der proportionalen Bearbeitung können solche Verformungen leicht auf grössere Flächen angewendet werden, ohne dass jeder Vertex einzeln bearbeitet werden muss.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Übung 8: Proportional Editing</p>
+</div>
+<div class="tippbox-body">
+<p>Übung 8.1<br>
+Erstellen Sie eine UV-Sphere und versuchen Sie, damit eine Birne zu modellieren. Nutzen Sie hierfür die proportionale Bearbeitung.</p>
+</div>
+</div>
+</section>
+<section id="weitere-optionen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="weitere-optionen">Weitere Optionen</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Symmetrische Bearbeitung</p>
+</div></div><p>Im Edit-Mode sind in der oberen rechten Ecke weitere Optionen verfügbar. Zum einen sind die drei Achsen X, Y und Z als Schaltfläche anwählbar. Durch das Anwählen eines dieser Icons wird das Objekt entsprechend der ausgewählten Achse symmetrisch bearbeitet. Eine Veränderung des Objekts auf der einen Seite der Achse wird dabei also gleichzeitig auch auf der gegenüberliegenden Seite durchgeführt. Gerade bei symmetrischen Objekten hat dies den Vorteil, dass der Fokus nur auf eine Seite gelegt werden muss, ohne dass die Bearbeitungsschritte auf der anderen Seite nochmals wiederholt werden müssen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Symmetrische Bearbeitung zu Beginn aktivieren</p>
+</div></div><p>Bei der symmetrischen Bearbeitung muss allerdings darauf geachtet werden, dass diese Option nicht immer funktioniert. Sobald die Bearbeitung des Objektes begonnen hat, kann Blender teilweise diese Symmetrie nicht mehr berücksichtigen. Wenn eine symmetrische Objektbe arbeitung nötig ist, sollte diese also gleich zu Beginn aktiviert werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Vertices automatisch verbinden</p>
+</div></div><p>Neben den Schaltflächen für die drei Achsen befindet sich zudem das Icon für die Option «<em>Auto Merge Vertices</em>». Durch das Aktivieren dieser Option werden Vertices, welche während der weiteren Bearbeitung auf derselben Position platziert werden, automatisch miteinander verbunden. Dadurch ist es nicht mehr nötig, von Hand Vertices zu einem Vertex zu verbinden.</p>
+<div id="fig-1_7" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_12/6. Icon_Automerge.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;7: Icon für Auto Merge Vertices.)
+</figcaption>
+</figure>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/Mrihs\.github\.io\/Mrihs\.Creating-the-World\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

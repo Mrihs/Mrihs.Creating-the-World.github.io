@@ -1,0 +1,363 @@
+---
+title: "12. Hilfestellungen für die Objektbearbeitung "
+editor: visual
+---
+
+Blender bietet eine Reihe von Hilfestellungen, welche nützlich für die Erstellung von 3D-Objekten sind. Einige dieser Hilfestellungen sind im Header des 3D-Viewports aufzufinden.
+
+## Die Position des 3D-Cursors verändern
+
+::: column-margin
+3D-Cursor verschieben und rotieren
+:::
+
+Der 3D-Cursor wird für einige der Hilfsmittel benötigt. Deshalb ist es sinnvoll, sich damit zu befassen, wie der 3D-Cursor bewegt werden kann. In der Sidebar, welche mit der Taste {{< kbd N >}} ein- und ausgeblendet werden kann, befindet sich unter dem Register «*View*» ein Abschnitt zum 3D-Cursor. An dieser Stelle kann die Position des Cursors im dreidimensionalen Raum anhand der X-, Y- und Z-Achse definiert werden. Nebst der Position verfügt der 3D-Cursor über eine Rotation, welche ebenfalls an dieser Stelle definiert werden kann. Durch eine Veränderung der Rotation des 3D-Cursors verändert sich auch die Rotation der Linien, welche den 3D-Cursor im 3D-Viewport kreuzen. Diese Linien stellen die Rotation des 3D-Cursors dar.
+
+![Snap-Menü.](Images/Chapter_12/1.%20Snap_Menue.png){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Snap-Menü
+:::
+
+Mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd S >}} lässt sich das sogenannte «Snap»-Menü öffnen. Dieses sich erscheint direkt beim Mauszeiger und ermöglicht es, ausgewählte Objekte oder den 3D-Cursor an bestimmte Positionen zu verschieben. Das Menü beinhaltet folgende Optionen:
+
+-   **Cursor to Grid**: Dadurch wird der 3D-Cursor an die nächstliegende Position des Koordinatengitters verschoben, welches als Viewport-Overlay angezeigt wird.
+
+-   **Cursor to World Origin**: Dadurch wird der 3D-Cursor an den Ursprung der Welt positioniert. Dies entspricht dem Nullpunkt aller drei Achsen.
+
+-   **Cursor to Selected**: Der 3D-Cursor wird an der Position des ausgewählten Objektes respektive dem Median der aktuellen Auswahl positioniert.
+
+-   **Cursor to Active**: Der 3D-Cursor wird an der Position des aktiven Elementes positioniert.
+
+-   **Selection to Cursor (Keep Offset)**: Alle ausgewählten Elemente werden zum 3D-Cursor verschoben, sodass sich der Median der ausgewählten Elemente an der Position des 3D-Cursors befindet. Die Relationen zwischen den ausgewählten Objekten bleiben dabei bestehen.
+
+-   **Selection to Cursor**: Alle ausgewählten Elemente werden zum 3D-Cursor verschoben, sodass sich die Position jedes individuellen Elementes an der Position des 3D-Cursors befindet. Im Edit Mode führt dies dazu, dass alle ausgewählten Vertices auf der Position des 3D-Cursors liegen.
+
+-   **Selection to Active**: Die Auswahl wird an die Position des aktiven Objektes verschoben. Im Edit Mode führt dies dazu, dass alle ausgewählten Vertices auf derselben Position liegen.
+
+-   **Selection to Grid**: Das ausgewählte Element oder der Median der ausgewählten Elemente wird an die nächstliegende Position des Koordinatengitters verschoben, welches als Viewport-Overlay angezeigt wird. Im Edit-Mode werden die ausgewählten Elemente ebenfalls an die nächstliegende Position des Koordinatengitters verschoben. Wenn die Ansicht jedoch zu weit hinausgezoomt wird und die Elemente dadurch visuell an derselben Stelle zu sein scheinen, werden alle ausgewählten Vertices dabei an derselben Position platziert.
+
+## Transform Orientation
+
+::: column-margin
+Verschiedene Orientierungen für Transformationen
+:::
+
+Bei Transformationen können die X-, Y- und Z-Achsen zu Hilfe genommen werden. Diese Achsen scheinen fix festgelegt zu sein. Es gibt allerdings verschiedene Orientierungen für diese Achsen. Die Transform-Orientation beschreibt diese Orientierung der Achsen. Es stehen folgende Orientierungen zur Verfügung:
+
+-   Global
+
+-   Local
+
+-   Normal
+
+-   Gimbal
+
+-   View
+
+-   Cursor
+
+![Auswahl der Transform-Orientation.](Images/Chapter_12/2.%20Transform_orientation.png){#fig-1_ fig-align="left"}
+
+::: column-margin
+Gizmos helfen bei der Orientierung
+:::
+
+Um ein besseres Verständnis für die Unterschiede in den Transform-Orientierungen zu bekommen, ist es sinnvoll, unter dem Dropdown-Menü für die Viewport-Gizmos das Gizmo für die Bewegung einzuschalten. Dadurch erscheint ein Gizmo, welches vorgibt, in welche Richtung die Achsen durch die Transform-Orientierung verlaufen.
+
+### Global
+
+::: column-margin
+Globale Orientierung
+:::
+
+Die globale Orientierung entspricht immer genau den Achsen der Welt. Das heisst, man kann sich dabei immer an den vorgegebenen Achsen im Viewport-Overlay orientieren.
+
+### Local
+
+::: column-margin
+Lokale Orientierung
+:::
+
+Die lokale Orientierung entspricht jeweils der Orientierung eines Objektes. Wenn ein Objekt im Object-Mode um 20° rotiert wurde, sind auch die Achsen um diese 20° rotiert. Dies Einstellung gilt sowohl für den Object- als auch für den Edit-Mode. Im Object-Mode unterscheiden sich die Gizmos zwischen den verschiedenen Objekten, je nach deren Rotation.
+
+### Normal
+
+::: column-margin
+Orientierung entlang der Normalen
+:::
+
+Die Orientierung anhand der Normalen verläuft im Edit-Mode so, dass die Z-Achse immer den Normalen der ausgewählten Einheiten entspricht. Die X- und Y-Achse beschreiben dann die Achsen im Verhältnis zu den Normalen. Wenn mehrere Elemente ausgewählt sind, entspricht die Z-Achse dem Mittelwert der Normalen. Im Object-Mode ist diese Orientierung äquivalent zur lokalen Orientierung.
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+::::
+
+::: tippbox-body
+Beim Extrudieren mittels {{< kbd E >}} schlägt Blender eine Extrusion entlang der Z-Achse in der Normal-Orientierung vor. Deshalb muss jeweils zweimal die Taste {{< kbd Z >}}gedrückt werden, um entlang der globalen Z-Achse zu extrudieren – einmal, um die Z-Achse entlang der Normal-Orientierung abzuwählen, und einmal, um die Z-Achse entlang der eingestellten Orientierung auszuwählen.
+:::
+::::::
+
+### Gimbal
+
+::: column-margin
+Gimbal-Orientierung
+:::
+
+Die Gimbal-Orientierung stellt eine fortgeschrittene Orientierungsmethode dar, welche bei Euler-Rotationen von Nutzen sein kann. Im Rahmen dieses Kurses werden Euler-Rotationen nicht behandelt, weshalb nicht weiter auf diese Orientierung eingegangen wird.
+
+### View
+
+::: column-margin
+Orientierung entlang der Ansicht
+:::
+
+Die View-Orientierung entspricht der Orientierung entsprechend der Ansicht auf dem Bildschirm. Die X-Achse verläuft horizontal über den Bildschirm und die Y-Achse vertikal. Die Z-Achse beschreibt die Achse der eigenen Ansicht nach näher oder weiter weg.
+
+### Cursor
+
+::: column-margin
+Orientierung entsprechend dem 3D-Cursor
+:::
+
+Die 3D-Cursor-Orientierung verläuft entlang des 3D-Cursors. Dabei wird die Rotation des 3D-Cursors berücksichtig, sodass die Achsen entsprechend der 3D-Cursor-Rotierung verlaufen.
+
+### Custom
+
+::: column-margin
+Eigene Orientierung hinzufügen
+:::
+
+Mittels der Plus-Schaltfläche ist es möglich, eigene Orientierungen zu erstellen. So kann die lokale Orientierung eines Objekts abgespeichert werden, um sie bei Objekten, die eigentlich eine andere lokale Orientierung aufweisen, ebenfalls verwenden zu können.
+
+## Pivot Point
+
+::: column-margin
+Verschiedene Drehpunkte
+:::
+
+Eine Reihe von Transformationen orientieren sich an einem bestimmten Drehpunkt im dreidimensionalen Raum. Wenn vom Standardwürfel etwa zwei gegenüberliegende Faces ausgewählt werden, orientiert sich eine Skalierung der Faces anhand der Medianposition der Vertices. Mittels des Menüreiters «*Transform Pivot Point*» können auch andere Drehpunkte ausgewählt werden. Die Optionen sind dabei:
+
+-   Bounding Box
+
+-   Center
+
+-   3D Cursor
+
+-   Individual Origins
+
+-   Median Point
+
+-   Active Element
+
+![Icon für den Pivot-Point in der Default-Auswahl (Median-Point.)](Images/Chapter_12/3.%20Icon_Pivot_Point.png){#fig-1_3 fig-align="left"}
+
+### Bounding Box Center
+
+::: column-margin
+Bounding Box Center als Drehpunkt
+:::
+
+Die Option «*Bounding Box Center*» berechnet jeweils eine dreidimensionale Box um die ausgewählten Einheiten, welche gerade so gross ist, dass sich die gesamte Auswahl darin befindet. Der Mittelpunkt dieser Box wird als Drehpunkt für Transformationen verwendet. Im Object-Mode werden lediglich die Ursprünge von Objekten für die Berechnung der Box verwendet, nicht die Meshes. Im Edit-Mode wird die Box um alle ausgewählten Einheiten berechnet.
+
+### 3D Cursor
+
+::: column-margin
+3D-Cursor als Drehpunkt
+:::
+
+Die Option «*3D Cursor*» verwendet die Position des 3D-Cursors als Drehpunkt für Transformationen. Der 3D-Cursor kann in seiner Position verändert werden, wodurch sich jede beliebige Stelle im drei dimensionalen Raum als Drehpunkt verwenden lässt. Ein Objekt, das sich an einer anderen Stelle als der 3D-Cursor befindet, würde bei dieser Einstellung um den 3D-Cursor rotiert.
+
+### Individual Origins
+
+::: column-margin
+Individual Origin als Drehpunkt
+:::
+
+Die Option «*Individual Origins*» benutzt für jede ausgewählte Einheit den individuellen Ursprung als Drehpunkt. Wenn im Object-Mode mehrere Objekte ausgewählt sind, deren Ursprünge sich an verschiedenen Positionen befinden, verwendet jedes Objekt seinen eigenen Ursprung als Drehpunkt. Im Edit-Mode werden ausgewählte Einheiten, die nicht direkt miteinander verbunden sind, als individuelle Einheiten betrachtet. Diese verwenden den Median der Auswahl als Drehpunkt für Transformationen. Werden vom Default-Cube beispielsweise zwei gegenüberliegende Faces ausgewählt, wird von jedem Face individuell der Median berechnet und dieser für das jeweilige Face als Drehpunkt verwendet. Wenn mehrere Faces, die direkt nebeneinander liegen, ausgewählt sind, werden die aneinanderliegenden Faces zusammengefasst und für diese gemeinsam ein individueller Ursprung berechnet und als Drehpunkt verwendet.
+
+### Median Point
+
+::: column-margin
+Median als Drehpunkt
+:::
+
+Die Option «\*Median Point\*\*» wird bei neuen Projekten als Default-Auswahl für den Drehpunkt von Transformationen verwendet. Dabei handelt es sich um die mittlere Position zwischen allen ausgewählten Vertices im Edit-Mode. Wenn mehrere Objekte im Object-Mode ausgewählt sind, wird der Median zwischen den Objekt-Ursprungspositionen als Drehpunkt verwendet.
+
+### Active Element
+
+::: column-margin
+Ursprung des aktiven Elements als Drehpunkt
+:::
+
+Die Option «*Active Element*» verwendet den Ursprung des aktiven Elements als Drehpunkt für Transformationen. Beim aktiven Element handelt es sich um das zuletzt ausgewählte Objekt, welches mit einer orangen Umrandung gekennzeichnet ist. Der Ursprungspunkt dieses Objekts wird als Drehpunkt für Transformationen verwendet. Im Edit-Mode ist das aktive Element mit einer weissen Einfärbung markiert. Dieses Element, respektive der entsprechende Median bei mehreren Edges, Faces oder Vertices, wird anschliessend als Drehpunkt für Transformationen verwendet.
+
+## Snap
+
+::: column-margin
+Elemente an anderen Elementen andocken lassen
+:::
+
+Die Option «*Snap*» ist bei der Verschiebung von Objekten nützlich. Dadurch können andere Elemente benutzt werden, um die zu verschiebenden Objekte direkt an deren Struktur andocken zu lassen. So müssen nicht die etwaigen Koordinaten ermittelt werden, sondern Blender rastet die zu bewegenden Objekte direkt an anderen Objekten ein. Die anvisierten Strukturen können dabei im Edit-Mode Teil des eigenen Objektes sein, aber auch Teil eines anderen Objektes. Im Object-Mode wird zudem jeweils der Ursprung des Objektes zum Andocken verwendet. Im Dropdown-Menü kann ein gestellt werden, an welchen Stellen jeweils angedockt werden soll:
+
+-   Increment
+
+-   Vertex
+
+-   Edge
+
+-   Face
+
+-   Volume
+
+-   Edge Center
+
+-   Edge Perpendicular
+
+![Snap-Icon.)](Images/Chapter_12/3. Icon_Snap.png){#fig-1_4 fig-align="left"}
+
+
+### Increment
+
+::: column-margin
+Snap auf ein Inkrement
+:::
+
+Ist Snap auf «*Increment*» eingestellt, so werden die Inkremente der Welt verwendet, um Objekte anders zu platzieren. Mit diesen Inkrementen sind die Gitterraster im Hintergrund der 3D-Ansicht gemeint. Jedes Viereck stellt dabei ein Inkrement dar. Durch stärkeres Hinein- oder Hinauszoomen 
+im 3D-Viewport werden jeweils grössere oder kleinere Inkremente sichtbar. Die ausgewählten Objekte rasten proportional zueinander an der Stelle in einem Inkrement ein. 
+
+### Vertex
+
+::: column-margin
+Snap auf Vertices
+:::
+
+Ist Snap auf «*Vertex*» eingestellt, so können andere Vertices angesteuert werden und Blender verbindet die Auswahl direkt auf der entsprechenden Position. Dabei können auch die Vertices von anderen Objekten angesteuert werden, selbst wenn diese nicht innerhalb des Edit-Modes mitaktiviert wurden.
+
+### Edge
+
+::: column-margin
+Snap auf Edges 
+:::
+
+Ist Snap auf «*Edge*» eingestellt, so können andere Edges als Ziel angesteuert werden und die Auswahl wird direkt passend auf eine Position auf dem Edge eingestellt. Dabei kann die ganze Länge eines Edges ausgewählt werden. Es können zudem Edges von anderen Objekten angesteuert werden, selbst wenn diese nicht innerhalb des Edit-Modes aktiviert wurden.
+
+### Face
+
+::: column-margin
+Snap auf Faces
+:::
+
+Ist Snap auf «*Face*» eingestellt, so versucht Blender, die Auswahl direkt an der Position von anderen Faces anzudocken. Dabei kann jeder Punkt auf einem Face ausgewählt werden. Zudem können 
+auch hier die Faces von anderen Objekten angesteuert werden.
+
+### Volume
+
+::: column-margin
+Snap auf das Volumen
+:::
+
+Mittels der Einstellung von Snap auf «*Volume*» lässt sich das Volumen eines Objektes als genaues Ziel zum Einrasten einer Auswahl verwenden. Oft ist nicht klar ersichtlich, wo genau das Objekt nun 
+einrastet, da das Volumen eines Objektes häufig durch die Faces verdeckt wird. Hierbei kann die Wireframe-Ansicht helfen.
+
+### Edge Center
+
+::: column-margin
+Snap auf die Mitte von Edges
+:::
+
+Mittels der Einstellung von Snap auf «*Edge Center*» werden jeweils die Mittelpunkte von Edges anvisiert. Hierbei werden also keine Vertices anvisiert, sondern der Median des Edges. Andere Punkte 
+auf dem Edge werden nicht zum Einhaken angeboten.
+
+### Edge Perpendicular
+
+::: column-margin
+Snap auf senkrechte Edges
+:::
+
+Mittels der Einstellung von Snap auf «*Edge Perpendicular*» wird die Auswahl bei dem Punkt eines Edges eingerastet, welcher im Lot zur aktuellen Auswahl steht. Dabei können nicht alle Edges verwendet werden, da nicht alle einen solchen Winkel zur Auswahl aufweisen.
+
+### Was wird angedockt?
+
+::: column-margin
+Quelle des Snaps einstellen
+:::
+
+Wenn lediglich ein einzelner Vertex ausgewählt und verschoben wird, ist klar, welcher Punkt jeweils an den anvisierten Stellen andockt: der ausgewählte Vertex. Wenn allerdings mehrere Elemente 
+ausgewählt wurden, benutzt Blender per Default das jeweils ursprünglich am nächsten liegende Element zum Andocken. Es kann allerdings eingestellt werden, dass der Median der aktivierten Auswahl oder das aktive Element verwendet wird. Dies kann unter «*Snap With*» eingestellt werden. Zusätzlich gibt es noch die Auswahl «*Center*», welche zusätzlich noch weitere Abweichungen vom Drehpunkt mitberücksichtigt (beispielsweise die ursprüngliche Abweichung vom 3D-Cursor).
+
+## Proportional Editing
+
+::: column-margin
+Proportionale Bearbeitung mittels {{< kbd O >}} aktivieren
+:::
+
+Die Option «*Proportional Editing*» ermöglicht es, dass nahe beieinanderliegende Elemente proportional zu ihrer Nähe bearbeitet werden können. Diese Option kann auch mit der Taste {{< kbd O >}} aktiviert oder deaktiviert werden. Wenn diese Option aktiviert ist und eine Transformation durchgeführt wird (z.B. eine Rotation), erscheint um den Bezugspunkt ein Kreis. Alle Elemente, welche sich innerhalb dieses Kreises befinden, werden diese Transformation nun ebenfalls durchführen. Der Radius des Kreises kann mittels des Mausrads vergrössert oder verkleinert werden. Dadurch wird der Erfassungsbereich der proportionalen Bearbeitung variiert. Alternativ kann die Taste {{< kbd PageUp >}}  zum Vergrössern des Kreises oder {{< kbd PageDown >}} zum Verkleinern des Kreises gedrückt werden.
+
+![Icon für Proportional Editing.)](Images/Chapter_12/4. Icon_Proportional Editing.png){#fig-1_5 fig-align="left"}
+
+::: column-margin
+Proportionale Bearbeitung im Object-Mode
+:::
+
+Im Object-Mode müssen jeweils die Ursprünge der Objekte, welche proportional transformiert werden sollen, innerhalb des Erfassungskreises liegen. Dabei spielt es keine Rolle, ob das Mesh des Objektes ebenfalls erfasst wird oder nicht. Im Edit-Mode können lediglich die Vertices der aktuell ausgewählten Objekte proportional mittransformiert werden. Zudem gibt es im Edit-Mode die Möglichkeit, im Dropdown-Menü des Proportional Editings die Option «*Connected Only*» anzuwählen. Dadurch werden lediglich Vertices bei der proportionalen Bearbeitung berücksichtigt, die über Edges mit den zu bearbeitenden Vertices verbunden sind. 
+
+::: column-margin
+Form der proportionalen Bearbeitung
+:::
+
+Die Elemente, welche sich innerhalb des Erfassungskreises befinden, werden anschliessend alle proportional mittransformiert. Die Proportion erfolgt dabei einer vorgegebenen Kurve, welche sich anhand des Dropdown-Menüs genauer definieren lässt. Mithilfe der proportionalen Bearbeitung lassen sich durch die Bearbeitung eines einzigen Vertex komplexe Strukturen erstellen. 
+
+![Die verschiedenen Formen zur proportionalen Bearbeitung im Vergleich. Beispiele zeigen eine Fläche von 2x2 Metern, bestehend aus 16x16 Faces. Diese Faces wurden mittig um 0.5 Meter entlang der Z-Achse bewegt.)](Images/Chapter_12/5. Proportional Editing Examples.png){#fig-1_6 fig-align="left"}
+
+::: column-margin
+Anwendungsbereiche für proportionale 
+Bearbeitung
+:::
+
+Gerade natürliche Objekte (Früchte, Landschaften, Bäume, Blumen, usw.) sind selten symmetrisch. Oftmals gibt es Dellen oder andere Verformungen. Mittels der proportionalen Bearbeitung können 
+solche Verformungen leicht auf grössere Flächen angewendet werden, ohne dass jeder Vertex einzeln bearbeitet werden muss.
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+Übung 8: Proportional Editing
+::::
+
+::: tippbox-body
+Übung 8.1  
+Erstellen Sie eine UV-Sphere und versuchen Sie, damit eine Birne zu modellieren. Nutzen Sie hierfür die proportionale Bearbeitung. 
+:::
+::::::
+
+## Weitere Optionen
+
+::: column-margin
+Symmetrische Bearbeitung
+:::
+
+Im Edit-Mode sind in der oberen rechten Ecke weitere Optionen verfügbar. Zum einen sind die drei 
+Achsen X, Y und Z als Schaltfläche anwählbar. Durch das Anwählen eines dieser Icons wird das 
+Objekt entsprechend der ausgewählten Achse symmetrisch bearbeitet. Eine Veränderung des Objekts auf der einen Seite der Achse wird dabei also gleichzeitig auch auf der gegenüberliegenden Seite durchgeführt. Gerade bei symmetrischen Objekten hat dies den Vorteil, dass der Fokus nur auf eine Seite gelegt werden muss, ohne dass die Bearbeitungsschritte auf der anderen Seite nochmals wiederholt werden müssen.
+
+::: column-margin
+Symmetrische Bearbeitung zu Beginn aktivieren
+:::
+
+Bei der symmetrischen Bearbeitung muss allerdings darauf geachtet werden, dass diese Option 
+nicht immer funktioniert. Sobald die Bearbeitung des Objektes begonnen hat, kann Blender teilweise 
+diese Symmetrie nicht mehr berücksichtigen. Wenn eine symmetrische Objektbe arbeitung nötig ist, sollte diese also gleich zu Beginn aktiviert werden.
+
+
+::: column-margin
+Vertices automatisch verbinden
+:::
+
+Neben den Schaltflächen für die drei Achsen befindet sich zudem das Icon für die Option «*Auto Merge Vertices*». Durch das Aktivieren dieser Option werden Vertices, welche während der weiteren Bearbeitung auf derselben Position platziert werden, automatisch miteinander verbunden. Dadurch ist es nicht mehr nötig, von Hand Vertices zu einem Vertex zu verbinden.
+
+![Icon für Auto Merge Vertices.)](Images/Chapter_12/6. Icon_Automerge.png){#fig-1_7 fig-align="left"}
+
+

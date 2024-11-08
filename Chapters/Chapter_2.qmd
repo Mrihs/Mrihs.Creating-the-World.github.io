@@ -82,7 +82,7 @@ In der rechten oberen Ecke befinden sich Optionen zur Darstellung der Objekte in
 Ein- und Ausblen-den von Objektarten
 :::
 
-Hier lassen sich verschiedene Arten von Objekten alle gemeinsam innerhalb einer Szene verstecken, indem das Auge zu der entsprechenden Objektart abgewählt wird. Durch das Abwählen des Auges neben dem Objekttyp «*Camera*» werde etwa alle Kameras aus der Szene unsichtbar gemacht. Die Objekte sind allerdings noch vorhanden und weisen immer noch dieselbe Funktion auf – sie werden lediglich nicht mehr im 3D-Viewport angezeigt. Neben dem Auge lässt sich zudem anhand der Schaltfläche mit einem abgebildeten Cursor einstellen, dass die entsprechenden Objektarten nicht mehr auswählbar sind.
+Hier lassen sich verschiedene Arten von Objekten alle gemeinsam innerhalb einer Szene verstecken, indem das Auge zu der entsprechenden Objektart abgewählt wird. Durch das Abwählen des Auges neben dem Objekttyp «*Camera*» werde etwa alle Kameras aus der Szene unsichtbar gemacht. Die Objekte sind allerdings noch vorhanden und weisen immer noch dieselbe Funktion auf -- sie werden lediglich nicht mehr im 3D-Viewport angezeigt. Neben dem Auge lässt sich zudem anhand der Schaltfläche mit einem abgebildeten Cursor einstellen, dass die entsprechenden Objektarten nicht mehr auswählbar sind.
 
 ::: {style="background-color: #d3d3d3; padding: 10px; display: inline-block;"}
 ![View Object Types.](Images/Chapter_2/2_4_viewobjecttypes.png){#fig-2_4 fig-align="left"}

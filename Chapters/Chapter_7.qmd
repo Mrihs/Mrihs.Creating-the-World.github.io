@@ -12,23 +12,21 @@ Grundlegende Transformationen
 Jegliche 3D-Meshes beinhalten drei grundlegende Eigenschaften. Diese Grundeigenschaften können jederzeit variiert werden. Es handelt sich dabei um:
 
 -   Position
-
 -   Rotation
-
 -   Skalierung
 
 Alle drei Optionen sind in der Sidebar (ein /ausblenden mittels {{< kbd N >}}) unter dem Menü «*Item*» unter dem Reiter «*Transform*» sichtbar. Die Eigenschaften beziehen sich jeweils auf das ausgewählte Objekt. Wenn kein Objekt ausgewählt ist, beziehen sie sich auf das zuletzt ausgewählte Objekt. Mittels der Einstellungen in der Sidebar lassen sich diese drei Eigenschaften beliebig durch die Eingabe von Zahlen variieren.
 
-:::::: tippbox
-:::: tippbox-header
+::: tippbox
+::: tippbox-header
 ::: tippbox-icon
 :::
-::::
+:::
 
 ::: tippbox-body
-Statt Zahlen können auch mathematische Berechnungen in die Felder eingegeben werden. Dadurch lassen sich komplexere Positionen ermitteln. Wenn etwa ein Objekt genau mittig zwischen einem Objekt mit einer Position von X = 4 und einem Objekt mit einer Position von X = 17 platziert werden soll, kann der X-Wert des zu platzierenden Objektes auf X = 4 + ((17 – 4) / 2) festgelegt werden. Das Objekt wird anschliessend mittig der beiden Objekte (X = 10.5) platziert.
+Statt Zahlen können auch mathematische Berechnungen in die Felder eingegeben werden. Dadurch lassen sich komplexere Positionen ermitteln. Wenn etwa ein Objekt genau mittig zwischen einem Objekt mit einer Position von X = 4 und einem Objekt mit einer Position von X = 17 platziert werden soll, kann der X-Wert des zu platzierenden Objektes auf X = 4 + ((17 -- 4) / 2) festgelegt werden. Das Objekt wird anschliessend mittig der beiden Objekte (X = 10.5) platziert.
 :::
-::::::
+:::
 
 ## Location
 
@@ -72,7 +70,7 @@ Die Skalierung eines Objekts beschreibt, wie stark ein Objekt vergrössert oder 
 Bezugspunkt der Skalierung
 :::
 
-Analog zu der Position und der Rotation bezieht sich die Skalierung ebenfalls auf den Ursprung des Objektes. Wenn sich das Mesh ausserhalb des Ursprungs befindet, führt dies dazu, dass auch der Leerraum zwischen dem Mesh und dem Ursprung entsprechend skaliert wird. Befindet sich die Grenze eines Objektes etwa um den Wert 1 vom Ursprung entfernt, führt eine Skalierung um den Wert 2 dazu, dass das Mesh selbst verdoppelt wird – allerdings wird die Distanz zum Ursprung des Objektes ebenfalls verdoppelt.
+Analog zu der Position und der Rotation bezieht sich die Skalierung ebenfalls auf den Ursprung des Objektes. Wenn sich das Mesh ausserhalb des Ursprungs befindet, führt dies dazu, dass auch der Leerraum zwischen dem Mesh und dem Ursprung entsprechend skaliert wird. Befindet sich die Grenze eines Objektes etwa um den Wert 1 vom Ursprung entfernt, führt eine Skalierung um den Wert 2 dazu, dass das Mesh selbst verdoppelt wird -- allerdings wird die Distanz zum Ursprung des Objektes ebenfalls verdoppelt.
 
 ## Dimension
 
@@ -96,34 +94,36 @@ Sperrung gilt nur für Viewport-Display
 
 Die Werte links neben dem Schloss lassen sich allerdings immer noch verändern, was kontraintuitiv wirken mag. Dies liegt daran, dass sich diese Sperrung auf Veränderungen mittels des Viewport Displays bezieht, welche nun als Nächstes betrachtet werden.
 
-:::::: tippbox
-:::: tippbox-header
-::: tippbox-icon
+::: exercisebox
+::: exercisebox-header
+::: exercisebox-icon
 :::
 
 Übung 3: Verwendung der Sidebar
-::::
+:::
 
-::: tippbox-body
-Übung 3.1\
+::: exercisebox-body
+**Übung 3.1**
+
 Versuchen Sie den Standardwürfel so zu skalieren, dass er entsprechend der Abbildung einen in die Höhe ragenden Quader darstellt.
 
-Übung 3.2\
+**Übung 3.2**
+
 Versuchen Sie den Standardwürfel so zu verändern, dass er aus der orthogonalen (Taste ) Vorder/Rück-Ansicht (Taste ) nicht mehr sichtbar ist.
 :::
-::::::
+:::
 
-:::::: tippbox
-:::: tippbox-header
-::: tippbox-icon
+::: rememberbox
+::: rememberbox-header
+::: rememberbox-icon
 :::
 
 Merke...
-::::
+:::
 
-::: tippbox-body
+::: rememberbox-body
 Die drei Transformationen Location, Rotation und Scale aus der Sidebar beziehen sich alle drei jeweils auf den Ursprung des Objektes.
 
 Dimension des Objektes hängt mit dessen Skalierung zusammen.
 :::
-::::::
+:::

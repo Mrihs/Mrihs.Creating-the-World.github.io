@@ -817,5 +817,19 @@
     "title": "12. Hilfestellungen für die Objektbearbeitung",
     "section": "Weitere Optionen",
     "text": "Weitere Optionen\n\n\nSymmetrische Bearbeitung\nIm Edit-Mode sind in der oberen rechten Ecke weitere Optionen verfügbar. Zum einen sind die drei Achsen X, Y und Z als Schaltfläche anwählbar. Durch das Anwählen eines dieser Icons wird das Objekt entsprechend der ausgewählten Achse symmetrisch bearbeitet. Eine Veränderung des Objekts auf der einen Seite der Achse wird dabei also gleichzeitig auch auf der gegenüberliegenden Seite durchgeführt. Gerade bei symmetrischen Objekten hat dies den Vorteil, dass der Fokus nur auf eine Seite gelegt werden muss, ohne dass die Bearbeitungsschritte auf der anderen Seite nochmals wiederholt werden müssen.\n\n\nSymmetrische Bearbeitung zu Beginn aktivieren\nBei der symmetrischen Bearbeitung muss allerdings darauf geachtet werden, dass diese Option nicht immer funktioniert. Sobald die Bearbeitung des Objektes begonnen hat, kann Blender teilweise diese Symmetrie nicht mehr berücksichtigen. Wenn eine symmetrische Objektbe arbeitung nötig ist, sollte diese also gleich zu Beginn aktiviert werden.\n\n\nVertices automatisch verbinden\nNeben den Schaltflächen für die drei Achsen befindet sich zudem das Icon für die Option «Auto Merge Vertices». Durch das Aktivieren dieser Option werden Vertices, welche während der weiteren Bearbeitung auf derselben Position platziert werden, automatisch miteinander verbunden. Dadurch ist es nicht mehr nötig, von Hand Vertices zu einem Vertex zu verbinden.\n\n\n\n\n\n\nAbbildung 7: Icon für Auto Merge Vertices.)"
+  },
+  {
+    "objectID": "Chapters/Chapter_7.html#übung-3.1-versuchen-sie-den-standardwürfel-so-zu-skalieren-dass-er-entsprechend-der-abbildung-einen-in-die-höhe-ragenden-quader-darstellt.",
+    "href": "Chapters/Chapter_7.html#übung-3.1-versuchen-sie-den-standardwürfel-so-zu-skalieren-dass-er-entsprechend-der-abbildung-einen-in-die-höhe-ragenden-quader-darstellt.",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "Übung 3.1 Versuchen Sie den Standardwürfel so zu skalieren, dass er entsprechend der Abbildung einen in die Höhe ragenden Quader darstellt.",
+    "text": "Übung 3.1 Versuchen Sie den Standardwürfel so zu skalieren, dass er entsprechend der Abbildung einen in die Höhe ragenden Quader darstellt."
+  },
+  {
+    "objectID": "Chapters/Chapter_7.html#übung-3.2-versuchen-sie-den-standardwürfel-so-zu-verändern-dass-er-aus-der-orthogonalen-taste-vorderrück-ansicht-taste-nicht-mehr-sichtbar-ist.",
+    "href": "Chapters/Chapter_7.html#übung-3.2-versuchen-sie-den-standardwürfel-so-zu-verändern-dass-er-aus-der-orthogonalen-taste-vorderrück-ansicht-taste-nicht-mehr-sichtbar-ist.",
+    "title": "7. Methoden der Objekt-Transformation",
+    "section": "Übung 3.2 Versuchen Sie den Standardwürfel so zu verändern, dass er aus der orthogonalen (Taste ) Vorder/Rück-Ansicht (Taste ) nicht mehr sichtbar ist.",
+    "text": "Übung 3.2 Versuchen Sie den Standardwürfel so zu verändern, dass er aus der orthogonalen (Taste ) Vorder/Rück-Ansicht (Taste ) nicht mehr sichtbar ist."
   }
 ]

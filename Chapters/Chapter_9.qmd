@@ -33,20 +33,18 @@ Die verschiedenen Bearbeitungs-Modi
 :::
 
 -   **Object Mode**: In diesem Modus können die Objekte in einer Szene als Ganzes transformiert und angeordnet werden.
-
 -   **Edit Mode**: In diesem Modus können die einzelnen Bestandteile des Objekts anvisiert und bearbeitet werden.
-
 -   **Sculpt Mode**: In diesem Modus kann das Objekt anhand von Sculpting-Tools bearbeitet werden.
-
--   **Vertex Paint**: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen.
-
+-   **Vertex Paint**: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen
 -   **Weight Paint**: In diesem Modus werden dem Objekt verschiedene Gewichte aufgemalt, welche anschliessend für weitere Funktionen verwendet werden können.
+
+-   **Texture Paint**: In diesem Modus ist es möglich, ein Objekt mit einer Textur zu bemalen.
 
 ::: column-margin
 Wechsel zwischen Object- und Edit-Mode
 :::
 
--   **Texture Paint**: In diesem Modus ist es möglich, ein Objekt mit einer Textur zu bemalen. Im Rahmen dieses Kurses wird vorwiegend mit dem Object- und dem Edit-Mode gearbeitet. Der Wechsel zwischen diesen beiden Modi stellt einen wichtigen Wechsel zwischen den Modi dar. Deshalb ist es möglich, mittels einer einzigen Taste zwischen dem Object- und dem Edit-Mode hin- und herzuwechseln – nämlich mittels der Taste {{< kbd Tab >}} . Dabei wird in den Edit-Mode für das aktuell ausgewählte Objekt gewechselt. Für Objekte, welche nicht aus einzelnen Komponenten bestehen (beispielsweise Kameras oder Lichtquellen), ist kein Edit-Mode verfügbar.
+Im Rahmen dieses Kurses wird vorwiegend mit dem Object- und dem Edit-Mode gearbeitet. Der Wechsel zwischen diesen beiden Modi stellt einen wichtigen Wechsel zwischen den Modi dar. Deshalb ist es möglich, mittels einer einzigen Taste zwischen dem Object- und dem Edit-Mode hin- und herzuwechseln – nämlich mittels der Taste {{< kbd Tab >}} . Dabei wird in den Edit-Mode für das aktuell ausgewählte Objekt gewechselt. Für Objekte, welche nicht aus einzelnen Komponenten bestehen (beispielsweise Kameras oder Lichtquellen), ist kein Edit-Mode verfügbar.
 
 ## Struktur von 3D-Meshes
 
@@ -57,9 +55,7 @@ Der Gitteraufbau von 3D-Meshes
 Beim Wechseln in den Edit-Mode erscheint das Mesh in seiner Struktur, bestehend aus mehreren Polygonen. Dabei handelt es sich um einzelne Oberflächenstrukturen der Meshes. Die Polygone – und somit auch das Mesh – bestehen in ihrer Struktur aus folgenden Elementen:
 
 -   **Vertices**: Einzelne Punkte in einem Mesh
-
 -   **Edges**: Linien zwischen zwei Vertices in einem Mesh
-
 -   **Faces**: Flächen zwischen mehreren Edges/Vertices in einem Mesh
 
 ![Vertices, Edges und Faces.](Images/Chapter_9/1.%20Vertices,%20Edges%20and%20Faces.png){#fig-1_1 fig-align="left"}
@@ -134,9 +130,7 @@ Bezeichnung von Faces aufgrund Anzahl Vertices
 :::
 
 -   **Triangles** (**Tris**): Faces, die aus drei Vertices bestehen
-
 -   **Quadrangles** (**Quads**): Faces, die aus vier Vertices bestehen
-
 -   **N-Gons**: Faces, die aus n Vertices bestehen
 
 ![Der Standardwürfel bestehend aus Tris statt aus Quads.](Images/Chapter_9/3.%20Cube%20by%20Tris.png){#fig-1_3 fig-align="left"}
@@ -161,15 +155,15 @@ Anwendung von Tris
 
 Arbeiten mit Tris ist trotzdem durchaus möglich und vereinzelte Tris in Objekten sind auch nicht problematisch. In manchen Situationen sind Tris sogar flexibler als Quads. Wenn allerdings die Objekte komplett aus Tris bestehen sollen, macht dies gerade in gemeinschaftlichen Prozessen nur Sinn, wenn alle beteiligten Personen mit Tris umgehen können.
 
-:::::: tippbox
-:::: tippbox-header
-::: tippbox-icon
+:::::: rememberbox
+:::: rememberbox-header
+::: rememberbox-icon
 :::
 
 Merke...
 ::::
 
-::: tippbox-body
+::: rememberbox-body
 Vertices beschreiben die einzelnen Punkte in einem 3D-Objekt.
 
 Edges beschreiben die verbundenen Punkte in einem 3D-Objekt.

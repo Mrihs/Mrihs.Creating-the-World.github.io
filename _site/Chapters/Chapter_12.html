@@ -282,14 +282,14 @@ Abbildung&nbsp;1: Snap-Menü.
 <p>Snap-Menü</p>
 </div></div><p>Mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> lässt sich das sogenannte «Snap»-Menü öffnen. Dieses sich erscheint direkt beim Mauszeiger und ermöglicht es, ausgewählte Objekte oder den 3D-Cursor an bestimmte Positionen zu verschieben. Das Menü beinhaltet folgende Optionen:</p>
 <ul>
-<li><p><strong>Cursor to Grid</strong>: Dadurch wird der 3D-Cursor an die nächstliegende Position des Koordinatengitters verschoben, welches als Viewport-Overlay angezeigt wird.</p></li>
-<li><p><strong>Cursor to World Origin</strong>: Dadurch wird der 3D-Cursor an den Ursprung der Welt positioniert. Dies entspricht dem Nullpunkt aller drei Achsen.</p></li>
-<li><p><strong>Cursor to Selected</strong>: Der 3D-Cursor wird an der Position des ausgewählten Objektes respektive dem Median der aktuellen Auswahl positioniert.</p></li>
-<li><p><strong>Cursor to Active</strong>: Der 3D-Cursor wird an der Position des aktiven Elementes positioniert.</p></li>
-<li><p><strong>Selection to Cursor (Keep Offset)</strong>: Alle ausgewählten Elemente werden zum 3D-Cursor verschoben, sodass sich der Median der ausgewählten Elemente an der Position des 3D-Cursors befindet. Die Relationen zwischen den ausgewählten Objekten bleiben dabei bestehen.</p></li>
-<li><p><strong>Selection to Cursor</strong>: Alle ausgewählten Elemente werden zum 3D-Cursor verschoben, sodass sich die Position jedes individuellen Elementes an der Position des 3D-Cursors befindet. Im Edit Mode führt dies dazu, dass alle ausgewählten Vertices auf der Position des 3D-Cursors liegen.</p></li>
-<li><p><strong>Selection to Active</strong>: Die Auswahl wird an die Position des aktiven Objektes verschoben. Im Edit Mode führt dies dazu, dass alle ausgewählten Vertices auf derselben Position liegen.</p></li>
-<li><p><strong>Selection to Grid</strong>: Das ausgewählte Element oder der Median der ausgewählten Elemente wird an die nächstliegende Position des Koordinatengitters verschoben, welches als Viewport-Overlay angezeigt wird. Im Edit-Mode werden die ausgewählten Elemente ebenfalls an die nächstliegende Position des Koordinatengitters verschoben. Wenn die Ansicht jedoch zu weit hinausgezoomt wird und die Elemente dadurch visuell an derselben Stelle zu sein scheinen, werden alle ausgewählten Vertices dabei an derselben Position platziert.</p></li>
+<li><strong>Cursor to Grid</strong>: Dadurch wird der 3D-Cursor an die nächstliegende Position des Koordinatengitters verschoben, welches als Viewport-Overlay angezeigt wird.</li>
+<li><strong>Cursor to World Origin</strong>: Dadurch wird der 3D-Cursor an den Ursprung der Welt positioniert. Dies entspricht dem Nullpunkt aller drei Achsen.</li>
+<li><strong>Cursor to Selected</strong>: Der 3D-Cursor wird an der Position des ausgewählten Objektes respektive dem Median der aktuellen Auswahl positioniert.</li>
+<li><strong>Cursor to Active</strong>: Der 3D-Cursor wird an der Position des aktiven Elementes positioniert.</li>
+<li><strong>Selection to Cursor (Keep Offset)</strong>: Alle ausgewählten Elemente werden zum 3D-Cursor verschoben, sodass sich der Median der ausgewählten Elemente an der Position des 3D-Cursors befindet. Die Relationen zwischen den ausgewählten Objekten bleiben dabei bestehen.</li>
+<li><strong>Selection to Cursor</strong>: Alle ausgewählten Elemente werden zum 3D-Cursor verschoben, sodass sich die Position jedes individuellen Elementes an der Position des 3D-Cursors befindet. Im Edit Mode führt dies dazu, dass alle ausgewählten Vertices auf der Position des 3D-Cursors liegen.</li>
+<li><strong>Selection to Active</strong>: Die Auswahl wird an die Position des aktiven Objektes verschoben. Im Edit Mode führt dies dazu, dass alle ausgewählten Vertices auf derselben Position liegen.</li>
+<li><strong>Selection to Grid</strong>: Das ausgewählte Element oder der Median der ausgewählten Elemente wird an die nächstliegende Position des Koordinatengitters verschoben, welches als Viewport-Overlay angezeigt wird. Im Edit-Mode werden die ausgewählten Elemente ebenfalls an die nächstliegende Position des Koordinatengitters verschoben. Wenn die Ansicht jedoch zu weit hinausgezoomt wird und die Elemente dadurch visuell an derselben Stelle zu sein scheinen, werden alle ausgewählten Vertices dabei an derselben Position platziert.</li>
 </ul>
 </section>
 <section id="transform-orientation" class="level2 page-columns page-full">
@@ -299,12 +299,12 @@ Abbildung&nbsp;1: Snap-Menü.
 <p>Verschiedene Orientierungen für Transformationen</p>
 </div></div><p>Bei Transformationen können die X-, Y- und Z-Achsen zu Hilfe genommen werden. Diese Achsen scheinen fix festgelegt zu sein. Es gibt allerdings verschiedene Orientierungen für diese Achsen. Die Transform-Orientation beschreibt diese Orientierung der Achsen. Es stehen folgende Orientierungen zur Verfügung:</p>
 <ul>
-<li><p>Global</p></li>
-<li><p>Local</p></li>
-<li><p>Normal</p></li>
-<li><p>Gimbal</p></li>
-<li><p>View</p></li>
-<li><p>Cursor</p></li>
+<li>Global</li>
+<li>Local</li>
+<li>Normal</li>
+<li>Gimbal</li>
+<li>View</li>
+<li>Cursor</li>
 </ul>
 <div id="fig-1_" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
@@ -387,12 +387,12 @@ Abbildung&nbsp;2: Auswahl der Transform-Orientation.
 <p>Verschiedene Drehpunkte</p>
 </div></div><p>Eine Reihe von Transformationen orientieren sich an einem bestimmten Drehpunkt im dreidimensionalen Raum. Wenn vom Standardwürfel etwa zwei gegenüberliegende Faces ausgewählt werden, orientiert sich eine Skalierung der Faces anhand der Medianposition der Vertices. Mittels des Menüreiters «<em>Transform Pivot Point</em>» können auch andere Drehpunkte ausgewählt werden. Die Optionen sind dabei:</p>
 <ul>
-<li><p>Bounding Box</p></li>
-<li><p>Center</p></li>
-<li><p>3D Cursor</p></li>
-<li><p>Individual Origins</p></li>
-<li><p>Median Point</p></li>
-<li><p>Active Element</p></li>
+<li>Bounding Box</li>
+<li>Center</li>
+<li>3D Cursor</li>
+<li>Individual Origins</li>
+<li>Median Point</li>
+<li>Active Element</li>
 </ul>
 <div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
@@ -560,16 +560,16 @@ Abbildung&nbsp;6: Die verschiedenen Formen zur proportionalen Bearbeitung im Ver
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Anwendungsbereiche für proportionale Bearbeitung</p>
 </div></div><p>Gerade natürliche Objekte (Früchte, Landschaften, Bäume, Blumen, usw.) sind selten symmetrisch. Oftmals gibt es Dellen oder andere Verformungen. Mittels der proportionalen Bearbeitung können solche Verformungen leicht auf grössere Flächen angewendet werden, ohne dass jeder Vertex einzeln bearbeitet werden muss.</p>
-<div class="tippbox">
-<div class="tippbox-header">
-<div class="tippbox-icon">
+<div class="exercisebox">
+<div class="exercisebox-header">
+<div class="exercisebox-icon">
 
 </div>
 <p>Übung 8: Proportional Editing</p>
 </div>
-<div class="tippbox-body">
-<p>Übung 8.1<br>
-Erstellen Sie eine UV-Sphere und versuchen Sie, damit eine Birne zu modellieren. Nutzen Sie hierfür die proportionale Bearbeitung.</p>
+<div class="exercisebox-body">
+<p><strong>Übung 8.1</strong></p>
+<p>Erstellen Sie eine UV-Sphere und versuchen Sie, damit eine Birne zu modellieren. Nutzen Sie hierfür die proportionale Bearbeitung.</p>
 </div>
 </div>
 </section>

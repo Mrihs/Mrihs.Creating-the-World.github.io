@@ -22,19 +22,12 @@ Snap-Menü
 Mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd S >}} lässt sich das sogenannte «Snap»-Menü öffnen. Dieses sich erscheint direkt beim Mauszeiger und ermöglicht es, ausgewählte Objekte oder den 3D-Cursor an bestimmte Positionen zu verschieben. Das Menü beinhaltet folgende Optionen:
 
 -   **Cursor to Grid**: Dadurch wird der 3D-Cursor an die nächstliegende Position des Koordinatengitters verschoben, welches als Viewport-Overlay angezeigt wird.
-
 -   **Cursor to World Origin**: Dadurch wird der 3D-Cursor an den Ursprung der Welt positioniert. Dies entspricht dem Nullpunkt aller drei Achsen.
-
 -   **Cursor to Selected**: Der 3D-Cursor wird an der Position des ausgewählten Objektes respektive dem Median der aktuellen Auswahl positioniert.
-
 -   **Cursor to Active**: Der 3D-Cursor wird an der Position des aktiven Elementes positioniert.
-
 -   **Selection to Cursor (Keep Offset)**: Alle ausgewählten Elemente werden zum 3D-Cursor verschoben, sodass sich der Median der ausgewählten Elemente an der Position des 3D-Cursors befindet. Die Relationen zwischen den ausgewählten Objekten bleiben dabei bestehen.
-
 -   **Selection to Cursor**: Alle ausgewählten Elemente werden zum 3D-Cursor verschoben, sodass sich die Position jedes individuellen Elementes an der Position des 3D-Cursors befindet. Im Edit Mode führt dies dazu, dass alle ausgewählten Vertices auf der Position des 3D-Cursors liegen.
-
 -   **Selection to Active**: Die Auswahl wird an die Position des aktiven Objektes verschoben. Im Edit Mode führt dies dazu, dass alle ausgewählten Vertices auf derselben Position liegen.
-
 -   **Selection to Grid**: Das ausgewählte Element oder der Median der ausgewählten Elemente wird an die nächstliegende Position des Koordinatengitters verschoben, welches als Viewport-Overlay angezeigt wird. Im Edit-Mode werden die ausgewählten Elemente ebenfalls an die nächstliegende Position des Koordinatengitters verschoben. Wenn die Ansicht jedoch zu weit hinausgezoomt wird und die Elemente dadurch visuell an derselben Stelle zu sein scheinen, werden alle ausgewählten Vertices dabei an derselben Position platziert.
 
 ## Transform Orientation
@@ -46,15 +39,10 @@ Verschiedene Orientierungen für Transformationen
 Bei Transformationen können die X-, Y- und Z-Achsen zu Hilfe genommen werden. Diese Achsen scheinen fix festgelegt zu sein. Es gibt allerdings verschiedene Orientierungen für diese Achsen. Die Transform-Orientation beschreibt diese Orientierung der Achsen. Es stehen folgende Orientierungen zur Verfügung:
 
 -   Global
-
 -   Local
-
 -   Normal
-
 -   Gimbal
-
 -   View
-
 -   Cursor
 
 ![Auswahl der Transform-Orientation.](Images/Chapter_12/2.%20Transform_orientation.png){#fig-1_ fig-align="left"}
@@ -141,15 +129,10 @@ Verschiedene Drehpunkte
 Eine Reihe von Transformationen orientieren sich an einem bestimmten Drehpunkt im dreidimensionalen Raum. Wenn vom Standardwürfel etwa zwei gegenüberliegende Faces ausgewählt werden, orientiert sich eine Skalierung der Faces anhand der Medianposition der Vertices. Mittels des Menüreiters «*Transform Pivot Point*» können auch andere Drehpunkte ausgewählt werden. Die Optionen sind dabei:
 
 -   Bounding Box
-
 -   Center
-
 -   3D Cursor
-
 -   Individual Origins
-
 -   Median Point
-
 -   Active Element
 
 ![Icon für den Pivot-Point in der Default-Auswahl (Median-Point.)](Images/Chapter_12/3.%20Icon_Pivot_Point.png){#fig-1_3 fig-align="left"}
@@ -203,21 +186,14 @@ Elemente an anderen Elementen andocken lassen
 Die Option «*Snap*» ist bei der Verschiebung von Objekten nützlich. Dadurch können andere Elemente benutzt werden, um die zu verschiebenden Objekte direkt an deren Struktur andocken zu lassen. So müssen nicht die etwaigen Koordinaten ermittelt werden, sondern Blender rastet die zu bewegenden Objekte direkt an anderen Objekten ein. Die anvisierten Strukturen können dabei im Edit-Mode Teil des eigenen Objektes sein, aber auch Teil eines anderen Objektes. Im Object-Mode wird zudem jeweils der Ursprung des Objektes zum Andocken verwendet. Im Dropdown-Menü kann ein gestellt werden, an welchen Stellen jeweils angedockt werden soll:
 
 -   Increment
-
 -   Vertex
-
 -   Edge
-
 -   Face
-
 -   Volume
-
 -   Edge Center
-
 -   Edge Perpendicular
 
-![Snap-Icon.)](Images/Chapter_12/3. Icon_Snap.png){#fig-1_4 fig-align="left"}
-
+![Snap-Icon.)](Images/Chapter_12/3.%20Icon_Snap.png){#fig-1_4 fig-align="left"}
 
 ### Increment
 
@@ -225,8 +201,7 @@ Die Option «*Snap*» ist bei der Verschiebung von Objekten nützlich. Dadurch k
 Snap auf ein Inkrement
 :::
 
-Ist Snap auf «*Increment*» eingestellt, so werden die Inkremente der Welt verwendet, um Objekte anders zu platzieren. Mit diesen Inkrementen sind die Gitterraster im Hintergrund der 3D-Ansicht gemeint. Jedes Viereck stellt dabei ein Inkrement dar. Durch stärkeres Hinein- oder Hinauszoomen 
-im 3D-Viewport werden jeweils grössere oder kleinere Inkremente sichtbar. Die ausgewählten Objekte rasten proportional zueinander an der Stelle in einem Inkrement ein. 
+Ist Snap auf «*Increment*» eingestellt, so werden die Inkremente der Welt verwendet, um Objekte anders zu platzieren. Mit diesen Inkrementen sind die Gitterraster im Hintergrund der 3D-Ansicht gemeint. Jedes Viereck stellt dabei ein Inkrement dar. Durch stärkeres Hinein- oder Hinauszoomen im 3D-Viewport werden jeweils grössere oder kleinere Inkremente sichtbar. Die ausgewählten Objekte rasten proportional zueinander an der Stelle in einem Inkrement ein.
 
 ### Vertex
 
@@ -239,7 +214,7 @@ Ist Snap auf «*Vertex*» eingestellt, so können andere Vertices angesteuert we
 ### Edge
 
 ::: column-margin
-Snap auf Edges 
+Snap auf Edges
 :::
 
 Ist Snap auf «*Edge*» eingestellt, so können andere Edges als Ziel angesteuert werden und die Auswahl wird direkt passend auf eine Position auf dem Edge eingestellt. Dabei kann die ganze Länge eines Edges ausgewählt werden. Es können zudem Edges von anderen Objekten angesteuert werden, selbst wenn diese nicht innerhalb des Edit-Modes aktiviert wurden.
@@ -250,8 +225,7 @@ Ist Snap auf «*Edge*» eingestellt, so können andere Edges als Ziel angesteuer
 Snap auf Faces
 :::
 
-Ist Snap auf «*Face*» eingestellt, so versucht Blender, die Auswahl direkt an der Position von anderen Faces anzudocken. Dabei kann jeder Punkt auf einem Face ausgewählt werden. Zudem können 
-auch hier die Faces von anderen Objekten angesteuert werden.
+Ist Snap auf «*Face*» eingestellt, so versucht Blender, die Auswahl direkt an der Position von anderen Faces anzudocken. Dabei kann jeder Punkt auf einem Face ausgewählt werden. Zudem können auch hier die Faces von anderen Objekten angesteuert werden.
 
 ### Volume
 
@@ -259,8 +233,7 @@ auch hier die Faces von anderen Objekten angesteuert werden.
 Snap auf das Volumen
 :::
 
-Mittels der Einstellung von Snap auf «*Volume*» lässt sich das Volumen eines Objektes als genaues Ziel zum Einrasten einer Auswahl verwenden. Oft ist nicht klar ersichtlich, wo genau das Objekt nun 
-einrastet, da das Volumen eines Objektes häufig durch die Faces verdeckt wird. Hierbei kann die Wireframe-Ansicht helfen.
+Mittels der Einstellung von Snap auf «*Volume*» lässt sich das Volumen eines Objektes als genaues Ziel zum Einrasten einer Auswahl verwenden. Oft ist nicht klar ersichtlich, wo genau das Objekt nun einrastet, da das Volumen eines Objektes häufig durch die Faces verdeckt wird. Hierbei kann die Wireframe-Ansicht helfen.
 
 ### Edge Center
 
@@ -268,8 +241,7 @@ einrastet, da das Volumen eines Objektes häufig durch die Faces verdeckt wird. 
 Snap auf die Mitte von Edges
 :::
 
-Mittels der Einstellung von Snap auf «*Edge Center*» werden jeweils die Mittelpunkte von Edges anvisiert. Hierbei werden also keine Vertices anvisiert, sondern der Median des Edges. Andere Punkte 
-auf dem Edge werden nicht zum Einhaken angeboten.
+Mittels der Einstellung von Snap auf «*Edge Center*» werden jeweils die Mittelpunkte von Edges anvisiert. Hierbei werden also keine Vertices anvisiert, sondern der Median des Edges. Andere Punkte auf dem Edge werden nicht zum Einhaken angeboten.
 
 ### Edge Perpendicular
 
@@ -285,8 +257,7 @@ Mittels der Einstellung von Snap auf «*Edge Perpendicular*» wird die Auswahl b
 Quelle des Snaps einstellen
 :::
 
-Wenn lediglich ein einzelner Vertex ausgewählt und verschoben wird, ist klar, welcher Punkt jeweils an den anvisierten Stellen andockt: der ausgewählte Vertex. Wenn allerdings mehrere Elemente 
-ausgewählt wurden, benutzt Blender per Default das jeweils ursprünglich am nächsten liegende Element zum Andocken. Es kann allerdings eingestellt werden, dass der Median der aktivierten Auswahl oder das aktive Element verwendet wird. Dies kann unter «*Snap With*» eingestellt werden. Zusätzlich gibt es noch die Auswahl «*Center*», welche zusätzlich noch weitere Abweichungen vom Drehpunkt mitberücksichtigt (beispielsweise die ursprüngliche Abweichung vom 3D-Cursor).
+Wenn lediglich ein einzelner Vertex ausgewählt und verschoben wird, ist klar, welcher Punkt jeweils an den anvisierten Stellen andockt: der ausgewählte Vertex. Wenn allerdings mehrere Elemente ausgewählt wurden, benutzt Blender per Default das jeweils ursprünglich am nächsten liegende Element zum Andocken. Es kann allerdings eingestellt werden, dass der Median der aktivierten Auswahl oder das aktive Element verwendet wird. Dies kann unter «*Snap With*» eingestellt werden. Zusätzlich gibt es noch die Auswahl «*Center*», welche zusätzlich noch weitere Abweichungen vom Drehpunkt mitberücksichtigt (beispielsweise die ursprüngliche Abweichung vom 3D-Cursor).
 
 ## Proportional Editing
 
@@ -294,42 +265,42 @@ ausgewählt wurden, benutzt Blender per Default das jeweils ursprünglich am nä
 Proportionale Bearbeitung mittels {{< kbd O >}} aktivieren
 :::
 
-Die Option «*Proportional Editing*» ermöglicht es, dass nahe beieinanderliegende Elemente proportional zu ihrer Nähe bearbeitet werden können. Diese Option kann auch mit der Taste {{< kbd O >}} aktiviert oder deaktiviert werden. Wenn diese Option aktiviert ist und eine Transformation durchgeführt wird (z.B. eine Rotation), erscheint um den Bezugspunkt ein Kreis. Alle Elemente, welche sich innerhalb dieses Kreises befinden, werden diese Transformation nun ebenfalls durchführen. Der Radius des Kreises kann mittels des Mausrads vergrössert oder verkleinert werden. Dadurch wird der Erfassungsbereich der proportionalen Bearbeitung variiert. Alternativ kann die Taste {{< kbd PageUp >}}  zum Vergrössern des Kreises oder {{< kbd PageDown >}} zum Verkleinern des Kreises gedrückt werden.
+Die Option «*Proportional Editing*» ermöglicht es, dass nahe beieinanderliegende Elemente proportional zu ihrer Nähe bearbeitet werden können. Diese Option kann auch mit der Taste {{< kbd O >}} aktiviert oder deaktiviert werden. Wenn diese Option aktiviert ist und eine Transformation durchgeführt wird (z.B. eine Rotation), erscheint um den Bezugspunkt ein Kreis. Alle Elemente, welche sich innerhalb dieses Kreises befinden, werden diese Transformation nun ebenfalls durchführen. Der Radius des Kreises kann mittels des Mausrads vergrössert oder verkleinert werden. Dadurch wird der Erfassungsbereich der proportionalen Bearbeitung variiert. Alternativ kann die Taste {{< kbd PageUp >}} zum Vergrössern des Kreises oder {{< kbd PageDown >}} zum Verkleinern des Kreises gedrückt werden.
 
-![Icon für Proportional Editing.)](Images/Chapter_12/4. Icon_Proportional Editing.png){#fig-1_5 fig-align="left"}
+![Icon für Proportional Editing.)](Images/Chapter_12/4.%20Icon_Proportional%20Editing.png){#fig-1_5 fig-align="left"}
 
 ::: column-margin
 Proportionale Bearbeitung im Object-Mode
 :::
 
-Im Object-Mode müssen jeweils die Ursprünge der Objekte, welche proportional transformiert werden sollen, innerhalb des Erfassungskreises liegen. Dabei spielt es keine Rolle, ob das Mesh des Objektes ebenfalls erfasst wird oder nicht. Im Edit-Mode können lediglich die Vertices der aktuell ausgewählten Objekte proportional mittransformiert werden. Zudem gibt es im Edit-Mode die Möglichkeit, im Dropdown-Menü des Proportional Editings die Option «*Connected Only*» anzuwählen. Dadurch werden lediglich Vertices bei der proportionalen Bearbeitung berücksichtigt, die über Edges mit den zu bearbeitenden Vertices verbunden sind. 
+Im Object-Mode müssen jeweils die Ursprünge der Objekte, welche proportional transformiert werden sollen, innerhalb des Erfassungskreises liegen. Dabei spielt es keine Rolle, ob das Mesh des Objektes ebenfalls erfasst wird oder nicht. Im Edit-Mode können lediglich die Vertices der aktuell ausgewählten Objekte proportional mittransformiert werden. Zudem gibt es im Edit-Mode die Möglichkeit, im Dropdown-Menü des Proportional Editings die Option «*Connected Only*» anzuwählen. Dadurch werden lediglich Vertices bei der proportionalen Bearbeitung berücksichtigt, die über Edges mit den zu bearbeitenden Vertices verbunden sind.
 
 ::: column-margin
 Form der proportionalen Bearbeitung
 :::
 
-Die Elemente, welche sich innerhalb des Erfassungskreises befinden, werden anschliessend alle proportional mittransformiert. Die Proportion erfolgt dabei einer vorgegebenen Kurve, welche sich anhand des Dropdown-Menüs genauer definieren lässt. Mithilfe der proportionalen Bearbeitung lassen sich durch die Bearbeitung eines einzigen Vertex komplexe Strukturen erstellen. 
+Die Elemente, welche sich innerhalb des Erfassungskreises befinden, werden anschliessend alle proportional mittransformiert. Die Proportion erfolgt dabei einer vorgegebenen Kurve, welche sich anhand des Dropdown-Menüs genauer definieren lässt. Mithilfe der proportionalen Bearbeitung lassen sich durch die Bearbeitung eines einzigen Vertex komplexe Strukturen erstellen.
 
-![Die verschiedenen Formen zur proportionalen Bearbeitung im Vergleich. Beispiele zeigen eine Fläche von 2x2 Metern, bestehend aus 16x16 Faces. Diese Faces wurden mittig um 0.5 Meter entlang der Z-Achse bewegt.)](Images/Chapter_12/5. Proportional Editing Examples.png){#fig-1_6 fig-align="left"}
+![Die verschiedenen Formen zur proportionalen Bearbeitung im Vergleich. Beispiele zeigen eine Fläche von 2x2 Metern, bestehend aus 16x16 Faces. Diese Faces wurden mittig um 0.5 Meter entlang der Z-Achse bewegt.)](Images/Chapter_12/5.%20Proportional%20Editing%20Examples.png){#fig-1_6 fig-align="left"}
 
 ::: column-margin
-Anwendungsbereiche für proportionale 
-Bearbeitung
+Anwendungsbereiche für proportionale Bearbeitung
 :::
 
-Gerade natürliche Objekte (Früchte, Landschaften, Bäume, Blumen, usw.) sind selten symmetrisch. Oftmals gibt es Dellen oder andere Verformungen. Mittels der proportionalen Bearbeitung können 
-solche Verformungen leicht auf grössere Flächen angewendet werden, ohne dass jeder Vertex einzeln bearbeitet werden muss.
+Gerade natürliche Objekte (Früchte, Landschaften, Bäume, Blumen, usw.) sind selten symmetrisch. Oftmals gibt es Dellen oder andere Verformungen. Mittels der proportionalen Bearbeitung können solche Verformungen leicht auf grössere Flächen angewendet werden, ohne dass jeder Vertex einzeln bearbeitet werden muss.
 
-:::::: tippbox
-:::: tippbox-header
-::: tippbox-icon
+:::::: exercisebox
+:::: exercisebox-header
+::: exercisebox-icon
 :::
+
 Übung 8: Proportional Editing
 ::::
 
-::: tippbox-body
-Übung 8.1  
-Erstellen Sie eine UV-Sphere und versuchen Sie, damit eine Birne zu modellieren. Nutzen Sie hierfür die proportionale Bearbeitung. 
+::: exercisebox-body
+**Übung 8.1**
+
+Erstellen Sie eine UV-Sphere und versuchen Sie, damit eine Birne zu modellieren. Nutzen Sie hierfür die proportionale Bearbeitung.
 :::
 ::::::
 
@@ -339,18 +310,13 @@ Erstellen Sie eine UV-Sphere und versuchen Sie, damit eine Birne zu modellieren.
 Symmetrische Bearbeitung
 :::
 
-Im Edit-Mode sind in der oberen rechten Ecke weitere Optionen verfügbar. Zum einen sind die drei 
-Achsen X, Y und Z als Schaltfläche anwählbar. Durch das Anwählen eines dieser Icons wird das 
-Objekt entsprechend der ausgewählten Achse symmetrisch bearbeitet. Eine Veränderung des Objekts auf der einen Seite der Achse wird dabei also gleichzeitig auch auf der gegenüberliegenden Seite durchgeführt. Gerade bei symmetrischen Objekten hat dies den Vorteil, dass der Fokus nur auf eine Seite gelegt werden muss, ohne dass die Bearbeitungsschritte auf der anderen Seite nochmals wiederholt werden müssen.
+Im Edit-Mode sind in der oberen rechten Ecke weitere Optionen verfügbar. Zum einen sind die drei Achsen X, Y und Z als Schaltfläche anwählbar. Durch das Anwählen eines dieser Icons wird das Objekt entsprechend der ausgewählten Achse symmetrisch bearbeitet. Eine Veränderung des Objekts auf der einen Seite der Achse wird dabei also gleichzeitig auch auf der gegenüberliegenden Seite durchgeführt. Gerade bei symmetrischen Objekten hat dies den Vorteil, dass der Fokus nur auf eine Seite gelegt werden muss, ohne dass die Bearbeitungsschritte auf der anderen Seite nochmals wiederholt werden müssen.
 
 ::: column-margin
 Symmetrische Bearbeitung zu Beginn aktivieren
 :::
 
-Bei der symmetrischen Bearbeitung muss allerdings darauf geachtet werden, dass diese Option 
-nicht immer funktioniert. Sobald die Bearbeitung des Objektes begonnen hat, kann Blender teilweise 
-diese Symmetrie nicht mehr berücksichtigen. Wenn eine symmetrische Objektbe arbeitung nötig ist, sollte diese also gleich zu Beginn aktiviert werden.
-
+Bei der symmetrischen Bearbeitung muss allerdings darauf geachtet werden, dass diese Option nicht immer funktioniert. Sobald die Bearbeitung des Objektes begonnen hat, kann Blender teilweise diese Symmetrie nicht mehr berücksichtigen. Wenn eine symmetrische Objektbe arbeitung nötig ist, sollte diese also gleich zu Beginn aktiviert werden.
 
 ::: column-margin
 Vertices automatisch verbinden
@@ -358,6 +324,4 @@ Vertices automatisch verbinden
 
 Neben den Schaltflächen für die drei Achsen befindet sich zudem das Icon für die Option «*Auto Merge Vertices*». Durch das Aktivieren dieser Option werden Vertices, welche während der weiteren Bearbeitung auf derselben Position platziert werden, automatisch miteinander verbunden. Dadurch ist es nicht mehr nötig, von Hand Vertices zu einem Vertex zu verbinden.
 
-![Icon für Auto Merge Vertices.)](Images/Chapter_12/6. Icon_Automerge.png){#fig-1_7 fig-align="left"}
-
-
+![Icon für Auto Merge Vertices.)](Images/Chapter_12/6.%20Icon_Automerge.png){#fig-1_7 fig-align="left"}

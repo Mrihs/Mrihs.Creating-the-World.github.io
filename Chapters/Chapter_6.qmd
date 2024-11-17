@@ -7,27 +7,17 @@ editor: visual
 Primitives
 :::
 
-Wie bereits erwähnt fokussiert sich dieser Kurs auf den Umgang mit Meshes. In der Auswahl zum Hinzufügen werden verschiedene grundlegende Formen von Meshes bereitgestellt. Diese grundlegenden Formen werden als Primitives bezeichnet.
-Zu den Primitives gehören:
+Wie bereits erwähnt fokussiert sich dieser Kurs auf den Umgang mit Meshes. In der Auswahl zum Hinzufügen werden verschiedene grundlegende Formen von Meshes bereitgestellt. Diese grundlegenden Formen werden als Primitives bezeichnet. Zu den Primitives gehören:
 
 -   Plane
-
 -   Cube
-
 -   Circle
-
 -   UV Sphere
-
 -   Ico Sphere
-
 -   Cylinder
-
 -   Cone
-
 -   Torus
-
 -   Grid
-
 -   Monkey
 
 ## Plane
@@ -102,12 +92,12 @@ Der Torus stellt eine ringförmige Gestalt dar, welche aus einer Major- und eine
 Gitternetz
 :::
 
-Das Grid stellt eine Alternative zur glatten Fläche dar, ist allerdings bereits in weitere kleine viereckige Flächen unterteilt. Im Kontext-Menü lässt sich anhand der Subdivisions eingeben, wie viele Unterteilungen das Gitternetz entlang der X- und der Y-Achse haben soll. Die  Dimensionalität des Grids ist analog zur Plane per Default 2x2x0 Meter.
+Das Grid stellt eine Alternative zur glatten Fläche dar, ist allerdings bereits in weitere kleine viereckige Flächen unterteilt. Im Kontext-Menü lässt sich anhand der Subdivisions eingeben, wie viele Unterteilungen das Gitternetz entlang der X- und der Y-Achse haben soll. Die Dimensionalität des Grids ist analog zur Plane per Default 2x2x0 Meter.
 
 ## Monkey
 
 ::: column-margin
-Suzanne 
+Suzanne
 :::
 
 Bei der Auswahl des Monkeys generiert Blender das Modell eines Affenkopfs. Dabei handelt es sich um Suzanne, das Maskottchen von Blender.

@@ -172,6 +172,14 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../Chapters/Chapter_10.html">
  <span class="dropdown-text">Kapitel 10</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_11.html">
+ <span class="dropdown-text">Kapitel 11</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_12.html">
+ <span class="dropdown-text">Kapitel 12</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -257,15 +265,14 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Object Mode</strong>: In diesem Modus können die Objekte in einer Szene als Ganzes transformiert und angeordnet werden.</p></li>
 <li><p><strong>Edit Mode</strong>: In diesem Modus können die einzelnen Bestandteile des Objekts anvisiert und bearbeitet werden.</p></li>
 <li><p><strong>Sculpt Mode</strong>: In diesem Modus kann das Objekt anhand von Sculpting-Tools bearbeitet werden.</p></li>
-<li><p><strong>Vertex Paint</strong>: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen.</p></li>
+<li><p><strong>Vertex Paint</strong>: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen</p></li>
 <li><p><strong>Weight Paint</strong>: In diesem Modus werden dem Objekt verschiedene Gewichte aufgemalt, welche anschliessend für weitere Funktionen verwendet werden können.</p></li>
+<li><p><strong>Texture Paint</strong>: In diesem Modus ist es möglich, ein Objekt mit einer Textur zu bemalen.</p></li>
 </ul>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Wechsel zwischen Object- und Edit-Mode</p>
-</div></div><ul>
-<li><strong>Texture Paint</strong>: In diesem Modus ist es möglich, ein Objekt mit einer Textur zu bemalen. Im Rahmen dieses Kurses wird vorwiegend mit dem Object- und dem Edit-Mode gearbeitet. Der Wechsel zwischen diesen beiden Modi stellt einen wichtigen Wechsel zwischen den Modi dar. Deshalb ist es möglich, mittels einer einzigen Taste zwischen dem Object- und dem Edit-Mode hin- und herzuwechseln – nämlich mittels der Taste <kbd aria-hidden="true">Tab</kbd><span class="visually-hidden">Tab</span> . Dabei wird in den Edit-Mode für das aktuell ausgewählte Objekt gewechselt. Für Objekte, welche nicht aus einzelnen Komponenten bestehen (beispielsweise Kameras oder Lichtquellen), ist kein Edit-Mode verfügbar.</li>
-</ul>
+</div></div><p>Im Rahmen dieses Kurses wird vorwiegend mit dem Object- und dem Edit-Mode gearbeitet. Der Wechsel zwischen diesen beiden Modi stellt einen wichtigen Wechsel zwischen den Modi dar. Deshalb ist es möglich, mittels einer einzigen Taste zwischen dem Object- und dem Edit-Mode hin- und herzuwechseln – nämlich mittels der Taste <kbd aria-hidden="true">Tab</kbd><span class="visually-hidden">Tab</span> . Dabei wird in den Edit-Mode für das aktuell ausgewählte Objekt gewechselt. Für Objekte, welche nicht aus einzelnen Komponenten bestehen (beispielsweise Kameras oder Lichtquellen), ist kein Edit-Mode verfügbar.</p>
 </section>
 <section id="struktur-von-3d-meshes" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="struktur-von-3d-meshes">Struktur von 3D-Meshes</h2>
@@ -274,9 +281,9 @@ ul.task-list li input[type="checkbox"] {
 <p>Der Gitteraufbau von 3D-Meshes</p>
 </div></div><p>Beim Wechseln in den Edit-Mode erscheint das Mesh in seiner Struktur, bestehend aus mehreren Polygonen. Dabei handelt es sich um einzelne Oberflächenstrukturen der Meshes. Die Polygone – und somit auch das Mesh – bestehen in ihrer Struktur aus folgenden Elementen:</p>
 <ul>
-<li><p><strong>Vertices</strong>: Einzelne Punkte in einem Mesh</p></li>
-<li><p><strong>Edges</strong>: Linien zwischen zwei Vertices in einem Mesh</p></li>
-<li><p><strong>Faces</strong>: Flächen zwischen mehreren Edges/Vertices in einem Mesh</p></li>
+<li><strong>Vertices</strong>: Einzelne Punkte in einem Mesh</li>
+<li><strong>Edges</strong>: Linien zwischen zwei Vertices in einem Mesh</li>
+<li><strong>Faces</strong>: Flächen zwischen mehreren Edges/Vertices in einem Mesh</li>
 </ul>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
@@ -353,9 +360,9 @@ Abbildung&nbsp;2: Schaltfläche für den Vertex-, Edge- und Face-Select-Modus in
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Bezeichnung von Faces aufgrund Anzahl Vertices</p>
 </div></div><ul>
-<li><p><strong>Triangles</strong> (<strong>Tris</strong>): Faces, die aus drei Vertices bestehen</p></li>
-<li><p><strong>Quadrangles</strong> (<strong>Quads</strong>): Faces, die aus vier Vertices bestehen</p></li>
-<li><p><strong>N-Gons</strong>: Faces, die aus n Vertices bestehen</p></li>
+<li><strong>Triangles</strong> (<strong>Tris</strong>): Faces, die aus drei Vertices bestehen</li>
+<li><strong>Quadrangles</strong> (<strong>Quads</strong>): Faces, die aus vier Vertices bestehen</li>
+<li><strong>N-Gons</strong>: Faces, die aus n Vertices bestehen</li>
 </ul>
 <div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
@@ -389,14 +396,14 @@ Abbildung&nbsp;4: Links eine gerenderte 3D-Figur und rechts die Figur in ihrer G
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Anwendung von Tris</p>
 </div></div><p>Arbeiten mit Tris ist trotzdem durchaus möglich und vereinzelte Tris in Objekten sind auch nicht problematisch. In manchen Situationen sind Tris sogar flexibler als Quads. Wenn allerdings die Objekte komplett aus Tris bestehen sollen, macht dies gerade in gemeinschaftlichen Prozessen nur Sinn, wenn alle beteiligten Personen mit Tris umgehen können.</p>
-<div class="tippbox">
-<div class="tippbox-header">
-<div class="tippbox-icon">
+<div class="rememberbox">
+<div class="rememberbox-header">
+<div class="rememberbox-icon">
 
 </div>
 <p>Merke…</p>
 </div>
-<div class="tippbox-body">
+<div class="rememberbox-body">
 <p>Vertices beschreiben die einzelnen Punkte in einem 3D-Objekt.</p>
 <p>Edges beschreiben die verbundenen Punkte in einem 3D-Objekt.</p>
 <p>Faces beschreiben Flächen zwischen mehr als zwei verbundenen Vertices.</p>

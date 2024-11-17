@@ -43,20 +43,19 @@ Wie auch bei Transformationen kann die Extrusion mittels der Tasten {{< kbd X >}
 Faces werden per Default entlang Normalen extrudiert
 :::
 
-Beim Extrudieren von Faces erfolgt die Bearbeitung per Default entlang der Normalen des Faces. 
-Dadurch wird automatisch entlang der Ausrichtung der Faces extrudiert. Dies ist bei Vertices und 
-Edges nicht der Fall.  
+Beim Extrudieren von Faces erfolgt die Bearbeitung per Default entlang der Normalen des Faces. Dadurch wird automatisch entlang der Ausrichtung der Faces extrudiert. Dies ist bei Vertices und Edges nicht der Fall.
 
-:::::: tippbox
-:::: tippbox-header
-::: tippbox-icon
+:::::: exercisebox
+:::: exercisebox-header
+::: exercisebox-icon
 :::
 
 Übung 6: Extrudieren
 ::::
 
-::: tippbox-body
-Übung 6.1\
+::: exercisebox-body
+**Übung 6.1**
+
 Erstellen Sie folgende Objekte ausgehend von einem Würfel.
 
 ![](Images/Chapter_11/Übung_6.1%20Extrude.png){fig-align="left"}
@@ -144,7 +143,7 @@ Edge Slide
 
 Der Loop Cut beinhaltet somit zwei Schritte: Die Festlegung eines Schnittes innerhalb eines Loops und zusätzlich die Festlegung, in welchem Bereich des Face-Loops der Cut erfolgen soll. Letzterer Prozess kann bei der Auswahl eines Loops an bereits gesetzten Edges direkt erfolgen. Dieser Prozess wird als Edge Slide bezeichnet und ist in der Toolbar verfügbar. Dadurch lässt sich eine Reihe von Edges proportional entlang anderer Edges verschieben.
 
-![Edge-Slide-Icon.](Images/Chapter_11/4. Icon_EdgeSlide){#fig-1_4 fig-align="left"}
+![Edge-Slide-Icon.](Images/Chapter_11/4.%20Icon_EdgeSlide){#fig-1_4 fig-align="left"}
 
 ## Subdivide
 
@@ -224,7 +223,7 @@ Spin
 
 Mittels «*Spin*» können einzelne oder mehrere Vertices in einer kreisförmigen Anordnung extrudiert werden. Wenn diese Transformation ausgewählt ist, erscheint in der Nähe des 3D-Cursors ein Gizmo, welches eine abgerundete Linie mit einem Plus-Symbol an beiden Enden darstellt. Falls dieses Gizmo nicht angezeigt wird, sollte überprüft werden, ob die Darstellung der Gizmos im 3D-Viewport aktiviert ist.
 
-![Spin-Icon.](Images/Chapter_11/7. Icon_Spin){#fig-1_7 fig-align="left"}
+![Spin-Icon.](Images/Chapter_11/7.%20Icon_Spin){#fig-1_7 fig-align="left"}
 
 ::: column-margin
 Spin durchführen
@@ -259,30 +258,25 @@ Andere Verbindungspunkte
 Nebst dem Medianpunkt der Vertices können auch folgende Positionen zur Zusammenführung ausgewählt werden:
 
 -   **At Cursor**: Die Vertices werden an der Position des 3D-Cursors zusammengeführt.
-
 -   **At First**: Die Vertices werden beim Vertex, welcher als Erstes ausgewählt wurde, zusammengeführt.
-
 -   **At Last**: Die Vertices werden beim Vertex, welcher als Letztes ausgewählt wurde, zusammengeführt.
-
 -   **Collapse**: Wenn mehrere Edges ausgewählt werden, die nicht miteinander verbunden sind, werden die Vertices jeweils in der Mitte des jeweiligen Edges zusammengeführt. Das Zusammenführen erfolgt also hierbei einzeln für jedes Edge in dessen Mitte (bei den anderen Optionen werden alle Vertices an demselben Punkt zusammengeführt).
 
 ::: column-margin
 Merge by Distance
 :::
 
-Eine besondere Rolle kommt der Funktion «*Merge by Distance*» zu. Dabei werden alle Vertices zusammen verbunden, deren Distanz geringer als die vorgegebene Distanz ist. Im Kontext-Menü zur letzten Aktion lässt sich die Distanz, unterhalb derer alle Vertices verbunden werden sollen, an
-passen. Die Funktion wird allerdings nur auf die ausgewählten Vertices angewendet. In der Fussleiste von Blender wird temporär angegeben, wie viele Vertices bei dieser Aktion aufgelöst werden.
+Eine besondere Rolle kommt der Funktion «*Merge by Distance*» zu. Dabei werden alle Vertices zusammen verbunden, deren Distanz geringer als die vorgegebene Distanz ist. Im Kontext-Menü zur letzten Aktion lässt sich die Distanz, unterhalb derer alle Vertices verbunden werden sollen, an passen. Die Funktion wird allerdings nur auf die ausgewählten Vertices angewendet. In der Fussleiste von Blender wird temporär angegeben, wie viele Vertices bei dieser Aktion aufgelöst werden.
 
 ::: column-margin
 Merge erfolgt nur auf Auswahl
 :::
 
-Diese Methode ist besonders geeignet, um allfällige Vertices, welche an derselben Position wie andere Vertices liegen, zu eliminieren oder zu verbinden. Da die Aktion allerdings nur auf ausgewählte 
-Vertices angewendet wird, empfiehlt es sich, vorgängig alle Vertices direkt mit der Taste {{< kbd A >}} auszuwählen.
+Diese Methode ist besonders geeignet, um allfällige Vertices, welche an derselben Position wie andere Vertices liegen, zu eliminieren oder zu verbinden. Da die Aktion allerdings nur auf ausgewählte Vertices angewendet wird, empfiehlt es sich, vorgängig alle Vertices direkt mit der Taste {{< kbd A >}} auszuwählen.
 
 ## Weitere Operationen in der Toolbar
 
-Nebst den bisher behandelten Operationen zur Objektbearbeitung im Edit-Mode bietet die Toolbar noch eine Reihe weiterer Optionen, welche der Vollständigkeit halber noch kurz aufgeführt werden. 
+Nebst den bisher behandelten Operationen zur Objektbearbeitung im Edit-Mode bietet die Toolbar noch eine Reihe weiterer Optionen, welche der Vollständigkeit halber noch kurz aufgeführt werden.
 
 ### Add Cube
 
@@ -290,14 +284,11 @@ Nebst den bisher behandelten Operationen zur Objektbearbeitung im Edit-Mode biet
 Würfel hinzufügen
 :::
 
-Mittels des Befehls «*Add Cube*» kann ein neuer Würfel erstellt werden. Um den Maus
-zeiger herum erscheint dadurch ein Gitternetz, um zu signalisieren, wo der Würfel erstellt wird. Anschliessend kann mittels gedrückter linken Maustaste der Grundriss des Würfels erstellt 
-werden. Nachdem die linke Maustaste losgelassen wurde, lässt sich anschliessend noch die Höhe des Würfels einstellen, welche anschliessend mit bestätigt werden muss. Mit {{< kbd esc >}}  oder die rechte Maustaste lässt sich der Vorgang abbrechen.
+Mittels des Befehls «*Add Cube*» kann ein neuer Würfel erstellt werden. Um den Maus zeiger herum erscheint dadurch ein Gitternetz, um zu signalisieren, wo der Würfel erstellt wird. Anschliessend kann mittels gedrückter linken Maustaste der Grundriss des Würfels erstellt werden. Nachdem die linke Maustaste losgelassen wurde, lässt sich anschliessend noch die Höhe des Würfels einstellen, welche anschliessend mit bestätigt werden muss. Mit {{< kbd esc >}} oder die rechte Maustaste lässt sich der Vorgang abbrechen.
 
-![Add-Cube-Icon.](Images/Chapter_11/8. Icon_AddCube){#fig-1_8 fig-align="left"}
+![Add-Cube-Icon.](Images/Chapter_11/8.%20Icon_AddCube){#fig-1_8 fig-align="left"}
 
-Die neu erstellten Würfel werden im Edit-Mode zu Bestandteilen des Objekts, welches gerade bearbeitet wird. Der Befehl «*Add Cube*» steht allerdings auch im Object-Mode zur Verfügung. Werden 
-dort neue Würfel erstellt, bilden diese jeweils eigenständige Objekte. 
+Die neu erstellten Würfel werden im Edit-Mode zu Bestandteilen des Objekts, welches gerade bearbeitet wird. Der Befehl «*Add Cube*» steht allerdings auch im Object-Mode zur Verfügung. Werden dort neue Würfel erstellt, bilden diese jeweils eigenständige Objekte.
 
 ### Poly Build
 
@@ -307,7 +298,7 @@ Poly-Build-Modus
 
 Beim Poly Build handelt es sich um einen interaktiven Modus, um Geometrien zu erweitern. Dabei schlägt Blender bei gedrückter {{< kbd Ctrl >}}-Taste vor, wie neue Elemente erstellt werden können, und durch einen Klick mittels der linken Maustaste wird die Erstellung bestätigt. Mittels gedrückter linken Maustaste können Vertices bewegt werden und mittels der Kombination {{< kbd Shift >}} + linke Maustaste.
 
-![Poly-Build-Icon.](Images/Chapter_11/9. Icon_PolyBuild){#fig-1_9 fig-align="left"}
+![Poly-Build-Icon.](Images/Chapter_11/9.%20Icon_PolyBuild){#fig-1_9 fig-align="left"}
 
 ### Smooth
 
@@ -315,11 +306,9 @@ Beim Poly Build handelt es sich um einen interaktiven Modus, um Geometrien zu er
 Objekte glätten
 :::
 
-Mittels des Befehls «*Smooth*» können Objekte glatter gemacht werden. Dies geschieht, indem die Winkel der Edges gemittelt werden. Statt eines 90°-Winkels 
-entsteht dann ein flacherer Winkel. Es ist allerdings auch möglich, den gegenteiligen 
-Effekt zu erzielen und Winkel spitzer zu machen. 
+Mittels des Befehls «*Smooth*» können Objekte glatter gemacht werden. Dies geschieht, indem die Winkel der Edges gemittelt werden. Statt eines 90°-Winkels entsteht dann ein flacherer Winkel. Es ist allerdings auch möglich, den gegenteiligen Effekt zu erzielen und Winkel spitzer zu machen.
 
-![Smooth-Icon.](Images/Chapter_11/10. Icon_Smooth){#fig-1_10 fig-align="left"}
+![Smooth-Icon.](Images/Chapter_11/10.%20Icon_Smooth){#fig-1_10 fig-align="left"}
 
 ### Shrink/Fatten
 
@@ -327,10 +316,9 @@ Effekt zu erzielen und Winkel spitzer zu machen.
 Objekte zusammenziehen oder aufblähen
 :::
 
-Beim Befehl «*Shrink/Fatten*» werden die ausgewählten Vertices entlang ihrer eigenen Normalen bewegt. Dadurch kann das Objekt aufgebläht oder zusammengezogen werden. Dies ist beispielsweise nützlich, wenn der Mantel eines Zylinders ausgewählt und 
-sein Radius vergrössert werden soll, ohne dessen Höhe zu verändern.
+Beim Befehl «*Shrink/Fatten*» werden die ausgewählten Vertices entlang ihrer eigenen Normalen bewegt. Dadurch kann das Objekt aufgebläht oder zusammengezogen werden. Dies ist beispielsweise nützlich, wenn der Mantel eines Zylinders ausgewählt und sein Radius vergrössert werden soll, ohne dessen Höhe zu verändern.
 
-![Shrink/Fatten-Icon.](Images/Chapter_11/11. Icon_ShrinkenFatten){#fig-1_11 fig-align="left"}
+![Shrink/Fatten-Icon.](Images/Chapter_11/11.%20Icon_ShrinkenFatten){#fig-1_11 fig-align="left"}
 
 ### Shear
 
@@ -338,10 +326,9 @@ sein Radius vergrössert werden soll, ohne dessen Höhe zu verändern.
 Objekte auseinanderziehen
 :::
 
-Mittels der Shear-Transformation werden die ausgewählten Punkte in einer Achse aus
-einandergezogen. Die Transformation geschieht dabei so, dass parallel verlaufende Linien geschert und in entgegengesetzte Richtungen auf einer Achse verschoben werden.
+Mittels der Shear-Transformation werden die ausgewählten Punkte in einer Achse aus einandergezogen. Die Transformation geschieht dabei so, dass parallel verlaufende Linien geschert und in entgegengesetzte Richtungen auf einer Achse verschoben werden.
 
-![Shear-Icon.](Images/Chapter_11/12. Icon_Shear){#fig-1_12 fig-align="left"}
+![Shear-Icon.](Images/Chapter_11/12.%20Icon_Shear){#fig-1_12 fig-align="left"}
 
 ### Rip Region
 
@@ -349,23 +336,27 @@ einandergezogen. Die Transformation geschieht dabei so, dass parallel verlaufend
 Regionen aufteilen
 :::
 
-Mittels des Befehls «*Rip Region*» können Vertices, welche an mehreren Faces andocken, aufgeteilt werden. Die Faces werden dabei an der Stelle der entsprechenden Vertices getrennt und durch Vertices, welche sozusagen von den originalen Vertices abgezogen werden, neu gebildet. 
+Mittels des Befehls «*Rip Region*» können Vertices, welche an mehreren Faces andocken, aufgeteilt werden. Die Faces werden dabei an der Stelle der entsprechenden Vertices getrennt und durch Vertices, welche sozusagen von den originalen Vertices abgezogen werden, neu gebildet.
 
-![Rip-Region-Icon.](Images/Chapter_11/13. Icon_RipRegion){#fig-1_13 fig-align="left"}
+![Rip-Region-Icon.](Images/Chapter_11/13.%20Icon_RipRegion){#fig-1_13 fig-align="left"}
 
-:::::: tippbox
-:::: tippbox-header
-::: tippbox-icon
+:::::: exercisebox
+:::: exercisebox-header
+::: exercisebox-icon
 :::
+
 Übung 7: Objektbearbeitung
 ::::
 
-::: tippbox-body
-Übung 7.1  
-Verändern Sie den Standardwürfel im Edit-Mode so, dass er die Form eines Hauses hat. 
+::: exercisebox-body
+**Übung 7.1**
 
-Übung 7.2  
+Verändern Sie den Standardwürfel im Edit-Mode so, dass er die Form eines Hauses hat.
+
+**Übung 7.2**
+
 Erstellen Sie eine Vase. Die Vase sollte rund sein und eine Öffnung haben – ansonsten sind Sie frei in Ihrer Gestaltung. Achten Sie zudem darauf, dass Sie unterschiedliche Faces für den Innenbereich und für den Aussenbereich der Vase verwenden, sodass die Vase ein gewisse Dicke besitzt.
 
-![](Images/Chapter_11/Übung_7.2 vase.png){fig-align="left"}
+![](Images/Chapter_11/Übung_7.2%20vase.png){fig-align="left"}
+:::
 ::::::

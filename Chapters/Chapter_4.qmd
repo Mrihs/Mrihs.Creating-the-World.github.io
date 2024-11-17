@@ -12,9 +12,7 @@ Objekte in der Default-Szene
 Beim Start eins neuen Projekts erscheint eine Default-Szene. Diese Szene beinhaltet bereits die wesentlichen Dinge, welche für eine 3D-Szene benötigt werden:
 
 -   **Würfel**: Genau in der Mitte der Szene befindet sich der Default-Cube. Bei diesem Würfel handelt es sich um ein 3D-Objekt. Er hat eine Grösse von 2x2x2 Metern.
-
 -   **Kamera**: Von der Kamera aus wird eine Szene nach deren Verarbeitung (z.B. in einem geren derten Bild oder einem Video) betrachtet. In der Default-Szene ist die Kamera auf den Würfel gerichtet.
-
 -   **Lichtquelle**: Die Lichtquelle wird dafür benötigt, dass der Würfel in der gerenderten Aufnahme beleuchtet wird. Ohne eine Lichtquelle sind die 3D-Objekte beim anschliessenden Rendern nicht sichtbar – es sei denn, sie stellen selbst eine Lichtquelle dar.
 
 :::::: tippbox
@@ -22,7 +20,6 @@ Beim Start eins neuen Projekts erscheint eine Default-Szene. Diese Szene beinhal
 ::: tippbox-icon
 :::
 ::::
-
 
 ::: tippbox-body
 Die Default-Szene kann manuell angepasst werden. Hierfür muss zunächst eine Default-Szene erstellt werden, welche bei jedem Start erscheinen soll. Diese kann dann unter «*File* \| *Defaults* \| *Save Startup File*» als neue Start-up Szene gespeichert werden.
@@ -93,19 +90,16 @@ Kontext-Menü zum neuen Objekt
 
 Das Kontext-Menü, welches beim Hinzufügen von Objekten erscheint, ist nur temporär vorhanden. Sobald mit der linken Maustaste in einen Bereich ausserhalb des Kontext-Menüs geklickt wird, verschwindet das Menü-Feld. Es gibt keine Möglichkeit, dieses Menü-Feld zurückzuholen – es ist für immer für dieses Objekt verschwunden. Wenn das Menü nochmals benötigt werden sollte, muss das entsprechende Objekt erneut zur Szene hinzugefügt werden.
 
-:::::: tippbox
-:::: tippbox-header
-::: tippbox-icon
+:::::: rememberbox
+:::: rememberbox-header
+::: rememberbox-icon
 :::
-Merke
 
+Merke...
 ::::
 
-::: tippbox-body
-Kontext-Menü-Felder erscheinen in der linken unteren Ecke des 
-Viewport-Displays und sind nur temporär verfügbar. Nach einem 
-Klick ausserhalb des Menü-Feldes verschwinden dieses Felder 
-und können nicht mehr zurückgeholt werden. 
+::: rememberbox-body
+Kontext-Menü-Felder erscheinen in der linken unteren Ecke des Viewport-Displays und sind nur temporär verfügbar. Nach einem Klick ausserhalb des Menü-Feldes verschwinden dieses Felder und können nicht mehr zurückgeholt werden.
 :::
 ::::::
 
@@ -117,36 +111,37 @@ Löschen von Objekten mittels {{< kbd X >}}
 
 Wenn ein Objekt gelöscht werden soll, muss dieses zunächst ausgewählt werden. Mittels der Taste {{< kbd X >}} wird der Befehl für die Löschung des ausgewählten Objektes gegeben. Dieser muss anschliessend bestätigt werden, entweder mit einem Mausklick auf das daraufhin beim Mauszeiger erscheinende «*Delete*»-Feld oder mittels der Taste {{< kbd Enter >}}. Alternativ kann auch die Taste {{< kbd Delete >}} verwendet werden – hierbei wird das Objekt direkt gelöscht, ohne dass eine Bestätigung nötig ist.
 
-:::::: tippbox
-:::: tippbox-header
-::: tippbox-icon
+:::::: exercisebox
+:::: exercisebox-header
+::: exercisebox-icon
 :::
-Übung 2: Hinzufügen und Löschen 
 
+Übung 2: Hinzufügen und Löschen
 ::::
 
-::: tippbox-body
-Übung 2.1  
-Löschen Sie alle Objekte aus der Szene. 
+::: exercisebox-body
+**Übung 2.1**
 
-Übung 2.2  
-Erstellen Sie einen neuen Würfel mit der Grösse 1 und einer Rotation von 90°. Welche Achse Sie hierfür wählen, spielt keine Rolle.  
+Löschen Sie alle Objekte aus der Szene.
+
+**Übung 2.2**
+
+Erstellen Sie einen neuen Würfel mit der Grösse 1 und einer Rotation von 90°. Welche Achse Sie hierfür wählen, spielt keine Rolle.
 :::
 ::::::
 
-:::::: tippbox
-:::: tippbox-header
-::: tippbox-icon
+:::::: rememberbox
+:::: rememberbox-header
+::: rememberbox-icon
 :::
-Merke
 
+Merke...
 ::::
 
-::: tippbox-body
-Mittels {{< kbd Shift >}} + {{< kbd 
-A >}} erscheint beim Mauszeiger das Menü zum Hinzufügen von Objekten.
+::: rememberbox-body
+Mittels {{< kbd Shift >}} + {{< kbd A >}} erscheint beim Mauszeiger das Menü zum Hinzufügen von Objekten.
 
-Um Objekte zu löschen, müssen sie zunächst ausgewählt werden und können anschliessend mit der Taste {{< kbd X >}} oder {{< kbd Delete >}} gelöscht werden. 
+Um Objekte zu löschen, müssen sie zunächst ausgewählt werden und können anschliessend mit der Taste {{< kbd X >}} oder {{< kbd Delete >}} gelöscht werden.
 :::
 ::::::
 
@@ -159,9 +154,7 @@ Methoden zur Vervielfältigung von Objekten
 Ausgewählte Objekte können auf verschiedene Arten dupliziert werden. Jede diese Arten hat ihre eigenen Besonderheiten:
 
 -   Duplizieren des Objektes
-
 -   Verbundene Duplikate erstellen
-
 -   Einfügen einer Kopie des Objektes mittels Copy-Paste
 
 ### Objekte duplizieren
@@ -208,16 +201,10 @@ Gerade bei sehr komplexen Szenen kann es vorkommen, dass sich die Objekte gegens
 :::: tippbox-header
 ::: tippbox-icon
 :::
-
-Merke
 ::::
 
 ::: tippbox-body
-Statt Objekte in einer Szene zu verstecken kann alternativ auch die 
-lokale Ansicht mittels der Taste {{< kbd / >}} auf diese Objekte angewendet werden. 
-In dieser Ansicht werden alle anderen Objekte ausgeblendet. Um wieder in 
-die normale Ansicht zu gelangen, muss erneut die Taste {{< kbd / >}} gedrückt 
-werden. 
+Statt Objekte in einer Szene zu verstecken kann alternativ auch die lokale Ansicht mittels der Taste {{< kbd / >}} auf diese Objekte angewendet werden. In dieser Ansicht werden alle anderen Objekte ausgeblendet. Um wieder in die normale Ansicht zu gelangen, muss erneut die Taste {{< kbd / >}} gedrückt werden.
 :::
 ::::::
 
@@ -267,15 +254,15 @@ Exportieren
 
 Um Programme auch für andere Projekte verfügbar zu machen, müssen sie in einem anderen Dateiformat ausgegeben werden. Unter «*File* \| *Export*» steht eine Reihe von verschiedenen Dateiformaten zur Verfügung, welche von unterschiedlichen Programmen geöffnet werden können. Die meisten dieser Dateiformate kann Blender wiederum importieren und darstellen.
 
-:::::: tippbox
-:::: tippbox-header
-::: tippbox-icon
+:::::: rememberbox
+:::: rememberbox-header
+::: rememberbox-icon
 :::
 
-Merke
+Merke...
 ::::
 
-::: tippbox-body
-Lieber einmal mehr mit der Kombination {{< kbd Ctrl >}} + {{< kbd S >}}, speichern, als die Fortschritte zu verlieren. 
+::: rememberbox-body
+Lieber einmal mehr mit der Kombination {{< kbd Ctrl >}} + {{< kbd S >}}, speichern, als die Fortschritte zu verlieren.
 :::
 ::::::

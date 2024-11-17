@@ -10,10 +10,8 @@ Befehle für Transformationen
 Statt mit der Sidebar können Objekte auch direkt im 3D-Viewport-Display transformiert werden. Sobald ein Objekt – oder auch mehrere Objekte – ausgewählt sind, lassen sich die Objekte direkt im Viewport mittels der folgenden Befehle transformieren:
 
 -   Position: {{< kbd G >}} («Grab»)
-
 -   Rotation: {{< kbd R >}}
-
--   Skalierung: {{< kbd s >}}
+-   Skalierung: {{< kbd S >}}
 
 ## Position
 
@@ -75,32 +73,34 @@ Präzise Skalierung mittels Zahlen
 
 Die Skalierung kann mittels Zahleneingaben ebenfalls sehr genau vorgenommen werden. Um ein Objekt etwa in seiner Grösse zu verdoppeln, kann nach dem Start der Transformation mittels der Taste {{< kbd S >}} die Zahl {{< kbd 2 >}}eingegeben werden. Dadurch wird das Objekt um den Faktor 2 vergrössert. Auch hier lässt sich ein negativer Wert mittels der Taste {{< kbd - >}} festlegen. Dies führt dazu, dass das Objekt durch seinen Bezugspunkt hindurch in die andere Richtung skaliert und gespiegelt wird. Während dies bei symmetrischen Objekten zu keinem bemerkbaren Unterschied führt, wird der Effekt bei asymmetrischen Objekten deutlich.
 
-:::::: tippbox
-:::: tippbox-header
-::: tippbox-icon
+:::::: exercisebox
+:::: exercisebox-header
+::: exercisebox-icon
 :::
 
 Übung 4 : Objekttransformationen
 ::::
 
-::: tippbox-body
-Übung 4.1\
+::: exercisebox-body
+**Übung 4.1**
+
 Skalieren Sie einen Würfel entlang der X-Achse auf seine halbe Grösse.
 
-Übung 4.2\
+**Übung 4.2**
+
 Bilden Sie das rechts abgebildete Objekt nach.
 :::
 ::::::
 
-:::::: tippbox
-:::: tippbox-header
-::: tippbox-icon
+:::::: rememberbox
+:::: rememberbox-header
+::: rememberbox-icon
 :::
 
 Merke...
 ::::
 
-::: tippbox-body
+::: rememberbox-body
 Mittels der Tasten {{< kbd G >}},{{< kbd R >}} und {{< kbd S >}} lassen sich Objekte auch im Viewport-Display bewegen, rotieren und skalieren.
 
 Mittels der Eingabe von Zahlen können Bewegungen, Rotationen und Skalierungen genau vorgenommen werden.

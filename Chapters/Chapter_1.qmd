@@ -66,13 +66,9 @@ Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Arch
 Beim ersten Start von Blender erscheint ein Quick-Setup-Menü, bei dem einige Grundeinstellungen eingestellt werden können. Diese können in der Regel so belassen werden, wie sie sind. Die folgenden Einstellungen stehen zur Verfügung:
 
 -   **Language**: Hier kann die Sprache eingestellt werden.
-
 -   **Shortcuts**: Hier können die Shortcut-Einstellungen ausgewählt werden. Dieser Kurs orientiert sich an der Default-Einstellung «*Blender*».
-
 -   **Select with**: Hier kann eingestellt werden, ob jeweils mit der linken oder der rechten Maustaste Objekte ausgewählt werden können. Dieser Kurs geht davon aus, dass eine Auswahl mit der linken Maustaste erfolgt.
-
 -   **Spacebar**: Die Funktion der Leertaste kann drei verschiedenen Funktionen zugewiesen werden. Per Default wird die Leertaste verwendet, um Animationen zu starten (Option «*Play*»). Allerdings kann sie auch der Option «*Tools*» zugewiesen werden. Mittels der Einstellung «*Search*» wird durch die Leertaste ein Suchfeld geöffnet, mit dem Befehle gesucht werden können. Für diesen Kurs spielt es keine grosse Rolle, welche Funktion der Leertaste zugewiesen wird. Die Befehlssuche ist allerdings sehr nützlich, kann aber alternativ auch mit der Taste {{< kbd F3 >}} geöffnet werden.
-
 -   **Theme**: Hier kann das farbliche Layout von Blender angepasst werden. Grafiken in diesem Kurs wurden mit dem Theme «*Blender Dark*» erstellt.
 
 ## Die Arbeitsoberfläche von Blender
@@ -94,13 +90,9 @@ Auswahl von Ansichtsvorlagen
 Zu den möglichen Ansichtsvorlagen gehören:
 
 -   **General**: Öffnet eine Standardvorlage für das Bearbeiten von 3D-Objekten.
-
 -   **2D Animation**: Öffnet eine Vorlage zum Erstellen von 2D-Animationen.
-
 -   **Sculpting**: Öffnet eine Vorlage, welche für das Sculpting von Objekten geeignet ist. Dabei werden Objekte anhand von Pinseln direkt in ihrer Form verändert.
-
--   **VFX:** Öffnet eine Vorlage für die Erstellung visueller Effekte (VFX), beispielsweise in Videos.
-
+-   **VFX**: Öffnet eine Vorlage für die Erstellung visueller Effekte (VFX), beispielsweise in Videos.
 -   **Video Editing**: Öffnet eine Vorlage zum Bearbeiten von Videos.
 
 ::: column-margin
@@ -118,11 +110,8 @@ Default Editoren
 Die verschiedenen Werkzeuge, welche Blender anbietet, sind innerhalb verschiedener Editoren aufzufinden. Diese Editoren werden als separate und austauschbare Areale in Blender dargestellt. Beim Start eines neuen Projekts (mit der Vorlage General) ist die Ansicht in vier Areale unterteilt:
 
 -   **3D Viewport**: Überspannt von der oberen linken Ecke den grössten Teil des Bildschirms.
-
 -   **Outliner**: Befindet sich in der oberen rechten Ecke.
-
 -   **Properties**: Befindet sich in der unteren rechten Ecke.
-
 -   **Timeline**: Befindet sich links am unteren Rand.
 
 Gerade der 3D-Viewport, der Outliner und die Properties sind für das Erstellen von 3D-Objekten mit Blender von hoher Bedeutung. Die Timeline wird bei Animationen verwendet.
@@ -270,3 +259,22 @@ Editor-Areal schliessen
 :::
 
 Um ein Editor-Fenster zu schliessen, wird jeweils ein anderes Editor-Fenster über das zu schliessende Fenster gezogen. Dadurch werden die beiden Fenster verbunden. Um zwei Fenster zu verbinden, wird eine der beiden Ecken, welche sich zwischen den beiden Fenstern befindet, ausgewählt und das zu behaltende Fenster über das zu entfernende Fenster gezogen. Dies ist manchmal etwas knifflig, da die Aktion ähnlich zum Öffnen von neuen Fenstern ist.
+
+:::::: exercisebox
+:::: exercisebox-header
+::: exercisebox-icon
+:::
+
+Übung 1: Editor-Auswahl
+::::
+
+::: exercisebox-body
+**Übung 1.1**
+
+Ordnen Sie die Arbeitsoberfläche entsprechend der nachfolgenden Abbildung an.
+
+**Übung 1.2**
+
+Ordnen Sie die Arbeitsoberfläche entsprechend der nachfolgenden Abbildung an.
+:::
+::::::

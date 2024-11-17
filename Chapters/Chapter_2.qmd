@@ -18,7 +18,7 @@ Der 3D-Viewport stellt eine der wichtigsten Arbeitsoberflächen in Blender dar. 
 Toolbars
 :::
 
-Die Toolbar befindet sich auf der linken Seite der 3D-View. Allerdings sind Toolbars auch in anderen Editoren anzutreffen. Die Toolbars lassen sich jeweils mit der Taste {{< kbd T >}} ein- und aus-blenden. Da es auch im 3D-Viewport verschiedene Bearbeitungsmöglichkeiten gibt, variieren die Elemente in der Toolbar abhängig vom Bearbeitungsmodus. Diese sind entweder per Mausklick über diese Toolbar oder mithilfe von Tastenkombinationen aufrufbar. In diesem Kurs wird vor allem auf Tastenkombinationen verwiesen, wenn Operationen durchgeführt werden.
+Die Toolbar befindet sich auf der linken Seite der 3D-View. Allerdings sind Toolbars auch in anderen Editoren anzutreffen. Die Toolbars lassen sich jeweils mit der Taste {{< kbd T >}} ein- und ausblenden. Da es auch im 3D-Viewport verschiedene Bearbeitungsmöglichkeiten gibt, variieren die Elemente in der Toolbar abhängig vom Bearbeitungsmodus. Diese sind entweder per Mausklick über diese Toolbar oder mithilfe von Tastenkombinationen aufrufbar. In diesem Kurs wird vor allem auf Tastenkombinationen verwiesen, wenn Operationen durchgeführt werden.
 
 ## Sidebar
 
@@ -54,7 +54,7 @@ In der Mitte des Headers befinden sich eine Reihe von erweiterten Einstellungen,
 Auswahl des Bearbeitungsmodus
 :::
 
-In der Zeile unterhalb des Headers befindet sich links das Menü zur Auswahl des Bearbeitungsmodus. Dabei wird definiert, wie das aktuelle Objekt bearbeitet werden soll. So kann bei-spielsweise im Object-Mode das Objekt als Ganzes bearbeitet werden, während im Edit-Mode die Struktur des Objektes bearbeitet werden kann.
+In der Zeile unterhalb des Headers befindet sich links das Menü zur Auswahl des Bearbeitungsmodus. Dabei wird definiert, wie das aktuelle Objekt bearbeitet werden soll. So kann beispielsweise im Object-Mode das Objekt als Ganzes bearbeitet werden, während im Edit-Mode die Struktur des Objektes bearbeitet werden kann.
 
 ![Auswahl des Bearbeitungsmodus.](Images/Chapter_2/2_2_Erweiterte_Hilfsmittel.png){#fig-2_3 fig-align="left"}
 
@@ -99,7 +99,7 @@ Innerhalb dieser Option lassen sich in der oberen rechten Ecke Tools zur Navigat
 #### Show Overlays
 
 ::: column-margin
-Orientierungsobjekte im Viewport ein- und ausblen-den
+Orientierungsobjekte im Viewport ein- und ausblenden
 :::
 
 Durch die Deaktivierung der Viewport-Overlays wird im 3D-Viewport die Ansicht bestimmter Hilfsmittel (beispielsweise die Achsen oder die Markierung der aktuellen Auswahl) ausgeschal-tet. Im Dropdown-Menü lässt sich zudem die Darstellung von einzelnen Hilfsmitteln individuell an- und abwählen.

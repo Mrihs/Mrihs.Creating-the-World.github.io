@@ -19,6 +19,7 @@ Beim Start eins neuen Projekts erscheint eine Default-Szene. Diese Szene beinhal
 :::: tippbox-header
 ::: tippbox-icon
 :::
+Weiterführende Informationen
 ::::
 
 ::: tippbox-body
@@ -76,7 +77,7 @@ Im Outliner auf der rechten Seite wird mittels einer blauen Markierung angezeigt
 Hinzufügen von Objekten mittels {{< kbd Shift >}} + {{< kbd A >}}
 :::
 
-Mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd A >}} erscheint beim Mauszeiger das Menü-Feld «*Add*». Dabei han delt es sich um dasselbe Menü-Feld, welches auch unter dem Reiter «*Add*» in der linken oberen Ecke aufgerufen werden kann. Mithilfe dieses Menü-Felds können eine Reihe von verschiedenen Objekten im Viewport Display hinzugefügt werden. Es gibt eine Reihe verschiedener Objektarten, welche hinzugefügt werden können. Beispielsweise kann unter «*Mesh* \| *Cube*» ein Würfel in die Szene hinzugefügt werden. Ein neues Objekt wird jeweils an der Position des 3D-Cursors eingefügt.
+Mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd A >}} erscheint beim Mauszeiger das Menü-Feld «*Add*». Dabei handelt es sich um dasselbe Menü-Feld, welches auch unter dem Reiter «*Add*» in der linken oberen Ecke aufgerufen werden kann. Mithilfe dieses Menü-Felds können eine Reihe von verschiedenen Objekten im Viewport Display hinzugefügt werden. Es gibt eine Reihe verschiedener Objektarten, welche hinzugefügt werden können. Beispielsweise kann unter «*Mesh* \| *Cube*» ein Würfel in die Szene hinzugefügt werden. Ein neues Objekt wird jeweils an der Position des 3D-Cursors eingefügt.
 
 ::: column-margin
 Neue Objekte anpassen
@@ -160,10 +161,10 @@ Ausgewählte Objekte können auf verschiedene Arten dupliziert werden. Jede dies
 ### Objekte duplizieren
 
 ::: column-margin
-Duplikat eines Objektes erstellen mittels {{< kbd shift >}} + {{< kbd D >}}
+Duplikat eines Objektes erstellen mittels {{< kbd Shift >}} + {{< kbd D >}}
 :::
 
-Die schnellste Methode, um Objekte zu duplizieren, besteht darin, dass die entsprechenden Objekte, welche dupliziert werden sollen, ausgewählt werden und anschliessend mit der Tastenkombination {{< kbd shift >}} + {{< kbd D >}} der Befehl zur Duplikation der Objekte gegeben wird. Dadurch entsteht an der Position des originalen Objekts ein Duplikat, welches mit der Bewegung des Mauszeigers im Raum bewegt werden kann. Durch einen Klick mit der linken Maustaste, {{< kbd Space >}} oder {{< kbd Enter >}}-Taste wird das Objekt anschliessend platziert. Die Bewegung des duplizierten Objekts kann auch mittels abgebrochen werden. Dadurch wird das Duplikat allerdings nicht gelöscht, sondern an derselben Position wie das Original platziert.
+Die schnellste Methode, um Objekte zu duplizieren, besteht darin, dass die entsprechenden Objekte, welche dupliziert werden sollen, ausgewählt werden und anschliessend mit der Tastenkombination {{< kbd Shift >}} + {{< kbd D >}} der Befehl zur Duplikation der Objekte gegeben wird. Dadurch entsteht an der Position des originalen Objekts ein Duplikat, welches mit der Bewegung des Mauszeigers im Raum bewegt werden kann. Durch einen Klick mit der linken Maustaste, {{< kbd Space >}}- oder {{< kbd Enter >}}-Taste wird das Objekt anschliessend platziert. Die Bewegung des duplizierten Objekts kann auch mittels abgebrochen werden. Dadurch wird das Duplikat allerdings nicht gelöscht, sondern an derselben Position wie das Original platziert.
 
 ### Verbundene Duplikate erstellen
 
@@ -195,12 +196,13 @@ Mehrere Objekte lassen sich auch verbinden, sodass sie zu einem Objekt werden. H
 Verstecken von Objekten mittels {{< kbd H >}}
 :::
 
-Gerade bei sehr komplexen Szenen kann es vorkommen, dass sich die Objekte gegenseitig verdecken und die Bearbeitung etwas schwieriger wird. In diesem Falle gibt es die Möglichkeit, Objekte in der Ansicht zu verstecken. Ausgewählte Objekte können mittels der Taste versteckt werden. Im Outliner sind die Objekte nach wie vor noch angegeben, allerdings grau hinterlegt. Mittels der Tastenkombi nation {{< kbd Alt >}} + {{< kbd H >}} werden alle versteckten Objekte wieder angezeigt. Mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd H >}} lassen sich zudem alle Objekte, ausser den ausgewählten Objekten, verstecken. Dadurch sind nur noch die markierten Objekte sichtbar.
+Gerade bei sehr komplexen Szenen kann es vorkommen, dass sich die Objekte gegenseitig verdecken und die Bearbeitung etwas schwieriger wird. In diesem Falle gibt es die Möglichkeit, Objekte in der Ansicht zu verstecken. Ausgewählte Objekte können mittels der Taste versteckt werden. Im Outliner sind die Objekte nach wie vor noch angegeben, allerdings grau hinterlegt. Mittels der Tastenkombination {{< kbd Alt >}} + {{< kbd H >}} werden alle versteckten Objekte wieder angezeigt. Mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd H >}} lassen sich zudem alle Objekte, ausser den ausgewählten Objekten, verstecken. Dadurch sind nur noch die markierten Objekte sichtbar.
 
 :::::: tippbox
 :::: tippbox-header
 ::: tippbox-icon
 :::
+Weiterführende Informationen
 ::::
 
 ::: tippbox-body
@@ -234,13 +236,13 @@ Mithilfe der Schaltfläche oben rechts in der Ecke des Outliners können neue Co
 Zwischenspeichern mittels {{< kbd Ctrl >}} + {{< kbd S >}} ist unabdingbar
 :::
 
-Bisher wurden bereits einige Tastenkombinationen angesprochen. Die wichtigste Tastenkombination stellt allerdings die Kombination für das Abspeichern des aktuellen Projekts dar: {{< kbd Ctrl >}} + {{< kbd S >}}. Zwischenspeichern ist bei der Arbeit mit Blender eine wichtige Empfehlung. Je nach Komplexität des Projektes kann es manchmal vorkommen, dass das Programm unerwartet abstürzt und die Fort schritte bis zum letzten Speicherpunkt verloren gehen. Aus diesem Grund empfiehlt es sich, das Projekt lieber einmal zu viel als einmal zu wenig abzuspeichern.
+Bisher wurden bereits einige Tastenkombinationen angesprochen. Die wichtigste Tastenkombination stellt allerdings die Kombination für das Abspeichern des aktuellen Projekts dar: {{< kbd Ctrl >}} + {{< kbd S >}}. Zwischenspeichern ist bei der Arbeit mit Blender eine wichtige Empfehlung. Je nach Komplexität des Projektes kann es manchmal vorkommen, dass das Programm unerwartet abstürzt und die Fortschritte bis zum letzten Speicherpunkt verloren gehen. Aus diesem Grund empfiehlt es sich, das Projekt lieber einmal zu viel als einmal zu wenig abzuspeichern.
 
 ::: column-margin
 Kopie speichern
 :::
 
-Alternativ kann das Projekt auch unter «*File* \| *Save*» abgespeichert werden. Nebst der Möglichkeit, dass ein Projekt unter einem neuen Namen gespeichert und fortgeführt wird («*File* \| *Save* as» bzw. {{< kbd Ctrl >}} + {{< kbd Alt >}} + {{< kbd S >}}), gibt es auch die Möglichkeit, mittels «*File* \| *Save Copy*» ( + + ) eine Backup-Version abzuspeichern und in dem originalen File weiterzuarbeiten.
+Alternativ kann das Projekt auch unter «*File* \| *Save*» abgespeichert werden. Nebst der Möglichkeit, dass ein Projekt unter einem neuen Namen gespeichert und fortgeführt wird («*File* \| *Save* as» bzw. {{< kbd Ctrl >}} + {{< kbd Shift >}} + {{< kbd S >}}), gibt es auch die Möglichkeit, mittels «*File* \| *Save Copy*» ({{< kbd Ctrl >}} + {{< kbd Alt >}} + {{< kbd S >}}) eine Backup-Version abzuspeichern und in dem originalen File weiterzuarbeiten.
 
 ::: column-margin
 .blend-Files

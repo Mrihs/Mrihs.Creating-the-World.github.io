@@ -99,7 +99,7 @@ Zu den möglichen Ansichtsvorlagen gehören:
 Fokus auf «General»
 :::
 
-Dieser Kurs wird sich auf die 3D-Modellierung fokussieren. Deshalb wird jeweils die Ansichtsvorlage «General» verwendet. Diese Vorlage ist so generell, dass sie im Hintergrund schon geladen ist, während das Willkommensfenster dargestellt wird. Deshalb ist es auch möglich, einfach ausserhalb des Willkommensfensters zu klicken. Dadurch verschwindet das Willkommensfenster und die General-Vorlage, die bereits im Hintergrund besteht, wird sichtbar.
+Dieser Kurs wird sich auf die 3D-Modellierung fokussieren. Deshalb wird jeweils die Ansichtsvorlage «*General*» verwendet. Diese Vorlage ist so generell, dass sie im Hintergrund schon geladen ist, während das Willkommensfenster dargestellt wird. Deshalb ist es auch möglich, einfach ausserhalb des Willkommensfensters zu klicken. Dadurch verschwindet das Willkommensfenster und die General-Vorlage, die bereits im Hintergrund besteht, wird sichtbar.
 
 ### Die verschiedenen Areale beim General-Projekt
 
@@ -206,7 +206,7 @@ Anhand der Python-Konsole lassen sich Codes in der Programmiersprache von Python
 
 ### Info
 
-Im Info-Editor werden durchgeführte Aktionen in der Python-Programmiersprache nacheinander aufgelistet. Hier lassen sich auch Fehlermeldungen und Warnungen nachträglich einse-hen.
+Im Info-Editor werden durchgeführte Aktionen in der Python-Programmiersprache nacheinander aufgelistet. Hier lassen sich auch Fehlermeldungen und Warnungen nachträglich einsehen.
 
 ### Outliner
 

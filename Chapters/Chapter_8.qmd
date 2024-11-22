@@ -51,7 +51,7 @@ Um ein ausgewähltes Objekt mit der Maus zu rotieren, wird die Taste {{< kbd R >
 Präzise Rotation mittels Zahlen
 :::
 
-Auch während der Rotation kann mit der Eingabe von Zahlen gearbeitet werden. Um ein Objekt beispielsweise um 45 Grad entlang der Z-Achse zu drehen, wird nach dem Start der Rotation mittels der Taste {{< kbd R >}} und der Festlegung der Z-Achse mit der Taste {{< kbd Z >}} die Zahl 45 mittels der Tasten {{< kbd 4 >}}{{< kbd 5 >}} eingegeben. Auch hier lässt sich die Richtung umkehren, indem die Taste {{< kbd - >}} gedrückt wird.
+Auch während der Rotation kann mit der Eingabe von Zahlen gearbeitet werden. Um ein Objekt beispielsweise um 45 Grad entlang der Z-Achse zu drehen, wird nach dem Start der Rotation mittels der Taste {{< kbd R >}} und der Festlegung der Z-Achse mit der Taste {{< kbd Z >}} die Zahl 45 mittels der Tasten {{< kbd 4 >}}{{\< kbd 5 \>}} eingegeben. Auch hier lässt sich die Richtung umkehren, indem die Taste {{< kbd - >}} gedrückt wird.
 
 ## Scale
 

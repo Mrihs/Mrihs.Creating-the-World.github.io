@@ -250,9 +250,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="tippbox-icon">
 
 </div>
+<p>Weiterführende Informationen</p>
 </div>
 <div class="tippbox-body">
-<p>Das Zurücksetzen der Transformationen kann direkt mittels folgenden Shortcuts erfolgen: Zurücksetzen der Position: <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span></p>
+<p>Das Zurücksetzen der Transformationen kann direkt mittels folgenden Shortcuts erfolgen:</p>
+<p>Zurücksetzen der Position: <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span></p>
 <p>Zurücksetzen der Rotation: <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span></p>
 <p>Zurücksetzen der Skalierung: <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span></p>
 </div>
@@ -265,7 +267,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Object Mode</strong>: In diesem Modus können die Objekte in einer Szene als Ganzes transformiert und angeordnet werden.</p></li>
 <li><p><strong>Edit Mode</strong>: In diesem Modus können die einzelnen Bestandteile des Objekts anvisiert und bearbeitet werden.</p></li>
 <li><p><strong>Sculpt Mode</strong>: In diesem Modus kann das Objekt anhand von Sculpting-Tools bearbeitet werden.</p></li>
-<li><p><strong>Vertex Paint</strong>: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen</p></li>
+<li><p><strong>Vertex Paint</strong>: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen.</p></li>
 <li><p><strong>Weight Paint</strong>: In diesem Modus werden dem Objekt verschiedene Gewichte aufgemalt, welche anschliessend für weitere Funktionen verwendet werden können.</p></li>
 <li><p><strong>Texture Paint</strong>: In diesem Modus ist es möglich, ein Objekt mit einer Textur zu bemalen.</p></li>
 </ul>
@@ -347,6 +349,7 @@ Abbildung&nbsp;2: Schaltfläche für den Vertex-, Edge- und Face-Select-Modus in
 <div class="tippbox-icon">
 
 </div>
+<p>Weiterführende Informationen</p>
 </div>
 <div class="tippbox-body">
 <p>Polygone und Faces sind in ihrer Bedeutung praktisch deckungsgleich. Faces beschreiben jedoch eher die Fläche eines Polygons, während das Polygon eher die Gesamtheit von Vertices, Edges und Faces beschreibt. Der Begriff Polygon wird innerhalb von Blender allerdings selten verwendet.</p>
@@ -388,7 +391,7 @@ Abbildung&nbsp;3: Der Standardwürfel bestehend aus Tris statt aus Quads.
 <img src="Images/Chapter_9/4. Prof Figures.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4: Links eine gerenderte 3D-Figur und rechts die Figur in ihrer Gitterstruktur
+Abbildung&nbsp;4: Links eine gerenderte 3D-Figur und rechts die Figur in ihrer Gitterstruktur.
 </figcaption>
 </figure>
 </div>
@@ -440,21 +443,22 @@ Abbildung&nbsp;4: Links eine gerenderte 3D-Figur und rechts die Figur in ihrer G
 </section>
 <section id="normalen-die-richtige-seite-der-faces-finden" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="normalen-die-richtige-seite-der-faces-finden">Normalen: die richtige Seite der Faces finden</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Die zwei Seiten von Faces</p>
+</div></div><p>Da 3D-Meshes keinen inneren Hohlraum haben, bilden die Faces die Oberfläche, welche das Objekt abdeckt. Dies bedeutet aber auch, dass es zwei Seiten von dieser Oberfläche geben muss: eine Seite, die betrachtet werden soll, und eine, die nicht betrachtet werden soll. In den meisten Fällen ist schnell klar, welche Seite eines Objektes von Bedeutung ist. Einen Apfel betrachtet man jeweils von aussen, also ist die nach aussen gerichtete Seite jene Seite, welche betrachtet werden soll. Ebenso verhält es sich bei einem Charakter. In diesem Fall ist ebenfalls die nach aussen gerichtete Seite von Bedeutung und nicht das Innere seines Körpers.</p>
 <div class="tippbox">
 <div class="tippbox-header">
 <div class="tippbox-icon">
 
 </div>
+<p>Weiterführende Informationen</p>
 </div>
 <div class="tippbox-body">
 <p>Bei bestimmten Einstellungen werden die Rückseiten der Oberflächen von Objekten fehlerhaft dargestellt. In diesen Fällen hilft es oftmals, die Ausrichtung der Normalen zu überprüfen und bei Bedarf anzupassen.</p>
 <p>In manchen Game-Engines werden die Rückseiten von Objekten in den Grundeinstellungen gar nicht angezeigt. Dadurch blickt man bei den Oberflächen mit der falschen Ausrichtung durch das Objekt hindurch. Dies vermittelt den Eindruck, dass ein Teil des Objekts fehlen würde. Dieser Teil ist noch da – allerdings der falschen Richtung zugewendet.</p>
 </div>
 </div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Die zwei Seiten von Faces</p>
-</div></div><p>Da 3D-Meshes keinen inneren Hohlraum haben, bilden die Faces die Oberfläche, welche das Objekt abdeckt. Dies bedeutet aber auch, dass es zwei Seiten von dieser Oberfläche geben muss: eine Seite, die betrachtet werden soll, und eine, die nicht betrachtet werden soll. In den meisten Fällen ist schnell klar, welche Seite eines Objektes von Bedeutung ist. Einen Apfel betrachtet man jeweils von aussen, also ist die nach aussen gerichtete Seite jene Seite, welche betrachtet werden soll. Ebenso verhält es sich bei einem Charakter. In diesem Fall ist ebenfalls die nach aussen gerichtete Seite von Bedeutung und nicht das Innere seines Körpers.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Die zu betrachtende Seite eines Würfels</p>
@@ -470,7 +474,7 @@ Abbildung&nbsp;4: Links eine gerenderte 3D-Figur und rechts die Figur in ihrer G
 <div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/5. Icon_Normals.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_9/5.1.Icon_Normals.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5: Icon zur Darstellung der Normalen in den Viewport-Overlays.

@@ -15,10 +15,13 @@ Die bisherigen Transformationen, die an Objekten gemacht wurden, haben sich imme
 :::: tippbox-header
 ::: tippbox-icon
 :::
+Weiterführende Informationen
 ::::
 
 ::: tippbox-body
-Das Zurücksetzen der Transformationen kann direkt mittels folgenden Shortcuts erfolgen: Zurücksetzen der Position: {{< kbd Alt >}} + {{< kbd G >}}
+Das Zurücksetzen der Transformationen kann direkt mittels folgenden Shortcuts erfolgen:
+
+Zurücksetzen der Position: {{< kbd Alt >}} + {{< kbd G >}}
 
 Zurücksetzen der Rotation: {{< kbd Alt >}} + {{< kbd R >}}
 
@@ -33,9 +36,13 @@ Die verschiedenen Bearbeitungs-Modi
 :::
 
 -   **Object Mode**: In diesem Modus können die Objekte in einer Szene als Ganzes transformiert und angeordnet werden.
+
 -   **Edit Mode**: In diesem Modus können die einzelnen Bestandteile des Objekts anvisiert und bearbeitet werden.
+
 -   **Sculpt Mode**: In diesem Modus kann das Objekt anhand von Sculpting-Tools bearbeitet werden.
--   **Vertex Paint**: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen
+
+-   **Vertex Paint**: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen.
+
 -   **Weight Paint**: In diesem Modus werden dem Objekt verschiedene Gewichte aufgemalt, welche anschliessend für weitere Funktionen verwendet werden können.
 
 -   **Texture Paint**: In diesem Modus ist es möglich, ein Objekt mit einer Textur zu bemalen.
@@ -112,6 +119,7 @@ Mittels des Face-Select-Modus können Faces direkt angewählt werden. Alternativ
 :::: tippbox-header
 ::: tippbox-icon
 :::
+Weiterführende Informationen
 ::::
 
 ::: tippbox-body
@@ -147,7 +155,7 @@ Bevorzugung von Quads
 
 Trotzdem ist es sinnvoll, sich beim Modellieren von 3D-Objekten eher an die Verwendung von Quads zu gewöhnen. Viele Tricks und Kniffe der Objektbearbeitung lassen sich einfacher oder teilweise sogar nur auf Quads anwenden. Somit erleichtert die Arbeit mit Quads den Arbeitsprozess erheblich. Weiterhin sind Quads auch in vielen Animationsstudios der Standard.
 
-![Links eine gerenderte 3D-Figur und rechts die Figur in ihrer Gitterstruktur](Images/Chapter_9/4.%20Prof%20Figures.png){#fig-1_4 fig-align="left"}
+![Links eine gerenderte 3D-Figur und rechts die Figur in ihrer Gitterstruktur.](Images/Chapter_9/4.%20Prof%20Figures.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Anwendung von Tris
@@ -212,10 +220,17 @@ In Videospielen kann es vorkommen, dass die Kamera durch einen Fehler in ein Obj
 
 ## Normalen: die richtige Seite der Faces finden
 
+::: column-margin
+Die zwei Seiten von Faces
+:::
+
+Da 3D-Meshes keinen inneren Hohlraum haben, bilden die Faces die Oberfläche, welche das Objekt abdeckt. Dies bedeutet aber auch, dass es zwei Seiten von dieser Oberfläche geben muss: eine Seite, die betrachtet werden soll, und eine, die nicht betrachtet werden soll. In den meisten Fällen ist schnell klar, welche Seite eines Objektes von Bedeutung ist. Einen Apfel betrachtet man jeweils von aussen, also ist die nach aussen gerichtete Seite jene Seite, welche betrachtet werden soll. Ebenso verhält es sich bei einem Charakter. In diesem Fall ist ebenfalls die nach aussen gerichtete Seite von Bedeutung und nicht das Innere seines Körpers.
+
 :::::: tippbox
 :::: tippbox-header
 ::: tippbox-icon
 :::
+Weiterführende Informationen
 ::::
 
 ::: tippbox-body
@@ -225,11 +240,6 @@ In manchen Game-Engines werden die Rückseiten von Objekten in den Grundeinstell
 :::
 ::::::
 
-::: column-margin
-Die zwei Seiten von Faces
-:::
-
-Da 3D-Meshes keinen inneren Hohlraum haben, bilden die Faces die Oberfläche, welche das Objekt abdeckt. Dies bedeutet aber auch, dass es zwei Seiten von dieser Oberfläche geben muss: eine Seite, die betrachtet werden soll, und eine, die nicht betrachtet werden soll. In den meisten Fällen ist schnell klar, welche Seite eines Objektes von Bedeutung ist. Einen Apfel betrachtet man jeweils von aussen, also ist die nach aussen gerichtete Seite jene Seite, welche betrachtet werden soll. Ebenso verhält es sich bei einem Charakter. In diesem Fall ist ebenfalls die nach aussen gerichtete Seite von Bedeutung und nicht das Innere seines Körpers.
 
 ::: column-margin
 Die zu betrachtende Seite eines Würfels
@@ -249,7 +259,7 @@ Normalen darstellen
 
 Die Normalen eines 3D-Objektes lassen sich im Edit-Mode betrachten, indem die entsprechende Ansicht aktiviert wird. Diese wird im Dropdown-Menü zu den Viewport-Overlays in der rechten oberen Ecke des 3D-Viewports unter dem Abschnitt «*Normals*» mit der Schaltfläche «*Display Normals*» aktiviert. Anschliessend erscheinen in den Faces kleine blaue Striche, welche in diejenige Richtung zeigen, gegen die das Face dargestellt ist.
 
-![Icon zur Darstellung der Normalen in den Viewport-Overlays.](Images/Chapter_9/5.%20Icon_Normals.png){#fig-1_5 fig-align="left"}
+![Icon zur Darstellung der Normalen in den Viewport-Overlays.](Images/Chapter_9/5.1.Icon_Normals.png){#fig-1_5 fig-align="left"}
 
 ::: column-margin
 Face-Orientation darstellen

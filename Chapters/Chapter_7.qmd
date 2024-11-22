@@ -21,6 +21,7 @@ Alle drei Optionen sind in der Sidebar (ein /ausblenden mittels {{< kbd N >}}) u
 :::: tippbox-header
 ::: tippbox-icon
 :::
+Weiterführende Informationen
 ::::
 
 ::: tippbox-body
@@ -36,7 +37,7 @@ Position
 
 Die Location beschreibt die Position eines 3D-Meshes in der dreidimensionalen Welt. Die Position wird mittels drei Werten angegeben: einem Wert für die X-Achse, einem für die Y-Achse und einem für die Z-Achse. Jeder dieser drei Werte lässt sich individuell verändern. Durch das Verschieben des X Wertes verschiebt sich das Objekt beispielsweise der X-Achse entlang.
 
-![Der orangene Punkt markiert den Ursprung (Origin) eines Objektes](Images/Chapter_7/1.%20Origin.png){#fig-1_1 fig-align="left"}
+![Der orangene Punkt markiert den Ursprung (Origin) eines Objektes.](Images/Chapter_7/1.%20Origin.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Position befindet sich am Ursprung des Objekts
@@ -109,7 +110,7 @@ Versuchen Sie den Standardwürfel so zu skalieren, dass er entsprechend der Abbi
 
 **Übung 3.2**
 
-Versuchen Sie den Standardwürfel so zu verändern, dass er aus der orthogonalen (Taste ) Vorder/Rück-Ansicht (Taste ) nicht mehr sichtbar ist.
+Versuchen Sie den Standardwürfel so zu verändern, dass er aus der orthogonalen (Taste {{< kbd 5 >}} ) Vorder/Rück-Ansicht (Taste {{< kbd 1 >}} ) nicht mehr sichtbar ist.
 :::
 ::::::
 

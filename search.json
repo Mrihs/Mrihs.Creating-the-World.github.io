@@ -578,7 +578,7 @@
     "href": "Chapters/Chapter_6.html#torus",
     "title": "6. Primitive Meshes",
     "section": "Torus",
-    "text": "Torus\n\n\nTorus\nDer Torus stellt eine ringförmige Gestalt dar, welche aus einer Major- und einer Minor-Komponente besteht. Die Major-Komponente beschreibt dabei den Kreis von der Vogelperspektive herab auf den Torus und die Minor-Komponente den Kreis, welcher sich aus dem Querschnitt des Torus ergibt. Für beide Komponenten kann die Anzahl Unterteilungen über das Segment-Feld im Kontext-Menü eingegeben werden. Die Dimensionalität kann entweder hinsichtlich der Major- und Minor-Komponente festgelegt werden oder alternativ als Radius des inneren und des äusseren Ringes.\n\n\n\n\n\n\nAbbildung 1: Major- und Minor-Komponente des Torus"
+    "text": "Torus\n\n\nTorus\nDer Torus stellt eine ringförmige Gestalt dar, welche aus einer Major- und einer Minor-Komponente besteht. Die Major-Komponente beschreibt dabei den Kreis von der Vogelperspektive herab auf den Torus und die Minor-Komponente den Kreis, welcher sich aus dem Querschnitt des Torus ergibt. Für beide Komponenten kann die Anzahl Unterteilungen über das Segment-Feld im Kontext-Menü eingegeben werden. Die Dimensionalität kann entweder hinsichtlich der Major- und Minor-Komponente festgelegt werden oder alternativ als Radius des inneren und des äusseren Ringes.\n\n\n\n\n\n\nAbbildung 1: Major- und Minor-Komponente des Torus."
   },
   {
     "objectID": "Chapters/Chapter_6.html#grid",

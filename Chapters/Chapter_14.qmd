@@ -1,0 +1,267 @@
+---
+title: "14. Objekterstellung mittels Modifiern"
+editor: visual
+---
+
+::: column-margin
+Destruktive Objektbearbeitung
+:::
+
+Die bislang besprochenen Methoden der Objektbearbeitung stellen destruktive Methoden dar. Bei destruktiven Methoden wird das Objekt so abgeändert, dass es seine originale Form verliert. Ein Zylinder, der mit destruktiven Methoden zu einem Glas modelliert wird, verliert also seine Form als Zylinder.
+
+::: column-margin
+Destruundefinedktive Bearbeitung ist schwer zurückzuverfolgen
+:::
+
+Mittelpunkt bilden. Die meisten Modifier können mit Tris umgehen, allerdings nicht alle gleich gut. In diesem Fall liegt die Ursache beim Subdivision-Surface-Modifier, welcher die kreisförmigen Vertices unterschiedlich stark zum Mittelpunkt hin glättet. Durch die destruktive Objektbearbeitung ist es schwierig, wieder an einen früheren Punkt der Bearbeitung zurückzukehren. Mittels der Tastenkombination {{< kbd Ctrl >}} + {{< kbd Z >}} können zwar Schritte wieder rückgängig gemacht werden, allerdings ist die Anzahl dieser Schritte beschränkt. Zudem gehen diese Bearbeitungsschritte verloren, sobald Blender geschlossen wird, sodass Bearbeitungsschritte von früheren Blender-Sessions nicht rückgängig gemacht werden können.
+
+::: column-margin
+Komplexität durch destruktives Vorgehen
+:::
+
+Gerade wenn komplexe Objekte bearbeitet werden, kann es vorkommen, dass frühere Schritte sich später als Fehler herausstellen. Dann muss das Objekt möglicherweise über komplexe Umwege wieder in den gewünschten früheren Zustand zurückgebracht werden. Zudem können gewisse Schritte zum einen Zeitpunkt dazu führen, dass andere Schritte zu einem späteren Zeitpunkt komplexer werden.
+
+::: column-margin
+Modifier zur nicht-destruktiven Bearbeitung von Objekten
+:::
+
+Wäre es von daher nicht praktisch, wenn Objekte mittels möglichst simpler Parameter bearbeitet werden könnten, welche sich auch nachträglich jederzeit wieder bearbeiten liessen? Genau hierfür gibt es die sogenannten Modifier. Die Modifier ermöglichen eine nicht-destruktive Form der Objektbearbeitung. Sie können als Funktionen verstanden werden, welche auf ein Objekt angewendet werden und deren Einstellungen jederzeit nachjustiert werden können.
+
+## Ein glas mittels Modifiern erstellen
+
+### Vorbereitung
+
+::: column-margin
+Bisheriges Glas stellt eine komplexe Struktur dar
+:::
+
+Im vorherigen Kapitel wurde bereits behandelt, wie ein Glas mittels destruktiver Methoden erstellt werden kann. Die Form des fertiggestellten Glases kann noch verändert werden, allerdings ist es komplex, die Vertices so zu bearbeiten, dass die Struktur erhalten bleibt. Deshalb wird nun ein neues Glas mittels Modifiern erstellt.
+
+::: column-margin
+Objekt auf einen einzelnen Vertex reduzieren
+:::
+
+Um ein neues Glas zu erstellen, wird in diesem Fall ein beliebiges primitives Mesh erstellt. Danach werden im Edit-Mode (Wechsel mittels {{< kbd Tab >}}) alle Vertices ausgewählt ({{< kbd A >}}). Anschliessend werden diese Vertices alle zu einem einzigen Vertex zusammengefasst, indem mittels der Taste {{< kbd M >}} der Merge-Befehl «*At Center*» aufgerufen wird. Nun sollte nur noch ein einziger Vertex vorhanden sein. Dieser sollte am Ursprung des Objektes platziert werden. Hierfür kann in der Sidebar (Aufrufen mittels {{< kbd N >}}) der Vertex im lokalen Koordinatensystem am Nullpunkt platziert werden. Dieser Vertex stellt nun den Mittelpunkt des Glasbodens dar.
+
+::: column-margin
+Neue Vertices extrudieren
+:::
+
+Als Nächstes wird die Form des Glases im Querschnitt erstellt. Am besten wird das Objekt in der Vorderansicht betrachtet. Zunächst wird der Radius des Glasbodens festgelegt. Hierfür wird ein Edge entlang der X-Achse beispielsweise um 0.1 Meter extrudiert ( {{< kbd E >}}, {{< kbd X >}},{{< kbd 0 >}}{{\< kbd . \>}}{{< kbd 1 >}}, danach bestätigen mittels der Taste {{< kbd Enter >}}). Anschliessend wird von diesem Vertex ebenfalls ein Vertex herausgezogen, welches entlang der Z-Achse (und bei Bedarf auch entlang der Y-Achse) verschoben wird. Dadurch sollte nun ein Querschnitt eines halben Glases erstellt worden sein, wie in Abbildung 1 dargestellt.
+
+![Der Querschnitt eines halben Glases.](){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Vertices mit der Maus erstellen
+:::
+
+Eine alternative Möglichkeit, um Vertices zu extrudieren, besteht darin, dass im Edit-Mode bei gedrückter {{< kbd Ctrl >}}-Taste mit der linken Maustaste in den 3D-Viewport geklickt wird. An der Stelle des Klicks wird anschliessend ein neuer Vertex erstellt. Wenn davor ein Vertex ausgewählt wurde, wird der mit dem Klick erstelle Vertex über ein Edge mit dem ausgewählten Vertex verbunden. So kann der Umriss des Glases auch mittels der Maus erstellt werden.
+
+::: column-margin
+Weitere Schritte zur Erstellung des Glases
+:::
+
+Mithilfe dieser drei Vertices kann bereits ein Glas erstellt werden. Hierfür wird Folgendes benötigt:
+
+-   Die drei Vertices müssen, wie mit dem Spin-Tool, im Kreis extrudiert werden.
+-   Das Objekt benötigt eine Dicke.
+
+### Hinzufügen von Modifiern
+
+::: column-margin
+Modifier-Panel im Properties-Editor
+:::
+
+Modifier sind jeweils im Properties-Editor aufzufinden, welcher das Areal in der rechten unteren Ecke von Blender darstellt. Auf der linken Seite dieses Editors befindet sich ein Reiter mit verschiedenen Symbolen. Die Modifier werden dort als Schraubenschlüssel symbolisiert. Durch einen Klick auf den Schraubenschlüssel wird der Modifier-Reiter geöffnet. Darin werden alle Modifier aufgelistet, die dem aktiven Objekt oder dem gerade bearbeiteten Objekt zugewiesen sind.
+
+![Modifier-Icon, welches im Reiter des Properties-Editors aufzufinden ist.](Images/Chapter_14/2.%20Icon_modifiers.png){#fig-1_2 fig-align="left"}
+
+::: column-margin
+Modifier hinzufügen
+:::
+
+Der Reiter für die Modifier ist noch leer, da dem Objekt noch kein Modifier hinzugefügt wurde. In der Dropdown-Liste «*Add Modifie*r» können Modifier hinzugefügt werden. Diese Modifier werden auf das aktive Element oder das Objekt, welches gerade im Edit-Mode bearbeitet wird, angewendet.
+
+::: column-margin
+Screw-Modifier, um im Kreis zu extrudieren
+:::
+
+Als Erstes wird ein Modifier benötigt, der das Spin-Tool auf das Glas anwendet. Dieser kann mittels des Modifiers «*Screw*» erstellt werden. Dieser Modifier extrudiert Objekte kreisförmig um den Ursprung herum, analog zum Spin-Tool. Per Default wird das Objekt bei der Anwendung des Modifiers um 360° im Kreis gedreht. Dadurch sollte aus dem Querschnitt ein rundes Glas erstellt werden.
+
+::: column-margin
+Veränderbarkeit von Modifiern
+:::
+
+Bei der destruktiven Methode mit dem Spin-Tool war es unerlässlich, dass direkt bei der Durchführung der Transformation bestimmt wird, um wie viele Grad die Operation durchgeführt werden soll, wie viele Faces gebildet werden sollen und ob die Elemente automatisch verbunden werden sollen. Bei der Bearbeitung mittels des Screw-Modifiers können diese Einstellungen jederzeit in den Einstellungen des Modifiers verändert werden. Für das aktuelle Glas-Objekt ist es sinnvoll, hier die Einstellung «*Merge*» zu aktivieren, sodass die Vertices am Start und am Ende der Umdrehung zu je einem Vertex verbunden werden.
+
+![Glas, erstellt mittels eines Screw- und eines Solidify-Modifiers.](Images/Chapter_14/){#fig-1_3 fig-align="left"}
+
+::: column-margin
+Solidify-Modifier, um Dicke zu erstellen
+:::
+
+Das Glas benötigt noch eine Dicke. Auch diese kann mittels eines Modifiers hinzugefügt werden. Hierfür wird mittels des Dropdown-Menüs «*Add Modifier*» ein «*Solidify*»-Modifier hinzugefügt. Dieser extrudiert alle Faces entlang ihrer Normalen und verbindet sie gemeinsam, sodass das Objekt eine Dicke erhält. Somit hat das Glas nun bereits seine eigentliche Form erhalten.
+
+### Subdivision-Surface-Modifier
+
+::: column-margin
+Subdivision Surface zum Glätten
+:::
+
+Das Glas ist allerdings sehr eckig. An dieser Stelle kommt der wohl wichtigste Modifier zur Anwendung: der Subdivision-Surface-Modifier. Der Subdivision-Surface-Modifier unterteilt alle Faces im Modell durch zwei Edges in jeweils vier kleinere Faces – so wie auch der Befehl «*Subdivide*». Zusätzlich passt der Modifier die neu gebildeten Edges so an, dass die Oberflächen abgerundet und geglättet werden. Dadurch können klobige und eckige Modelle besonders schnell zu abgerundeten und glatten Modellen umgewandelt werden.
+
+::: column-margin
+Subdivisions hinzufügen
+:::
+
+Unter «*Add Modifier*» kann der «*Subdivision Surface*»-Modifier ausgewählt werden. Beim Modifier kann anschliessend unter «*Levels Viewport*» eingegeben werden, wie viele Subdivisions erzeugt werden sollen. Es können maximal sechs Subdivisions im Modifier durchgeführt werden (wobei auch mehr Subdivisions möglich sind, indem ein weiterer Subdivision-Surface-Modifier hinzugefügt wird). Je höher die Anzahl Subdivisions, desto glatter wird die Fläche. Allerdings erhöht sich dadurch auch die Anzahl Vertices zur Berechnung des Objektes, was mehr Leistung vom Computer erfordert. Es ist deshalb ratsam, es nicht mit diesem Modifier zu übertreiben.
+
+::: column-margin
+Subdivisions beim Rendern
+:::
+
+Unterhalb der Zeile «*Levels Viewport*» befindet sich die Zeile «*Render*». Dadurch lässt sich die Anzahl Subdivisions für den finalen Render einstellen. Dies ermöglicht eine höhere Anzahl Subdivisions für den finalen Render-Prozess, während die Bearbeitung mit einer geringeren Anzahl erfolgt und weniger Leistung benötigt wird.
+
+::: column-margin
+Catmull vs. Simple
+:::
+
+Zusätzlich verfügt der Subdivision-Surface-Modifier über die Einstellungsoption «*Catmull-Clark*» oder alternativ «*Simple*». Per Default ist die Option «*Catmull-Clark*» eingestellt, welche dafür sorgt, dass das Objekt geglättet wird. Die Option «*Simple*» unterteilt das Objekt lediglich in mehr Vertices, ohne deren Position so anzupassen, dass das Objekt glatter erscheint.
+
+## Funktionsweise von Modifiern
+
+::: column-margin
+Fehlende Dicke
+:::
+
+Nun sollten dem Glas drei Modifier in der folgenden Reihenfolge zugeordnet sein: ein Screw-Modifier, welcher die drei Vertices kreisförmig extrudiert, ein Solidify-Modifier, welcher den Faces eine Dicke hinzufügt, und ein Subdivision-Surface-Modifier, welcher das Objekt durch zusätzliche Vertices glättet. Das Objekt erscheint nun glatt, aber nicht mehr besonders dick. Dies liegt daran, dass der Solidify-Modifier dem Glas eine Dicke zuweist, der Subdivision-Surface-Modifier allerdings die Vertices dieser Dicke so stark glättet, dass die Dicke wieder verschwindet. Zudem fällt auch auf, dass der runde Boden des Glases stark verformt wird und unverhältnismässig kantig erscheint.
+
+![Verzerrung von Tris am Glasboden durch den Subdivision-Surface-Modifier.](Images/Chapter_14/4.%20Tris%20am%20Boden.png){#fig-1_4 fig-align="left"}
+
+::: column-margin
+Verwendung von Tris bei Modifiern
+:::
+
+Die seltsame Form am Boden ist auf die Form der Faces zurückzuführen, welche durch die Modifier entstehen. Durch die kreisförmige Extrusion der Vertices im Screw-Modifier entstehen am Boden eine Reihe Tris, die sich kreisförmig um den Mittelpunkt bilden. Die meisten Modifier können mit Tris umgehen, allerdings nicht alle gleich gut. In diesem Fall liegt die Ursache beim Subdivision-Surface-Modifier, welcher die kreisförmigen Vertices unterschiedlich stark zum Mittelpunkt hin glättet.
+
+::: column-margin
+Bevel-Modifier
+:::
+
+Sowohl das Problem der geringeren Dicke als auch das Problem der unterschiedlich stark geglätteten Vertices am Glasboden kann mittels eines zusätzlichen Modifiers behoben werden. Das Ziel hierfür ist, dass alle Edges mit grösseren Winkeln abgerundet werden. Dies kann mittels des Bevel-Modifiers erzielt werden. Dieser führt einen Bevel-Prozess in einer nicht-destruktiven Methode durch. Unter «*Add Modifier*» kann «*Bevel*» ausgewählt werden, um diesen Modifier hinzuzufügen.
+
+::: column-margin
+Reihenfolge von Modifiern ändern
+:::
+
+Das Hinzufügen des Bevel-Modifiers reduziert das Problem der Dicke des Glases, allerdings bleiben die Verformungen am Boden des Glases bestehen. Dies liegt daran, dass der Bevel-Modifier noch vor dem Subdivision-Surface-Modifier angewendet werden sollte, respektive der Subdivision-Surface-Modifier nach dem Bevel-Modifier. In der rechten oberen Ecke des Subdivision-Surface-Modifiers befindet sich eine Schaltfläche. Bei gedrückter linker Maustaste auf diese Schaltfläche lassen sich die Modifier verschieben. Es muss nun entweder der Bevel-Modifier über den Subdivision-Surface-Modifier gezogen werden oder der Subdivision-Surface-Modifier unterhalb des Bevel-Modifiers. Nun sollten beide Probleme gelöst sein. Mittels eines Wertes von 2 für die Subdivisions im Viewport müsste das Glas glatt aussehen.
+
+::: column-margin
+Schaltflächen im Header des Modifiers
+:::
+
+Nebst der Schaltfläche zum Verschieben beinhaltet der Header eines Modifiers noch weitere Punkte:
+
+-   Innerhalb eines Textfeldes wird der Name des Modifiers angezeigt. Dieser kann auch abgeändert werden, damit etwa die Funktion des Modifiers klarer wird.
+-   Daneben sind drei weitere Schaltflächen anzutreffen, die wahlweise aktiviert oder deaktiviert wer den können:
+    -   **On Cage**: Wenn diese Schaltfläche aktiviert ist, wird im Edit-Mode angezeigt, wie sich die Bearbeitung von Vertices auswirkt. Dieses Feld ist allerdings nicht bei allen Modifiern verfügbar. Da es beim Screw-Modifier nicht verfügbar ist, wird es im Beispiel mit dem Glas auch bei den nachfolgenden Modifiern nicht angezeigt. Durch das Deaktivieren der Schaltfläche «*Edit Mode*» (siehe nächsten Aufzählungspunkt) beim Screw-Modifier wird die Schaltfläche «*On Cage*» bei den darauffolgenden Modifiern jedoch wieder sichtbar.
+    -   **Edit Mode**: Wenn diese Schaltfläche aktiviert ist, wird während der Bearbeitung im Edit Mode der Effekt des Modifiers auf das gesamte Objekt gezeigt. Ansonsten bleibt dieser Modifier im Edit-Mode unberücksichtigt.
+    -   **Realtime**: Der Modifier wird im 3D-Viewport angezeigt.
+    -   **Render**: Der Modifier wird beim Rendern berücksichtigt.
+-   Innerhalb des Dropdown-Menüs sind folgende Optionen anzutreffen:
+    -   **Apply**: Der Modifier wird auf das Objekt angewendet. Dadurch verschwindet der Modifier aus der Ansicht und kann auch nicht mehr weiterbearbeitet werden. Wird zudem ein Modifier angewendet, der nicht an der obersten Position der Modifier-Reihenfolge liegt, werden alle vorgängigen Modifier bei der Anwendung ignoriert.
+    -   **Duplicate**: Der Modifier wird dupliziert und direkt unter dem originalen Modifier platziert.
+    -   **Copy to Selected**: Wenn mehrere Objekte ausgewählt sind, kann der Modifier des aktiven Elements durch diesen Befehl auf die anderen Objekte übertragen werden.
+    -   **Move to First**: Der Modifier wird in der Reihenfolge der Modifier an die erste Stelle verschoben.
+    -   **Move to Last**: Der Modifier wird in der Reihenfolge der Modifier an die letzte Stelle verschoben.
+-   Mittels des Kreuzes wird ein Modifier gelöscht.
+
+:::::: rememberbox
+:::: rememberbox-header
+::: rememberbox-icon
+:::
+
+Merke...
+::::
+
+::: rememberbox-body
+Modifier werden verwendet, um Objekte nicht-destruktiv bearbeiten zu können.
+
+Modifier werden auf Objekte angewendet.
+
+Wenn mehrere Modifier auf ein Objekt angewendet werden, werden sie nacheinander in der Modifier-Ansicht von oben nach unten angewendet.
+:::
+::::::
+
+## Weitere Glättung erzielen durch Smooth-Shading
+
+::: column-margin
+Shade Smooth und Shade Flat
+:::
+
+Blender bietet eine Möglichkeit, um Objekte noch über den Subdivision-Surface-Modifier hinaus zu glätten. Hierfür muss das entsprechende Objekt im Object-Mode ausgewählt werden. Anschliessend kann unter «*Object \| Shade Smooth*» eingestellt werden, dass das Objekt geglättet dargestellt wird. Unter «*Object \| Shade Flat*» kann ein geglättet dargestelltes Objekt wieder ohne eine Glättung dargestellt werden.
+
+::: column-margin
+Häufige Fehler beimSmooth-Shading
+:::
+
+Bei dieser Art der Glättung wird nichts an der Struktur des Objektes geändert, sondern dessen Darstellung geglättet. Diese Darstellung wirkt allerdings bei sehr kantigen Objekten und daher auch beispielsweise bei Objekten im Low-Poly-Stil befremdlich. In diesem Fall ist eher «*Shade Flat*» zu empfehlen. Zudem ist für die Berechnung dieser geglätteten Fläche wichtig, dass die Normalen in die richtige Richtung orientiert sind. Nebst zu kantigen Flächen sind falsch orientierte Normalen eine häufige Ursache, wenn ein Objekt unter «*Shade Smooth*» schlecht dargestellt wird.
+
+## Die Vielzahl von Modifiern
+
+::: column-margin
+Vielfalt der Modifier
+:::
+
+Blender verfügt über eine sehr hohe Anzahl verschiedener Modifier, welche auch stetig zunimmt. Einige dieser Modifier werden sehr selten und für sehr spezifische Verfahren verwendet. Andere Modifier sind hingegen praktisch unerlässlich für die Arbeit mit 3D-Objekten.
+
+::: column-margin
+Arten von Modifiern
+:::
+
+Die verschiedenen Modifier sind in vier verschiedene Arten unterteilt:
+
+-   **Modify**: Diese Modifier fokussieren sich auf die Datenstruktur innerhalb der Meshes.
+-   **Generate**: Diese Modifier ermöglichen eine nicht-destruktive Bearbeitung von Objekten.
+-   **Deform**: Diese Modifier ermöglichen eine Veränderung der Form von Objekten.
+-   **Physics**: Diese Modifier werden verwendet, um Objekten in Simulationen in Blender eine Rolle zuzuweisen.
+
+### Generate-Modifier
+
+Für die Objekterstellung werden vor allem die Generate-Modifier verwendet. Auf ihnen liegt deshalb auch der Fokus in diesem Kurs.
+
+#### Array
+
+::: column-margin
+Objekte wiederholen mittels Array-Modifier
+:::
+
+Der Array-Modifier erstellt beliebig viele Duplikate eines Objektes. Diese Duplikate werden in einer Reihe aufgestellt. Dadurch können sich wiederholende Muster mittels dieses Modifiers erstellt werden. Hierfür lässt sich die Anzahl Wiederholungen des Objektes unter «*Count*» einstellen. Anschliessend kann entlang der drei Achsen eingestellt werden, in welchem Abstand die Wiederholungen jeweils zueinander stehen sollen. Dieser Abstand kann relativ zur Grösse des Objektes eingestellt werden, indem «*Relative Offset*» aktiviert wird. In diesem Fall wird der Abstand um einen Faktor relativ zur Objektgrösse definiert. Ein Wert von 1 würde bedeuten, dass das Objekt direkt an der Stelle wiederholt wird, an der das Original seine äusserste Grenze hat. Wenn hingegen «*Constant Offset*» aktiviert wird, werden die Wiederholungen ausgehend vom Ursprung des Objektes um den angegebenen Wert verschoben wiederholt. Beide Abstandsoptionen lassen sich zudem miteinander kombinieren. Mittels der Einstellung «*Merge*» lassen sich zudem die wiederholten Objekte an den Vertices zwischen den Wiederholungen verbinden – vorausgesetzt diese befinden sich an derselben Position.
+
+![Icon für den Array-Modifier.](Images/Chapter_14/5.%20Icon_Array_modifier.png){#fig-1_5 fig-align="left"}
+
+![Ein Objekt sowie eine Anwendung mittels eines Array-Modifiers.](Images/Chapter_14/6.%20Example_Array_modifier.png.png){#fig-1_6 fig-align="left"}
+
+#### Bevel
+
+::: column-margin
+Kanten abrunden mittels Bevel-Modifier
+:::
+
+Der Bevel-Modifier rundet die Kanten eines Objektes ab. Dabei kann eingestellt werden, wie stark die Abrundung erfolgen soll und wie viele Segmente für die Abrundung gebildet werden sollen. Zusätzlich kann eine Abrundung auch auf Edges mit bestimmten Merkmalen fixiert werden (beispielsweise nur Edges mit bestimmten Winkeln oder einer bestimmten Datenstruktur). Zudem können auch Vertices abgerundet werden. Hierfür muss im oberen Bereich des Modifiers «*Vertices*» statt «*Edges*» ausgewählt werden.
+
+![ Icon für den Bevel-Modifier.](Images/Chapter_14/7.%20Icon_Bevel_modifier.png){#fig-1_7 fig-align="left"}
+
+#### Boolean
+
+::: column-margin
+Schnittmenge zwischen Objekten verwenden mittels Boolean-Modifier
+:::
+
+Der Boolean-Modifier wird verwendet, um die Teilmengen von zwei Objekten zu
+bearbeiten. Hierfür wird im Modifier ein zweites Objekt ausgewählt. Wahlweise
+kann anschliessend die gemeinsame Schnittmenge der beiden Objekte ausgewählt («*Intersect*»), verbunden («*Union*») oder entfernt werden («Difference»). Zu beachten ist jedoch, dass beim Verbinden (Union) beide Objekte lediglich zu einem Objekt miteinander verbunden werden. Die Vertice-Strukturen der originalen Objekte bleiben erhalten und werden nicht miteinander kombiniert. Bei den beiden anderen Optionen werden die Vertices der beiden Objekte verbunden.
+
+![ Icon für den Boolean-Modifier.](Images/Chapter_14/8. Icon_Boolean_Modifier.png){#fig-1_8 fig-align="left"}
+
+![Der Boolean-Modifier eines Würfels in Kombination mit einem Zylinder. Die drei verschiedenen Boolean-Einstellungen führen zu unterschiedlichen Ergebnissen.](Images/Chapter_14/9. Example_Boolean_Modifier.png){#fig-1_9 fig-align="left"}

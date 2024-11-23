@@ -1,0 +1,16 @@
+---
+title: "13. Tutorial: Erstellen eines Glases"
+editor: visual
+---
+
+::: column-margin
+Ziel dieses Tutorials
+:::
+
+Bislang wurden die grundlegenden Prinzipien der Objektbearbeitung behandelt. Diese ermöglichen eine Vielzahl von Bearbeitungsmöglichkeiten, sodass bereits sehr komplexe Objekte modelliert werden können. Nachfolgend daher eine Erklärung, wie beispielsweise die erläuterten Bearbeitungsmöglichkeiten verwendet werden können, um ein Glas zu modellieren, wie etwa in Abbildung 1. 
+
+:::column-margin
+Würfel löschen
+:::
+
+Zunächst wird ein neues Blender-Projekt geöffnet. Da das Glas eine runde Form hat, ist der Standardwürfel nicht geeignet, um das Glas nachzubilden. Aus diesem Grund wird er mittels der Taste {{< kbd X >}} gelöscht. 

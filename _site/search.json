@@ -831,5 +831,12 @@
     "title": "7. Methoden der Objekt-Transformation",
     "section": "Übung 3.2 Versuchen Sie den Standardwürfel so zu verändern, dass er aus der orthogonalen (Taste ) Vorder/Rück-Ansicht (Taste ) nicht mehr sichtbar ist.",
     "text": "Übung 3.2 Versuchen Sie den Standardwürfel so zu verändern, dass er aus der orthogonalen (Taste ) Vorder/Rück-Ansicht (Taste ) nicht mehr sichtbar ist."
+  },
+  {
+    "objectID": "Chapters/Chapter_13.html",
+    "href": "Chapters/Chapter_13.html",
+    "title": "13. Tutorial: Erstellen eines Glases",
+    "section": "",
+    "text": "Ziel dieses Tutorials\nBislang wurden die grundlegenden Prinzipien der Objektbearbeitung behandelt. Diese ermöglichen eine Vielzahl von Bearbeitungsmöglichkeiten, sodass bereits sehr komplexe Objekte modelliert werden können. Nachfolgend daher eine Erklärung, wie beispielsweise die erläuterten Bearbeitungsmöglichkeiten verwendet werden können, um ein Glas zu modellieren, wie etwa in Abbildung 1.\n\n\nWürfel löschen\nZunächst wird ein neues Blender-Projekt geöffnet. Da das Glas eine runde Form hat, ist der Standardwürfel nicht geeignet, um das Glas nachzubilden. Aus diesem Grund wird er mittels der Taste {{  }} gelöscht."
   }
 ]

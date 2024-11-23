@@ -81,6 +81,7 @@ Die Orientierung anhand der Normalen verläuft im Edit-Mode so, dass die Z-Achse
 :::: tippbox-header
 ::: tippbox-icon
 :::
+
 Weiterführende Informationen
 ::::
 
@@ -136,7 +137,7 @@ Eine Reihe von Transformationen orientieren sich an einem bestimmten Drehpunkt i
 -   Median Point
 -   Active Element
 
-![Icon für den Pivot-Point in der Default-Auswahl (Median-Point).](Images/Chapter_12/3.1 Icon_Pivot_Point.png){#fig-1_3 fig-align="left"}
+![Icon für den Pivot-Point in der Default-Auswahl (Median-Point).](Images/Chapter_12/3.1%20Icon_Pivot_Point.png){#fig-1_3 fig-align="left"}
 
 ### Bounding Box Center
 
@@ -268,7 +269,7 @@ Proportionale Bearbeitung mittels {{< kbd O >}} aktivieren
 
 Die Option «*Proportional Editing*» ermöglicht es, dass nahe beieinanderliegende Elemente proportional zu ihrer Nähe bearbeitet werden können. Diese Option kann auch mit der Taste {{< kbd O >}} aktiviert oder deaktiviert werden. Wenn diese Option aktiviert ist und eine Transformation durchgeführt wird (z.B. eine Rotation), erscheint um den Bezugspunkt ein Kreis. Alle Elemente, welche sich innerhalb dieses Kreises befinden, werden diese Transformation nun ebenfalls durchführen. Der Radius des Kreises kann mittels des Mausrads vergrössert oder verkleinert werden. Dadurch wird der Erfassungsbereich der proportionalen Bearbeitung variiert. Alternativ kann die Taste {{< kbd PageUp >}} zum Vergrössern des Kreises oder {{< kbd PageDown >}} zum Verkleinern des Kreises gedrückt werden.
 
-![Icon für Proportional Editing.](Images/Chapter_12/4.1 Icon_Proportional_Editing.png){#fig-1_5 fig-align="left"}
+![Icon für Proportional Editing.](Images/Chapter_12/4.1%20Icon_Proportional_Editing.png){#fig-1_5 fig-align="left"}
 
 ::: column-margin
 Proportionale Bearbeitung im Object-Mode
@@ -325,4 +326,4 @@ Vertices automatisch verbinden
 
 Neben den Schaltflächen für die drei Achsen befindet sich zudem das Icon für die Option «*Auto Merge Vertices*». Durch das Aktivieren dieser Option werden Vertices, welche während der weiteren Bearbeitung auf derselben Position platziert werden, automatisch miteinander verbunden. Dadurch ist es nicht mehr nötig, von Hand Vertices zu einem Vertex zu verbinden.
 
-![Icon für Auto Merge Vertices.](Images/Chapter_12/6.1 Icon_Automerge.png){#fig-1_7 fig-align="left"}
+![Icon für Auto Merge Vertices.](Images/Chapter_12/6.1%20Icon_Automerge.png){#fig-1_7 fig-align="left"}

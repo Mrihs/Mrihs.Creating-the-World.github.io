@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -200,8 +202,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#alternative-methode-zur-erstellung-eines-glases" id="toc-alternative-methode-zur-erstellung-eines-glases" class="nav-link active" data-scroll-target="#alternative-methode-zur-erstellung-eines-glases">Alternative Methode zur Erstellung eines Glases</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
@@ -232,9 +240,135 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Würfel löschen</p>
-</div></div><p>Zunächst wird ein neues Blender-Projekt geöffnet. Da das Glas eine runde Form hat, ist der Standardwürfel nicht geeignet, um das Glas nachzubilden. Aus diesem Grund wird er mittels der Taste {{ <kdb x=""> }} gelöscht.</kdb></p>
+</div></div><p>Zunächst wird ein neues Blender-Projekt geöffnet. Da das Glas eine runde Form hat, ist der Standardwürfel nicht geeignet, um das Glas nachzubilden. Aus diesem Grund wird er mittels der Taste <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> gelöscht.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Referenzbild einfügen</p>
+</div></div><p>Generell ist es empfehlenswert, bei der Erstellung von Objekten mit Referenzbildern zu arbeiten. Aus diesem Grund wird eine Bildvorlage für das Glas benötigt. Hier für kann eine Bilddatei direkt aus einem Ordner oder vom Desktop in den 3D-Viewport hineingezogen werden, sodass das Bild anschliessend direkt in der Szene sichtbar wird. Das Bild wird allerdings so eingefügt, dass es senkrecht zur Benutzeransicht sichtbar ist. Das bedeutet, dass das Bild entsprechend der eigenen Benutzeransicht positioniert und rotiert wird. Aus diesem Grund empfiehlt es sich, vor dem Hineinziehen des Bildes mit der Taste <kbd aria-hidden="true">1</kbd><span class="visually-hidden">1</span> in die Frontansicht zu wechseln. Dadurch wird das Bild lediglich entlang der X-Achse um 90° rotiert eingefügt. Alternativ kann das Bild über das «<em>Add</em>»-Menü (<kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span>) unter «<em>Image | Reference</em>» hinzugefügt werden. Zudem ist das Bild jeweils nur sichtbar, wenn die Viewport-Overlays aktiviert sind.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_13/1. Bildvorlage.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Bildvorlage zur Erstellung eines Glases.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bild platzieren</p>
+</div></div><p>Allenfalls sollte das Referenzbild noch im Raum platziert werden. Idealerweise wird das Bild so platziert, dass sich der Mittelpunkt des unteren Endes des Glases am Nullpunkt der Welt befindet. An dieser Stelle sollte sich ebenfalls der 3D-Cursor befinden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Primitive Mesh erstellen</p>
+</div></div><p>Als Nächstes wird das Objekt hinzugefügt, aus dem anschliessend das Glas geformt werden soll. Dieses hat im Idealfall bereits eine ähnliche Form wie das zu erstellende Objekt. In diesem Fall würde dies einem Zylinder entsprechen. Über das «<em>Add</em>»-Menü (<kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span>) wird unter «<em>Mesh | Cylinder</em>» ein Zylinder an der Position des 3D-Cursors erstellt. Der Zylinder kann in seinen Default-Einstellungen belassen werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Zylinder positionieren</p>
+</div></div><p>Mittels der Taste <kbd aria-hidden="true">Tab</kbd><span class="visually-hidden">Tab</span> wird in den Edit-Mode gewechselt, um die Bearbeitung des Zylinders zu starten. Die Höhe des Zylinders erstreckt sich nun von Z = -1m bis Z = 1m. Somit lieg ein Teil des Zylinders unterhalb des Ursprungs des Objektes. Deshalb wird der Zylinder nun um einen Meter entlang der Z-Achse nach oben verschoben. Mittels der Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> werden alle Elemente des Zylinders ausgewählt. Um eine Verschiebung entlang der Z-Achse um einen Meter zu bewirken, wird die Taste <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span> zum Starten der Bewegung, die Taste <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> zum Einrasten entlang der Z-Achse, die Zahl <kbd aria-hidden="true">1</kbd><span class="visually-hidden">1</span> zur Angabe der Bewegung um einen Meter und die Taste zum Bestätigen gedrückt. Nun sollte der Boden des Zylinders am Nullpunkt liegen, so wie in Abbildung 2.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_13/2. glas_cilinder.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Zylinder, nachdem seine Vertices um einen Meter entlang der Z-Achse nach oben verschoben wurden.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Höhe des Zylinder deckels anpassen</p>
+</div></div><p>Der Zylinder ist nun an der Position des Glases, allerdings weist er die falschen Dimensionen auf. Durch eine Skalierung des Zylinders würde sich auch der soeben angepasste Boden verschieben. Deshalb werden die Vertices des Deckels manuell ausgewählt und verschoben. Hierfür wird bei gedrückter <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span>-Taste ein Edge entlang des Zylinderdeckels ausgewählt. Dadurch werden alle Vertices entlang der Schlaufe dieses Edges ausgewählt – also in dem Fall alle Vertices auf dem Deckel des Zylinders. Diese Vertices werden nun entlang der Z-Achse um den Wert -1.2 verschoben, sodass sie die Höhe Z = 0.8 aufweisen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Breite des Zylinders anpassen</p>
+</div></div><p>Als Nächstes wird der Mantel des Zylinders angepasst, sodass er der maximalen Breite des Glases entspricht. Hierfür werden alle Vertices ausgewählt und entlang der X- und Z-Achse kleiner skaliert. Mittels der Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> werden alle Vertices ausgewählt. Anschliessend wird mittels der Taste der Skalierungsvorgang gestartet, und mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> die Z-Achse ignoriert. Durch die Eingabe von <kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span><kbd aria-hidden="true">.</kbd><span class="visually-hidden">.</span><kbd aria-hidden="true">6</kbd><span class="visually-hidden">6</span> und der Bestätigung mittels <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span> wird anschliessend das Objekt entlang der X- und Y-Achse um den Faktor 0.6 skaliert.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Zylindermantel in Edges unterteilen</p>
+</div></div><p>In den nächsten Bearbeitungsschritten muss der Mantel des Zylinders entsprechend der Form angepasst werden. Hierfür werden weitere Vertices Innerhalb des Zylindermantels benötigt. Um diese hinzuzufügen, werden mit einem Loop Cut zehn Edges entlang des Zylindermantels eingefügt. Hier für wird mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span> zunächst der Loop-Cut-Modus gestartet. Anschliessend wird der Mauszeiger über die Edges, welche vertikal dem Zylindermantel entlang verlaufen, bewegt. Dadurch sollte Blender nun einen Schnitt entlang des Zylindermantels in der Mitte der Höhe vor schlagen. Um statt eines Schnittes gleich zehn Schnitte zu erhalten, wird die Zahl <kbd aria-hidden="true">1</kbd><span class="visually-hidden">1</span><kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span> eingegeben und der Schnitt anschliessen mittels der linken Maustaste oder <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span>bestätigt. Danach muss nochmals mittels der linken Maustaste oder <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span> bestätigt werden, dass der Loop Cut mittig der Flächen verlaufen soll. Wenn die Maus bereits bewegt wurde, erfolgt der Schnitt nicht mehr mittig. In diesem Fall sollte die Platzierung mittels <kbd aria-hidden="true">esc</kbd><span class="visually-hidden">esc</span> der Taste beendet werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Anpassen der Breite von Hand</p>
+</div></div><p>Die neu erstellten Edges werden nun horizontal der Breite des Glases auf der jeweiligen Höhe angepasst. Dies kann zum einen manuell von Hand für jede Reihe an Edges erfolgen. Hierfür wird mittels <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + der linken Maustaste auf ein horizontales Edge die gesamte Reihe von Edges ausgewählt. Mittels der Skalierung (<kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span>) entlang der X- und Y-Achse (<kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span>) kann der Radius für die entsprechende Höhe eingestellt werden. Der Radius wird nacheinander für jede Edge-Reihe angepasst.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Anpassen der Breite mittels Proportional Editing</p>
+</div></div><p>Alternativ kann auch auf das «<em>Proportional Editing</em>» zurückgegriffen werden, welches mittels der Taste aktiviert wird. Dadurch kann etwa die oberste Reihe von Edges mittels <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + der linken Maustaste ausgewählt werden. Anschliessend wird mittels der Taste <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> die Skalierung gestartet. Für die proportionale Bearbeitung wird nun ein Kreis dargestellt. Dieser kann mittels des Mausrads verkleinert oder vergrössert werden. Sein Radius ist im oberen Bildschirmrand angezeigt und sollte etwa 0.75 betragen. Anschliessend kann die Skalierung entlang der X- und Y-Achse festgelegt (<kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span>) und um den Faktor 0.85 skaliert werden. Dieser Vorgang wird anschliessend nochmals am unteren Rand des Zylinders wiederholt (mit einem Radius von ca. 0.5 und einer Skalierung um den Faktor 0.5). Anschliessend wird bei deaktivierter proportionaler Bearbeitung noch der untere Rand erneut um den Faktor 0.9 entlang der X- und Y-Achse skaliert und der obere Rand ebenfalls um den Faktor 0.975.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Zylinderdeckel löschen</p>
+</div></div><p>Der Zylinder sollte nun bereits die Form des Glases aufweisen. Durch einen Wechsel in den Face-Select-Modus ist es möglich, direkt das Face, welches den Deckel des Zylinders darstellt, auszuwählen und mittels <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> zu löschen. Anschliessend ist das Glas so gut wie fertig – ihm fehlt lediglich noch eine Dicke.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>3D-Cursor verschieben</p>
+</div></div><p>Um die Dicke des Glases zu erstellen, sollen alle Faces gegen den Mittelpunkt des oberen Randes des Zylinders hinausgezogen werden. Hierfür muss zunächst der 3D-Cursor mittig des oberen Randes platziert werden. Dies geschieht, indem alle Edges entlang des oberen Randes ausgewählt werden (hierfür muss wieder in den Edge- oder Vertex-Select-Modus gewechselt werden). Anschliessend wird mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> das Snap-Menü geöffnet. Mit der Auswahl «<em>Cursor to Selected</em>» wird der 3D-Cursor mittig in der Auswahl zu platzieren.</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_13/3. Proportional_editing_Top.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Proportionale Anpassung der Breite des Zylinders entsprechend der Bildvorlage.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Fläche nach innen extrudieren</p>
+</div></div><p>Anschliessend wird der Bezugspunkt für Transformationen auf den 3D-Cursor gewechselt (unter der Schaltfläche «<em>Transform Pivot Point</em>» im Header). Nachdem alle Elemente des Zylinders mittels <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> ausgewählt wurden, können nun alle Flächen mit der Taste <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span> extrudiert werden. Mittels der Taste <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> wird skalierend extrudiert und mit den Tasten <kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span><kbd aria-hidden="true">.</kbd><span class="visually-hidden">.</span><kbd aria-hidden="true">9</kbd><span class="visually-hidden">9</span><kbd aria-hidden="true">5</kbd><span class="visually-hidden">5</span> der Faktor 0.95 festgelegt. Dies kann schliessend mittels der linken Maustaste oder <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span> bestätigt werden. Mit diesem Schritt ist das Glas bereits fertiggestellt. Es sieht noch etwas eckig und kantig aus, aber in den nächsten Kapiteln wird behandelt, wie das Glas noch glatter erscheint.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_13/4. Extrusion_Thickness.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Alle Faces des Glases werden zum 3D-Cursor hin extrudiert, damit das Glas eine Dicke erhält.
+</figcaption>
+</figure>
+</div>
+<section id="alternative-methode-zur-erstellung-eines-glases" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="alternative-methode-zur-erstellung-eines-glases">Alternative Methode zur Erstellung eines Glases</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Backup-Objekt erstellen</p>
+</div></div><p>Es gibt noch eine andere Methode zur Erstellung des Glases. Zur Veranschaulichung dieser Methode kann im Object-Mode nach der Auswahl des Glases mittels der Taste <kbd aria-hidden="true">D</kbd><span class="visually-hidden">D</span> ein Duplikat erstellt werden, welches mit der Taste versteckt werden kann. Dadurch bleibt dieses Duplikat erhalten, sodass trotzdem die andere Methode ausprobiert werden kann.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Querschnitt des Glases erstellen</p>
+</div></div><p>Nun wird das andere Glas im Edit-Mode bearbeitet. Das Ziel ist es hierbei, dass ein Querschnitt des Glases entsteht. Diese Methode erfordert den Vertex-Select-Mode. Mittels <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> + der linken Maustaste wird ein Edge, welches vertikal dem Glas entlang verläuft, ausgewählt und mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> die Auswahl umgekehrt. Nun wird diese Auswahl von Vertices mittels gelöscht. Dadurch sollten nun lediglich die Vertices übrigbleiben, die den Rand eines Glases vertikal darstellen. Die äussersten Vertices werden anschliessend extrudiert und auf ihrer jeweiligen Höhe am Nullpunkt der Szene platziert.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kreisförmiges Herausziehen mittels des Spin-Tools</p>
+</div></div><p>Anhand eines solchen Querschnittes eines Glases kann nun mittels des Spin-Tools kreisförmig die Form des Glases extrudiert werden. Hierfür wird zunächst in der Toolbar das Spin-Tool aktiviert. Anschliessend werden alle Vertices mit der Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> ausgewählt. Durch das Ziehen entlang einer der beiden «+»-Symbole des Spin-Gizmos kann anschliessend das Glas kreisförmig aus dem Querschnitt herausgezogen werden. Im Kontext-Menü zur letzten Aktion kann anschliessend der Radius noch auf 360° festgelegt werden und darunter «<em>Auto Merge</em>» aktiviert werden. Dadurch werden die beiden Enden des extrudierten Bereichs zusammen verbunden. Zusätzlich kann unter «<em>Steps</em>» noch die Anzahl extrudierter Faces erhöht werden, um einen glatteren Kreis zu erhalten.</p>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_13/5. Querschnitt.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5: Querschnitt des Glases. Die in der Abbildung ausgewählten Vertices müssen entlang der X- und Y-Achse noch zum Ursprung des Objektes extrudiert werden.
+</figcaption>
+</figure>
+</div>
+<div class="exercisebox">
+<div class="exercisebox-header">
+<div class="exercisebox-icon">
+
+</div>
+<p>Übung 9: Eigenes Glas erstellen</p>
+</div>
+<div class="exercisebox-body">
+<p><strong>Übung 9.1</strong></p>
+<p>Nehmen Sie ein rundes Glas aus Ihrem eigenen Haushalt, welches Sie anschliessend in Blender nachbauen. Idealerweise nehmen Sie ein Glas ohne weitere Oberflächenstrukturen. Machen Sie ein Foto von diesem Glas von der Seite in einem möglichst rechten Winkel und verwenden Sie dieses Foto anschliessend als Vorlage in einem Blender-Projekt. Bauen Sie dieses Glas anschliessend als 3D-Objekt nach.</p>
+<p>Speichern Sie das Glas zudem ab, um es in späteren Kapiteln verwenden zu können.</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

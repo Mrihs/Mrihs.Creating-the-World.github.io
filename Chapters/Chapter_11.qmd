@@ -128,6 +128,8 @@ Wenn die Auswahl der Linie bestätigt wird, kann anschliessend noch justiert wer
 :::: tippbox-header
 ::: tippbox-icon
 :::
+
+Weiterführende Informationen
 ::::
 
 ::: tippbox-body
@@ -193,7 +195,7 @@ Die Bevel-Transformation kann sowohl für Edges als auch für Vertices angewende
 Intrusion mittels {{< kbd I >}}
 :::
 
-Die Transformation «*Inset Faces*» stellt einen Spezialfall der Extrusion dar. Dabei wird eine Fläche unterteilt in zusätzliche Flächen innerhalb dieser Fläche. Wie auch bei der Extrusion werden dabei neue Vertices erstellt, welche direkt an den originalen Vertices andocken. Unterschiedlich ist allerdings, dass die neuen Vertices einen Teil der originalen Faces darstellen und somit entlang der Ausrichtung der Fläche vergrössert oder verkleinert werden können. Die Bearbeitung mittels Inset Faces kann entweder über die Toolbar oder mittels der Taste {{< kbd I >}} erfolgen.
+Die Transformation «Inset Faces» stellt einen Spezialfall der Extrusion dar. Dabei wird eine Fläche unterteilt in zusätzliche Flächen innerhalb dieser Fläche. Wie auch bei der Extrusion werden dabei neue Vertices erstellt, welche direkt an den originalen Vertices andocken. Unterschiedlich ist allerdings, dass die neuen Vertices einen Teil der originalen Faces darstellen und somit entlang der Ausrichtung der Fläche vergrössert oder verkleinert werden können. Die Bearbeitung mittels Inset Faces kann entweder über die Toolbar oder mittels der Taste {{< kbd I >}} erfolgen.
 
 ![Inset-Faces-Icon.](Images/Chapter_11/6.%20Icon_Inset_Faces){#fig-1_6 fig-align="left"}
 
@@ -221,7 +223,7 @@ Die Funktion Inset Faces kann zudem auf die Faces individuell angewendet werden.
 Spin
 :::
 
-Mittels «*Spin*» können einzelne oder mehrere Vertices in einer kreisförmigen Anordnung extrudiert werden. Wenn diese Transformation ausgewählt ist, erscheint in der Nähe des 3D-Cursors ein Gizmo, welches eine abgerundete Linie mit einem Plus-Symbol an beiden Enden darstellt. Falls dieses Gizmo nicht angezeigt wird, sollte überprüft werden, ob die Darstellung der Gizmos im 3D-Viewport aktiviert ist.
+Mittels «Spin» können einzelne oder mehrere Vertices in einer kreisförmigen Anordnung extrudiert werden. Wenn diese Transformation ausgewählt ist, erscheint in der Nähe des 3D-Cursors ein Gizmo, welches eine abgerundete Linie mit einem Plus-Symbol an beiden Enden darstellt. Falls dieses Gizmo nicht angezeigt wird, sollte überprüft werden, ob die Darstellung der Gizmos im 3D-Viewport aktiviert ist.
 
 ![Spin-Icon.](Images/Chapter_11/7.%20Icon_Spin){#fig-1_7 fig-align="left"}
 
@@ -243,7 +245,7 @@ Im Kontext-Menü zur letzten durchgeführten Aktion kann die Aktion noch bearbei
 Verbinden mittels {{< kbd M >}}
 :::
 
-In den bisherigen Transformationen wurden jeweils neue Vertices, Edges oder Faces hinzugefügt. Manchmal kommt es vor, dass einige Elemente wieder entfernt werden müssen, oder dass sie an einer Stelle verbunden werden müssen. Hierfür kann der Befehl «*Merge*» verwendet werden. Dieser lässt sich mittels der Taste innerhalb eines Menüs beim Mauszeiger auswählen.
+In den bisherigen Transformationen wurden jeweils neue Vertices, Edges oder Faces hinzugefügt. Manchmal kommt es vor, dass einige Elemente wieder entfernt werden müssen, oder dass sie an einer Stelle verbunden werden müssen. Hierfür kann der Befehl «*Merge*» verwendet werden. Dieser lässt sich mittels der Taste {{< kbd M >}} innerhalb eines Menüs beim Mauszeiger auswählen.
 
 ::: column-margin
 Elemente beim Median verbinden
@@ -266,7 +268,7 @@ Nebst dem Medianpunkt der Vertices können auch folgende Positionen zur Zusammen
 Merge by Distance
 :::
 
-Eine besondere Rolle kommt der Funktion «*Merge by Distance*» zu. Dabei werden alle Vertices zusammen verbunden, deren Distanz geringer als die vorgegebene Distanz ist. Im Kontext-Menü zur letzten Aktion lässt sich die Distanz, unterhalb derer alle Vertices verbunden werden sollen, an passen. Die Funktion wird allerdings nur auf die ausgewählten Vertices angewendet. In der Fussleiste von Blender wird temporär angegeben, wie viele Vertices bei dieser Aktion aufgelöst werden.
+Eine besondere Rolle kommt der Funktion «*Merge by Distance*» zu. Dabei werden alle Vertices zusammen verbunden, deren Distanz geringer als die vorgegebene Distanz ist. Im Kontext-Menü zur letzten Aktion lässt sich die Distanz, unterhalb derer alle Vertices verbunden werden sollen, anpassen. Die Funktion wird allerdings nur auf die ausgewählten Vertices angewendet. In der Fussleiste von Blender wird temporär angegeben, wie viele Vertices bei dieser Aktion aufgelöst werden.
 
 ::: column-margin
 Merge erfolgt nur auf Auswahl
@@ -306,7 +308,7 @@ Beim Poly Build handelt es sich um einen interaktiven Modus, um Geometrien zu er
 Objekte glätten
 :::
 
-Mittels des Befehls «*Smooth*» können Objekte glatter gemacht werden. Dies geschieht, indem die Winkel der Edges gemittelt werden. Statt eines 90°-Winkels entsteht dann ein flacherer Winkel. Es ist allerdings auch möglich, den gegenteiligen Effekt zu erzielen und Winkel spitzer zu machen.
+Mittels des Befehls «Smooth» können Objekte glatter gemacht werden. Dies geschieht, indem die Winkel der Edges gemittelt werden. Statt eines 90°-Winkels entsteht dann ein flacherer Winkel. Es ist allerdings auch möglich, den gegenteiligen Effekt zu erzielen und Winkel spitzer zu machen.
 
 ![Smooth-Icon.](Images/Chapter_11/10.%20Icon_Smooth){#fig-1_10 fig-align="left"}
 
@@ -316,7 +318,7 @@ Mittels des Befehls «*Smooth*» können Objekte glatter gemacht werden. Dies ge
 Objekte zusammenziehen oder aufblähen
 :::
 
-Beim Befehl «*Shrink/Fatten*» werden die ausgewählten Vertices entlang ihrer eigenen Normalen bewegt. Dadurch kann das Objekt aufgebläht oder zusammengezogen werden. Dies ist beispielsweise nützlich, wenn der Mantel eines Zylinders ausgewählt und sein Radius vergrössert werden soll, ohne dessen Höhe zu verändern.
+Beim Befehl «Shrink/Fatten» werden die ausgewählten Vertices entlang ihrer eigenen Normalen bewegt. Dadurch kann das Objekt aufgebläht oder zusammengezogen werden. Dies ist beispielsweise nützlich, wenn der Mantel eines Zylinders ausgewählt und sein Radius vergrössert werden soll, ohne dessen Höhe zu verändern.
 
 ![Shrink/Fatten-Icon.](Images/Chapter_11/11.%20Icon_ShrinkenFatten){#fig-1_11 fig-align="left"}
 
@@ -336,7 +338,7 @@ Mittels der Shear-Transformation werden die ausgewählten Punkte in einer Achse 
 Regionen aufteilen
 :::
 
-Mittels des Befehls «*Rip Region*» können Vertices, welche an mehreren Faces andocken, aufgeteilt werden. Die Faces werden dabei an der Stelle der entsprechenden Vertices getrennt und durch Vertices, welche sozusagen von den originalen Vertices abgezogen werden, neu gebildet.
+Mittels des Befehls «Rip Region» können Vertices, welche an mehreren Faces andocken, aufgeteilt werden. Die Faces werden dabei an der Stelle der entsprechenden Vertices getrennt und durch Vertices, welche sozusagen von den originalen Vertices abgezogen werden, neu gebildet.
 
 ![Rip-Region-Icon.](Images/Chapter_11/13.%20Icon_RipRegion){#fig-1_13 fig-align="left"}
 

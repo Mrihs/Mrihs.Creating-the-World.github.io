@@ -50,6 +50,8 @@ website:
             text: Kapitel 13
           - href: Chapters/Chapter_14.qmd
             text: Kapitel 14
+          - href: Chapters/Chapter_15.qmd
+            text: Kapitel 15
       - href: about.qmd
         icon: info-circle
         text: Über

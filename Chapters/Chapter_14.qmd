@@ -282,7 +282,6 @@ Vertice in einem Objekt reduzieren mittels Decimat-Modifier
 
 Der Decimate-Modifier reduziert die Anzahl Vertices in einem Objekt. Dabei wird das Objekt entweder um einen Faktor runtergebrochen («*Collapse*»), «*un-subdivided*» oder abgeflacht («*Planar*»). Der Un-Subdivide-Modus stellt das Gegenteil des Subdivision-Surface-Modifiers dar. In diesem Modus muss allerdings beachtet werden, dass die Anordnung der Edges zwischen den Faces bei jedem ungeraden Schritt der Un-Subdivision verändert wird, während sie bei geraden Anzahlen Un-Subdivisions erhalten bleibt, wie in Abbildung 12 dargestellt.
 
-
 ![Icon für den Decimate-Modifier.](Images/Chapter_14/11.%20Icon_Decimate_Modifier.png){#fig-1_11 fig-align="left"}
 
 #### Edge Split
@@ -382,7 +381,7 @@ Durch das Hinzufügen des Skin-Modifiers ist es möglich, jeden Vertex mittels e
 Faces extrudieren mittels Solidify-Modifier
 :::
 
-Der Solidify-Modifier wird verwendet, um Objekten ein Dicke hinzuzufügen. Dabei werden alle Faces um den Wert der Dicke extrudiert. Die Extrusion erfolgt entlang der Normalen eines Faces um einen Offset-Wert. Wenn dieser Wert 1 oder -1 beträgt, werden die originalen Vertices genau an derselben Stelle belassen und je nach Vorzeichen verändert sich die Richtung der Extrusion. Bei einem negativen Wert erfolgt die Extrusion entlang der Seite ohne Normalen,bei einem positiven Wert entlang der Seite mit Normalen. Bei einem Wert von 0 werden die Flächen so gebildet, dass sich die originalen Faces genau in der Mitte der neuen Faces befinden.
+Der Solidify-Modifier wird verwendet, um Objekten eine Dicke hinzuzufügen. Dabei werden alle Faces um den Wert der Dicke extrudiert. Die Extrusion erfolgt entlang der Normalen eines Faces um einen Offset-Wert. Wenn dieser Wert 1 oder -1 beträgt, werden die originalen Vertices genau an derselben Stelle belassen und je nach Vorzeichen verändert sich die Richtung der Extrusion. Bei einem negativen Wert erfolgt die Extrusion entlang der Seite ohne Normalen, bei einem positiven Wert entlang der Seite mit Normalen. Bei einem Wert von 0 werden die Flächen so gebildet, dass sich die originalen Faces genau in der Mitte der neuen Faces befinden.
 
 ![Icon für den Solidify-Modifier.](Images/Chapter_14/22.%20Icon_Solidify_Modifier.png){#fig-1_22 fig-align="left"}
 
@@ -444,7 +443,7 @@ Gerüst anpassen
 
 Unter dem Reiter «*Thickness*» in den Einstellungen zum Wireframe-Modifier lässt sich einstellen, wie gross das Gerüst, welches um die Edges herum gebildet wird, sein soll. Durch den Wireframe-Modifier wird das originale Objekt per Default durch das Gittergerüst ersetzt. Dies kann jedoch in den Einstellungen zum Wireframe-Modifier unter «*Replace Original*» deaktiviert werden, sodass das originale Objekt nebst dem Gerüst bestehen bleibt.
 
-![Würfel mit Triangulate- und Wireframe-Modifier.](Images/Chapter_14/29.%20Example_Triangulated%20Wireframe.png){fig-align="left"}
+![Würfel mit Triangulate- und Wireframe-Modifier.](Images/Chapter_14/29.%20Example_Triangulated%20Wireframe.png){#fig-1_29 fig-align="left"}
 
 :::::: exercisebox
 :::: exercisebox-header
@@ -459,13 +458,13 @@ Unter dem Reiter «*Thickness*» in den Einstellungen zum Wireframe-Modifier lä
 
 Erstellen Sie eine Wasserflasche mittels Modifiern. Verwenden Sie dabei so wenige Vertices wie möglich.
 
-[ ](Images/Chapter_14/Übung%2010_1%20Wasserflasche.png){#fig-1_30 fig-align="left"}
+![](Images/Chapter_14/Übung%2010_1%20Wasserflasche.png){fig-align="left"}
 
 **Übung 10.2**
 
 Erstellen Sie einen Gartenzaun mittels Modifiern. Verwenden Sie dabei so wenige Vertices wie möglich.
 
-[ ](Images/Chapter_14/Übung_10.2%20Fence.png){#fig-1_31 fig-align="left"}
+![](Images/Chapter_14/Übung_10.2%20Fence.png){fig-align="left"}
 :::
 ::::::
 

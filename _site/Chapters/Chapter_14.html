@@ -188,6 +188,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../Chapters/Chapter_14.html">
  <span class="dropdown-text">Kapitel 14</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_15.html">
+ <span class="dropdown-text">Kapitel 15</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -255,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
 </div></div><p>Die bislang besprochenen Methoden der Objektbearbeitung stellen destruktive Methoden dar. Bei destruktiven Methoden wird das Objekt so abgeändert, dass es seine originale Form verliert. Ein Zylinder, der mit destruktiven Methoden zu einem Glas modelliert wird, verliert also seine Form als Zylinder.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Destruundefinedktive Bearbeitung ist schwer zurückzuverfolgen</p>
+<p>Destruktive Bearbeitung ist schwer zurückzuverfolgen</p>
 </div></div><p>Durch die destruktive Objektbearbeitung ist es schwierig, wieder an einen früheren Punkt der Bearbeitung zurückzukehren. Mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> können zwar Schritte wieder rückgängig gemacht werden, allerdings ist die Anzahl dieser Schritte beschränkt. Zudem gehen diese Bearbeitungsschritte verloren, sobald Blender geschlossen wird, sodass Bearbeitungsschritte von früheren Blender-Sessions nicht rückgängig gemacht werden können.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
@@ -280,7 +284,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Neue Vertices extrudieren</p>
-</div></div><p>Als Nächstes wird die Form des Glases im Querschnitt erstellt. Am besten wird das Objekt in der Vorderansicht betrachtet. Zunächst wird der Radius des Glasbodens festgelegt. Hierfür wird ein Edge entlang der X-Achse beispielsweise um 0.1 Meter extrudiert ( <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span>, <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span>,<kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span>{{&lt; kbd .&gt;}}<kbd aria-hidden="true">1</kbd><span class="visually-hidden">1</span>, danach bestätigen mittels der Taste <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span>). Anschliessend wird von diesem Vertex ebenfalls ein Vertex herausgezogen, welches entlang der Z-Achse (und bei Bedarf auch entlang der Y-Achse) verschoben wird. Dadurch sollte nun ein Querschnitt eines halben Glases erstellt worden sein, wie in Abbildung 1 dargestellt.</p>
+</div></div><p>Als Nächstes wird die Form des Glases im Querschnitt erstellt. Am besten wird das Objekt in der Vorderansicht betrachtet. Zunächst wird der Radius des Glasbodens festgelegt. Hierfür wird ein Edge entlang der X-Achse beispielsweise um 0.1 Meter extrudiert ( <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span>, <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span>,<kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span>{{&lt; kbd . &gt;}}<kbd aria-hidden="true">1</kbd><span class="visually-hidden">1</span>, danach bestätigen mittels der Taste <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span>). Anschliessend wird von diesem Vertex ebenfalls ein Vertex herausgezogen, welches entlang der Z-Achse (und bei Bedarf auch entlang der Y-Achse) verschoben wird. Dadurch sollte nun ein Querschnitt eines halben Glases erstellt worden sein, wie in Abbildung 1 dargestellt.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -294,7 +298,7 @@ Abbildung&nbsp;1: Der Querschnitt eines halben Glases.
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Vertices mit der Maus erstellen</p>
-</div></div><p>Eine alternative Möglichkeit, um Vertices zu extrudieren, besteht darin, dass im Edit-Mode bei gedrückter <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span>-Taste mit der linken Maustaste in den 3D-Viewport geklickt wird. An der Stelle des Klicks wird anschliessend ein neuer Vertex erstellt. Wenn davor ein Vertex ausgewählt wurde, wird der mit dem Klick erstelle Vertex über ein Edge mit dem ausgewählten Vertex verbunden. So kann der Umriss des Glases auch mittels der Maus erstellt werden.</p>
+</div></div><p>Eine alternative Möglichkeit, um Vertices zu extrudieren, besteht darin, dass im Edit-Mode bei gedrückter <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span>-Taste mit der rechten Maustaste in den 3D-Viewport geklickt wird. An der Stelle des Klicks wird anschliessend ein neuer Vertex erstellt. Wenn davor ein Vertex ausgewählt wurde, wird der mit dem Klick erstelle Vertex über ein Edge mit dem ausgewählten Vertex verbunden. So kann der Umriss des Glases auch mittels der Maus erstellt werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Weitere Schritte zur Erstellung des Glases</p>
@@ -401,7 +405,7 @@ Abbildung&nbsp;4: Verzerrung von Tris am Glasboden durch den Subdivision-Surface
 </div></div><p>Nebst der Schaltfläche zum Verschieben beinhaltet der Header eines Modifiers noch weitere Punkte:</p>
 <ul>
 <li>Innerhalb eines Textfeldes wird der Name des Modifiers angezeigt. Dieser kann auch abgeändert werden, damit etwa die Funktion des Modifiers klarer wird.</li>
-<li>Daneben sind drei weitere Schaltflächen anzutreffen, die wahlweise aktiviert oder deaktiviert wer den können:
+<li>Daneben sind drei weitere Schaltflächen anzutreffen, die wahlweise aktiviert oder deaktiviert werden können:
 <ul>
 <li><strong>On Cage</strong>: Wenn diese Schaltfläche aktiviert ist, wird im Edit-Mode angezeigt, wie sich die Bearbeitung von Vertices auswirkt. Dieses Feld ist allerdings nicht bei allen Modifiern verfügbar. Da es beim Screw-Modifier nicht verfügbar ist, wird es im Beispiel mit dem Glas auch bei den nachfolgenden Modifiern nicht angezeigt. Durch das Deaktivieren der Schaltfläche «<em>Edit Mode</em>» (siehe nächsten Aufzählungspunkt) beim Screw-Modifier wird die Schaltfläche «<em>On Cage</em>» bei den darauffolgenden Modifiern jedoch wieder sichtbar.</li>
 <li><strong>Edit Mode</strong>: Wenn diese Schaltfläche aktiviert ist, wird während der Bearbeitung im Edit Mode der Effekt des Modifiers auf das gesamte Objekt gezeigt. Ansonsten bleibt dieser Modifier im Edit-Mode unberücksichtigt.</li>
@@ -440,8 +444,8 @@ Abbildung&nbsp;4: Verzerrung von Tris am Glasboden durch den Subdivision-Surface
 </div></div><p>Blender bietet eine Möglichkeit, um Objekte noch über den Subdivision-Surface-Modifier hinaus zu glätten. Hierfür muss das entsprechende Objekt im Object-Mode ausgewählt werden. Anschliessend kann unter «<em>Object | Shade Smooth</em>» eingestellt werden, dass das Objekt geglättet dargestellt wird. Unter «<em>Object | Shade Flat</em>» kann ein geglättet dargestelltes Objekt wieder ohne eine Glättung dargestellt werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Häufige Fehler beimSmooth-Shading</p>
-</div></div><p>Bei dieser Art der Glättung wird nichts an der Struktur des Objektes geändert, sondern dessen Darstellung geglättet. Diese Darstellung wirkt allerdings bei sehr kantigen Objekten und daher auch beispielsweise bei Objekten im Low-Poly-Stil befremdlich. In diesem Fall ist eher «<em>Shade Flat</em>» zu empfehlen. Zudem ist für die Berechnung dieser geglätteten Fläche wichtig, dass die Normalen in die richtige Richtung orientiert sind. Nebst zu kantigen Flächen sind falsch orientierte Normalen eine häufige Ursache, wenn ein Objekt unter «<em>Shade Smooth</em>» schlecht dargestellt wird.</p>
+<p>Häufige Fehler beim Smooth-Shading</p>
+</div></div><p>Bei dieser Art der Glättung wird nichts an der Struktur des Objektes geändert, sondern dessen Darstellung geglättet. Diese Darstellung wirkt allerdings bei sehr kantigen Objekten und daher auch beispielsweise bei Objekten im Low-Poly-Stil befremdlich. In diesem Fall ist eher «<em>Shade Flat</em>» zu empfehlen. Zudem ist für die Berechnung dieser geglätteten Fläche wichtig, dass die Normalen in die richtige Richtung orientiert sind. Nebst zu kantigen Flächen sind falsch orientierte Normalen eine häufige Ursache, wenn ein Objekt unter «Shade Smooth» schlecht dargestellt wird.</p>
 </section>
 <section id="die-vielzahl-von-modifiern" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="die-vielzahl-von-modifiern">Die Vielzahl von Modifiern</h2>
@@ -511,7 +515,7 @@ Abbildung&nbsp;7: Icon für den Bevel-Modifier.
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Schnittmenge zwischen Objekten verwenden mittels Boolean-Modifier</p>
-</div></div><p>Der Boolean-Modifier wird verwendet, um die Teilmengen von zwei Objekten zu bearbeiten. Hierfür wird im Modifier ein zweites Objekt ausgewählt. Wahlweise kann anschliessend die gemeinsame Schnittmenge der beiden Objekte ausgewählt («<em>Intersect</em>»), verbunden («<em>Union</em>») oder entfernt werden («Difference»). Zu beachten ist jedoch, dass beim Verbinden (Union) beide Objekte lediglich zu einem Objekt miteinander verbunden werden. Die Vertice-Strukturen der originalen Objekte bleiben erhalten und werden nicht miteinander kombiniert. Bei den beiden anderen Optionen werden die Vertices der beiden Objekte verbunden.</p>
+</div></div><p>Der Boolean-Modifier wird verwendet, um die Teilmengen von zwei Objekten zu bearbeiten. Hierfür wird im Modifier ein zweites Objekt ausgewählt. Wahlweise kann anschliessend die gemeinsame Schnittmenge der beiden Objekte ausgewählt («<em>Intersect</em>»), verbunden («<em>Union</em>») oder entfernt werden («<em>Difference</em>»). Zu beachten ist jedoch, dass beim Verbinden (Union) beide Objekte lediglich zu einem Objekt miteinander verbunden werden. Die Vertice-Strukturen der originalen Objekte bleiben erhalten und werden nicht miteinander kombiniert. Bei den beiden anderen Optionen werden die Vertices der beiden Objekte verbunden.</p>
 <div id="fig-1_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -555,7 +559,7 @@ Abbildung&nbsp;10: Icon für den Build-Modifier.
 <div class="column-margin¨">
 <p>Vertice in einem Objekt reduzieren mittels Decimat-Modifier</p>
 </div>
-<p>Der Decimate-Modifier reduziert die Anzahl Vertices in einem Objekt. Dabei wird das Objekt entweder um einen Faktor runtergebrochen («<em>Collapse</em>»), «<em>un-subdivided</em>» oder abgeflacht («Planar»). Der Un-Subdivide-Modus stellt das Gegenteil des Subdivision-Surface-Modifiers dar. In diesem Modus muss allerdings beachtet werden, dass die Anordnung der Edges zwischen den Faces bei jedem ungeraden Schritt der Un-Subdivision verändert wird, während sie bei geraden Anzahlen Un-Subdivisions erhalten bleibt, wie in Abbildung 56 dargestellt.</p>
+<p>Der Decimate-Modifier reduziert die Anzahl Vertices in einem Objekt. Dabei wird das Objekt entweder um einen Faktor runtergebrochen («<em>Collapse</em>»), «<em>un-subdivided</em>» oder abgeflacht («<em>Planar</em>»). Der Un-Subdivide-Modus stellt das Gegenteil des Subdivision-Surface-Modifiers dar. In diesem Modus muss allerdings beachtet werden, dass die Anordnung der Edges zwischen den Faces bei jedem ungeraden Schritt der Un-Subdivision verändert wird, während sie bei geraden Anzahlen Un-Subdivisions erhalten bleibt, wie in Abbildung 12 dargestellt.</p>
 <div id="fig-1_11" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -606,7 +610,7 @@ Abbildung&nbsp;13: Icon für den Edge-Split-Modifier.
 <img src="Images/Chapter_14/14. Icon_Geometry_Nodes_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;14: Icon für den Geometry_Nodes-Modifier.
+Abbildung&nbsp;14: Icon für den Geometry-Nodes-Modifier.
 </figcaption>
 </figure>
 </div>
@@ -735,7 +739,7 @@ Abbildung&nbsp;21: Ein Objekt aus Vertices und Edges sowie seine Form mit dem Sk
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Faces extrudieren mittels Solidify-Modifier</p>
-</div></div><p>Der Solidify-Modifier wird verwendet, um Objekten ein Dicke hinzuzufügen. Dabei werden alle Faces um den Wert der Dicke extrudiert. Die Extrusion erfolgt entlang der Normalen eines Faces um einen Offset-Wert. Wenn dieser Wert 1 oder -1 beträgt, werden die originalen Vertices genau an derselben Stelle belassen und je nach Vorzeichen verändert sich die Richtung der Extrusion. Bei einem negativen Wert erfolgt die Extrusion entlang der Seite ohne Normalen,bei einem positiven Wert entlang der Seite mit Normalen. Bei einem Wert von 0 werden die Flächen so gebildet, dass sich die originalen Faces genau in der Mitte der neuen Faces befinden.</p>
+</div></div><p>Der Solidify-Modifier wird verwendet, um Objekten eine Dicke hinzuzufügen. Dabei werden alle Faces um den Wert der Dicke extrudiert. Die Extrusion erfolgt entlang der Normalen eines Faces um einen Offset-Wert. Wenn dieser Wert 1 oder -1 beträgt, werden die originalen Vertices genau an derselben Stelle belassen und je nach Vorzeichen verändert sich die Richtung der Extrusion. Bei einem negativen Wert erfolgt die Extrusion entlang der Seite ohne Normalen, bei einem positiven Wert entlang der Seite mit Normalen. Bei einem Wert von 0 werden die Flächen so gebildet, dass sich die originalen Faces genau in der Mitte der neuen Faces befinden.</p>
 <div id="fig-1_22" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_22-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -845,10 +849,14 @@ Abbildung&nbsp;28: Icon für den Wireframe-Modifier.
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Gerüst anpassen</p>
 </div></div><p>Unter dem Reiter «<em>Thickness</em>» in den Einstellungen zum Wireframe-Modifier lässt sich einstellen, wie gross das Gerüst, welches um die Edges herum gebildet wird, sein soll. Durch den Wireframe-Modifier wird das originale Objekt per Default durch das Gittergerüst ersetzt. Dies kann jedoch in den Einstellungen zum Wireframe-Modifier unter «<em>Replace Original</em>» deaktiviert werden, sodass das originale Objekt nebst dem Gerüst bestehen bleibt.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="Images/Chapter_14/29. Example_Triangulated Wireframe.png" class="img-fluid figure-img"></p>
-<figcaption>Würfel mit Triangulate- und Wireframe-Modifier.</figcaption>
+<div id="fig-1_29" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_29-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/29. Example_Triangulated Wireframe.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_29-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;29: Würfel mit Triangulate- und Wireframe-Modifier.
+</figcaption>
 </figure>
 </div>
 <div class="exercisebox">
@@ -861,10 +869,18 @@ Abbildung&nbsp;28: Icon für den Wireframe-Modifier.
 <div class="exercisebox-body">
 <p><strong>Übung 10.1</strong></p>
 <p>Erstellen Sie eine Wasserflasche mittels Modifiern. Verwenden Sie dabei so wenige Vertices wie möglich.</p>
-<p><a href="Images/Chapter_14/Übung 10_1 Wasserflasche.png" id="fig-1_30" data-fig-align="left"></a></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Images/Chapter_14/Übung 10_1 Wasserflasche.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
+</figure>
+</div>
 <p><strong>Übung 10.2</strong></p>
 <p>Erstellen Sie einen Gartenzaun mittels Modifiern. Verwenden Sie dabei so wenige Vertices wie möglich.</p>
-<p><a href="Images/Chapter_14/Übung_10.2 Fence.png" id="fig-1_31" data-fig-align="left"></a></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Images/Chapter_14/Übung_10.2 Fence.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>

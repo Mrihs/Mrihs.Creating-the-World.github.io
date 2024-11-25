@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>14. Objekterstellung mittels Modifiern – Creating the World</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Creating the World</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Suchen"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navigation umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../Sites/Overview.html"> <i class="bi bi-calendar-range" role="img">
+</i> 
+<span class="menu-text">Kursübersicht</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cheatsheets" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-lightbulb" role="img">
+</i> 
+ <span class="menu-text">Cheatsheets</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-cheatsheets">    
+        <li>
+    <a class="dropdown-item" href="../Cheatsheets/cheatsheet_keys.pdf">
+ <span class="dropdown-text">Tastenkombinationen</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Cheatsheets/cheatsheet_shading.pdf">
+ <span class="dropdown-text">Shading</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <span class="nav-link">
+    <i class="bi bi-folder" role="img">
+</i> 
+<span class="menu-text">Ressourcen</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+    <i class="bi bi-images" role="img">
+</i> 
+<span class="menu-text">Folien</span>
+    </span>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-skript" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-eyeglasses" role="img">
+</i> 
+ <span class="menu-text">Skript</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-skript">    
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_1.html">
+ <span class="dropdown-text">Kapitel 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_2.html">
+ <span class="dropdown-text">Kapitel 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_3.html">
+ <span class="dropdown-text">Kapitel 3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_4.html">
+ <span class="dropdown-text">Kapitel 4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_5.html">
+ <span class="dropdown-text">Kapitel 5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_6.html">
+ <span class="dropdown-text">Kapitel 6</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_7.html">
+ <span class="dropdown-text">Kapitel 7</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_8.html">
+ <span class="dropdown-text">Kapitel 8</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_9.html">
+ <span class="dropdown-text">Kapitel 9</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_10.html">
+ <span class="dropdown-text">Kapitel 10</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_11.html">
+ <span class="dropdown-text">Kapitel 11</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_12.html">
+ <span class="dropdown-text">Kapitel 12</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_13.html">
+ <span class="dropdown-text">Kapitel 13</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_14.html">
+ <span class="dropdown-text">Kapitel 14</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> <i class="bi bi-info-circle" role="img">
+</i> 
+<span class="menu-text">Über</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#ein-glas-mittels-modifiern-erstellen" id="toc-ein-glas-mittels-modifiern-erstellen" class="nav-link active" data-scroll-target="#ein-glas-mittels-modifiern-erstellen">Ein glas mittels Modifiern erstellen</a>
+  <ul class="collapse">
+  <li><a href="#vorbereitung" id="toc-vorbereitung" class="nav-link" data-scroll-target="#vorbereitung">Vorbereitung</a></li>
+  <li><a href="#hinzufügen-von-modifiern" id="toc-hinzufügen-von-modifiern" class="nav-link" data-scroll-target="#hinzufügen-von-modifiern">Hinzufügen von Modifiern</a></li>
+  <li><a href="#subdivision-surface-modifier" id="toc-subdivision-surface-modifier" class="nav-link" data-scroll-target="#subdivision-surface-modifier">Subdivision-Surface-Modifier</a></li>
+  </ul></li>
+  <li><a href="#funktionsweise-von-modifiern" id="toc-funktionsweise-von-modifiern" class="nav-link" data-scroll-target="#funktionsweise-von-modifiern">Funktionsweise von Modifiern</a></li>
+  <li><a href="#weitere-glättung-erzielen-durch-smooth-shading" id="toc-weitere-glättung-erzielen-durch-smooth-shading" class="nav-link" data-scroll-target="#weitere-glättung-erzielen-durch-smooth-shading">Weitere Glättung erzielen durch Smooth-Shading</a></li>
+  <li><a href="#die-vielzahl-von-modifiern" id="toc-die-vielzahl-von-modifiern" class="nav-link" data-scroll-target="#die-vielzahl-von-modifiern">Die Vielzahl von Modifiern</a>
+  <ul class="collapse">
+  <li><a href="#generate-modifier" id="toc-generate-modifier" class="nav-link" data-scroll-target="#generate-modifier">Generate-Modifier</a></li>
+  </ul></li>
+  <li><a href="#grenzen-der-objektbearbeitung-mittels-modifiern" id="toc-grenzen-der-objektbearbeitung-mittels-modifiern" class="nav-link" data-scroll-target="#grenzen-der-objektbearbeitung-mittels-modifiern">Grenzen der Objektbearbeitung mittels Modifiern</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">14. Objekterstellung mittels Modifiern</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Destruktive Objektbearbeitung</p>
+</div></div><p>Die bislang besprochenen Methoden der Objektbearbeitung stellen destruktive Methoden dar. Bei destruktiven Methoden wird das Objekt so abgeändert, dass es seine originale Form verliert. Ein Zylinder, der mit destruktiven Methoden zu einem Glas modelliert wird, verliert also seine Form als Zylinder.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Destruundefinedktive Bearbeitung ist schwer zurückzuverfolgen</p>
+</div></div><p>Durch die destruktive Objektbearbeitung ist es schwierig, wieder an einen früheren Punkt der Bearbeitung zurückzukehren. Mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> können zwar Schritte wieder rückgängig gemacht werden, allerdings ist die Anzahl dieser Schritte beschränkt. Zudem gehen diese Bearbeitungsschritte verloren, sobald Blender geschlossen wird, sodass Bearbeitungsschritte von früheren Blender-Sessions nicht rückgängig gemacht werden können.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Komplexität durch destruktives Vorgehen</p>
+</div></div><p>Gerade wenn komplexe Objekte bearbeitet werden, kann es vorkommen, dass frühere Schritte sich später als Fehler herausstellen. Dann muss das Objekt möglicherweise über komplexe Umwege wieder in den gewünschten früheren Zustand zurückgebracht werden. Zudem können gewisse Schritte zum einen Zeitpunkt dazu führen, dass andere Schritte zu einem späteren Zeitpunkt komplexer werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Modifier zur nicht-destruktiven Bearbeitung von Objekten</p>
+</div></div><p>Wäre es von daher nicht praktisch, wenn Objekte mittels möglichst simpler Parameter bearbeitet werden könnten, welche sich auch nachträglich jederzeit wieder bearbeiten liessen? Genau hierfür gibt es die sogenannten Modifier. Die Modifier ermöglichen eine nicht-destruktive Form der Objektbearbeitung. Sie können als Funktionen verstanden werden, welche auf ein Objekt angewendet werden und deren Einstellungen jederzeit nachjustiert werden können.</p>
+<section id="ein-glas-mittels-modifiern-erstellen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="ein-glas-mittels-modifiern-erstellen">Ein glas mittels Modifiern erstellen</h2>
+<section id="vorbereitung" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="vorbereitung">Vorbereitung</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bisheriges Glas stellt eine komplexe Struktur dar</p>
+</div></div><p>Im vorherigen Kapitel wurde bereits behandelt, wie ein Glas mittels destruktiver Methoden erstellt werden kann. Die Form des fertiggestellten Glases kann noch verändert werden, allerdings ist es komplex, die Vertices so zu bearbeiten, dass die Struktur erhalten bleibt. Deshalb wird nun ein neues Glas mittels Modifiern erstellt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Objekt auf einen einzelnen Vertex reduzieren</p>
+</div></div><p>Um ein neues Glas zu erstellen, wird in diesem Fall ein beliebiges primitives Mesh erstellt. Danach werden im Edit-Mode (Wechsel mittels <kbd aria-hidden="true">Tab</kbd><span class="visually-hidden">Tab</span>) alle Vertices ausgewählt (<kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span>). Anschliessend werden diese Vertices alle zu einem einzigen Vertex zusammengefasst, indem mittels der Taste <kbd aria-hidden="true">M</kbd><span class="visually-hidden">M</span> der Merge-Befehl «<em>At Center</em>» aufgerufen wird. Nun sollte nur noch ein einziger Vertex vorhanden sein. Dieser sollte am Ursprung des Objektes platziert werden. Hierfür kann in der Sidebar (Aufrufen mittels <kbd aria-hidden="true">N</kbd><span class="visually-hidden">N</span>) der Vertex im lokalen Koordinatensystem am Nullpunkt platziert werden. Dieser Vertex stellt nun den Mittelpunkt des Glasbodens dar.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Neue Vertices extrudieren</p>
+</div></div><p>Als Nächstes wird die Form des Glases im Querschnitt erstellt. Am besten wird das Objekt in der Vorderansicht betrachtet. Zunächst wird der Radius des Glasbodens festgelegt. Hierfür wird ein Edge entlang der X-Achse beispielsweise um 0.1 Meter extrudiert ( <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span>, <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span>,<kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span>{{&lt; kbd .&gt;}}<kbd aria-hidden="true">1</kbd><span class="visually-hidden">1</span>, danach bestätigen mittels der Taste <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span>). Anschliessend wird von diesem Vertex ebenfalls ein Vertex herausgezogen, welches entlang der Z-Achse (und bei Bedarf auch entlang der Y-Achse) verschoben wird. Dadurch sollte nun ein Querschnitt eines halben Glases erstellt worden sein, wie in Abbildung 1 dargestellt.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src=".png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Der Querschnitt eines halben Glases.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Vertices mit der Maus erstellen</p>
+</div></div><p>Eine alternative Möglichkeit, um Vertices zu extrudieren, besteht darin, dass im Edit-Mode bei gedrückter <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span>-Taste mit der linken Maustaste in den 3D-Viewport geklickt wird. An der Stelle des Klicks wird anschliessend ein neuer Vertex erstellt. Wenn davor ein Vertex ausgewählt wurde, wird der mit dem Klick erstelle Vertex über ein Edge mit dem ausgewählten Vertex verbunden. So kann der Umriss des Glases auch mittels der Maus erstellt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Weitere Schritte zur Erstellung des Glases</p>
+</div></div><p>Mithilfe dieser drei Vertices kann bereits ein Glas erstellt werden. Hierfür wird Folgendes benötigt:</p>
+<ul>
+<li>Die drei Vertices müssen, wie mit dem Spin-Tool, im Kreis extrudiert werden.</li>
+<li>Das Objekt benötigt eine Dicke.</li>
+</ul>
+</section>
+<section id="hinzufügen-von-modifiern" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="hinzufügen-von-modifiern">Hinzufügen von Modifiern</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Modifier-Panel im Properties-Editor</p>
+</div></div><p>Modifier sind jeweils im Properties-Editor aufzufinden, welcher das Areal in der rechten unteren Ecke von Blender darstellt. Auf der linken Seite dieses Editors befindet sich ein Reiter mit verschiedenen Symbolen. Die Modifier werden dort als Schraubenschlüssel symbolisiert. Durch einen Klick auf den Schraubenschlüssel wird der Modifier-Reiter geöffnet. Darin werden alle Modifier aufgelistet, die dem aktiven Objekt oder dem gerade bearbeiteten Objekt zugewiesen sind.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/2. Icon_modifiers.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Modifier-Icon, welches im Reiter des Properties-Editors aufzufinden ist.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Modifier hinzufügen</p>
+</div></div><p>Der Reiter für die Modifier ist noch leer, da dem Objekt noch kein Modifier hinzugefügt wurde. In der Dropdown-Liste «<em>Add Modifie</em>r» können Modifier hinzugefügt werden. Diese Modifier werden auf das aktive Element oder das Objekt, welches gerade im Edit-Mode bearbeitet wird, angewendet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Screw-Modifier, um im Kreis zu extrudieren</p>
+</div></div><p>Als Erstes wird ein Modifier benötigt, der das Spin-Tool auf das Glas anwendet. Dieser kann mittels des Modifiers «<em>Screw</em>» erstellt werden. Dieser Modifier extrudiert Objekte kreisförmig um den Ursprung herum, analog zum Spin-Tool. Per Default wird das Objekt bei der Anwendung des Modifiers um 360° im Kreis gedreht. Dadurch sollte aus dem Querschnitt ein rundes Glas erstellt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Veränderbarkeit von Modifiern</p>
+</div></div><p>Bei der destruktiven Methode mit dem Spin-Tool war es unerlässlich, dass direkt bei der Durchführung der Transformation bestimmt wird, um wie viele Grad die Operation durchgeführt werden soll, wie viele Faces gebildet werden sollen und ob die Elemente automatisch verbunden werden sollen. Bei der Bearbeitung mittels des Screw-Modifiers können diese Einstellungen jederzeit in den Einstellungen des Modifiers verändert werden. Für das aktuelle Glas-Objekt ist es sinnvoll, hier die Einstellung «<em>Merge</em>» zu aktivieren, sodass die Vertices am Start und am Ende der Umdrehung zu je einem Vertex verbunden werden.</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Glas, erstellt mittels eines Screw- und eines Solidify-Modifiers.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Solidify-Modifier, um Dicke zu erstellen</p>
+</div></div><p>Das Glas benötigt noch eine Dicke. Auch diese kann mittels eines Modifiers hinzugefügt werden. Hierfür wird mittels des Dropdown-Menüs «<em>Add Modifier</em>» ein «<em>Solidify</em>»-Modifier hinzugefügt. Dieser extrudiert alle Faces entlang ihrer Normalen und verbindet sie gemeinsam, sodass das Objekt eine Dicke erhält. Somit hat das Glas nun bereits seine eigentliche Form erhalten.</p>
+</section>
+<section id="subdivision-surface-modifier" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="subdivision-surface-modifier">Subdivision-Surface-Modifier</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Subdivision Surface zum Glätten</p>
+</div></div><p>Das Glas ist allerdings sehr eckig. An dieser Stelle kommt der wohl wichtigste Modifier zur Anwendung: der Subdivision-Surface-Modifier. Der Subdivision-Surface-Modifier unterteilt alle Faces im Modell durch zwei Edges in jeweils vier kleinere Faces – so wie auch der Befehl «<em>Subdivide</em>». Zusätzlich passt der Modifier die neu gebildeten Edges so an, dass die Oberflächen abgerundet und geglättet werden. Dadurch können klobige und eckige Modelle besonders schnell zu abgerundeten und glatten Modellen umgewandelt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Subdivisions hinzufügen</p>
+</div></div><p>Unter «<em>Add Modifier</em>» kann der «<em>Subdivision Surface</em>»-Modifier ausgewählt werden. Beim Modifier kann anschliessend unter «<em>Levels Viewport</em>» eingegeben werden, wie viele Subdivisions erzeugt werden sollen. Es können maximal sechs Subdivisions im Modifier durchgeführt werden (wobei auch mehr Subdivisions möglich sind, indem ein weiterer Subdivision-Surface-Modifier hinzugefügt wird). Je höher die Anzahl Subdivisions, desto glatter wird die Fläche. Allerdings erhöht sich dadurch auch die Anzahl Vertices zur Berechnung des Objektes, was mehr Leistung vom Computer erfordert. Es ist deshalb ratsam, es nicht mit diesem Modifier zu übertreiben.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Subdivisions beim Rendern</p>
+</div></div><p>Unterhalb der Zeile «<em>Levels Viewport</em>» befindet sich die Zeile «<em>Render</em>». Dadurch lässt sich die Anzahl Subdivisions für den finalen Render einstellen. Dies ermöglicht eine höhere Anzahl Subdivisions für den finalen Render-Prozess, während die Bearbeitung mit einer geringeren Anzahl erfolgt und weniger Leistung benötigt wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Catmull vs.&nbsp;Simple</p>
+</div></div><p>Zusätzlich verfügt der Subdivision-Surface-Modifier über die Einstellungsoption «<em>Catmull-Clark</em>» oder alternativ «<em>Simple</em>». Per Default ist die Option «<em>Catmull-Clark</em>» eingestellt, welche dafür sorgt, dass das Objekt geglättet wird. Die Option «<em>Simple</em>» unterteilt das Objekt lediglich in mehr Vertices, ohne deren Position so anzupassen, dass das Objekt glatter erscheint.</p>
+</section>
+</section>
+<section id="funktionsweise-von-modifiern" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="funktionsweise-von-modifiern">Funktionsweise von Modifiern</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Fehlende Dicke</p>
+</div></div><p>Nun sollten dem Glas drei Modifier in der folgenden Reihenfolge zugeordnet sein: ein Screw-Modifier, welcher die drei Vertices kreisförmig extrudiert, ein Solidify-Modifier, welcher den Faces eine Dicke hinzufügt, und ein Subdivision-Surface-Modifier, welcher das Objekt durch zusätzliche Vertices glättet. Das Objekt erscheint nun glatt, aber nicht mehr besonders dick. Dies liegt daran, dass der Solidify-Modifier dem Glas eine Dicke zuweist, der Subdivision-Surface-Modifier allerdings die Vertices dieser Dicke so stark glättet, dass die Dicke wieder verschwindet. Zudem fällt auch auf, dass der runde Boden des Glases stark verformt wird und unverhältnismässig kantig erscheint.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/4. Tris am Boden.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Verzerrung von Tris am Glasboden durch den Subdivision-Surface-Modifier.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Verwendung von Tris bei Modifiern</p>
+</div></div><p>Die seltsame Form am Boden ist auf die Form der Faces zurückzuführen, welche durch die Modifier entstehen. Durch die kreisförmige Extrusion der Vertices im Screw-Modifier entstehen am Boden eine Reihe Tris, die sich kreisförmig um den Mittelpunkt bilden. Die meisten Modifier können mit Tris umgehen, allerdings nicht alle gleich gut. In diesem Fall liegt die Ursache beim Subdivision-Surface-Modifier, welcher die kreisförmigen Vertices unterschiedlich stark zum Mittelpunkt hin glättet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bevel-Modifier</p>
+</div></div><p>Sowohl das Problem der geringeren Dicke als auch das Problem der unterschiedlich stark geglätteten Vertices am Glasboden kann mittels eines zusätzlichen Modifiers behoben werden. Das Ziel hierfür ist, dass alle Edges mit grösseren Winkeln abgerundet werden. Dies kann mittels des Bevel-Modifiers erzielt werden. Dieser führt einen Bevel-Prozess in einer nicht-destruktiven Methode durch. Unter «<em>Add Modifier</em>» kann «<em>Bevel</em>» ausgewählt werden, um diesen Modifier hinzuzufügen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Reihenfolge von Modifiern ändern</p>
+</div></div><p>Das Hinzufügen des Bevel-Modifiers reduziert das Problem der Dicke des Glases, allerdings bleiben die Verformungen am Boden des Glases bestehen. Dies liegt daran, dass der Bevel-Modifier noch vor dem Subdivision-Surface-Modifier angewendet werden sollte, respektive der Subdivision-Surface-Modifier nach dem Bevel-Modifier. In der rechten oberen Ecke des Subdivision-Surface-Modifiers befindet sich eine Schaltfläche. Bei gedrückter linker Maustaste auf diese Schaltfläche lassen sich die Modifier verschieben. Es muss nun entweder der Bevel-Modifier über den Subdivision-Surface-Modifier gezogen werden oder der Subdivision-Surface-Modifier unterhalb des Bevel-Modifiers. Nun sollten beide Probleme gelöst sein. Mittels eines Wertes von 2 für die Subdivisions im Viewport müsste das Glas glatt aussehen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Schaltflächen im Header des Modifiers</p>
+</div></div><p>Nebst der Schaltfläche zum Verschieben beinhaltet der Header eines Modifiers noch weitere Punkte:</p>
+<ul>
+<li>Innerhalb eines Textfeldes wird der Name des Modifiers angezeigt. Dieser kann auch abgeändert werden, damit etwa die Funktion des Modifiers klarer wird.</li>
+<li>Daneben sind drei weitere Schaltflächen anzutreffen, die wahlweise aktiviert oder deaktiviert wer den können:
+<ul>
+<li><strong>On Cage</strong>: Wenn diese Schaltfläche aktiviert ist, wird im Edit-Mode angezeigt, wie sich die Bearbeitung von Vertices auswirkt. Dieses Feld ist allerdings nicht bei allen Modifiern verfügbar. Da es beim Screw-Modifier nicht verfügbar ist, wird es im Beispiel mit dem Glas auch bei den nachfolgenden Modifiern nicht angezeigt. Durch das Deaktivieren der Schaltfläche «<em>Edit Mode</em>» (siehe nächsten Aufzählungspunkt) beim Screw-Modifier wird die Schaltfläche «<em>On Cage</em>» bei den darauffolgenden Modifiern jedoch wieder sichtbar.</li>
+<li><strong>Edit Mode</strong>: Wenn diese Schaltfläche aktiviert ist, wird während der Bearbeitung im Edit Mode der Effekt des Modifiers auf das gesamte Objekt gezeigt. Ansonsten bleibt dieser Modifier im Edit-Mode unberücksichtigt.</li>
+<li><strong>Realtime</strong>: Der Modifier wird im 3D-Viewport angezeigt.</li>
+<li><strong>Render</strong>: Der Modifier wird beim Rendern berücksichtigt.</li>
+</ul></li>
+<li>Innerhalb des Dropdown-Menüs sind folgende Optionen anzutreffen:
+<ul>
+<li><strong>Apply</strong>: Der Modifier wird auf das Objekt angewendet. Dadurch verschwindet der Modifier aus der Ansicht und kann auch nicht mehr weiterbearbeitet werden. Wird zudem ein Modifier angewendet, der nicht an der obersten Position der Modifier-Reihenfolge liegt, werden alle vorgängigen Modifier bei der Anwendung ignoriert.</li>
+<li><strong>Duplicate</strong>: Der Modifier wird dupliziert und direkt unter dem originalen Modifier platziert.</li>
+<li><strong>Copy to Selected</strong>: Wenn mehrere Objekte ausgewählt sind, kann der Modifier des aktiven Elements durch diesen Befehl auf die anderen Objekte übertragen werden.</li>
+<li><strong>Move to First</strong>: Der Modifier wird in der Reihenfolge der Modifier an die erste Stelle verschoben.</li>
+<li><strong>Move to Last</strong>: Der Modifier wird in der Reihenfolge der Modifier an die letzte Stelle verschoben.</li>
+</ul></li>
+<li>Mittels des Kreuzes wird ein Modifier gelöscht.</li>
+</ul>
+<div class="rememberbox">
+<div class="rememberbox-header">
+<div class="rememberbox-icon">
+
+</div>
+<p>Merke…</p>
+</div>
+<div class="rememberbox-body">
+<p>Modifier werden verwendet, um Objekte nicht-destruktiv bearbeiten zu können.</p>
+<p>Modifier werden auf Objekte angewendet.</p>
+<p>Wenn mehrere Modifier auf ein Objekt angewendet werden, werden sie nacheinander in der Modifier-Ansicht von oben nach unten angewendet.</p>
+</div>
+</div>
+</section>
+<section id="weitere-glättung-erzielen-durch-smooth-shading" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="weitere-glättung-erzielen-durch-smooth-shading">Weitere Glättung erzielen durch Smooth-Shading</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Shade Smooth und Shade Flat</p>
+</div></div><p>Blender bietet eine Möglichkeit, um Objekte noch über den Subdivision-Surface-Modifier hinaus zu glätten. Hierfür muss das entsprechende Objekt im Object-Mode ausgewählt werden. Anschliessend kann unter «<em>Object | Shade Smooth</em>» eingestellt werden, dass das Objekt geglättet dargestellt wird. Unter «<em>Object | Shade Flat</em>» kann ein geglättet dargestelltes Objekt wieder ohne eine Glättung dargestellt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Häufige Fehler beimSmooth-Shading</p>
+</div></div><p>Bei dieser Art der Glättung wird nichts an der Struktur des Objektes geändert, sondern dessen Darstellung geglättet. Diese Darstellung wirkt allerdings bei sehr kantigen Objekten und daher auch beispielsweise bei Objekten im Low-Poly-Stil befremdlich. In diesem Fall ist eher «<em>Shade Flat</em>» zu empfehlen. Zudem ist für die Berechnung dieser geglätteten Fläche wichtig, dass die Normalen in die richtige Richtung orientiert sind. Nebst zu kantigen Flächen sind falsch orientierte Normalen eine häufige Ursache, wenn ein Objekt unter «<em>Shade Smooth</em>» schlecht dargestellt wird.</p>
+</section>
+<section id="die-vielzahl-von-modifiern" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="die-vielzahl-von-modifiern">Die Vielzahl von Modifiern</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Vielfalt der Modifier</p>
+</div></div><p>Blender verfügt über eine sehr hohe Anzahl verschiedener Modifier, welche auch stetig zunimmt. Einige dieser Modifier werden sehr selten und für sehr spezifische Verfahren verwendet. Andere Modifier sind hingegen praktisch unerlässlich für die Arbeit mit 3D-Objekten.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Arten von Modifiern</p>
+</div></div><p>Die verschiedenen Modifier sind in vier verschiedene Arten unterteilt:</p>
+<ul>
+<li><strong>Modify</strong>: Diese Modifier fokussieren sich auf die Datenstruktur innerhalb der Meshes.</li>
+<li><strong>Generate</strong>: Diese Modifier ermöglichen eine nicht-destruktive Bearbeitung von Objekten.</li>
+<li><strong>Deform</strong>: Diese Modifier ermöglichen eine Veränderung der Form von Objekten.</li>
+<li><strong>Physics</strong>: Diese Modifier werden verwendet, um Objekten in Simulationen in Blender eine Rolle zuzuweisen.</li>
+</ul>
+<section id="generate-modifier" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="generate-modifier">Generate-Modifier</h3>
+<p>Für die Objekterstellung werden vor allem die Generate-Modifier verwendet. Auf ihnen liegt deshalb auch der Fokus in diesem Kurs.</p>
+<section id="array" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="array">Array</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Objekte wiederholen mittels Array-Modifier</p>
+</div></div><p>Der Array-Modifier erstellt beliebig viele Duplikate eines Objektes. Diese Duplikate werden in einer Reihe aufgestellt. Dadurch können sich wiederholende Muster mittels dieses Modifiers erstellt werden. Hierfür lässt sich die Anzahl Wiederholungen des Objektes unter «<em>Count</em>» einstellen. Anschliessend kann entlang der drei Achsen eingestellt werden, in welchem Abstand die Wiederholungen jeweils zueinander stehen sollen. Dieser Abstand kann relativ zur Grösse des Objektes eingestellt werden, indem «<em>Relative Offset</em>» aktiviert wird. In diesem Fall wird der Abstand um einen Faktor relativ zur Objektgrösse definiert. Ein Wert von 1 würde bedeuten, dass das Objekt direkt an der Stelle wiederholt wird, an der das Original seine äusserste Grenze hat. Wenn hingegen «<em>Constant Offset</em>» aktiviert wird, werden die Wiederholungen ausgehend vom Ursprung des Objektes um den angegebenen Wert verschoben wiederholt. Beide Abstandsoptionen lassen sich zudem miteinander kombinieren. Mittels der Einstellung «<em>Merge</em>» lassen sich zudem die wiederholten Objekte an den Vertices zwischen den Wiederholungen verbinden – vorausgesetzt diese befinden sich an derselben Position.</p>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/5. Icon_Array_modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5: Icon für den Array-Modifier.
+</figcaption>
+</figure>
+</div>
+<div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/6. Example_Array_modifier.png.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6: Ein Objekt sowie eine Anwendung mittels eines Array-Modifiers.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="bevel" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="bevel">Bevel</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kanten abrunden mittels Bevel-Modifier</p>
+</div></div><p>Der Bevel-Modifier rundet die Kanten eines Objektes ab. Dabei kann eingestellt werden, wie stark die Abrundung erfolgen soll und wie viele Segmente für die Abrundung gebildet werden sollen. Zusätzlich kann eine Abrundung auch auf Edges mit bestimmten Merkmalen fixiert werden (beispielsweise nur Edges mit bestimmten Winkeln oder einer bestimmten Datenstruktur). Zudem können auch Vertices abgerundet werden. Hierfür muss im oberen Bereich des Modifiers «<em>Vertices</em>» statt «<em>Edges</em>» ausgewählt werden.</p>
+<div id="fig-1_7" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/7. Icon_Bevel_modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;7: Icon für den Bevel-Modifier.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="boolean" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="boolean">Boolean</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Schnittmenge zwischen Objekten verwenden mittels Boolean-Modifier</p>
+</div></div><p>Der Boolean-Modifier wird verwendet, um die Teilmengen von zwei Objekten zu bearbeiten. Hierfür wird im Modifier ein zweites Objekt ausgewählt. Wahlweise kann anschliessend die gemeinsame Schnittmenge der beiden Objekte ausgewählt («<em>Intersect</em>»), verbunden («<em>Union</em>») oder entfernt werden («Difference»). Zu beachten ist jedoch, dass beim Verbinden (Union) beide Objekte lediglich zu einem Objekt miteinander verbunden werden. Die Vertice-Strukturen der originalen Objekte bleiben erhalten und werden nicht miteinander kombiniert. Bei den beiden anderen Optionen werden die Vertices der beiden Objekte verbunden.</p>
+<div id="fig-1_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/8. Icon_Boolean_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8: Icon für den Boolean-Modifier.
+</figcaption>
+</figure>
+</div>
+<div id="fig-1_9" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/9. Example_Boolean_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;9: Der Boolean-Modifier eines Würfels in Kombination mit einem Zylinder. Die drei verschiedenen Boolean-Einstellungen führen zu unterschiedlichen Ergebnissen.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="build" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="build">Build</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Objekt-Aufbau animieren mittels Build-Modifier</p>
+</div></div><p>Der Build-Modifier ermöglicht es, dass ein Objekt im Rahmen einer Animation sukzessive aufgebaut wird. Dabei lassen sich der Zeitpunkt des Startes («<em>Start Frame</em>») und die Dauer der Animation festlegen («<em>Length</em>»).</p>
+<div id="fig-1_10" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/10. Icon_Build_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;10: Icon für den Build-Modifier.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="decimate" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="decimate">Decimate</h4>
+<div class="column-margin¨">
+<p>Vertice in einem Objekt reduzieren mittels Decimat-Modifier</p>
+</div>
+<p>Der Decimate-Modifier reduziert die Anzahl Vertices in einem Objekt. Dabei wird das Objekt entweder um einen Faktor runtergebrochen («<em>Collapse</em>»), «<em>un-subdivided</em>» oder abgeflacht («Planar»). Der Un-Subdivide-Modus stellt das Gegenteil des Subdivision-Surface-Modifiers dar. In diesem Modus muss allerdings beachtet werden, dass die Anordnung der Edges zwischen den Faces bei jedem ungeraden Schritt der Un-Subdivision verändert wird, während sie bei geraden Anzahlen Un-Subdivisions erhalten bleibt, wie in Abbildung 56 dargestellt.</p>
+<div id="fig-1_11" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/11. Icon_Decimate_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;11: Icon für den Decimate-Modifier.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="edge-split" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="edge-split">Edge Split</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Edges zwischen Faces aufteilen mittels Edge-Split-Modifier</p>
+</div></div><p>Der Edge-Split-Modifier kann dazu verwendet werden, um Edges von zwei aneinanderliegenden Faces aufzuteilen. Dadurch scheinen die Faces zwar aneinanderzuliegen, allerdings handelt es sich dabei um zwei Faces, die nicht miteinander verbunden sind. Dies hat den Vorteil, dass Kanten, welche durch den Subdivision-Surface-Modifier abgerundet werden, nun als einzelne Kanten betrachtet und nicht abgerundet werden. Hierfür muss der Edge-Split-Modifier jedoch vor dem Subdivision-Surface-Modifier platziert werden. Im Edge-Split-Modifier kann unter «<em>Edge Angle</em>» definiert werden, bis zu welchem Winkel die Edges jeweils separiert werden sollen. Bei der Einstellung 30° werden alle Edges separiert, deren Faces in einem grösseren Winkel als 30° zueinander stehen.</p>
+<div id="fig-1_12" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/12. Example_Unsubdivide.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;12: Veränderung der Edge-Anordnung durch Un-Subdivide.
+</figcaption>
+</figure>
+</div>
+<div id="fig-1_13" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/13. Icon_Edge_Split_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13: Icon für den Edge-Split-Modifier.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="geometry-nodes" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="geometry-nodes">Geometry Nodes</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Objekte bearbeiten mittels Geometry-Nodes-Modifier</p>
+</div></div><p>Der Geometry-Nodes-Modifier ist ein relativ neuer Modifier in Blender. Er wird benötigt, um ein Objekt mittels sogenannter Geometry Nodes zu bearbeiten. Die entsprechende Einstellung des Geometry Nodes wird jeweils im Geometry-Nodes-Editor vorgenommen.</p>
+<div id="fig-1_14" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/14. Icon_Geometry_Nodes_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;14: Icon für den Geometry_Nodes-Modifier.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="mask" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="mask">Mask</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Objekt-Teile maskieren mittels Mask-Modifier</p>
+</div></div><p>Mittels des Mask-Modifiers können Bestandteile eines Meshes versteckt werden. Hierfür muss eine Gruppe aus Vertices definiert werden, welche versteckt werdensoll, und diese Gruppe muss anschliessend im Mask-Modifier angegeben werden. Wie Vertices zu Gruppen zusammengeführt werden, wird im nächsten Kapitel behandelt.</p>
+<div id="fig-1_15" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/15. Icon_Mask_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;15: Icon für den Mask-Modifier.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="mirror" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="mirror">Mirror</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Objekte spiegeln mittels Mirror-Modifier</p>
+</div></div><p>Der Mirror-Modifier spiegelt ein Objekt entlang ausgewählter Achsen vom Ursprung des Objektes aus. Dadurch muss lediglich die Hälfte eines symmetrischen Objektes erstellt oder bearbeitet werden, weil die zweite Hälfte direkt mittels des Mirror-Modifiers erstellt wird. Mittels der Funktion «<em>Clipping</em>» kann zudem eingestellt werden, dass die Punkte, welche direkt auf der Spiegelungsachse liegen, miteinander verbunden werden und nicht mehr voneinander losgelöst werden können.</p>
+<div id="fig-1_16" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/16. Icon_Mirror_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;16: Icon für den Mirror-Modifier.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="multiresolution" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="multiresolution">Multiresolution</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Mesh für Sculpting subdividen mittels Multiresolution-Modifier</p>
+</div></div><p>Der Multiresolution-Modifier führt bei einem Mesh eine Subdivision durch, so wie auch der Subdivision-Surface-Modifier. Anders als beim Subdivision-Surface-Modifier können diese Subdivisions jedoch beim Sculpting von Objekten verwendet werden, ohne dass der Modifier vorgängig auf das Objekt angewendet werden muss.</p>
+<div id="fig-1_17" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_17-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/17. Icon_Multiresolution_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_17-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;17: Icon für den Multiresolution-Modifier.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="remesh" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="remesh">Remesh</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Mesh neu generieren mittels Remesh-Modifier</p>
+</div></div><p>Mithilfe des Remesh-Modifiers können die Vertices, Edges und Faces eines Objektes neu generiert werden. Hierbei stehen verschiedene Möglichkeiten zur Auswahl, wie Blender bei dieser Neugenerierung vorgehen soll:</p>
+<ul>
+<li>«<strong><em>Blocks</em></strong>»: Die Form des Objektes wird blockartig erstellt.</li>
+<li>«<strong><em>Smooth</em></strong>»: Die Form des Objektes wird mit einer geglätteten Oberfläche er stellt.</li>
+<li>«<strong><em>Sharp</em></strong>»: Die Form des Objektes wird mit einer geglätteten Oberfläche erstellt, allerdings werden spitze Ecken und Kanten beibehalten.</li>
+<li>«<strong><em>Voxel</em></strong>»: Das Objekt wird basierend auf seinem Volumen neu erstellt.</li>
+</ul>
+<div id="fig-1_18" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_18-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/18. Icon_Remesh_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_18-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;18: Icon für den Remesh-Modifier.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="screw" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="screw">Screw</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Objekte kreisförmig extrudieren mittels Screw-Modifier</p>
+</div></div><p>Der Screw-Modifier wird verwendet, um Strukturen kreisförmig entlang einer Achse um ihren Ursprung zu extrudieren. Zusätzlich kann ein «<em>Screw</em>»-Faktor definiert werden. Dieser verschiebt die Umdrehung um den Screw-Faktor entlang der ausgewählten Achse, sodass eine Schraubenform entsteht.</p>
+<div id="fig-1_19" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_19-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/19. Icon_Screw_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_19-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19: Icon für den Screw-Modifier.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="skin" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="skin">Skin</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Vertices zu Mesh extrudieren mittels Skin-Modifier</p>
+</div></div><p>Der Skin-Modifier versieht den Vertices in einem Objekt eine zusätzliche Haut in Form eines Würfels, der um den Vertex oder entlang der Edges gebildet wird. So kann eine Form aus Vertices und Edges gebildet werden und mittels des Skin-Modifiers mit einem Körper entlang der Edges versehen werden. Dieser Modifier ist ähnlich zum Solidify-Modifier, wobei der Skin-Modifier vor allem für Objekte ohne Faces verwendet wird. Die Verwendung bei Objekten mit Faces in Kombination mit dem Skin-Modifier kann sehr viel Rechenleistung erfordern.</p>
+<div id="fig-1_20" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_20-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/20. Icon_Skin_modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_20-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;20: Icon für den Skin-Modifier.
+</figcaption>
+</figure>
+</div>
+<p>Durch das Hinzufügen des Skin-Modifiers ist es möglich, jeden Vertex mittels einer Skalierung zu bearbeiten. Hierfür muss ein Vertex im Edit-Mode ausgewählt werden. Mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> kann der Radius des Körpers bei diesem Vertex eingestellt werden. Ohne das Hinzufügen des Skin-Modifiers steht diese Funktion allerdings nicht zur Verfügung.</p>
+<div id="fig-1_21" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_21-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/21. Example_Skin_modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_21-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;21: Ein Objekt aus Vertices und Edges sowie seine Form mit dem Skin-Modifier.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="solidify" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="solidify">Solidify</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Faces extrudieren mittels Solidify-Modifier</p>
+</div></div><p>Der Solidify-Modifier wird verwendet, um Objekten ein Dicke hinzuzufügen. Dabei werden alle Faces um den Wert der Dicke extrudiert. Die Extrusion erfolgt entlang der Normalen eines Faces um einen Offset-Wert. Wenn dieser Wert 1 oder -1 beträgt, werden die originalen Vertices genau an derselben Stelle belassen und je nach Vorzeichen verändert sich die Richtung der Extrusion. Bei einem negativen Wert erfolgt die Extrusion entlang der Seite ohne Normalen,bei einem positiven Wert entlang der Seite mit Normalen. Bei einem Wert von 0 werden die Flächen so gebildet, dass sich die originalen Faces genau in der Mitte der neuen Faces befinden.</p>
+<div id="fig-1_22" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_22-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/22. Icon_Solidify_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_22-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;22: Icon für den Solidify-Modifier.
+</figcaption>
+</figure>
+</div>
+<div id="fig-1_23" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_23-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/23. Example_Solidify_modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_23-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;23: Ein Würfel ohne Deckel mit den Normalen nach aussen gerichtet. Daneben Anwendungen des Solidify-Modifiers mit unterschiedlichen Offset-Werten.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="subdivision-surface" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="subdivision-surface">Subdivision Surface</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Faces subdividen mittels Subdivision-Surface-Modifier</p>
+</div></div><p>Der Subdivision-Surface-Modifier wird verwendet, um die Struktur des Objektes zu glätten, indem die Struktur des Objektes unterteilt wird. Dieser Modifier wurde vorgängig ausführlich behandelt.</p>
+<div id="fig-1_24" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_24-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/24. Icon_Subdivision_Surface_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_24-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;24: Icon für den Subdivision-Surface-Modifier.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="triangulate" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="triangulate">Triangulate</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Quads zu Tris umwandeln mittels Triangulate-Modifier</p>
+</div></div><p>Der Triangulate-Modifier ermöglicht es, dass die Edges von Faces neu berechnet werden, sodass die Faces lediglich aus Tris bestehen. Es stehen dabei verschiedene Methoden zur Auswahl, welche individuell auf Quads und N-Gons angewendet werden können. Durch eine Erhöhung der Zahl unter «<em>Minimum Vertices</em>» lässt sich einstellen, dass nur Faces mit mindestens der entsprechenden Zahl von Vertices zu Tris umgewandelt werden.</p>
+<div id="fig-1_25" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_25-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/25. Icon_Triangulate_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_25-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;25: Icon für den Triangulate-Modifier.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="volume-to-mesh" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="volume-to-mesh">Volume to Mesh</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Volumen zu Mesh umwandeln mittels Volume-to-Mesh-Modifier</p>
+</div></div><p>Mithilfe des Volume-to-Mesh-Modifiers können Volumen-Daten in ein Mesh umgewandelt werden. Da dieser Kurs nicht auf Volumen-Objekte eingeht, wird dieser Modifier nicht weiter behandelt.</p>
+<div id="fig-1_26" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_26-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/26. Icon_Volume_to_Mesh-Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_26-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;26: Icon für den Volume-to-Mesh-Modifier.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="weld" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="weld">Weld</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Merge by Distance mittels Weld-Modifier</p>
+</div></div><p>Der Weld-Modifier stellt die Funktion «<em>Merge by Distance</em>» als Modifier dar. Dabei werden alle Vertices, die nahe beieinanderliegen, zu einem Vertex zusammen gefasst. In den Einstellungen zum Weld-Modifier kann unter «<em>Distance</em>» festgelegt werden, bis zu welcher Distanz die Vertices zusammengefasst werden sollen. Zudem kann unter «<em>Mode</em>» festgelegt werden, ob berücksichtigt werden soll, ob dies nur auf miteinander verbundene Vertices («<em>Connected</em>») oder alle Vertices («<em>All</em>») angewendet werden soll.</p>
+<div id="fig-1_27" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_27-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/27. Icon_Weld_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_27-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;27: Icon für den Weld-Modifier.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="wireframe" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="wireframe">Wireframe</h4>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Gerüst um Mesh mittels Wireframe-Modifier</p>
+</div></div><p>Mithilfe des Wireframe-Modifiers werden die Flächen anhand eines Gerüstes dargestellt. Die Edges der Faces werden hierfür aufgehoben und mit vier Faces ersetzt, die entlang der Edges miteinander verbunden werden. Die ursprünglichen Faces werden zusätzlich ebenfalls aufgehoben. Der Wireframe-Modifier bezieht sich dabei lediglich auf die Faces: Einzelne Edges, die nicht Teil eines Faces sind, werden dadurch entfernt und nicht im Gerüst mit aufgenommen.</p>
+<div id="fig-1_28" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_28-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/28. Icon_Wireframe_Modifier.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_28-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;28: Icon für den Wireframe-Modifier.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Gerüst anpassen</p>
+</div></div><p>Unter dem Reiter «<em>Thickness</em>» in den Einstellungen zum Wireframe-Modifier lässt sich einstellen, wie gross das Gerüst, welches um die Edges herum gebildet wird, sein soll. Durch den Wireframe-Modifier wird das originale Objekt per Default durch das Gittergerüst ersetzt. Dies kann jedoch in den Einstellungen zum Wireframe-Modifier unter «<em>Replace Original</em>» deaktiviert werden, sodass das originale Objekt nebst dem Gerüst bestehen bleibt.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Images/Chapter_14/29. Example_Triangulated Wireframe.png" class="img-fluid figure-img"></p>
+<figcaption>Würfel mit Triangulate- und Wireframe-Modifier.</figcaption>
+</figure>
+</div>
+<div class="exercisebox">
+<div class="exercisebox-header">
+<div class="exercisebox-icon">
+
+</div>
+<p>Übung 10: Modifier</p>
+</div>
+<div class="exercisebox-body">
+<p><strong>Übung 10.1</strong></p>
+<p>Erstellen Sie eine Wasserflasche mittels Modifiern. Verwenden Sie dabei so wenige Vertices wie möglich.</p>
+<p><a href="Images/Chapter_14/Übung 10_1 Wasserflasche.png" id="fig-1_30" data-fig-align="left"></a></p>
+<p><strong>Übung 10.2</strong></p>
+<p>Erstellen Sie einen Gartenzaun mittels Modifiern. Verwenden Sie dabei so wenige Vertices wie möglich.</p>
+<p><a href="Images/Chapter_14/Übung_10.2 Fence.png" id="fig-1_31" data-fig-align="left"></a></p>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="grenzen-der-objektbearbeitung-mittels-modifiern" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="grenzen-der-objektbearbeitung-mittels-modifiern">Grenzen der Objektbearbeitung mittels Modifiern</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Grenzen von Modifiern</p>
+</div></div><p>Wie beim Beispiel mit dem Glas zu erkennen ist, funktionieren Modifier unter bestimmten Umständen nicht immer perfekt. Die Anwendung des Subdivision-Surface-Modifiers auf einen Zylinder führt beispielsweise dazu, dass nicht nur der Mantel des Zylinders abgerundet wird, sondern auch die Kanten zum Boden beziehungsweise Deckel des Zylinders. Dies führt dazu, dass der Zylinder seine Form verliert und eher einer Kugel ähnelt. Der Boden und der Deckel des Zylinders stellen ein einzelnes N-Gon dar. Durch die fehlenden Quads werden der Boden und der Deckel somit in einer fehlerhaften Form abgerundet. In solchen Fällen macht die Anwendung des Subdivision-Surface-Modifiers in dieser Form keinen Sinn.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Abrundung verhindern</p>
+</div></div><p>Es gibt einige destruktive Lösungsansätze, um die unerwünschten Effekte des Subdivision-Surface-Modifiers zu reduzieren. So können beispielsweise zusätzliche Loop Cuts (<kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span> ) an den Kanten hinzugefügt werden, welche zu stark abgerundet werden. Dies führt dazu, dass Blender eine geringere Länge zur Verfügung hat, um Kanten abzurunden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Abrundung von Tris/N-Gons verhindern</p>
+</div></div><p>Allerdings bleibt der Effekt einer ungenauen Abrundung entlang des Deckels/Bodens bestehen. Um diesen Effekt zu reduzieren, kann das Face des Deckels/Bodens ausgewählt und im Rahmen einer Extrusion kleiner skaliert werden (Taste <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span>, danach Taste <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> ). Dadurch wird der äusserste Rand des Deckels/Bodens mit Quads dargestellt, die gemeinsam einen Kreis um ein paralleles N-Gon bilden (wie in Abbildung 76 dargestellt).</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Parallelität, um Abrundung zu verhindern</p>
+</div></div><p>Die kreisförmig angeordneten Quads liegen in diesem Beispiel nun parallel zu dem N-Gon in der Mitte. Dadurch erübrigt sich eine Glättung des N-Gons entlang seiner Edges. Würde das N-Gon allerdings nicht parallel verlaufen (z.B. wenn es weiter nach aussen gezogen würde, wie in Abbildung 77), so würde das N-Gon wieder geglättet und eine ungewollte Schraffierung entstünde erneut.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bearbeitung von Meshes trotz Modifiern notwendig</p>
+</div></div><p>Dieses Beispiel zeigt, dass die nicht-destruktive Bearbeitung mittels Modifiern teilweise auch Anpassungen im Mesh erfordern. Zudem ist es teilweise nötig, dass Modifier auf ein Objekt angewendet werden, sodass die Vertices, welche durch den Modifier entstehen, destruktiv weiterbearbeitet werden können.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Modifier auf Teilmengen des Meshes beschränken</p>
+</div></div><p>Es gibt allerdings auch noch Lösungsansätze, damit Modifier nicht auf alle Elemente eines Meshes angewendet werden, oder sogar unterschiedlich stark auf unterschiedliche Elemente eines Meshes angewendet werden. Hierfür wird im nächsten Kapitel betrachtet, wie sich solche Einstellungen für unterschiedliche Elemente innerhalb eines Meshes einstellen lassen.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -188,6 +188,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../Chapters/Chapter_14.html">
  <span class="dropdown-text">Kapitel 14</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_15.html">
+ <span class="dropdown-text">Kapitel 15</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -735,7 +739,7 @@ Abbildung&nbsp;21: Ein Objekt aus Vertices und Edges sowie seine Form mit dem Sk
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Faces extrudieren mittels Solidify-Modifier</p>
-</div></div><p>Der Solidify-Modifier wird verwendet, um Objekten ein Dicke hinzuzufügen. Dabei werden alle Faces um den Wert der Dicke extrudiert. Die Extrusion erfolgt entlang der Normalen eines Faces um einen Offset-Wert. Wenn dieser Wert 1 oder -1 beträgt, werden die originalen Vertices genau an derselben Stelle belassen und je nach Vorzeichen verändert sich die Richtung der Extrusion. Bei einem negativen Wert erfolgt die Extrusion entlang der Seite ohne Normalen,bei einem positiven Wert entlang der Seite mit Normalen. Bei einem Wert von 0 werden die Flächen so gebildet, dass sich die originalen Faces genau in der Mitte der neuen Faces befinden.</p>
+</div></div><p>Der Solidify-Modifier wird verwendet, um Objekten eine Dicke hinzuzufügen. Dabei werden alle Faces um den Wert der Dicke extrudiert. Die Extrusion erfolgt entlang der Normalen eines Faces um einen Offset-Wert. Wenn dieser Wert 1 oder -1 beträgt, werden die originalen Vertices genau an derselben Stelle belassen und je nach Vorzeichen verändert sich die Richtung der Extrusion. Bei einem negativen Wert erfolgt die Extrusion entlang der Seite ohne Normalen, bei einem positiven Wert entlang der Seite mit Normalen. Bei einem Wert von 0 werden die Flächen so gebildet, dass sich die originalen Faces genau in der Mitte der neuen Faces befinden.</p>
 <div id="fig-1_22" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_22-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -845,10 +849,14 @@ Abbildung&nbsp;28: Icon für den Wireframe-Modifier.
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Gerüst anpassen</p>
 </div></div><p>Unter dem Reiter «<em>Thickness</em>» in den Einstellungen zum Wireframe-Modifier lässt sich einstellen, wie gross das Gerüst, welches um die Edges herum gebildet wird, sein soll. Durch den Wireframe-Modifier wird das originale Objekt per Default durch das Gittergerüst ersetzt. Dies kann jedoch in den Einstellungen zum Wireframe-Modifier unter «<em>Replace Original</em>» deaktiviert werden, sodass das originale Objekt nebst dem Gerüst bestehen bleibt.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="Images/Chapter_14/29. Example_Triangulated Wireframe.png" class="img-fluid figure-img"></p>
-<figcaption>Würfel mit Triangulate- und Wireframe-Modifier.</figcaption>
+<div id="fig-1_29" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_29-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_14/29. Example_Triangulated Wireframe.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_29-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;29: Würfel mit Triangulate- und Wireframe-Modifier.
+</figcaption>
 </figure>
 </div>
 <div class="exercisebox">
@@ -861,10 +869,18 @@ Abbildung&nbsp;28: Icon für den Wireframe-Modifier.
 <div class="exercisebox-body">
 <p><strong>Übung 10.1</strong></p>
 <p>Erstellen Sie eine Wasserflasche mittels Modifiern. Verwenden Sie dabei so wenige Vertices wie möglich.</p>
-<p><a href="Images/Chapter_14/Übung 10_1 Wasserflasche.png" id="fig-1_30" data-fig-align="left"></a></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Images/Chapter_14/Übung 10_1 Wasserflasche.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
+</figure>
+</div>
 <p><strong>Übung 10.2</strong></p>
 <p>Erstellen Sie einen Gartenzaun mittels Modifiern. Verwenden Sie dabei so wenige Vertices wie möglich.</p>
-<p><a href="Images/Chapter_14/Übung_10.2 Fence.png" id="fig-1_31" data-fig-align="left"></a></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Images/Chapter_14/Übung_10.2 Fence.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>

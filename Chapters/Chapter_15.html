@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5. Objektarten – Creating the World</title>
+<title>15. Eigenschaften innerhalb eines Meshes definieren – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -215,24 +215,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#mesh" id="toc-mesh" class="nav-link active" data-scroll-target="#mesh">Mesh</a></li>
-  <li><a href="#curve" id="toc-curve" class="nav-link" data-scroll-target="#curve">Curve</a></li>
-  <li><a href="#surface" id="toc-surface" class="nav-link" data-scroll-target="#surface">Surface</a></li>
-  <li><a href="#metaball" id="toc-metaball" class="nav-link" data-scroll-target="#metaball">Metaball</a></li>
-  <li><a href="#text" id="toc-text" class="nav-link" data-scroll-target="#text">Text</a></li>
-  <li><a href="#volume" id="toc-volume" class="nav-link" data-scroll-target="#volume">Volume</a></li>
-  <li><a href="#grease-pencil" id="toc-grease-pencil" class="nav-link" data-scroll-target="#grease-pencil">Grease Pencil</a></li>
-  <li><a href="#armature" id="toc-armature" class="nav-link" data-scroll-target="#armature">Armature</a></li>
-  <li><a href="#lattice" id="toc-lattice" class="nav-link" data-scroll-target="#lattice">Lattice</a></li>
-  <li><a href="#empty" id="toc-empty" class="nav-link" data-scroll-target="#empty">Empty</a></li>
-  <li><a href="#image" id="toc-image" class="nav-link" data-scroll-target="#image">Image</a></li>
-  <li><a href="#light" id="toc-light" class="nav-link" data-scroll-target="#light">Light</a></li>
-  <li><a href="#light-probe" id="toc-light-probe" class="nav-link" data-scroll-target="#light-probe">Light-Probe</a></li>
-  <li><a href="#camera" id="toc-camera" class="nav-link" data-scroll-target="#camera">Camera</a></li>
-  <li><a href="#speaker" id="toc-speaker" class="nav-link" data-scroll-target="#speaker">Speaker</a></li>
-  <li><a href="#force-field" id="toc-force-field" class="nav-link" data-scroll-target="#force-field">Force Field</a></li>
-  <li><a href="#collection-instance" id="toc-collection-instance" class="nav-link" data-scroll-target="#collection-instance">Collection Instance</a></li>
-  <li><a href="#zusammenfassung-der-objektarten" id="toc-zusammenfassung-der-objektarten" class="nav-link" data-scroll-target="#zusammenfassung-der-objektarten">Zusammenfassung der Objektarten</a></li>
+  <li><a href="#edge-crease" id="toc-edge-crease" class="nav-link active" data-scroll-target="#edge-crease">Edge Crease</a></li>
+  <li><a href="#bevel-weight" id="toc-bevel-weight" class="nav-link" data-scroll-target="#bevel-weight">Bevel Weight</a></li>
+  <li><a href="#vertex-groups" id="toc-vertex-groups" class="nav-link" data-scroll-target="#vertex-groups">Vertex Groups</a></li>
   </ul>
 </nav>
     </div>
@@ -241,7 +226,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">5. Objektarten</h1>
+<h1 class="title">15. Eigenschaften innerhalb eines Meshes definieren</h1>
 </div>
 
 
@@ -258,227 +243,110 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="edge-crease" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="edge-crease">Edge Crease</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Verschiedene Arten von Objekten</p>
-</div></div><p>Beim Hinzufügen von Objekten mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> erscheint das Menü für das Hinzufügen von Objekten beim Mauszeiger. Die verschiedenen Objekte sind dabei in verschiedene Typen von Objekten unterteilt. Diese Objekte unterscheiden sich hinsichtlich ihres Aufbaus, aber auch hinsichtlich ihrer Funktion.</p>
-<section id="mesh" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="mesh">Mesh</h2>
+<p>Subdivision-Surface-Modifier nicht auf alle Edges anwenden</p>
+</div></div><p>Im letzten Kapitel wurde gezeigt, wie der Effekt des Subdivision-Surface-Modifiers reduziert werden kann. Hierfür wurde erneut auf eine destruktive Bearbeitungsmethode zurückgegriffen. Es gibt allerdings auch Möglichkeiten, um ohne eine destruktive Bearbeitung dem Subdivision-Surface-Modifier mitzuteilen, dass er auf eine Anwendung an bestimmten Stellen im Mesh verzichten soll. Hierfür wird der Edge Crease verwendet.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Meshes</p>
-</div></div><p>Ein Mesh stellt ein 3D-Objekt dar. Meshes haben eine gitterähnliche Struktur aus Punkten, Linien und verbundenen Flächen, welche in ihrer Gesamtstruktur das Objekt darstellen. Der Hauptfokus dieses Kurses wird auf die Meshes gelegt, von daher werden sie später noch ausführlich beschrieben.</p>
+<p>Edge Crease</p>
+</div></div><p>Der Edge Crease stellt ein Merkmal dar, welches einem Edge hinzugefügt werden kann. Je höher der Edge Crease, desto geringer die Glättung durch den Subdivision-Surface-Modifier. Der Edge Crease kann dabei Werte von 0 (normale Anwendung des Modifiers) bis 1 (keine Anwendung des Modifiers) annehmen. Auch Abstufungen dazwischen sind möglich.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Edge Crease hinzufügen</p>
+</div></div><p>Um Edges einen Edge Crease hinzuzufügen, müssen sie zunächst ausgewählt werden. Anschliessend kann mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span> das «<em>Edge</em>»-Menü beim Mauszeiger geöffnet werden und «<em>Edge Crease</em>» ausgewählt werden. Mittels der Bewegung des Mauszeigers oder durch die Eingabe einer Zahl kann anschliessend der Faktor für den Edge Crease festgelegt werden. Im Edit-Mode wird die Stärke eines Creases für ein Edge jeweils mit einer violetten Markierung angegeben. Eine besonders starke violette Markierung des Edges weist auf einen Edge Crease von 1 hin, eine fehlende Markierung auf einen Edge Crease von 0. Alternativ kann der Edge-Crease auch direkt über die Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span> bei ausgewählten Edges verändert werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Edge Creases über die Sidebar einstellen</p>
+</div></div><p>Nebst der Einstellung über das Edge-Menü kann der Edge Crease auch über die Sidebar eingestellt werden. Unterhalb des Einstellungsfeldes für die Position eines Vertex oder den Median der Auswahl befinden sich zwei Felder für die Eingabe von «<em>Edge Data</em>». Dort ist ein Feld für den Crease des ausgewählten Edges zu finden. Wenn mehrere Edges ausgewählt sind, wird der Mittelwert der Crease-Werte berechnet und an dieser Stelle angezeigt. Durch das Ersetzen des Mittelwerts durch eine Zahl wird der Crease proportional über die ausgewählten Elemente verändert, sodass der Mittelwert diesem Wert entspricht. Durch die Eingabe von 0 werden generell alle Edge Creases bei der Auswahl entfernt und durch die Eingabe von 1 werden generell alle Edge Creases bei der Auswahl maximiert.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Edge Crease deaktivieren</p>
+</div></div><p>Per Default ist beim Subdivision-Surface-Modifier eingestellt, dass er Edge Creases im Mesh berücksichtigt. Dies kann allerdings in den Einstellungen zum Modifier unter dem Menü «<em>Advanced</em>» unter «<em>Use Creases</em>» deaktiviert werden.</p>
 </section>
-<section id="curve" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="curve">Curve</h2>
+<section id="bevel-weight" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="bevel-weight">Bevel Weight</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Kurven</p>
-</div></div><p>Vor der Entwicklung der Meshes wurden in Computergrafiken Kurven und Oberflächen verwendet. Sie haben den Vorteil, dass sie weniger Computerleistung benötigen. Kurven verfügen über weniger Kontrollpunkte, wodurch sie auch einfacher zu bearbeiten sind. In einigen Anwendungen werden sie heute immer noch verwendet. Blender verfügt über zwei Arten von Kurven: Bézier-Kurven und Nurbs-Kurven. Die beiden Arten von Kurven unterscheiden sich hinsichtlich ihrer zugrundeliegenden Berechnungen.</p>
+<p>Edge Bevel Weight</p>
+</div></div><p>Nebst den Edge Creases, welche den Subdivision-Surface-Modifier steuern, können die sogenannten Edge Bevel Weights verwendet werden, um den Bevel-Modifier zu steuern. Bevel Weights können ebenfalls einen Wert von 0 bis 1 annehmen. Ein Wert von 0 steht allerdings für keine Anwendung des Bevel-Modifiers und ein Wert von 1 für eine maximale Anwendung des Bevel-Modifiers. Auch Abstufungen dazwischen sind möglich.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Kurven können Oberflächen enthalten</p>
-</div></div><p>Neu hinzugefügte Kurven beinhalten zunächst keine Oberfläche und erscheinen dadurch nicht beim Rendern. Allerdings können ihnen Oberflächen hinzugefügt werden, sodass sie auch als Objekte erkennbar werden. Zudem können Kurven auch als Hilfestellung bei Animationen verwendet werden, indem etwa Pfade für eine Animation mit ihnen vorgegeben werden.</p>
+<p>Edge Bevel Weight hinzufügen</p>
+</div></div><p>Um einem Edge einen Bevel Weight hinzuzufügen, muss das jeweilige Edge ausgewählt werden. Anschliessend kann mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span> das «<em>Edge</em>»-Menü beim Mauszeiger geöffnet werden und «<em>Edge Bevel Weight</em>» ausgewählt werden. Anschliessend kann entweder mit einer Bewegung der Maus oder durch die Eingabe einer Zahl der Edge Bevel Weight der Auswahl verändert werden. Im Edit-Mode sind Edge Bevel Weights durch eine blaue farbliche Markierung entlang der Edges ersichtlich. Je stärker die blaue Einfärbung, desto mehr nähert sich der Edge Bevel Weight dem Faktor 1 an. Bei keiner farblichen Markierung beträgt der Bevel Weight 0.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Edge Bevel Weight im Viewport</p>
+</div></div><p>Wie auch der Edge Crease kann der Edge Bevel Weight in der Sidebar eingestellt werden. Hierfür wird die Zeile «<em>Bevel Weight</em>» verwendet. Wie auch beim Crease lässt sich hier der Mittelwert der Auswahl proportional anpassen, respektive der Wert 0 oder 1 für die gesamte Auswahl fixieren.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Modifier auf Bevel Weights einstellen</p>
+</div></div><p>Der Bevel-Modifier berücksichtig die Edge Bevel Weights nicht in seinen Default-Einstellungen. In ihm muss deshalb die Option «<em>Limit Method</em>» auf «<em>Weigh</em>t» umgestellt werden. Dadurch wird der Modifier nur auf Edges mit Bevel Weights angewendet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Vertex Bevel Weight</p>
+</div></div><p>Bevel Weights können auch auf einzelne Vertices angewendet werden. Hierfür können ausgewählten Vertices in der Sidebar unter «<em>Vertex Data</em>» ein Bevel Weight hinzugefügt werden. Vertex und Edge Bevel Weights werden unabhängig voneinander zugeteilt und berechnet. Ein Vertex, das Teil eines Edges mit einem Edge Bevel Weight von 1 ist, kann einen anderen Vertex Bevel Weight aufweisen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Modifier auf Vertex Bevel Weight einstellen</p>
+</div></div><p>Der Bevel-Modifier berücksichtigt die Vertex Bevel Weights lediglich, wenn er auf «<em>Vertices</em>» eingestellt wurde. Auch in diesem Fall muss die «<em>Limit Method</em>» auf «<em>Weight</em>» eingestellt werden. Wenn sowohl die Edge Bevel Weights als auch die Vertex Bevel Weights berücksichtigt werden sollen, werden zwei Bevel-Modifier benötigt: ein Modifier für die Vertex Bevel Weights und ein Modifier für die Edge Bevel Weights.</p>
 </section>
-<section id="surface" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="surface">Surface</h2>
+<section id="vertex-groups" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="vertex-groups">Vertex Groups</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Surfaces</p>
-</div></div><p>Die Surfaces sind ähnlich zu den Kurven. Während Kurven 2D-Objekte darstellen, sind die Surfaces ihre 3D-Erweiterungen. Obwohl Kurven und Surfaces somit denselben Typ von Objekten darstellen, können sie nicht gleichzeitig auftreten. In einem Objekt können somit nicht sowohl Kurven als auch Surfaces vorhanden sein.</p>
-</section>
-<section id="metaball" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="metaball">Metaball</h2>
+<p>Limitierung von Modifiern auf einzelne Vertices</p>
+</div></div><p>Durch den Edge Crease und den Bevel Weight stehen Möglichkeiten zur Verfügung, um Elemente des Meshes graduell durch die Modifier bearbeiten zu lassen. Für die meisten anderen Modifier steht eine solche graduelle Anwendung nicht zur Verfügung. Es ist jedoch für sehr viele Modifier möglich, dass die Anwendung lediglich auf einzelne Vertices angewendet wird. Dadurch ist zwar keine graduelle Abstufung des Modifiers über das Mesh möglich, allerdings eine Limitierung auf einzelne Vertices.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Metas</p>
-</div></div><p>Metabälle gehören zur Objekt-Familie der Metas, welche Blender prozedural aufbaut. Anders als beispielsweise Meshes oder Kurven sind sie nicht durch Kontrollpunkte oder Gitternetze aufgebaut, sondern werden mathematisch von Blender berechnet. Wenn zwei Meta-Objekte in der Nähe voneinander sind, können sie miteinander interagieren.</p>
-</section>
-<section id="text" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="text">Text</h2>
+<p>Vertex-Gruppen</p>
+</div></div><p>Im Edit-Mode können einzelne Vertices zu Gruppen zusammengefasst werden. Solche Gruppen werden als Vertex Groups bezeichnet. Die Vertex-Gruppen können über den Properties-Editor unter dem Reiter «<em>Object Data Properties</em>» anvisiert werden</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Text</p>
-</div></div><p>Text-Objekte beinhalten einen Text, der anschliessend als Objekt dargestellt wird. Der Text hat dabei wie die Kurven oder die Oberflächen lediglich zwei Dimensionen.</p>
-</section>
-<section id="volume" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="volume">Volume</h2>
+<p>Vertex-Gruppe erstellen</p>
+</div></div><p>Durch einen Klick auf die «+»-Schaltfläche unter dem Reiter «<em>Vertex Groups</em>» in den Object Data Properties wird anschliessend eine neue Vertex-Gruppe hinzugefügt, welche den Namen «Group» trägt. Dieser Name kann beliebig angepasst werden und sollte – gerade wenn viele Vertex-Gruppen erstellt werden – klar ausdrücken, welche Inhalte diese Gruppe abdeckt.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Volumen-Objekte</p>
-</div></div><p>Volumen-Objekte sind lediglich Objekt-Container. Ihnen können OpenVDB-Dateien angehängt werden, um volumetrische Daten (beispielsweise Wolken oder Rauch) zu erzeugen. Diese Dateien können mithilfe von Blenders eigenen Simulationen erzeugt werden, oder in anderen Programmen erzeugt und abgespeichert werden.</p>
-</section>
-<section id="grease-pencil" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="grease-pencil">Grease Pencil</h2>
+<p>Vertices zu Gruppen hinzufügen</p>
+</div></div><p>Wenn eine neue Vertex-Gruppe hinzugefügt wird, beinhaltet diese zunächst keine Vertices. Diese müssen der neu erstellten Gruppe hinzugefügt werden. Hierfür werden im Edit-Mode die entsprechenden Vertices ausgewählt und anschliessend die Schaltfläche «<em>Assign</em>» unterhalb der Auflistung der Vertex-Gruppen betätigt. Dadurch werden der Vertex-Gruppe die ausgewählten Vertices hinzugefügt. Analog können mittels der Schaltfläche «<em>Remove</em>» Vertices von bestehenden Vertex-Gruppen entfernt werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Grease Pencil</p>
-</div></div><p>Grease Pencils sind Objekte, welche es ermöglichen, direkt in den dreidimensionalen Raum zu zeichnen. Zudem können mit ihnen 2D-Animationen erstellt werden – etwa wenn Blender für ein 2D- statt 3D-Projekt verwendet wird. Objekte der Kategorie «Grease Pencil» sind dabei eigentlich Behälter-Objekte, in welche anschliessend die Linien gezeichnet werden.</p>
-</section>
-<section id="armature" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="armature">Armature</h2>
+<p>Vertices mittels Vertex-Gruppen an- und abwählen</p>
+</div></div><p>Vertex-Gruppen sind auch nützlich, um einzelne Vertices schnell auswählen zu können. Hierfür müssen diese einer Vertex-Gruppe zugewiesen werden. Anschliessend kann diese Vertex-Gruppe markiert werden und mittels der Schaltfläche «<em>Select</em>» werden die Vertices, welche zu dieser Auswahl gehören, im Objekt ausgewählt. Analog können mittels der Schaltfläche «<em>Deselect</em>» die Vertices einer Vertex-Gruppe von der aktuellen Auswahl abgewählt werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Armaturen</p>
-</div></div><p>Armaturen werden verwendet, um Meshes zu animieren. Hierbei wird innerhalb eines Meshes ein Gerüst erstellt, anhand dessen die Animation anschliessend erfolgen soll. Dieses Gerüst stellt sozusagen das Skelett dar, welches anschliessend für die Animation verwendet werden soll. Dementsprechend werden die einzelnen Gerüstteile auch Bones (Knochen) genannt. Armaturen werden beim Rendern nicht angezeigt. Bei ihnen handelt es sich lediglich um ein Werkzeug zur Animation.</p>
-</section>
-<section id="lattice" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="lattice">Lattice</h2>
+<p>Vertex-Gruppen sperren</p>
+</div></div><p>Es ist ausserdem möglich, bestehende Vertex-Gruppen zu sperren, sodass keine weiteren Vertices der Vertex-Gruppe hinzugefügt oder von ihr entfernt werden können. In der Auflistung der Vertex-Gruppen ist auf der rechten Seite jeweils ein Schloss zu finden. Durch das Aktivieren dieses Schlosses wird diese Vertex-Gruppe gesperrt. Dadurch wird verhindert, dass aus Versehen neue Vertices der Gruppe hinzugefügt oder von ihr entfernt werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Lattice</p>
-</div></div><p>Das Lattice stellt ein dreidimensionales Gerüst aus Punkten dar, welches allerdings nicht gerendert werden kann. Es dient als Werkzeug zur komplexeren Transformation von Objekten.</p>
-</section>
-<section id="empty" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="empty">Empty</h2>
+<p>Vertex-Gruppen zu Modifiern hinzufügen</p>
+</div></div><p>Bei vielen Modifiern lassen sich innerhalb der Einstellungen Vertex-Gruppen in einer Zeile mit der Beschriftung «<em>Vertex Group</em>» auswählen. Wenn eine Vertex-Gruppe für ein Objekt definiert wurde, wird diese anschliessend auswählbar für dieses Feld. Dadurch können die entsprechenden Modifier auf diese Vertex-Gruppen beschränkt werden. Beispielsweise kann der Bevel-Modifier statt mit Bevel Weights auch mit Vertex-Gruppen auf einzelne Edges oder Vertices reduziert werden.</p>
+<div class="exercisebox">
+<div class="exercisebox-header">
+<div class="exercisebox-icon">
 
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Empties</p>
-</div></div><p>Empties sind Knotenpunkte an einem einzigen Punkt in der virtuellen Welt. Sie beinhalten weder Oberflächen noch Volumen und können auch nicht gerendert werden. Sie lassen sich allerdings beispielsweise als Bezugspunkte für Objekte verwenden.</p>
-</section>
-<section id="image" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="image">Image</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Bilder</p>
-</div></div><p>Blender ermöglichet es, dass auch externe Bilddateien direkt einer Szene hinzugefügt werden können. Hierfür kann ein solches Image-Objekt erstellt und das Bild anschliessend diesem Objekt angefügt werden. Bilder können allerdings auch direkt in den Viewport-Display gezogen werden, wodurch sie anschliessend hinzugefügt werden.</p>
-</section>
-<section id="light" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="light">Light</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Lichtquellen</p>
-</div></div><p>Licht-Objekte stellen die Quelle für die Beleuchtung von Szenen dar. Sie sind nicht als Mesh oder Kurve modellierbar, sondern stellen vielmehr einen Punkt oder Bereich dar, von dem die Beleuchtung ausgeht.</p>
-</section>
-<section id="light-probe" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="light-probe">Light-Probe</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Light Probes</p>
-</div></div><p>Light Probes werden in der Eevee-Render-Engine als Hilfsobjekte verwendet. Dabei werden beispielsweise Informationen über indirekte Beleuchtungseffekte gespeichert. Diese Informationen werden anschliessend im finalen Render berücksichtigt, während das Light-Probe-Objekt als solches nicht im finalen Render dargestellt wird.</p>
-</section>
-<section id="camera" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="camera">Camera</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Kamera</p>
-</div></div><p>Kameras stellen den Punkt dar, von dem aus die Welt in der gerenderten Szene betrachtet wird. Die Kameras als solche sind in den gerenderten Bildern nicht sichtbar.</p>
-</section>
-<section id="speaker" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="speaker">Speaker</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Lautsprecher</p>
-</div></div><p>Speaker werden verwendet, um an bestimmten Positionen in der Szene Töne erklingen zu lassen. So wie die Lichtquellen sind die Speaker nicht modellierbar, sondern stellen einen Punkt in der drei dimensionalen Welt dar, von dessen Position ein Klang ausgeht.</p>
-</section>
-<section id="force-field" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="force-field">Force Field</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Kraftfelder</p>
-</div></div><p>Force Fields sind Objekte, welche in Simulationen Kräfte auf andere Objekte ausüben können. So können andere Objekte beispielsweise angezogen oder absorbiert werden. Beim Rendern sind diese Objekte als solche nicht sichtbar, allerdings die Auswirkungen, welche deren Kräfte auf Objekte haben können.</p>
-</section>
-<section id="collection-instance" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="collection-instance">Collection Instance</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Collections</p>
-</div></div><p>Collections sind Einheiten, um Objekte anzuordnen und zu gruppieren. Sie erscheinen nicht im Viewport, sind aber im Outliner aufzufinden. Sie können wie Dateiordner verstanden werden.</p>
-</section>
-<section id="zusammenfassung-der-objektarten" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="zusammenfassung-der-objektarten">Zusammenfassung der Objektarten</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Verschiedene Objektarten</p>
-</div></div><p>Die verschiedenen Objektarten dienen also entweder der Darstellung von Objekten, der Darstellung von externen Dateien, der Darstellung der Szene oder haben vor allem unterstützende Funktionen:</p>
-<table class="caption-top table">
-<caption>Renderbare Objekte</caption>
-<colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Gitter-basiert</th>
-<th>Kurven-basiert</th>
-<th><strong>Metas</strong></th>
-<th>Linien</th>
-<th>Szenen-Tools</th>
-<th>Externe Daten</th>
-<th>Hilfs-Werkzeuge</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><strong>Mesh</strong></td>
-<td>Curve</td>
-<td>Metaball</td>
-<td>Grease Pencil</td>
-<td>Camera</td>
-<td>Volume</td>
-<td>Armature</td>
-</tr>
-<tr class="even">
-<td></td>
-<td>Surface</td>
-<td></td>
-<td></td>
-<td>Light</td>
-<td>Image</td>
-<td>Lattice</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Text</td>
-<td></td>
-<td></td>
-<td>Speaker</td>
-<td></td>
-<td>Empty</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>Force Field</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>Speaker</td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>Light Probe</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>Collection Instance</td>
-</tr>
-</tbody>
-</table>
+</div>
+<p>Übung 11: Objekterstellung mit Mesh-Daten</p>
+</div>
+<div class="exercisebox-body">
+<p><strong>Übung 11.1</strong></p>
+<p>Verändern Sie den Standardwürfel mittels Modifiern und Mesh-Daten so, dass das rechts abgebildete Objekt dargestellt wird.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Images/Chapter_15/Übung_11.1.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
+</figure>
+</div>
+<p><strong>Übung 11.2</strong></p>
+<p>Erstellen Sie mittels Modifiern das rechts abgebildete Objekt.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Images/Chapter_15/üBUNG_11.2.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 
 
 </section>

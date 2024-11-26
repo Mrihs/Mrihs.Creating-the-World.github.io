@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,10 +35,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-91e244b5d5aeb139bd2b7f90748216a0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
 <link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -192,6 +192,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../Chapters/Chapter_15.html">
  <span class="dropdown-text">Kapitel 15</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_16.html">
+ <span class="dropdown-text">Kapitel 16</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -302,7 +306,17 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Vertex-Gruppen</p>
-</div></div><p>Im Edit-Mode können einzelne Vertices zu Gruppen zusammengefasst werden. Solche Gruppen werden als Vertex Groups bezeichnet. Die Vertex-Gruppen können über den Properties-Editor unter dem Reiter «<em>Object Data Properties</em>» anvisiert werden</p>
+</div></div><p>Im Edit-Mode können einzelne Vertices zu Gruppen zusammengefasst werden. Solche Gruppen werden als Vertex Groups bezeichnet. Die Vertex-Gruppen können über den Properties-Editor unter dem Reiter «<em>Object Data Properties</em>» anvisiert werden.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_15/Icon_Vertex_Group.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Icon des «<em>Object Data Properties</em>»-Reiters im Properties-Editor.
+</figcaption>
+</figure>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Vertex-Gruppe erstellen</p>
@@ -333,16 +347,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="exercisebox-body">
 <p><strong>Übung 11.1</strong></p>
 <p>Verändern Sie den Standardwürfel mittels Modifiern und Mesh-Daten so, dass das rechts abgebildete Objekt dargestellt wird.</p>
-<div class="quarto-figure quarto-figure-left">
+<div class="quarto-figure quarto-figure-right">
 <figure class="figure">
-<p><img src="Images/Chapter_15/Übung_11.1.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
+<p><img src="Images/Chapter_15/Übung_11.1.png" class="img-fluid quarto-figure quarto-figure-right figure-img"></p>
 </figure>
 </div>
 <p><strong>Übung 11.2</strong></p>
 <p>Erstellen Sie mittels Modifiern das rechts abgebildete Objekt.</p>
-<div class="quarto-figure quarto-figure-left">
+<div class="quarto-figure quarto-figure-right">
 <figure class="figure">
-<p><img src="Images/Chapter_15/üBUNG_11.2.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
+<p><img src="Images/Chapter_15/üBUNG_11.2.png" class="img-fluid quarto-figure quarto-figure-right figure-img"></p>
 </figure>
 </div>
 </div>
@@ -434,8 +448,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -546,7 +558,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

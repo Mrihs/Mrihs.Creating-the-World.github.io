@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3. Navigation der Ansicht im 3D-Viewport – Creating the World</title>
+<title>16. Materialien, Texturen und Shader – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,8 +39,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-91e244b5d5aeb139bd2b7f90748216a0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
-<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -214,23 +212,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Auf dieser Seite</h2>
-   
-  <ul>
-  <li><a href="#navigation-mit-der-maus" id="toc-navigation-mit-der-maus" class="nav-link active" data-scroll-target="#navigation-mit-der-maus">Navigation mit der Maus</a></li>
-  <li><a href="#navigation-mit-der-tastatur" id="toc-navigation-mit-der-tastatur" class="nav-link" data-scroll-target="#navigation-mit-der-tastatur">Navigation mit der Tastatur</a></li>
-  <li><a href="#navigation-mittels-gizmos" id="toc-navigation-mittels-gizmos" class="nav-link" data-scroll-target="#navigation-mittels-gizmos">Navigation mittels Gizmos</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">3. Navigation der Ansicht im 3D-Viewport</h1>
+<h1 class="title">16. Materialien, Texturen und Shader</h1>
 </div>
 
 
@@ -249,63 +239,46 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Navigation in der 3D-Ansicht</p>
-</div></div><p>Die Ansicht auf die Objekte im 3D-Viewport kann beliebig verändert werden. Nebst der standardmässigen Ansichtssteuerung über die Maus kann auch das Nummernfeld der Tastatur verwendet werden. In der Regel werden beide Optionen verwendet. Die Navigation mit der Maus bietet tendenziell eine grössere Flexibilität, während die Navigation mit der Tastatur eine grössere Präzision ermöglicht.</p>
-<section id="navigation-mit-der-maus" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="navigation-mit-der-maus">Navigation mit der Maus</h2>
+<p>Fokus auf Materialien</p>
+</div></div><p>Bislang lag der Fokus dieses Kurses auf der Erstellung von Objekten. Die Objekte haben sich lediglich in ihrer Form unterschieden, aber nicht hinsichtlich des Materials, aus dem sie bestehen. Im nächsten Schritt wird die Bedeutung der Materialien behandelt, welche Mechanismen diesen zugrunde liegen und wie diese auf Objekte angewendet werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Ansicht mit der Maus verändern</p>
-</div></div><p>Je nach Aufbau der verwendeten Computermaus unterscheidet sich die Navigation durch den 3D-Viewport mit der Maus etwas. Bei einer Computermaus mit einem Mausrad erfolgt die Navigation im 3D-Viewport durch Mausbewegungen bei gedrückter Rad-Taste. Bei Trackpads oder Mäusen mit integriertem Trackpad erfolgt die Navigation mittels Wischbewegungen. Bei einer normalen Bewegung wird dabei lediglich die Ansicht entsprechend der Bewegung rotiert. Durch gleichzeitiges Drücken der <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste wird die Ansicht in die entsprechenden Richtungen bewegt (ohne eine Rotation). Mittels gedrückter <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span>-Taste kann durch die Mausbewegung hinein- oder hinausgezoomt werden. Durch das Drehen des Mausrads wird die Ansicht ebenfalls hinein- oder hinausgezoomt.</p>
-</section>
-<section id="navigation-mit-der-tastatur" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="navigation-mit-der-tastatur">Navigation mit der Tastatur</h2>
+<p>Material</p>
+</div></div><ul>
+<li>In den nächsten Kapiteln werden daher drei Begriffe von grosser Bedeutung sein: Materialien, Texturen und Shader. Beim Material handelt es sich dabei um ein Merkmal, welches einem Objekt oder einem Teil des Objektes zugewiesen wird. Das Material beschreibt sowohl, was auf der Oberfläche des Objektes (oder in dessen Volumen) abgebildet wird, als auch, wie dies dargestellt wird.</li>
+</ul>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Emulation des Nummernblocks</p>
-</div></div><p>Nebst der Maus kann auch die Tastatur verwendet werden, um die Ansicht zu verändern. Diese Option ergibt sich allerdings nur, wenn man über einen Nummernblock verfügt. Wenn kein Nummernblock zur Verfügung steht, lassen sich auch die Zahlen-Tasten oberhalb der Buchstaben für die Navigation verwenden. Hierfür muss allerdings in den Benutzereinstellungen («<em>Edit | Preferences</em>») in den Einstellungen zum «<em>Input</em>» beim Keyboard-Reiter die Einstellung «<em>Emulate Numpad</em>» aktiviert werden.</p>
+<p>Parameter</p>
+</div></div><ul>
+<li>Innerhalb des Materials wird eine Reihe verschiedener Parameter festgelegt, um eine Vielfalt an Materialien abdecken zu können. Diese Parameter können etwa die Farbe des Materials, aber auch Merkmale der Lichtreflexion beinhalten. Solche Parameter können einheitlich über das ganze Material angewendet werden (z.B. das ganze Material ist überall rot und reflektiert überall gleich stark), oder strukturell variieren (z.B. das Material stellt eine rote Mauer mit weissen Fugen dar – dabei weisen die Fugen eine andere Farbe auf und haben allenfalls auch eine andere Reflexion).</li>
+</ul>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Rotieren und Drehen der Ansicht</p>
-</div></div><p>Mittels der Tasten<kbd aria-hidden="true">2</kbd><span class="visually-hidden">2</span>, <kbd aria-hidden="true">4</kbd><span class="visually-hidden">4</span>, <kbd aria-hidden="true">6</kbd><span class="visually-hidden">6</span> und <kbd aria-hidden="true">8</kbd><span class="visually-hidden">8</span> kann die Ansicht entsprechend ihrer relativen Anordnung auf dem Nummernblock rotiert werden: Die Taste <kbd aria-hidden="true">2</kbd><span class="visually-hidden">2</span> rotiert nach unten, die Taste <kbd aria-hidden="true">4</kbd><span class="visually-hidden">4</span> nach links, die Taste <kbd aria-hidden="true">6</kbd><span class="visually-hidden">6</span> nach rechts und die Taste <kbd aria-hidden="true">8</kbd><span class="visually-hidden">8</span> nach oben. Werden dieselben Tasten bei gedrückter <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span>-Taste gedrückt, wird die Ansicht in die entsprechende Richtung bewegt, ohne eine Rotation durchzuführen. Mittels gedrückter <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste kann die Ansicht durch die Taste <kbd aria-hidden="true">6</kbd><span class="visually-hidden">6</span> zudem im Uhrzeigersinn und mittels der Taste <kbd aria-hidden="true">4</kbd><span class="visually-hidden">4</span> gegen den Uhrzeigersinn gedreht werden. Um näher hineinzuzoomen wird die Taste <kbd aria-hidden="true">+</kbd><span class="visually-hidden">+</span> und zum Hinauszoomen die Taste <kbd aria-hidden="true">-</kbd><span class="visually-hidden">-</span> verwendet.</p>
+<p>Texturen</p>
+</div></div><ul>
+<li>Um Parameter über Flächen hinweg variieren zu können, werden Texturen benötigt. Texturen sind Bilddokumente, welche dem Material zugwiesen werden und dadurch auch dem Objekt zugewiesen werden können. Eine Textur als solche wird jedoch nicht direkt auf ein Objekt angewendet, sondern als Material. Die wohl bekannteste Form der Texturen beschreibt, wie sich die Farbe des Materials über die Fläche des Objektes verändert. Allerdings können Texturen auch verwendet werden, um andere Parameter über die Fläche hinweg zu variieren.</li>
+</ul>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Präzise Ansichten ansteuern</p>
-</div></div><p>Mittels der Taste <kbd aria-hidden="true">1</kbd><span class="visually-hidden">1</span> kann die Ansicht direkt in die Vorderansicht gedreht werden. Die Ansicht erfolgt anschliessend entlang der Y-Achse. Die Rückansicht ist mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">1</kbd><span class="visually-hidden">1</span> einstellbar. Mittels der Taste wird die Seitenansicht – von der rechten Seite aus zum Objekt hingewählt. Das Objekt wird in diesem Falle entlang der X-Achse betrachtet. Mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">3</kbd><span class="visually-hidden">3</span> ist die Seitenansicht von der linken Seite aus einstellbar. Um die Szene aus der Vogelperspektive zu betrachten, kann die Taste <kbd aria-hidden="true">7</kbd><span class="visually-hidden">7</span> gedrückt werden. Hierbei erfolgt die Ansicht der Z-Achse entlang. Mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">7</kbd><span class="visually-hidden">7</span> erfolgt die Ansicht von unten.</p>
+<p>Shader</p>
+</div></div><p>Shader stellen Verarbeitungseinheiten der Parameter/Texturen dar. Sie bekommen Informationen aus den Parametern oder Texturen und verarbeiten diese weiter. Ein Emission-Shader nimmt beispielsweise jeweils die Parameter für die Farbe und strahlt diese um den Wert eines weiteren Parameters aus. Andere Shader berücksichtigen zusätzlich das Licht aus der Umgebung und verarbeiten die Parameter und Texturen in Abhängigkeit dieser Lichtquellen oder unter Berücksichtigung weiterer Parameter.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Perspektivische und orthogonale Darstelung</p>
-</div></div><p>Jede der Ansichten kann auf zwei Arten erfolgen: perspektivisch oder orthogonal. Die perspektivische Ansicht berücksichtigt Tiefeninformationen, sodass weiter entfernte Objekte kleiner dargestellt werden. Die orthogonale Perspektive ignoriert die Tiefeninformationen, wodurch weiter entfernte Objekte gleich gross angezeigt werden wie nähere gleich grosse Objekte auf der entsprechenden Achse. Diese Perspektive hat den Vorteil, dass Objekte in ihrer geometrischen Form in 2D betrachtet werden können. Mittels der Taste <kbd aria-hidden="true">5</kbd><span class="visually-hidden">5</span> kann zwischen diesen beiden Ansichtsmodi gewechselt werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Kamera-Ansicht</p>
-</div></div><p>Mittels der Taste <kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span> kann die Ansicht direkt in die Position der Kamera gelegt werden. Dadurch wird die Szene genau so betrachtet, wie sie im finalen Render betrachtet werden wird. Wenn in einer Szene keine Kamera vorhanden ist, steht diese Ansicht nicht zur Verfügung.Wenn mehrere Kameras vorhanden sind, wird jeweils die Kamera, welche die aktive Render Kamera darstellt, anvisiert. Um die Kameraperspektive zu verlassen kann die Ansicht mittels der Maus bewegt werden, oder erneut die Taste <kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span> gedrückt werden.</p>
-<div class="rememberbox">
-<div class="rememberbox-header">
-<div class="rememberbox-icon">
-
+<p>Materialien, Texturen und Shader</p>
+</div></div><p>Ein Material beinhaltet somit sowohl Parameter oder Texturen, welche Informationen beinhalten, als auch die Shader, welche die Informationen verarbeiten. Blender ist mit einer Reihe von eigenen Shadern ausgestattet, mit denen man arbeiten kann. Es ist allerdings auch möglich, eigene Shader zu erstellen oder die Verarbeitung der Informationen zu verändern.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_16/Materialien, Texturen Shader.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
-<p>Merke…</p>
-</div>
-<div class="rememberbox-body">
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="Images/Chapter_2/Tastatur.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Zusammenhang zwischen Materialien, Texturen und Shadern.
+</figcaption>
 </figure>
 </div>
-</div>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Fokus auf ein Objekt</p>
-</div></div><p>In komplexeren Szenen kann es sein, dass man die Übersicht über die Objekte verliert, oder dass sie sich gegenseitig im Weg stehen bei der Ansicht. Mittels der Taste <kbd aria-hidden="true">.</kbd><span class="visually-hidden">.</span> auf dem Nummernblock wird die Ansicht direkt auf ein ausgewähltes Objekt gezoomt. Diese Aktion lässt sich nicht mit der Taste <kbd aria-hidden="true">.</kbd><span class="visually-hidden">.</span> ausserhalb des Nummernblocks emulieren. Mittels der Taste <kbd aria-hidden="true">/</kbd><span class="visually-hidden">/</span> kann zudem die lokale Ansicht aktiviert werden. In dieser Ansicht wird lediglich das ausgewählte Objekt dargestellt, sodass es in komplexen Szenen besser betrachtet werden kann. Allerdings muss anschliessend die Taste erneut gedrückt werden, um die lokale Ansicht wieder zu verlassen. Auch diese Aktion lässt sich nicht mit einer anderen Taste ausserhalb des Nummernblocks emulieren.</p>
-</section>
-<section id="navigation-mittels-gizmos" class="level2">
-<h2 class="anchored" data-anchor-id="navigation-mittels-gizmos">Navigation mittels Gizmos</h2>
-<p>Auf der rechten Seite des 3D-Viewports lassen sich zudem Schaltflächen anzeigen, mit denen die Ansicht gesteuert werden kann. Um diese anzeigen zu lassen, müssen die Gizmos eingeschaltet sein. Wird die linke Maustaste auf das Kamera-Icon angewendet, wird die Kamera-Ansicht aktiviert. Das Icon darunter, welches ein Gitternetz darstellt, dient dem Wechsel zwischen perspektivischer und orthogonaler Ansicht. Die beiden oberen Icons dienen dem Zoomen (mittels der Lupe) und dem Bewegen der Ansicht (Hand). Hierfür muss das Icon angeklickt und die Maus anschliessend bei weiterhin gedrückter Maustaste bewegt werden. Zuoberst findet sich zudem ein Koordinatensystem, mit dem die Perspektive per Mausklick oder mittels gedrückter Maustaste verändert werden kann.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

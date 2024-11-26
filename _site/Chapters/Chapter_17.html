@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>16. Materialien, Texturen und Shader – Creating the World</title>
+<title>17. Materialien – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -216,15 +218,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#bedeutung-von-materialien" id="toc-bedeutung-von-materialien" class="nav-link active" data-scroll-target="#bedeutung-von-materialien">Bedeutung von Materialien</a></li>
+  <li><a href="#materialien-betrachten" id="toc-materialien-betrachten" class="nav-link" data-scroll-target="#materialien-betrachten">Materialien betrachten</a></li>
+  <li><a href="#materialien-hinzufügen" id="toc-materialien-hinzufügen" class="nav-link" data-scroll-target="#materialien-hinzufügen">Materialien hinzufügen</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">16. Materialien, Texturen und Shader</h1>
+<h1 class="title">17. Materialien</h1>
 </div>
 
 
@@ -241,48 +251,108 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="bedeutung-von-materialien" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="bedeutung-von-materialien">Bedeutung von Materialien</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Fokus auf Materialien</p>
-</div></div><p>Bislang lag der Fokus dieses Kurses auf der Erstellung von Objekten. Die Objekte haben sich lediglich in ihrer Form unterschieden, aber nicht hinsichtlich des Materials, aus dem sie bestehen. Im nächsten Schritt wird die Bedeutung der Materialien behandelt, welche Mechanismen diesen zugrunde liegen und wie diese auf Objekte angewendet werden.</p>
+<p>Wozu werden Materialien benötigt?</p>
+</div></div><p>In den bisherigen Übungen und Aufgaben wurden jeweils Objekte erstellt und es war klar, was diese Objekte darstellen. Ein Haus stellte anhand seiner geometrischen Figur ein Haus dar, ebenso verhielt es sich bei einem Koffer oder auch bei einem Glas. Doch gerade beim Glas kann die Wahrnehmung des Objektes erheblich durch dessen Material beeinflusst werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Material</p>
-</div></div><ul>
-<li>In den nächsten Kapiteln werden daher drei Begriffe von grosser Bedeutung sein: Materialien, Texturen und Shader. Beim Material handelt es sich dabei um ein Merkmal, welches einem Objekt oder einem Teil des Objektes zugewiesen wird. Das Material beschreibt sowohl, was auf der Oberfläche des Objektes (oder in dessen Volumen) abgebildet wird, als auch, wie dies dargestellt wird.</li>
-</ul>
+<p>Was stellt das Objekt dar?</p>
+</div></div><p>Zur Veranschaulichung: Das Bild in Abbildung 1 stellt dar, wie Objekte bislang in diesem Kurs betrachtet wurden. Die Oberfläche war für alle Objekte identisch, sodass zumindest erkennbar war, dass eine Oberfläche vorhanden ist. Für eine aussenstehende Person muss nicht zwingen klar sein, dass es sich bei diesem Objekt um ein Glas handelt. Es könnte sich auch um einen Becher handeln, der aus Plastik besteht, oder allenfalls um einen Pappbecher. Abbildung 2 zeigt mögliche Interpretationsbeispiele für dieses Objekt auf. Alle diese Beispiele zeigen dasselbe Mesh mit denselben Vertices, Edges und Faces. Sie unterscheiden sich allerdings hinsichtlich der ihnen hinzugefügten Materialien.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Parameter</p>
-</div></div><ul>
-<li>Innerhalb des Materials wird eine Reihe verschiedener Parameter festgelegt, um eine Vielfalt an Materialien abdecken zu können. Diese Parameter können etwa die Farbe des Materials, aber auch Merkmale der Lichtreflexion beinhalten. Solche Parameter können einheitlich über das ganze Material angewendet werden (z.B. das ganze Material ist überall rot und reflektiert überall gleich stark), oder strukturell variieren (z.B. das Material stellt eine rote Mauer mit weissen Fugen dar – dabei weisen die Fugen eine andere Farbe auf und haben allenfalls auch eine andere Reflexion).</li>
-</ul>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Texturen</p>
-</div></div><ul>
-<li>Um Parameter über Flächen hinweg variieren zu können, werden Texturen benötigt. Texturen sind Bilddokumente, welche dem Material zugwiesen werden und dadurch auch dem Objekt zugewiesen werden können. Eine Textur als solche wird jedoch nicht direkt auf ein Objekt angewendet, sondern als Material. Die wohl bekannteste Form der Texturen beschreibt, wie sich die Farbe des Materials über die Fläche des Objektes verändert. Allerdings können Texturen auch verwendet werden, um andere Parameter über die Fläche hinweg zu variieren.</li>
-</ul>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Shader</p>
-</div></div><p>Shader stellen Verarbeitungseinheiten der Parameter/Texturen dar. Sie bekommen Informationen aus den Parametern oder Texturen und verarbeiten diese weiter. Ein Emission-Shader nimmt beispielsweise jeweils die Parameter für die Farbe und strahlt diese um den Wert eines weiteren Parameters aus. Andere Shader berücksichtigen zusätzlich das Licht aus der Umgebung und verarbeiten die Parameter und Texturen in Abhängigkeit dieser Lichtquellen oder unter Berücksichtigung weiterer Parameter.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Materialien, Texturen und Shader</p>
-</div></div><p>Ein Material beinhaltet somit sowohl Parameter oder Texturen, welche Informationen beinhalten, als auch die Shader, welche die Informationen verarbeiten. Blender ist mit einer Reihe von eigenen Shadern ausgestattet, mit denen man arbeiten kann. Es ist allerdings auch möglich, eigene Shader zu erstellen oder die Verarbeitung der Informationen zu verändern.</p>
-<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<p>Objekt-Benennung durch Materialien</p>
+</div></div><p>Durch die Anwendung von Materialien kann also die Wahrnehmung der Objekte verändert werden. Ein Glas erscheint als Glas, weil es eine gewisse Transparenz aufweist. Andere Materialien verfügen über unterschiedliche Farben und können so voneinander abgegrenzt werden. Hierfür gibt es verschiedene Merkmale der Materialien, welche noch ausführlich beschrieben werden.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_16/Materialien, Texturen Shader.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_17/Glas oder Becher.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Zusammenhang zwischen Materialien, Texturen und Shadern.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Ein Objekt mit unterschiedlichen Materialien.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="materialien-betrachten" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="materialien-betrachten">Materialien betrachten</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Viewport-Shading-Modus wechseln</p>
+</div></div><p>Damit Materialien betrachtet werden können, ist ein Wechsel in der Benutzeroberfläche in Blender nötig. Bislang wurden Objekte im Solid-Viewport-Shading-Modus betrachtet. In diesem Modus werden die Materialien von Objekten nicht für die Darstellung berücksichtigt. Um die Materialien ebenfalls betrachten zu können, wird deshalb ein Viewport-Shading-Modus benötigt, der die Materialien ebenfalls darstellt. Hierfür kann der Material-Preview-Modus oder der Render-Preview-Modus verwendet werden. Beide Einstellungen sind in der rechten oberen Ecke des Viewport-Displays anwählbar. Durch das Drücken der Taste <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> erscheint zudem bei der Maus ein Kontext-Menü, welches die verschiedenen Modi zur schnellen Auswahl anbietet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Material-Preview-Modus verwenden</p>
+</div></div><p>Zum jetzigen Zeitpunkt des Kurses ist der Render-Preview-Modus noch nicht zu empfehlen. Dieser Modus berücksichtigt die Lichtquellen und Lichtreflexionen, welche in der Welt dargestellt werden. Dadurch ist es teils schwer abzuschätzen, ob Probleme im Material auf dem Material oder der umgebenden Beleuchtung beruhen. Deshalb wird an dieser Stelle der Material-Preview-Modus verwendet. Dieser stellt die Materialien dar und liefert vorgefertigte Beleuchtungsszenarien für die Welt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Material-Preview-Modus</p>
+</div></div><p>Durch einen Klick auf die Schaltfläche für den Material-Preview-Modus verändert sich die Darstellung der Oberfläche der Meshes. Blender generiert die Materialien, welche dem Mesh zugewiesen sind, und präsentiert diese basierend auf den Einstellungen der Welt – in diesem Fall basierend auf den Einstellungen der Vorschau-Welt.</p>
+</section>
+<section id="materialien-hinzufügen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="materialien-hinzufügen">Materialien hinzufügen</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Default-Material</p>
+</div></div><p>Jedes Objekt wird im Material-Preview-Modus und im Render-Modus mit einem Material dargestellt. In einer neuen Szene verfügt der Standardwürfel bereits über ein vorgegebenes Material, welches abgeändert werden kann. Ein neu der Szene hinzugefügtes Objekt wird ebenfalls mit einem Material dargestellt. Im Gegensatz zum Standardwürfel ist dieses Objekt aber eigentlich noch nicht mit einem Material ausgestattet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Material-Reiter</p>
+</div></div><p>Um das Material eines Objektes aufzurufen, kann der Material-Reiter im Properties-Editor aufgerufen werden. Unter diesem Reiter werden die Materialien des aktiven Objektes aufgelistet. Wenn mehrere Objekte ausgewählt sind, werden nur die Materialien des aktiven Objekts dargestellt. Die Materialien sind unabhängig davon ersichtlich, ob aktuell der Object- oder der Edit-Mode ausgewählt ist.</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_17/Material Properties pannel.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Das Properties-Panel mit dem ausgewählten Material-Reiter.
 </figcaption>
 </figure>
 </div>
 
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Fehlendes Material</p>
+</div></div><p>Wenn ein Objekt noch über kein Material verfügt, ist der Material-Reiter noch leer. Es gibt lediglich folgende Bereiche:</p>
+<ul>
+<li><strong>Leeres Feld</strong>: Darin werden alle Slots für die Materialien eines Objekts aufgelistet.</li>
+<li>«<strong>+</strong>»: Dadurch lässt sich ein neuer Slot für Materialien erstellen.</li>
+<li>«<strong>-</strong>»: Dadurch lässt sich ein ausgewählter Slot für Materialien entfernen.</li>
+<li>«<strong><em>New</em></strong>»: Dadurch lässt sich ein neues Material erstellen.</li>
+</ul>
 
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Slots für Materialien</p>
+</div></div><p>Wenn nun die Schaltfläche «+» betätigt wird, erscheint ein neuer Material-Slot für ein Material in dem Feld, welches vorher leer war. Wichtig ist dabei, dass dies lediglich einen Platzhalter für ein Material darstellt – es wurde noch kein Material hinzugefügt. Durch das erneute Klicken der Taste «+» erscheint ein weiterer Slot für Materialien. Durch das Betätigen der Taste «-» wird dieser Slot wieder entfernt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Neues Material erstellen</p>
+</div></div><p>Durch das Drücken der Schaltfläche «<em>New</em>» wird ein neues Material erstellt. Dieses neue Material wird mit der Beschriftung «<em>Material</em>», und allenfalls gefolgt von einer Nummer hinter der Bezeichnung, an der Stelle angezeigt, an der sich vorher die Schaltfläche «<em>New</em>» befunden hat. Zusätzlich wird das Material nun in der Auflistung der Materialien im darüberliegenden Feld angezeigt. Durch das Hinzufügen eines Materials wird automatisch ein Slot erstellt, selbst wenn die Auflistung der Slots noch leer war. Wenn ein Slot vorhanden ist, dieser aber noch leer ist, wird das Material diesem Slot hinzugefügt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Materialien ausdemselben Dokument wieder verwenden</p>
+</div></div><p>Statt ein neues Material zu erstellen, können auch Materialien, die bereits in demselben Blender-Dokument erstellt wurden, dem Material-Slot zugewiesen werden. Hierfür muss statt auf die Schaltfläche «<em>New</em>» auf das Dropdown-Menü links dieser Schaltfläche geklickt werden. Darin werden alle Materialien aufgeführt, die bereits in diesem Dokument vorhanden sind. Durch die Auswahl eines dieser Materialien wird dieses Material anschliessend auch auf das Objekt angewendet. Dabei ist allerdings zu beachten, dass dadurch keine Kopie des Materials erstellt wird. Wird das Material etwa auch von einem anderen Objekt verwendet, so führt eine Veränderung des Materials auch bei diesem Objekt zu einer Veränderung.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Einstellungsoptionen der Materialien</p>
+</div></div><p>Durch die Auswahl oder die Erstellung eines Materials erscheint eine Reihe von Einstellungsoptionen innerhalb des Material-Reiters. Diese sind in folgende Bereiche gegliedert:</p>
+<ul>
+<li><p>«<strong><em>Preview</em></strong>»: Darin wird eine Vorschau des Materials für verschiedene Objektarten angeboten.</p></li>
+<li><p>«<strong><em>Surface</em></strong>»: Darin werden die grundlegenden Einstellungen der Oberflächenbeschaffenheit des Materials vorgenommen.</p></li>
+<li><p>«<strong><em>Volume</em></strong>»: Darin können Eigenschaften für das Volumen des Materials definiert werden.</p></li>
+<li><p>«<strong><em>Settings</em></strong>»: Darin können weitere Einstellungen für die Darstellung des Materials vorgenommen werden.</p></li>
+<li><p>«<strong><em>Line Art</em></strong>»: Darin können Parameter für die Erstellung von Linien eingestellt werden, wenn die Erstellung von Linien aktiviert ist.</p></li>
+<li><p>«<strong><em>Viewport Display</em></strong>»: Darin können grundlegende Material-Eigenschaften für die Darstellung des Materials im Solid-Modus erstellt werden. Diese Eigenschaften dienen lediglich der Zurechtfin dung im Solid-Modus und haben keinen Einfluss auf die Darstellung des Materials im finalen, gerenderten Produkt.</p></li>
+<li><p>«<strong><em>Custom Properties</em></strong>»: Darin können eigene Eigenschaften für ein Material definiert werden. Eine grosse Bedeutung kommt den Einstellungsoptionen im Reiter «<em>Surface</em>» zu. Diese werden fortan benötigt, um die Materialien zu bearbeiten, während die anderen Optionen noch nicht berücksichtigt werden.</p></li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Use Nodes</p>
+</div></div><p>Im Reiter «<em>Surface</em>» wird zuoberst die Schaltfläche «Use Nodes» blau eingefärbt dargestellt. Dies bedeutet, dass die Einstellung der Oberfläche innerhalb des Shader-Editors bearbeitet werden kann. Die meisten der Einstellungen im Material-Reiter können in diesem Editor erfolgen. Zudem bietet dieser Editor eine Reihe Möglichkeiten, um die Materialien noch genauer zu bearbeiten. Deshalb ist es empfehlenswert, den Shader-Editor zu verwenden.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

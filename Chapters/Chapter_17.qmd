@@ -1,0 +1,111 @@
+---
+title: "17. Materialien"
+editor: visual
+---
+
+## Bedeutung von Materialien
+
+::: column-margin
+Wozu werden Materialien benötigt?
+:::
+
+In den bisherigen Übungen und Aufgaben wurden jeweils Objekte erstellt und es war klar, was diese Objekte darstellen. Ein Haus stellte anhand seiner geometrischen Figur ein Haus dar, ebenso verhielt es sich bei einem Koffer oder auch bei einem Glas. Doch gerade beim Glas kann die Wahrnehmung des Objektes erheblich durch dessen Material beeinflusst werden.
+
+::: column-margin
+Was stellt das Objekt dar?
+:::
+
+Zur Veranschaulichung: Das Bild in Abbildung 1 stellt dar, wie Objekte bislang in diesem Kurs betrachtet wurden. Die Oberfläche war für alle Objekte identisch, sodass zumindest erkennbar war, dass eine Oberfläche vorhanden ist. Für eine aussenstehende Person muss nicht zwingen klar sein, dass es sich bei diesem Objekt um ein Glas handelt. Es könnte sich auch um einen Becher handeln, der aus Plastik besteht, oder allenfalls um einen Pappbecher. Abbildung 2 zeigt mögliche Interpretationsbeispiele für dieses Objekt auf. Alle diese Beispiele zeigen dasselbe Mesh mit denselben Vertices, Edges und Faces. Sie unterscheiden sich allerdings hinsichtlich der ihnen hinzugefügten Materialien.
+
+::: column-margin
+Objekt-Benennung durch Materialien
+:::
+
+Durch die Anwendung von Materialien kann also die Wahrnehmung der Objekte verändert werden. Ein Glas erscheint als Glas, weil es eine gewisse Transparenz aufweist. Andere Materialien verfügen über unterschiedliche Farben und können so voneinander abgegrenzt werden. Hierfür gibt es verschiedene Merkmale der Materialien, welche noch ausführlich beschrieben werden.
+
+![Ein Objekt mit unterschiedlichen Materialien.](Images/Chapter_17/Glas%20oder%20Becher.png){#fig-1_2 fig-align="left"}
+
+## Materialien betrachten
+
+::: column-margin
+Viewport-Shading-Modus wechseln
+:::
+
+Damit Materialien betrachtet werden können, ist ein Wechsel in der Benutzeroberfläche in Blender nötig. Bislang wurden Objekte im Solid-Viewport-Shading-Modus betrachtet. In diesem Modus werden die Materialien von Objekten nicht für die Darstellung berücksichtigt. Um die Materialien ebenfalls betrachten zu können, wird deshalb ein Viewport-Shading-Modus benötigt, der die Materialien ebenfalls darstellt. Hierfür kann der Material-Preview-Modus oder der Render-Preview-Modus verwendet werden. Beide Einstellungen sind in der rechten oberen Ecke des Viewport-Displays anwählbar. Durch das Drücken der Taste {{< kbd Z >}} erscheint zudem bei der Maus ein Kontext-Menü, welches die verschiedenen Modi zur schnellen Auswahl anbietet.
+
+::: column-margin
+Material-Preview-Modus verwenden
+:::
+
+Zum jetzigen Zeitpunkt des Kurses ist der Render-Preview-Modus noch nicht zu empfehlen. Dieser Modus berücksichtigt die Lichtquellen und Lichtreflexionen, welche in der Welt dargestellt werden. Dadurch ist es teils schwer abzuschätzen, ob Probleme im Material auf dem Material oder der umgebenden Beleuchtung beruhen. Deshalb wird an dieser Stelle der Material-Preview-Modus verwendet. Dieser stellt die Materialien dar und liefert vorgefertigte Beleuchtungsszenarien für die Welt.
+
+::: column-margin
+Material-Preview-Modus
+:::
+
+Durch einen Klick auf die Schaltfläche für den Material-Preview-Modus verändert sich die Darstellung der Oberfläche der Meshes. Blender generiert die Materialien, welche dem Mesh zugewiesen sind, und präsentiert diese basierend auf den Einstellungen der Welt – in diesem Fall basierend auf den Einstellungen der Vorschau-Welt.
+
+## Materialien hinzufügen
+
+::: column-margin
+Default-Material
+:::
+
+Jedes Objekt wird im Material-Preview-Modus und im Render-Modus mit einem Material dargestellt. In einer neuen Szene verfügt der Standardwürfel bereits über ein vorgegebenes Material, welches abgeändert werden kann. Ein neu der Szene hinzugefügtes Objekt wird ebenfalls mit einem Material dargestellt. Im Gegensatz zum Standardwürfel ist dieses Objekt aber eigentlich noch nicht mit einem Material ausgestattet.
+
+::: column-margin
+Material-Reiter
+:::
+
+Um das Material eines Objektes aufzurufen, kann der Material-Reiter im Properties-Editor aufgerufen werden. Unter diesem Reiter werden die Materialien des aktiven Objektes aufgelistet. Wenn mehrere Objekte ausgewählt sind, werden nur die Materialien des aktiven Objekts dargestellt. Die Materialien sind unabhängig davon ersichtlich, ob aktuell der Object- oder der Edit-Mode ausgewählt ist.
+
+![Das Properties-Panel mit dem ausgewählten Material-Reiter.](Images/Chapter_17/Material%20Properties%20pannel.png){#fig-1_3 fig-align="left"}
+
+::: column-margin
+Fehlendes Material
+:::
+
+Wenn ein Objekt noch über kein Material verfügt, ist der Material-Reiter noch leer. Es gibt lediglich folgende Bereiche:
+
+-   **Leeres Feld**: Darin werden alle Slots für die Materialien eines Objekts aufgelistet.
+-   «**+**»: Dadurch lässt sich ein neuer Slot für Materialien erstellen.
+-   «**-**»: Dadurch lässt sich ein ausgewählter Slot für Materialien entfernen.
+-   «***New***»: Dadurch lässt sich ein neues Material erstellen.
+
+::: column-margin
+Slots für Materialien
+:::
+
+Wenn nun die Schaltfläche «+» betätigt wird, erscheint ein neuer Material-Slot für ein Material in dem Feld, welches vorher leer war. Wichtig ist dabei, dass dies lediglich einen Platzhalter für ein Material darstellt – es wurde noch kein Material hinzugefügt. Durch das erneute Klicken der Taste «+» erscheint ein weiterer Slot für Materialien. Durch das Betätigen der Taste «-» wird dieser Slot wieder entfernt.
+
+::: column-margin
+Neues Material erstellen
+:::
+
+Durch das Drücken der Schaltfläche «*New*» wird ein neues Material erstellt. Dieses neue Material wird mit der Beschriftung «*Material*», und allenfalls gefolgt von einer Nummer hinter der Bezeichnung, an der Stelle angezeigt, an der sich vorher die Schaltfläche «*New*» befunden hat. Zusätzlich wird das Material nun in der Auflistung der Materialien im darüberliegenden Feld angezeigt. Durch das Hinzufügen eines Materials wird automatisch ein Slot erstellt, selbst wenn die Auflistung der Slots noch leer war. Wenn ein Slot vorhanden ist, dieser aber noch leer ist, wird das Material diesem Slot hinzugefügt.
+
+::: column-margin
+Materialien ausdemselben Dokument wieder verwenden
+:::
+
+Statt ein neues Material zu erstellen, können auch Materialien, die bereits in demselben Blender-Dokument erstellt wurden, dem Material-Slot zugewiesen werden. Hierfür muss statt auf die Schaltfläche «*New*» auf das Dropdown-Menü links dieser Schaltfläche geklickt werden. Darin werden alle Materialien aufgeführt, die bereits in diesem Dokument vorhanden sind. Durch die Auswahl eines dieser Materialien wird dieses Material anschliessend auch auf das Objekt angewendet. Dabei ist allerdings zu beachten, dass dadurch keine Kopie des Materials erstellt wird. Wird das Material etwa auch von einem anderen Objekt verwendet, so führt eine Veränderung des Materials auch bei diesem Objekt zu einer Veränderung.
+
+::: column-margin
+Einstellungsoptionen der Materialien
+:::
+
+Durch die Auswahl oder die Erstellung eines Materials erscheint eine Reihe von Einstellungsoptionen innerhalb des Material-Reiters. Diese sind in folgende Bereiche gegliedert:
+
+-   «***Preview***»: Darin wird eine Vorschau des Materials für verschiedene Objektarten angeboten.
+-   «***Surface***»: Darin werden die grundlegenden Einstellungen der Oberflächenbeschaffenheit des Materials vorgenommen.
+-   «***Volume***»: Darin können Eigenschaften für das Volumen des Materials definiert werden.
+-   «***Settings***»: Darin können weitere Einstellungen für die Darstellung des Materials vorgenommen werden.
+-   «***Line Art***»: Darin können Parameter für die Erstellung von Linien eingestellt werden, wenn die Erstellung von Linien aktiviert ist.
+-   «***Viewport Display***»: Darin können grundlegende Material-Eigenschaften für die Darstellung des Materials im Solid-Modus erstellt werden. Diese Eigenschaften dienen lediglich der Zurechtfindung im Solid-Modus und haben keinen Einfluss auf die Darstellung des Materials im finalen, gerenderten Produkt.
+-   «***Custom Properties***»: Darin können eigene Eigenschaften für ein Material definiert werden. Eine grosse Bedeutung kommt den Einstellungsoptionen im Reiter «*Surface*» zu. Diese werden fortan benötigt, um die Materialien zu bearbeiten, während die anderen Optionen noch nicht berücksichtigt werden.
+
+::: column-margin
+Use Nodes
+:::
+
+Im Reiter «*Surface*» wird zuoberst die Schaltfläche «*Use Nodes*» blau eingefärbt dargestellt. Dies bedeutet, dass die Einstellung der Oberfläche innerhalb des Shader-Editors bearbeitet werden kann. Die meisten der Einstellungen im Material-Reiter können in diesem Editor erfolgen. Zudem bietet dieser Editor eine Reihe Möglichkeiten, um die Materialien noch genauer zu bearbeiten. Deshalb ist es empfehlenswert, den Shader-Editor zu verwenden.

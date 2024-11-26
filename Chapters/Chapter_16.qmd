@@ -1,0 +1,44 @@
+---
+title: "16. Materialien, Texturen und Shader"
+editor: visual
+---
+
+::: column-margin
+Fokus auf Materialien
+:::
+
+Bislang lag der Fokus dieses Kurses auf der Erstellung von Objekten. Die Objekte haben sich lediglich in ihrer Form unterschieden, aber nicht hinsichtlich des Materials, aus dem sie bestehen. Im nächsten Schritt wird die Bedeutung der Materialien behandelt, welche Mechanismen diesen zugrunde liegen und wie diese auf Objekte angewendet werden.
+
+::: column-margin
+Material
+:::
+
+-   In den nächsten Kapiteln werden daher drei Begriffe von grosser Bedeutung sein: Materialien, Texturen und Shader. Beim Material handelt es sich dabei um ein Merkmal, welches einem Objekt oder einem Teil des Objektes zugewiesen wird. Das Material beschreibt sowohl, was auf der Oberfläche des Objektes (oder in dessen Volumen) abgebildet wird, als auch, wie dies dargestellt wird.
+
+::: column-margin
+Parameter
+:::
+
+-   Innerhalb des Materials wird eine Reihe verschiedener Parameter festgelegt, um eine Vielfalt an Materialien abdecken zu können. Diese Parameter können etwa die Farbe des Materials, aber auch Merkmale der Lichtreflexion beinhalten. Solche Parameter können einheitlich über das ganze Material angewendet werden (z.B. das ganze Material ist überall rot und reflektiert überall gleich stark), oder strukturell variieren (z.B. das Material stellt eine rote Mauer mit weissen Fugen dar – dabei weisen die Fugen eine andere Farbe auf und haben allenfalls auch eine andere Reflexion).
+
+::: column-margin
+Texturen
+:::
+
+-   Um Parameter über Flächen hinweg variieren zu können, werden Texturen benötigt. Texturen sind Bilddokumente, welche dem Material zugwiesen werden und dadurch auch dem Objekt zugewiesen werden können. Eine Textur als solche wird jedoch nicht direkt auf ein Objekt angewendet, sondern als Material. Die wohl bekannteste Form der Texturen beschreibt, wie sich die Farbe des Materials über die Fläche des Objektes verändert. Allerdings können Texturen auch verwendet werden, um andere Parameter über die Fläche hinweg zu variieren.
+
+::: column-margin
+Shader
+:::
+
+Shader stellen Verarbeitungseinheiten der Parameter/Texturen dar. Sie bekommen Informationen aus den Parametern oder Texturen und verarbeiten diese weiter. Ein Emission-Shader nimmt beispielsweise jeweils die Parameter für die Farbe und strahlt diese um den Wert eines weiteren Parameters aus. Andere Shader berücksichtigen zusätzlich das Licht aus der Umgebung und verarbeiten die Parameter und Texturen
+in Abhängigkeit dieser Lichtquellen oder unter Berücksichtigung weiterer Parameter.
+
+::: column-margin
+Materialien, Texturen und Shader
+:::
+
+Ein Material beinhaltet somit sowohl Parameter oder Texturen, welche Informationen beinhalten, als auch die Shader, welche die Informationen verarbeiten. Blender ist mit einer Reihe von eigenen Shadern ausgestattet, mit denen man arbeiten kann. Es ist allerdings auch möglich, eigene Shader zu erstellen oder die Verarbeitung 
+der Informationen zu verändern. 
+
+![Zusammenhang zwischen Materialien, Texturen und Shadern.](Images/Chapter_16/Materialien, Texturen Shader.png){#fig-1_1 fig-align="left"}

@@ -91,7 +91,9 @@ Durch den Edge Crease und den Bevel Weight stehen Möglichkeiten zur Verfügung,
 Vertex-Gruppen
 :::
 
-Im Edit-Mode können einzelne Vertices zu Gruppen zusammengefasst werden. Solche Gruppen werden als Vertex Groups bezeichnet. Die Vertex-Gruppen können über den Properties-Editor unter dem Reiter «*Object Data Properties*» anvisiert werden
+Im Edit-Mode können einzelne Vertices zu Gruppen zusammengefasst werden. Solche Gruppen werden als Vertex Groups bezeichnet. Die Vertex-Gruppen können über den Properties-Editor unter dem Reiter «*Object Data Properties*» anvisiert werden.
+
+![Icon des «*Object Data Properties*»-Reiters im Properties-Editor.](Images/Chapter_15/Icon_Vertex_Group.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Vertex-Gruppe erstellen
@@ -137,12 +139,12 @@ Bei vielen Modifiern lassen sich innerhalb der Einstellungen Vertex-Gruppen in e
 
 Verändern Sie den Standardwürfel mittels Modifiern und Mesh-Daten so, dass das rechts abgebildete Objekt dargestellt wird.
 
-![](Images/Chapter_15/Übung_11.1.png){fig-align="left"}
+![](Images/Chapter_15/Übung_11.1.png){fig-align="right"}
 
 **Übung 11.2**
 
 Erstellen Sie mittels Modifiern das rechts abgebildete Objekt.
 
-![](Images/Chapter_15/üBUNG_11.2.png){fig-align="left"}
+![](Images/Chapter_15/üBUNG_11.2.png){fig-align="right"}
 :::
 ::::::

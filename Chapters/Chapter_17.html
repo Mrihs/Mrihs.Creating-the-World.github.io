@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8. Objekte im Viewport-Display transformieren – Creating the World</title>
+<title>17. Materialien – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -223,9 +223,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#position" id="toc-position" class="nav-link active" data-scroll-target="#position">Position</a></li>
-  <li><a href="#rotation" id="toc-rotation" class="nav-link" data-scroll-target="#rotation">Rotation</a></li>
-  <li><a href="#scale" id="toc-scale" class="nav-link" data-scroll-target="#scale">Scale</a></li>
+  <li><a href="#bedeutung-von-materialien" id="toc-bedeutung-von-materialien" class="nav-link active" data-scroll-target="#bedeutung-von-materialien">Bedeutung von Materialien</a></li>
+  <li><a href="#materialien-betrachten" id="toc-materialien-betrachten" class="nav-link" data-scroll-target="#materialien-betrachten">Materialien betrachten</a></li>
+  <li><a href="#materialien-hinzufügen" id="toc-materialien-hinzufügen" class="nav-link" data-scroll-target="#materialien-hinzufügen">Materialien hinzufügen</a></li>
   </ul>
 </nav>
     </div>
@@ -234,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">8. Objekte im Viewport-Display transformieren</h1>
+<h1 class="title">17. Materialien</h1>
 </div>
 
 
@@ -251,87 +251,105 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="bedeutung-von-materialien" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="bedeutung-von-materialien">Bedeutung von Materialien</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Befehle für Transformationen</p>
-</div></div><p>Statt mit der Sidebar können Objekte auch direkt im 3D-Viewport-Display transformiert werden. Sobald ein Objekt – oder auch mehrere Objekte – ausgewählt sind, lassen sich die Objekte direkt im Viewport mittels der folgenden Befehle transformieren:</p>
+<p>Wozu werden Materialien benötigt?</p>
+</div></div><p>In den bisherigen Übungen und Aufgaben wurden jeweils Objekte erstellt und es war klar, was diese Objekte darstellen. Ein Haus stellte anhand seiner geometrischen Figur ein Haus dar, ebenso verhielt es sich bei einem Koffer oder auch bei einem Glas. Doch gerade beim Glas kann die Wahrnehmung des Objektes erheblich durch dessen Material beeinflusst werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Was stellt das Objekt dar?</p>
+</div></div><p>Zur Veranschaulichung: Das Bild in Abbildung 1 stellt dar, wie Objekte bislang in diesem Kurs betrachtet wurden. Die Oberfläche war für alle Objekte identisch, sodass zumindest erkennbar war, dass eine Oberfläche vorhanden ist. Für eine aussenstehende Person muss nicht zwingen klar sein, dass es sich bei diesem Objekt um ein Glas handelt. Es könnte sich auch um einen Becher handeln, der aus Plastik besteht, oder allenfalls um einen Pappbecher. Abbildung 2 zeigt mögliche Interpretationsbeispiele für dieses Objekt auf. Alle diese Beispiele zeigen dasselbe Mesh mit denselben Vertices, Edges und Faces. Sie unterscheiden sich allerdings hinsichtlich der ihnen hinzugefügten Materialien.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Objekt-Benennung durch Materialien</p>
+</div></div><p>Durch die Anwendung von Materialien kann also die Wahrnehmung der Objekte verändert werden. Ein Glas erscheint als Glas, weil es eine gewisse Transparenz aufweist. Andere Materialien verfügen über unterschiedliche Farben und können so voneinander abgegrenzt werden. Hierfür gibt es verschiedene Merkmale der Materialien, welche noch ausführlich beschrieben werden.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_17/Glas oder Becher.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Ein Objekt mit unterschiedlichen Materialien.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="materialien-betrachten" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="materialien-betrachten">Materialien betrachten</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Viewport-Shading-Modus wechseln</p>
+</div></div><p>Damit Materialien betrachtet werden können, ist ein Wechsel in der Benutzeroberfläche in Blender nötig. Bislang wurden Objekte im Solid-Viewport-Shading-Modus betrachtet. In diesem Modus werden die Materialien von Objekten nicht für die Darstellung berücksichtigt. Um die Materialien ebenfalls betrachten zu können, wird deshalb ein Viewport-Shading-Modus benötigt, der die Materialien ebenfalls darstellt. Hierfür kann der Material-Preview-Modus oder der Render-Preview-Modus verwendet werden. Beide Einstellungen sind in der rechten oberen Ecke des Viewport-Displays anwählbar. Durch das Drücken der Taste <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> erscheint zudem bei der Maus ein Kontext-Menü, welches die verschiedenen Modi zur schnellen Auswahl anbietet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Material-Preview-Modus verwenden</p>
+</div></div><p>Zum jetzigen Zeitpunkt des Kurses ist der Render-Preview-Modus noch nicht zu empfehlen. Dieser Modus berücksichtigt die Lichtquellen und Lichtreflexionen, welche in der Welt dargestellt werden. Dadurch ist es teils schwer abzuschätzen, ob Probleme im Material auf dem Material oder der umgebenden Beleuchtung beruhen. Deshalb wird an dieser Stelle der Material-Preview-Modus verwendet. Dieser stellt die Materialien dar und liefert vorgefertigte Beleuchtungsszenarien für die Welt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Material-Preview-Modus</p>
+</div></div><p>Durch einen Klick auf die Schaltfläche für den Material-Preview-Modus verändert sich die Darstellung der Oberfläche der Meshes. Blender generiert die Materialien, welche dem Mesh zugewiesen sind, und präsentiert diese basierend auf den Einstellungen der Welt – in diesem Fall basierend auf den Einstellungen der Vorschau-Welt.</p>
+</section>
+<section id="materialien-hinzufügen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="materialien-hinzufügen">Materialien hinzufügen</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Default-Material</p>
+</div></div><p>Jedes Objekt wird im Material-Preview-Modus und im Render-Modus mit einem Material dargestellt. In einer neuen Szene verfügt der Standardwürfel bereits über ein vorgegebenes Material, welches abgeändert werden kann. Ein neu der Szene hinzugefügtes Objekt wird ebenfalls mit einem Material dargestellt. Im Gegensatz zum Standardwürfel ist dieses Objekt aber eigentlich noch nicht mit einem Material ausgestattet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Material-Reiter</p>
+</div></div><p>Um das Material eines Objektes aufzurufen, kann der Material-Reiter im Properties-Editor aufgerufen werden. Unter diesem Reiter werden die Materialien des aktiven Objektes aufgelistet. Wenn mehrere Objekte ausgewählt sind, werden nur die Materialien des aktiven Objekts dargestellt. Die Materialien sind unabhängig davon ersichtlich, ob aktuell der Object- oder der Edit-Mode ausgewählt ist.</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_17/Material Properties pannel.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Das Properties-Panel mit dem ausgewählten Material-Reiter.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Fehlendes Material</p>
+</div></div><p>Wenn ein Objekt noch über kein Material verfügt, ist der Material-Reiter noch leer. Es gibt lediglich folgende Bereiche:</p>
 <ul>
-<li>Position: <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span> («Grab»)</li>
-<li>Rotation: <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span></li>
-<li>Skalierung: <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span></li>
+<li><strong>Leeres Feld</strong>: Darin werden alle Slots für die Materialien eines Objekts aufgelistet.</li>
+<li>«<strong>+</strong>»: Dadurch lässt sich ein neuer Slot für Materialien erstellen.</li>
+<li>«<strong>-</strong>»: Dadurch lässt sich ein ausgewählter Slot für Materialien entfernen.</li>
+<li>«<strong><em>New</em></strong>»: Dadurch lässt sich ein neues Material erstellen.</li>
 </ul>
-<section id="position" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="position">Position</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Objekte bewegen mittels <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span></p>
-</div></div><p>Durch das Drücken der Taste <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span> lässt sich ein ausgewähltes Objekt mit der Maus im Raum verschieben. Blender aktualisiert parallel die Position des Objektes in der Sidebar, sodass diese klar nachvollziehbar ist.</p>
+<p>Slots für Materialien</p>
+</div></div><p>Wenn nun die Schaltfläche «+» betätigt wird, erscheint ein neuer Material-Slot für ein Material in dem Feld, welches vorher leer war. Wichtig ist dabei, dass dies lediglich einen Platzhalter für ein Material darstellt – es wurde noch kein Material hinzugefügt. Durch das erneute Klicken der Taste «+» erscheint ein weiterer Slot für Materialien. Durch das Betätigen der Taste «-» wird dieser Slot wieder entfernt.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Bewegung entlang einer Achse</p>
-</div></div><p>Es ist auch im Viewport möglich, ein Objekt nur entlang einer Achse zu bewegen. Hierfür wird nach dem Drücken der Taste <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span> die Taste für die entsprechende Achse festgelegt (<kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span>,<kbd aria-hidden="true">Y</kbd><span class="visually-hidden">Y</span> oder <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span>). Der farbige Strich im Viewport-Display, welcher die entsprechende Achse markiert, leuchtet dadurch heller auf. Wenn die Maus nun bewegt wird, bewegt sich das Objekt lediglich entlang dieser Achse. Um die Bewegung zu beenden oder zu bestätigen, wird entweder die linke Maustaste oder die <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span>-Taste gedrückt. Um die Transformation abzubrechen, kann die rechte Maustaste oder die <kbd aria-hidden="true">esc</kbd><span class="visually-hidden">esc</span>-Taste gedrückt werden. Das Objekt wird dadurch wieder in seine Ursprungsposition zurückgestellt.</p>
+<p>Neues Material erstellen</p>
+</div></div><p>Durch das Drücken der Schaltfläche «<em>New</em>» wird ein neues Material erstellt. Dieses neue Material wird mit der Beschriftung «<em>Material</em>», und allenfalls gefolgt von einer Nummer hinter der Bezeichnung, an der Stelle angezeigt, an der sich vorher die Schaltfläche «<em>New</em>» befunden hat. Zusätzlich wird das Material nun in der Auflistung der Materialien im darüberliegenden Feld angezeigt. Durch das Hinzufügen eines Materials wird automatisch ein Slot erstellt, selbst wenn die Auflistung der Slots noch leer war. Wenn ein Slot vorhanden ist, dieser aber noch leer ist, wird das Material diesem Slot hinzugefügt.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Bewegung entlang einer Achse sperren</p>
-</div></div><p>Es ist auch möglich, zwei Achsen gleichzeitig für eine Bewegung auszuwählen. Dabei wird die Bewegung entlang einer Achse gesperrt, sodass nur die beiden anderen Achsen für eine Bewegung freigegeben werden. Hierfür wird die Taste <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>in Kombination mit der Taste für die zu sperrende Achse (<kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span>,<kbd aria-hidden="true">y</kbd><span class="visually-hidden">y</span> oder <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span>) gedrückt. Wenn ein Objekt also lediglich entlang der X- und Y-Achse bewegt werden soll, aber die Z-Achse nicht verändert werden soll, kann nach dem Drücken der Taste <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span> bei gedrückter <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste die Z-Achse mittels der Taste <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> gesperrt werden.</p>
+<p>Materialien ausdemselben Dokument wieder verwenden</p>
+</div></div><p>Statt ein neues Material zu erstellen, können auch Materialien, die bereits in demselben Blender-Dokument erstellt wurden, dem Material-Slot zugewiesen werden. Hierfür muss statt auf die Schaltfläche «<em>New</em>» auf das Dropdown-Menü links dieser Schaltfläche geklickt werden. Darin werden alle Materialien aufgeführt, die bereits in diesem Dokument vorhanden sind. Durch die Auswahl eines dieser Materialien wird dieses Material anschliessend auch auf das Objekt angewendet. Dabei ist allerdings zu beachten, dass dadurch keine Kopie des Materials erstellt wird. Wird das Material etwa auch von einem anderen Objekt verwendet, so führt eine Veränderung des Materials auch bei diesem Objekt zu einer Veränderung.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Bewegung mittels Zahlen präzise angeben</p>
-</div></div><p>Statt mit der Maus kann während des Bewegungsvorgangs eine Zahl eingegeben werden, um eine Bewegung zu quantifizieren. Soll ein Objekt etwa um 2 Meter entlang der X-Achse verschoben werden, so wird, nachdem die Bewegung mittels der Taste <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span> gestartet und mittels der Taste <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> auf die X-Achse festgelegt wird, die Taste <kbd aria-hidden="true">2</kbd><span class="visually-hidden">2</span> gedrückt, um die Bewegung auf 2 Meter festzulegen. Durch das gleichzeitige Drücken der Taste <kbd aria-hidden="true">-</kbd><span class="visually-hidden">-</span> können auch negative Werte eingegeben werden, sodass die Bewegung in die entgegengesetzte Richtung geschieht. In der linken oberen Ecke des Viewport Displays wird jeweils die entsprechende Zahl angezeigt. Es ist zudem möglich, Zahlenangaben mit Dezimalstellen für Bewegungen einzugeben.</p>
-</section>
-<section id="rotation" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="rotation">Rotation</h2>
+<p>Einstellungsoptionen der Materialien</p>
+</div></div><p>Durch die Auswahl oder die Erstellung eines Materials erscheint eine Reihe von Einstellungsoptionen innerhalb des Material-Reiters. Diese sind in folgende Bereiche gegliedert:</p>
+<ul>
+<li>«<strong><em>Preview</em></strong>»: Darin wird eine Vorschau des Materials für verschiedene Objektarten angeboten.</li>
+<li>«<strong><em>Surface</em></strong>»: Darin werden die grundlegenden Einstellungen der Oberflächenbeschaffenheit des Materials vorgenommen.</li>
+<li>«<strong><em>Volume</em></strong>»: Darin können Eigenschaften für das Volumen des Materials definiert werden.</li>
+<li>«<strong><em>Settings</em></strong>»: Darin können weitere Einstellungen für die Darstellung des Materials vorgenommen werden.</li>
+<li>«<strong><em>Line Art</em></strong>»: Darin können Parameter für die Erstellung von Linien eingestellt werden, wenn die Erstellung von Linien aktiviert ist.</li>
+<li>«<strong><em>Viewport Display</em></strong>»: Darin können grundlegende Material-Eigenschaften für die Darstellung des Materials im Solid-Modus erstellt werden. Diese Eigenschaften dienen lediglich der Zurechtfindung im Solid-Modus und haben keinen Einfluss auf die Darstellung des Materials im finalen, gerenderten Produkt.</li>
+<li>«<strong><em>Custom Properties</em></strong>»: Darin können eigene Eigenschaften für ein Material definiert werden. Eine grosse Bedeutung kommt den Einstellungsoptionen im Reiter «<em>Surface</em>» zu. Diese werden fortan benötigt, um die Materialien zu bearbeiten, während die anderen Optionen noch nicht berücksichtigt werden.</li>
+</ul>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Objekte rotieren mittels <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span></p>
-</div></div><p>Um ein ausgewähltes Objekt mit der Maus zu rotieren, wird die Taste <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span> gedrückt. Wie auch bei der Bewegung lässt sich eine Transformation entlang einer Achse ansteuern, indem die Taste für die entsprechende Achse gedrückt wird (<kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span>,<kbd aria-hidden="true">Y</kbd><span class="visually-hidden">Y</span> oder <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span>). Ebenso lässt sich eine Achse für die Rotation sperren, indem die entsprechende Taste für diese Achse bei gedrückter <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste gedrückt wird. Wenn nun also ein Objekt entlang der Z-Achse rotiert werden soll, wird zunächst das entsprechende Objekt ausgewählt und anschliessend die Taste <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span>für den Befehl der Rotation gedrückt. Indem die Taste <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span> anschliessend gedrückt wird, lässt sich das Objekt nun lediglich entlang der Z-Achse rotieren. Während der Rotation verändert sich die Form der Maus und sie ist mit einem Strich zu dem Punkt, um den die Rotation erfolgt, verbunden. In der Regel handelt es sich dabei um den Ursprung des Objektes. Allerdings kann die Rotation im Viewport-Display auch hinsichtlich anderer Punkte im Raum erfolgen – dies wird in einem späteren Kapitel ausführlicher beschrieben.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Präzise Rotation mittels Zahlen</p>
-</div></div><p>Auch während der Rotation kann mit der Eingabe von Zahlen gearbeitet werden. Um ein Objekt beispielsweise um 45 Grad entlang der Z-Achse zu drehen, wird nach dem Start der Rotation mittels der Taste <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span> und der Festlegung der Z-Achse mit der Taste <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> die Zahl 45 mittels der Tasten <kbd aria-hidden="true">4</kbd><span class="visually-hidden">4</span>{{&lt; kbd 5 &gt;}} eingegeben. Auch hier lässt sich die Richtung umkehren, indem die Taste <kbd aria-hidden="true">-</kbd><span class="visually-hidden">-</span> gedrückt wird.</p>
-</section>
-<section id="scale" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="scale">Scale</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Objekte Skalieren mittels <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span></p>
-</div></div><p>Um ein ausgewähltes Objekt mit der Maus zu skalieren, wird die Taste <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> gedrückt. Wie auch bei der Bewegung und der Rotation lässt sich eine Transformation entlang einer einzelnen Achse ansteuern, indem die Taste für die entsprechende Achse gedrückt wird (<kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span>,<kbd aria-hidden="true">Y</kbd><span class="visually-hidden">Y</span> oder <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span>). Ebenso lässt sich eine Achse für die Rotation sperren, indem die entsprechende Taste für diese Achse bei gedrückter <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste gedrückt wird.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Skalierung entlang einer Achse</p>
-</div></div><p>Um ein Objekt nur entlang der X-Achse zu vergrössern oder zu verkleinern, wird nach der Auswahl des Objektes die Taste <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> gedrückt, um mit der Skalierung zu starten. Anschliessend kann durch das Drücken der Taste <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> festgelegt werden, dass die Transformation lediglich entlang der X-Achse vollzogen werden soll. Während der Skalierung verändert sich der Mauszeiger ebenfalls. Zudem ist er mittels eines Striches mit dem Punkt verbunden, zudem hin sich die Skalierung orientiert. Wird die Maus näher zu diesem Punkt bewegt, verkleinert sich das Objekt. Wenn die Maus von diesem Punkt weiter entfernt wird, vergrössert sich das Objekt.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Präzise Skalierung mittels Zahlen</p>
-</div></div><p>Die Skalierung kann mittels Zahleneingaben ebenfalls sehr genau vorgenommen werden. Um ein Objekt etwa in seiner Grösse zu verdoppeln, kann nach dem Start der Transformation mittels der Taste <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> die Zahl <kbd aria-hidden="true">2</kbd><span class="visually-hidden">2</span>eingegeben werden. Dadurch wird das Objekt um den Faktor 2 vergrössert. Auch hier lässt sich ein negativer Wert mittels der Taste <kbd aria-hidden="true">-</kbd><span class="visually-hidden">-</span> festlegen. Dies führt dazu, dass das Objekt durch seinen Bezugspunkt hindurch in die andere Richtung skaliert und gespiegelt wird. Während dies bei symmetrischen Objekten zu keinem bemerkbaren Unterschied führt, wird der Effekt bei asymmetrischen Objekten deutlich.</p>
-<div class="exercisebox">
-<div class="exercisebox-header">
-<div class="exercisebox-icon">
-
-</div>
-<p>Übung 4 : Objekttransformationen</p>
-</div>
-<div class="exercisebox-body">
-<p><strong>Übung 4.1</strong></p>
-<p>Skalieren Sie einen Würfel entlang der X-Achse auf seine halbe Grösse.</p>
-<p><strong>Übung 4.2</strong></p>
-<p>Bilden Sie das rechts abgebildete Objekt nach.</p>
-</div>
-</div>
-<div class="rememberbox">
-<div class="rememberbox-header">
-<div class="rememberbox-icon">
-
-</div>
-<p>Merke…</p>
-</div>
-<div class="rememberbox-body">
-<p>Mittels der Tasten <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span>,<kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span> und <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> lassen sich Objekte auch im Viewport-Display bewegen, rotieren und skalieren.</p>
-<p>Mittels der Eingabe von Zahlen können Bewegungen, Rotationen und Skalierungen genau vorgenommen werden.</p>
-<p>Mittels der Tasten <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span>,<kbd aria-hidden="true">Y</kbd><span class="visually-hidden">Y</span> und <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> können Transformationen auf der eine Achse festgelegt werden.</p>
-<p>Mittels der Tasten <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span>,<kbd aria-hidden="true">Y</kbd><span class="visually-hidden">Y</span> und <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> bei gedrückter <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste können Transformationen auf der entsprechenden Achse unterbunden werden.</p>
-</div>
-</div>
+<p>Use Nodes</p>
+</div></div><p>Im Reiter «<em>Surface</em>» wird zuoberst die Schaltfläche «<em>Use Nodes</em>» blau eingefärbt dargestellt. Dies bedeutet, dass die Einstellung der Oberfläche innerhalb des Shader-Editors bearbeitet werden kann. Die meisten der Einstellungen im Material-Reiter können in diesem Editor erfolgen. Zudem bietet dieser Editor eine Reihe Möglichkeiten, um die Materialien noch genauer zu bearbeiten. Deshalb ist es empfehlenswert, den Shader-Editor zu verwenden.</p>
 
 
 </section>

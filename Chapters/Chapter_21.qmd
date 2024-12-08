@@ -7,7 +7,7 @@ editor: visual
 Parameter
 :::
 
-Bislang wurden für die verschiedenen Einstellungsoptionen von Materialien konstante Werte verwendet. Das heisst: Einem Material wurde stets eine gewisse Farbe zugewiesen (z.B. Rot) und diese Farbe wurde auf alle Oberflächen, die diesem Material zugewiesen wurden, aufgetragen – so wie in Abbildung 1 Ebenso verhielt es sich mit der Roughness: Für diese wurde ein fixer Wert definiert, welcher für das ganze Material angewendet wurde. Eine Variation innerhalb des Materials war dabei nicht möglich. 
+Bislang wurden für die verschiedenen Einstellungsoptionen von Materialien konstante Werte verwendet. Das heisst: Einem Material wurde stets eine gewisse Farbe zugewiesen (z.B. Rot) und diese Farbe wurde auf alle Oberflächen, die diesem Material zugewiesen wurden, aufgetragen – so wie in Abbildung 1. Ebenso verhielt es sich mit der Roughness: Für diese wurde ein fixer Wert definiert, welcher für das ganze Material angewendet wurde. Eine Variation innerhalb des Materials war dabei nicht möglich. 
 
 ![Der Standardwürfel mit einer roten Base-Color.](Images/Chapter_21/red_cube.png){#fig-1_1 fig-align="left"}
 

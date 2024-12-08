@@ -1,0 +1,139 @@
+---
+title: "22. UVs"
+editor: visual
+---
+
+## Wie kommen die Texturen auf ein Objekt?
+
+::: column-margin
+Einen Würfel aus Papier erstellen
+:::
+
+Stellen Sie sich vor, sie möchten den Standardwürfel aus Blender als reales Objekt mit Papier oder Karton nachbauen. Wie würden Sie vorgehen? Eine Möglichkeit wäre, dass eine Form, ähnlich derjenigen aus Abbildung 1, ausgeschnitten wird und anschliessend an den Kanten zusammengefaltet und an den entsprechenden Stellen zusammengeklebt wird. Dadurch entsteht ein Würfel. Wenn dieser Würfel aus einem normalen einfarbigen Papier erstellt wird, besteht seine gesamte Oberfläche aus einem einzelnen Wert – der Farbe des Papiers. Man könnte sich also vorstellen, dass das Material dieses Würfels in Blender die Farbe des Papiers als Parameter in der Base-Color des Principled-BSDF-Shaders innehat.
+
+![Form, aus der ein Würfel gefaltet werden kann.](Images/Chapter_22/Texturvorlage.png){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Würfel aus einer Fotografie abbilden
+:::
+
+Statt eines einfarbigen Papiers könnte auch eine Foto grafie verwendet werden – wie in diesem Fall das Bild einer Steintextur in Abbildung 2 (Bildquelle: www.ambientcg.com/view?id=Rocks024S). Diese Abbildung würde anschliessend mitsamt den farblichen Strukturen des Bildes auch auf der Oberfläche des Würfels dargestellt. Der Würfel aus Abbildung 2 weist auf seiner Vorderseite dieselbe Struktur auf, wie sie in dem Kasten der Vorlage auf der linken Seite zuoberst dargestellt ist. Analog stellen die anderen Seiten des Würfels ebenfalls einen Kasten aus der Vorlage auf der linken Seite dar. In diesem Fall wird die die Fotografie als Textur verwendet, welche verschiedene Farbvariationen beinhaltet und als Base-Color fungieren kann.
+
+![Eine Form auf einem Foto sowie ein Würfel, der aus dieser Form zusammengefaltet wurde.](Images/Chapter_22/Bigstones%20texture%20and%20cube.png){#fig-1_2 fig-align="left"}
+
+![Dasselbe Foto aus Abbildung 2, allerdings mit einer kleineren Fläche, aus welcher der Würfel erstellt wird.](Images/Chapter_22/smallstones%20texture%20and%20cube.png){#fig-1_3 fig-align="left"}
+
+## UV-Mapping
+
+::: column-margin
+UV-Mapping
+:::
+
+Der soeben dargestellte Prozess wird auch in der 3D-Modellierung bei der Verwendung von Texturen durchgeführt und wird als UV-Mapping bezeichnet. Hierbei wird für alle Oberflächen auf einem dreidimensionalen Objekt eingestellt, wie diese ein zweidimensionales Bild abdecken sollen. Diese räumliche Zuordnung von Oberflächen in einem dreidimensionalen Objekt auf ein zweidimensionales Bild wird als UV bezeichnet.
+
+::: column-margin
+UV-Editor
+:::
+
+Um die UVs eines Objektes in Blender zu betrachten, wird ein neuer Editor benötigt, der neben dem 3D-Viewport-Editor geöffnet wird – der UV-Editor. Hierfür muss ein neuer Editor aus den Ecken des 3D-Viewport-Editors herausgezogen werden und dieser neue Editor auf den «*UV Editor*» umgestellt werden.
+
+![Icon für den UV-Editor.](Images/Chapter_22/Icon_UV_Editor.png){#fig-1_4 fig-align="left"}
+
+::: column-margin
+Alle UVs eines Objektes anzeigen lassen
+:::
+
+Auf den ersten Blick scheint der UV-Editor leer zu sein. Dies liegt daran, dass in diesem Editor jeweils die UVs der gerade ausgewählten Faces dargestellt werden. Um die UVs zu betrachten, muss deshalb im 3D-Viewport-Editor in den Edit-Mode gewechselt werden und alle Faces ausgewählt werden. Anschliessend werden im UV-Editor die UVs dieser Auswahl angezeigt, wie in Abbildung 5 dargestellt.
+
+![Der Standardwürfel und seine UVs im UV-Editor.](Images/Chapter_22/UV-Editor.png){#fig-1_5 fig-align="left"}
+
+::: column-margin
+Zugehörigkeit einer UV ermitteln
+:::
+
+Auf den ersten Blick ist dabei nicht ganz klar, welche UV zu welchem Face gehört. Wenn man beispielsweise wissen möchte, welche UV ein bestimmtes Face darstellt, können alle Faces abgewählt werden und lediglich dieses eine Face ausgewählt werden, wie in Abbildung 6. Dadurch wird im UV-Editor lediglich die UV dieses einen Faces dargestellt.
+
+![Auswahl eines Faces des Standardwürfels, um seine dazugehörige UV zu ermitteln.](Images/Chapter_22/UV%20with%20Seam.png){#fig-1_6 fig-align="left"}
+
+::: column-margin
+UVs werden mit neuem Objekt erstellt
+:::
+
+Jedes neu hinzugefügte Objekt in Blender wird bereits mit einem UV-Mapping erstellt. Das heisst, ein neu hinzugefügter Würfel beinhaltet bereits das standardmässige UV-Mapping, welches bislang dargestellt wurde. Auch andere Mesh-Formen werden standardmässig mit ihren UV-Mappings erstellt. Abbildung 7 zeigt die Mesh-Primitives in ihren Default-Einstellungen inklusive einer auf sie angewendeten Textur und darunter das entsprechende Mapping dieser Texturen.
+
+
+
+::: column-margin
+UV-Unwrapping
+:::
+
+Wenn Objekte im Edit-Mode bearbeitet werden und komplexere Formen annehmen, kann es vorkommen, dass die UVs nicht mehr passend erscheinen. In solchen Fällen sollten die UVs jeweils angepasst werden. Statt einer manuellen Anpassung besteht allerdings auch die Möglichkeit, dass Blender die UVs neu für die veränderte Form erstellt. Dieser Prozess wird als UV-Unwrapping bezeichnet.
+
+::: column-margin
+{{< kbd U >}}, um Objekte zu unwrappen
+:::
+
+Das UV-Unwrapping erfolgt im Edit-Mode. Dabei werden die Faces, bei denen das UV-Unwrapping erfolgen soll, ausgewählt und anschliessend die Taste gedrückt. Beim Mauszeiger erscheint anschliessend das «*UV Mapping*»-Menü, bei dem aus verschiedenen Optionen zum Unwrapping ausgewählt werden kann. Diese Optionen sind:
+
+-   «**Unwrap**»: Dabei wird das Mesh auf eine zweidimensionale Fläche projiziert. Hierfür werden auch manuell gesetzte Grenzen in Texturen berücksichtigt.
+-   «**Smart UV Project**»: Die UVs werden basierend auf den Winkeln zwischen Faces erstellt und separiert.
+-   «**Lightmap Pack**»: Hierbei werden UVs erstellt, welche für Lightmaps besonders geeignet sind, weil die UVs so angeordnet werden, dass möglichst die gesamte Fläche der Textur verwendet wird. Bei den Lightmaps handelt es sich dabei um Texturen, welche Informationen über die Beleuchtung beinhalten.
+-   «**Follow Active Quads**»: Die aktiven Quads werden als Grundlage für die UV-Erstellung verwendet und ausgehend von den Loops, welche diese Quads bilden, werden die UVs erstellt.
+-   «**Cube Projection**»: Das Unwrapping erfolgt ausgehend von der Grundform eines Würfels.
+-   «**Cylinder Projection**»: Das Unwrapping erfolgt ausgehend von einem Zylinder.
+-   «**Sphere Projection**»: Das Unwrapping erfolgt ausgehend von einer Kugel.
+-   «**Project from View**»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D Viewport-Editor.
+-   «**Project from View (Bounds)**»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D-Viewport-Editor, wobei die Anordnung der UVs bis zu den Grenzen der Textur gestreckt werden.
+-   «**Mark Seam**»: Ein Seam wird hinzugefügt. Dabei handelt es sich um manuell gesetzte Schnitte im UV-Mapping.
+-   «**Clear Seam**»: Ein Seam wird entfernt.
+-   «**Reset**»: Das UV-Mapping wird zurückgesetzt, sodass alle Faces den gesamten UV-Raum ausfüllen und somit dieselbe Grösse innehaben.
+
+![UV-Mapping-Menü.](Images/Chapter_22/UV-Unwrapping%20Menü.png){#fig-1_8 fig-align="left"}
+
+::: column-margin
+Texturen im UV-Editor anzeigen
+:::
+
+Damit im UV-Editor die jeweilige Textur angezeigt wird, auf welche die UVs angepasst werden sollen, muss im UV-Editor diese Textur ausgewählt werden. In der Mitte des Headers im UV-Editor befindet sich ein Auswahlmenü, in dem die entsprechenden Texturen ausgewählt oder geladen werden können. Nach der Auswahl der entsprechenden Textur wird diese im Hintergrund des UV-Editors angezeigt, sodass die Anordnung der UVs entsprechend der Textur verändert werden kann. Dadurch wird dem Objekt selbst diese Textur allerdings noch nicht hinzugefügt.
+
+::: column-margin
+UVs mittels Seams trennen
+:::
+
+In manchen Situationen ist es erforderlich, dass eigenhändig definiert wird, an welchen Stellen die UVs geschnitten werden sollen. Möchte man beispielsweise, dass die UVs entlang einer Reihe von Edges nicht miteinander verbunden werden oder dass separate Inseln von UVs zwischen mehreren Bereichen entstehen, so können Seams auf die entsprechenden Edges angewendet werden.
+
+::: column-margin
+Seams hinzufügen
+:::
+
+Beispielsweise könnten im Standardwürfel alle Edges ausgewählt werden, welche zu einer Fläche gehören, und diesen jeweils ein Seam hinzugefügt werden. Um einen Seam hinzuzufügen, kann mittels der Tastenkombination {{< kbd Ctrl >}} + {{< kbd E >}} das Edge-Menü beim Mauszeiger geöffnet werden. Mittels der Option «*Mark Seam*» können dann die Seams an den ausgewählten Edges hinzugefügt werden. Im Edit-Mode sind diese anschliessend anhand einer roten Markierung entlang der entsprechenden Edges ersichtlich. Mittels der Option «*Clear Seam*» können Seams bei ausgewählten Edges wieder entfernt werden.
+
+::: column-margin
+Seams beim Unwrapping berücksichtigen
+:::
+
+Damit die gesetzten Seams auch in den UVs des Objektes berücksichtig werden, muss erneut ein Unwrapping auf das Objekt erfolgen. Die Option «*Unwrap*» im Menü «*UV Mapping*» berücksichtigt jeweils die gesetzten Seams.
+
+::: column-margin
+Auswahl von UVs im UV-Editor
+:::
+
+Im UV-Editor können die einzelnen UVs, aber auch die Vertices und Edges ausgewählt werden. Wenn der Edit-Mode aktiviert ist, erscheinen in der linken oberen Ecke des UV-Editors verschiedene Schaltflächen, mit denen die Auswahl bestimmt werden kann. Nebst der Auswahl von Vertices, Edges und Faces können im UV-Editor zudem auch ganze Inseln ausgewählt werden. Dabei werden alle UVs, die zusammen eine UV-Insel 
+bilden, gemeinsam ausgewählt. 
+
+![Select-Modes für die Auwahl von UVs.](Images/Chapter_22/Icons_UV_Editor_Selections.png){#fig-1_8 fig-align="left"}
+
+::: column-margin
+UVs im UV-Editor anpassen
+:::
+
+Im UV-Editor ist es zudem möglich, die Platzierung der UVs zu verändern. Hierfür werden die entsprechenden UVs im UV-Editor ausgewählt. Anschliessend können diese mittels der Taste {{< kbd G >}} bewegt, mittels der Taste {{< kbd S >}} skaliert und mittels der Taste {{< kbd R >}} rotiert werden. Dadurch können die UVs 
+auch entsprechend den Bedürfnissen in einem Projekt angepasst werden. 
+
+::: column-margin
+Grösse der UVs
+:::
+
+Gerade bei komplexen Objekten mit vielen Details sind die UVs von grosser Bedeutung. Je grösser die UV ist, desto detailliertere Inhalte können innerhalb der dazugehörigen Faces dargestellt werden. Dementsprechend ist es sinnvoll, für Bereiche mit weniger benötigten Details kleinere UVs zu verwenden und für Bereiche, die mehr Details benötigen, grössere UVs zu verwenden. Gerade wenn 
+mittels Blender eigene Texturen erstellt werden, wird dieses Vorgehen relevant. Für die nächsten Kapitel muss allerdings noch nicht zu stark auf die Grössenverhältnisse der UVs geachtet werden.
+

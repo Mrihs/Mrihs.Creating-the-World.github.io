@@ -2,4 +2,11 @@
 title: "Über"
 ---
 
-Folgt...
+Die Inhalte dieser Website entstammen dem Master-Seminar "Creating the World - Grafik, Design und Animation in 3D", welches an der Universität Bern durchgeführt wurde.
+
+| **Kontakt:** 
+| Dr. Michael Rihs 
+| Institut für Psychologie
+| Fabrikstrasse 8
+| 3012 Bern 
+| E-Mail: michael.rihs\@unibe.ch

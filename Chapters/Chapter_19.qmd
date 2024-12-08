@@ -46,20 +46,19 @@ Eyedropper
 
 Im rechten unteren Bereich der Farbauswahl ist eine Schaltfläche für den Eyedropper zu finden. Dadurch können Farben innerhalb der Blender-Szene oder Benutzeroberfläche anvisiert werden und als Farbe für die Base-Color verwendet werden. Durch einen Klick auf die Schaltfläche nimmt der Mauszeiger die Form des Eyedropper-Icons an. Anschliessend kann an eine beliebige Position innerhalb von Blender geklickt werden und die an dieser Stelle angezeigte Farbe wird verwendet.
 
-![Darstellung der Inputs und Outputs sowie der verschiedenen Informationsarten anhand des Principled-BSDF-Shaders.](Images/Chapter_19/2. Icon_Eyedropper.png){#fig-1_2 fig-align="left"}
+![Darstellung der Inputs und Outputs sowie der verschiedenen Informationsarten anhand des Principled-BSDF-Shaders.](Images/Chapter_19/2.%20Icon_Eyedropper.png){#fig-1_2 fig-align="left"}
 
 :::::: tippbox
 :::: tippbox-header
 ::: tippbox-icon
 :::
 
-Weiterführende Informationen 
+Weiterführende Informationen
 ::::
 
 ::: tippbox-body
 Die Farben von Objektmaterialien im 3D-Viewport stimmen selten mit den eingestellten Farben im Shader-Editor überein. Dies liegt daran, dass bei der Darstellung von Materialien weitere Aspekte wie beispielsweise die Reflexion der Umgebungsbeleuchtung berücksichtigt werden. Dadurch durchläuft die Base-Color einen Verarbeitungsprozess. Wenn der Eyedropper also auf ein im 3D-Viewport-Editor dargestelltes Objekt angewendet wird, entspricht die ausgewählte Farbe nicht zwingend derselben Base-Color des Objektes, welches diese Farbe aussendet.
 :::
-
 ::::::
 
 ## RGB-Werte
@@ -108,7 +107,7 @@ Farbwert
 
 Ein HSV-Code von 0-1-1 entspricht der Farbe Rot. Mittels der Veränderung der ersten Zahl können andere Farbwerte anvisiert werden, welche dieselbe Helligkeit und dieselbe Farbsättigung aufweisen. Diese Veränderung kann entweder mit der Eingabe einer Zahl oder mittels der Navigation des Sliders erfolgen. Im Menu der Farbauswahl führt eine Erhöhung dieser Zahl dazu, dass sich die ausgewählte Farbe im Kreis bewegt. Beim Wert 1 für den Farbwert hat die Farbauswahl eine ganze Umdrehung im Farbspektrum des Kreises absolviert.
 
-::::: column-margin
+::: column-margin
 Farbsättigung
 :::
 
@@ -128,18 +127,17 @@ Hexadezimale Farbdefinition
 
 Das Spektrum der möglichen Farben als solches ist limitiert und es ist nicht möglich, eine neue Farbe zu erfinden. Dies hat allerdings den Vorteil, dass jedem Farbwert ein individueller Code zugeordnet werden kann. Die hexadezimale Farbdefinition stellt einen solchen Code dar. Unter dem Reiter «*Hex*» innerhalb der Farbauswahl kann jeweils dieser Code für die ausgewählte Farbe betrachtet werden. Ebenso kann an dieser Stelle auch ein hexadezimaler Code eingefügt werden, um eine entsprechende Farbe auszuwählen. Anders als bei den RGB- oder HSV-Werten muss hier also lediglich ein Wert übertragen werden und damit wird anschliessend die Farbe ermittelt.
 
-| Farbe | Farbe | **RGB** | Blenders RGB | HSV | Hexadezimal |
-|------------|--------------|---------------|------------|------------|------------|
-|  | Weiss | 255 - 255 – 255 | 1- 1 -1 | 0 - 0 - 1 | FFFFFF |
-|  | Schwarz | 0 - 0 - 0 | 0 - 0 - 0 | 0 - 0 - 0 | 000000 |
-|  | Rot | 255 - 0 - 0 | 1 - 0- 0 | 0 - 1 - 1 | FF0000 |
-|  | Grün | 0 - 255 - 0 | 0 - 1 - 0 | 0.333 - 1 - 1 | 00FF00 |
-|  | Blau | 0 - 0 - 255 | 0 - 0 - 1 | 0.666 - 1 - 1 | 0000FF |
-|  | Gelb | 255 - 255 - 0 | 1 - 1 - 0 | 0.167 - 1 - 1 | FFFF00 |
-|  | Aquamarinblau | 0 - 255 - 255 | 0 - 1 - 1 | 0.5 - 1 - 1 | 00FFFF |
-|  | Magenta | 255 - 0 - 255 | 1 - 0 - 1 | 0.833 - 1 - 1 | FF00FF |
-|  | Orange | 255 - 165 - 0 | 1 - 0.376 - 0 | 0.063 - 1 - 1 | FFA500 |
-
+| Farbe | Farbe         | **RGB**         | Blenders RGB  | HSV           | Hexadezimal |
+|------------|------------|------------|------------|------------|------------|
+|       | Weiss         | 255 - 255 – 255 | 1- 1 -1       | 0 - 0 - 1     | FFFFFF      |
+|       | Schwarz       | 0 - 0 - 0       | 0 - 0 - 0     | 0 - 0 - 0     | 000000      |
+|       | Rot           | 255 - 0 - 0     | 1 - 0- 0      | 0 - 1 - 1     | FF0000      |
+|       | Grün          | 0 - 255 - 0     | 0 - 1 - 0     | 0.333 - 1 - 1 | 00FF00      |
+|       | Blau          | 0 - 0 - 255     | 0 - 0 - 1     | 0.666 - 1 - 1 | 0000FF      |
+|       | Gelb          | 255 - 255 - 0   | 1 - 1 - 0     | 0.167 - 1 - 1 | FFFF00      |
+|       | Aquamarinblau | 0 - 255 - 255   | 0 - 1 - 1     | 0.5 - 1 - 1   | 00FFFF      |
+|       | Magenta       | 255 - 0 - 255   | 1 - 0 - 1     | 0.833 - 1 - 1 | FF00FF      |
+|       | Orange        | 255 - 165 - 0   | 1 - 0.376 - 0 | 0.063 - 1 - 1 | FFA500      |
 
 ### Farben aus anderen Farbboxen hineinziehen
 
@@ -147,11 +145,7 @@ Das Spektrum der möglichen Farben als solches ist limitiert und es ist nicht m�
 Farben aus Farbboxen übertragen
 :::
 
-Wenn in einem Shader-Editor mehrere Farbboxen vorhanden sind, besteht die Möglichkeit, eine
-Farbe aus einer Farbbox durch einfaches Hinüberziehen in eine andere Farbbox zu übertragen. So
-kann etwa die Farbe aus der Farbbox «*Emission*» auf die «*Base Color*» übertragen werden. Hierfür
-muss lediglich bei gedrückt gehaltener linker Maustaste die Farbe aus der Emission-Farbbox auf die Base
-Color-Farbbox gezogen und die linke Maustaste dann losgelassen werden.
+Wenn in einem Shader-Editor mehrere Farbboxen vorhanden sind, besteht die Möglichkeit, eine Farbe aus einer Farbbox durch einfaches Hinüberziehen in eine andere Farbbox zu übertragen. So kann etwa die Farbe aus der Farbbox «*Emission*» auf die «*Base Color*» übertragen werden. Hierfür muss lediglich bei gedrückt gehaltener linker Maustaste die Farbe aus der Emission-Farbbox auf die Base Color-Farbbox gezogen und die linke Maustaste dann losgelassen werden.
 
 ## Roughness
 
@@ -159,11 +153,11 @@ Color-Farbbox gezogen und die linke Maustaste dann losgelassen werden.
 Worin unterscheiden sich die Abbildungen?
 :::
 
-In Abbildung 3 wird dreimal dasselbe Objekt mit derselben Base-Color im Material dargestellt. Worin unterscheiden sich die drei Objekte visuell?  
+In Abbildung 3 wird dreimal dasselbe Objekt mit derselben Base-Color im Material dargestellt. Worin unterscheiden sich die drei Objekte visuell?
 
-![Dreimal dasselbe Objekt mit derselben Farbe, allerdings unterschiedlichen Roughness-Werten: Links eine Roughness von 0, in der Mitte eine Roughness von 0.5, rechts eine Roughness von 1.](Images/Chapter_19/3. Roughness_Comparison.png){#fig-1_3 fig-align="left"}
+![Dreimal dasselbe Objekt mit derselben Farbe, allerdings unterschiedlichen Roughness-Werten: Links eine Roughness von 0, in der Mitte eine Roughness von 0.5, rechts eine Roughness von 1.](Images/Chapter_19/3.%20Roughness_Comparison.png){#fig-1_3 fig-align="left"}
 
-Das erste Objekt auf der linken Seite scheint das Licht in der Umgebung zu spiegeln und ebenso den Fussboden zu reflektieren. Bei den anderen beiden Objekten ist dies nicht der Fall. Zwischen dem mittleren und dem rechten Objekt lässt sich kaum ein Unterschied erkennen. 
+Das erste Objekt auf der linken Seite scheint das Licht in der Umgebung zu spiegeln und ebenso den Fussboden zu reflektieren. Bei den anderen beiden Objekten ist dies nicht der Fall. Zwischen dem mittleren und dem rechten Objekt lässt sich kaum ein Unterschied erkennen.
 
 ::: column-margin
 Roughness beschreibt die Oberflächenstruktur
@@ -171,7 +165,7 @@ Roughness beschreibt die Oberflächenstruktur
 
 Alle drei Objekte unterscheiden sich hinsichtlich der Roughness, welche sie innehaben. Das erste Objekt weist eine Roughness von 0 auf, das zweite Objekt eine Roughness von 0.5 und das rechte Objekt eine Roughness von 1. Die Roughness beschreibt die Struktur der Oberfläche. Eine Roughness von 0 bezeichnet eine komplett glatte Oberfläche, während eine Roughness von 1 eine sehr raue Oberfläche darstellt. Realistische Werte für die Roughness liegen im Wert von 0 bis 1. Negative oder grössere Werte sind auch möglich, allerdings werden dabei keine realgetreuen Abbildungen mehr erstellt.
 
-::: colum-margin
+::: column-margin
 Identisches Ausmass der Lichtreflexion bei Roughness
 :::
 
@@ -181,10 +175,9 @@ Durch eine geringe Roughness – also eine glatte Oberfläche – scheint das Li
 Einfluss der Roughness auf die Lichtreflexion
 :::
 
-Von grösserer Bedeutung in diesem Beispiel ist die Frage, wie das Licht reflektiert wird. Bei einer glatten Oberfläche treffen die Lichtstrahlen parallel zueinander auf eine Oberfläche auf, die über die ganze Fläche hinweg aufgrund der Glätte keine Krümmungen enthält. Dadurch werden alle Lichtstrahlen in demselben Winkel reflektiert. Wenn die Oberfläche allerdings nicht glatt ist und dadurch 
-minimale Buckel auf der Oberfläche entstehen, wie etwa auf der rechten Seite der Abbildung 4 dargestellt, wird das Licht jeweils in unterschiedlichen Winkeln reflektiert. Dadurch scheint das Material durch eine erhöhte Roughness die Umgebung weniger zu reflektieren.
+Von grösserer Bedeutung in diesem Beispiel ist die Frage, wie das Licht reflektiert wird. Bei einer glatten Oberfläche treffen die Lichtstrahlen parallel zueinander auf eine Oberfläche auf, die über die ganze Fläche hinweg aufgrund der Glätte keine Krümmungen enthält. Dadurch werden alle Lichtstrahlen in demselben Winkel reflektiert. Wenn die Oberfläche allerdings nicht glatt ist und dadurch minimale Buckel auf der Oberfläche entstehen, wie etwa auf der rechten Seite der Abbildung 4 dargestellt, wird das Licht jeweils in unterschiedlichen Winkeln reflektiert. Dadurch scheint das Material durch eine erhöhte Roughness die Umgebung weniger zu reflektieren.
 
-![Schematische Darstellung der Lichtreflexion bei unterschiedlicher Beschaffenheit der Oberfläche. Links, bei fehlender Roughness, reflektiert die Oberfläche das Licht parallel weiter. Rechts, bei einer variablen Oberflächenstruktur durch erhöhte Roughness, entsteht eine diffuse Lichtreflexion.](Images/Chapter_19/4. Roughness_Darstellung.png){#fig-1_4 fig-align="left"}
+![Schematische Darstellung der Lichtreflexion bei unterschiedlicher Beschaffenheit der Oberfläche. Links, bei fehlender Roughness, reflektiert die Oberfläche das Licht parallel weiter. Rechts, bei einer variablen Oberflächenstruktur durch erhöhte Roughness, entsteht eine diffuse Lichtreflexion.](Images/Chapter_19/4.%20Roughness_Darstellung.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Roughness einstellen
@@ -192,22 +185,20 @@ Roughness einstellen
 
 Die Roughness ist ein Wert, welcher bei vielen Shadern eingestellt werden kann. Hierfür kann bei den entsprechenden Roughness-Zeilen der Slider nach links oder rechts verschoben. Alternativ kann auch ein Wert für die Roughness mittels einer Zahl definiert werden.
 
-
 :::::: tippbox
 :::: tippbox-header
 ::: tippbox-icon
 :::
 
-Weiterführende Informationen 
+Weiterführende Informationen
 ::::
 
 ::: tippbox-body
-Die Blender-Version 2.93 leidet unter einem Bug, sodass teilweise bei der Einstellung einer Roughness von 0 bis 0.003 das Objekt schwarz dargestellt wird. Dies sollte nicht so sein. Das Problem scheint computerabhängig zu sein. Bei 
-einer Roughness von 0.004 sollte das Problem nicht auftreten. 
+Die Blender-Version 2.93 leidet unter einem Bug, sodass teilweise bei der Einstellung einer Roughness von 0 bis 0.003 das Objekt schwarz dargestellt wird. Dies sollte nicht so sein. Das Problem scheint computerabhängig zu sein. Bei einer Roughness von 0.004 sollte das Problem nicht auftreten.
 :::
 ::::::
 
-![Dasselbe Objekt mit unterschiedlichen Roughness-Werten. Die Werte betragen von links nach rechts: 0, 0.1, 0.2, 0.3 und 0.4.](Images/Chapter_19/5. Roughness_Spectrum_comparisson.png){#fig-1_5 fig-align="left"}
+![Dasselbe Objekt mit unterschiedlichen Roughness-Werten. Die Werte betragen von links nach rechts: 0, 0.1, 0.2, 0.3 und 0.4.](Images/Chapter_19/5.%20Roughness_Spectrum_comparisson.png){#fig-1_5 fig-align="left"}
 
 ## Metallic
 
@@ -217,7 +208,7 @@ Worin unterscheiden sich die Abbildungen?
 
 In Abbildung 6 wird zweimal dasselbe Objekt mit derselben Grundfarbe und derselben Roughness dargestellt. Worin unterscheiden sich die Objekte?
 
-![Dasselbe Objekt mit unterschiedlichen Einstellungen für Metallic. Links ein dielektrisches Objekt (Metallic von 0), rechts ein metallisches Objekt (Metallic von 1).](Images/Chapter_19/6. Metall_Comparrison.png){#fig-1_6 fig-align="left"}
+![Dasselbe Objekt mit unterschiedlichen Einstellungen für Metallic. Links ein dielektrisches Objekt (Metallic von 0), rechts ein metallisches Objekt (Metallic von 1).](Images/Chapter_19/6.%20Metall_Comparrison.png){#fig-1_6 fig-align="left"}
 
 Beide Objekte scheinen ihre Umgebung zu reflektieren. Das linke Objekt scheint die Umgebung allerdings deutlich schwächer zu reflektieren, während beim rechten Objekt die Umgebung sehr klar ersichtlich ist. Beim rechten Objekt scheint zudem kaum erkennbar, woraus die Grundfarbe des Materials besteht.
 
@@ -233,7 +224,7 @@ Reflexion
 
 Bei der Erklärung der Roughness wurde bereits auf die Reflexion verwiesen. Dabei prallen die Lichtstrahlen an der Oberfläche eines Objektes ab und entfernen sich wieder vom Objekt. Diese Lichtstrahlen sind anschliessend mit dem menschlichen Auge sichtbar. Die Lichtstrahlen dringen dabei nicht in das Objekt ein, sondern werden lediglich reflektiert.
 
-![Schematische Darstellung der Lichtstrahlen bei einer Reflexion.](Images/Chapter_19/7. Reflexion.png){#fig-1_7 fig-align="left"}
+![Schematische Darstellung der Lichtstrahlen bei einer Reflexion.](Images/Chapter_19/7.%20Reflexion.png){#fig-1_7 fig-align="left"}
 
 ::: column-margin
 Refraktion
@@ -241,21 +232,19 @@ Refraktion
 
 Bei der Refraktion werden die Lichtstrahlen, so wie auch bei der Reflexion, vom Objekt aus zurückgesendet. Im Unterschied zur Reflexion dringen die Lichtstrahlen bei der Refraktion allerdings in das Objekt ein, bevor sie sich wieder vom Objekt entfernen. Beim Eindringen in das Objekt werden die Lichtstrahlen zudem gebrochen und verlassen das Objekt dadurch in einem anderen Winkel.
 
-![Schematische Darstellung der Lichtstrahlen bei einer Refraktion.](Images/Chapter_19/8. Refraktion.png){#fig-1_8 fig-align="left"}
+![Schematische Darstellung der Lichtstrahlen bei einer Refraktion.](Images/Chapter_19/8.%20Refraktion.png){#fig-1_8 fig-align="left"}
 
 ::: column-margin
 Dielektrische Materialien
 :::
 
-Diese beiden Prozesse – Reflexion und Refraktion – schliessen sich nicht gegenseitig aus. Ein Material kann Lichtstrahlen sowohl reflektieren als 
-auch refraktieren. Solche Materialien werden als dielektrische Materialien bezeichnet.
+Diese beiden Prozesse – Reflexion und Refraktion – schliessen sich nicht gegenseitig aus. Ein Material kann Lichtstrahlen sowohl reflektieren als auch refraktieren. Solche Materialien werden als dielektrische Materialien bezeichnet.
 
 ::: column-margin
 Metallische Materialien
 :::
 
-Eine bestimmte Gruppe von Materialien zeichnet sich allerdings dadurch aus, dass sie keine Refraktion der Lichtstrahlen zulässt. In diesem Fall 
-reflektiert das Material die Lichtstrahlen, aber keine Lichtstrahlen dringen in das Objekt ein. Bei dieser Materialiengruppe handelt es sich um Metalle. Dies macht auch den Unterschied zwischen den beiden Objekten in Abbildung 6 aus. Das linke Objekt stellt ein dielektrisches Material dar, während das rechte Objekt ein metallisches Objekt darstellt. 
+Eine bestimmte Gruppe von Materialien zeichnet sich allerdings dadurch aus, dass sie keine Refraktion der Lichtstrahlen zulässt. In diesem Fall reflektiert das Material die Lichtstrahlen, aber keine Lichtstrahlen dringen in das Objekt ein. Bei dieser Materialiengruppe handelt es sich um Metalle. Dies macht auch den Unterschied zwischen den beiden Objekten in Abbildung 6 aus. Das linke Objekt stellt ein dielektrisches Material dar, während das rechte Objekt ein metallisches Objekt darstellt.
 
 ::: column-margin
 Metallic-Wert im Principled-BSDF-Shader
@@ -263,14 +252,15 @@ Metallic-Wert im Principled-BSDF-Shader
 
 Im Principled-BSDF-Shader kann der Metallgehalt eines Materials durch die Zeile «*Metallic*» variiert werden, entweder durch eine Bewegung des Sliders oder durch eine Zahleneingabe. Ein Wert von 0 beschreibt dabei, dass es sich um ein dielektrisches Material handelt, welches Licht sowohl reflektiert als auch refraktiert. Ein Wert von 1 hingegen beschreibt ein metallisches Material, bei dem Licht lediglich reflektiert wird. Je grösser der Metallic-Wert, desto weniger Licht wird durch das Material refraktiert.
 
-## Parameter richtig einstellen 
+## Parameter richtig einstellen
 
 ::: column-margin
 Parameter kombinieren
 :::
+
 Durch die Kombination der bislang erläuterten Parameter lassen sich bereits viele Arten von Materialien erstellen. Ein metallisches Objekt unterschiedet sich ebenfalls hinsichtlich der Roughness und kann auch unterschiedliche Farbwerte annehmen. Dadurch lassen sich bereits viele Materialien nachbilden.
 
-![Darstellung desselben Objektes unter denselben Lichtverhältnissen bei unterschiedlichen Werten für Metallic und Roughness.](Images/Chapter_19/9. Material_Comparison.png){#fig-1_9 fig-align="left"}
+![Darstellung desselben Objektes unter denselben Lichtverhältnissen bei unterschiedlichen Werten für Metallic und Roughness.](Images/Chapter_19/9.%20Material_Comparison.png){#fig-1_9 fig-align="left"}
 
 ::: column-margin
 Verwendung von Bildvorlagen, um Materialien nachzubilden
@@ -283,17 +273,17 @@ Um möglichst realistische Abbildungen von Materialien zu erstellen, empfiehlt e
 ::: rememberbox-icon
 :::
 
-Merke... 
+Merke...
 ::::
 
 ::: rememberbox-body
-Base-Color, Roughness und Metallic beschreiben grundlegende Eigenschaften von Objekt-Materialien. 
+Base-Color, Roughness und Metallic beschreiben grundlegende Eigenschaften von Objekt-Materialien.
 
 Die Base-Color beschreibt die Farbe des Materials.
 
 Die Roughness beschreibt, wie stark die Reflexion des Materials gebündelt wird.
 
-Metallic beschreibt, ob ein Objekt aus Metall ist, und dadurch keine Refraktion aufweist. 
+Metallic beschreibt, ob ein Objekt aus Metall ist, und dadurch keine Refraktion aufweist.
 :::
 ::::::
 
@@ -302,25 +292,18 @@ Metallic beschreibt, ob ein Objekt aus Metall ist, und dadurch keine Refraktion 
 ::: exercisebox-icon
 :::
 
-Übung 12: Materialien nachbilden 
+Übung 12: Materialien nachbilden
 ::::
 
 ::: exercisebox-body
-Base-Color, Roughness und Metallic beschreiben grundlegende Eigenschaften von Objekt-Materialien. 
-
-Die Base-Color beschreibt die Farbe des Materials.
-
-Die Roughness beschreibt, wie stark die Reflexion des Materials gebündelt wird.
-
-Metallic beschreibt, ob ein Objekt aus Metall ist, und dadurch keine Refraktion aufweist. 
-:::
-::::::
-
 **Übung 12.1**
 
 Öffnen Sie die Datei «*Uebung_12_1*» und wechseln sie in den Rendered-Viewport-Shading-Modus. Dieses File ist bereits mit einer Hintergrundwelt und einer Beleuchtung ausgestattet, sodass Sie den Rendered-Viewport-Shading-Modus verwenden können. Verändern Sie von den fünf abgebildeten Kugeln die Einstellungen für die Base-Color, Roughness und Metallic so, dass die Kugeln möglichst ähnlich den über ihnen abgebildeten Kugeln erscheinen.
+:::
+::::::
 
-## Mehrere Materialien verwenden 
+
+## Mehrere Materialien verwenden
 
 ::: column-margin
 Mehrere Materialien in einem Objekt verwenden
@@ -332,18 +315,16 @@ Wie bereits betrachtet kann ein Objekt mehrere Slots für Materialien innehaben.
 Materialien Slots zuweisen
 :::
 
-Wenn sich in der Auflistung der Material-Slots mehrere Slots befinden, werden standardmässig alle Faces des Objektes dem ersten Slot und somit auch dem Material im ersten Slot zugewiesen. Wenn ein zweiter Slot mit einem zweiten Material erstellt wurde, dann müssen im Edit-Mode die entsprechenden Faces ausgewählt werden, welche diesem zweiten Slot zugewiesen werden sollen. Mittels 
-der Schaltfläche «*Assign*» können anschliessend die entsprechenden Faces diesem Slot zugewiesen werden.
+Wenn sich in der Auflistung der Material-Slots mehrere Slots befinden, werden standardmässig alle Faces des Objektes dem ersten Slot und somit auch dem Material im ersten Slot zugewiesen. Wenn ein zweiter Slot mit einem zweiten Material erstellt wurde, dann müssen im Edit-Mode die entsprechenden Faces ausgewählt werden, welche diesem zweiten Slot zugewiesen werden sollen. Mittels der Schaltfläche «*Assign*» können anschliessend die entsprechenden Faces diesem Slot zugewiesen werden.
 
 ::: column-margin
 Zuweisung erfolgt zu Material-Slots und nicht zu Material
 :::
 
-Durch die Zuweisung mittels «*Assign*» werden die ausgewählten Faces nicht direkt einem Material zugewiesen, sondern zu einem Material-Slot. Das Material kann nachträglich immer noch geändert werden, indem über das Dropdown-Menü ein anderes Material für diesen Slot ausgewählt wird. Dies führt dazu, dass auch die Faces, welche diesem Slot zugewiesen wurden, nun mit dem neu ausgewählten Material dargestellt werden. 
+Durch die Zuweisung mittels «*Assign*» werden die ausgewählten Faces nicht direkt einem Material zugewiesen, sondern zu einem Material-Slot. Das Material kann nachträglich immer noch geändert werden, indem über das Dropdown-Menü ein anderes Material für diesen Slot ausgewählt wird. Dies führt dazu, dass auch die Faces, welche diesem Slot zugewiesen wurden, nun mit dem neu ausgewählten Material dargestellt werden.
 
 ::: column-margin
 Auswahl von Faces mittels Materialien
 :::
 
-Mittels der Schaltfläche «*Select*» lassen sich im Edit-Mode die Faces markieren, die zu dem Material-Slot gehören, der gerade in der Auflistung ausgewählt wurde. Dadurch kann schnell ermittelt werden, welche Faces zu einem Material-Slot gehören. Mittels der Taste «Deselect» können zudem die Faces, die zum aktuell angewählten Material-Slot gehören, von der aktuellen Auswahl deaktiviert 
-werden. Durch diese Optionen stellen die Material-Slots eine zusätzliche Hilfestellung dar, um Elemente in komplexen Objekten schnell auswählen zu können.
+Mittels der Schaltfläche «*Select*» lassen sich im Edit-Mode die Faces markieren, die zu dem Material-Slot gehören, der gerade in der Auflistung ausgewählt wurde. Dadurch kann schnell ermittelt werden, welche Faces zu einem Material-Slot gehören. Mittels der Taste «*Deselect*» können zudem die Faces, die zum aktuell angewählten Material-Slot gehören, von der aktuellen Auswahl deaktiviert werden. Durch diese Optionen stellen die Material-Slots eine zusätzliche Hilfestellung dar, um Elemente in komplexen Objekten schnell auswählen zu können.

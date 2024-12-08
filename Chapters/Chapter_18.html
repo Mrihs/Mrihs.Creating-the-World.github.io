@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7. Methoden der Objekt-Transformation – Creating the World</title>
+<title>18. Der Shader-Editor – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,8 +39,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-05798b36db35dfecaedaec0bbed5404c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
-<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -222,26 +220,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Auf dieser Seite</h2>
-   
-  <ul>
-  <li><a href="#die-drei-grundlegenden-objekt-transformationen" id="toc-die-drei-grundlegenden-objekt-transformationen" class="nav-link active" data-scroll-target="#die-drei-grundlegenden-objekt-transformationen">Die drei grundlegenden Objekt-Transformationen</a></li>
-  <li><a href="#location" id="toc-location" class="nav-link" data-scroll-target="#location">Location</a></li>
-  <li><a href="#rotation" id="toc-rotation" class="nav-link" data-scroll-target="#rotation">Rotation</a></li>
-  <li><a href="#scale" id="toc-scale" class="nav-link" data-scroll-target="#scale">Scale</a></li>
-  <li><a href="#dimension" id="toc-dimension" class="nav-link" data-scroll-target="#dimension">Dimension</a></li>
-  <li><a href="#transformationen-sperren" id="toc-transformationen-sperren" class="nav-link" data-scroll-target="#transformationen-sperren">Transformationen sperren</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">7. Methoden der Objekt-Transformation</h1>
+<h1 class="title">18. Der Shader-Editor</h1>
 </div>
 
 
@@ -258,119 +245,76 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="die-drei-grundlegenden-objekt-transformationen" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="die-drei-grundlegenden-objekt-transformationen">Die drei grundlegenden Objekt-Transformationen</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Grundlegende Transformationen</p>
-</div></div><p>Jegliche 3D-Meshes beinhalten drei grundlegende Eigenschaften. Diese Grundeigenschaften können jederzeit variiert werden. Es handelt sich dabei um:</p>
-<ul>
-<li>Position</li>
-<li>Rotation</li>
-<li>Skalierung</li>
-</ul>
-<p>Alle drei Optionen sind in der Sidebar (ein /ausblenden mittels <kbd aria-hidden="true">N</kbd><span class="visually-hidden">N</span>) unter dem Menü «<em>Item</em>» unter dem Reiter «<em>Transform</em>» sichtbar. Die Eigenschaften beziehen sich jeweils auf das ausgewählte Objekt. Wenn kein Objekt ausgewählt ist, beziehen sie sich auf das zuletzt ausgewählte Objekt. Mittels der Einstellungen in der Sidebar lassen sich diese drei Eigenschaften beliebig durch die Eingabe von Zahlen variieren.</p>
-<div class="tippbox">
-<div class="tippbox-header">
-<div class="tippbox-icon">
-
-</div>
-<p>Weiterführende Informationen</p>
-</div>
-<div class="tippbox-body">
-<p>Statt Zahlen können auch mathematische Berechnungen in die Felder eingegeben werden. Dadurch lassen sich komplexere Positionen ermitteln. Wenn etwa ein Objekt genau mittig zwischen einem Objekt mit einer Position von X = 4 und einem Objekt mit einer Position von X = 17 platziert werden soll, kann der X-Wert des zu platzierenden Objektes auf X = 4 + ((17 – 4) / 2) festgelegt werden. Das Objekt wird anschliessend mittig der beiden Objekte (X = 10.5) platziert.</p>
-</div>
-</div>
-</section>
-<section id="location" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="location">Location</h2>
+<p>Shader-Editor öffnen</p>
+</div></div><p>Um den Shader-Editor zu öffnen, sollte ein neues, zusätzliches Editor-Fenster geöffnet werden. Dieses kann aus den Ecken des 3D-Viewport-Editors herausgezogen werden. In diesem neuen Fenster kann anschliessend der 3D-Viewport-Editor zum Shader-Editor geändert werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Position</p>
-</div></div><p>Die Location beschreibt die Position eines 3D-Meshes in der dreidimensionalen Welt. Die Position wird mittels drei Werten angegeben: einem Wert für die X-Achse, einem für die Y-Achse und einem für die Z-Achse. Jeder dieser drei Werte lässt sich individuell verändern. Durch das Verschieben des X Wertes verschiebt sich das Objekt beispielsweise der X-Achse entlang.</p>
+<p>Auswahl von Materialien im Shader-Editor</p>
+</div></div><p>Im Shader-Editor wird jeweils mittels einer grafischen Programmiersprache durch die Verbindung von Nodes (Knotenpunkten) definiert, wie die Materialien erstellt werden. In der Kopfleiste des Editors wird zudem dasselbe Feld zum Auswählen respektive zum Hinzufügen von Materialien angezeigt wie im Material-Reiter im Properties-Editor. Die Auswahl eines anderen Materials im Shader-Editor führt dazu, dass auch das Material im Properties-Editor sowie im Material-Slot automatisch angepasst wird. Umgekehrt führt eine andere Auswahl eines Materials im Properties-Editor dazu, dass im Shader-Editor automatisch auch das entsprechende Material ausgewählt wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Darstellung eines Default-Materials im Shader-Editor</p>
+</div></div><p>Sofern ein Material ausgewählt ist, sollten sich innerhalb des Shader-Editors zwei Blöcke befinden. Ein etwas grösserer Block, welcher mit «<em>Principled BSDF</em>» beschrieben ist, und ein kleinerer Block, der als «<em>Material Output</em>» beschriftet ist, wie in Abbildung 1 dargestellt. Beide Blöcke sind zwischen zwei grünen Punkten mittels eines Fadens miteinander verbunden.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_7/1. Origin.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_18/1. Default_Material.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Der orangene Punkt markiert den Ursprung (Origin) eines Objektes.
+Abbildung&nbsp;1: Ein Principled-BSDF-Shader, der mit dem Material-Output verbunden ist. Dies wird standardmässig bei einem neuen Material erstellt.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Position befindet sich am Ursprung des Objekts</p>
-</div></div><p>Die genaue Position des Objektes wird anhand eines kleinen orangen Punktes im Viewport-Display angezeigt. Bei diesem Punkt handelt es sich um den Ursprung des Objektes (Origin). Die Position eines Objektes bezieht sich immer auf diesen orangen Punkt, selbst wenn das Mesh selbst diese Position gar nicht abdeckt.</p>
-</section>
-<section id="rotation" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="rotation">Rotation</h2>
+<p>Nodes</p>
+</div></div><p>Bei dieser Darstellung handelt es sich um eine Anordnung im Rahmen einer visuellen Programmiersprache, die mit Nodes arbeitet. Jeder der Blöcke stellt einen Node dar. Auf der linken und der rechten Seite dieser Nodes sind in der Regel Punkte abgebildet. Dabei handelt es sich um Inputs und Outputs, welche die Nodes erhalten und versenden können. Auf der linken Seite sind jeweils die Inputs aufgelistet und auf der rechten Seite die Outputs.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Rotation</p>
-</div></div><p>Die Rotation eines Objektes beschreibt, wie sehr das Objekt entlang der drei Achsen rotiert wird. Analog zur Position ist die Rotation ebenfalls in die drei Achsen X, Y und Z aufgeteilt. Beispielsweise führt eine Veränderung der Rotation beim Wert X dazu, dass das Objekt entsprechend entlang der X-Achse rotiert wird. Durch die Verwendung aller drei Achsen können so komplexe Rotationen erfolgen. Indem alle Werte erneut auf 0 gesetzt werden, befindet sich das Objekt wieder in seiner Grundposition.</p>
+<p>Nodes verbinden</p>
+</div></div><p>Wenn mit der linken Maustaste auf einen Input oder Output gedrückt wird und der Mauszeiger anschliessend bei gedrückt gehaltener linken Maustaste wegbewegt wird, folgt ein Faden vom Input/Output zum Mauszeiger. Wenn nun ein Input/Output eines anderen Nodes angesteuert wird und die linke Maustaste über diesem Input/Output losgelassen wird, können zwei Nodes verbunden werden. Dabei ist allerdings zu beachten, dass Inputs den Output eines anderen Nodes erhalten müssen. Ein Output kann nicht mit einem Output verbunden werden und ein Input nicht mit einem Input.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Drehpunkt der Rotation</p>
-</div></div><p>Der Ursprung des Objektes stellt den Drehpunkt für die Rotation mittels der Sidebar dar. Das heisst, die Objekte werden jeweils um den Ursprungspunkt herumrotiert. Dies wird beispielsweise deutlich, wenn sich der Ursprungspunkt ausserhalb des Objektes befindet.</p>
-</section>
-<section id="scale" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="scale">Scale</h2>
+<p>Verbindung zwischen Principled-BSDF-Shader und Material-Output</p>
+</div></div><p>Zwischen dem Principled-BSDF-Node und dem Material-Output-Node sind somit nur drei Verbindungen möglich:</p>
+<ul>
+<li>«BSDF»-Output zu «Surface»</li>
+<li>«BSDF»-Output zu «Volume»</li>
+<li>«BSDF»-Output zu «Displacement»</li>
+</ul>
+<p>Die Verbindung von «<em>BSDF</em>»-Output zu «<em>Displacement</em>» führt allerdings dazu, dass der Faden rot eingefärbt ist. Damit signalisiert Blender, dass es sich um eine unzulässige Verbindung zweier Punkte handelt. In diesem Beispiel wurde ein Shader mit einem Vektor verbunden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Skalierung</p>
-</div></div><p>Die Skalierung eines Objekts beschreibt, wie stark ein Objekt vergrössert oder verkleinert wird. Diese Objekteigenschaft lässt sich ebenfalls individuell für alle drei Achsen einstellen. So kann ein Objekt entlang der X-Achse vergrössert werden, indem der dazugehörige X-Wert auf einen Wert über 1 festgelegt wird. Werte im Bereich von grösser als 0 und kleiner als 1 führen zu einer Verkleinerung des Objektes entlang der entsprechenden Achse. Ein Wert von 0 führt dazu, dass das Objekt entlang der entsprechenden Achse keine Grösse mehr hat und aus der entsprechenden Perspektive dem entsprechend nicht mehr sichtbar ist.</p>
+<p>Informationsarten im Shader-Editor</p>
+</div></div><p>Die Farbe der Inputs/Outputs von Nodes beschreibt jeweils, welche Art von Informationen an dieser Stelle übermittelt wird. Die Farben sind folgende:</p>
+<ul>
+<li>Grün: Shader</li>
+<li>Gelb: Farben</li>
+<li>Blau: Vektoren/Normalen</li>
+<li>Grau: Faktoren</li>
+</ul>
+<div id="fig-2_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-2_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_18/2. Input_Output_Knotenpunkarten.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Darstellung der Inputs und Outputs sowie der verschiedenen Informationsarten anhand des Principled-BSDF-Shaders.
+</figcaption>
+</figure>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Bezugspunkt der Skalierung</p>
-</div></div><p>Analog zu der Position und der Rotation bezieht sich die Skalierung ebenfalls auf den Ursprung des Objektes. Wenn sich das Mesh ausserhalb des Ursprungs befindet, führt dies dazu, dass auch der Leerraum zwischen dem Mesh und dem Ursprung entsprechend skaliert wird. Befindet sich die Grenze eines Objektes etwa um den Wert 1 vom Ursprung entfernt, führt eine Skalierung um den Wert 2 dazu, dass das Mesh selbst verdoppelt wird – allerdings wird die Distanz zum Ursprung des Objektes ebenfalls verdoppelt.</p>
-</section>
-<section id="dimension" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="dimension">Dimension</h2>
+<p>Shader können nur mit Shadern verbunden werden</p>
+</div></div><p>Die Verbindung zwischen Inputs und Outputs verschiedener Farben ist möglich und teilweise auch nötig. Es gibt allerdings eine Ausnahme: Shader-Outputs (grüne Punkte rechts) können nur mit Shader-Inputs (grüne Punkte links) verbunden werden. Aus diesem Grund lehnt Blender die Verbindung zwischen dem «BSDF»-Output und dem «Displacement»-Input ab.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Dimensionen von Objekten</p>
-</div></div><p>Unterhalb des Eingabefeldes für die Skalierung befindet sich ein weiteres Feld, welches die Dimensionen eines 3D-Meshes basierend auf den drei Achsen angibt. Die Dimensionen des Objektes sind direkt mit der Skalierung des Objektes verbunden. Eine Veränderung der X-Achsen-Dimension führt dazu, dass die Skalierung anhand der X-Achse so angepasst wird, dass sie der eingegebenen Grösse des Objektes entsprechen. Dadurch kann etwa direkt bestimmt werden, dass ein Objekt entlang der verschiedenen Achsen eine bestimmte Grösse innehat, ohne dass die Skalierung der entsprechenden Grösse angepasst wird.</p>
-</section>
-<section id="transformationen-sperren" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="transformationen-sperren">Transformationen sperren</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Transformationen sperren</p>
-</div></div><p>Neben den Werten für die Position, Rotation und Skalierung befinden sich drei aufgeschlossene Schlösser. Durch das Anklicken dieser Schlösser lässt sich die dazugehörige Eigenschaft auf einer Achse sperren, sodass sie nicht mehr verändert werden kann. Das entsprechende Symbol verändert sich dadurch zu einem geschlossenen Schloss.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Sperrung gilt nur für Viewport-Display</p>
-</div></div><p>Die Werte links neben dem Schloss lassen sich allerdings immer noch verändern, was kontraintuitiv wirken mag. Dies liegt daran, dass sich diese Sperrung auf Veränderungen mittels des Viewport Displays bezieht, welche nun als Nächstes betrachtet werden.</p>
-<div class="exercisebox">
-<div class="exercisebox-header">
-<div class="exercisebox-icon">
-
-</div>
-<p>Übung 3: Verwendung der Sidebar</p>
-</div>
-<div class="exercisebox-body">
-<p><strong>Übung 3.1</strong></p>
-<p>Versuchen Sie den Standardwürfel so zu skalieren, dass er entsprechend der Abbildung einen in die Höhe ragenden Quader darstellt.</p>
-<p><strong>Übung 3.2</strong></p>
-<p>Versuchen Sie den Standardwürfel so zu verändern, dass er aus der orthogonalen (Taste <kbd aria-hidden="true">5</kbd><span class="visually-hidden">5</span> ) Vorder/Rück-Ansicht (Taste <kbd aria-hidden="true">1</kbd><span class="visually-hidden">1</span> ) nicht mehr sichtbar ist.</p>
-</div>
-</div>
-<div class="rememberbox">
-<div class="rememberbox-header">
-<div class="rememberbox-icon">
-
-</div>
-<p>Merke…</p>
-</div>
-<div class="rememberbox-body">
-<p>Die drei Transformationen Location, Rotation und Scale aus der Sidebar beziehen sich alle drei jeweils auf den Ursprung des Objektes.</p>
-<p>Dimension des Objektes hängt mit dessen Skalierung zusammen.</p>
-</div>
-</div>
+<p>Principled-BSDF ist ein Shader</p>
+</div></div><p>Der Principled-BSDF verfügt lediglich über den Shader-Output. Dies liegt daran, dass es sich beim Principled-BSDF um einen Shader handelt. Dies wird mit einer grünen Markierung in der Kopfzeile des Nodes markiert. Dieser sollte somit lediglich mit einem Shader-Input verbunden werden. Wenn eine Verbindung mit einer anderen Art von Input vorgenommen wird, so wird der Verbindungsfaden zwischen den Nodes in roter Farbe dargestellt, um auf die fehlerhafte Verbindung hinzuweisen.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

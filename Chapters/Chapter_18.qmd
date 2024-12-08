@@ -21,7 +21,7 @@ Darstellung eines Default-Materials im Shader-Editor
 
 Sofern ein Material ausgewählt ist, sollten sich innerhalb des Shader-Editors zwei Blöcke befinden. Ein etwas grösserer Block, welcher mit «*Principled BSDF*» beschrieben ist, und ein kleinerer Block, der als «*Material Output*» beschriftet ist, wie in Abbildung 1 dargestellt. Beide Blöcke sind zwischen zwei grünen Punkten mittels eines Fadens miteinander verbunden.
 
-![Ein Principled-BSDF-Shader, der mit dem Material-Output verbunden ist. Dies wird standardmässig bei einem neuen Material erstellt.](Images/Chapter_18/1.%20Default_Material.png){#fig-1_1 fig-align="left"} 
+![Ein Principled-BSDF-Shader, der mit dem Material-Output verbunden ist. Dies wird standardmässig bei einem neuen Material erstellt.](Images/Chapter_18/1.%20Default_Material.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Nodes
@@ -53,12 +53,12 @@ Informationsarten im Shader-Editor
 
 Die Farbe der Inputs/Outputs von Nodes beschreibt jeweils, welche Art von Informationen an dieser Stelle übermittelt wird. Die Farben sind folgende:
 
--   Grün: Shader
--   Gelb: Farben
--   Blau: Vektoren/Normalen
--   Grau: Faktoren
+-   **Grün**: Shader
+-   **Gelb**: Farben
+-   **Blau**: Vektoren/Normalen
+-   **Grau**: Faktoren
 
-![ Darstellung der Inputs und Outputs sowie der verschiedenen Informationsarten anhand des Principled-BSDF-Shaders.](Images/Chapter_18/2. Input_Output_Knotenpunkarten.png){#fig-2_2 fig-align="left"}
+![Darstellung der Inputs und Outputs sowie der verschiedenen Informationsarten anhand des Principled-BSDF-Shaders.](Images/Chapter_18/2.%20Input_Output_Knotenpunkarten.png){#fig-2_2 fig-align="left"}
 
 ::: column-margin
 Shader können nur mit Shadern verbunden werden

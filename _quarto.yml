@@ -57,7 +57,9 @@ website:
           - href: Chapters/Chapter_17.qmd
             text: Kapitel 17
           - href: Chapters/Chapter_18.qmd
-            text: Kapitel 18            
+            text: Kapitel 18 
+          - href: Chapters/Chapter_19.qmd
+            text: Kapitel 19 
       - href: about.qmd
         icon: info-circle
         text: Über

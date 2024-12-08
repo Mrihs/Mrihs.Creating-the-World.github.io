@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9. Object- und Edit-Mode – Creating the World</title>
+<title>21. Texturen – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,8 +39,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-05798b36db35dfecaedaec0bbed5404c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
-<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -234,31 +232,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Auf dieser Seite</h2>
-   
-  <ul>
-  <li><a href="#die-verschiedenen-bearbeitungs-modi" id="toc-die-verschiedenen-bearbeitungs-modi" class="nav-link active" data-scroll-target="#die-verschiedenen-bearbeitungs-modi">Die verschiedenen Bearbeitungs-Modi</a></li>
-  <li><a href="#struktur-von-3d-meshes" id="toc-struktur-von-3d-meshes" class="nav-link" data-scroll-target="#struktur-von-3d-meshes">Struktur von 3D-Meshes</a>
-  <ul class="collapse">
-  <li><a href="#vertices" id="toc-vertices" class="nav-link" data-scroll-target="#vertices">Vertices</a></li>
-  <li><a href="#edges" id="toc-edges" class="nav-link" data-scroll-target="#edges">Edges</a></li>
-  <li><a href="#faces" id="toc-faces" class="nav-link" data-scroll-target="#faces">Faces</a></li>
-  </ul></li>
-  <li><a href="#anzahl-vertices-in-einem-face" id="toc-anzahl-vertices-in-einem-face" class="nav-link" data-scroll-target="#anzahl-vertices-in-einem-face">Anzahl Vertices in einem Face</a></li>
-  <li><a href="#auswahl-von-vertices-edges-und-faces-im-edit-mode" id="toc-auswahl-von-vertices-edges-und-faces-im-edit-mode" class="nav-link" data-scroll-target="#auswahl-von-vertices-edges-und-faces-im-edit-mode">Auswahl von Vertices, Edges und Faces im Edit-Mode</a></li>
-  <li><a href="#das-innere-des-objekts" id="toc-das-innere-des-objekts" class="nav-link" data-scroll-target="#das-innere-des-objekts">Das Innere des Objekts</a></li>
-  <li><a href="#normalen-die-richtige-seite-der-faces-finden" id="toc-normalen-die-richtige-seite-der-faces-finden" class="nav-link" data-scroll-target="#normalen-die-richtige-seite-der-faces-finden">Normalen: die richtige Seite der Faces finden</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">9. Object- und Edit-Mode</h1>
+<h1 class="title">21. Texturen</h1>
 </div>
 
 
@@ -275,259 +257,58 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="die-verschiedenen-bearbeitungs-modi" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="die-verschiedenen-bearbeitungs-modi">Die verschiedenen Bearbeitungs-Modi</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Object-Mode</p>
-</div></div><p>Die bisherigen Transformationen, die an Objekten gemacht wurden, haben sich immer auf den Object-Mode bezogen. Dabei wurden grundlegende Eigenschaften von Objekten (Position, Rotation und Skalierung) verändert. Die Form des Objektes selbst wurde dabei nicht verändert, sondern lediglich seine Darstellungsweise. Durch das Zurücksetzen der Werte in der Sidebar erscheint das Objekt wieder in seiner ursprünglichen Form.</p>
-<div class="tippbox">
-<div class="tippbox-header">
-<div class="tippbox-icon">
-
-</div>
-<p>Weiterführende Informationen</p>
-</div>
-<div class="tippbox-body">
-<p>Das Zurücksetzen der Transformationen kann direkt mittels folgenden Shortcuts erfolgen:</p>
-<p>Zurücksetzen der Position: <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span></p>
-<p>Zurücksetzen der Rotation: <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span></p>
-<p>Zurücksetzen der Skalierung: <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span></p>
-</div>
-</div>
-<p>Durch die bisherigen Transformationen wurde das Objekt als Ganzes bearbeitet. Dies zeichnet die Transformationen im Object-Mode aus. Nebst dem Object-Mode gibt es noch eine Reihe anderer Modi. In der oberen linken Ecke des Viewports ist jeweils ersichtlich, welcher Modus gerade verwendet wird. Durch einen Klick auf das Dropdown-Menü erscheint eine Liste der verfügbaren Modi:</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Die verschiedenen Bearbeitungs-Modi</p>
-</div></div><ul>
-<li><p><strong>Object Mode</strong>: In diesem Modus können die Objekte in einer Szene als Ganzes transformiert und angeordnet werden.</p></li>
-<li><p><strong>Edit Mode</strong>: In diesem Modus können die einzelnen Bestandteile des Objekts anvisiert und bearbeitet werden.</p></li>
-<li><p><strong>Sculpt Mode</strong>: In diesem Modus kann das Objekt anhand von Sculpting-Tools bearbeitet werden.</p></li>
-<li><p><strong>Vertex Paint</strong>: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen.</p></li>
-<li><p><strong>Weight Paint</strong>: In diesem Modus werden dem Objekt verschiedene Gewichte aufgemalt, welche anschliessend für weitere Funktionen verwendet werden können.</p></li>
-<li><p><strong>Texture Paint</strong>: In diesem Modus ist es möglich, ein Objekt mit einer Textur zu bemalen.</p></li>
-</ul>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Wechsel zwischen Object- und Edit-Mode</p>
-</div></div><p>Im Rahmen dieses Kurses wird vorwiegend mit dem Object- und dem Edit-Mode gearbeitet. Der Wechsel zwischen diesen beiden Modi stellt einen wichtigen Wechsel zwischen den Modi dar. Deshalb ist es möglich, mittels einer einzigen Taste zwischen dem Object- und dem Edit-Mode hin- und herzuwechseln – nämlich mittels der Taste <kbd aria-hidden="true">Tab</kbd><span class="visually-hidden">Tab</span> . Dabei wird in den Edit-Mode für das aktuell ausgewählte Objekt gewechselt. Für Objekte, welche nicht aus einzelnen Komponenten bestehen (beispielsweise Kameras oder Lichtquellen), ist kein Edit-Mode verfügbar.</p>
-</section>
-<section id="struktur-von-3d-meshes" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="struktur-von-3d-meshes">Struktur von 3D-Meshes</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Der Gitteraufbau von 3D-Meshes</p>
-</div></div><p>Beim Wechseln in den Edit-Mode erscheint das Mesh in seiner Struktur, bestehend aus mehreren Polygonen. Dabei handelt es sich um einzelne Oberflächenstrukturen der Meshes. Die Polygone – und somit auch das Mesh – bestehen in ihrer Struktur aus folgenden Elementen:</p>
-<ul>
-<li><strong>Vertices</strong>: Einzelne Punkte in einem Mesh</li>
-<li><strong>Edges</strong>: Linien zwischen zwei Vertices in einem Mesh</li>
-<li><strong>Faces</strong>: Flächen zwischen mehreren Edges/Vertices in einem Mesh</li>
-</ul>
+<p>Parameter</p>
+</div></div><p>Bislang wurden für die verschiedenen Einstellungsoptionen von Materialien konstante Werte verwendet. Das heisst: Einem Material wurde stets eine gewisse Farbe zugewiesen (z.B. Rot) und diese Farbe wurde auf alle Oberflächen, die diesem Material zugewiesen wurden, aufgetragen – so wie in Abbildung 1 Ebenso verhielt es sich mit der Roughness: Für diese wurde ein fixer Wert definiert, welcher für das ganze Material angewendet wurde. Eine Variation innerhalb des Materials war dabei nicht möglich.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/1. Vertices, Edges and Faces.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_21/red_cube.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Vertices, Edges und Faces.
+Abbildung&nbsp;1: Der Standardwürfel mit einer roten Base-Color.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Select-Modus wechseln</p>
-</div></div><p>Im Edit-Mode können wahlweise Vertices, Edges oder Faces ausgewählt werden, je nachdem in welchem Select-Modus man sich befindet. Die drei Select-Modi sind in der linken oberen Ecke direkt neben dem Auswahlfeld für den Bearbeitungs-Modus (in dem Fall der Edit-Mode) aufzufinden.</p>
+<p>Texturen</p>
+</div></div><p>Texturen stellen eine Möglichkeit dar, um verschiedene Werte für eine Einstellung zu definieren und diese auf ein Objekt zu übertragen. Dadurch können komplexere Farbverläufe oder Variationen von Farben über die Breite einer Oberfläche erstreckt werden – wie beispielsweise in Abbildung 2.</p>
 <div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/2. Select_Mode_Auswahl.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_21/Cube_Textured.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Schaltfläche für den Vertex-, Edge- und Face-Select-Modus in der linken oberen Ecke des Edit-Modes.
+Abbildung&nbsp;2: Der Standardwürfel mit einer Textur in der Base-Color.
 </figcaption>
 </figure>
 </div>
-<section id="vertices" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="vertices">Vertices</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Vertices</p>
-</div></div><p>Ein Vertex (Mehrzahl: Vertices) stellt die grundlegendste Einheit in einem Mesh dar. Jeder Vertex beschreibt einen Punkt in einem Mesh. Anders als die Objekte als Ganzes, verfügen Vertices nur über das Merkmal ihrer jeweiligen Position. Die Merkmale Skalierung und Rotation gibt es für Vertices nicht. Ein Vertex hat deshalb auch keine Dimensionen.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Auswahl von Vertices</p>
-</div></div><p>Werden zwei miteinander verbundene Vertices ausgewählt, so wird automatisch auch das dazwischenliegende Edge ausgewählt. Ebenso wird automatisch das dazugehörige Face mit ausgewählt, wenn alle Vertices dieses Faces ausgewählt werden. Ein einzelner Vertex kann lediglich im Vertex Select-Modus angewählt werden.</p>
-</section>
-<section id="edges" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="edges">Edges</h3>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Edges</p>
-</div></div><p>Edges beschreiben Linien, welche zwischen zwei Vertices liegen. Da ein Edge genau der Verbindung zwischen zwei Vertices entspricht, ist dessen Mittelpunkt identisch zur Mitte zwischen den beiden Vertices.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Auswahl von Edges</p>
-</div></div><p>Im Edge-Select-Modus können die Edges als solche ausgewählt werden. Dabei werden automatisch auch die beiden zum Edge dazugehörigen Vertices ausgewählt. Wenn alle Edges eines Faces ausgewählt werden, dann wird automatisch auch das dazugehörige Face ausgewählt.</p>
-</section>
-<section id="faces" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="faces">Faces</h3>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Faces</p>
-</div></div><p>Faces stellen die Flächen zwischen verbundenen Edges/Vertices dar. Die Position des Faces entspricht dem Mittelpunkt dieser Fläche und somit dem Mittelpunkt der dazugehörigen Vertices. Es ist allerdings auch möglich, dass mehrere Vertices mittels Edges verbunden sind, ohne eine Fläche zu beinhalten.</p>
-<p>Mittels des Face-Select-Modus können Faces direkt angewählt werden. Alternativ kann ein Face auch angewählt werden, indem im Vertex-Select-Modus alle zum Face dazugehörigen Vertices ausgewählt werden, oder indem im Edge-Select-Modus alle zum Face dazugehörigen Edges ausgewählt werden.</p>
-</section>
-</section>
-<section id="anzahl-vertices-in-einem-face" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="anzahl-vertices-in-einem-face">Anzahl Vertices in einem Face</h2>
-<div class="tippbox">
-<div class="tippbox-header">
-<div class="tippbox-icon">
-
-</div>
-<p>Weiterführende Informationen</p>
-</div>
-<div class="tippbox-body">
-<p>Polygone und Faces sind in ihrer Bedeutung praktisch deckungsgleich. Faces beschreiben jedoch eher die Fläche eines Polygons, während das Polygon eher die Gesamtheit von Vertices, Edges und Faces beschreibt. Der Begriff Polygon wird innerhalb von Blender allerdings selten verwendet.</p>
-</div>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Anzahl Vertices in einem Face</p>
-</div></div><p>Der Default-Cube, den Blender jeweils beim Start eines neuen Projektes zur Verfügung stellt, besteht aus sechs Faces. Jedes dieser Faces beinhaltet vier Vertices. Es ist allerdings auch möglich, dass ein Face aus mehr oder weniger Vertices besteht. Es gibt verschiedene Begriffe, basierend auf der Anzahl Vertices in einem Face:</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Bezeichnung von Faces aufgrund Anzahl Vertices</p>
-</div></div><ul>
-<li><strong>Triangles</strong> (<strong>Tris</strong>): Faces, die aus drei Vertices bestehen</li>
-<li><strong>Quadrangles</strong> (<strong>Quads</strong>): Faces, die aus vier Vertices bestehen</li>
-<li><strong>N-Gons</strong>: Faces, die aus n Vertices bestehen</li>
-</ul>
+<p>Beispiel mit zwei verschiedenen Texturen</p>
+</div></div><p>Der Unterschied zwischen Abbildung 1 und Abbildung 2 ist in Abbildung 3 ersichtlich. Beide Bilder in der Abbildung 3 zeigen eine Textur. Die linke Textur, welche komplett aus einer roten Fläche besteht, beschreibt die Textur, welche auf den Würfel in Abbildung 1 aufgetragen wird. Die rechte Textur aus der Abbildung 3 zeigt eine Textur, welche auf den Würfel in der Abbildung 2 aufgetragen wird.</p>
 <div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/3. Cube by Tris.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_21/Textures_Comparison.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Der Standardwürfel bestehend aus Tris statt aus Quads.
+Abbildung&nbsp;3: Links eine einfarbige rote Textur und rechts eine Textur mit einem Mauer-Muster.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Tris aus Quads ableiten</p>
-</div></div><p>Aus Quads lassen sich sehr einfach Tris bilden. Hierfür muss lediglich jedes Quad zwischen zwei gegenüberliegenden Vertices zerschnitten werden, sodass die Fläche in zwei Dreiecke unterteilt wird. Beim Rendern von Bildern werden Quads in den 3D-Objekten automatisch in Tris unterteilt, was im Normalfall für den Benutzer jedoch kaum ersichtlich ist.</p>
+<p>Texturen werden nicht für Parameter verwendet</p>
+</div></div><p>Die linke Textur müsste allerdings nicht verwendet werden. Die gesamte Textur beschreibt eine konstante Farbe, namentlich die Farbe Rot, und weist keinerlei Variation im Bild auf. Deshalb könnte man stattdessen die Grundfarbe im Principled-BSDF-Shader auf Rot stellen und bräuchte keine Textur. Der Parameter für die Base-Color wäre dann auf die Farbe Rot eingestellt. In solchen Fällen würde man meistens auf die Textur verzichten, da diese als zusätzliche Bilddatei mit dem 3D-Objekt abgespeichert wird und mehr Speicherplatz benötigt.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Bevorzugung von Quads</p>
-</div></div><p>Trotzdem ist es sinnvoll, sich beim Modellieren von 3D-Objekten eher an die Verwendung von Quads zu gewöhnen. Viele Tricks und Kniffe der Objektbearbeitung lassen sich einfacher oder teilweise sogar nur auf Quads anwenden. Somit erleichtert die Arbeit mit Quads den Arbeitsprozess erheblich. Weiterhin sind Quads auch in vielen Animationsstudios der Standard.</p>
-<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/4. Prof Figures.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4: Links eine gerenderte 3D-Figur und rechts die Figur in ihrer Gitterstruktur.
-</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Anwendung von Tris</p>
-</div></div><p>Arbeiten mit Tris ist trotzdem durchaus möglich und vereinzelte Tris in Objekten sind auch nicht problematisch. In manchen Situationen sind Tris sogar flexibler als Quads. Wenn allerdings die Objekte komplett aus Tris bestehen sollen, macht dies gerade in gemeinschaftlichen Prozessen nur Sinn, wenn alle beteiligten Personen mit Tris umgehen können.</p>
-<div class="rememberbox">
-<div class="rememberbox-header">
-<div class="rememberbox-icon">
-
-</div>
-<p>Merke…</p>
-</div>
-<div class="rememberbox-body">
-<p>Vertices beschreiben die einzelnen Punkte in einem 3D-Objekt.</p>
-<p>Edges beschreiben die verbundenen Punkte in einem 3D-Objekt.</p>
-<p>Faces beschreiben Flächen zwischen mehr als zwei verbundenen Vertices.</p>
-<p>Faces mit vier Vertices (Quads) sind gegenüber Faces mit drei Vertices (Tris) in den meisten Fällen zu bevorzugen.</p>
-</div>
-</div>
-</section>
-<section id="auswahl-von-vertices-edges-und-faces-im-edit-mode" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="auswahl-von-vertices-edges-und-faces-im-edit-mode">Auswahl von Vertices, Edges und Faces im Edit-Mode</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Auswahl von Vertices, Edges und Faces im Edit-Mode</p>
-</div></div><p>Abhängig davon, welcher Select-Modus gerade aktiviert ist, lassen sich entweder die Vertices, Edges oder Faces auswählen. Die Auswahl der jeweiligen Elemente geschieht mittels der linken Maustaste. Wie auch im Object-Mode können bei gedrückter <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste zusätzliche Elemente ausgewählt werden. Ebenso können mit der Taste <kbd aria-hidden="true">C</kbd><span class="visually-hidden">C</span> der Circle-Select-Modus und mittels der Taste <kbd aria-hidden="true">B</kbd><span class="visually-hidden">B</span> der Box-Select-Modus verwendet werden. Zudem kann mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> die Auswahl umgekehrt werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Select linked mittels <kbd aria-hidden="true">L</kbd><span class="visually-hidden">L</span></p>
-</div></div><p>Im Edit-Mode gibt es weitere Auswahl-Optionen. Wenn sich der Mauszeiger über einem Element eines Objekts befindet, können mit der Taste <kbd aria-hidden="true">L</kbd><span class="visually-hidden">L</span> alle Elemente, welche über Edges damit verbunden sind, ausgewählt werden. Dies ermöglicht es, alle verbundenen Elemente auszuwählen. Um alle Elemente eines Objektes – also auch unverbundene Elemente – auszuwählen, kann die Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> gedrückt werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Edge-Loop-Select bei gedrückter Taste <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span></p>
-</div></div><p>Weiterhin lassen sich ganze Verbindungen von Edges auswählen, wenn die Taste <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> während der Auswahl gedrückt wird. Dadurch werden alle Edges, die gemeinsam eine Linie mit dem gerade ausgewählten Element bilden, ausgewählt. Dies ist auch im Vertex-Select-Modus möglich. Im Face-Select-Modus werden alle Faces, die gemeinsam eine Linie bilden, ausgewählt (hierfür muss der Mausklick allerdings bei einem Edge erfolgen – nicht in der Fläche des Faces).</p>
-</section>
-<section id="das-innere-des-objekts" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="das-innere-des-objekts">Das Innere des Objekts</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Virtuelle Objekte haben meist keine Füllung</p>
-</div></div><p>So wie auch in der realen Welt haben virtuelle 3D-Objekte Flächen, welche aus mindestens drei Kanten bestehen und mindestens drei Ecken. Im Gegensatz zu Objekten in der realen Welt bestehen virtuelle Objekte nicht aus einer Füllung. Wird ein realer Apfel mit einem Messer in der Mitte geteilt, so wird der Inhalt unter der Schale – etwa das Fruchtfleisch oder das Kerngehäuse – sichtbar. Bei einem 3D-Mesh gibt es jedoch kein Inneres, sodass lediglich die Oberflächen der äusseren Struktur von der anderen Seite aus ersichtlich werden. Das Mesh besteht somit nur aus der Oberfläche, welche ein leeres Volumen überdeckt.</p>
-<p>Aus dem Umgang mit realen Objekten ist der Mensch sich gewohnt, dass Objekte einen Inhalt haben. Dies trifft auf digitale Objekte selten zu. Als Betrachter von digitalen Objekten ist dieser Sachverhalt nur in den seltensten Fällen bemerkbar. Dadurch wird durch fehlende Auseinandersetzung mit dieser Thematik die Illusion eines möglichen Inhaltes verstärkt.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Wenn das Innere sichtbar wird</p>
-</div></div><p>In Videospielen kann es vorkommen, dass die Kamera durch einen Fehler in ein Objekt hineingelangt. Dadurch wird das Objekt anschliessend von der Innenseite aus betrachtet. Dies muss allerdings nicht immer der Fall sein. In manchen Situationen ist dieses Objekt gar nicht mehr sichtbar, wenn es von innen betrachtet wird.</p>
-</section>
-<section id="normalen-die-richtige-seite-der-faces-finden" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="normalen-die-richtige-seite-der-faces-finden">Normalen: die richtige Seite der Faces finden</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Die zwei Seiten von Faces</p>
-</div></div><p>Da 3D-Meshes keinen inneren Hohlraum haben, bilden die Faces die Oberfläche, welche das Objekt abdeckt. Dies bedeutet aber auch, dass es zwei Seiten von dieser Oberfläche geben muss: eine Seite, die betrachtet werden soll, und eine, die nicht betrachtet werden soll. In den meisten Fällen ist schnell klar, welche Seite eines Objektes von Bedeutung ist. Einen Apfel betrachtet man jeweils von aussen, also ist die nach aussen gerichtete Seite jene Seite, welche betrachtet werden soll. Ebenso verhält es sich bei einem Charakter. In diesem Fall ist ebenfalls die nach aussen gerichtete Seite von Bedeutung und nicht das Innere seines Körpers.</p>
-<div class="tippbox">
-<div class="tippbox-header">
-<div class="tippbox-icon">
-
-</div>
-<p>Weiterführende Informationen</p>
-</div>
-<div class="tippbox-body">
-<p>Bei bestimmten Einstellungen werden die Rückseiten der Oberflächen von Objekten fehlerhaft dargestellt. In diesen Fällen hilft es oftmals, die Ausrichtung der Normalen zu überprüfen und bei Bedarf anzupassen.</p>
-<p>In manchen Game-Engines werden die Rückseiten von Objekten in den Grundeinstellungen gar nicht angezeigt. Dadurch blickt man bei den Oberflächen mit der falschen Ausrichtung durch das Objekt hindurch. Dies vermittelt den Eindruck, dass ein Teil des Objekts fehlen würde. Dieser Teil ist noch da – allerdings der falschen Richtung zugewendet.</p>
-</div>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Die zu betrachtende Seite eines Würfels</p>
-</div></div><p>Wie verhält es sich bei Blenders Standardwürfel? Bei diesem wird zunächst die Aussenseite betrachtet. Allerdings wäre es auch möglich, dass der Default-Cube von innen betrachtet werden soll – etwa, wenn eine Szene im Inneren eines Raumes dargestellt werden soll und der Würfel die Wände, den Boden und die Decke des Raumes darstellt. In diesem Fall ist nicht mehr die Aussenseite des Würfels relevant, sondern die Innenseite.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Normalen</p>
-</div></div><p>Die Normalen eines Objektes geben jeweils an, in welche Richtung Vertices, Edges und Faces gerichtet sind. Wenn ein Würfel etwa von innen betrachtet werden soll, müssen die Normalen nach innen gekehrt werden. Wenn der Würfel allerdings als solcher von aussen betrachtet werden soll, dann müssen die Normalen nach aussen gekehrt sein.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Normalen darstellen</p>
-</div></div><p>Die Normalen eines 3D-Objektes lassen sich im Edit-Mode betrachten, indem die entsprechende Ansicht aktiviert wird. Diese wird im Dropdown-Menü zu den Viewport-Overlays in der rechten oberen Ecke des 3D-Viewports unter dem Abschnitt «<em>Normals</em>» mit der Schaltfläche «<em>Display Normals</em>» aktiviert. Anschliessend erscheinen in den Faces kleine blaue Striche, welche in diejenige Richtung zeigen, gegen die das Face dargestellt ist.</p>
-<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/5.1.Icon_Normals.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5: Icon zur Darstellung der Normalen in den Viewport-Overlays.
-</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Face-Orientation darstellen</p>
-</div></div><p>Es ist auch möglich, in den Viewport-Overlays die «<em>Face Orientation</em>» zu aktivieren. Dadurch werden die Oberflächen eines Objekts in blauer Farbe dargestellt, wenn es sich um die Seite der Normalen handelt, oder in roter Farbe, wenn es sich um die Seite ohne Normalen handelt. Diese Ansicht ist auch im Object-Mode verfügbar, allerdings nur in der Solid-Ansicht und wenn X-Ray deaktiviert ist.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Normalen umkehren und neu berechnen</p>
-</div></div><p>Wenn alle Faces innerhalb eines Objekts ausgewählt werden, kann mittels der Tastenkombination <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">N</kbd><span class="visually-hidden">N</span> das Menü «<em>Normals</em>» beim Mauszeiger geöffnet werden. Mit der Option «<em>Flip</em>» können anschliessend alle Normalen in die umgekehrte Richtung gekehrt werden. Zudem können die Normalen mittels der Option «<em>Recalculate Outside</em>» zur äusseren Seite hin oder mittels «<em>Recalculate Inside</em>» zur inneren Seite hin berechnet werden.</p>
+<p>Textur für Variation</p>
+</div></div><p>Die rechte Textur, welche auf den Würfel der Abbildung 2 übertragen wird, könnte nicht mittels einer einzelnen Farbe im Principled-BSDF-Shader dargestellt werden. In der Base-Color des Shaders kann leidglich eine Farbe ausgewählt werden, welche angezeigt wird – also kann lediglich ein Parameter definiert werden. Um eine Variation an Parametern zu erzielen, wie in Abbildung 2, wird eine Textur benötigt, welche anschliessend der Base-Color im Principled-BSDF-Shader zugewiesen wird.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

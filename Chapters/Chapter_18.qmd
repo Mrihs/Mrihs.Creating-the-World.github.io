@@ -1,0 +1,73 @@
+---
+title: "18. Der Shader-Editor"
+editor: visual
+---
+
+::: column-margin
+Shader-Editor öffnen
+:::
+
+Um den Shader-Editor zu öffnen, sollte ein neues, zusätzliches Editor-Fenster geöffnet werden. Dieses kann aus den Ecken des 3D-Viewport-Editors herausgezogen werden. In diesem neuen Fenster kann anschliessend der 3D-Viewport-Editor zum Shader-Editor geändert werden.
+
+::: column-margin
+Auswahl von Materialien im Shader-Editor
+:::
+
+Im Shader-Editor wird jeweils mittels einer grafischen Programmiersprache durch die Verbindung von Nodes (Knotenpunkten) definiert, wie die Materialien erstellt werden. In der Kopfleiste des Editors wird zudem dasselbe Feld zum Auswählen respektive zum Hinzufügen von Materialien angezeigt wie im Material-Reiter im Properties-Editor. Die Auswahl eines anderen Materials im Shader-Editor führt dazu, dass auch das Material im Properties-Editor sowie im Material-Slot automatisch angepasst wird. Umgekehrt führt eine andere Auswahl eines Materials im Properties-Editor dazu, dass im Shader-Editor automatisch auch das entsprechende Material ausgewählt wird.
+
+::: column-margin
+Darstellung eines Default-Materials im Shader-Editor
+:::
+
+Sofern ein Material ausgewählt ist, sollten sich innerhalb des Shader-Editors zwei Blöcke befinden. Ein etwas grösserer Block, welcher mit «*Principled BSDF*» beschrieben ist, und ein kleinerer Block, der als «*Material Output*» beschriftet ist, wie in Abbildung 1 dargestellt. Beide Blöcke sind zwischen zwei grünen Punkten mittels eines Fadens miteinander verbunden.
+
+![Ein Principled-BSDF-Shader, der mit dem Material-Output verbunden ist. Dies wird standardmässig bei einem neuen Material erstellt.](Images/Chapter_18/1.%20Default_Material.png){#fig-1_1 fig-align="left"} 
+
+::: column-margin
+Nodes
+:::
+
+Bei dieser Darstellung handelt es sich um eine Anordnung im Rahmen einer visuellen Programmiersprache, die mit Nodes arbeitet. Jeder der Blöcke stellt einen Node dar. Auf der linken und der rechten Seite dieser Nodes sind in der Regel Punkte abgebildet. Dabei handelt es sich um Inputs und Outputs, welche die Nodes erhalten und versenden können. Auf der linken Seite sind jeweils die Inputs aufgelistet und auf der rechten Seite die Outputs.
+
+::: column-margin
+Nodes verbinden
+:::
+
+Wenn mit der linken Maustaste auf einen Input oder Output gedrückt wird und der Mauszeiger anschliessend bei gedrückt gehaltener linken Maustaste wegbewegt wird, folgt ein Faden vom Input/Output zum Mauszeiger. Wenn nun ein Input/Output eines anderen Nodes angesteuert wird und die linke Maustaste über diesem Input/Output losgelassen wird, können zwei Nodes verbunden werden. Dabei ist allerdings zu beachten, dass Inputs den Output eines anderen Nodes erhalten müssen. Ein Output kann nicht mit einem Output verbunden werden und ein Input nicht mit einem Input.
+
+::: column-margin
+Verbindung zwischen Principled-BSDF-Shader und Material-Output
+:::
+
+Zwischen dem Principled-BSDF-Node und dem Material-Output-Node sind somit nur drei Verbindungen möglich:
+
+-   «BSDF»-Output zu «Surface»
+-   «BSDF»-Output zu «Volume»
+-   «BSDF»-Output zu «Displacement»
+
+Die Verbindung von «*BSDF*»-Output zu «*Displacement*» führt allerdings dazu, dass der Faden rot eingefärbt ist. Damit signalisiert Blender, dass es sich um eine unzulässige Verbindung zweier Punkte handelt. In diesem Beispiel wurde ein Shader mit einem Vektor verbunden.
+
+::: column-margin
+Informationsarten im Shader-Editor
+:::
+
+Die Farbe der Inputs/Outputs von Nodes beschreibt jeweils, welche Art von Informationen an dieser Stelle übermittelt wird. Die Farben sind folgende:
+
+-   Grün: Shader
+-   Gelb: Farben
+-   Blau: Vektoren/Normalen
+-   Grau: Faktoren
+
+![ Darstellung der Inputs und Outputs sowie der verschiedenen Informationsarten anhand des Principled-BSDF-Shaders.](Images/Chapter_18/2. Input_Output_Knotenpunkarten.png){#fig-2_2 fig-align="left"}
+
+::: column-margin
+Shader können nur mit Shadern verbunden werden
+:::
+
+Die Verbindung zwischen Inputs und Outputs verschiedener Farben ist möglich und teilweise auch nötig. Es gibt allerdings eine Ausnahme: Shader-Outputs (grüne Punkte rechts) können nur mit Shader-Inputs (grüne Punkte links) verbunden werden. Aus diesem Grund lehnt Blender die Verbindung zwischen dem «BSDF»-Output und dem «Displacement»-Input ab.
+
+::: column-margin
+Principled-BSDF ist ein Shader
+:::
+
+Der Principled-BSDF verfügt lediglich über den Shader-Output. Dies liegt daran, dass es sich beim Principled-BSDF um einen Shader handelt. Dies wird mit einer grünen Markierung in der Kopfzeile des Nodes markiert. Dieser sollte somit lediglich mit einem Shader-Input verbunden werden. Wenn eine Verbindung mit einer anderen Art von Input vorgenommen wird, so wird der Verbindungsfaden zwischen den Nodes in roter Farbe dargestellt, um auf die fehlerhafte Verbindung hinzuweisen.

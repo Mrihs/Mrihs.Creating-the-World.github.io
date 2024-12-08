@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>20. Tutorial: Strandball – Creating the World</title>
+<title>21. Texturen – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,8 +39,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
-<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -242,7 +240,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">20. Tutorial: Strandball</h1>
+<h1 class="title">21. Texturen</h1>
 </div>
 
 
@@ -261,130 +259,54 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Ziel dieses Tutorials</p>
-</div></div><p>Das Ziel dieses Tutorials ist es, einen Strandball ähnlich der Abbildung 1 zu erstellen. Hierfür werden verschiedene Materialien zu einem Objekt hinzugefügt und variiert. Der erste Schritt dazu besteht aus dem Erstellen eines Objektes für den Strandball. Hierfür kann im 3D-Viewport-Editor mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> das «<em>Add</em>»-Menü geöffnet werden und unter «<em>Mesh | UV Sphere</em>» eine Kugel hinzugefügt werden. Diese kann in ihren Standardeinstellungen so belassen werden, wie sie ist. Damit ist bereits die Grundstruktur des Strandballs vorhanden.</p>
+<p>Parameter</p>
+</div></div><p>Bislang wurden für die verschiedenen Einstellungsoptionen von Materialien konstante Werte verwendet. Das heisst: Einem Material wurde stets eine gewisse Farbe zugewiesen (z.B. Rot) und diese Farbe wurde auf alle Oberflächen, die diesem Material zugewiesen wurden, aufgetragen – so wie in Abbildung 1 Ebenso verhielt es sich mit der Roughness: Für diese wurde ein fixer Wert definiert, welcher für das ganze Material angewendet wurde. Eine Variation innerhalb des Materials war dabei nicht möglich.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_20/1. Standball_Rendered.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_21/red_cube.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: In diesem Tutorial soll dieser Strandball erstellt werden.
+Abbildung&nbsp;1: Der Standardwürfel mit einer roten Base-Color.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Vorbereitung</p>
-</div></div><p>Im nächsten Schritt geht es um die Erstellung von Materialien. Hierfür sollte der 3D-Viewport-Editor zunächst in zwei Editoren aufgeteilt werden, indem ein zweiter Editor aus einer der Ecken des 3D-Viewport-Editors herausgezogen wird. Anschliessend kann einer der beiden 3D-Viewport-Editoren zum Shader-Editor umgewandelt werden, indem auf die Schaltfläche in der linken oberen Ecke des 3D-Viewport-Editors geklickt wird und der «<em>Shader Editor</em>» ausgewählt wird. Im anderen 3D-Viewport-Editor sollte das Viewport-Shading auf «<em>Material Preview Mode</em>» umgestellt werden, damit die Materialien sichtbar sind. Zudem ist es sinnvoll, im Properties-Editor auf den Reiter für die Materialien zu wechseln. Anschliessend sollte der Bildschirm etwa so wie in Abbildung 2 angeordnet sein.</p>
+<p>Texturen</p>
+</div></div><p>Texturen stellen eine Möglichkeit dar, um verschiedene Werte für eine Einstellung zu definieren und diese auf ein Objekt zu übertragen. Dadurch können komplexere Farbverläufe oder Variationen von Farben über die Breite einer Oberfläche erstreckt werden – wie beispielsweise in Abbildung 2.</p>
 <div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_20/2. Bildschirmanordnung.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_21/Cube_Textured.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Anordnung der Editoren für die Erstellung des Strandballs.
+Abbildung&nbsp;2: Der Standardwürfel mit einer Textur in der Base-Color.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Neues Material erstellen</p>
-</div></div><p>Im Header des Shader-Editors kann nun durch das Klicken der Schaltfläche «<em>New</em>» ein neues Material erstellt werden – hierfür sollte die UV-Sphere als aktives Objekt ausgewählt sein. Dadurch wird der Kugel ein neues Material hinzugefügt. Im Properties-Editor wird dafür ein neuer Slot für Materialien erstellt und gleich das erstellte Material diesem Slot hinzugefügt. Im Shader-Editor wird der Principled-BSDF-Shader hinzugefügt und mit dem Material-Output verbunden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Blaue Farbe erstellen</p>
-</div></div><p>Nun wird zunächst das erste Material des Strandballs erstellt. Dieses Material soll die blauen Streifen des Balls abdecken. Hierfür wird zunächst im Principled-BSDF-Shader die «<em>Base Color</em>» verändert, indem auf die weisse Fläche in der entsprechenden Zeile geklickt wird. Hierdurch öffnet sich das Fenster zur Auswahl einer neuen Farbe. Die Farbe soll blau werden. Dies lässt sich am besten im «<em>RGB</em>»-Reiter einstellen, indem dort die RGB-Werte 0-0-1 eingegeben werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Shade Smooth</p>
-</div></div><p>Um den Grad der Reflexion besser nachvollziehen zu können, empfiehlt es sich, das Objekt geglättet darstellen zu lassen. Hierfür wird im 3D-Viewport das Menü «<em>Object</em>» geöffnet und die Option «<em>Shade Smooth</em>» ausgewählt. Dadurch werden die Kanten des Objektes geglättet dargestellt.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Parameter einstellen</p>
-</div></div><p>Im nächsten Schritt werden die Parameter für das Material eingestellt. Der Strandball wird nicht metallisch sein, somit kann der Wert für «<em>Metallic</em>» auf dem Wert 0 belassen werden. Der Strandball sollte allerdings glatter erscheinen. Deshalb wird der Wert für die «<em>Roughness</em>» etwas reduziert. Ein Wert von 0 führt allerdings zu einer zu starken Reflexion. Deshalb ist ein Roughness-Wert von etwa 0.2 eher zu bevorzugen.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Material benennen</p>
-</div></div><p>Das aktuell ausgewählte Material wird später verwendet, um die Oberflächen mit der blauen Farbe darzustellen. Um etwas Ordnung in die Materialien zu bringen, wird dieses Material umbenannt. Hierfür kann entweder im Header des Shader-Editors auf die Bezeichnung des Materials geklickt werden, um diese umzubenennen, oder alternativ kann dies auch im Properties-Editor erfolgen. Dort kann die Standardbezeichnung «<em>Material</em>» mit dessen Nummerierung beispielsweise zu «Ball_Blau» geändert werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Neuen Material-Slot hinzufügen</p>
-</div></div><p>Als Nächstes wird ein weiteres Material erstellt, welches eine andere Farbe darstellen soll. Hierfür wird im Properties-Editor ein neuer Slot für ein Material erstellt, indem auf die Schaltfläche «+» geklickt wird. Die Auswahl des Material-Slots wird nun auf den neuen Slot umgestellt, der allerdings noch kein Material innehat. Nun könnte an dieser Stelle ein neues Material erstellt werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Kopie eines Materials erstellen</p>
-</div></div><p>Das zweite Material wird allerdings praktisch dieselben Eigenschaften innehaben wie das Material «Ball_Blau». Aus diesem Grund ist es sinnvoller, eine Kopie dieses Materials zu erstellen und darauf basierend die Parameter abzuändern, die unterschiedlich sein sollen. Hierfür kann im Dropdown Menü neben der Schaltfläche «<em>New</em>» erneut das Material «Ball_Blau» ausgewählt werden. Nun befindet sich in beiden Material-Slots dasselbe Material. Mittels eines Klicks auf das Icon für «<em>New Material</em>» wird eine Kopie des Materials erstellt, welche nun als «Ball_Blau.001» bezeichnet wird.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Gelbes Material erstellen</p>
-</div></div><p>Das kopierte Material wird als Nächstes mit einer gelben Grundfarbe versehen. Damit dies auch in dessen Bezeichnung ersichtlich ist, wird es vorher noch zu «Ball_Gelb» umbenannt. Anschliessend wird im Shader-Editor im Principled-BSDF-Shader die «<em>Base Color</em>» auf einen RGB-Wert von 1-1-0 gesetzt. Dadurch sollte nun das Material «Ball_Gelb» eine unterschiedliche Farbe als «Ball_Blau» aufweisen, aber in allen anderen Parametern identisch sein.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Faces für zweiten Material-Slot auswählen</p>
-</div></div><p>Als Nächstes wird im Edit-Mode definiert, welche Faces zu welchem Material gehören. Hierfür wird mittels der Taste <kbd aria-hidden="true">Tab</kbd><span class="visually-hidden">Tab</span> in den Edit-Mode gewechselt. Alle Faces haben nun noch standardmässig das Material des ersten Material-Slots inne. Deshalb werden nun alle Faces ausgewählt, denen das Material aus dem zweiten Material-Slot zugewiesen werden soll. Jeweils vier aufeinanderfolgende Streifen werden mit demselben Material ausgestattet. Indem im Face-Select-Modus bei gedrückter Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> mit der linken Maustaste auf die Streifen der UV-Sphere geklickt wird, können diese gleich als Ganzes ausgewählt werden. Anschliessend müssen der Auswahl noch von Hand die dazugehörigen Tris an den beiden Polen der Kugel hinzugefügt werden.</p>
+<p>Beispiel mit zwei verschiedenen Texturen</p>
+</div></div><p>Der Unterschied zwischen Abbildung 1 und Abbildung 2 ist in Abbildung 3 ersichtlich. Beide Bilder in der Abbildung 3 zeigen eine Textur. Die linke Textur, welche komplett aus einer roten Fläche besteht, beschreibt die Textur, welche auf den Würfel in Abbildung 1 aufgetragen wird. Die rechte Textur aus der Abbildung 3 zeigt eine Textur, welche auf den Würfel in der Abbildung 2 aufgetragen wird.</p>
 <div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_20/3. Auswahl_Material2.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_21/Textures_Comparison.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Auswahl der Faces zur Zuweisung des zweiten Material-Slots.
+Abbildung&nbsp;3: Links eine einfarbige rote Textur und rechts eine Textur mit einem Mauer-Muster.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Zweites Material den Faces hinzufügen</p>
-</div></div><p>Im Properties-Editor kann nun im Material-Reiter der zweite Material-Slot ausgewählt werden. Wenn nun die Schaltfläche «<em>Assign</em>» gedrückt wird, sollte den ausgewählten Faces das Material im zweiten Material-Slot zugewiesen werden.</p>
+<p>Texturen werden nicht für Parameter verwendet</p>
+</div></div><p>Die linke Textur müsste allerdings nicht verwendet werden. Die gesamte Textur beschreibt eine konstante Farbe, namentlich die Farbe Rot, und weist keinerlei Variation im Bild auf. Deshalb könnte man stattdessen die Grundfarbe im Principled-BSDF-Shader auf Rot stellen und bräuchte keine Textur. Der Parameter für die Base-Color wäre dann auf die Farbe Rot eingestellt. In solchen Fällen würde man meistens auf die Textur verzichten, da diese als zusätzliche Bilddatei mit dem 3D-Objekt abgespeichert wird und mehr Speicherplatz benötigt.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Weisses Material erstellen</p>
-</div></div><p>Als Nächstes wird ein weiterer Material-Slot erstellt und diesem eine weitere Kopie des ersten (oder alternativ des zweiten) Materials zugewiesen. Dieses Material wird in diesem Beispiel den Polen des Balls zugewiesen und könnte etwa als «Ball_Weiss» bezeichnet werden. Auch bei diesem Material wird anschliessend lediglich die Farbe verändert, nämlich auf weiss (RGB-Code 1-1-1).</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Weisses Material hinzufügen</p>
-</div></div><p>Im Edit-Mode werden anschliessend alle Faces an den Polen der Kugel ausgewählt. Diesen Faces wird dann das neu erstellte Material zugewiesen, indem das dritte Material ausgewählt wird und auf «<em>Assign</em>» geklickt wird.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Subdivision-Surface-Modifier hinzufügen</p>
-</div></div><p>An dieser Stelle könnte der Ball bereits fertig sein. Bei genauerer Betrachtung sind allerdings noch einige Kanten von Vertices zu erkennen. Deshalb wird dem Ball noch ein Subdivision-Surface-Modifier hinzugefügt, um auch die Struktur des Objektes etwas abzuglätten. Hierfür wird im Properties-Editor auf den Reiter für die Modifiers geklickt und unter «<em>Add Modifier</em>» der «<em>Subdivision Surface</em>»-Modifier hinzugefügt. Unter «<em>Levels Viewport</em>» kann anschliessend noch die Anzahl Subdivisions auf den Wert 2 erhöht werden. Dadurch erscheint der Ball weniger kantig.</p>
-<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_20/4. Auswahl_Material_3.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4: Auswahl der Faces für den dritten Material-Slot.
-</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Creases hinzufügen</p>
-</div></div><p>Durch den Subdivision-Surface-Modifier ergibt sich nun jedoch ein neues Problem. Die Faces an den Polen der Kugel stellen jeweils Tris dar, welche unregelmässig geglättet werden. Um dieses Problem zu lösen, wird der jeweils erste Edge-Ring an den Polen ausgewählt, indem im Edge-Select-Modus bei gedrückter <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span>-Taste ein Edge dieses Rings angeklickt wird. Anschliessend kann in der Sidebar (öffnen mittels <kbd aria-hidden="true">N</kbd><span class="visually-hidden">N</span>) der Edge-Crease für diese Edges auf 0.5 eingestellt werden, wodurch diese Kante etwas weniger stark verzogen wird. Dadurch sollte nun der Strandball fertiggestellt sein.</p>
-<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_20/5. Creases.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5: Creases an der Abgrenzung der Tris.
-</figcaption>
-</figure>
-</div>
-<div class="exercisebox">
-<div class="exercisebox-header">
-<div class="exercisebox-icon">
-
-</div>
-<p>Übung 13: Materialien zuweisen und nachbilden</p>
-</div>
-<div class="exercisebox-body">
-<p><strong>Übung 13.1</strong></p>
-<p>Öffnen Sie die Datei «<em>Uebung_13_1</em>» und wechseln Sie in den Material-Preview-Shading-Modus. Sie finden ein Feuerzeug vor, dem noch keine Materialien zugewiesen wurden. Orientieren Sie sich hierfür an realen Beispielen oder Beispielbildern aus dem Internet.</p>
-</div>
-</div>
+<p>Textur für Variation</p>
+</div></div><p>Die rechte Textur, welche auf den Würfel der Abbildung 2 übertragen wird, könnte nicht mittels einer einzelnen Farbe im Principled-BSDF-Shader dargestellt werden. In der Base-Color des Shaders kann leidglich eine Farbe ausgewählt werden, welche angezeigt wird – also kann lediglich ein Parameter definiert werden. Um eine Variation an Parametern zu erzielen, wie in Abbildung 2, wird eine Textur benötigt, welche anschliessend der Base-Color im Principled-BSDF-Shader zugewiesen wird.</p>
 
 
 

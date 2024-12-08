@@ -62,6 +62,8 @@ website:
             text: Kapitel 19
           - href: Chapters/Chapter_20.qmd
             text: Kapitel 20
+          - href: Chapters/Chapter_21.qmd
+            text: Kapitel 21
       - href: about.qmd
         icon: info-circle
         text: Über

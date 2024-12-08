@@ -302,7 +302,6 @@ Metallic beschreibt, ob ein Objekt aus Metall ist, und dadurch keine Refraktion 
 :::
 ::::::
 
-
 ## Mehrere Materialien verwenden
 
 ::: column-margin

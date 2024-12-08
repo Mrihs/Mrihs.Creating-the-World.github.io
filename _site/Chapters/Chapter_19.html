@@ -206,6 +206,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../Chapters/Chapter_19.html">
  <span class="dropdown-text">Kapitel 19</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_20.html">
+ <span class="dropdown-text">Kapitel 20</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -387,12 +391,12 @@ Abbildung&nbsp;2: Darstellung der Inputs und Outputs sowie der verschiedenen Inf
 </div></div><p>Das Spektrum der möglichen Farben als solches ist limitiert und es ist nicht möglich, eine neue Farbe zu erfinden. Dies hat allerdings den Vorteil, dass jedem Farbwert ein individueller Code zugeordnet werden kann. Die hexadezimale Farbdefinition stellt einen solchen Code dar. Unter dem Reiter «<em>Hex</em>» innerhalb der Farbauswahl kann jeweils dieser Code für die ausgewählte Farbe betrachtet werden. Ebenso kann an dieser Stelle auch ein hexadezimaler Code eingefügt werden, um eine entsprechende Farbe auszuwählen. Anders als bei den RGB- oder HSV-Werten muss hier also lediglich ein Wert übertragen werden und damit wird anschliessend die Farbe ermittelt.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 15%">
-<col style="width: 18%">
-<col style="width: 19%">
-<col style="width: 15%">
-<col style="width: 15%">
-<col style="width: 15%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -509,10 +513,10 @@ Abbildung&nbsp;3: Dreimal dasselbe Objekt mit derselben Farbe, allerdings unters
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Roughness beschreibt die Oberflächenstruktur</p>
 </div></div><p>Alle drei Objekte unterscheiden sich hinsichtlich der Roughness, welche sie innehaben. Das erste Objekt weist eine Roughness von 0 auf, das zweite Objekt eine Roughness von 0.5 und das rechte Objekt eine Roughness von 1. Die Roughness beschreibt die Struktur der Oberfläche. Eine Roughness von 0 bezeichnet eine komplett glatte Oberfläche, während eine Roughness von 1 eine sehr raue Oberfläche darstellt. Realistische Werte für die Roughness liegen im Wert von 0 bis 1. Negative oder grössere Werte sind auch möglich, allerdings werden dabei keine realgetreuen Abbildungen mehr erstellt.</p>
-<div class="colum-margin">
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p>Identisches Ausmass der Lichtreflexion bei Roughness</p>
-</div>
-<p>Durch eine geringe Roughness – also eine glatte Oberfläche – scheint das Licht der Umgebung stärker reflektiert zu werden und auch Strukturen in der Umgebung scheinen gespiegelt zu werden. Tatsächlich wird allerdings auch in den anderen Beispielen gleich viel Licht reflektiert. Die Ursache für die unterschiedliche Darstellung liegt somit nicht in den Unterschieden der Reflexion.</p>
+</div></div><p>Durch eine geringe Roughness – also eine glatte Oberfläche – scheint das Licht der Umgebung stärker reflektiert zu werden und auch Strukturen in der Umgebung scheinen gespiegelt zu werden. Tatsächlich wird allerdings auch in den anderen Beispielen gleich viel Licht reflektiert. Die Ursache für die unterschiedliche Darstellung liegt somit nicht in den Unterschieden der Reflexion.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Einfluss der Roughness auf die Lichtreflexion</p>
@@ -657,14 +661,10 @@ Abbildung&nbsp;9: Darstellung desselben Objektes unter denselben Lichtverhältni
 <p>Übung 12: Materialien nachbilden</p>
 </div>
 <div class="exercisebox-body">
-<p>Base-Color, Roughness und Metallic beschreiben grundlegende Eigenschaften von Objekt-Materialien.</p>
-<p>Die Base-Color beschreibt die Farbe des Materials.</p>
-<p>Die Roughness beschreibt, wie stark die Reflexion des Materials gebündelt wird.</p>
-<p>Metallic beschreibt, ob ein Objekt aus Metall ist, und dadurch keine Refraktion aufweist.</p>
-</div>
-</div>
 <p><strong>Übung 12.1</strong></p>
 <p>Öffnen Sie die Datei «<em>Uebung_12_1</em>» und wechseln sie in den Rendered-Viewport-Shading-Modus. Dieses File ist bereits mit einer Hintergrundwelt und einer Beleuchtung ausgestattet, sodass Sie den Rendered-Viewport-Shading-Modus verwenden können. Verändern Sie von den fünf abgebildeten Kugeln die Einstellungen für die Base-Color, Roughness und Metallic so, dass die Kugeln möglichst ähnlich den über ihnen abgebildeten Kugeln erscheinen.</p>
+</div>
+</div>
 </section>
 <section id="mehrere-materialien-verwenden" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="mehrere-materialien-verwenden">Mehrere Materialien verwenden</h2>
@@ -683,7 +683,7 @@ Abbildung&nbsp;9: Darstellung desselben Objektes unter denselben Lichtverhältni
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Auswahl von Faces mittels Materialien</p>
-</div></div><p>Mittels der Schaltfläche «<em>Select</em>» lassen sich im Edit-Mode die Faces markieren, die zu dem Material-Slot gehören, der gerade in der Auflistung ausgewählt wurde. Dadurch kann schnell ermittelt werden, welche Faces zu einem Material-Slot gehören. Mittels der Taste «Deselect» können zudem die Faces, die zum aktuell angewählten Material-Slot gehören, von der aktuellen Auswahl deaktiviert werden. Durch diese Optionen stellen die Material-Slots eine zusätzliche Hilfestellung dar, um Elemente in komplexen Objekten schnell auswählen zu können.</p>
+</div></div><p>Mittels der Schaltfläche «<em>Select</em>» lassen sich im Edit-Mode die Faces markieren, die zu dem Material-Slot gehören, der gerade in der Auflistung ausgewählt wurde. Dadurch kann schnell ermittelt werden, welche Faces zu einem Material-Slot gehören. Mittels der Taste «<em>Deselect</em>» können zudem die Faces, die zum aktuell angewählten Material-Slot gehören, von der aktuellen Auswahl deaktiviert werden. Durch diese Optionen stellen die Material-Slots eine zusätzliche Hilfestellung dar, um Elemente in komplexen Objekten schnell auswählen zu können.</p>
 
 
 </section>

@@ -1,0 +1,137 @@
+---
+title: "20. Tutorial: Strandball"
+editor: visual
+---
+
+::: column-margin
+Ziel dieses Tutorials
+:::
+
+Das Ziel dieses Tutorials ist es, einen Strandball ähnlich der Abbildung 1 zu erstellen. Hierfür werden verschiedene Materialien 
+zu einem Objekt hinzugefügt und variiert. Der erste Schritt dazu 
+besteht aus dem Erstellen eines Objektes für den Strandball. 
+Hierfür kann im 3D-Viewport-Editor mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd A >}} das «*Add*»-Menü geöffnet werden und unter «*Mesh | UV Sphere*» eine Kugel hinzugefügt werden. Diese kann in ihren Standardeinstellungen so belassen werden, wie sie ist. Damit ist bereits die Grundstruktur des Strandballs vorhanden.
+
+![In diesem Tutorial soll dieser Strandball erstellt werden. ](Images/Chapter_20/1. Standball_Rendered.png){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Vorbereitung
+:::
+
+Im nächsten Schritt geht es um die Erstellung von Materialien. Hierfür sollte der 3D-Viewport-Editor zunächst in zwei Editoren aufgeteilt werden, indem ein zweiter Editor aus einer der Ecken des 3D-Viewport-Editors herausgezogen wird. Anschliessend kann einer der beiden 3D-Viewport-Editoren 
+zum Shader-Editor umgewandelt werden, indem auf die Schaltfläche in der linken oberen Ecke des 3D-Viewport-Editors geklickt wird und der «*Shader Editor*» ausgewählt wird. Im anderen 3D-Viewport-Editor sollte das 
+Viewport-Shading auf «*Material Preview Mode*» umgestellt werden, damit die Materialien sichtbar sind. Zudem ist es sinnvoll, im Properties-Editor auf den Reiter für die Materialien zu wechseln. Anschliessend sollte der Bildschirm etwa so wie in Abbildung 2 angeordnet sein. 
+
+![Anordnung der Editoren für die Erstellung des Strandballs.](Images/Chapter_20/2. Bildschirmanordnung.png){#fig-1_2 fig-align="left"}
+
+::: column-margin
+Neues Material erstellen
+:::
+
+Im Header des Shader-Editors kann nun durch das Klicken der Schaltfläche «*New*» ein neues Material erstellt werden – hierfür sollte die UV-Sphere als aktives Objekt ausgewählt sein. Dadurch wird der Kugel ein neues Material hinzugefügt. Im Properties-Editor wird dafür ein neuer Slot für Materialien erstellt und gleich das erstellte Material diesem Slot hinzugefügt. Im Shader-Editor wird der Principled-BSDF-Shader hinzugefügt und mit dem Material-Output verbunden.
+
+::: column-margin
+Blaue Farbe erstellen
+:::
+
+Nun wird zunächst das erste Material des Strandballs erstellt. Dieses Material soll die blauen Streifen 
+des Balls abdecken. Hierfür wird zunächst im Principled-BSDF-Shader die «*Base Color*» verändert, 
+indem auf die weisse Fläche in der entsprechenden Zeile geklickt wird. Hierdurch öffnet sich das Fenster zur Auswahl einer neuen Farbe. Die Farbe soll blau werden. Dies lässt sich am besten im «*RGB*»-Reiter einstellen, indem dort die RGB-Werte 0-0-1 eingegeben werden. 
+
+::: column-margin
+Shade Smooth
+:::
+
+Um den Grad der Reflexion besser nachvollziehen zu können, empfiehlt es sich, das Objekt geglättet darstellen zu lassen. Hierfür wird im 3D-Viewport das Menü «*Object*» geöffnet und die Option «*Shade Smooth*» ausgewählt. Dadurch werden die Kanten des Objektes geglättet dargestellt.
+
+
+::: column-margin
+Parameter einstellen
+:::
+
+Im nächsten Schritt werden die Parameter für das Material eingestellt. Der Strandball wird nicht metallisch sein, somit kann der Wert für «*Metallic*» auf dem Wert 0 belassen werden. Der Strandball sollte allerdings glatter erscheinen. Deshalb wird der Wert für die «*Roughness*» etwas reduziert. Ein 
+Wert von 0 führt allerdings zu einer zu starken Reflexion. Deshalb ist ein Roughness-Wert von etwa 0.2 eher zu bevorzugen. 
+
+::: column-margin
+Material benennen
+:::
+
+Das aktuell ausgewählte Material wird später verwendet, um die Oberflächen mit der blauen Farbe darzustellen. Um etwas Ordnung in die Materialien zu bringen, wird dieses Material umbenannt. Hierfür kann entweder im Header des Shader-Editors auf die Bezeichnung des Materials geklickt werden, um diese umzubenennen, oder alternativ kann dies auch im Properties-Editor erfolgen. Dort kann die Standardbezeichnung «*Material*» mit dessen Nummerierung beispielsweise zu «Ball_Blau» geändert werden.
+
+::: column-margin
+Neuen Material-Slot hinzufügen
+:::
+
+Als Nächstes wird ein weiteres Material erstellt, welches eine andere Farbe darstellen soll. Hierfür wird im Properties-Editor ein neuer Slot für ein Material erstellt, indem auf die Schaltfläche «+» geklickt wird. Die Auswahl des Material-Slots wird nun auf den neuen Slot umgestellt, der allerdings noch kein Material innehat. Nun könnte an dieser Stelle ein neues Material erstellt werden.
+
+::: column-margin
+Kopie eines Materials erstellen
+:::
+
+Das zweite Material wird allerdings praktisch dieselben Eigenschaften innehaben wie das Material «Ball_Blau». Aus diesem Grund ist es sinnvoller, eine Kopie dieses Materials zu erstellen und darauf basierend die Parameter abzuändern, die unterschiedlich sein sollen. Hierfür kann im Dropdown
+Menü neben der Schaltfläche «*New*» erneut das Material «Ball_Blau» ausgewählt werden. Nun befindet sich in beiden Material-Slots dasselbe Material. Mittels eines Klicks auf das Icon für «*New Material*» wird eine Kopie des Materials erstellt, welche nun als «Ball_Blau.001» bezeichnet wird. 
+
+::: column-margin
+Gelbes Material erstellen
+:::
+
+Das kopierte Material wird als Nächstes mit einer gelben Grundfarbe versehen. Damit dies auch in dessen Bezeichnung ersichtlich ist, wird es vorher noch zu «Ball_Gelb» umbenannt. Anschliessend wird im Shader-Editor im Principled-BSDF-Shader die «*Base Color*» auf einen RGB-Wert von 1-1-0 gesetzt. Dadurch sollte nun das Material «Ball_Gelb» eine unterschiedliche Farbe als «Ball_Blau» aufweisen, aber in allen anderen Parametern identisch sein. 
+
+::: column-margin
+Faces für zweiten Material-Slot auswählen
+:::
+
+Als Nächstes wird im Edit-Mode definiert, welche Faces zu welchem Material gehören. Hierfür wird mittels der Taste {{< kbd Tab >}} in den Edit-Mode gewechselt. Alle Faces haben nun noch standardmässig das Material des ersten Material-Slots inne. Deshalb werden nun alle Faces ausgewählt, denen das Material aus dem zweiten Material-Slot zugewiesen werden soll. Jeweils vier aufeinanderfolgende Streifen werden mit demselben Material ausgestattet. Indem im Face-Select-Modus bei gedrückter Tastenkombination {{< kbd Shift >}} + {{< kbd A >}} mit der linken Maustaste auf die Streifen der UV-Sphere geklickt wird, können diese gleich als Ganzes ausgewählt werden. Anschliessend müssen der Auswahl noch von Hand die dazugehörigen Tris an den beiden Polen der Kugel hinzugefügt werden. 
+
+![ Auswahl der Faces zur Zuweisung des zweiten Material-Slots. ](Images/Chapter_20/3. Auswahl_Material2.png){#fig-1_3 fig-align="left"}
+
+::: column-margin
+Zweites Material den Faces hinzufügen
+:::
+
+Im Properties-Editor kann nun im Material-Reiter der zweite Material-Slot ausgewählt werden. Wenn nun die Schaltfläche «*Assign*» gedrückt wird, sollte den ausgewählten Faces das Material im zweiten Material-Slot zugewiesen werden.
+
+::: column-margin
+Weisses Material erstellen
+:::
+
+Als Nächstes wird ein weiterer Material-Slot erstellt und diesem eine weitere Kopie des ersten (oder alternativ des zweiten) Materials zugewiesen. Dieses Material wird in diesem Beispiel den Polen des Balls zugewiesen und könnte etwa als «Ball_Weiss» bezeichnet werden. Auch bei diesem Material 
+wird anschliessend lediglich die Farbe verändert, nämlich auf weiss (RGB-Code 1-1-1). 
+
+::: column-margin
+Weisses Material hinzufügen
+:::
+
+Im Edit-Mode werden anschliessend alle Faces an den Polen der Kugel ausgewählt. Diesen Faces wird dann das neu erstellte Material zugewiesen, indem das dritte Material ausgewählt wird und auf «*Assign*» geklickt wird.
+
+::: column-margin
+Subdivision-Surface-Modifier hinzufügen
+:::
+
+An dieser Stelle könnte der Ball bereits fertig sein. Bei genauerer Betrachtung sind allerdings noch einige Kanten von Vertices zu erkennen. Deshalb wird dem Ball noch ein Subdivision-Surface-Modifier hinzugefügt, um auch die Struktur des Objektes etwas abzuglätten. Hierfür wird im Properties-Editor auf den Reiter für die Modifiers geklickt und unter «*Add Modifier*» der «*Subdivision 
+Surface*»-Modifier hinzugefügt. Unter «*Levels Viewport*» kann anschliessend noch die Anzahl Subdivisions auf den Wert 2 erhöht werden. Dadurch erscheint der Ball weniger kantig.
+
+![Auswahl der Faces für den dritten Material-Slot.](Images/Chapter_20/4. Auswahl_Material_3.png){#fig-1_4 fig-align="left"}
+
+::: column-margin
+Creases hinzufügen
+:::
+
+Durch den Subdivision-Surface-Modifier ergibt sich nun jedoch ein neues Problem. Die Faces an den Polen der Kugel stellen jeweils Tris dar, welche unregelmässig geglättet werden. Um dieses Problem zu lösen, wird der jeweils erste Edge-Ring an den Polen ausgewählt, indem im Edge-Select-Modus bei gedrückter {{< kbd Alt >}}-Taste ein Edge dieses Rings angeklickt wird. Anschliessend kann in der Sidebar (öffnen mittels {{< kbd N >}}) der Edge-Crease für diese Edges auf 0.5 eingestellt werden, wodurch diese Kante etwas weniger stark verzogen wird. Dadurch sollte nun der Strandball fertiggestellt sein.
+
+![Creases an der Abgrenzung der Tris. ](Images/Chapter_20/5. Creases.png){#fig-1_5 fig-align="left"}
+
+:::::: exercisebox
+:::: exercisebox-header
+::: exercisebox-icon
+:::
+
+Übung 13: Materialien zuweisen und nachbilden
+::::
+
+::: exercisebox-body
+**Übung 13.1**
+
+Öffnen Sie die Datei «*Uebung_13_1*» und wechseln Sie in den Material-Preview-Shading-Modus. Sie finden ein Feuerzeug vor, dem noch keine Materialien zugewiesen wurden. Orientieren Sie sich hierfür an realen Beispielen oder Beispielbildern aus dem Internet.
+:::
+::::::

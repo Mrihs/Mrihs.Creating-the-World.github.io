@@ -241,6 +241,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#farben-aus-anderen-farbboxen-hineinziehen" id="toc-farben-aus-anderen-farbboxen-hineinziehen" class="nav-link" data-scroll-target="#farben-aus-anderen-farbboxen-hineinziehen">Farben aus anderen Farbboxen hineinziehen</a></li>
   </ul></li>
   <li><a href="#roughness" id="toc-roughness" class="nav-link" data-scroll-target="#roughness">Roughness</a></li>
+  <li><a href="#metallic" id="toc-metallic" class="nav-link" data-scroll-target="#metallic">Metallic</a></li>
+  <li><a href="#parameter-richtig-einstellen" id="toc-parameter-richtig-einstellen" class="nav-link" data-scroll-target="#parameter-richtig-einstellen">Parameter richtig einstellen</a></li>
+  <li><a href="#mehrere-materialien-verwenden" id="toc-mehrere-materialien-verwenden" class="nav-link" data-scroll-target="#mehrere-materialien-verwenden">Mehrere Materialien verwenden</a></li>
   </ul>
 </nav>
     </div>
@@ -491,6 +494,196 @@ Abbildung&nbsp;2: Darstellung der Inputs und Outputs sowie der verschiedenen Inf
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Worin unterscheiden sich die Abbildungen?</p>
 </div></div><p>In Abbildung 3 wird dreimal dasselbe Objekt mit derselben Base-Color im Material dargestellt. Worin unterscheiden sich die drei Objekte visuell?</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_19/3. Roughness_Comparison.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Dreimal dasselbe Objekt mit derselben Farbe, allerdings unterschiedlichen Roughness-Werten: Links eine Roughness von 0, in der Mitte eine Roughness von 0.5, rechts eine Roughness von 1.
+</figcaption>
+</figure>
+</div>
+<p>Das erste Objekt auf der linken Seite scheint das Licht in der Umgebung zu spiegeln und ebenso den Fussboden zu reflektieren. Bei den anderen beiden Objekten ist dies nicht der Fall. Zwischen dem mittleren und dem rechten Objekt lässt sich kaum ein Unterschied erkennen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Roughness beschreibt die Oberflächenstruktur</p>
+</div></div><p>Alle drei Objekte unterscheiden sich hinsichtlich der Roughness, welche sie innehaben. Das erste Objekt weist eine Roughness von 0 auf, das zweite Objekt eine Roughness von 0.5 und das rechte Objekt eine Roughness von 1. Die Roughness beschreibt die Struktur der Oberfläche. Eine Roughness von 0 bezeichnet eine komplett glatte Oberfläche, während eine Roughness von 1 eine sehr raue Oberfläche darstellt. Realistische Werte für die Roughness liegen im Wert von 0 bis 1. Negative oder grössere Werte sind auch möglich, allerdings werden dabei keine realgetreuen Abbildungen mehr erstellt.</p>
+<div class="colum-margin">
+<p>Identisches Ausmass der Lichtreflexion bei Roughness</p>
+</div>
+<p>Durch eine geringe Roughness – also eine glatte Oberfläche – scheint das Licht der Umgebung stärker reflektiert zu werden und auch Strukturen in der Umgebung scheinen gespiegelt zu werden. Tatsächlich wird allerdings auch in den anderen Beispielen gleich viel Licht reflektiert. Die Ursache für die unterschiedliche Darstellung liegt somit nicht in den Unterschieden der Reflexion.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Einfluss der Roughness auf die Lichtreflexion</p>
+</div></div><p>Von grösserer Bedeutung in diesem Beispiel ist die Frage, wie das Licht reflektiert wird. Bei einer glatten Oberfläche treffen die Lichtstrahlen parallel zueinander auf eine Oberfläche auf, die über die ganze Fläche hinweg aufgrund der Glätte keine Krümmungen enthält. Dadurch werden alle Lichtstrahlen in demselben Winkel reflektiert. Wenn die Oberfläche allerdings nicht glatt ist und dadurch minimale Buckel auf der Oberfläche entstehen, wie etwa auf der rechten Seite der Abbildung 4 dargestellt, wird das Licht jeweils in unterschiedlichen Winkeln reflektiert. Dadurch scheint das Material durch eine erhöhte Roughness die Umgebung weniger zu reflektieren.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_19/4. Roughness_Darstellung.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Schematische Darstellung der Lichtreflexion bei unterschiedlicher Beschaffenheit der Oberfläche. Links, bei fehlender Roughness, reflektiert die Oberfläche das Licht parallel weiter. Rechts, bei einer variablen Oberflächenstruktur durch erhöhte Roughness, entsteht eine diffuse Lichtreflexion.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Roughness einstellen</p>
+</div></div><p>Die Roughness ist ein Wert, welcher bei vielen Shadern eingestellt werden kann. Hierfür kann bei den entsprechenden Roughness-Zeilen der Slider nach links oder rechts verschoben. Alternativ kann auch ein Wert für die Roughness mittels einer Zahl definiert werden.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Weiterführende Informationen</p>
+</div>
+<div class="tippbox-body">
+<p>Die Blender-Version 2.93 leidet unter einem Bug, sodass teilweise bei der Einstellung einer Roughness von 0 bis 0.003 das Objekt schwarz dargestellt wird. Dies sollte nicht so sein. Das Problem scheint computerabhängig zu sein. Bei einer Roughness von 0.004 sollte das Problem nicht auftreten.</p>
+</div>
+</div>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_19/5. Roughness_Spectrum_comparisson.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5: Dasselbe Objekt mit unterschiedlichen Roughness-Werten. Die Werte betragen von links nach rechts: 0, 0.1, 0.2, 0.3 und 0.4.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="metallic" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="metallic">Metallic</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Worin unterscheiden sich die Abbildungen?</p>
+</div></div><p>In Abbildung 6 wird zweimal dasselbe Objekt mit derselben Grundfarbe und derselben Roughness dargestellt. Worin unterscheiden sich die Objekte?</p>
+<div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_19/6. Metall_Comparrison.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6: Dasselbe Objekt mit unterschiedlichen Einstellungen für Metallic. Links ein dielektrisches Objekt (Metallic von 0), rechts ein metallisches Objekt (Metallic von 1).
+</figcaption>
+</figure>
+</div>
+<p>Beide Objekte scheinen ihre Umgebung zu reflektieren. Das linke Objekt scheint die Umgebung allerdings deutlich schwächer zu reflektieren, während beim rechten Objekt die Umgebung sehr klar ersichtlich ist. Beim rechten Objekt scheint zudem kaum erkennbar, woraus die Grundfarbe des Materials besteht.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Unterschiedliche Prozesse</p>
+</div></div><p>Um den Unterschied zwischen diesen beiden Objekten etwas genauer zu verstehen, benötigt es ein Verständnis für die Prozesse, welche bei der Lichtspiegelung vonstattengehen: Reflexion und Refraktion.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Reflexion</p>
+</div></div><p>Bei der Erklärung der Roughness wurde bereits auf die Reflexion verwiesen. Dabei prallen die Lichtstrahlen an der Oberfläche eines Objektes ab und entfernen sich wieder vom Objekt. Diese Lichtstrahlen sind anschliessend mit dem menschlichen Auge sichtbar. Die Lichtstrahlen dringen dabei nicht in das Objekt ein, sondern werden lediglich reflektiert.</p>
+<div id="fig-1_7" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_19/7. Reflexion.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;7: Schematische Darstellung der Lichtstrahlen bei einer Reflexion.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Refraktion</p>
+</div></div><p>Bei der Refraktion werden die Lichtstrahlen, so wie auch bei der Reflexion, vom Objekt aus zurückgesendet. Im Unterschied zur Reflexion dringen die Lichtstrahlen bei der Refraktion allerdings in das Objekt ein, bevor sie sich wieder vom Objekt entfernen. Beim Eindringen in das Objekt werden die Lichtstrahlen zudem gebrochen und verlassen das Objekt dadurch in einem anderen Winkel.</p>
+<div id="fig-1_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_19/8. Refraktion.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8: Schematische Darstellung der Lichtstrahlen bei einer Refraktion.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Dielektrische Materialien</p>
+</div></div><p>Diese beiden Prozesse – Reflexion und Refraktion – schliessen sich nicht gegenseitig aus. Ein Material kann Lichtstrahlen sowohl reflektieren als auch refraktieren. Solche Materialien werden als dielektrische Materialien bezeichnet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Metallische Materialien</p>
+</div></div><p>Eine bestimmte Gruppe von Materialien zeichnet sich allerdings dadurch aus, dass sie keine Refraktion der Lichtstrahlen zulässt. In diesem Fall reflektiert das Material die Lichtstrahlen, aber keine Lichtstrahlen dringen in das Objekt ein. Bei dieser Materialiengruppe handelt es sich um Metalle. Dies macht auch den Unterschied zwischen den beiden Objekten in Abbildung 6 aus. Das linke Objekt stellt ein dielektrisches Material dar, während das rechte Objekt ein metallisches Objekt darstellt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Metallic-Wert im Principled-BSDF-Shader</p>
+</div></div><p>Im Principled-BSDF-Shader kann der Metallgehalt eines Materials durch die Zeile «<em>Metallic</em>» variiert werden, entweder durch eine Bewegung des Sliders oder durch eine Zahleneingabe. Ein Wert von 0 beschreibt dabei, dass es sich um ein dielektrisches Material handelt, welches Licht sowohl reflektiert als auch refraktiert. Ein Wert von 1 hingegen beschreibt ein metallisches Material, bei dem Licht lediglich reflektiert wird. Je grösser der Metallic-Wert, desto weniger Licht wird durch das Material refraktiert.</p>
+</section>
+<section id="parameter-richtig-einstellen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="parameter-richtig-einstellen">Parameter richtig einstellen</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Parameter kombinieren</p>
+</div></div><p>Durch die Kombination der bislang erläuterten Parameter lassen sich bereits viele Arten von Materialien erstellen. Ein metallisches Objekt unterschiedet sich ebenfalls hinsichtlich der Roughness und kann auch unterschiedliche Farbwerte annehmen. Dadurch lassen sich bereits viele Materialien nachbilden.</p>
+<div id="fig-1_9" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_19/9. Material_Comparison.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;9: Darstellung desselben Objektes unter denselben Lichtverhältnissen bei unterschiedlichen Werten für Metallic und Roughness.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Verwendung von Bildvorlagen, um Materialien nachzubilden</p>
+</div></div><p>Um möglichst realistische Abbildungen von Materialien zu erstellen, empfiehlt es sich, jeweils mit einer Bildvorlage zu arbeiten. Diese sollte möglichst genau studiert werden und es sollte betrachtet werden, wie die entsprechenden Materialien agieren. Wie stark reflektieren die Materialien? Sind die Materialien glatt? Bestehen die Materialien aus Metall? Welche Farbe liegt dem Material zugrunde? Dies stellt lediglich eine Reihe von Fragen dar, welche bei der Anpassung von Materialien berücksichtig werden. Durch weitere Parameter der Materialen wird die Komplexität, mit der Materialien abgebildet werden, zusätzlich erhöht.</p>
+<div class="rememberbox">
+<div class="rememberbox-header">
+<div class="rememberbox-icon">
+
+</div>
+<p>Merke…</p>
+</div>
+<div class="rememberbox-body">
+<p>Base-Color, Roughness und Metallic beschreiben grundlegende Eigenschaften von Objekt-Materialien.</p>
+<p>Die Base-Color beschreibt die Farbe des Materials.</p>
+<p>Die Roughness beschreibt, wie stark die Reflexion des Materials gebündelt wird.</p>
+<p>Metallic beschreibt, ob ein Objekt aus Metall ist, und dadurch keine Refraktion aufweist.</p>
+</div>
+</div>
+<div class="exercisebox">
+<div class="exercisebox-header">
+<div class="exercisebox-icon">
+
+</div>
+<p>Übung 12: Materialien nachbilden</p>
+</div>
+<div class="exercisebox-body">
+<p>Base-Color, Roughness und Metallic beschreiben grundlegende Eigenschaften von Objekt-Materialien.</p>
+<p>Die Base-Color beschreibt die Farbe des Materials.</p>
+<p>Die Roughness beschreibt, wie stark die Reflexion des Materials gebündelt wird.</p>
+<p>Metallic beschreibt, ob ein Objekt aus Metall ist, und dadurch keine Refraktion aufweist.</p>
+</div>
+</div>
+<p><strong>Übung 12.1</strong></p>
+<p>Öffnen Sie die Datei «<em>Uebung_12_1</em>» und wechseln sie in den Rendered-Viewport-Shading-Modus. Dieses File ist bereits mit einer Hintergrundwelt und einer Beleuchtung ausgestattet, sodass Sie den Rendered-Viewport-Shading-Modus verwenden können. Verändern Sie von den fünf abgebildeten Kugeln die Einstellungen für die Base-Color, Roughness und Metallic so, dass die Kugeln möglichst ähnlich den über ihnen abgebildeten Kugeln erscheinen.</p>
+</section>
+<section id="mehrere-materialien-verwenden" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="mehrere-materialien-verwenden">Mehrere Materialien verwenden</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Mehrere Materialien in einem Objekt verwenden</p>
+</div></div><p>Wie bereits betrachtet kann ein Objekt mehrere Slots für Materialien innehaben. Dadurch ist es auch möglich, dass ein Objekt mehrere unterschiedliche Materialien beinhaltet. Die Materialien werden dabei den einzelnen Faces der Objekte zugewiesen. Dadurch kann ein Face einem bestimmten Material zugewiesen werden und das danebenliegende Face einem anderen Material.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Materialien Slots zuweisen</p>
+</div></div><p>Wenn sich in der Auflistung der Material-Slots mehrere Slots befinden, werden standardmässig alle Faces des Objektes dem ersten Slot und somit auch dem Material im ersten Slot zugewiesen. Wenn ein zweiter Slot mit einem zweiten Material erstellt wurde, dann müssen im Edit-Mode die entsprechenden Faces ausgewählt werden, welche diesem zweiten Slot zugewiesen werden sollen. Mittels der Schaltfläche «<em>Assign</em>» können anschliessend die entsprechenden Faces diesem Slot zugewiesen werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Zuweisung erfolgt zu Material-Slots und nicht zu Material</p>
+</div></div><p>Durch die Zuweisung mittels «<em>Assign</em>» werden die ausgewählten Faces nicht direkt einem Material zugewiesen, sondern zu einem Material-Slot. Das Material kann nachträglich immer noch geändert werden, indem über das Dropdown-Menü ein anderes Material für diesen Slot ausgewählt wird. Dies führt dazu, dass auch die Faces, welche diesem Slot zugewiesen wurden, nun mit dem neu ausgewählten Material dargestellt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Auswahl von Faces mittels Materialien</p>
+</div></div><p>Mittels der Schaltfläche «<em>Select</em>» lassen sich im Edit-Mode die Faces markieren, die zu dem Material-Slot gehören, der gerade in der Auflistung ausgewählt wurde. Dadurch kann schnell ermittelt werden, welche Faces zu einem Material-Slot gehören. Mittels der Taste «Deselect» können zudem die Faces, die zum aktuell angewählten Material-Slot gehören, von der aktuellen Auswahl deaktiviert werden. Durch diese Optionen stellen die Material-Slots eine zusätzliche Hilfestellung dar, um Elemente in komplexen Objekten schnell auswählen zu können.</p>
 
 
 </section>

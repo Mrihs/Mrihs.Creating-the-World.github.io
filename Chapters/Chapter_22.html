@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Michael Rihs">
 
-<title>2. Die Arbeitsoberfläche des 3D-Viewports – Creating the World</title>
+<title>22. UVs – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -244,17 +243,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#toolbar" id="toc-toolbar" class="nav-link active" data-scroll-target="#toolbar">Toolbar</a></li>
-  <li><a href="#sidebar" id="toc-sidebar" class="nav-link" data-scroll-target="#sidebar">Sidebar</a></li>
-  <li><a href="#header" id="toc-header" class="nav-link" data-scroll-target="#header">Header</a>
-  <ul class="collapse">
-  <li><a href="#aktions-einstellungen" id="toc-aktions-einstellungen" class="nav-link" data-scroll-target="#aktions-einstellungen">Aktions-Einstellungen</a></li>
-  <li><a href="#erweiterte-hilfsmittel-zur-bearbeitung" id="toc-erweiterte-hilfsmittel-zur-bearbeitung" class="nav-link" data-scroll-target="#erweiterte-hilfsmittel-zur-bearbeitung">Erweiterte Hilfsmittel zur Bearbeitung</a></li>
-  <li><a href="#bearbeitungsmodus" id="toc-bearbeitungsmodus" class="nav-link" data-scroll-target="#bearbeitungsmodus">Bearbeitungsmodus</a></li>
-  <li><a href="#anzeige-optionen" id="toc-anzeige-optionen" class="nav-link" data-scroll-target="#anzeige-optionen">Anzeige-Optionen</a></li>
-  </ul></li>
-  <li><a href="#letzte-aktion-verfeinern" id="toc-letzte-aktion-verfeinern" class="nav-link" data-scroll-target="#letzte-aktion-verfeinern">Letzte Aktion verfeinern</a></li>
-  <li><a href="#dargestellte-viewport-overlays" id="toc-dargestellte-viewport-overlays" class="nav-link" data-scroll-target="#dargestellte-viewport-overlays">Dargestellte Viewport-Overlays</a></li>
+  <li><a href="#wie-kommen-die-texturen-auf-ein-objekt" id="toc-wie-kommen-die-texturen-auf-ein-objekt" class="nav-link active" data-scroll-target="#wie-kommen-die-texturen-auf-ein-objekt">Wie kommen die Texturen auf ein Objekt?</a></li>
+  <li><a href="#uv-mapping" id="toc-uv-mapping" class="nav-link" data-scroll-target="#uv-mapping">UV-Mapping</a></li>
   </ul>
 </nav>
     </div>
@@ -263,23 +253,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">2. Die Arbeitsoberfläche des 3D-Viewports</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">Blender</div>
-    <div class="quarto-category">UI</div>
-  </div>
-  </div>
+<h1 class="title">22. UVs</h1>
+</div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor:in</div>
-    <div class="quarto-title-meta-contents">
-             <p>Michael Rihs </p>
-          </div>
-  </div>
     
   
     
@@ -290,225 +270,169 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="wie-kommen-die-texturen-auf-ein-objekt" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="wie-kommen-die-texturen-auf-ein-objekt">Wie kommen die Texturen auf ein Objekt?</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Funktion des 3D-Viewports</p>
-</div></div><p>Der 3D-Viewport stellt eine der wichtigsten Arbeitsoberflächen in Blender dar. In ihm werden die 3D-Objekte sowie die Szenen, in denen sie integriert werden, angezeigt. Zudem werden im 3D-Viewport eine Reihe anderer Einstellungen dargestellt, welche in anderen Editoren konfiguriert werden können. Die Bearbeitung der grundlegenden Struktur von 3D-Objekten erfolgt in der Regel direkt im 3D-Viewport. Der Arbeitsbereich des 3D-Viewports lässt sich in verschiedene Areale aufteilen, welche nachfolgend genauer betrachtet werden.</p>
-<section id="toolbar" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="toolbar">Toolbar</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Toolbars</p>
-</div></div><p>Die Toolbar befindet sich auf der linken Seite der 3D-View. Allerdings sind Toolbars auch in anderen Editoren anzutreffen. Die Toolbars lassen sich jeweils mit der Taste <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> ein- und ausblenden. Da es auch im 3D-Viewport verschiedene Bearbeitungsmöglichkeiten gibt, variieren die Elemente in der Toolbar abhängig vom Bearbeitungsmodus. Diese sind entweder per Mausklick über diese Toolbar oder mithilfe von Tastenkombinationen aufrufbar. In diesem Kurs wird vor allem auf Tastenkombinationen verwiesen, wenn Operationen durchgeführt werden.</p>
-</section>
-<section id="sidebar" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="sidebar">Sidebar</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Sidebars</p>
-</div></div><p>Die Sidebar befindet sich auf der rechten Seite des Viewport-Displays, muss allerdings noch mit der Taste <kbd aria-hidden="true">N</kbd><span class="visually-hidden">N</span> geöffnet werden. Mit dieser Taste lässt sich die Sidebar ebenfalls wieder verbergen. Die Sidebar ist auch in anderen Editoren anzutreffen und wird dort ebenfalls mit der Taste<kbd aria-hidden="true">N</kbd><span class="visually-hidden">N</span> ein- und ausgeblendet. Die Sidebar ist zudem anhand von Registerkarten in zusätzliche Kategorien eingeordnet. Unter dem Register «<em>Item</em>» können etwa Einstellungen zum aktuell ausgewählten Objekt betrachtet und verändert werden, im Register «<em>Tool</em>» können Einstellungen zum aktuell ausgewählten Werkzeug verfeinert werden und unter dem Register «<em>View</em>» können Einstellungen zur Ansicht betrachtet und verfeinert werden.</p>
-</section>
-<section id="header" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="header">Header</h2>
-<p>Im Header sind zusätzliche Einstellungen aufzufinden. Diese können nicht nur zwischen den einzelnen Editoren variieren, sondern auch zwischen den einzelnen Bearbeitungsmodi inner-halb der 3D-View.</p>
-<section id="aktions-einstellungen" class="level3">
-<h3 class="anchored" data-anchor-id="aktions-einstellungen">Aktions-Einstellungen</h3>
-<p>In der oberen linken Ecke, direkt neben dem Bedienfeld für die Auswahl des Editors, befinden sich Einstellungsmöglichkeiten, welche basierend auf der aktuell durchgeführten Aktion verfeinert werden können.</p>
-<div id="fig-2_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<p>Einen Würfel aus Papier erstellen</p>
+</div></div><p>Stellen Sie sich vor, sie möchten den Standardwürfel aus Blender als reales Objekt mit Papier oder Karton nachbauen. Wie würden Sie vorgehen? Eine Möglichkeit wäre, dass eine Form, ähnlich derjenigen aus Abbildung 1, ausgeschnitten wird und anschliessend an den Kanten zusammengefaltet und an den entsprechenden Stellen zusammengeklebt wird. Dadurch entsteht ein Würfel. Wenn dieser Würfel aus einem normalen einfarbigen Papier erstellt wird, besteht seine gesamte Oberfläche aus einem einzelnen Wert – der Farbe des Papiers. Man könnte sich also vorstellen, dass das Material dieses Würfels in Blender die Farbe des Papiers als Parameter in der Base-Color des Principled-BSDF-Shaders innehat.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_1_AktionseinstellungAuswahl.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_22/Texturvorlage.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Aktions-Einstellungen am Beispiel der Auswahl.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Form, aus der ein Würfel gefaltet werden kann.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Würfel aus einer Fotografie abbilden</p>
+</div></div><p>Statt eines einfarbigen Papiers könnte auch eine Foto grafie verwendet werden – wie in diesem Fall das Bild einer Steintextur in Abbildung 2 (Bildquelle: www.ambientcg.com/view?id=Rocks024S). Diese Abbildung würde anschliessend mitsamt den farblichen Strukturen des Bildes auch auf der Oberfläche des Würfels dargestellt. Der Würfel aus Abbildung 2 weist auf seiner Vorderseite dieselbe Struktur auf, wie sie in dem Kasten der Vorlage auf der linken Seite zuoberst dargestellt ist. Analog stellen die anderen Seiten des Würfels ebenfalls einen Kasten aus der Vorlage auf der linken Seite dar. In diesem Fall wird die die Fotografie als Textur verwendet, welche verschiedene Farbvariationen beinhaltet und als Base-Color fungieren kann.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_22/Bigstones texture and cube.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Eine Form auf einem Foto sowie ein Würfel, der aus dieser Form zusammengefaltet wurde.
+</figcaption>
+</figure>
+</div>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_22/smallstones texture and cube.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Dasselbe Foto aus Abbildung 2, allerdings mit einer kleineren Fläche, aus welcher der Würfel erstellt wird.
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="erweiterte-hilfsmittel-zur-bearbeitung" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="erweiterte-hilfsmittel-zur-bearbeitung">Erweiterte Hilfsmittel zur Bearbeitung</h3>
+<section id="uv-mapping" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="uv-mapping">UV-Mapping</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Hilfsmittel zur Bearbeitung von Objekten</p>
-</div></div><p>In der Mitte des Headers befinden sich eine Reihe von erweiterten Einstellungen, welche bei der Objektbearbeitung als Hilfsmittel verwendet werden können. Hierzu gehört beispielsweise die proportionale Bearbeitung von Objekten oder das Festlegen von Bezugspunkten für Transformationen. Diese Hilfsmittel werden in einem späteren Kapitel ausführlich behandelt.</p>
-<div id="fig-2_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<p>UV-Mapping</p>
+</div></div><p>Der soeben dargestellte Prozess wird auch in der 3D-Modellierung bei der Verwendung von Texturen durchgeführt und wird als UV-Mapping bezeichnet. Hierbei wird für alle Oberflächen auf einem dreidimensionalen Objekt eingestellt, wie diese ein zweidimensionales Bild abdecken sollen. Diese räumliche Zuordnung von Oberflächen in einem dreidimensionalen Objekt auf ein zweidimensionales Bild wird als UV bezeichnet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>UV-Editor</p>
+</div></div><p>Um die UVs eines Objektes in Blender zu betrachten, wird ein neuer Editor benötigt, der neben dem 3D-Viewport-Editor geöffnet wird – der UV-Editor. Hierfür muss ein neuer Editor aus den Ecken des 3D-Viewport-Editors herausgezogen werden und dieser neue Editor auf den «<em>UV Editor</em>» umgestellt werden.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_2_Erweiterte_Hilfsmittel.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_22/Icon_UV_Editor.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Erweiterte Hilfsmittel.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Icon für den UV-Editor.
 </figcaption>
 </figure>
 </div>
-</section>
-<section id="bearbeitungsmodus" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="bearbeitungsmodus">Bearbeitungsmodus</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Auswahl des Bearbeitungsmodus</p>
-</div></div><p>In der Zeile unterhalb des Headers befindet sich links das Menü zur Auswahl des Bearbeitungsmodus. Dabei wird definiert, wie das aktuelle Objekt bearbeitet werden soll. So kann beispielsweise im Object-Mode das Objekt als Ganzes bearbeitet werden, während im Edit-Mode die Struktur des Objektes bearbeitet werden kann.</p>
-<div id="fig-2_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<p>Alle UVs eines Objektes anzeigen lassen</p>
+</div></div><p>Auf den ersten Blick scheint der UV-Editor leer zu sein. Dies liegt daran, dass in diesem Editor jeweils die UVs der gerade ausgewählten Faces dargestellt werden. Um die UVs zu betrachten, muss deshalb im 3D-Viewport-Editor in den Edit-Mode gewechselt werden und alle Faces ausgewählt werden. Anschliessend werden im UV-Editor die UVs dieser Auswahl angezeigt, wie in Abbildung 5 dargestellt.</p>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_2_Erweiterte_Hilfsmittel.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_22/UV-Editor.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Auswahl des Bearbeitungsmodus.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5: Der Standardwürfel und seine UVs im UV-Editor.
 </figcaption>
 </figure>
 </div>
-</section>
-<section id="anzeige-optionen" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="anzeige-optionen">Anzeige-Optionen</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Anzeige-Optionen</p>
-</div></div><p>In der rechten oberen Ecke befinden sich Optionen zur Darstellung der Objekte in der 3D-View. Diese umfassen:</p>
+<p>Zugehörigkeit einer UV ermitteln</p>
+</div></div><p>Auf den ersten Blick ist dabei nicht ganz klar, welche UV zu welchem Face gehört. Wenn man beispielsweise wissen möchte, welche UV ein bestimmtes Face darstellt, können alle Faces abgewählt werden und lediglich dieses eine Face ausgewählt werden, wie in Abbildung 6. Dadurch wird im UV-Editor lediglich die UV dieses einen Faces dargestellt.</p>
+<div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_22/UV with Seam.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6: Auswahl eines Faces des Standardwürfels, um seine dazugehörige UV zu ermitteln.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>UVs werden mit neuem Objekt erstellt</p>
+</div></div><p>Jedes neu hinzugefügte Objekt in Blender wird bereits mit einem UV-Mapping erstellt. Das heisst, ein neu hinzugefügter Würfel beinhaltet bereits das standardmässige UV-Mapping, welches bislang dargestellt wurde. Auch andere Mesh-Formen werden standardmässig mit ihren UV-Mappings erstellt. Abbildung 7 zeigt die Mesh-Primitives in ihren Default-Einstellungen inklusive einer auf sie angewendeten Textur und darunter das entsprechende Mapping dieser Texturen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>UV-Unwrapping</p>
+</div></div><p>Wenn Objekte im Edit-Mode bearbeitet werden und komplexere Formen annehmen, kann es vorkommen, dass die UVs nicht mehr passend erscheinen. In solchen Fällen sollten die UVs jeweils angepasst werden. Statt einer manuellen Anpassung besteht allerdings auch die Möglichkeit, dass Blender die UVs neu für die veränderte Form erstellt. Dieser Prozess wird als UV-Unwrapping bezeichnet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><kbd aria-hidden="true">U</kbd><span class="visually-hidden">U</span>, um Objekte zu unwrappen</p>
+</div></div><p>Das UV-Unwrapping erfolgt im Edit-Mode. Dabei werden die Faces, bei denen das UV-Unwrapping erfolgen soll, ausgewählt und anschliessend die Taste gedrückt. Beim Mauszeiger erscheint anschliessend das «<em>UV Mapping</em>»-Menü, bei dem aus verschiedenen Optionen zum Unwrapping ausgewählt werden kann. Diese Optionen sind:</p>
 <ul>
-<li>View Object Types</li>
-<li>Show Gizmo</li>
-<li>Show Overlay</li>
-<li>Toggle X-Ray</li>
-<li>Viewport Shading</li>
+<li>«<strong>Unwrap</strong>»: Dabei wird das Mesh auf eine zweidimensionale Fläche projiziert. Hierfür werden auch manuell gesetzte Grenzen in Texturen berücksichtigt.</li>
+<li>«<strong>Smart UV Project</strong>»: Die UVs werden basierend auf den Winkeln zwischen Faces erstellt und separiert.</li>
+<li>«<strong>Lightmap Pack</strong>»: Hierbei werden UVs erstellt, welche für Lightmaps besonders geeignet sind, weil die UVs so angeordnet werden, dass möglichst die gesamte Fläche der Textur verwendet wird. Bei den Lightmaps handelt es sich dabei um Texturen, welche Informationen über die Beleuchtung beinhalten.</li>
+<li>«<strong>Follow Active Quads</strong>»: Die aktiven Quads werden als Grundlage für die UV-Erstellung verwendet und ausgehend von den Loops, welche diese Quads bilden, werden die UVs erstellt.</li>
+<li>«<strong>Cube Projection</strong>»: Das Unwrapping erfolgt ausgehend von der Grundform eines Würfels.</li>
+<li>«<strong>Cylinder Projection</strong>»: Das Unwrapping erfolgt ausgehend von einem Zylinder.</li>
+<li>«<strong>Sphere Projection</strong>»: Das Unwrapping erfolgt ausgehend von einer Kugel.</li>
+<li>«<strong>Project from View</strong>»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D Viewport-Editor.</li>
+<li>«<strong>Project from View (Bounds)</strong>»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D-Viewport-Editor, wobei die Anordnung der UVs bis zu den Grenzen der Textur gestreckt werden.</li>
+<li>«<strong>Mark Seam</strong>»: Ein Seam wird hinzugefügt. Dabei handelt es sich um manuell gesetzte Schnitte im UV-Mapping.</li>
+<li>«<strong>Clear Seam</strong>»: Ein Seam wird entfernt.</li>
+<li>«<strong>Reset</strong>»: Das UV-Mapping wird zurückgesetzt, sodass alle Faces den gesamten UV-Raum ausfüllen und somit dieselbe Grösse innehaben.</li>
 </ul>
-<section id="view-object-types" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="view-object-types">View Object Types</h4>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Ein- und Ausblen-den von Objektarten</p>
-</div></div><p>Hier lassen sich verschiedene Arten von Objekten alle gemeinsam innerhalb einer Szene verstecken, indem das Auge zu der entsprechenden Objektart abgewählt wird. Durch das Abwählen des Auges neben dem Objekttyp «<em>Camera</em>» werde etwa alle Kameras aus der Szene unsichtbar gemacht. Die Objekte sind allerdings noch vorhanden und weisen immer noch dieselbe Funktion auf – sie werden lediglich nicht mehr im 3D-Viewport angezeigt. Neben dem Auge lässt sich zudem anhand der Schaltfläche mit einem abgebildeten Cursor einstellen, dass die entsprechenden Objektarten nicht mehr auswählbar sind.</p>
-<div style="background-color: #d3d3d3; padding: 10px; display: inline-block;">
-<div id="fig-2_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<div id="fig-1_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_4_1_viewobjecttypes.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<div aria-describedby="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_22/UV-Unwrapping Menü.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4: View Object Types.
-</figcaption>
-</figure>
-</div>
-</div>
-</section>
-<section id="show-gizmo" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="show-gizmo">Show Gizmo</h4>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Navigations-Tools ein- und ausblen-den</p>
-</div></div><p>Innerhalb dieser Option lassen sich in der oberen rechten Ecke Tools zur Navigation mittels der Kamera ein- und ausblenden. Zudem kann hier die Darstellung eines Gizmos bei der aktuellen Auswahl aktiviert werden. Dieses Gizmo kann verwendet werden, um Objekte mittels der Maus zu rotieren, zu skalieren oder zu bewegen.</p>
-<div style="background-color: #d3d3d3; padding: 10px; display: inline-block;">
-<div id="fig-2_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_5_1_Show_Gizmos.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5: Show Gizmo.
-</figcaption>
-</figure>
-</div>
-</div>
-</section>
-<section id="show-overlays" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="show-overlays">Show Overlays</h4>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Orientierungsobjekte im Viewport ein- und ausblenden</p>
-</div></div><p>Durch die Deaktivierung der Viewport-Overlays wird im 3D-Viewport die Ansicht bestimmter Hilfsmittel (beispielsweise die Achsen oder die Markierung der aktuellen Auswahl) ausgeschal-tet. Im Dropdown-Menü lässt sich zudem die Darstellung von einzelnen Hilfsmitteln individuell an- und abwählen.</p>
-<div style="background-color: #d3d3d3; padding: 10px; display: inline-block;">
-<div id="fig-2_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_6_1showoverlays.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6: Show Overlays.
-</figcaption>
-</figure>
-</div>
-</div>
-</section>
-<section id="toggle-x-ray" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="toggle-x-ray">Toggle X-Ray</h4>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Röntgenblick ein- und ausschalten</p>
-</div></div><p>Wenn die Schaltfläche «Toggle X-Ray» ausgewählt ist, erweitert sich die Ansicht von Objekten, sodass durch sie hindurchgesehen werden kann. Dies ermöglicht es etwa, dass auch ein Objekt, welches hinter einem anderen Objekt verborgen liegt, betrachtet werden kann. Wenn diese Option aktiviert ist, können zudem die verborgenen Objekte mittels eines Mausklicks angewählt werden. Die Schaltfläche kann auch mit den Tasten <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> ein- und ausgeschaltet werden.</p>
-<div style="background-color: #d3d3d3; padding: 10px; display: inline-block;">
-<div id="fig-2_7" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_7_1xray.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;7: Toggle X-Ray.
-</figcaption>
-</figure>
-</div>
-</div>
-</section>
-<section id="viewport-shading" class="level4 page-columns page-full">
-<h4 class="anchored" data-anchor-id="viewport-shading">Viewport Shading</h4>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Art der Objektdar-stellung im Viewport</p>
-</div></div><p>In der rechten oberen Ecke befinden sich vier Schaltflächen, um einzustellen, welche Elemente bei der Darstellung der Objekte berücksichtigt werden sollen. Je nach Auswahl werden dadurch die Objekte unterschiedlich dargestellt:</p>
-<ul>
-<li><strong>Wireframe</strong>: Die Objekte werden in ihrer Struktur als Gitternetz angezeigt, sodass deren Aufbaugitter klar ersichtlich wird. Hierbei werden die Flächen der Objekte nicht dargestellt.</li>
-<li><strong>Solid</strong>: Die Objekte werden als Ganzes dargestellt, sodass auch die Flächen sichtbar sind. Allerdings werden die verwendeten Materialien und Texturen nicht berücksichtigt.</li>
-<li><strong>Material Preview</strong>: Die Objekte werden als Ganzes dargestellt, inklusive deren Materialien und Texturen. Die Umgebung wird anhand von vorgefertigten Szenen und Umgebungen beleuchtet, sodass eine schnelle Vorschau möglich ist.</li>
-<li><strong>Rendered</strong>: Die Objekte werden als Ganzes dargestellt, inklusive deren Materialien und Texturen. Die Umgebung und die Beleuchtung entsprechen den Einstellungen der aktuellen Szene, sodass eine Vorschau für die gerenderte Szene möglich ist.</li>
-</ul>
-<p>Alternativ kann die Taste <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> gedrückt werden. Dadurch erscheint beim Mauszeiger ein Menü mit allen vier Optionen zum Viewport Shading zur Auswahl.</p>
-<div style="background-color: #d3d3d3; padding: 10px; display: inline-block;">
-<div id="fig-2_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_8_1_shaderbuttons.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;8: Schaltflächen für die Shading-Optionen im Viewport.
-</figcaption>
-</figure>
-</div>
-</div>
-</section>
-</section>
-</section>
-<section id="letzte-aktion-verfeinern" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="letzte-aktion-verfeinern">Letzte Aktion verfeinern</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Temporäres Menü zur Verfeinerung der letzten Aktion</p>
-</div></div><p>Wenn eine Aktion in Blender durchgeführt wird, erscheint in der linken unteren Ecke des 3D-Viewports temporär ein Menü. Dieses Menü kann aufgeklappt werden und bietet abhängig von der durchgeführten Aktion eine Reihe Verfeinerungen. Zu beachten ist jedoch, dass dieses Menü sofort wieder verschwindet, sobald ein Mausklick ausserhalb des Menüs erfolgt. Um das Menü wieder erscheinen zu lassen, muss die Aktion rückgängig gemacht und erneut durchgeführt werden.</p>
-</section>
-<section id="dargestellte-viewport-overlays" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="dargestellte-viewport-overlays">Dargestellte Viewport-Overlays</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Achsen</p>
-</div></div><p>Sofern die Ansicht der Viewport-Overlays aktiviert ist, werden im 3D-Viewport einige nützliche Dinge dargestellt. Zum einen werden die verschiedenen drei Achsen in unterschiedlichen Farben vom Nullpunkt der Szene aus dargestellt:</p>
-<ul>
-<li>X-Achse: rot</li>
-<li>Y-Achse: grün</li>
-<li>Z-Achse: blau</li>
-</ul>
-<p>Zudem wird leicht schattiert ein Gitternetz dargestellt, bei dem jedes Quadrat eine Einheit von einem Meter darstellt. Wird aus der Szene hinausgezoomt, werden diese Quadrate zunehmend kleiner, dafür werden anschliessend quadratische Felder mit der Einheit von 10 Metern sichtbar.</p>
-<div id="fig-2_9" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-2_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_2/2_9_3DCursor.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;9: 3D-Cursor.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;7: UV-Mapping-Menü.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>3D-Cursor</p>
-</div></div><p>Innerhalb des 3D-Viewports ist ausserdem der 3D-Cursor sichtbar. Dieser ist an einer bestimmten Position in der Szene platziert und dort mittels eines rot-weissen Kreises dargestellt. Neu erstellte Objekte werden an seiner Position in die Szene eingefügt und der 3D-Cursor kann als Bezugspunkt für Transformationen verwendet werden.</p>
+<p>Texturen im UV-Editor anzeigen</p>
+</div></div><p>Damit im UV-Editor die jeweilige Textur angezeigt wird, auf welche die UVs angepasst werden sollen, muss im UV-Editor diese Textur ausgewählt werden. In der Mitte des Headers im UV-Editor befindet sich ein Auswahlmenü, in dem die entsprechenden Texturen ausgewählt oder geladen werden können. Nach der Auswahl der entsprechenden Textur wird diese im Hintergrund des UV-Editors angezeigt, sodass die Anordnung der UVs entsprechend der Textur verändert werden kann. Dadurch wird dem Objekt selbst diese Textur allerdings noch nicht hinzugefügt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>UVs mittels Seams trennen</p>
+</div></div><p>In manchen Situationen ist es erforderlich, dass eigenhändig definiert wird, an welchen Stellen die UVs geschnitten werden sollen. Möchte man beispielsweise, dass die UVs entlang einer Reihe von Edges nicht miteinander verbunden werden oder dass separate Inseln von UVs zwischen mehreren Bereichen entstehen, so können Seams auf die entsprechenden Edges angewendet werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Seams hinzufügen</p>
+</div></div><p>Beispielsweise könnten im Standardwürfel alle Edges ausgewählt werden, welche zu einer Fläche gehören, und diesen jeweils ein Seam hinzugefügt werden. Um einen Seam hinzuzufügen, kann mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span> das Edge-Menü beim Mauszeiger geöffnet werden. Mittels der Option «<em>Mark Seam</em>» können dann die Seams an den ausgewählten Edges hinzugefügt werden. Im Edit-Mode sind diese anschliessend anhand einer roten Markierung entlang der entsprechenden Edges ersichtlich. Mittels der Option «<em>Clear Seam</em>» können Seams bei ausgewählten Edges wieder entfernt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Seams beim Unwrapping berücksichtigen</p>
+</div></div><p>Damit die gesetzten Seams auch in den UVs des Objektes berücksichtig werden, muss erneut ein Unwrapping auf das Objekt erfolgen. Die Option «<em>Unwrap</em>» im Menü «<em>UV Mapping</em>» berücksichtigt jeweils die gesetzten Seams.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Auswahl von UVs im UV-Editor</p>
+</div></div><p>Im UV-Editor können die einzelnen UVs, aber auch die Vertices und Edges ausgewählt werden. Wenn der Edit-Mode aktiviert ist, erscheinen in der linken oberen Ecke des UV-Editors verschiedene Schaltflächen, mit denen die Auswahl bestimmt werden kann. Nebst der Auswahl von Vertices, Edges und Faces können im UV-Editor zudem auch ganze Inseln ausgewählt werden. Dabei werden alle UVs, die zusammen eine UV-Insel bilden, gemeinsam ausgewählt.</p>
+<div id="fig-1_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_22/Icons_UV_Editor_Selections.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8: Select-Modes für die Auwahl von UVs.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>UVs im UV-Editor anpassen</p>
+</div></div><p>Im UV-Editor ist es zudem möglich, die Platzierung der UVs zu verändern. Hierfür werden die entsprechenden UVs im UV-Editor ausgewählt. Anschliessend können diese mittels der Taste <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span> bewegt, mittels der Taste <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> skaliert und mittels der Taste <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span> rotiert werden. Dadurch können die UVs auch entsprechend den Bedürfnissen in einem Projekt angepasst werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Grösse der UVs</p>
+</div></div><p>Gerade bei komplexen Objekten mit vielen Details sind die UVs von grosser Bedeutung. Je grösser die UV ist, desto detailliertere Inhalte können innerhalb der dazugehörigen Faces dargestellt werden. Dementsprechend ist es sinnvoll, für Bereiche mit weniger benötigten Details kleinere UVs zu verwenden und für Bereiche, die mehr Details benötigen, grössere UVs zu verwenden. Gerade wenn mittels Blender eigene Texturen erstellt werden, wird dieses Vorgehen relevant. Für die nächsten Kapitel muss allerdings noch nicht zu stark auf die Grössenverhältnisse der UVs geachtet werden.</p>
 
 
 </section>

@@ -23,14 +23,7 @@ Bislang wurden Texturen lediglich verwendet, um die Farbe der Oberflächen zu va
 Veränderung der Roughness über die Oberfläche hinweg
 :::
 
-Was ist in Abbildung 3 mit dem Material geschehen? Die Farbe ist 
-über die gesamte Oberfläche identisch – und trotzdem scheint die 
-Textur einen Einfluss zu haben. In diesem Fall wurden die Farbwerte 
-der Textur übernommen und mit diesen die Roughness angepasst. 
-Bereiche, welche in der Abbildung 2 eine schwarze Farbe aufwiesen, sind in der Abbildung 3 nun deutlich glatter und reflektieren 
-das Licht dadurch gebündelter. Bereiche, welche in der Abbildung 2 
-hingegen eine weisse Farbe aufwiesen, sind in der Abbildung 3 nun 
-deutlich rauer und reflektieren das Licht gestreuter. Somit variiert die Roughness nun basierend auf der Textur.
+Was ist in Abbildung 3 mit dem Material geschehen? Die Farbe ist über die gesamte Oberfläche identisch – und trotzdem scheint die Textur einen Einfluss zu haben. In diesem Fall wurden die Farbwerte der Textur übernommen und mit diesen die Roughness angepasst. Bereiche, welche in der Abbildung 2 eine schwarze Farbe aufwiesen, sind in der Abbildung 3 nun deutlich glatter und reflektieren das Licht dadurch gebündelter. Bereiche, welche in der Abbildung 2 hingegen eine weisse Farbe aufwiesen, sind in der Abbildung 3 nun deutlich rauer und reflektieren das Licht gestreuter. Somit variiert die Roughness nun basierend auf der Textur.
 
 ![Der Standardwürfel mit einer schwarz-weissen Checker-Textur als Input für die Roughness.](Images/Chapter_24/RoughnessChecker-Texture.png){#fig-1_3 fig-align="left"}
 
@@ -44,10 +37,4 @@ In diesem Beispiel wurden die Farben Schwarz und Weiss in der Checker-Textur ver
 Schwarz für den Wert 0, weiss für den Wert 1 und grau für die Abstufungen dazwischen
 :::
 
-An den Stellen mit einer schwarzen Farbe wird eine Roughness von 
-0 eingesetzt und an den Stellen mit einer weissen Farbe eine Roughness von 1. Durch eine Verdunkelung oder eine Erhellung der 
-Farben innerhalb des Checker-Texture-Nodes – dies kann im Reiter 
-«*HSV*» unter der Zeile «*V*» erzielt werden – variiert auch die Roughness dementsprechend für die Bereiche, welche diese Farbe 
-innehaben. Dieses Prinzip kann auch für andere Werte übernommen werden. Auch der Wert für Metallic kann mit dieser Vorgehensweise über Texturen variiert werden.
-
-
+An den Stellen mit einer schwarzen Farbe wird eine Roughness von 0 eingesetzt und an den Stellen mit einer weissen Farbe eine Roughness von 1. Durch eine Verdunkelung oder eine Erhellung der Farben innerhalb des Checker-Texture-Nodes – dies kann im Reiter «*HSV*» unter der Zeile «*V*» erzielt werden – variiert auch die Roughness dementsprechend für die Bereiche, welche diese Farbe innehaben. Dieses Prinzip kann auch für andere Werte übernommen werden. Auch der Wert für Metallic kann mit dieser Vorgehensweise über Texturen variiert werden.

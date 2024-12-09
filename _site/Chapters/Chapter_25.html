@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>24. Texturen für Parameter verwenden – Creating the World</title>
+<title>25. Welche Bilder eignen sich als Texturen? – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -256,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">24. Texturen für Parameter verwenden</h1>
+<h1 class="title">25. Welche Bilder eignen sich als Texturen?</h1>
 </div>
 
 
@@ -275,54 +275,42 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Checker-Textur innerhalb von Blender erstellen</p>
-</div></div><p>Es ist auch möglich, innerhalb von Blender eigene Texturen zu emulieren. Beispielsweise kann innerhalb des Shader-Editors eine Checker-Textur hinzugefügt werden. Diese ist im Add-Menü unter «<em>Texture | Checker Texture</em>» zu finden. Diese kann anschliessend mit der Base-Color des Principled-BSDF-Shaders verbunden werden, wie in Abbildung 1 abgebildet. Dadurch wird ein schachbrettartiges Muster aus zwei Farben erstellt und als Grundfarbe verwendet. Die Farbe kann dabei beliebig verändert werden, beispielsweise in Schwarz und Weiss, sodass eine Textur entsteht, wie sie in Abbildung 2 auf den Standardwürfel angewendet wurde. Über die beiden Farbboxen zu den Parametern «<em>Color1</em>» und «<em>Color2</em>» können die Farben verändert werden.</p>
+<p>Jedes Bild kann eine Textur sein</p>
+</div></div><p>Damit einem Objekt Texturen hinzugefügt werden können, werden zunächst einmal Texturen benötigt. Rein theoretisch lässt sich jedes Bild als Textur verwenden. Es gibt dabei allerdings, gerade wenn eine Textur über grössere Bereiche erstreckt wird, ein häufig auftauchendes Problem, welches in Abbildung 1 dargestellt wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Schnitte durch Wiederholungsmuster</p>
+</div></div><p>Auf der linken Seite der Abbildung 1 ist ein Bild dargestellt, welches als Textur verwendet wird. Gerade bei grösseren Flächen wird die Skalierung der Textur so angepasst, dass die Textur jeweils wiederholt wird. Dadurch könnte ein Muster, wie es auf der rechten Seite der Abbildung 1 abgebildet ist, entstehen. Hierbei wurde die Textur entlang beider Achsen einmal wiederholt. Die Strukturen am oberen Ende des Bildes passen nicht zu den Strukturen am unteren Ende des Bildes. Ebenso verhält es sich mit den Strukturen am linken und am rechten Rand des Bildes. Dies führt dazu, dass ein Schnitt an der Wiederholungsstelle der Textur ersichtlich wird.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_24/Checker_Texture_Base_Color_connected.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_25/Non_Seamless_Texture v2.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Eine Checker-Textur, die mit der Base-Color des Principled-BSDF-Shaders verbunden ist.
+Abbildung&nbsp;1: Links eine Textur und rechts eine 2x2-Anordnung dieser Textur.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Checker-Textur mit Roughness verbinden</p>
-</div></div><p>Bislang wurden Texturen lediglich verwendet, um die Farbe der Oberflächen zu variieren. Es ist allerdings auch möglich, dass andere Parameter eines Shaders mittels Texturen variiert werden können. Beispielsweise könnte die Checker-Textur statt mit der Base-Color mit der Roughness verbunden werden. Abbildung 3 stellt denselben Standardwürfel wie in Abbildung 2 dar, jedoch wurde bei ihm die Checker-Textur mit dem Roughness-Input des Principled-BSDF-Shaders verbunden statt mit der Base-Color. Zusätzlich wurde die Base-Color auf blau gestellt, um die Veränderungen besser sichtbar zu machen.</p>
-<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_24/Checker-Texture.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Der Standardwürfel mit einer schwarz-weissen Checker-Textur als Input für die Base-Color.
-</figcaption>
+<p>Nahtlose Texturen</p>
+</div></div><p>Bilder, die besonders gut als Textur geeignet sind, weisen am linken und am rechten Rand sowie am oberen und am unteren Rand des Bildes identische Strukturen auf, sodass bei einer Wiederholung ein fliessender Übergang entsteht. Abbildung 2 zeigt ein Beispiel einer solchen Textur (Bildquelle: www.ambientcg.com/view?id=Rocks005). Solche Texturen werden als nahtlose Texturen (seamless textures) bezeichnet. Gerade bei namhaften Datenbanken mit hochwertigen Texturen sind die Texturen in der Regel so bearbeitet, dass sie nahtlos sind.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Images/Chapter_25/Seamless_Texture.png" class="img-fluid figure-img"></p>
+<figcaption>Links eine nahtlose Textur und rechts eine 2x2-Anordnung dieser Textur.</figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Veränderung der Roughness über die Oberfläche hinweg</p>
-</div></div><p>Was ist in Abbildung 3 mit dem Material geschehen? Die Farbe ist über die gesamte Oberfläche identisch – und trotzdem scheint die Textur einen Einfluss zu haben. In diesem Fall wurden die Farbwerte der Textur übernommen und mit diesen die Roughness angepasst. Bereiche, welche in der Abbildung 2 eine schwarze Farbe aufwiesen, sind in der Abbildung 3 nun deutlich glatter und reflektieren das Licht dadurch gebündelter. Bereiche, welche in der Abbildung 2 hingegen eine weisse Farbe aufwiesen, sind in der Abbildung 3 nun deutlich rauer und reflektieren das Licht gestreuter. Somit variiert die Roughness nun basierend auf der Textur.</p>
-<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_24/RoughnessChecker-Texture.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Der Standardwürfel mit einer schwarz-weissen Checker-Textur als Input für die Roughness.
-</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Farbwerte können auch als Faktoren verwendet werden</p>
-</div></div><p>In diesem Beispiel wurden die Farben Schwarz und Weiss in der Checker-Textur verwendet. Schwarz weist einen RGB-Wert von 0-0-0 auf und einen HSV-Wert von 0-0-0. Weiss weist hingegen einen RGB-Wert von 1-1-1 auf und einen HSV-Wert von 0-0-1. Der Principled-BSDF-Shader hat diese Werte von der Checker-Textur übernommen und diese als Parameter für die Roughness eingestellt.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Schwarz für den Wert 0, weiss für den Wert 1 und grau für die Abstufungen dazwischen</p>
-</div></div><p>An den Stellen mit einer schwarzen Farbe wird eine Roughness von 0 eingesetzt und an den Stellen mit einer weissen Farbe eine Roughness von 1. Durch eine Verdunkelung oder eine Erhellung der Farben innerhalb des Checker-Texture-Nodes – dies kann im Reiter «<em>HSV</em>» unter der Zeile «<em>V</em>» erzielt werden – variiert auch die Roughness dementsprechend für die Bereiche, welche diese Farbe innehaben. Dieses Prinzip kann auch für andere Werte übernommen werden. Auch der Wert für Metallic kann mit dieser Vorgehensweise über Texturen variiert werden.</p>
+<p>Texturen-Datenbanken</p>
+</div></div><p>Es gibt eine Reihe verschiedener Datenbanken im Internet, die verschiedene Texturen anbieten. Zu diesen gehören beispielsweise:</p>
+<ul>
+<li><a href="https://polyhaven.com/" class="uri">https://polyhaven.com/</a>: Poly Haven verfügt sowohl über Texturen als auch über 3D-Modelle und HDRIs, welche von anderen Nutzern gratis zur Verfügung gestellt werden. Alle Inhalte auf dieser Plattform fallen unter die CC0-Lizenz und können problemlos für alle Projekte verwendet werden.</li>
+<li><a href="https://ambientcg.com/" class="uri">https://ambientcg.com/</a> : AmbientCG beinhaltet wie Poly Haven eine Reihe von Texturen, 3D-Modellen und HDRIs, welche problemlos für alle Projekte verwendet werden können.</li>
+<li><a href="https://3dtextures.me/" class="uri">https://3dtextures.me/</a> : Auf dieser Website sind eine Reihe verschiedener Texturen zu finden, welche alle unter der CC0-Lizenz stehen und somit für alle Projekte verwendet werden können. Nebst realistischen Texturen werden auch stilisierte Texturen angeboten.</li>
+<li><a href="https://www.textures.com" class="uri">https://www.textures.com</a> : Auf dieser Website werden verschiedene Texturen, Bilder, HDRIs und 3D Objekte angeboten. Eine Registrierung ist erforderlich und der Nutzer erhält ein tägliches Kontingent an kostenlosen Credits, um Texturen zu beziehen. Die Texturen können für verschiedene Projekte verwendet werden, aber mit Einschränkungen. So dürfen diese Texturen etwa nicht für ein Open-Source-Videogame verwendet werden. Es empfiehlt sich deshalb, einen Blick in die Lizenzbedingungen der Website zu werfen.</li>
+</ul>
 
 
 

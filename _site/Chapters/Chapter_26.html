@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -263,6 +265,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#roughness-textur" id="toc-roughness-textur" class="nav-link" data-scroll-target="#roughness-textur">Roughness-Textur</a></li>
   <li><a href="#glossy-textur" id="toc-glossy-textur" class="nav-link" data-scroll-target="#glossy-textur">Glossy-Textur</a></li>
   <li><a href="#normal-textur" id="toc-normal-textur" class="nav-link" data-scroll-target="#normal-textur">Normal-Textur</a></li>
+  <li><a href="#displacement-textur" id="toc-displacement-textur" class="nav-link" data-scroll-target="#displacement-textur">Displacement-Textur</a></li>
+  <li><a href="#ambient-occlusion-textur" id="toc-ambient-occlusion-textur" class="nav-link" data-scroll-target="#ambient-occlusion-textur">Ambient-Occlusion-Textur</a></li>
+  <li><a href="#alpha-textur" id="toc-alpha-textur" class="nav-link" data-scroll-target="#alpha-textur">Alpha-Textur</a></li>
+  <li><a href="#reflection-textur" id="toc-reflection-textur" class="nav-link" data-scroll-target="#reflection-textur">Reflection-Textur</a></li>
+  <li><a href="#und-nun-alle-zusammen" id="toc-und-nun-alle-zusammen" class="nav-link" data-scroll-target="#und-nun-alle-zusammen">Und nun alle zusammen!</a></li>
+  <li><a href="#texturen-auf-material-betrachten-mithilfe-des-node-wrangler-add-ons" id="toc-texturen-auf-material-betrachten-mithilfe-des-node-wrangler-add-ons" class="nav-link" data-scroll-target="#texturen-auf-material-betrachten-mithilfe-des-node-wrangler-add-ons">Texturen auf Material betrachten mithilfe des Node-Wrangler-Add-ons</a></li>
   </ul>
 </nav>
     </div>
@@ -315,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Metallic-Textur verfeinert die Color-Textur</p>
-</div></div><p>Die Metallic-Textur wird jeweils zusätzlich zur Color-Textur verwendet und mit dem Metallic-Input verbunden. Eine Textur, die sowohl aus Metall als auch aus Rost besteht, würde etwa an den Stellen, an denen Rost dargestellt wird, einen geringeren Metallic-Wert aufweisen. Abbildung 1zeigt links ein Beispiel einer solchen Color-Textur und rechts die dazugehörige Metallic-Textur, bei der rostige Anteile durch schwarze Anteile dargestellt werden (Bildquelle: <a href="https://ambientcg.com/view?id=Metal022" class="uri">https://ambientcg.com/view?id=Metal022</a>)</p>
+</div></div><p>Die Metallic-Textur wird jeweils zusätzlich zur Color-Textur verwendet und mit dem Metallic-Input verbunden. Eine Textur, die sowohl aus Metall als auch aus Rost besteht, würde etwa an den Stellen, an denen Rost dargestellt wird, einen geringeren Metallic-Wert aufweisen. Abbildung 1 zeigt links ein Beispiel einer solchen Color-Textur und rechts die dazugehörige Metallic-Textur, bei der rostige Anteile durch schwarze Anteile dargestellt werden (Bildquelle: <a href="https://ambientcg.com/view?id=Metal022" class="uri">https://ambientcg.com/view?id=Metal022</a>)</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -360,13 +368,13 @@ Abbildung&nbsp;2: Node-Anordnung, um mit einer Glossy-Textur umzugehen.
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Normal-Textur, um Unebenheiten im Objekt zu simulieren</p>
-</div></div><p>Die Normal-Texturen fallen visuell auf, da sie eine bizarr erscheinende blaue Verfärbung aufweisen, wie die Normal-Textur auf der rechten Seite der Abbildung 3 (Bildquelle: <a href="https://ambientcg.com/view?id=Rocks005" class="uri">https://ambientcg.com/view?id=Rocks005</a>) Mittels dieser Textur können minimale Unebenheiten in einem Objekt simuliert werden. Dabei stellt jede Farbe, die in diesem Bild auftritt, eine Achse dar, anhand derer die simulierten Unebenheiten berechnet werden. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «normal» oder «norm» versehen.</p>
-<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+</div></div><p>Die Normal-Texturen fallen visuell auf, da sie eine bizarrerscheinende blaue Verfärbung aufweisen, wie die Normal-Textur auf der rechten Seite der Abbildung 3 (Bildquelle: <a href="https://ambientcg.com/view?id=Rocks005" class="uri">https://ambientcg.com/view?id=Rocks005</a>). Mittels dieser Textur können minimale Unebenheiten in einem Objekt simuliert werden. Dabei stellt jede Farbe, die in diesem Bild auftritt, eine Achse dar, anhand derer die simulierten Unebenheiten berechnet werden. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «normal» oder «norm» versehen.</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="Images/Chapter_26/Vgl. color und normal für PPP.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;3: Node-Anordnung, um mit einer Glossy-Textur umzugehen.
 </figcaption>
 </figure>
@@ -376,6 +384,11 @@ Abbildung&nbsp;3: Node-Anordnung, um mit einer Glossy-Textur umzugehen.
 <p>Zwei Arten von Normal-Texturen</p>
 </div></div><p>Bei einigen Datenbanken werden zwei verschiedene Arten von Normal-Texturen geliefert. Eine, welche jeweils die Endung «GL» innehat, und eine, welche jeweils die Endung «DX» innehat. Beide Arten stellen Normal-Texturen dar, jedoch agieren sie unterschiedlich, je nachdem, welche Programmierschnittstelle ihnen zugrunde liegt. Normal-Texturen mit der Endung «GL» können für Applikationen verwendet werden, welche auf «OpenGL» basieren – hierzu gehört Blender. Deshalb werden jeweils diese Normal-Texturen benötigt. Die Normal-Texturen mit der Endung «DX» beziehen sich auf Applikationen, die «DirectX» verwenden.</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 17%">
+<col style="width: 62%">
+</colgroup>
 <thead>
 <tr class="header">
 <th></th>
@@ -391,22 +404,138 @@ Abbildung&nbsp;3: Node-Anordnung, um mit einer Glossy-Textur umzugehen.
 </tr>
 <tr class="even">
 <td><strong>Software</strong></td>
-<td>Blender</td>
-<td></td>
+<td><p>Blender</p>
+<p>Maya</p>
+<p>Unity</p></td>
+<td><p>3ds Max</p>
+<p>Substance</p>
+<p>Unreal Engine</p></td>
 </tr>
 <tr class="odd">
 <td><strong>Render-Engines</strong></td>
-<td>Cycles</td>
-<td></td>
+<td><p>Cycles</p>
+<p>Eevee</p>
+<p>Redshift</p>
+<p>Arnold</p>
+<p>Octane</p></td>
+<td><p>V-Ray</p>
+<p>Corona (bei diesen kann allerdings auch OpenGL eingestellt werden)</p></td>
 </tr>
 </tbody>
 </table>
 
-
-
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Verwendung der Normal-Texturen</p>
-</div></div></section>
+</div></div><p>Um die Normal-Texturen einem Material beizufügen, wird ein Node benötigt, welcher die Daten der Normal-Texturen extrahiert und daraus die Unebenheiten berechnet. Hierfür wird der Bump-Node verwendet. Dieser ist im «<em>Add</em>»-Menü des Shader-Editors unter «<em>Vector | Bump</em>» zu finden. Anschliessend wird der Color-Output der Normal-Textur mit dem «<em>Height</em>»-Input des Bump-Nodes verbunden. Dadurch erhält der Bump-Node als Input die Höhe für die Unebenheiten basierend auf der Textur. Wie stark diese Unebenheiten anschliessend emuliert werden sollen, kann mittels des Reglers «<em>Strength</em>» im Bump-Node eingestellt werden. Der Normal-Output des Bump-Nodes wird anschliessend mit dem Normal-Input des Principled-BSDF-Shaders verbunden.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_26/Normal_Textur.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Anordnung der Normal-Textur mit einem Bump-Node zwischen dem Image-Texture-Node und dem Principled-BSDF-Node.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="displacement-textur" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="displacement-textur">Displacement-Textur</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Displacement-Textur, um grössere Unebenheiten zu emulieren oder zu erstellen</p>
+</div></div><p>Die Displacement-Textur funktioniert ähnlich wie die Normal-Textur. Sie wird ebenfalls für Unebenheiten im Material verwendet, allerdings für deutlich grössere Unebenheiten. Sie funktioniert wie die Roughness- und die Metallic-Textur auf einer SchwarzWeiss-Basis. Das heisst: Je heller ein Wert an einer Stelle ist, desto höher sollte die Unebenheit an dieser Stelle sein. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «displacement» oder «disp» versehen. Manchmal wird die Textur aber auch als Height-Textur bezeichnet und entsprechend mit der Endung «height» versehen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Displacement-Textur wird über Displacement-Node mit dem Material-Output verbunden</p>
+</div></div><p>Anders als die anderen Texturen, hat die Displacement-Textur keinen Shader als Ziel, sondern den Material-Output-Node. Dazwischen wird ein Displacement-Node eingefügt. Dieser kann im «<em>Add</em>» Menü unter «<em>Vector | Displacement</em>» hinzugefügt werden. Der Color-Output der Displacement-Textur wird anschliessend mit dem Height-Input des Displacement-Nodes verbunden. Dadurch erhält der Displacement-Node die Information, an welchen Stellen der Textur eine höhere Abweichung und an welchen eine geringere Abweichung vom Mesh emuliert werden soll. Über den Reiter «<em>Scale</em>» kann zudem die Stärke dieser Abweichung skaliert werden. In der Regel reichen bereits sehr kleine Werte (z.B. 0.001) aus, während grössere Werte verzerrend wirken. Der Displacement-Output des Displacement-Nodes kann anschliessend mit dem Displacement-Input des Material-Output-Nodes verbunden werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Mesh mittels Displacement-Textur verformen</p>
+</div></div><p>Die Displacement-Textur kann auch verwendet werden, um das Mesh tatsächlich anhand der Textur zu verformen. Dies ist zum einen mit dem Displacement-Modifier möglich. Dabei werden die einzelnen Vertices des Meshes basierend auf der Textur deformiert. Dies bedeutet allerdings auch, dass sehr viele Vertices benötigt werden, damit möglichst viele Details erfasst werden. In der Render-Engine Cycles kann zum anderen eingestellt werden, dass basierend auf dem Displacement-Material-Output das Mesh verformt wird. Allerdings wird auch dabei eine Vielzahl von Vertices benötigt. In der bislang verwendeten Render-Engine Eevee ist dies jedoch nicht möglich.</p>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_26/Displacement_Nodes.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5: Anordnung der Displacement-Textur mit einem Displacement-Node zwischen dem Image-Texture-Node und dem Material-Output-Node.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="ambient-occlusion-textur" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="ambient-occlusion-textur">Ambient-Occlusion-Textur</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Ambient-Occlusion-Textur für Schatten</p>
+</div></div><p>Die Ambient-Occlusion-Textur stellt gewissermassen das Gegenteil der Albedo-Textur dar. Während die Albedo-Textur die Grundfarben einer Textur ohne Schattenanteile beinhaltet, besteht die Ambient-Occlusion-Textur lediglich aus Schattenanteilen. In OnlineDatenbanken werden diese Texturen teilweise mit der Endung «ambientocclusion», «ao», «occlusion» oder «occ» versehen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Ambient-Occlusion-Textur verwenden</p>
+</div></div><p>Die Ambient-Occlusion-Textur wird selten bei der Texturierung verwendet. Wenn sie allerdings berücksichtigt werden soll, empfiehlt es sich, diese mit der Color-Textur zu kombinieren. Hierfür wird ein «MixRGB»-Node verwendet, welcher zwei Farben miteinander mischen kann. Dieser ist im «<em>Add</em>»-Menü unter «<em>Color | MixRGB</em>» zu finden. Anschliessend kann der Color-Output der Color-Textur mit dem ersten Color-Input («<em>Color1</em>») verbunden werden und der Color-Output der Ambient-Occlusion-Textur mit dem zweiten Color-Output («<em>Color2</em>»). Im Dropdown-Menü auf der Schaltfläche «<em>Mix</em>» sollte zudem die Option «<em>Multiply</em>» ausgewählt werden. Dadurch werden die Schattenanteile mit den Farbwerten multipliziert (unter der Einstellung «<em>Mix</em>» würden sich lediglich graduelle Abstufungen zwischen den beiden Texturen ergeben). Mithilfe des Reiters «<em>Fac</em>» kann anschliessend der Faktor definiert werden, mit dem die Schattenanteile auf die Grundfarbe multipliziert werden sollen. Der Color-Output des Mix-RGB-Nodes kann anschliessend mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden.</p>
+<div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_26/AOC_Nodes.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6: Node-Anordnung, um die Ambient-Occlusion-Textur mit der Color-Textur zu multiplizieren.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="alpha-textur" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="alpha-textur">Alpha-Textur</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Alpha-Textur, um Transparenz zu definieren</p>
+</div></div><p>Die Alpha-Textur basiert ebenfalls auf Schwarz-Weiss-Werten und definiert, an welchen Stellen eine Oberfläche transparent sein soll. Der Color-Output der Alpha-Textur wird jeweils mit dem Alpha-Input des Principled-BSDF-Shaders verbunden. Die weissen Anteile der Textur beschreiben jeweils Bereiche, die sichtbar bleiben sollen, während schwarze Anteile der Textur jeweils die Bereiche beschreiben, welche durch die Transparenz nicht sichtbar werden. Damit die Transparenz auch beim Rendern sichtbar wird, werden noch weitere Einstellungen benötigt, welche zu einem späteren Zeitpunkt ausführlich beschrieben werden. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «alpha» oder «opacity» versehen.</p>
+</section>
+<section id="reflection-textur" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="reflection-textur">Reflection-Textur</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Reflection-Textur</p>
+</div></div><p>Die Reflection-Textur – teils auch als Specularity-Textur bezeichnet – beschreibt, an welchen Stellen der Textur das Licht reflektiert werden soll und an welchen nicht. Diese Einstellung wird allerdings bereits durch die Roughness- und den Metallic-Wert ermittelt. Daher wird die Reflection-Textur selten im Principled-BSDF-Shader verwendet. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «specularity», «spec», «reflection» oder «refl» versehen.</p>
+</section>
+<section id="und-nun-alle-zusammen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="und-nun-alle-zusammen">Und nun alle zusammen!</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Für jede Texturart ein Node</p>
+</div></div><p>Die verschiedenen Texturarten beziehen sich grösstenteils auf unterschiedliche Inputs des Principled-BSDF-Shaders. Das heisst, dass für jede Textur ein eigener Image-Texture-Node benötigt wird, welcher die entsprechende Textur beinhaltet und anschliessend mit den Inputs der nächsten Andockstellen verbunden wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Lediglich ein Mapping-Node für mehrere Texturen mit identischem Mapping</p>
+</div></div><p>Zusätzlich benötigt jeder Image-Texture-Node einen Mapping-Node, der wiederum auf einen Texture-Coordinate-Node folgt. Dies ist allerdings sehr unübersichtlich und komplex. Da in der Regel alle Texturarten innerhalb eines Materials in gleicher Weise auf das Objekt übertragen werden, kann deshalb für alle Image-Texture-Nodes derselbe Mapping-Node verwendet werden. Dieser sendet anschliessend seine Mapping-Informationen an alle nach ihm folgenden Nodes aus. Dadurch muss lediglich dieser eine Node bearbeitet werden und das Mapping für alle Texturarten wird gleichzeitig bearbeitet, statt dass eine Bearbeitung für mehrere Mapping-Nodes erfolgen muss.</p>
+<div id="fig-1_7" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_26/Texture-Mapping-Vorlage.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;7: Anordnung von verschiedenen Texturarten zu einem Material.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="texturen-auf-material-betrachten-mithilfe-des-node-wrangler-add-ons" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="texturen-auf-material-betrachten-mithilfe-des-node-wrangler-add-ons">Texturen auf Material betrachten mithilfe des Node-Wrangler-Add-ons</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bild eines Nodes direkt auf dem Objekt betrachten</p>
+</div></div><p>Bei der Arbeit mit vielen verschiedenen Texturen ist es manchmal nützlich, wenn man direkt sehen kann, wie eine Textur aussieht. Normalerweise wird im 3D-Viewport-Editor das finale Material, welches durch den Material-Output-Node generiert wird, dargestellt. Mittels des Node-Wrangler-Add-ons ist es allerdings möglich, direkt den Einfluss eines Nodes auf ein Material zu sehen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Viewer-Node aktivieren</p>
+</div></div><p>Sobald das Node-Wrangler-Add-on aktiviert ist, kann im Shader-Editor jeweils bei gedrückter <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span>- + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste auf einen beliebigen Node innerhalb eines Materials geklickt werden. Daraufhin wird der Output des ausgewählten Materials mit einem neu erstellten «<em>Viewer</em>»-Node verbunden, welcher mit dem Material-Output verbunden ist. Im 3D-Viewport-Editor wird nun bildlich die Information dargestellt, welche über diesen Output gerade an den nächsten Node übergeben wird. Dadurch können die Texturen isoliert betrachtet werden, ohne dass sie bereits innerhalb eines Shaders verarbeitet werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Viewer-Node deaktivieren</p>
+</div></div><p>Um wieder das richtige Material zu sehen, kann bei gedrückter <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span>- + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste auf den Shader-Node geklickt werden. Dieser wird anschliessend ohne den Viewer-Node dazwischen mit dem Material-Output verbunden.</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

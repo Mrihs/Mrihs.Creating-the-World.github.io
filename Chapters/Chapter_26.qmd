@@ -7,8 +7,7 @@ editor: visual
 Verschiedene Arten von Texturen
 :::
 
-Beim Herunterladen der Texturen von Datenbanken fällt auf, dass eine Reihe verschiedener Texturen angeboten wird. Beim Download wird oftmals nicht nur eine Textur mit Farbe heruntergeladen,
-sondern auch andere Texturarten. Diese werden in diesem Kapitel ausführlich beschrieben.
+Beim Herunterladen der Texturen von Datenbanken fällt auf, dass eine Reihe verschiedener Texturen angeboten wird. Beim Download wird oftmals nicht nur eine Textur mit Farbe heruntergeladen, sondern auch andere Texturarten. Diese werden in diesem Kapitel ausführlich beschrieben.
 
 ## Color-Textur
 
@@ -24,8 +23,7 @@ Bislang wurden Texturen verwendet, um mittels Bildern Farbvariationen innerhalb 
 Albedo-Textur beinhalten keine Schatten
 :::
 
-Die Albedo-Textur stellt einen Spezialfall der Color-Textur dar. Dabei handelt es sich ebenfalls um die Farben, welche auf das jeweilige Material übertragen werden. Im Unterschied zur Color-Textur beinhaltet die Albedo-Textur allerdings keine Schatten oder Lichtpunkte. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «albedo» oder «alb» versehen. In der Regel wird die Albedo-Textur statt der Color-Textur angeboten. Sie kann also wie die Farb-Textur verwendet
-werden.
+Die Albedo-Textur stellt einen Spezialfall der Color-Textur dar. Dabei handelt es sich ebenfalls um die Farben, welche auf das jeweilige Material übertragen werden. Im Unterschied zur Color-Textur beinhaltet die Albedo-Textur allerdings keine Schatten oder Lichtpunkte. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «albedo» oder «alb» versehen. In der Regel wird die Albedo-Textur statt der Color-Textur angeboten. Sie kann also wie die Farb-Textur verwendet werden.
 
 ## Metallic-Textur
 
@@ -39,7 +37,7 @@ Die Metallic-Textur stellt eine schwarz-weisse Textur dar. Mit ihr wird angegebe
 Metallic-Textur verfeinert die Color-Textur
 :::
 
-Die Metallic-Textur wird jeweils zusätzlich zur Color-Textur verwendet und mit dem Metallic-Input verbunden. Eine Textur, die sowohl aus Metall als auch aus Rost besteht, würde etwa an den Stellen, an denen Rost dargestellt wird, einen geringeren Metallic-Wert aufweisen. Abbildung 1zeigt links ein Beispiel einer solchen Color-Textur und rechts die dazugehörige Metallic-Textur, bei der rostige Anteile durch schwarze Anteile dargestellt werden (Bildquelle: <https://ambientcg.com/view?id=Metal022>)
+Die Metallic-Textur wird jeweils zusätzlich zur Color-Textur verwendet und mit dem Metallic-Input verbunden. Eine Textur, die sowohl aus Metall als auch aus Rost besteht, würde etwa an den Stellen, an denen Rost dargestellt wird, einen geringeren Metallic-Wert aufweisen. Abbildung 1 zeigt links ein Beispiel einer solchen Color-Textur und rechts die dazugehörige Metallic-Textur, bei der rostige Anteile durch schwarze Anteile dargestellt werden (Bildquelle: <https://ambientcg.com/view?id=Metal022>)
 
 ![Links die Color-Textur eines verrosteten Metalls, rechts die dazugehörige Metallic-Textur.](Images/Chapter_26/Color_Metall_Comparisson.png){#fig-1_1 fig-align="left"}
 
@@ -47,8 +45,7 @@ Die Metallic-Textur wird jeweils zusätzlich zur Color-Textur verwendet und mit 
 Fehlende Metallic-Textur
 :::
 
-Bei Texturen, die dielektrische Materialien abbilden, werden selten Metallic-Texturen mitgeliefert. Dies liegt daran, dass bei diesen Texturen über die gesamte Textur hinweg kein Metall auftritt. In diesem Fall würde die Metallic-Textur lediglich ein schwarzes Bild darstellen. Statt also ein Bild zu 
-verwenden, kann direkt der Metallic-Parameter auf 0 gesetzt werden.
+Bei Texturen, die dielektrische Materialien abbilden, werden selten Metallic-Texturen mitgeliefert. Dies liegt daran, dass bei diesen Texturen über die gesamte Textur hinweg kein Metall auftritt. In diesem Fall würde die Metallic-Textur lediglich ein schwarzes Bild darstellen. Statt also ein Bild zu verwenden, kann direkt der Metallic-Parameter auf 0 gesetzt werden.
 
 ## Roughness-Textur
 
@@ -56,7 +53,7 @@ verwenden, kann direkt der Metallic-Parameter auf 0 gesetzt werden.
 Roughness-Textur, um Roughness-Parameter variieren zu lassen
 :::
 
-Die Roughness-Textur funktioniert ähnlich wie die Metallic-Textur. Sie ist ebenfalls schwarz-weiss aufgebaut und gibt mit ihren Helligkeitswerten an, wie hoch die Roughness an der entsprechenden Stelle der Textur sein sollte. Die Roughness-Textur wird zusätzlich zur Color-Textur verwendet und mit dem Roughness-Input des Shaders verbunden. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «roughness» oder «rough» versehen. 
+Die Roughness-Textur funktioniert ähnlich wie die Metallic-Textur. Sie ist ebenfalls schwarz-weiss aufgebaut und gibt mit ihren Helligkeitswerten an, wie hoch die Roughness an der entsprechenden Stelle der Textur sein sollte. Die Roughness-Textur wird zusätzlich zur Color-Textur verwendet und mit dem Roughness-Input des Shaders verbunden. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «roughness» oder «rough» versehen.
 
 ## Glossy-Textur
 
@@ -68,17 +65,15 @@ Die Glossy-Textur beschreibt das Gegenteil der Roughness-Textur. Sie ist ebenfal
 
 ![Node-Anordnung, um mit einer Glossy-Textur umzugehen.](Images/Chapter_26/Gloosy-Nodes.png){#fig-1_2 fig-align="left"}
 
-
 ## Normal-Textur
 
 ::: column-margin
 Normal-Textur, um Unebenheiten im Objekt zu simulieren
 :::
 
-Die Normal-Texturen fallen visuell auf, da sie eine bizarr erscheinende blaue Verfärbung aufweisen, wie die Normal-Textur auf der rechten Seite der Abbildung 3 (Bildquelle: <https://ambientcg.com/view?id=Rocks005>) Mittels dieser Textur können minimale Unebenheiten in einem Objekt simuliert werden. Dabei stellt jede Farbe, die in diesem Bild auftritt, eine Achse dar, anhand derer die simulierten Unebenheiten berechnet werden. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «normal» oder 
-«norm» versehen.
+Die Normal-Texturen fallen visuell auf, da sie eine bizarrerscheinende blaue Verfärbung aufweisen, wie die Normal-Textur auf der rechten Seite der Abbildung 3 (Bildquelle: <https://ambientcg.com/view?id=Rocks005>). Mittels dieser Textur können minimale Unebenheiten in einem Objekt simuliert werden. Dabei stellt jede Farbe, die in diesem Bild auftritt, eine Achse dar, anhand derer die simulierten Unebenheiten berechnet werden. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «normal» oder «norm» versehen.
 
-![Node-Anordnung, um mit einer Glossy-Textur umzugehen.](Images/Chapter_26/Vgl. color und normal für PPP.png){#fig-1_3 fig-align="left"}
+![Links eine Color-Textur, rechts die dazugehörige Normal-Textur.](Images/Chapter_26/Vgl.%20color%20und%20normal%20für%20PPP.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Zwei Arten von Normal-Texturen
@@ -86,20 +81,33 @@ Zwei Arten von Normal-Texturen
 
 Bei einigen Datenbanken werden zwei verschiedene Arten von Normal-Texturen geliefert. Eine, welche jeweils die Endung «GL» innehat, und eine, welche jeweils die Endung «DX» innehat. Beide Arten stellen Normal-Texturen dar, jedoch agieren sie unterschiedlich, je nachdem, welche Programmierschnittstelle ihnen zugrunde liegt. Normal-Texturen mit der Endung «GL» können für Applikationen verwendet werden, welche auf «OpenGL» basieren – hierzu gehört Blender. Deshalb werden jeweils diese Normal-Texturen benötigt. Die Normal-Texturen mit der Endung «DX» beziehen sich auf Applikationen, die «DirectX» verwenden.
 
-|                    | **OpenGL-Style** | **DirectX-Style** |
-|--------------------|------------------|-------------------|
-| **Dateiendung**    |        GL        |        DX         | 
-| **Software**       | Blender Maya   Unity       | 3ds Max Substance Unreal Engine                  |
-| **Render-Engines** | Cycles  Eevee Redshift Arnold Octane         |  V-Ray Corona (bei diesen kann allerdings auch OpenGL eingestellt werden)                 | 
++--------------------+------------------+--------------------------------------------------------------------+
+|                    | **OpenGL-Style** | **DirectX-Style**                                                  |
++====================+==================+====================================================================+
+| **Dateiendung**    | GL               | DX                                                                 |
++--------------------+------------------+--------------------------------------------------------------------+
+| **Software**       | Blender          | 3ds Max                                                            |
+|                    |                  |                                                                    |
+|                    | Maya             | Substance                                                          |
+|                    |                  |                                                                    |
+|                    | Unity            | Unreal Engine                                                      |
++--------------------+------------------+--------------------------------------------------------------------+
+| **Render-Engines** | Cycles           | V-Ray                                                              |
+|                    |                  |                                                                    |
+|                    | Eevee            | Corona (bei diesen kann allerdings auch OpenGL eingestellt werden) |
+|                    |                  |                                                                    |
+|                    | Redshift         |                                                                    |
+|                    |                  |                                                                    |
+|                    | Arnold           |                                                                    |
+|                    |                  |                                                                    |
+|                    | Octane           |                                                                    |
++--------------------+------------------+--------------------------------------------------------------------+
 
 ::: column-margin
 Verwendung der Normal-Texturen
 :::
 
-Um die Normal-Texturen einem Material beizufügen, wird ein Node benötigt, welcher 
-die Daten der Normal-Texturen extrahiert und daraus die Unebenheiten berechnet. 
-Hierfür wird der Bump-Node verwendet. Dieser ist im «*Add*»-Menü des Shader-Editors unter «*Vector | Bump*» zu finden. Anschliessend wird der Color-Output der Normal-Textur mit dem «*Height*»-Input des Bump-Nodes verbunden. Dadurch erhält der Bump-Node als Input die Höhe für die Unebenheiten basierend auf der Textur. Wie stark diese Unebenheiten anschliessend emuliert werden sollen, kann mittels des Reglers «*Strength*» im Bump-Node eingestellt werden. Der Normal-Output des Bump-Nodes wird anschliessend mit dem Normal-Input des 
-Principled-BSDF-Shaders verbunden.
+Um die Normal-Texturen einem Material beizufügen, wird ein Node benötigt, welcher die Daten der Normal-Texturen extrahiert und daraus die Unebenheiten berechnet. Hierfür wird der Bump-Node verwendet. Dieser ist im «*Add*»-Menü des Shader-Editors unter «*Vector \| Bump*» zu finden. Anschliessend wird der Color-Output der Normal-Textur mit dem «*Height*»-Input des Bump-Nodes verbunden. Dadurch erhält der Bump-Node als Input die Höhe für die Unebenheiten basierend auf der Textur. Wie stark diese Unebenheiten anschliessend emuliert werden sollen, kann mittels des Reglers «*Strength*» im Bump-Node eingestellt werden. Der Normal-Output des Bump-Nodes wird anschliessend mit dem Normal-Input des Principled-BSDF-Shaders verbunden.
 
 ![Anordnung der Normal-Textur mit einem Bump-Node zwischen dem Image-Texture-Node und dem Principled-BSDF-Node.](Images/Chapter_26/Normal_Textur.png){#fig-1_4 fig-align="left"}
 
@@ -109,14 +117,13 @@ Principled-BSDF-Shaders verbunden.
 Displacement-Textur, um grössere Unebenheiten zu emulieren oder zu erstellen
 :::
 
-Die Displacement-Textur funktioniert ähnlich wie die Normal-Textur. Sie wird ebenfalls für Unebenheiten im Material verwendet, allerdings für deutlich grössere Unebenheiten. Sie funktioniert wie die Roughness- und die Metallic-Textur auf einer SchwarzWeiss-Basis. Das heisst: Je heller ein Wert an einer Stelle ist, desto höher sollte die Unebenheit an dieser Stelle sein. In Online-Datenbanken 
-werden diese Texturen teilweise mit der Endung «displacement» oder «disp» versehen. Manchmal wird die Textur aber auch als Height-Textur bezeichnet und entsprechend mit der Endung «height» versehen. 
+Die Displacement-Textur funktioniert ähnlich wie die Normal-Textur. Sie wird ebenfalls für Unebenheiten im Material verwendet, allerdings für deutlich grössere Unebenheiten. Sie funktioniert wie die Roughness- und die Metallic-Textur auf einer Schwarz-Weiss-Basis. Das heisst: Je heller ein Wert an einer Stelle ist, desto höher sollte die Unebenheit an dieser Stelle sein. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «displacement» oder «disp» versehen. Manchmal wird die Textur aber auch als Height-Textur bezeichnet und entsprechend mit der Endung «height» versehen.
 
 ::: column-margin
 Displacement-Textur wird über Displacement-Node mit dem Material-Output verbunden
 :::
 
-Anders als die anderen Texturen, hat die Displacement-Textur keinen Shader als Ziel, sondern den Material-Output-Node. Dazwischen wird ein Displacement-Node eingefügt. Dieser kann im «*Add*» Menü unter «*Vector | Displacement*» hinzugefügt werden. Der Color-Output der Displacement-Textur wird anschliessend mit dem Height-Input des Displacement-Nodes verbunden. Dadurch erhält der Displacement-Node die Information, an welchen Stellen der Textur eine höhere Abweichung und an welchen eine geringere Abweichung vom Mesh emuliert werden soll. Über den Reiter «*Scale*» kann zudem die Stärke dieser Abweichung skaliert werden. In der Regel reichen bereits sehr kleine Werte (z.B. 0.001) aus, während grössere Werte verzerrend wirken. Der Displacement-Output des Displacement-Nodes kann anschliessend mit dem Displacement-Input des Material-Output-Nodes verbunden werden. 
+Anders als die anderen Texturen, hat die Displacement-Textur keinen Shader als Ziel, sondern den Material-Output-Node. Dazwischen wird ein Displacement-Node eingefügt. Dieser kann im «*Add*» Menü unter «*Vector \| Displacement*» hinzugefügt werden. Der Color-Output der Displacement-Textur wird anschliessend mit dem Height-Input des Displacement-Nodes verbunden. Dadurch erhält der Displacement-Node die Information, an welchen Stellen der Textur eine höhere Abweichung und an welchen eine geringere Abweichung vom Mesh emuliert werden soll. Über den Reiter «*Scale*» kann zudem die Stärke dieser Abweichung skaliert werden. In der Regel reichen bereits sehr kleine Werte (z.B. 0.001) aus, während grössere Werte verzerrend wirken. Der Displacement-Output des Displacement-Nodes kann anschliessend mit dem Displacement-Input des Material-Output-Nodes verbunden werden.
 
 ::: column-margin
 Mesh mittels Displacement-Textur verformen
@@ -126,24 +133,21 @@ Die Displacement-Textur kann auch verwendet werden, um das Mesh tatsächlich anh
 
 ![Anordnung der Displacement-Textur mit einem Displacement-Node zwischen dem Image-Texture-Node und dem Material-Output-Node.](Images/Chapter_26/Displacement_Nodes.png){#fig-1_5 fig-align="left"}
 
-## Ambient-Occlusion-Textur 
+## Ambient-Occlusion-Textur
 
 ::: column-margin
 Ambient-Occlusion-Textur für Schatten
 :::
 
-Die Ambient-Occlusion-Textur stellt gewissermassen das Gegenteil der Albedo-Textur dar. Während die Albedo-Textur die Grundfarben einer Textur ohne Schattenanteile beinhaltet, besteht die Ambient-Occlusion-Textur lediglich aus Schattenanteilen. 
-In OnlineDatenbanken werden diese Texturen teilweise mit der Endung «ambientocclusion», «ao», «occlusion» oder «occ» versehen.
+Die Ambient-Occlusion-Textur stellt gewissermassen das Gegenteil der Albedo-Textur dar. Während die Albedo-Textur die Grundfarben einer Textur ohne Schattenanteile beinhaltet, besteht die Ambient-Occlusion-Textur lediglich aus Schattenanteilen. In OnlineDatenbanken werden diese Texturen teilweise mit der Endung «ambientocclusion», «ao», «occlusion» oder «occ» versehen.
 
 ::: column-margin
 Ambient-Occlusion-Textur verwenden
 :::
 
-Die Ambient-Occlusion-Textur wird selten bei der Texturierung verwendet. Wenn sie 
-allerdings berücksichtigt werden soll, empfiehlt es sich, diese mit der Color-Textur zu kombinieren. Hierfür wird ein «MixRGB»-Node verwendet, welcher zwei Farben miteinander mischen kann. Dieser ist im «*Add*»-Menü unter «*Color | MixRGB*» zu finden. Anschliessend kann der Color-Output der Color-Textur mit dem ersten Color-Input («*Color1*») verbunden werden und der Color-Output der Ambient-Occlusion-Textur mit dem zweiten Color-Output («*Color2*»). Im Dropdown-Menü auf der Schaltfläche «*Mix*» sollte zudem die Option «*Multiply*» ausgewählt werden. Dadurch werden die Schattenanteile mit den Farbwerten multipliziert (unter der Einstellung «*Mix*» würden sich lediglich graduelle Abstufungen zwischen den beiden Texturen ergeben). Mithilfe des Reiters «*Fac*» kann anschliessend der Faktor definiert werden, mit dem die Schattenanteile auf die Grundfarbe multipliziert werden sollen. Der Color-Output des Mix-RGB-Nodes kann anschliessend mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden 
-werden.
+Die Ambient-Occlusion-Textur wird selten bei der Texturierung verwendet. Wenn sie allerdings berücksichtigt werden soll, empfiehlt es sich, diese mit der Color-Textur zu kombinieren. Hierfür wird ein «*MixRGB*»-Node verwendet, welcher zwei Farben miteinander mischen kann. Dieser ist im «*Add*»-Menü unter «*Color \| MixRGB*» zu finden. Anschliessend kann der Color-Output der Color-Textur mit dem ersten Color-Input («*Color1*») verbunden werden und der Color-Output der Ambient-Occlusion-Textur mit dem zweiten Color-Output («*Color2*»). Im Dropdown-Menü auf der Schaltfläche «*Mix*» sollte zudem die Option «*Multiply*» ausgewählt werden. Dadurch werden die Schattenanteile mit den Farbwerten multipliziert (unter der Einstellung «*Mix*» würden sich lediglich graduelle Abstufungen zwischen den beiden Texturen ergeben). Mithilfe des Reiters «*Fac*» kann anschliessend der Faktor definiert werden, mit dem die Schattenanteile auf die Grundfarbe multipliziert werden sollen. Der Color-Output des Mix-RGB-Nodes kann anschliessend mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden.
 
-![ Node-Anordnung, um die Ambient-Occlusion-Textur mit der Color-Textur zu multiplizieren.](Images/Chapter_26/AOC_Nodes.png){#fig-1_6 fig-align="left"}
+![Node-Anordnung, um die Ambient-Occlusion-Textur mit der Color-Textur zu multiplizieren.](Images/Chapter_26/AOC_Nodes.png){#fig-1_6 fig-align="left"}
 
 ## Alpha-Textur
 
@@ -151,8 +155,7 @@ werden.
 Alpha-Textur, um Transparenz zu definieren
 :::
 
-Die Alpha-Textur basiert ebenfalls auf Schwarz-Weiss-Werten und definiert, an welchen Stellen eine Oberfläche transparent sein soll. Der Color-Output der Alpha-Textur wird jeweils mit dem Alpha-Input des Principled-BSDF-Shaders verbunden. Die weissen Anteile der Textur beschreiben jeweils Bereiche, die sichtbar bleiben sollen, während schwarze Anteile der Textur jeweils die Bereiche 
-beschreiben, welche durch die Transparenz nicht sichtbar werden. Damit die Transparenz auch beim Rendern sichtbar wird, werden noch weitere Einstellungen benötigt, welche zu einem späteren Zeitpunkt ausführlich beschrieben werden. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «alpha» oder «opacity» versehen. 
+Die Alpha-Textur basiert ebenfalls auf Schwarz-Weiss-Werten und definiert, an welchen Stellen eine Oberfläche transparent sein soll. Der Color-Output der Alpha-Textur wird jeweils mit dem Alpha-Input des Principled-BSDF-Shaders verbunden. Die weissen Anteile der Textur beschreiben jeweils Bereiche, die sichtbar bleiben sollen, während schwarze Anteile der Textur jeweils die Bereiche beschreiben, welche durch die Transparenz nicht sichtbar werden. Damit die Transparenz auch beim Rendern sichtbar wird, werden noch weitere Einstellungen benötigt, welche zu einem späteren Zeitpunkt ausführlich beschrieben werden. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «alpha» oder «opacity» versehen.
 
 ## Reflection-Textur
 
@@ -168,7 +171,7 @@ Die Reflection-Textur – teils auch als Specularity-Textur bezeichnet – besch
 Für jede Texturart ein Node
 :::
 
-Die verschiedenen Texturarten beziehen sich grösstenteils auf unterschiedliche Inputs des Principled-BSDF-Shaders. Das heisst, dass für jede Textur ein eigener Image-Texture-Node benötigt wird, welcher die entsprechende Textur beinhaltet und anschliessend mit den Inputs der nächsten Andockstellen verbunden wird. 
+Die verschiedenen Texturarten beziehen sich grösstenteils auf unterschiedliche Inputs des Principled-BSDF-Shaders. Das heisst, dass für jede Textur ein eigener Image-Texture-Node benötigt wird, welcher die entsprechende Textur beinhaltet und anschliessend mit den Inputs der nächsten Andockstellen verbunden wird.
 
 ::: column-margin
 Lediglich ein Mapping-Node für mehrere Texturen mit identischem Mapping
@@ -176,9 +179,7 @@ Lediglich ein Mapping-Node für mehrere Texturen mit identischem Mapping
 
 Zusätzlich benötigt jeder Image-Texture-Node einen Mapping-Node, der wiederum auf einen Texture-Coordinate-Node folgt. Dies ist allerdings sehr unübersichtlich und komplex. Da in der Regel alle Texturarten innerhalb eines Materials in gleicher Weise auf das Objekt übertragen werden, kann deshalb für alle Image-Texture-Nodes derselbe Mapping-Node verwendet werden. Dieser sendet anschliessend seine Mapping-Informationen an alle nach ihm folgenden Nodes aus. Dadurch muss lediglich dieser eine Node bearbeitet werden und das Mapping für alle Texturarten wird gleichzeitig bearbeitet, statt dass eine Bearbeitung für mehrere Mapping-Nodes erfolgen muss.
 
-
 ![Anordnung von verschiedenen Texturarten zu einem Material.](Images/Chapter_26/Texture-Mapping-Vorlage.png){#fig-1_7 fig-align="left"}
-
 
 ## Texturen auf Material betrachten mithilfe des Node-Wrangler-Add-ons
 
@@ -195,7 +196,7 @@ Viewer-Node aktivieren
 Sobald das Node-Wrangler-Add-on aktiviert ist, kann im Shader-Editor jeweils bei gedrückter {{< kbd Ctrl >}}- + {{< kbd Shift >}}-Taste auf einen beliebigen Node innerhalb eines Materials geklickt werden. Daraufhin wird der Output des ausgewählten Materials mit einem neu erstellten «*Viewer*»-Node verbunden, welcher mit dem Material-Output verbunden ist. Im 3D-Viewport-Editor wird nun bildlich die Information dargestellt, welche über diesen Output gerade an den nächsten Node übergeben wird. Dadurch können die Texturen isoliert betrachtet werden, ohne dass sie bereits innerhalb eines Shaders verarbeitet werden.
 
 ::: column-margin
-Viewer-Node deaktivieren 
+Viewer-Node deaktivieren
 :::
 
 Um wieder das richtige Material zu sehen, kann bei gedrückter {{< kbd Ctrl >}}- + {{< kbd Shift >}}-Taste auf den Shader-Node geklickt werden. Dieser wird anschliessend ohne den Viewer-Node dazwischen mit dem Material-Output verbunden.

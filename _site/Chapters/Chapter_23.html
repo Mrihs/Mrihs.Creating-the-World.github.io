@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Michael Rihs">
 
-<title>1. Vorbereitung von Blender – Creating the World</title>
+<title>23. Texturen zu einem Material hinzufügen – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -221,6 +220,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../Chapters/Chapter_22.html">
  <span class="dropdown-text">Kapitel 22</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_23.html">
+ <span class="dropdown-text">Kapitel 23</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -244,44 +247,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#installation-von-blender" id="toc-installation-von-blender" class="nav-link active" data-scroll-target="#installation-von-blender">Installation von Blender</a>
-  <ul class="collapse">
-  <li><a href="#mac" id="toc-mac" class="nav-link" data-scroll-target="#mac">Mac</a></li>
-  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
-  </ul></li>
-  <li><a href="#der-erste-start-von-blender" id="toc-der-erste-start-von-blender" class="nav-link" data-scroll-target="#der-erste-start-von-blender">Der erste Start von Blender</a></li>
-  <li><a href="#die-arbeitsoberfläche-von-blender" id="toc-die-arbeitsoberfläche-von-blender" class="nav-link" data-scroll-target="#die-arbeitsoberfläche-von-blender">Die Arbeitsoberfläche von Blender</a>
-  <ul class="collapse">
-  <li><a href="#das-willkommensfenster" id="toc-das-willkommensfenster" class="nav-link" data-scroll-target="#das-willkommensfenster">Das Willkommensfenster</a></li>
-  <li><a href="#die-verschiedenen-areale-beim-general-projekt" id="toc-die-verschiedenen-areale-beim-general-projekt" class="nav-link" data-scroll-target="#die-verschiedenen-areale-beim-general-projekt">Die verschiedenen Areale beim General-Projekt</a></li>
-  </ul></li>
-  <li><a href="#übersicht-über-die-editor-fenster-von-blender" id="toc-übersicht-über-die-editor-fenster-von-blender" class="nav-link" data-scroll-target="#übersicht-über-die-editor-fenster-von-blender">Übersicht über die Editor-Fenster von Blender</a>
-  <ul class="collapse">
-  <li><a href="#d-viewport" id="toc-d-viewport" class="nav-link" data-scroll-target="#d-viewport">3D Viewport</a></li>
-  <li><a href="#image-editor" id="toc-image-editor" class="nav-link" data-scroll-target="#image-editor">Image Editor</a></li>
-  <li><a href="#uv-editor" id="toc-uv-editor" class="nav-link" data-scroll-target="#uv-editor">UV Editor</a></li>
-  <li><a href="#compositor" id="toc-compositor" class="nav-link" data-scroll-target="#compositor">Compositor</a></li>
-  <li><a href="#texture-node-editor" id="toc-texture-node-editor" class="nav-link" data-scroll-target="#texture-node-editor">Texture Node Editor</a></li>
-  <li><a href="#geometry-node-editor" id="toc-geometry-node-editor" class="nav-link" data-scroll-target="#geometry-node-editor">Geometry Node Editor</a></li>
-  <li><a href="#shader-editor" id="toc-shader-editor" class="nav-link" data-scroll-target="#shader-editor">Shader Editor</a></li>
-  <li><a href="#video-sequencer" id="toc-video-sequencer" class="nav-link" data-scroll-target="#video-sequencer">Video Sequencer</a></li>
-  <li><a href="#movie-clip-editor" id="toc-movie-clip-editor" class="nav-link" data-scroll-target="#movie-clip-editor">Movie Clip Editor</a></li>
-  <li><a href="#dope-sheet" id="toc-dope-sheet" class="nav-link" data-scroll-target="#dope-sheet">Dope Sheet</a></li>
-  <li><a href="#timeline" id="toc-timeline" class="nav-link" data-scroll-target="#timeline">Timeline</a></li>
-  <li><a href="#graph-editor" id="toc-graph-editor" class="nav-link" data-scroll-target="#graph-editor">Graph Editor</a></li>
-  <li><a href="#drivers" id="toc-drivers" class="nav-link" data-scroll-target="#drivers">Drivers</a></li>
-  <li><a href="#nonlinear-animation" id="toc-nonlinear-animation" class="nav-link" data-scroll-target="#nonlinear-animation">Nonlinear Animation</a></li>
-  <li><a href="#text-editor" id="toc-text-editor" class="nav-link" data-scroll-target="#text-editor">Text Editor</a></li>
-  <li><a href="#python-console" id="toc-python-console" class="nav-link" data-scroll-target="#python-console">Python Console</a></li>
-  <li><a href="#info" id="toc-info" class="nav-link" data-scroll-target="#info">Info</a></li>
-  <li><a href="#outliner" id="toc-outliner" class="nav-link" data-scroll-target="#outliner">Outliner</a></li>
-  <li><a href="#properties" id="toc-properties" class="nav-link" data-scroll-target="#properties">Properties</a></li>
-  <li><a href="#file-browser" id="toc-file-browser" class="nav-link" data-scroll-target="#file-browser">File Browser</a></li>
-  <li><a href="#spreadsheet" id="toc-spreadsheet" class="nav-link" data-scroll-target="#spreadsheet">Spreadsheet</a></li>
-  <li><a href="#preferences" id="toc-preferences" class="nav-link" data-scroll-target="#preferences">Preferences</a></li>
-  </ul></li>
-  <li><a href="#vorgefertigte-editor-anordnungen" id="toc-vorgefertigte-editor-anordnungen" class="nav-link" data-scroll-target="#vorgefertigte-editor-anordnungen">Vorgefertigte Editor-Anordnungen</a></li>
-  <li><a href="#neuanordnen-der-editor-areale" id="toc-neuanordnen-der-editor-areale" class="nav-link" data-scroll-target="#neuanordnen-der-editor-areale">Neuanordnen der Editor-Areale</a></li>
+  <li><a href="#texture-nodes-hinzufügen" id="toc-texture-nodes-hinzufügen" class="nav-link active" data-scroll-target="#texture-nodes-hinzufügen">Texture-Nodes hinzufügen</a></li>
+  <li><a href="#texture-mapping-hinzufügen" id="toc-texture-mapping-hinzufügen" class="nav-link" data-scroll-target="#texture-mapping-hinzufügen">Texture-Mapping hinzufügen</a></li>
+  <li><a href="#schnelleres-hinzufügen-von-image-texture-nodes" id="toc-schnelleres-hinzufügen-von-image-texture-nodes" class="nav-link" data-scroll-target="#schnelleres-hinzufügen-von-image-texture-nodes">Schnelleres Hinzufügen von Image-Texture-Nodes</a></li>
   </ul>
 </nav>
     </div>
@@ -290,23 +258,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">1. Vorbereitung von Blender</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">Blender</div>
-    <div class="quarto-category">Installation</div>
-  </div>
-  </div>
+<h1 class="title">23. Texturen zu einem Material hinzufügen</h1>
+</div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Autor:in</div>
-    <div class="quarto-title-meta-contents">
-             <p>Michael Rihs </p>
-          </div>
-  </div>
     
   
     
@@ -317,270 +275,160 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="installation-von-blender" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="installation-von-blender">Installation von Blender</h2>
+<section id="texture-nodes-hinzufügen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="texture-nodes-hinzufügen">Texture-Nodes hinzufügen</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Installationsdatei herunterladen</p>
-</div></div><p>Um Blender auf einem Rechner zu installieren, muss das Installationspaket von Blender auf dessen Website <a href="https://www.blender.org/" class="uri">https://www.blender.org/</a> unter dem Reiter «Download» heruntergeladen werden. Dort sollte bereits automatisch das Betriebssystem des Rechners erkannt und die aktuellste Version angeboten werden. Ansonsten lässt sich mittels eines Auswahlfeldes auch die entsprechende Version auswählen.</p>
+<p>Texturen als Teil eines Materials</p>
+</div></div><p>Bislang wurde betrachtet, wie die dreidimensionale Struktur mittels UVs auf Texturen angewendet wird. Allerdings wurde noch nicht besprochen, wie die Texturen auf dem Objekt erscheinen. Damit die Texturen auf ein Objekt angewendet werden, müssen sie Teil eines Materials sein, welches anschliessend auf das Objekt angewendet wird. Deshalb wird erneut der Shader-Editor benötigt, wenn die Texturen einem Objekt hinzugefügt werden sollen.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Frühere Versionen von Blender</p>
-</div></div><p>Unter <a href="https://www.blender.org/download/releases/" class="uri">https://www.blender.org/download/releases/</a> lassen sich zudem frühere Versionen von Blender herunterladen. Dieser Kurs ist auf Blender 3.3 ausgerichtet, weshalb der Download dieser Version empfohlen wird.</p>
-<section id="mac" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="mac">Mac</h3>
+<p>Textur muss mittels Nodes verbunden werden</p>
+</div></div><p>Wenn die Base-Color des Principled-BSDF-Shaders keine einheitliche Farbe darstellen soll, muss der Base-Color eine Textur zugewiesen werden. In der Farbbox der Base-Color besteht keine Möglichkeit, eine Textur auszuwählen. Stattdessen muss eine Textur mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden. Hierfür wird ein neuer Node im Shader-Editor benötigt, welcher die Textur beinhaltet. Dieser wird anschliessend mit der Base-Color verbunden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Installationsdatei für Mac-User</p>
-</div></div><p>Mac-Benutzer wählen den Link mit der Endung «<em>.dmg</em>». Abhängig vom Computermodell gibt es zwei Versionen. Für Apple-Computer, welche Apples hauseigenen Prozessor M1 eingebaut haben, wird die Version mit der Endung «arm64.dmg» benötigt. Für die anderen Apple-Computer die Version mit der Endung «<em>x64.dmg</em>». Um herauszufinden, welcher Prozessor/Chip im eigenen Apple-Gerät eingebaut ist, kann man im Menü «<em>Über diesen Mac</em>» (oben links beim Apfelsymbol zu finden) nachschauen. Wenn Apples eigener Chip verbaut ist, wird «<em>Chip Apple M1</em>» aufgelistet. Wenn der Computer nicht über den M1-Chipf verfügt, wird an dieser Stelle der Prozessor aufgeführt.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Installation</p>
-</div></div><p>Nach dem Download sollte das entsprechende .dmg-Paket geöffnet werden. Anschliessend öffnet sich ein Fenster, dass die Blender-Software und den Applikationsordner zeigt. Hier sollte nun die Blender-Software in den Applikationsordner gezogen werden. Anschliessend ist die Installation abgeschlossen.</p>
-</section>
-<section id="windows" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="windows">Windows</h3>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Installation für Windows-User</p>
-</div></div><p>Windows-Benutzer können den Link mit der Endung «<em>.msi</em>» auswählen. Nach dem Download kann die Datei geöffnet werden und die Installation konfiguriert werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Blender ohne Installation nutzen</p>
-</div></div><p>Es ist auch möglich, Blender ohne eine Installation zu verwenden – hierfür muss der Link mit der Endung «<em>.zip</em>» ausgewählt werden. Nach dem Extrahieren der Dateien kann Blender über diesen Ordner gestartet werden. Dadurch kann Blender auf ein externes Speichermedium transferiert werden und an anderen Computern gestartet werden. Dies hat allerdings einige Nachteile. Der Computer weiss dadurch etwa nicht, mit welchem Programm er standardmässig die Dateien von Blender öffnen kann, und Blender wird auch nicht unter den installierten Programmen aufgelistet.</p>
-<div class="tippbox">
-<div class="tippbox-header">
-<div class="tippbox-icon">
-
-</div>
-<p>Weiterführende Informationen</p>
-</div>
-<div class="tippbox-body">
-<p>Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstützt. Microsoft unterstützt diese Systeme seit 2020 nicht mehr und auch andere Software-Entwickler haben den Support dieser Systeme eingestellt.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="der-erste-start-von-blender" class="level2">
-<h2 class="anchored" data-anchor-id="der-erste-start-von-blender">Der erste Start von Blender</h2>
-<p>Beim ersten Start von Blender erscheint ein Quick-Setup-Menü, bei dem einige Grundeinstellungen eingestellt werden können. Diese können in der Regel so belassen werden, wie sie sind. Die folgenden Einstellungen stehen zur Verfügung:</p>
-<ul>
-<li><strong>Language</strong>: Hier kann die Sprache eingestellt werden.</li>
-<li><strong>Shortcuts</strong>: Hier können die Shortcut-Einstellungen ausgewählt werden. Dieser Kurs orientiert sich an der Default-Einstellung «<em>Blender</em>».</li>
-<li><strong>Select with</strong>: Hier kann eingestellt werden, ob jeweils mit der linken oder der rechten Maustaste Objekte ausgewählt werden können. Dieser Kurs geht davon aus, dass eine Auswahl mit der linken Maustaste erfolgt.</li>
-<li><strong>Spacebar</strong>: Die Funktion der Leertaste kann drei verschiedenen Funktionen zugewiesen werden. Per Default wird die Leertaste verwendet, um Animationen zu starten (Option «<em>Play</em>»). Allerdings kann sie auch der Option «<em>Tools</em>» zugewiesen werden. Mittels der Einstellung «<em>Search</em>» wird durch die Leertaste ein Suchfeld geöffnet, mit dem Befehle gesucht werden können. Für diesen Kurs spielt es keine grosse Rolle, welche Funktion der Leertaste zugewiesen wird. Die Befehlssuche ist allerdings sehr nützlich, kann aber alternativ auch mit der Taste <kbd aria-hidden="true">F3</kbd><span class="visually-hidden">F3</span> geöffnet werden.</li>
-<li><strong>Theme</strong>: Hier kann das farbliche Layout von Blender angepasst werden. Grafiken in diesem Kurs wurden mit dem Theme «<em>Blender Dark</em>» erstellt.</li>
-</ul>
-</section>
-<section id="die-arbeitsoberfläche-von-blender" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="die-arbeitsoberfläche-von-blender">Die Arbeitsoberfläche von Blender</h2>
-<section id="das-willkommensfenster" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="das-willkommensfenster">Das Willkommensfenster</h3>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Optionen im Willkommensfenster</p>
-</div></div><p>Blender begrüsst seine Nutzer mit einem Willkommensfenster. In diesem Fenster werden die letzten geöffneten Projekte auf der rechten Seite unter den «<em>Recent Files</em>» aufgelistet. Auf der linken Seite des Willkommensfenster kann unter «<em>New File</em>» ein neues Projekt erstellt werden. Dabei lässt sich die Art des Projekts bereits genauer definieren. Je nach ausgewählter Projektart werden unterschiedliche Ansichtsvorlagen geladen.</p>
+<p>Node hinzufügen</p>
+</div></div><p>Um einen neuen Node hinzuzufügen, wird die Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> verwendet. Dadurch öffnet sich beim Mauszeiger das «<em>Add</em>»-Menü für den Shader-Editor. Anschliessend kann über das Menü der entsprechende Node gesucht werden. Die Nodes sind in unterschiedliche Kategorien aufgeteilt, die zu einem späteren Zeitpunkt ausführlich beschrieben werden. Statt den entsprechenden Node durch die Kategorien auszuwählen, kann auch die Suchleiste zuoberst im Menü ausgewählt werden und nach dem entsprechenden Node gesucht werden.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_1/1_1_Welcome_Screen.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_23/Anordnung Texture Node.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Willkommensfenster
+Abbildung&nbsp;1: Image-Texture-Node, der neben dem Principled-BSDF-Shader hinzugefügt wurde.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Auswahl von Ansichtsvorlagen</p>
-</div></div><p>Zu den möglichen Ansichtsvorlagen gehören:</p>
+<p>Texture-Node hinzufügen</p>
+</div></div><p>Um eine Textur hinzuzufügen, wird der Node «<em>Image Texture</em>» benötigt. Dieser kann unter «<em>Textures | Image Texture</em>» hinzufügefügt werden oder über die Suchleiste gesucht werden. Dadurch erscheint der Image-Texture-Node, welcher mittels eines Mausklicks platziert werden kann. Da der Output des Image-Texture-Nodes anschliessend mit dem Input des Principled-BSDF-Shaders verbunden wird, sollte der Image-Texture-Node links vom Principled-BSDF-Shader platziert werden, wie in Abbildung 1 dargestellt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Methoden, um dem Image-Texture-Node ein Bild zuzuweisen</p>
+</div></div><p>Der Image-Texture-Node verfügt noch über keine Textur, sondern stellt lediglich einen Platzhalter dar. Um ihm eine Textur hinzuzufügen, bestehen folgende Möglichkeiten im Image-Texture-Node:</p>
 <ul>
-<li><strong>General</strong>: Öffnet eine Standardvorlage für das Bearbeiten von 3D-Objekten.</li>
-<li><strong>2D Animation</strong>: Öffnet eine Vorlage zum Erstellen von 2D-Animationen.</li>
-<li><strong>Sculpting</strong>: Öffnet eine Vorlage, welche für das Sculpting von Objekten geeignet ist. Dabei werden Objekte anhand von Pinseln direkt in ihrer Form verändert.</li>
-<li><strong>VFX</strong>: Öffnet eine Vorlage für die Erstellung visueller Effekte (VFX), beispielsweise in Videos.</li>
-<li><strong>Video Editing</strong>: Öffnet eine Vorlage zum Bearbeiten von Videos.</li>
+<li>«<strong><em>New</em></strong>»: Damit wird eine neue, einfarbige Textur erstellt, welche anschliessend in Blender bearbeitet und als Bilddatei auf dem Rechner abgespeichert werden kann.</li>
+<li>«<strong><em>Open</em></strong>»: Damit lässt sich eine bestehende Bilddatei auf dem Rechner auswählen und dem Image-Texture-Node hinzufügen. Hierfür öffnet sich ein Browser-Fenster, in dem zum entsprechenden Speicherort der Textur navigiert und die entsprechende Bilddatei ausgewählt werden kann.</li>
+<li><strong>Dropdown-Menü auf der linken Seite</strong>: Damit lassen sich bereits in Blender geladene Bilddateien auswählen und dem Image-Texture-Node zuweisen.</li>
 </ul>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Fokus auf «General»</p>
-</div></div><p>Dieser Kurs wird sich auf die 3D-Modellierung fokussieren. Deshalb wird jeweils die Ansichtsvorlage «<em>General</em>» verwendet. Diese Vorlage ist so generell, dass sie im Hintergrund schon geladen ist, während das Willkommensfenster dargestellt wird. Deshalb ist es auch möglich, einfach ausserhalb des Willkommensfensters zu klicken. Dadurch verschwindet das Willkommensfenster und die General-Vorlage, die bereits im Hintergrund besteht, wird sichtbar.</p>
-</section>
-<section id="die-verschiedenen-areale-beim-general-projekt" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="die-verschiedenen-areale-beim-general-projekt">Die verschiedenen Areale beim General-Projekt</h3>
+<p>Hinzugefügte Textur im Image-Texture-Node</p>
+</div></div><p>Sobald dem Image-Texture-Node eine Textur zugewiesen wurde, wird der Name dieser Textur anstelle der Auswahloptionen «<em>New</em>» und «<em>Open</em>» angezeigt. Mittels des Ordner-Icons neben dem Namen kann eine andere Textur geöffnet und dem Image-Texture-Node hinzugefügt werden, und mittels des Kreuz-Icons kann die Textur aus dem Image-Texture-Node entfernt werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Default Editoren</p>
-</div></div><p>Die verschiedenen Werkzeuge, welche Blender anbietet, sind innerhalb verschiedener Editoren aufzufinden. Diese Editoren werden als separate und austauschbare Areale in Blender dargestellt. Beim Start eines neuen Projekts (mit der Vorlage General) ist die Ansicht in vier Areale unterteilt:</p>
-<ul>
-<li><strong>3D Viewport</strong>: Überspannt von der oberen linken Ecke den grössten Teil des Bildschirms.</li>
-<li><strong>Outliner</strong>: Befindet sich in der oberen rechten Ecke.</li>
-<li><strong>Properties</strong>: Befindet sich in der unteren rechten Ecke.</li>
-<li><strong>Timeline</strong>: Befindet sich links am unteren Rand.</li>
-</ul>
-<p>Gerade der 3D-Viewport, der Outliner und die Properties sind für das Erstellen von 3D-Objekten mit Blender von hoher Bedeutung. Die Timeline wird bei Animationen verwendet.</p>
+<p>Image-Texture-Node verbinden</p>
+</div></div><p>Der Image-Texture-Node beinhaltet nun die geladene Bilddatei als Information, die er mittels des Outputs «<em>Color</em>» weiterleiten kann. Diese Farbe stellt nun keine einheitliche Farbe mehr dar, sondern die Bilddatei. Der Color-Output des Image-Texture-Nodes kann nun mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden, wie in Abbildung 2 dargestellt. Dadurch verschwindet das Auswahlfeld, mit der eine Farbe für die Base-Color des Principled-BSDF-Shaders ausgewählt werden kann. Dies liegt daran, dass dieser Informationsparameter für die Farbe bereits belegt ist, nämlich durch die Textur, welche mit dem Input der Base-Color verbunden wurde. Wird das Objekt, zu dem das Material gehört, nun im 3D-Viewport-Editor in der Material-Preview betrachtet, sollte die Textur des Objektes nun zu erkennen sein.</p>
 <div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_1/1_2_Default-Arealaufteilung.jpg" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_23/Texture_Node_connecte.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Default-Aufteilung der Arbeitsbereiche.
+Abbildung&nbsp;2: Verbindung zwischen einem Image-Texture-Node und der Base-Color des Principled-BSDF-Shaders.
 </figcaption>
 </figure>
 </div>
+<div class="rememberbox">
+<div class="rememberbox-header">
+<div class="rememberbox-icon">
+
+</div>
+<p>Merke…</p>
+</div>
+<div class="rememberbox-body">
+<p>Texturen werden jeweils auf Materialien angewendet.</p>
+<p>Um eine Textur einem Material hinzuzufügen, wird diese mit einem Image-Texture-Node dem Material hinzugefügt und über einen Faden mit dem farbgebenden Input des Shaders verbunden.</p>
+</div>
+</div>
 </section>
-</section>
-<section id="übersicht-über-die-editor-fenster-von-blender" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="übersicht-über-die-editor-fenster-von-blender">Übersicht über die Editor-Fenster von Blender</h2>
+<section id="texture-mapping-hinzufügen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="texture-mapping-hinzufügen">Texture-Mapping hinzufügen</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Editoren austauschen</p>
-</div></div><p>In jedem Editor-Areal befindet sich in der linken oberen Ecke eine Schaltfläche. Durch das Drücken dieser Schaltfläche wird ein Dropdown-Menü geöffnet. Darin sind alle verfügbaren Editoren aufgelistet. Indem ein anderer Editor ausgetauscht wird, wechselt die Anzeige in diesem Areal zu dem ausgewählten Editor.</p>
+<p>Mapping-Node</p>
+</div></div><p>Die Texturen, welche über den Image-Texture-Node mit dem Principled-BSDF-Shader verbunden werden, können auch variiert werden. So lassen sich die Positionen verschieben, rotieren und skalieren. Damit dies möglich ist, wird ein «<em>Mapping</em>»-Node benötigt. Dieser ist im Add-Menü unter «<em>Vector | Mapping</em>» auffindbar. Der Mapping-Node sollte dabei links vom Image-Texture-Node platziert werden, da der Vector-Output des Mapping-Nodes mit dem Vector-Input des Image-Texture-Nodes verbunden wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Texture-Coordinate-Node</p>
+</div></div><p>Durch die Verbindung des Mapping-Nodes mit dem Image-Texture-Node wird die Textur nicht mehr auf dem Objekt angezeigt. Dies liegt daran, dass der Mapping-Node keine Informationen darüber verfügt, wie die Texturen jeweils auf ein Objekt angewendet werden. Deshalb wird ein Node benötigt, welcher dem Mapping-Node diese Informationen übermittelt – nämlich der «<em>Texture Coordinate</em>»-Node. Der Texture-Coordinate-Node ist im «<em>Add</em>»-Menü jeweils unter «<em>Input | Texture Coordinate</em>» zu finden. Dieser Node sollte links vom Mapping-Node platziert werden, damit er anschliessend mit dem Vector-Input des Mapping-Nodes verbunden werden kann.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Outputs des Texture-Coordinate-Nodes</p>
+</div></div><p>Im Texture-Coordinate-Node gibt es sechs verschiedene Outputs, die mit dem Vector-Input des Mapping-Nodes verbunden werden können. Jeder dieser Outputs beschreibt eine andere Methode, wie die Texturen auf ein Objekt angewendet werden können. Wenn der entsprechende Output mit dem Vector-Input verbunden wird, wird diese Methode angewendet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Verbindung von Texture-Coordinate-und Mapping-Node</p>
+</div></div><p>Häufig werden die UVs verwendet, um das Mapping der Texturen auf das Objekt zu bestimmen. Dabei handelt es sich um die Standardoption, welche der Image-Texture-Node ohne den Mapping-Node durchführen würde. Somit wird in der Regel der UV-Output des Texture-Coordinate-Nodes mit dem Vector-Input des Mapping-Nodes verbunden und der Vector-Output des Mapping-Nodes mit dem Vector-Input des Image-Texture-Nodes, so wie in Abbildung 3. Durch diese Anordnung wird die Textur wieder auf dem Objekt sichtbar.</p>
 <div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_1/1_3_Editor_Select.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_23/Texture_Node_Mapping.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Die Auswahl an verschiedenen Editoren, welche Blender standardmässig mit sich bringt.
+Abbildung&nbsp;3: Ein Image-Texture-Node, der mit einem Texture-Coordinate- und einem Mapping-Node verbunden ist.
 </figcaption>
 </figure>
 </div>
-<section id="d-viewport" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="d-viewport">3D Viewport</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>«General» Edito-ren</p>
-</div></div><p>Der 3D-Viewport stellt die bearbeiteten Szenen und die dazugehörigen 3D-Objekte dar. Er bietet die Möglichkeit zur direkten Interaktion mit diesen Objekten und ist für das Modellieren von Objekten essenziell. Bei der Arbeit mit 3D-Objekten ist es der wichtigste Editor.</p>
-</section>
-<section id="image-editor" class="level3">
-<h3 class="anchored" data-anchor-id="image-editor">Image Editor</h3>
-<p>Anhand des Image-Editors können 2D-Grafiken betrachtet und bearbeitet werden. Gerenderte Bilder werden ebenfalls in diesem Editor angezeigt.</p>
-</section>
-<section id="uv-editor" class="level3">
-<h3 class="anchored" data-anchor-id="uv-editor">UV Editor</h3>
-<p>Der UV-Editor wird verwendet, um den Flächen von Objekten eine bestimmte Position auf einer Textur (sogenannte UVs) zuzuweisen oder dessen Zuweisung zu betrachten.</p>
-</section>
-<section id="compositor" class="level3">
-<h3 class="anchored" data-anchor-id="compositor">Compositor</h3>
-<p>Mithilfe des Compositors lassen sich Bilder, welche beim Rendern erstellt werden, nachträglichen Bearbeitungen unterziehen. Auch externe Bilder können hier bearbeitet werden. Die Bearbeitung erfolgt mittels einer visuellen Programmiersprache.</p>
-</section>
-<section id="texture-node-editor" class="level3">
-<h3 class="anchored" data-anchor-id="texture-node-editor">Texture Node Editor</h3>
-<p>Mithilfe des Texture-Node-Editors können Texturen anhand einer visuellen Programmiersprache erstellt werden. Dieser Editor wird allerdings in Zukunft durch andere Bearbeitungsoptionen ersetzt.</p>
-</section>
-<section id="geometry-node-editor" class="level3">
-<h3 class="anchored" data-anchor-id="geometry-node-editor">Geometry Node Editor</h3>
-<p>Der Geometry-Node-Editor ermöglicht das Bearbeiten von Objekten mittels einer visuellen Programmiersprache. Innerhalb dieses Editors erfolgt dabei die Programmierung der geometrischen Figuren, während die Darstellung der Figuren im 3D-Viewport erfolgt. Bei den Geometry Nodes handelt es sich um eine neue Funktion von Blender.</p>
-</section>
-<section id="shader-editor" class="level3">
-<h3 class="anchored" data-anchor-id="shader-editor">Shader Editor</h3>
-<p>Mithilfe des Shader-Editors können die Materialien, welche einem dreidimensionalen Objekt zugewiesen sind, bearbeitet werden. Dadurch lässt sich bearbeiten, wie die Oberfläche eines Objektes aussieht. Die Bearbeitung erfolgt hier mittels einer visuellen Programmiersprache. Innerhalb dieses Editors werden lediglich die Einstellungen für die Materialien gemacht. Um die Auswirkungen der Materialien zu sehen, wird der 3D-Viewport verwendet.</p>
-</section>
-<section id="video-sequencer" class="level3">
-<h3 class="anchored" data-anchor-id="video-sequencer">Video Sequencer</h3>
-<p>Mithilfe des Video-Sequencers können Videoaufnahmen bearbeitet werden. Dieser Editor verfügt zusätzlich über eine Vorschau-Option, mit der sich die Videos direkt betrachten lassen.</p>
-</section>
-<section id="movie-clip-editor" class="level3">
-<h3 class="anchored" data-anchor-id="movie-clip-editor">Movie Clip Editor</h3>
-<p>Der Movie-Clip-Editor ermöglicht das Erfassen von Bewegungen in Filmen, sodass diese Bewegungen beispielsweise auch auf 3D-Objekte angewendet werden können. Zudem lassen sich hier auch Videos maskieren.</p>
-</section>
-<section id="dope-sheet" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="dope-sheet">Dope Sheet</h3>
+<p>Zuordnungspunkte der Texturen bewegen</p>
+</div></div><p>Durch den Mapping-Node ist es nun möglich, die Darstellung der Textur auf dem Objekt anzupassen. Durch eine Veränderung der Werte im Bereich «<em>Location</em>» kann die Textur etwa verschoben werden. Genau genommen wird dabei nicht die Textur verschoben, sondern die Zuordnungspunkte (z.B. UVs), auf denen die Textur dargestellt wird. Hinsichtlich der Z-Achse zeigt sich dabei kein Unterschied, da diese auf dem zweidimensionalen Zuordnungssystem nicht berücksichtigt wird.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Editoren für Animationen</p>
-</div></div><p>Das Dope-Sheet stellt einzelne Animationspunkte eines Projektes in einem zeitlichen Ablauf tabellarisch dar. Dies basiert auf der früher angewendeten Planung von handgezeichneten Animationen.</p>
+<p>Skalierung und Rotation des Zuordnungsbereichs</p>
+</div></div><p>Mittels des Bereichs «<em>Rotation</em>» werden die Zuordnungspunkte rotiert und mittels des Bereichs «<em>Scale</em>» werden die Zuordnungsbereiche skaliert. Eine Skalierung um den Wert 2 führt dazu, dass die Zuordnungspunkte doppelt so gross über die Textur erstreckt werden. Als Folge erscheinen die Objekte und Muster auf der Textur kleiner auf dem Objekt. Wenn die Muster der Textur einen grösseren Bereich auf dem Objekt einnehmen sollen, muss ein Wert kleiner als 1 eingestellt werden. Dies führt dazu, dass der Zuordnungsbereich verkleinert wird und somit die Muster grösser in diesem Bereich erscheinen.</p>
 </section>
-<section id="timeline" class="level3">
-<h3 class="anchored" data-anchor-id="timeline">Timeline</h3>
-<p>Die Timeline stellt einen zeitlichen Verlauf von Animationen dar. Für die ausgewählten Objekte wird hier durch Punkte dargestellt, wann eine Animation im Zeitstrang starten oder enden soll. Zudem befindet sich hier auch eine Schaltfläche, um Animationen abspielen zu lassen.</p>
-</section>
-<section id="graph-editor" class="level3">
-<h3 class="anchored" data-anchor-id="graph-editor">Graph Editor</h3>
-<p>Mittels des Graph-Editors können Animationen über die Zeit hinweg verfeinert werden. Hierfür werden die einzelnen Animationen mittels Grafen dargestellt. Durch eine Veränderung dieser Grafen wird die Animation verfeinert.</p>
-</section>
-<section id="drivers" class="level3">
-<h3 class="anchored" data-anchor-id="drivers">Drivers</h3>
-<p>Der Driver-Editor ermöglicht es, Animationen gezielt zu steuern. Dabei können die Eigenschaften eines Objektes verwendet werden, um ein anderes Objekt zu steuern.</p>
-</section>
-<section id="nonlinear-animation" class="level3">
-<h3 class="anchored" data-anchor-id="nonlinear-animation">Nonlinear Animation</h3>
-<p>Mittels des Editors für nonlineare Animationen können Animationen ausserhalb eines linearen Ablaufes gesteuert werden. Dies kommt etwa bei komplexeren Veränderungen von Szenen zum Einsatz.</p>
-</section>
-<section id="text-editor" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="text-editor">Text Editor</h3>
+<section id="schnelleres-hinzufügen-von-image-texture-nodes" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="schnelleres-hinzufügen-von-image-texture-nodes">Schnelleres Hinzufügen von Image-Texture-Nodes</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Editoren für Programmier-Skripte</p>
-</div></div><p>Im Text-Editor können Textdokumente eingesehen und erstellt werden. Diese Textdokumente können auch verwendet werden, um mittels der Programmiersprache Python Funktionen für Blender zu verfassen. Zudem können im Text-Editor auch direkt Programmfunktionen in Textdokumenten ausgeführt werden.</p>
-</section>
-<section id="python-console" class="level3">
-<h3 class="anchored" data-anchor-id="python-console">Python Console</h3>
-<p>Anhand der Python-Konsole lassen sich Codes in der Programmiersprache von Python eingeben. Blender führt diese Codes anschliessend aus.</p>
-</section>
-<section id="info" class="level3">
-<h3 class="anchored" data-anchor-id="info">Info</h3>
-<p>Im Info-Editor werden durchgeführte Aktionen in der Python-Programmiersprache nacheinander aufgelistet. Hier lassen sich auch Fehlermeldungen und Warnungen nachträglich einsehen.</p>
-</section>
-<section id="outliner" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="outliner">Outliner</h3>
+<p>Node-Verbindungen erstellen als zentraler Bestandteil des Texturierens</p>
+</div></div><p>Die soeben aufgezeigte Verbindung von Nodes ist essenziell für das Hinzufügen von Texturen. Deshalb besteht ein grösserer Teil des Texturierens aus dem Hinzufügen der Nodes, wie gerade dargestellt. Wäre es nicht praktisch, wenn mittels eines einzelnen Klicks diese Nodes direkt hinzugefügt werden könnten?</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>«Data»-Editoren</p>
-</div></div><p>Im Outliner werden alle Daten, welche sich in einer Blender-Datei befinden, aufgelistet. Hier lassen sich Objekte innerhalb einer Szene auswählen oder in Ordnerstrukturen (sogenannten Collections) anordnen und gruppieren.</p>
-</section>
-<section id="properties" class="level3">
-<h3 class="anchored" data-anchor-id="properties">Properties</h3>
-<p>Im Properties Editor lassen sich eine Reihe von Einstellungen machen. Es umfasst neben Einstellungen zu einem aktuell ausgewählten Objekt auch Einstellungen zum Rendern, zur Szenengestaltung oder zu physikalischen Simulationen.</p>
-</section>
-<section id="file-browser" class="level3">
-<h3 class="anchored" data-anchor-id="file-browser">File Browser</h3>
-<p>Mithilfe des File-Browsers lassen sich Dateien auf dem Computer darstellen und suchen. Dadurch können Dokumente direkt in die Szene hineingezogen werden, ohne dass Blender minimiert werden muss. Zudem können hier auch Dateien abgespeichert werden.</p>
-</section>
-<section id="spreadsheet" class="level3">
-<h3 class="anchored" data-anchor-id="spreadsheet">Spreadsheet</h3>
-<p>Mithilfe des Spreadsheets lassen sich alle Datenpunkte eines Objektes mitsamt deren Positionen in der 3D-Welt angeben. Nebst den Punkten können auch die Positionen der verschiedenen Kanten und Flächen von Objekten angezeigt werden.</p>
-</section>
-<section id="preferences" class="level3">
-<h3 class="anchored" data-anchor-id="preferences">Preferences</h3>
-<p>Unter den Preferences lassen sich die Einstellungen von Blender bearbeiten. Die Preferences können auch unter «<em>Edit | Preferences</em>» geöffnet werden.</p>
-</section>
-</section>
-<section id="vorgefertigte-editor-anordnungen" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="vorgefertigte-editor-anordnungen">Vorgefertigte Editor-Anordnungen</h2>
+<p>Node-Wrangler-Addon aktivieren</p>
+</div></div><p>Dank einem Add-on, welches direkt mit Blender mitgeliefert wird, ist dies sehr leicht möglich. Es handelt sich dabei um das Node-Wrangler-Add-on. Um dieses zu aktivieren, müssen die Einstellungen aufgerufen werden (<em>Edit | Preferences</em>) und darin auf der linken Seite der Reiter «<em>Add-ons</em>» ausgewählt werden. Im Suchfeld kann anschliessend nach «<em>Node Wrangler</em>» gesucht werden. Anschliessend müsste die Zeile «<em>Node: Node Wrangler</em>» angezeigt werden. Durch das Aktivieren des Kontrollkastens am Zeilenanfang wird das Add-on aktiviert, sodass das Einstellungsfenster bereits wieder geschlossen werden kann.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_23/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Aktiviertes Node-Wrangler-Add-on.
+</figcaption>
+</figure>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Schnelle Auswahl von Editoren mittels Editor-Anordnungen</p>
-</div></div><p>In der Menüleiste sind für verschiedene Arbeitsschritte bei der 3D-Modellierung bereits vorgefertigte Ansichtsoptionen verfügbar. Durch einen Klick auf den Reiter «<em>Texture Paint</em>» wird beispielsweise eine Anordnung gezeigt, welche ideal dafür ist, um ein Objekt mit einer Textur zu bemalen. In diesem Falle wird beispielsweise nebst dem 3D-Viewport auch der Image Editor geöffnet. Mittels der Registerkarte «+» können zudem weitere Editor-Anordnungen basierend auf einer Vorlage für die Schnellauswahl hinzugefügt werden.</p>
-</section>
-<section id="neuanordnen-der-editor-areale" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="neuanordnen-der-editor-areale">Neuanordnen der Editor-Areale</h2>
+<p>Vorlage für Image-Textures hinzufügen</p>
+</div></div><p>Wenn nun ein Node ausgewählt wird, indem er angeklickt wird, kann die Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> gedrückt werden. Danach wird automatisch ein Texture-Coordinate-Node, verbunden mit einem Mapping-Node und dieser wiederum verbunden mit einem Image-Texture-Node, hinzugefügt und mit dem ersten freien Input des ausgewählten Nodes verbunden. Dies erspart das Suchen und Anordnen der einzelnen Komponenten.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Grösse der Edito-ren verändern</p>
-</div></div><p>Die einzelnen Editor-Fenster können nicht nur beliebig ausgetauscht werden, sondern auch nach eigenem Belieben vergrössert oder verkleinert werden. In den Abgrenzungsbereichen zwischen den Fenstern verändert sich der Mauszeiger. Von dort aus lassen sich die Editor-Areale durch Hin- und Herziehen vergrössern oder verkleinern.</p>
+<p>Bilder direkt in den Shader-Editor hineinziehen</p>
+</div></div><p>Weiterhin ist es zudem möglich, dass Bilddateien direkt vom Desktop oder aus Ordnern in den Shader-Editor hineingezogen werden. Diese Bilddateien werden anschliessend dem aktuell bearbeiteten Material als Image-Texture-Node hinzugefügt, müssen allerdings noch mit dem entsprechenden Shader verbunden werden. Wenn das Node-Wrangler-Add-on aktiviert ist, können diesem Image Texture-Node mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> zudem ein Texture-Coordinate-Node und ein Mapping-Node hinzugefügt werden.</p>
+<div class="rememberbox">
+<div class="rememberbox-header">
+<div class="rememberbox-icon">
 
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Neue Editoren öffnen</p>
-</div></div><p>In den Ecken der einzelnen Editor-Fenster gibt es zudem die Möglichkeit, durch Ziehen der Ecke in eine Richtung das Fenster in zwei Editoren aufzuteilen. Wenn dabei gleichzeitig die <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste gedrückt wird, wird derselbe Editor in einem neuen, einzelnen Fenster geöffnet.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Editor-Areal schliessen</p>
-</div></div><p>Um ein Editor-Fenster zu schliessen, wird jeweils ein anderes Editor-Fenster über das zu schliessende Fenster gezogen. Dadurch werden die beiden Fenster verbunden. Um zwei Fenster zu verbinden, wird eine der beiden Ecken, welche sich zwischen den beiden Fenstern befindet, ausgewählt und das zu behaltende Fenster über das zu entfernende Fenster gezogen. Dies ist manchmal etwas knifflig, da die Aktion ähnlich zum Öffnen von neuen Fenstern ist.</p>
+</div>
+<p>Merke…</p>
+</div>
+<div class="rememberbox-body">
+<p>Texturen werden mit einem Mapping- und einem Texture-Coordinate-Node versehen, damit die Texturen über den Mapping-Node angepasst werden können.</p>
+</div>
+</div>
 <div class="exercisebox">
 <div class="exercisebox-header">
 <div class="exercisebox-icon">
 
 </div>
-<p>Übung 1: Editor-Auswahl</p>
+<p>Übung 14: Textur zuweisen</p>
 </div>
 <div class="exercisebox-body">
-<p><strong>Übung 1.1</strong></p>
-<p>Ordnen Sie die Arbeitsoberfläche entsprechend der nachfolgenden Abbildung an.</p>
-<p><strong>Übung 1.2</strong></p>
-<p>Ordnen Sie die Arbeitsoberfläche entsprechend der nachfolgenden Abbildung an.</p>
+<p><strong>Übung 14.1</strong></p>
+<p>Fügen Sie die Textur «Rocks024S_4K_Color.jpg» der Base-Color eines Materials hinzu, welches Sie dem Standardwürfel zugewiesen haben.</p>
 </div>
 </div>
 

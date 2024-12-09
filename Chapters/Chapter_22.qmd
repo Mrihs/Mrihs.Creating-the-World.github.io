@@ -61,8 +61,6 @@ UVs werden mit neuem Objekt erstellt
 
 Jedes neu hinzugefügte Objekt in Blender wird bereits mit einem UV-Mapping erstellt. Das heisst, ein neu hinzugefügter Würfel beinhaltet bereits das standardmässige UV-Mapping, welches bislang dargestellt wurde. Auch andere Mesh-Formen werden standardmässig mit ihren UV-Mappings erstellt. Abbildung 7 zeigt die Mesh-Primitives in ihren Default-Einstellungen inklusive einer auf sie angewendeten Textur und darunter das entsprechende Mapping dieser Texturen.
 
-
-
 ::: column-margin
 UV-Unwrapping
 :::
@@ -75,18 +73,18 @@ Wenn Objekte im Edit-Mode bearbeitet werden und komplexere Formen annehmen, kann
 
 Das UV-Unwrapping erfolgt im Edit-Mode. Dabei werden die Faces, bei denen das UV-Unwrapping erfolgen soll, ausgewählt und anschliessend die Taste gedrückt. Beim Mauszeiger erscheint anschliessend das «*UV Mapping*»-Menü, bei dem aus verschiedenen Optionen zum Unwrapping ausgewählt werden kann. Diese Optionen sind:
 
--   «**Unwrap**»: Dabei wird das Mesh auf eine zweidimensionale Fläche projiziert. Hierfür werden auch manuell gesetzte Grenzen in Texturen berücksichtigt.
--   «**Smart UV Project**»: Die UVs werden basierend auf den Winkeln zwischen Faces erstellt und separiert.
--   «**Lightmap Pack**»: Hierbei werden UVs erstellt, welche für Lightmaps besonders geeignet sind, weil die UVs so angeordnet werden, dass möglichst die gesamte Fläche der Textur verwendet wird. Bei den Lightmaps handelt es sich dabei um Texturen, welche Informationen über die Beleuchtung beinhalten.
--   «**Follow Active Quads**»: Die aktiven Quads werden als Grundlage für die UV-Erstellung verwendet und ausgehend von den Loops, welche diese Quads bilden, werden die UVs erstellt.
--   «**Cube Projection**»: Das Unwrapping erfolgt ausgehend von der Grundform eines Würfels.
--   «**Cylinder Projection**»: Das Unwrapping erfolgt ausgehend von einem Zylinder.
--   «**Sphere Projection**»: Das Unwrapping erfolgt ausgehend von einer Kugel.
--   «**Project from View**»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D Viewport-Editor.
--   «**Project from View (Bounds)**»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D-Viewport-Editor, wobei die Anordnung der UVs bis zu den Grenzen der Textur gestreckt werden.
--   «**Mark Seam**»: Ein Seam wird hinzugefügt. Dabei handelt es sich um manuell gesetzte Schnitte im UV-Mapping.
--   «**Clear Seam**»: Ein Seam wird entfernt.
--   «**Reset**»: Das UV-Mapping wird zurückgesetzt, sodass alle Faces den gesamten UV-Raum ausfüllen und somit dieselbe Grösse innehaben.
+-   «***Unwrap***»: Dabei wird das Mesh auf eine zweidimensionale Fläche projiziert. Hierfür werden auch manuell gesetzte Grenzen in Texturen berücksichtigt.
+-   «***Smart UV Project***»: Die UVs werden basierend auf den Winkeln zwischen Faces erstellt und separiert.
+-   «***Lightmap Pack***»: Hierbei werden UVs erstellt, welche für Lightmaps besonders geeignet sind, weil die UVs so angeordnet werden, dass möglichst die gesamte Fläche der Textur verwendet wird. Bei den Lightmaps handelt es sich dabei um Texturen, welche Informationen über die Beleuchtung beinhalten.
+-   «***Follow Active Quads***»: Die aktiven Quads werden als Grundlage für die UV-Erstellung verwendet und ausgehend von den Loops, welche diese Quads bilden, werden die UVs erstellt.
+-   «***Cube Projection***»: Das Unwrapping erfolgt ausgehend von der Grundform eines Würfels.
+-   «***Cylinder Projection***»: Das Unwrapping erfolgt ausgehend von einem Zylinder.
+-   «***Sphere Projection***»: Das Unwrapping erfolgt ausgehend von einer Kugel.
+-   «***Project from View***»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D Viewport-Editor.
+-   «***Project from View (Bounds)***»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D-Viewport-Editor, wobei die Anordnung der UVs bis zu den Grenzen der Textur gestreckt werden.
+-   «***Mark Seam***»: Ein Seam wird hinzugefügt. Dabei handelt es sich um manuell gesetzte Schnitte im UV-Mapping.
+-   «***Clear Seam***»: Ein Seam wird entfernt.
+-   «***Reset***»: Das UV-Mapping wird zurückgesetzt, sodass alle Faces den gesamten UV-Raum ausfüllen und somit dieselbe Grösse innehaben.
 
 ![UV-Mapping-Menü.](Images/Chapter_22/UV-Unwrapping%20Menü.png){#fig-1_8 fig-align="left"}
 
@@ -118,22 +116,18 @@ Damit die gesetzten Seams auch in den UVs des Objektes berücksichtig werden, mu
 Auswahl von UVs im UV-Editor
 :::
 
-Im UV-Editor können die einzelnen UVs, aber auch die Vertices und Edges ausgewählt werden. Wenn der Edit-Mode aktiviert ist, erscheinen in der linken oberen Ecke des UV-Editors verschiedene Schaltflächen, mit denen die Auswahl bestimmt werden kann. Nebst der Auswahl von Vertices, Edges und Faces können im UV-Editor zudem auch ganze Inseln ausgewählt werden. Dabei werden alle UVs, die zusammen eine UV-Insel 
-bilden, gemeinsam ausgewählt. 
+Im UV-Editor können die einzelnen UVs, aber auch die Vertices und Edges ausgewählt werden. Wenn der Edit-Mode aktiviert ist, erscheinen in der linken oberen Ecke des UV-Editors verschiedene Schaltflächen, mit denen die Auswahl bestimmt werden kann. Nebst der Auswahl von Vertices, Edges und Faces können im UV-Editor zudem auch ganze Inseln ausgewählt werden. Dabei werden alle UVs, die zusammen eine UV-Insel bilden, gemeinsam ausgewählt.
 
-![Select-Modes für die Auwahl von UVs.](Images/Chapter_22/Icons_UV_Editor_Selections.png){#fig-1_8 fig-align="left"}
+![Select-Modes für die Auwahl von UVs.](Images/Chapter_22/Icons_UV_Editor_Selections.png){fig-align="left"}
 
 ::: column-margin
 UVs im UV-Editor anpassen
 :::
 
-Im UV-Editor ist es zudem möglich, die Platzierung der UVs zu verändern. Hierfür werden die entsprechenden UVs im UV-Editor ausgewählt. Anschliessend können diese mittels der Taste {{< kbd G >}} bewegt, mittels der Taste {{< kbd S >}} skaliert und mittels der Taste {{< kbd R >}} rotiert werden. Dadurch können die UVs 
-auch entsprechend den Bedürfnissen in einem Projekt angepasst werden. 
+Im UV-Editor ist es zudem möglich, die Platzierung der UVs zu verändern. Hierfür werden die entsprechenden UVs im UV-Editor ausgewählt. Anschliessend können diese mittels der Taste {{< kbd G >}} bewegt, mittels der Taste {{< kbd S >}} skaliert und mittels der Taste {{< kbd R >}} rotiert werden. Dadurch können die UVs auch entsprechend den Bedürfnissen in einem Projekt angepasst werden.
 
 ::: column-margin
 Grösse der UVs
 :::
 
-Gerade bei komplexen Objekten mit vielen Details sind die UVs von grosser Bedeutung. Je grösser die UV ist, desto detailliertere Inhalte können innerhalb der dazugehörigen Faces dargestellt werden. Dementsprechend ist es sinnvoll, für Bereiche mit weniger benötigten Details kleinere UVs zu verwenden und für Bereiche, die mehr Details benötigen, grössere UVs zu verwenden. Gerade wenn 
-mittels Blender eigene Texturen erstellt werden, wird dieses Vorgehen relevant. Für die nächsten Kapitel muss allerdings noch nicht zu stark auf die Grössenverhältnisse der UVs geachtet werden.
-
+Gerade bei komplexen Objekten mit vielen Details sind die UVs von grosser Bedeutung. Je grösser die UV ist, desto detailliertere Inhalte können innerhalb der dazugehörigen Faces dargestellt werden. Dementsprechend ist es sinnvoll, für Bereiche mit weniger benötigten Details kleinere UVs zu verwenden und für Bereiche, die mehr Details benötigen, grössere UVs zu verwenden. Gerade wenn mittels Blender eigene Texturen erstellt werden, wird dieses Vorgehen relevant. Für die nächsten Kapitel muss allerdings noch nicht zu stark auf die Grössenverhältnisse der UVs geachtet werden.

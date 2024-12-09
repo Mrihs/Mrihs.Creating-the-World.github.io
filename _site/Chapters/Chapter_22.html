@@ -321,15 +321,27 @@ Abbildung&nbsp;3: Dasselbe Foto aus Abbildung 2, allerdings mit einer kleineren 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>UV-Editor</p>
 </div></div><p>Um die UVs eines Objektes in Blender zu betrachten, wird ein neuer Editor benötigt, der neben dem 3D-Viewport-Editor geöffnet wird – der UV-Editor. Hierfür muss ein neuer Editor aus den Ecken des 3D-Viewport-Editors herausgezogen werden und dieser neue Editor auf den «<em>UV Editor</em>» umgestellt werden.</p>
-<p><img src="Images/Chapter_22/Icon_UV_Editor.png" id="fig-1_4" class="img-fluid quarto-figure quarto-figure-left anchored" alt="Icon für den UV-Editor."> ::: column-margin Alle UVs eines Objektes anzeigen lassen :::</p>
-<p>Auf den ersten Blick scheint der UV-Editor leer zu sein. Dies liegt daran, dass in diesem Editor jeweils die UVs der gerade ausgewählten Faces dargestellt werden. Um die UVs zu betrachten, muss deshalb im 3D-Viewport-Editor in den Edit-Mode gewechselt werden und alle Faces ausgewählt werden. Anschliessend werden im UV-Editor die UVs dieser Auswahl angezeigt, wie in Abbildung 5 dargestellt.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_22/Icon_UV_Editor.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Icon für den UV-Editor.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Alle UVs eines Objektes anzeigen lassen</p>
+</div></div><p>Auf den ersten Blick scheint der UV-Editor leer zu sein. Dies liegt daran, dass in diesem Editor jeweils die UVs der gerade ausgewählten Faces dargestellt werden. Um die UVs zu betrachten, muss deshalb im 3D-Viewport-Editor in den Edit-Mode gewechselt werden und alle Faces ausgewählt werden. Anschliessend werden im UV-Editor die UVs dieser Auswahl angezeigt, wie in Abbildung 5 dargestellt.</p>
 <div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="Images/Chapter_22/UV-Editor.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4: Der Standardwürfel und seine UVs im UV-Editor.
+Abbildung&nbsp;5: Der Standardwürfel und seine UVs im UV-Editor.
 </figcaption>
 </figure>
 </div>
@@ -343,7 +355,7 @@ Abbildung&nbsp;4: Der Standardwürfel und seine UVs im UV-Editor.
 <img src="Images/Chapter_22/UV with Seam.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5: Auswahl eines Faces des Standardwürfels, um seine dazugehörige UV zu ermitteln.
+Abbildung&nbsp;6: Auswahl eines Faces des Standardwürfels, um seine dazugehörige UV zu ermitteln.
 </figcaption>
 </figure>
 </div>
@@ -351,16 +363,6 @@ Abbildung&nbsp;5: Auswahl eines Faces des Standardwürfels, um seine dazugehöri
 <div class="no-row-height column-margin column-container"><div class="">
 <p>UVs werden mit neuem Objekt erstellt</p>
 </div></div><p>Jedes neu hinzugefügte Objekt in Blender wird bereits mit einem UV-Mapping erstellt. Das heisst, ein neu hinzugefügter Würfel beinhaltet bereits das standardmässige UV-Mapping, welches bislang dargestellt wurde. Auch andere Mesh-Formen werden standardmässig mit ihren UV-Mappings erstellt. Abbildung 7 zeigt die Mesh-Primitives in ihren Default-Einstellungen inklusive einer auf sie angewendeten Textur und darunter das entsprechende Mapping dieser Texturen.</p>
-<div id="fig-1_7" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_22/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6: Auswahl eines Faces des Standardwürfels, um seine dazugehörige UV zu ermitteln.
-</figcaption>
-</figure>
-</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>UV-Unwrapping</p>
@@ -370,18 +372,18 @@ Abbildung&nbsp;6: Auswahl eines Faces des Standardwürfels, um seine dazugehöri
 <p><kbd aria-hidden="true">U</kbd><span class="visually-hidden">U</span>, um Objekte zu unwrappen</p>
 </div></div><p>Das UV-Unwrapping erfolgt im Edit-Mode. Dabei werden die Faces, bei denen das UV-Unwrapping erfolgen soll, ausgewählt und anschliessend die Taste gedrückt. Beim Mauszeiger erscheint anschliessend das «<em>UV Mapping</em>»-Menü, bei dem aus verschiedenen Optionen zum Unwrapping ausgewählt werden kann. Diese Optionen sind:</p>
 <ul>
-<li>«<strong>Unwrap</strong>»: Dabei wird das Mesh auf eine zweidimensionale Fläche projiziert. Hierfür werden auch manuell gesetzte Grenzen in Texturen berücksichtigt.</li>
-<li>«<strong>Smart UV Project</strong>»: Die UVs werden basierend auf den Winkeln zwischen Faces erstellt und separiert.</li>
-<li>«<strong>Lightmap Pack</strong>»: Hierbei werden UVs erstellt, welche für Lightmaps besonders geeignet sind, weil die UVs so angeordnet werden, dass möglichst die gesamte Fläche der Textur verwendet wird. Bei den Lightmaps handelt es sich dabei um Texturen, welche Informationen über die Beleuchtung beinhalten.</li>
-<li>«<strong>Follow Active Quads</strong>»: Die aktiven Quads werden als Grundlage für die UV-Erstellung verwendet und ausgehend von den Loops, welche diese Quads bilden, werden die UVs erstellt.</li>
-<li>«<strong>Cube Projection</strong>»: Das Unwrapping erfolgt ausgehend von der Grundform eines Würfels.</li>
-<li>«<strong>Cylinder Projection</strong>»: Das Unwrapping erfolgt ausgehend von einem Zylinder.</li>
-<li>«<strong>Sphere Projection</strong>»: Das Unwrapping erfolgt ausgehend von einer Kugel.</li>
-<li>«<strong>Project from View</strong>»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D Viewport-Editor.</li>
-<li>«<strong>Project from View (Bounds)</strong>»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D-Viewport-Editor, wobei die Anordnung der UVs bis zu den Grenzen der Textur gestreckt werden.</li>
-<li>«<strong>Mark Seam</strong>»: Ein Seam wird hinzugefügt. Dabei handelt es sich um manuell gesetzte Schnitte im UV-Mapping.</li>
-<li>«<strong>Clear Seam</strong>»: Ein Seam wird entfernt.</li>
-<li>«<strong>Reset</strong>»: Das UV-Mapping wird zurückgesetzt, sodass alle Faces den gesamten UV-Raum ausfüllen und somit dieselbe Grösse innehaben.</li>
+<li>«<strong><em>Unwrap</em></strong>»: Dabei wird das Mesh auf eine zweidimensionale Fläche projiziert. Hierfür werden auch manuell gesetzte Grenzen in Texturen berücksichtigt.</li>
+<li>«<strong><em>Smart UV Project</em></strong>»: Die UVs werden basierend auf den Winkeln zwischen Faces erstellt und separiert.</li>
+<li>«<strong><em>Lightmap Pack</em></strong>»: Hierbei werden UVs erstellt, welche für Lightmaps besonders geeignet sind, weil die UVs so angeordnet werden, dass möglichst die gesamte Fläche der Textur verwendet wird. Bei den Lightmaps handelt es sich dabei um Texturen, welche Informationen über die Beleuchtung beinhalten.</li>
+<li>«<strong><em>Follow Active Quads</em></strong>»: Die aktiven Quads werden als Grundlage für die UV-Erstellung verwendet und ausgehend von den Loops, welche diese Quads bilden, werden die UVs erstellt.</li>
+<li>«<strong><em>Cube Projection</em></strong>»: Das Unwrapping erfolgt ausgehend von der Grundform eines Würfels.</li>
+<li>«<strong><em>Cylinder Projection</em></strong>»: Das Unwrapping erfolgt ausgehend von einem Zylinder.</li>
+<li>«<strong><em>Sphere Projection</em></strong>»: Das Unwrapping erfolgt ausgehend von einer Kugel.</li>
+<li>«<strong><em>Project from View</em></strong>»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D Viewport-Editor.</li>
+<li>«<strong><em>Project from View (Bounds)</em></strong>»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D-Viewport-Editor, wobei die Anordnung der UVs bis zu den Grenzen der Textur gestreckt werden.</li>
+<li>«<strong><em>Mark Seam</em></strong>»: Ein Seam wird hinzugefügt. Dabei handelt es sich um manuell gesetzte Schnitte im UV-Mapping.</li>
+<li>«<strong><em>Clear Seam</em></strong>»: Ein Seam wird entfernt.</li>
+<li>«<strong><em>Reset</em></strong>»: Das UV-Mapping wird zurückgesetzt, sodass alle Faces den gesamten UV-Raum ausfüllen und somit dieselbe Grösse innehaben.</li>
 </ul>
 <div id="fig-1_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
@@ -413,14 +415,10 @@ Abbildung&nbsp;7: UV-Mapping-Menü.
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Auswahl von UVs im UV-Editor</p>
 </div></div><p>Im UV-Editor können die einzelnen UVs, aber auch die Vertices und Edges ausgewählt werden. Wenn der Edit-Mode aktiviert ist, erscheinen in der linken oberen Ecke des UV-Editors verschiedene Schaltflächen, mit denen die Auswahl bestimmt werden kann. Nebst der Auswahl von Vertices, Edges und Faces können im UV-Editor zudem auch ganze Inseln ausgewählt werden. Dabei werden alle UVs, die zusammen eine UV-Insel bilden, gemeinsam ausgewählt.</p>
-<div id="fig-1_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_22/UV-Unwrapping Menü.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;8: UV-Mapping-Menü.
-</figcaption>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Images/Chapter_22/Icons_UV_Editor_Selections.png" class="img-fluid figure-img"></p>
+<figcaption>Select-Modes für die Auwahl von UVs.</figcaption>
 </figure>
 </div>
 

@@ -323,7 +323,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Metallic-Textur verfeinert die Color-Textur</p>
-</div></div><p>Die Metallic-Textur wird jeweils zusätzlich zur Color-Textur verwendet und mit dem Metallic-Input verbunden. Eine Textur, die sowohl aus Metall als auch aus Rost besteht, würde etwa an den Stellen, an denen Rost dargestellt wird, einen geringeren Metallic-Wert aufweisen. Abbildung 1zeigt links ein Beispiel einer solchen Color-Textur und rechts die dazugehörige Metallic-Textur, bei der rostige Anteile durch schwarze Anteile dargestellt werden (Bildquelle: <a href="https://ambientcg.com/view?id=Metal022" class="uri">https://ambientcg.com/view?id=Metal022</a>)</p>
+</div></div><p>Die Metallic-Textur wird jeweils zusätzlich zur Color-Textur verwendet und mit dem Metallic-Input verbunden. Eine Textur, die sowohl aus Metall als auch aus Rost besteht, würde etwa an den Stellen, an denen Rost dargestellt wird, einen geringeren Metallic-Wert aufweisen. Abbildung 1 zeigt links ein Beispiel einer solchen Color-Textur und rechts die dazugehörige Metallic-Textur, bei der rostige Anteile durch schwarze Anteile dargestellt werden (Bildquelle: <a href="https://ambientcg.com/view?id=Metal022" class="uri">https://ambientcg.com/view?id=Metal022</a>)</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -368,14 +368,14 @@ Abbildung&nbsp;2: Node-Anordnung, um mit einer Glossy-Textur umzugehen.
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Normal-Textur, um Unebenheiten im Objekt zu simulieren</p>
-</div></div><p>Die Normal-Texturen fallen visuell auf, da sie eine bizarr erscheinende blaue Verfärbung aufweisen, wie die Normal-Textur auf der rechten Seite der Abbildung 3 (Bildquelle: <a href="https://ambientcg.com/view?id=Rocks005" class="uri">https://ambientcg.com/view?id=Rocks005</a>) Mittels dieser Textur können minimale Unebenheiten in einem Objekt simuliert werden. Dabei stellt jede Farbe, die in diesem Bild auftritt, eine Achse dar, anhand derer die simulierten Unebenheiten berechnet werden. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «normal» oder «norm» versehen.</p>
+</div></div><p>Die Normal-Texturen fallen visuell auf, da sie eine bizarrerscheinende blaue Verfärbung aufweisen, wie die Normal-Textur auf der rechten Seite der Abbildung 3 (Bildquelle: <a href="https://ambientcg.com/view?id=Rocks005" class="uri">https://ambientcg.com/view?id=Rocks005</a>). Mittels dieser Textur können minimale Unebenheiten in einem Objekt simuliert werden. Dabei stellt jede Farbe, die in diesem Bild auftritt, eine Achse dar, anhand derer die simulierten Unebenheiten berechnet werden. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «normal» oder «norm» versehen.</p>
 <div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="Images/Chapter_26/Vgl. color und normal für PPP.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Node-Anordnung, um mit einer Glossy-Textur umzugehen.
+Abbildung&nbsp;3: Links eine Color-Textur, rechts die dazugehörige Normal-Textur.
 </figcaption>
 </figure>
 </div>
@@ -385,9 +385,9 @@ Abbildung&nbsp;3: Node-Anordnung, um mit einer Glossy-Textur umzugehen.
 </div></div><p>Bei einigen Datenbanken werden zwei verschiedene Arten von Normal-Texturen geliefert. Eine, welche jeweils die Endung «GL» innehat, und eine, welche jeweils die Endung «DX» innehat. Beide Arten stellen Normal-Texturen dar, jedoch agieren sie unterschiedlich, je nachdem, welche Programmierschnittstelle ihnen zugrunde liegt. Normal-Texturen mit der Endung «GL» können für Applikationen verwendet werden, welche auf «OpenGL» basieren – hierzu gehört Blender. Deshalb werden jeweils diese Normal-Texturen benötigt. Die Normal-Texturen mit der Endung «DX» beziehen sich auf Applikationen, die «DirectX» verwenden.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 35%">
-<col style="width: 31%">
-<col style="width: 33%">
+<col style="width: 19%">
+<col style="width: 17%">
+<col style="width: 62%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -404,13 +404,22 @@ Abbildung&nbsp;3: Node-Anordnung, um mit einer Glossy-Textur umzugehen.
 </tr>
 <tr class="even">
 <td><strong>Software</strong></td>
-<td>Blender Maya Unity</td>
-<td>3ds Max Substance Unreal Engine</td>
+<td><p>Blender</p>
+<p>Maya</p>
+<p>Unity</p></td>
+<td><p>3ds Max</p>
+<p>Substance</p>
+<p>Unreal Engine</p></td>
 </tr>
 <tr class="odd">
 <td><strong>Render-Engines</strong></td>
-<td>Cycles Eevee Redshift Arnold Octane</td>
-<td>V-Ray Corona (bei diesen kann allerdings auch OpenGL eingestellt werden)</td>
+<td><p>Cycles</p>
+<p>Eevee</p>
+<p>Redshift</p>
+<p>Arnold</p>
+<p>Octane</p></td>
+<td><p>V-Ray</p>
+<p>Corona (bei diesen kann allerdings auch OpenGL eingestellt werden)</p></td>
 </tr>
 </tbody>
 </table>
@@ -434,7 +443,7 @@ Abbildung&nbsp;4: Anordnung der Normal-Textur mit einem Bump-Node zwischen dem I
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Displacement-Textur, um grössere Unebenheiten zu emulieren oder zu erstellen</p>
-</div></div><p>Die Displacement-Textur funktioniert ähnlich wie die Normal-Textur. Sie wird ebenfalls für Unebenheiten im Material verwendet, allerdings für deutlich grössere Unebenheiten. Sie funktioniert wie die Roughness- und die Metallic-Textur auf einer SchwarzWeiss-Basis. Das heisst: Je heller ein Wert an einer Stelle ist, desto höher sollte die Unebenheit an dieser Stelle sein. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «displacement» oder «disp» versehen. Manchmal wird die Textur aber auch als Height-Textur bezeichnet und entsprechend mit der Endung «height» versehen.</p>
+</div></div><p>Die Displacement-Textur funktioniert ähnlich wie die Normal-Textur. Sie wird ebenfalls für Unebenheiten im Material verwendet, allerdings für deutlich grössere Unebenheiten. Sie funktioniert wie die Roughness- und die Metallic-Textur auf einer Schwarz-Weiss-Basis. Das heisst: Je heller ein Wert an einer Stelle ist, desto höher sollte die Unebenheit an dieser Stelle sein. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «displacement» oder «disp» versehen. Manchmal wird die Textur aber auch als Height-Textur bezeichnet und entsprechend mit der Endung «height» versehen.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Displacement-Textur wird über Displacement-Node mit dem Material-Output verbunden</p>
@@ -463,7 +472,7 @@ Abbildung&nbsp;5: Anordnung der Displacement-Textur mit einem Displacement-Node 
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Ambient-Occlusion-Textur verwenden</p>
-</div></div><p>Die Ambient-Occlusion-Textur wird selten bei der Texturierung verwendet. Wenn sie allerdings berücksichtigt werden soll, empfiehlt es sich, diese mit der Color-Textur zu kombinieren. Hierfür wird ein «MixRGB»-Node verwendet, welcher zwei Farben miteinander mischen kann. Dieser ist im «<em>Add</em>»-Menü unter «<em>Color | MixRGB</em>» zu finden. Anschliessend kann der Color-Output der Color-Textur mit dem ersten Color-Input («<em>Color1</em>») verbunden werden und der Color-Output der Ambient-Occlusion-Textur mit dem zweiten Color-Output («<em>Color2</em>»). Im Dropdown-Menü auf der Schaltfläche «<em>Mix</em>» sollte zudem die Option «<em>Multiply</em>» ausgewählt werden. Dadurch werden die Schattenanteile mit den Farbwerten multipliziert (unter der Einstellung «<em>Mix</em>» würden sich lediglich graduelle Abstufungen zwischen den beiden Texturen ergeben). Mithilfe des Reiters «<em>Fac</em>» kann anschliessend der Faktor definiert werden, mit dem die Schattenanteile auf die Grundfarbe multipliziert werden sollen. Der Color-Output des Mix-RGB-Nodes kann anschliessend mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden.</p>
+</div></div><p>Die Ambient-Occlusion-Textur wird selten bei der Texturierung verwendet. Wenn sie allerdings berücksichtigt werden soll, empfiehlt es sich, diese mit der Color-Textur zu kombinieren. Hierfür wird ein «<em>MixRGB</em>»-Node verwendet, welcher zwei Farben miteinander mischen kann. Dieser ist im «<em>Add</em>»-Menü unter «<em>Color | MixRGB</em>» zu finden. Anschliessend kann der Color-Output der Color-Textur mit dem ersten Color-Input («<em>Color1</em>») verbunden werden und der Color-Output der Ambient-Occlusion-Textur mit dem zweiten Color-Output («<em>Color2</em>»). Im Dropdown-Menü auf der Schaltfläche «<em>Mix</em>» sollte zudem die Option «<em>Multiply</em>» ausgewählt werden. Dadurch werden die Schattenanteile mit den Farbwerten multipliziert (unter der Einstellung «<em>Mix</em>» würden sich lediglich graduelle Abstufungen zwischen den beiden Texturen ergeben). Mithilfe des Reiters «<em>Fac</em>» kann anschliessend der Faktor definiert werden, mit dem die Schattenanteile auf die Grundfarbe multipliziert werden sollen. Der Color-Output des Mix-RGB-Nodes kann anschliessend mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden.</p>
 <div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">

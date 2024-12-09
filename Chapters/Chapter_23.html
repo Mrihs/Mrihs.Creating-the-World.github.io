@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Creating the World: Grafik, Design &amp; Animation (inkl. Einführung in die 3D Modelierung mit Blender) – Creating the World</title>
+<title>23. Texturen zu einem Material hinzufügen – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-05798b36db35dfecaedaec0bbed5404c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-05798b36db35dfecaedaec0bbed5404c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,7 +79,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Creating the World</span>
     </a>
   </div>
@@ -88,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./Sites/Overview.html"> <i class="bi bi-calendar-range" role="img">
+    <a class="nav-link" href="../Sites/Overview.html"> <i class="bi bi-calendar-range" role="img">
 </i> 
 <span class="menu-text">Kursübersicht</span></a>
   </li>  
@@ -100,11 +102,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-cheatsheets">    
         <li>
-    <a class="dropdown-item" href="./Cheatsheets/cheatsheet_keys.pdf">
+    <a class="dropdown-item" href="../Cheatsheets/cheatsheet_keys.pdf">
  <span class="dropdown-text">Tastenkombinationen</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Cheatsheets/cheatsheet_shading.pdf">
+    <a class="dropdown-item" href="../Cheatsheets/cheatsheet_shading.pdf">
  <span class="dropdown-text">Shading</span></a>
   </li>  
     </ul>
@@ -131,101 +133,101 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-skript">    
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_1.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_1.html">
  <span class="dropdown-text">Kapitel 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_2.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_2.html">
  <span class="dropdown-text">Kapitel 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_3.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_3.html">
  <span class="dropdown-text">Kapitel 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_4.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_4.html">
  <span class="dropdown-text">Kapitel 4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_5.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_5.html">
  <span class="dropdown-text">Kapitel 5</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_6.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_6.html">
  <span class="dropdown-text">Kapitel 6</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_7.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_7.html">
  <span class="dropdown-text">Kapitel 7</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_8.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_8.html">
  <span class="dropdown-text">Kapitel 8</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_9.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_9.html">
  <span class="dropdown-text">Kapitel 9</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_10.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_10.html">
  <span class="dropdown-text">Kapitel 10</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_11.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_11.html">
  <span class="dropdown-text">Kapitel 11</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_12.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_12.html">
  <span class="dropdown-text">Kapitel 12</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_13.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_13.html">
  <span class="dropdown-text">Kapitel 13</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_14.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_14.html">
  <span class="dropdown-text">Kapitel 14</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_15.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_15.html">
  <span class="dropdown-text">Kapitel 15</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_16.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_16.html">
  <span class="dropdown-text">Kapitel 16</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_17.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_17.html">
  <span class="dropdown-text">Kapitel 17</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_18.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_18.html">
  <span class="dropdown-text">Kapitel 18</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_19.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_19.html">
  <span class="dropdown-text">Kapitel 19</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_20.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_20.html">
  <span class="dropdown-text">Kapitel 20</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_21.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_21.html">
  <span class="dropdown-text">Kapitel 21</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_22.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_22.html">
  <span class="dropdown-text">Kapitel 22</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Chapters/Chapter_23.html">
+    <a class="dropdown-item" href="../Chapters/Chapter_23.html">
  <span class="dropdown-text">Kapitel 23</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> <i class="bi bi-info-circle" role="img">
+    <a class="nav-link" href="../about.html"> <i class="bi bi-info-circle" role="img">
 </i> 
 <span class="menu-text">Über</span></a>
   </li>  
@@ -245,16 +247,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#diese-website-befindet-sich-im-aufbau" id="toc-diese-website-befindet-sich-im-aufbau" class="nav-link active" data-scroll-target="#diese-website-befindet-sich-im-aufbau">Diese Website befindet sich im Aufbau…</a></li>
+  <li><a href="#texture-nodes-hinzufügen" id="toc-texture-nodes-hinzufügen" class="nav-link active" data-scroll-target="#texture-nodes-hinzufügen">Texture-Nodes hinzufügen</a></li>
+  <li><a href="#texture-mapping-hinzufügen" id="toc-texture-mapping-hinzufügen" class="nav-link" data-scroll-target="#texture-mapping-hinzufügen">Texture-Mapping hinzufügen</a></li>
+  <li><a href="#schnelleres-hinzufügen-von-image-texture-nodes" id="toc-schnelleres-hinzufügen-von-image-texture-nodes" class="nav-link" data-scroll-target="#schnelleres-hinzufügen-von-image-texture-nodes">Schnelleres Hinzufügen von Image-Texture-Nodes</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Creating the World: Grafik, Design &amp; Animation (inkl. Einführung in die 3D Modelierung mit Blender)</h1>
+<h1 class="title">23. Texturen zu einem Material hinzufügen</h1>
 </div>
 
 
@@ -271,10 +275,162 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="diese-website-befindet-sich-im-aufbau" class="level2">
-<h2 class="anchored" data-anchor-id="diese-website-befindet-sich-im-aufbau">Diese Website befindet sich im Aufbau…</h2>
-<p>Auf dieser Website werden die Lenrmaterialien der Lehrveranstaltung “Creating the World: Grafik, Design &amp; Animation (inkl. Einführung in die 3D Modelierung mit Blender) als Open Education Ressource aufbereitet.</p>
-<p>Weitere Informationen hierzu folgen…</p>
+<section id="texture-nodes-hinzufügen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="texture-nodes-hinzufügen">Texture-Nodes hinzufügen</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Texturen als Teil eines Materials</p>
+</div></div><p>Bislang wurde betrachtet, wie die dreidimensionale Struktur mittels UVs auf Texturen angewendet wird. Allerdings wurde noch nicht besprochen, wie die Texturen auf dem Objekt erscheinen. Damit die Texturen auf ein Objekt angewendet werden, müssen sie Teil eines Materials sein, welches anschliessend auf das Objekt angewendet wird. Deshalb wird erneut der Shader-Editor benötigt, wenn die Texturen einem Objekt hinzugefügt werden sollen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Textur muss mittels Nodes verbunden werden</p>
+</div></div><p>Wenn die Base-Color des Principled-BSDF-Shaders keine einheitliche Farbe darstellen soll, muss der Base-Color eine Textur zugewiesen werden. In der Farbbox der Base-Color besteht keine Möglichkeit, eine Textur auszuwählen. Stattdessen muss eine Textur mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden. Hierfür wird ein neuer Node im Shader-Editor benötigt, welcher die Textur beinhaltet. Dieser wird anschliessend mit der Base-Color verbunden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Node hinzufügen</p>
+</div></div><p>Um einen neuen Node hinzuzufügen, wird die Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> verwendet. Dadurch öffnet sich beim Mauszeiger das «<em>Add</em>»-Menü für den Shader-Editor. Anschliessend kann über das Menü der entsprechende Node gesucht werden. Die Nodes sind in unterschiedliche Kategorien aufgeteilt, die zu einem späteren Zeitpunkt ausführlich beschrieben werden. Statt den entsprechenden Node durch die Kategorien auszuwählen, kann auch die Suchleiste zuoberst im Menü ausgewählt werden und nach dem entsprechenden Node gesucht werden.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_23/Anordnung Texture Node.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Image-Texture-Node, der neben dem Principled-BSDF-Shader hinzugefügt wurde.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Texture-Node hinzufügen</p>
+</div></div><p>Um eine Textur hinzuzufügen, wird der Node «<em>Image Texture</em>» benötigt. Dieser kann unter «<em>Textures | Image Texture</em>» hinzufügefügt werden oder über die Suchleiste gesucht werden. Dadurch erscheint der Image-Texture-Node, welcher mittels eines Mausklicks platziert werden kann. Da der Output des Image-Texture-Nodes anschliessend mit dem Input des Principled-BSDF-Shaders verbunden wird, sollte der Image-Texture-Node links vom Principled-BSDF-Shader platziert werden, wie in Abbildung 1 dargestellt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Methoden, um dem Image-Texture-Node ein Bild zuzuweisen</p>
+</div></div><p>Der Image-Texture-Node verfügt noch über keine Textur, sondern stellt lediglich einen Platzhalter dar. Um ihm eine Textur hinzuzufügen, bestehen folgende Möglichkeiten im Image-Texture-Node:</p>
+<ul>
+<li>«<strong><em>New</em></strong>»: Damit wird eine neue, einfarbige Textur erstellt, welche anschliessend in Blender bearbeitet und als Bilddatei auf dem Rechner abgespeichert werden kann.</li>
+<li>«<strong><em>Open</em></strong>»: Damit lässt sich eine bestehende Bilddatei auf dem Rechner auswählen und dem Image-Texture-Node hinzufügen. Hierfür öffnet sich ein Browser-Fenster, in dem zum entsprechenden Speicherort der Textur navigiert und die entsprechende Bilddatei ausgewählt werden kann.</li>
+<li><strong>Dropdown-Menü auf der linken Seite</strong>: Damit lassen sich bereits in Blender geladene Bilddateien auswählen und dem Image-Texture-Node zuweisen.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Hinzugefügte Textur im Image-Texture-Node</p>
+</div></div><p>Sobald dem Image-Texture-Node eine Textur zugewiesen wurde, wird der Name dieser Textur anstelle der Auswahloptionen «<em>New</em>» und «<em>Open</em>» angezeigt. Mittels des Ordner-Icons neben dem Namen kann eine andere Textur geöffnet und dem Image-Texture-Node hinzugefügt werden, und mittels des Kreuz-Icons kann die Textur aus dem Image-Texture-Node entfernt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Image-Texture-Node verbinden</p>
+</div></div><p>Der Image-Texture-Node beinhaltet nun die geladene Bilddatei als Information, die er mittels des Outputs «<em>Color</em>» weiterleiten kann. Diese Farbe stellt nun keine einheitliche Farbe mehr dar, sondern die Bilddatei. Der Color-Output des Image-Texture-Nodes kann nun mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden, wie in Abbildung 2 dargestellt. Dadurch verschwindet das Auswahlfeld, mit der eine Farbe für die Base-Color des Principled-BSDF-Shaders ausgewählt werden kann. Dies liegt daran, dass dieser Informationsparameter für die Farbe bereits belegt ist, nämlich durch die Textur, welche mit dem Input der Base-Color verbunden wurde. Wird das Objekt, zu dem das Material gehört, nun im 3D-Viewport-Editor in der Material-Preview betrachtet, sollte die Textur des Objektes nun zu erkennen sein.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_23/Texture_Node_connecte.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Verbindung zwischen einem Image-Texture-Node und der Base-Color des Principled-BSDF-Shaders.
+</figcaption>
+</figure>
+</div>
+<div class="rememberbox">
+<div class="rememberbox-header">
+<div class="rememberbox-icon">
+
+</div>
+<p>Merke…</p>
+</div>
+<div class="rememberbox-body">
+<p>Texturen werden jeweils auf Materialien angewendet.</p>
+<p>Um eine Textur einem Material hinzuzufügen, wird diese mit einem Image-Texture-Node dem Material hinzugefügt und über einen Faden mit dem farbgebenden Input des Shaders verbunden.</p>
+</div>
+</div>
+</section>
+<section id="texture-mapping-hinzufügen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="texture-mapping-hinzufügen">Texture-Mapping hinzufügen</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Mapping-Node</p>
+</div></div><p>Die Texturen, welche über den Image-Texture-Node mit dem Principled-BSDF-Shader verbunden werden, können auch variiert werden. So lassen sich die Positionen verschieben, rotieren und skalieren. Damit dies möglich ist, wird ein «<em>Mapping</em>»-Node benötigt. Dieser ist im Add-Menü unter «<em>Vector | Mapping</em>» auffindbar. Der Mapping-Node sollte dabei links vom Image-Texture-Node platziert werden, da der Vector-Output des Mapping-Nodes mit dem Vector-Input des Image-Texture-Nodes verbunden wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Texture-Coordinate-Node</p>
+</div></div><p>Durch die Verbindung des Mapping-Nodes mit dem Image-Texture-Node wird die Textur nicht mehr auf dem Objekt angezeigt. Dies liegt daran, dass der Mapping-Node keine Informationen darüber verfügt, wie die Texturen jeweils auf ein Objekt angewendet werden. Deshalb wird ein Node benötigt, welcher dem Mapping-Node diese Informationen übermittelt – nämlich der «<em>Texture Coordinate</em>»-Node. Der Texture-Coordinate-Node ist im «<em>Add</em>»-Menü jeweils unter «<em>Input | Texture Coordinate</em>» zu finden. Dieser Node sollte links vom Mapping-Node platziert werden, damit er anschliessend mit dem Vector-Input des Mapping-Nodes verbunden werden kann.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Outputs des Texture-Coordinate-Nodes</p>
+</div></div><p>Im Texture-Coordinate-Node gibt es sechs verschiedene Outputs, die mit dem Vector-Input des Mapping-Nodes verbunden werden können. Jeder dieser Outputs beschreibt eine andere Methode, wie die Texturen auf ein Objekt angewendet werden können. Wenn der entsprechende Output mit dem Vector-Input verbunden wird, wird diese Methode angewendet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Verbindung von Texture-Coordinate-und Mapping-Node</p>
+</div></div><p>Häufig werden die UVs verwendet, um das Mapping der Texturen auf das Objekt zu bestimmen. Dabei handelt es sich um die Standardoption, welche der Image-Texture-Node ohne den Mapping-Node durchführen würde. Somit wird in der Regel der UV-Output des Texture-Coordinate-Nodes mit dem Vector-Input des Mapping-Nodes verbunden und der Vector-Output des Mapping-Nodes mit dem Vector-Input des Image-Texture-Nodes, so wie in Abbildung 3. Durch diese Anordnung wird die Textur wieder auf dem Objekt sichtbar.</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_23/Texture_Node_Mapping.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Ein Image-Texture-Node, der mit einem Texture-Coordinate- und einem Mapping-Node verbunden ist.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Zuordnungspunkte der Texturen bewegen</p>
+</div></div><p>Durch den Mapping-Node ist es nun möglich, die Darstellung der Textur auf dem Objekt anzupassen. Durch eine Veränderung der Werte im Bereich «<em>Location</em>» kann die Textur etwa verschoben werden. Genau genommen wird dabei nicht die Textur verschoben, sondern die Zuordnungspunkte (z.B. UVs), auf denen die Textur dargestellt wird. Hinsichtlich der Z-Achse zeigt sich dabei kein Unterschied, da diese auf dem zweidimensionalen Zuordnungssystem nicht berücksichtigt wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Skalierung und Rotation des Zuordnungsbereichs</p>
+</div></div><p>Mittels des Bereichs «<em>Rotation</em>» werden die Zuordnungspunkte rotiert und mittels des Bereichs «<em>Scale</em>» werden die Zuordnungsbereiche skaliert. Eine Skalierung um den Wert 2 führt dazu, dass die Zuordnungspunkte doppelt so gross über die Textur erstreckt werden. Als Folge erscheinen die Objekte und Muster auf der Textur kleiner auf dem Objekt. Wenn die Muster der Textur einen grösseren Bereich auf dem Objekt einnehmen sollen, muss ein Wert kleiner als 1 eingestellt werden. Dies führt dazu, dass der Zuordnungsbereich verkleinert wird und somit die Muster grösser in diesem Bereich erscheinen.</p>
+</section>
+<section id="schnelleres-hinzufügen-von-image-texture-nodes" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="schnelleres-hinzufügen-von-image-texture-nodes">Schnelleres Hinzufügen von Image-Texture-Nodes</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Node-Verbindungen erstellen als zentraler Bestandteil des Texturierens</p>
+</div></div><p>Die soeben aufgezeigte Verbindung von Nodes ist essenziell für das Hinzufügen von Texturen. Deshalb besteht ein grösserer Teil des Texturierens aus dem Hinzufügen der Nodes, wie gerade dargestellt. Wäre es nicht praktisch, wenn mittels eines einzelnen Klicks diese Nodes direkt hinzugefügt werden könnten?</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Node-Wrangler-Addon aktivieren</p>
+</div></div><p>Dank einem Add-on, welches direkt mit Blender mitgeliefert wird, ist dies sehr leicht möglich. Es handelt sich dabei um das Node-Wrangler-Add-on. Um dieses zu aktivieren, müssen die Einstellungen aufgerufen werden (<em>Edit | Preferences</em>) und darin auf der linken Seite der Reiter «<em>Add-ons</em>» ausgewählt werden. Im Suchfeld kann anschliessend nach «<em>Node Wrangler</em>» gesucht werden. Anschliessend müsste die Zeile «<em>Node: Node Wrangler</em>» angezeigt werden. Durch das Aktivieren des Kontrollkastens am Zeilenanfang wird das Add-on aktiviert, sodass das Einstellungsfenster bereits wieder geschlossen werden kann.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_23/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Aktiviertes Node-Wrangler-Add-on.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Vorlage für Image-Textures hinzufügen</p>
+</div></div><p>Wenn nun ein Node ausgewählt wird, indem er angeklickt wird, kann die Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> gedrückt werden. Danach wird automatisch ein Texture-Coordinate-Node, verbunden mit einem Mapping-Node und dieser wiederum verbunden mit einem Image-Texture-Node, hinzugefügt und mit dem ersten freien Input des ausgewählten Nodes verbunden. Dies erspart das Suchen und Anordnen der einzelnen Komponenten.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bilder direkt in den Shader-Editor hineinziehen</p>
+</div></div><p>Weiterhin ist es zudem möglich, dass Bilddateien direkt vom Desktop oder aus Ordnern in den Shader-Editor hineingezogen werden. Diese Bilddateien werden anschliessend dem aktuell bearbeiteten Material als Image-Texture-Node hinzugefügt, müssen allerdings noch mit dem entsprechenden Shader verbunden werden. Wenn das Node-Wrangler-Add-on aktiviert ist, können diesem Image Texture-Node mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> zudem ein Texture-Coordinate-Node und ein Mapping-Node hinzugefügt werden.</p>
+<div class="rememberbox">
+<div class="rememberbox-header">
+<div class="rememberbox-icon">
+
+</div>
+<p>Merke…</p>
+</div>
+<div class="rememberbox-body">
+<p>Texturen werden mit einem Mapping- und einem Texture-Coordinate-Node versehen, damit die Texturen über den Mapping-Node angepasst werden können.</p>
+</div>
+</div>
+<div class="exercisebox">
+<div class="exercisebox-header">
+<div class="exercisebox-icon">
+
+</div>
+<p>Übung 14: Textur zuweisen</p>
+</div>
+<div class="exercisebox-body">
+<p><strong>Übung 14.1</strong></p>
+<p>Fügen Sie die Textur «Rocks024S_4K_Color.jpg» der Base-Color eines Materials hinzu, welches Sie dem Standardwürfel zugewiesen haben.</p>
+</div>
+</div>
 
 
 </section>

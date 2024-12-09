@@ -220,6 +220,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../Chapters/Chapter_22.html">
  <span class="dropdown-text">Kapitel 22</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_23.html">
+ <span class="dropdown-text">Kapitel 23</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -372,18 +376,18 @@ Abbildung&nbsp;6: Auswahl eines Faces des Standardwürfels, um seine dazugehöri
 <p><kbd aria-hidden="true">U</kbd><span class="visually-hidden">U</span>, um Objekte zu unwrappen</p>
 </div></div><p>Das UV-Unwrapping erfolgt im Edit-Mode. Dabei werden die Faces, bei denen das UV-Unwrapping erfolgen soll, ausgewählt und anschliessend die Taste gedrückt. Beim Mauszeiger erscheint anschliessend das «<em>UV Mapping</em>»-Menü, bei dem aus verschiedenen Optionen zum Unwrapping ausgewählt werden kann. Diese Optionen sind:</p>
 <ul>
-<li>«<strong>Unwrap</strong>»: Dabei wird das Mesh auf eine zweidimensionale Fläche projiziert. Hierfür werden auch manuell gesetzte Grenzen in Texturen berücksichtigt.</li>
-<li>«<strong>Smart UV Project</strong>»: Die UVs werden basierend auf den Winkeln zwischen Faces erstellt und separiert.</li>
-<li>«<strong>Lightmap Pack</strong>»: Hierbei werden UVs erstellt, welche für Lightmaps besonders geeignet sind, weil die UVs so angeordnet werden, dass möglichst die gesamte Fläche der Textur verwendet wird. Bei den Lightmaps handelt es sich dabei um Texturen, welche Informationen über die Beleuchtung beinhalten.</li>
-<li>«<strong>Follow Active Quads</strong>»: Die aktiven Quads werden als Grundlage für die UV-Erstellung verwendet und ausgehend von den Loops, welche diese Quads bilden, werden die UVs erstellt.</li>
-<li>«<strong>Cube Projection</strong>»: Das Unwrapping erfolgt ausgehend von der Grundform eines Würfels.</li>
-<li>«<strong>Cylinder Projection</strong>»: Das Unwrapping erfolgt ausgehend von einem Zylinder.</li>
-<li>«<strong>Sphere Projection</strong>»: Das Unwrapping erfolgt ausgehend von einer Kugel.</li>
-<li>«<strong>Project from View</strong>»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D Viewport-Editor.</li>
-<li>«<strong>Project from View (Bounds)</strong>»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D-Viewport-Editor, wobei die Anordnung der UVs bis zu den Grenzen der Textur gestreckt werden.</li>
-<li>«<strong>Mark Seam</strong>»: Ein Seam wird hinzugefügt. Dabei handelt es sich um manuell gesetzte Schnitte im UV-Mapping.</li>
-<li>«<strong>Clear Seam</strong>»: Ein Seam wird entfernt.</li>
-<li>«<strong>Reset</strong>»: Das UV-Mapping wird zurückgesetzt, sodass alle Faces den gesamten UV-Raum ausfüllen und somit dieselbe Grösse innehaben.</li>
+<li>«<strong><em>Unwrap</em></strong>»: Dabei wird das Mesh auf eine zweidimensionale Fläche projiziert. Hierfür werden auch manuell gesetzte Grenzen in Texturen berücksichtigt.</li>
+<li>«<strong><em>Smart UV Project</em></strong>»: Die UVs werden basierend auf den Winkeln zwischen Faces erstellt und separiert.</li>
+<li>«<strong><em>Lightmap Pack</em></strong>»: Hierbei werden UVs erstellt, welche für Lightmaps besonders geeignet sind, weil die UVs so angeordnet werden, dass möglichst die gesamte Fläche der Textur verwendet wird. Bei den Lightmaps handelt es sich dabei um Texturen, welche Informationen über die Beleuchtung beinhalten.</li>
+<li>«<strong><em>Follow Active Quads</em></strong>»: Die aktiven Quads werden als Grundlage für die UV-Erstellung verwendet und ausgehend von den Loops, welche diese Quads bilden, werden die UVs erstellt.</li>
+<li>«<strong><em>Cube Projection</em></strong>»: Das Unwrapping erfolgt ausgehend von der Grundform eines Würfels.</li>
+<li>«<strong><em>Cylinder Projection</em></strong>»: Das Unwrapping erfolgt ausgehend von einem Zylinder.</li>
+<li>«<strong><em>Sphere Projection</em></strong>»: Das Unwrapping erfolgt ausgehend von einer Kugel.</li>
+<li>«<strong><em>Project from View</em></strong>»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D Viewport-Editor.</li>
+<li>«<strong><em>Project from View (Bounds)</em></strong>»: Das Unwrapping erfolgt ausgehend von der aktuellen Ansicht im 3D-Viewport-Editor, wobei die Anordnung der UVs bis zu den Grenzen der Textur gestreckt werden.</li>
+<li>«<strong><em>Mark Seam</em></strong>»: Ein Seam wird hinzugefügt. Dabei handelt es sich um manuell gesetzte Schnitte im UV-Mapping.</li>
+<li>«<strong><em>Clear Seam</em></strong>»: Ein Seam wird entfernt.</li>
+<li>«<strong><em>Reset</em></strong>»: Das UV-Mapping wird zurückgesetzt, sodass alle Faces den gesamten UV-Raum ausfüllen und somit dieselbe Grösse innehaben.</li>
 </ul>
 <div id="fig-1_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
@@ -415,14 +419,10 @@ Abbildung&nbsp;7: UV-Mapping-Menü.
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Auswahl von UVs im UV-Editor</p>
 </div></div><p>Im UV-Editor können die einzelnen UVs, aber auch die Vertices und Edges ausgewählt werden. Wenn der Edit-Mode aktiviert ist, erscheinen in der linken oberen Ecke des UV-Editors verschiedene Schaltflächen, mit denen die Auswahl bestimmt werden kann. Nebst der Auswahl von Vertices, Edges und Faces können im UV-Editor zudem auch ganze Inseln ausgewählt werden. Dabei werden alle UVs, die zusammen eine UV-Insel bilden, gemeinsam ausgewählt.</p>
-<div id="fig-1_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_22/Icons_UV_Editor_Selections.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;8: Select-Modes für die Auwahl von UVs.
-</figcaption>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Images/Chapter_22/Icons_UV_Editor_Selections.png" class="img-fluid figure-img"></p>
+<figcaption>Select-Modes für die Auwahl von UVs.</figcaption>
 </figure>
 </div>
 

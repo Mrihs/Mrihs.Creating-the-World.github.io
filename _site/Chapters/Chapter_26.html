@@ -236,6 +236,14 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../Chapters/Chapter_25.html">
  <span class="dropdown-text">Kapitel 25</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_26.html">
+ <span class="dropdown-text">Kapitel 26</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_27.html">
+ <span class="dropdown-text">Kapitel 27</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -375,7 +383,7 @@ Abbildung&nbsp;2: Node-Anordnung, um mit einer Glossy-Textur umzugehen.
 <img src="Images/Chapter_26/Vgl. color und normal für PPP.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Node-Anordnung, um mit einer Glossy-Textur umzugehen.
+Abbildung&nbsp;3: Links eine Color-Textur, rechts die dazugehörige Normal-Textur.
 </figcaption>
 </figure>
 </div>
@@ -443,7 +451,7 @@ Abbildung&nbsp;4: Anordnung der Normal-Textur mit einem Bump-Node zwischen dem I
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Displacement-Textur, um grössere Unebenheiten zu emulieren oder zu erstellen</p>
-</div></div><p>Die Displacement-Textur funktioniert ähnlich wie die Normal-Textur. Sie wird ebenfalls für Unebenheiten im Material verwendet, allerdings für deutlich grössere Unebenheiten. Sie funktioniert wie die Roughness- und die Metallic-Textur auf einer SchwarzWeiss-Basis. Das heisst: Je heller ein Wert an einer Stelle ist, desto höher sollte die Unebenheit an dieser Stelle sein. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «displacement» oder «disp» versehen. Manchmal wird die Textur aber auch als Height-Textur bezeichnet und entsprechend mit der Endung «height» versehen.</p>
+</div></div><p>Die Displacement-Textur funktioniert ähnlich wie die Normal-Textur. Sie wird ebenfalls für Unebenheiten im Material verwendet, allerdings für deutlich grössere Unebenheiten. Sie funktioniert wie die Roughness- und die Metallic-Textur auf einer Schwarz-Weiss-Basis. Das heisst: Je heller ein Wert an einer Stelle ist, desto höher sollte die Unebenheit an dieser Stelle sein. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «displacement» oder «disp» versehen. Manchmal wird die Textur aber auch als Height-Textur bezeichnet und entsprechend mit der Endung «height» versehen.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Displacement-Textur wird über Displacement-Node mit dem Material-Output verbunden</p>
@@ -472,7 +480,7 @@ Abbildung&nbsp;5: Anordnung der Displacement-Textur mit einem Displacement-Node 
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Ambient-Occlusion-Textur verwenden</p>
-</div></div><p>Die Ambient-Occlusion-Textur wird selten bei der Texturierung verwendet. Wenn sie allerdings berücksichtigt werden soll, empfiehlt es sich, diese mit der Color-Textur zu kombinieren. Hierfür wird ein «MixRGB»-Node verwendet, welcher zwei Farben miteinander mischen kann. Dieser ist im «<em>Add</em>»-Menü unter «<em>Color | MixRGB</em>» zu finden. Anschliessend kann der Color-Output der Color-Textur mit dem ersten Color-Input («<em>Color1</em>») verbunden werden und der Color-Output der Ambient-Occlusion-Textur mit dem zweiten Color-Output («<em>Color2</em>»). Im Dropdown-Menü auf der Schaltfläche «<em>Mix</em>» sollte zudem die Option «<em>Multiply</em>» ausgewählt werden. Dadurch werden die Schattenanteile mit den Farbwerten multipliziert (unter der Einstellung «<em>Mix</em>» würden sich lediglich graduelle Abstufungen zwischen den beiden Texturen ergeben). Mithilfe des Reiters «<em>Fac</em>» kann anschliessend der Faktor definiert werden, mit dem die Schattenanteile auf die Grundfarbe multipliziert werden sollen. Der Color-Output des Mix-RGB-Nodes kann anschliessend mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden.</p>
+</div></div><p>Die Ambient-Occlusion-Textur wird selten bei der Texturierung verwendet. Wenn sie allerdings berücksichtigt werden soll, empfiehlt es sich, diese mit der Color-Textur zu kombinieren. Hierfür wird ein «<em>MixRGB</em>»-Node verwendet, welcher zwei Farben miteinander mischen kann. Dieser ist im «<em>Add</em>»-Menü unter «<em>Color | MixRGB</em>» zu finden. Anschliessend kann der Color-Output der Color-Textur mit dem ersten Color-Input («<em>Color1</em>») verbunden werden und der Color-Output der Ambient-Occlusion-Textur mit dem zweiten Color-Output («<em>Color2</em>»). Im Dropdown-Menü auf der Schaltfläche «<em>Mix</em>» sollte zudem die Option «<em>Multiply</em>» ausgewählt werden. Dadurch werden die Schattenanteile mit den Farbwerten multipliziert (unter der Einstellung «<em>Mix</em>» würden sich lediglich graduelle Abstufungen zwischen den beiden Texturen ergeben). Mithilfe des Reiters «<em>Fac</em>» kann anschliessend der Faktor definiert werden, mit dem die Schattenanteile auf die Grundfarbe multipliziert werden sollen. Der Color-Output des Mix-RGB-Nodes kann anschliessend mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden.</p>
 <div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">

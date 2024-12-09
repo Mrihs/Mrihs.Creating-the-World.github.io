@@ -51,7 +51,7 @@ Sobald dem Image-Texture-Node eine Textur zugewiesen wurde, wird der Name dieser
 Image-Texture-Node verbinden
 :::
 
-Der Image-Texture-Node beinhaltet nun die geladene Bilddatei als Information, die er mittels des Outputs «*Color*» weiterleiten kann. Diese Farbe stellt nun keine einheitliche Farbe mehr dar, sondern die Bilddatei. Der Color-Output des Image-Texture-Nodes kann nun mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden, wie in Abbildung 2 dargestellt. Dadurch verschwindet das Auswahlfeld, mit der eine Farbe für die Base-Color des Principled-BSDF-Shaders ausgewählt werden kann. Dies liegt daran, dass dieser Informationsparameter für die Farbe bereits belegt ist, nämlich durch die Textur, welche mit dem Input der Base-Color verbunden wurde. Wird das Objekt, zu dem das Material gehört, nun im 3D-Viewport-Editor in der Material-Preview betrachtet, sollte die Textur des Objektes nun zu erkennen sein. 
+Der Image-Texture-Node beinhaltet nun die geladene Bilddatei als Information, die er mittels des Outputs «*Color*» weiterleiten kann. Diese Farbe stellt nun keine einheitliche Farbe mehr dar, sondern die Bilddatei. Der Color-Output des Image-Texture-Nodes kann nun mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden, wie in Abbildung 2 dargestellt. Dadurch verschwindet das Auswahlfeld, mit der eine Farbe für die Base-Color des Principled-BSDF-Shaders ausgewählt werden kann. Dies liegt daran, dass dieser Informationsparameter für die Farbe bereits belegt ist, nämlich durch die Textur, welche mit dem Input der Base-Color verbunden wurde. Wird das Objekt, zu dem das Material gehört, nun im 3D-Viewport-Editor in der Material-Preview betrachtet, sollte die Textur des Objektes nun zu erkennen sein.
 
 ![Verbindung zwischen einem Image-Texture-Node und der Base-Color des Principled-BSDF-Shaders.](Images/Chapter_23/Texture_Node_connecte.png){#fig-1_2 fig-align="left"}
 
@@ -76,13 +76,13 @@ Um eine Textur einem Material hinzuzufügen, wird diese mit einem Image-Texture-
 Mapping-Node
 :::
 
-Die Texturen, welche über den Image-Texture-Node mit dem Principled-BSDF-Shader verbunden werden, können auch variiert werden. So lassen sich die Positionen verschieben, rotieren und skalieren. Damit dies möglich ist, wird ein «*Mapping*»-Node benötigt. Dieser ist im Add-Menü unter «*Vector | Mapping*» auffindbar. Der Mapping-Node sollte dabei links vom Image-Texture-Node platziert werden, da der Vector-Output des Mapping-Nodes mit dem Vector-Input des Image-Texture-Nodes verbunden wird. 
+Die Texturen, welche über den Image-Texture-Node mit dem Principled-BSDF-Shader verbunden werden, können auch variiert werden. So lassen sich die Positionen verschieben, rotieren und skalieren. Damit dies möglich ist, wird ein «*Mapping*»-Node benötigt. Dieser ist im Add-Menü unter «*Vector \| Mapping*» auffindbar. Der Mapping-Node sollte dabei links vom Image-Texture-Node platziert werden, da der Vector-Output des Mapping-Nodes mit dem Vector-Input des Image-Texture-Nodes verbunden wird.
 
 ::: column-margin
 Texture-Coordinate-Node
 :::
 
-Durch die Verbindung des Mapping-Nodes mit dem Image-Texture-Node wird die Textur nicht mehr auf dem Objekt angezeigt. Dies liegt daran, dass der Mapping-Node keine Informationen darüber verfügt, wie die Texturen jeweils auf ein Objekt angewendet werden. Deshalb wird ein Node benötigt, welcher dem Mapping-Node diese Informationen übermittelt – nämlich der «*Texture Coordinate*»-Node. Der Texture-Coordinate-Node ist im «*Add*»-Menü jeweils unter «*Input | Texture Coordinate*» zu finden. Dieser Node sollte links vom Mapping-Node platziert werden, damit er anschliessend mit dem Vector-Input des Mapping-Nodes verbunden werden kann.
+Durch die Verbindung des Mapping-Nodes mit dem Image-Texture-Node wird die Textur nicht mehr auf dem Objekt angezeigt. Dies liegt daran, dass der Mapping-Node keine Informationen darüber verfügt, wie die Texturen jeweils auf ein Objekt angewendet werden. Deshalb wird ein Node benötigt, welcher dem Mapping-Node diese Informationen übermittelt – nämlich der «*Texture Coordinate*»-Node. Der Texture-Coordinate-Node ist im «*Add*»-Menü jeweils unter «*Input \| Texture Coordinate*» zu finden. Dieser Node sollte links vom Mapping-Node platziert werden, damit er anschliessend mit dem Vector-Input des Mapping-Nodes verbunden werden kann.
 
 ::: column-margin
 Outputs des Texture-Coordinate-Nodes
@@ -91,10 +91,10 @@ Outputs des Texture-Coordinate-Nodes
 Im Texture-Coordinate-Node gibt es sechs verschiedene Outputs, die mit dem Vector-Input des Mapping-Nodes verbunden werden können. Jeder dieser Outputs beschreibt eine andere Methode, wie die Texturen auf ein Objekt angewendet werden können. Wenn der entsprechende Output mit dem Vector-Input verbunden wird, wird diese Methode angewendet.
 
 ::: column-margin
-Verbindung von Texture-Coordinate-und Mapping-Node 
+Verbindung von Texture-Coordinate-und Mapping-Node
 :::
 
-Häufig werden die UVs verwendet, um das Mapping der Texturen auf das Objekt zu bestimmen. Dabei handelt es sich um die Standardoption, welche der Image-Texture-Node ohne den Mapping-Node durchführen würde. Somit wird in der Regel der UV-Output des Texture-Coordinate-Nodes mit dem Vector-Input des Mapping-Nodes verbunden und der Vector-Output des Mapping-Nodes mit dem Vector-Input des Image-Texture-Nodes, so wie in Abbildung 3. Durch diese Anordnung wird die Textur wieder auf dem Objekt sichtbar. 
+Häufig werden die UVs verwendet, um das Mapping der Texturen auf das Objekt zu bestimmen. Dabei handelt es sich um die Standardoption, welche der Image-Texture-Node ohne den Mapping-Node durchführen würde. Somit wird in der Regel der UV-Output des Texture-Coordinate-Nodes mit dem Vector-Input des Mapping-Nodes verbunden und der Vector-Output des Mapping-Nodes mit dem Vector-Input des Image-Texture-Nodes, so wie in Abbildung 3. Durch diese Anordnung wird die Textur wieder auf dem Objekt sichtbar.
 
 ![Ein Image-Texture-Node, der mit einem Texture-Coordinate- und einem Mapping-Node verbunden ist.](Images/Chapter_23/Texture_Node_Mapping.png){#fig-1_3 fig-align="left"}
 
@@ -102,13 +102,13 @@ Häufig werden die UVs verwendet, um das Mapping der Texturen auf das Objekt zu 
 Zuordnungspunkte der Texturen bewegen
 :::
 
-Durch den Mapping-Node ist es nun möglich, die Darstellung der Textur auf dem Objekt anzupassen. Durch eine Veränderung der Werte im Bereich «*Location*» kann die Textur etwa verschoben werden. Genau genommen wird dabei nicht die Textur verschoben, sondern die Zuordnungspunkte (z.B. UVs), auf denen die Textur dargestellt wird. Hinsichtlich der Z-Achse zeigt sich dabei kein Unterschied, da diese auf dem zweidimensionalen Zuordnungssystem nicht berücksichtigt wird. 
+Durch den Mapping-Node ist es nun möglich, die Darstellung der Textur auf dem Objekt anzupassen. Durch eine Veränderung der Werte im Bereich «*Location*» kann die Textur etwa verschoben werden. Genau genommen wird dabei nicht die Textur verschoben, sondern die Zuordnungspunkte (z.B. UVs), auf denen die Textur dargestellt wird. Hinsichtlich der Z-Achse zeigt sich dabei kein Unterschied, da diese auf dem zweidimensionalen Zuordnungssystem nicht berücksichtigt wird.
 
 ::: column-margin
 Skalierung und Rotation des Zuordnungsbereichs
 :::
 
-Mittels des Bereichs «*Rotation*» werden die Zuordnungspunkte rotiert und mittels des Bereichs «*Scale*» werden die Zuordnungsbereiche skaliert. Eine Skalierung um den Wert 2 führt dazu, dass die Zuordnungspunkte doppelt so gross über die Textur erstreckt werden. Als Folge erscheinen die Objekte und Muster auf der Textur kleiner auf dem Objekt. Wenn die Muster der Textur einen grösseren Bereich auf dem Objekt einnehmen sollen, muss ein Wert kleiner als 1 eingestellt werden. Dies führt dazu, dass der Zuordnungsbereich verkleinert wird und somit die Muster grösser in diesem Bereich erscheinen. 
+Mittels des Bereichs «*Rotation*» werden die Zuordnungspunkte rotiert und mittels des Bereichs «*Scale*» werden die Zuordnungsbereiche skaliert. Eine Skalierung um den Wert 2 führt dazu, dass die Zuordnungspunkte doppelt so gross über die Textur erstreckt werden. Als Folge erscheinen die Objekte und Muster auf der Textur kleiner auf dem Objekt. Wenn die Muster der Textur einen grösseren Bereich auf dem Objekt einnehmen sollen, muss ein Wert kleiner als 1 eingestellt werden. Dies führt dazu, dass der Zuordnungsbereich verkleinert wird und somit die Muster grösser in diesem Bereich erscheinen.
 
 ## Schnelleres Hinzufügen von Image-Texture-Nodes
 
@@ -116,15 +116,15 @@ Mittels des Bereichs «*Rotation*» werden die Zuordnungspunkte rotiert und mitt
 Node-Verbindungen erstellen als zentraler Bestandteil des Texturierens
 :::
 
-Die soeben aufgezeigte Verbindung von Nodes ist essenziell für das Hinzufügen von Texturen. Deshalb besteht ein grösserer Teil des Texturierens aus dem Hinzufügen der Nodes, wie gerade dargestellt. Wäre es nicht praktisch, wenn mittels eines einzelnen Klicks diese Nodes direkt hinzugefügt werden könnten? 
+Die soeben aufgezeigte Verbindung von Nodes ist essenziell für das Hinzufügen von Texturen. Deshalb besteht ein grösserer Teil des Texturierens aus dem Hinzufügen der Nodes, wie gerade dargestellt. Wäre es nicht praktisch, wenn mittels eines einzelnen Klicks diese Nodes direkt hinzugefügt werden könnten?
 
 ::: column-margin
 Node-Wrangler-Addon aktivieren
 :::
 
-Dank einem Add-on, welches direkt mit Blender mitgeliefert wird, ist dies sehr leicht möglich. Es handelt sich dabei um das Node-Wrangler-Add-on. Um dieses zu aktivieren, müssen die Einstellungen aufgerufen werden (*Edit | Preferences*) und darin auf der linken Seite der Reiter «*Add-ons*» ausgewählt werden. Im Suchfeld kann anschliessend nach «*Node Wrangler*» gesucht werden. Anschliessend müsste die Zeile «*Node: Node Wrangler*» angezeigt werden. Durch das Aktivieren des Kontrollkastens am Zeilenanfang wird das Add-on aktiviert, sodass das Einstellungsfenster bereits wieder geschlossen werden kann.
+Dank einem Add-on, welches direkt mit Blender mitgeliefert wird, ist dies sehr leicht möglich. Es handelt sich dabei um das Node-Wrangler-Add-on. Um dieses zu aktivieren, müssen die Einstellungen aufgerufen werden (*Edit \| Preferences*) und darin auf der linken Seite der Reiter «*Add-ons*» ausgewählt werden. Im Suchfeld kann anschliessend nach «*Node Wrangler*» gesucht werden. Anschliessend müsste die Zeile «*Node: Node Wrangler*» angezeigt werden. Durch das Aktivieren des Kontrollkastens am Zeilenanfang wird das Add-on aktiviert, sodass das Einstellungsfenster bereits wieder geschlossen werden kann.
 
-![ Aktiviertes Node-Wrangler-Add-on.](Images/Chapter_23/.png){#fig-1_4 fig-align="left"}
+![Aktiviertes Node-Wrangler-Add-on.](Images/Chapter_23/.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Vorlage für Image-Textures hinzufügen
@@ -136,8 +136,7 @@ Wenn nun ein Node ausgewählt wird, indem er angeklickt wird, kann die Tastenkom
 Bilder direkt in den Shader-Editor hineinziehen
 :::
 
-Weiterhin ist es zudem möglich, dass Bilddateien direkt vom Desktop oder aus Ordnern in den Shader-Editor hineingezogen werden. Diese Bilddateien werden anschliessend dem aktuell bearbeiteten Material als Image-Texture-Node hinzugefügt, müssen allerdings noch mit dem entsprechenden Shader verbunden werden. Wenn das Node-Wrangler-Add-on aktiviert ist, können diesem Image
-Texture-Node mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd T >}} zudem ein Texture-Coordinate-Node und ein Mapping-Node hinzugefügt werden. 
+Weiterhin ist es zudem möglich, dass Bilddateien direkt vom Desktop oder aus Ordnern in den Shader-Editor hineingezogen werden. Diese Bilddateien werden anschliessend dem aktuell bearbeiteten Material als Image-Texture-Node hinzugefügt, müssen allerdings noch mit dem entsprechenden Shader verbunden werden. Wenn das Node-Wrangler-Add-on aktiviert ist, können diesem Image Texture-Node mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd T >}} zudem ein Texture-Coordinate-Node und ein Mapping-Node hinzugefügt werden.
 
 :::::: rememberbox
 :::: rememberbox-header
@@ -163,7 +162,6 @@ Texturen werden mit einem Mapping- und einem Texture-Coordinate-Node versehen, d
 ::: exercisebox-body
 **Übung 14.1**
 
-Fügen Sie die Textur «Rocks024S_4K_Color.jpg» der Base-Color eines Materials hinzu, welches Sie dem Standardwürfel zugewiesen haben. 
+Fügen Sie die Textur «Rocks024S_4K_Color.jpg» der Base-Color eines Materials hinzu, welches Sie dem Standardwürfel zugewiesen haben.
 :::
 ::::::
-

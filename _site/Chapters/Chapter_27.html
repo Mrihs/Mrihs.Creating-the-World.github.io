@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>23. Texturen zu einem Material hinzufügen – Creating the World</title>
+<title>27. Tutorial: Einen Hammer texturieren – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -267,9 +267,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#texture-nodes-hinzufügen" id="toc-texture-nodes-hinzufügen" class="nav-link active" data-scroll-target="#texture-nodes-hinzufügen">Texture-Nodes hinzufügen</a></li>
-  <li><a href="#texture-mapping-hinzufügen" id="toc-texture-mapping-hinzufügen" class="nav-link" data-scroll-target="#texture-mapping-hinzufügen">Texture-Mapping hinzufügen</a></li>
-  <li><a href="#schnelleres-hinzufügen-von-image-texture-nodes" id="toc-schnelleres-hinzufügen-von-image-texture-nodes" class="nav-link" data-scroll-target="#schnelleres-hinzufügen-von-image-texture-nodes">Schnelleres Hinzufügen von Image-Texture-Nodes</a></li>
+  <li><a href="#uv-mapping" id="toc-uv-mapping" class="nav-link active" data-scroll-target="#uv-mapping">UV-Mapping</a></li>
+  <li><a href="#materialen-erstellen" id="toc-materialen-erstellen" class="nav-link" data-scroll-target="#materialen-erstellen">Materialen erstellen</a></li>
+  <li><a href="#metall-texturieren" id="toc-metall-texturieren" class="nav-link" data-scroll-target="#metall-texturieren">Metall texturieren</a></li>
+  <li><a href="#holz-texturieren" id="toc-holz-texturieren" class="nav-link" data-scroll-target="#holz-texturieren">Holz texturieren</a></li>
   </ul>
 </nav>
     </div>
@@ -278,7 +279,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">23. Texturen zu einem Material hinzufügen</h1>
+<h1 class="title">27. Tutorial: Einen Hammer texturieren</h1>
 </div>
 
 
@@ -295,160 +296,173 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="texture-nodes-hinzufügen" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="texture-nodes-hinzufügen">Texture-Nodes hinzufügen</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Texturen als Teil eines Materials</p>
-</div></div><p>Bislang wurde betrachtet, wie die dreidimensionale Struktur mittels UVs auf Texturen angewendet wird. Allerdings wurde noch nicht besprochen, wie die Texturen auf dem Objekt erscheinen. Damit die Texturen auf ein Objekt angewendet werden, müssen sie Teil eines Materials sein, welches anschliessend auf das Objekt angewendet wird. Deshalb wird erneut der Shader-Editor benötigt, wenn die Texturen einem Objekt hinzugefügt werden sollen.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Textur muss mittels Nodes verbunden werden</p>
-</div></div><p>Wenn die Base-Color des Principled-BSDF-Shaders keine einheitliche Farbe darstellen soll, muss der Base-Color eine Textur zugewiesen werden. In der Farbbox der Base-Color besteht keine Möglichkeit, eine Textur auszuwählen. Stattdessen muss eine Textur mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden. Hierfür wird ein neuer Node im Shader-Editor benötigt, welcher die Textur beinhaltet. Dieser wird anschliessend mit der Base-Color verbunden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Node hinzufügen</p>
-</div></div><p>Um einen neuen Node hinzuzufügen, wird die Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> verwendet. Dadurch öffnet sich beim Mauszeiger das «<em>Add</em>»-Menü für den Shader-Editor. Anschliessend kann über das Menü der entsprechende Node gesucht werden. Die Nodes sind in unterschiedliche Kategorien aufgeteilt, die zu einem späteren Zeitpunkt ausführlich beschrieben werden. Statt den entsprechenden Node durch die Kategorien auszuwählen, kann auch die Suchleiste zuoberst im Menü ausgewählt werden und nach dem entsprechenden Node gesucht werden.</p>
+<p>Ziel dieser Aufgabe</p>
+</div></div><p>Als Nächstes wird anhand eines Modelles aufgezeigt, wie das Texturieren erfolgt. Im Zip-Ordner «<em>Hammer</em>» ist ein .blend-File aufzufinden, in dem sich ein Mesh in der Form eines Hammers befindet. Nebst diesem File sind im Ordner «<em>Metal022_4K-JPG</em>» verschiedene Texturarten für ein metallisches Material aufzufinden. Dieses Material wird anhand der Texturen in diesem Ordner erstellt und dem Hammerkopf zugewiesen. Anschliessend wird eine weitere Textur gesucht und dem Holzstiel des Hammers zugewiesen.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_23/Anordnung Texture Node.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_27/1_Finaler_Hammer.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Image-Texture-Node, der neben dem Principled-BSDF-Shader hinzugefügt wurde.
+Abbildung&nbsp;1: Der texturierte Hammer als Ziel dieses Tutorials.
 </figcaption>
 </figure>
 </div>
+<section id="uv-mapping" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="uv-mapping">UV-Mapping</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Texture-Node hinzufügen</p>
-</div></div><p>Um eine Textur hinzuzufügen, wird der Node «<em>Image Texture</em>» benötigt. Dieser kann unter «<em>Textures | Image Texture</em>» hinzufügefügt werden oder über die Suchleiste gesucht werden. Dadurch erscheint der Image-Texture-Node, welcher mittels eines Mausklicks platziert werden kann. Da der Output des Image-Texture-Nodes anschliessend mit dem Input des Principled-BSDF-Shaders verbunden wird, sollte der Image-Texture-Node links vom Principled-BSDF-Shader platziert werden, wie in Abbildung 1 dargestellt.</p>
+<p>UV-Editor öffnen</p>
+</div></div><p>Nach dem Öffnen des .blend-Files wird der Hammer in Blender angezeigt. In diesem Beispiel sollten zunächst die UVs betrachtet werden. Hierfür wird der UV-Editor benötigt. Um diesen zu öffnen, wird aus den Ecken des 3D-Viewport-Editors ein zweiter Editor herausgezogen. Dieser Editor wird anschliessend als UV-Editor verwendet.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Methoden, um dem Image-Texture-Node ein Bild zuzuweisen</p>
-</div></div><p>Der Image-Texture-Node verfügt noch über keine Textur, sondern stellt lediglich einen Platzhalter dar. Um ihm eine Textur hinzuzufügen, bestehen folgende Möglichkeiten im Image-Texture-Node:</p>
-<ul>
-<li>«<strong><em>New</em></strong>»: Damit wird eine neue, einfarbige Textur erstellt, welche anschliessend in Blender bearbeitet und als Bilddatei auf dem Rechner abgespeichert werden kann.</li>
-<li>«<strong><em>Open</em></strong>»: Damit lässt sich eine bestehende Bilddatei auf dem Rechner auswählen und dem Image-Texture-Node hinzufügen. Hierfür öffnet sich ein Browser-Fenster, in dem zum entsprechenden Speicherort der Textur navigiert und die entsprechende Bilddatei ausgewählt werden kann.</li>
-<li><strong>Dropdown-Menü auf der linken Seite</strong>: Damit lassen sich bereits in Blender geladene Bilddateien auswählen und dem Image-Texture-Node zuweisen.</li>
-</ul>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Hinzugefügte Textur im Image-Texture-Node</p>
-</div></div><p>Sobald dem Image-Texture-Node eine Textur zugewiesen wurde, wird der Name dieser Textur anstelle der Auswahloptionen «<em>New</em>» und «<em>Open</em>» angezeigt. Mittels des Ordner-Icons neben dem Namen kann eine andere Textur geöffnet und dem Image-Texture-Node hinzugefügt werden, und mittels des Kreuz-Icons kann die Textur aus dem Image-Texture-Node entfernt werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Image-Texture-Node verbinden</p>
-</div></div><p>Der Image-Texture-Node beinhaltet nun die geladene Bilddatei als Information, die er mittels des Outputs «<em>Color</em>» weiterleiten kann. Diese Farbe stellt nun keine einheitliche Farbe mehr dar, sondern die Bilddatei. Der Color-Output des Image-Texture-Nodes kann nun mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden, wie in Abbildung 2 dargestellt. Dadurch verschwindet das Auswahlfeld, mit der eine Farbe für die Base-Color des Principled-BSDF-Shaders ausgewählt werden kann. Dies liegt daran, dass dieser Informationsparameter für die Farbe bereits belegt ist, nämlich durch die Textur, welche mit dem Input der Base-Color verbunden wurde. Wird das Objekt, zu dem das Material gehört, nun im 3D-Viewport-Editor in der Material-Preview betrachtet, sollte die Textur des Objektes nun zu erkennen sein.</p>
+<p>Faces auswählen, um UVs zu betrachten</p>
+</div></div><p>Um im UV-Editor die UVs des Hammers betrachten zu können, müssen die jeweils anzuzeigenden Faces ausgewählt werden. Hierfür muss zunächst der Edit-Mode mit dem ausgewählten Hammer aktiviert werden. Damit alle UVs betrachtet werden können, müssen alle Faces des Hammers mittels der Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> ausgewählt werden. Danach werden im UV-Editor die UVs angezeigt.</p>
 <div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_23/Texture_Node_connecte.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_27/2_Originale_UVs.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Verbindung zwischen einem Image-Texture-Node und der Base-Color des Principled-BSDF-Shaders.
+Abbildung&nbsp;2: UVs des Hammers.
 </figcaption>
 </figure>
 </div>
-<div class="rememberbox">
-<div class="rememberbox-header">
-<div class="rememberbox-icon">
-
-</div>
-<p>Merke…</p>
-</div>
-<div class="rememberbox-body">
-<p>Texturen werden jeweils auf Materialien angewendet.</p>
-<p>Um eine Textur einem Material hinzuzufügen, wird diese mit einem Image-Texture-Node dem Material hinzugefügt und über einen Faden mit dem farbgebenden Input des Shaders verbunden.</p>
-</div>
-</div>
-</section>
-<section id="texture-mapping-hinzufügen" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="texture-mapping-hinzufügen">Texture-Mapping hinzufügen</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Mapping-Node</p>
-</div></div><p>Die Texturen, welche über den Image-Texture-Node mit dem Principled-BSDF-Shader verbunden werden, können auch variiert werden. So lassen sich die Positionen verschieben, rotieren und skalieren. Damit dies möglich ist, wird ein «<em>Mapping</em>»-Node benötigt. Dieser ist im Add-Menü unter «<em>Vector | Mapping</em>» auffindbar. Der Mapping-Node sollte dabei links vom Image-Texture-Node platziert werden, da der Vector-Output des Mapping-Nodes mit dem Vector-Input des Image-Texture-Nodes verbunden wird.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Texture-Coordinate-Node</p>
-</div></div><p>Durch die Verbindung des Mapping-Nodes mit dem Image-Texture-Node wird die Textur nicht mehr auf dem Objekt angezeigt. Dies liegt daran, dass der Mapping-Node keine Informationen darüber verfügt, wie die Texturen jeweils auf ein Objekt angewendet werden. Deshalb wird ein Node benötigt, welcher dem Mapping-Node diese Informationen übermittelt – nämlich der «<em>Texture Coordinate</em>»-Node. Der Texture-Coordinate-Node ist im «<em>Add</em>»-Menü jeweils unter «<em>Input | Texture Coordinate</em>» zu finden. Dieser Node sollte links vom Mapping-Node platziert werden, damit er anschliessend mit dem Vector-Input des Mapping-Nodes verbunden werden kann.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Outputs des Texture-Coordinate-Nodes</p>
-</div></div><p>Im Texture-Coordinate-Node gibt es sechs verschiedene Outputs, die mit dem Vector-Input des Mapping-Nodes verbunden werden können. Jeder dieser Outputs beschreibt eine andere Methode, wie die Texturen auf ein Objekt angewendet werden können. Wenn der entsprechende Output mit dem Vector-Input verbunden wird, wird diese Methode angewendet.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Verbindung von Texture-Coordinate-und Mapping-Node</p>
-</div></div><p>Häufig werden die UVs verwendet, um das Mapping der Texturen auf das Objekt zu bestimmen. Dabei handelt es sich um die Standardoption, welche der Image-Texture-Node ohne den Mapping-Node durchführen würde. Somit wird in der Regel der UV-Output des Texture-Coordinate-Nodes mit dem Vector-Input des Mapping-Nodes verbunden und der Vector-Output des Mapping-Nodes mit dem Vector-Input des Image-Texture-Nodes, so wie in Abbildung 3. Durch diese Anordnung wird die Textur wieder auf dem Objekt sichtbar.</p>
+<p>UVs mit Cube Projection neu berechnen</p>
+</div></div><p>Die angezeigten UVs müssen noch angepasst werden, da diese durch die Erstellung des Hammers aus einem 3D-Würfel entstanden sind. Deshalb wird Blender der Befehl gegeben, dass das Programm selbstständig neue UVs berechnen soll. Hierfür wird im Editor-Mode des 3D-Viewports-Editors die Taste <kbd aria-hidden="true">U</kbd><span class="visually-hidden">U</span> gedrückt. Dadurch erscheint beim Mauszeiger das Menu «<em>UV Mapping</em>» in diesem Menü wird die Option «<em>Cube Projection</em>» ausgewählt. Im UV-Editor werden nun die neu berechneten UVs angezeigt.</p>
 <div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_23/Texture_Node_Mapping.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_27/3_UVS_Cube_Projection.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Ein Image-Texture-Node, der mit einem Texture-Coordinate- und einem Mapping-Node verbunden ist.
+Abbildung&nbsp;3: UVs nach der Bearbeitung mittels Cube Projection.
 </figcaption>
 </figure>
 </div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Zuordnungspunkte der Texturen bewegen</p>
-</div></div><p>Durch den Mapping-Node ist es nun möglich, die Darstellung der Textur auf dem Objekt anzupassen. Durch eine Veränderung der Werte im Bereich «<em>Location</em>» kann die Textur etwa verschoben werden. Genau genommen wird dabei nicht die Textur verschoben, sondern die Zuordnungspunkte (z.B. UVs), auf denen die Textur dargestellt wird. Hinsichtlich der Z-Achse zeigt sich dabei kein Unterschied, da diese auf dem zweidimensionalen Zuordnungssystem nicht berücksichtigt wird.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Skalierung und Rotation des Zuordnungsbereichs</p>
-</div></div><p>Mittels des Bereichs «<em>Rotation</em>» werden die Zuordnungspunkte rotiert und mittels des Bereichs «<em>Scale</em>» werden die Zuordnungsbereiche skaliert. Eine Skalierung um den Wert 2 führt dazu, dass die Zuordnungspunkte doppelt so gross über die Textur erstreckt werden. Als Folge erscheinen die Objekte und Muster auf der Textur kleiner auf dem Objekt. Wenn die Muster der Textur einen grösseren Bereich auf dem Objekt einnehmen sollen, muss ein Wert kleiner als 1 eingestellt werden. Dies führt dazu, dass der Zuordnungsbereich verkleinert wird und somit die Muster grösser in diesem Bereich erscheinen.</p>
 </section>
-<section id="schnelleres-hinzufügen-von-image-texture-nodes" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="schnelleres-hinzufügen-von-image-texture-nodes">Schnelleres Hinzufügen von Image-Texture-Nodes</h2>
+<section id="materialen-erstellen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="materialen-erstellen">Materialen erstellen</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Node-Verbindungen erstellen als zentraler Bestandteil des Texturierens</p>
-</div></div><p>Die soeben aufgezeigte Verbindung von Nodes ist essenziell für das Hinzufügen von Texturen. Deshalb besteht ein grösserer Teil des Texturierens aus dem Hinzufügen der Nodes, wie gerade dargestellt. Wäre es nicht praktisch, wenn mittels eines einzelnen Klicks diese Nodes direkt hinzugefügt werden könnten?</p>
+<p>Material-Slots hinzufügen</p>
+</div></div><p>Im nächsten Schritt geht es darum, dem Objekt die Materialien zuzuweisen. Hierfür werden zwei Material-Slots benötigt. Um diese zu erstellen, wird im Properties-Editor der Material-Reiter geöffnet und darin zwei neue Slots für Materialien hinzugefügt. Hierfür kann zweimal auf die Schaltfläche «+» geklickt werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Node-Wrangler-Addon aktivieren</p>
-</div></div><p>Dank einem Add-on, welches direkt mit Blender mitgeliefert wird, ist dies sehr leicht möglich. Es handelt sich dabei um das Node-Wrangler-Add-on. Um dieses zu aktivieren, müssen die Einstellungen aufgerufen werden (<em>Edit | Preferences</em>) und darin auf der linken Seite der Reiter «<em>Add-ons</em>» ausgewählt werden. Im Suchfeld kann anschliessend nach «<em>Node Wrangler</em>» gesucht werden. Anschliessend müsste die Zeile «<em>Node: Node Wrangler</em>» angezeigt werden. Durch das Aktivieren des Kontrollkastens am Zeilenanfang wird das Add-on aktiviert, sodass das Einstellungsfenster bereits wieder geschlossen werden kann.</p>
+<p>Reihenfolge der Materialien</p>
+</div></div><p>Manchmal ist es sinnvoll, sich über die Reihenfolge der zu erstellenden Materialien Gedanken zu machen. Per Default werden alle Faces eines Objekts dem ersten Material zugewiesen. Somit wäre es sinnvoll, als zweites Material dasjenige zu verwenden, für welches die entsprechenden Faces einfacher auszuwählen sind. In diesem Falle wäre dies das Holz, welches lediglich die Faces des Stiels abdeckt. Deshalb ist es sinnvoller dem zweiten Material das Holz zuzuweisen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Materialien hinzufügen</p>
+</div></div><p>Zunächst wird auf den ersten Material-Slot geklickt, um diesen auszuwählen und mit der Schaltfläche «<em>New</em>» ein neues Material hinzugefügt. Dieses Material kann zu «<em>Metall</em>» umbenannt werden. Danach wird der zweite Material-Slot ausgewählt und diesem ebenfalls ein neues Material hinzugefügt, welches als «<em>Holz</em>» benannt werden kann.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Faces für Holz-Material auswählen</p>
+</div></div><p>Im Edit-Mode können anschliessend alle Faces, welche zum Holzstiel gehören, ausgewählt werden. Dazu kann ein Loop-Select verwendet werden. Hierfür wird der Face-Selection-Modus verwendet und bei gedrückter <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span>-Taste auf ein Edge geklickt, welches entlang dem Stiel des Hammers verläuft. Dadurch sollten alle Faces des Stiels, ausser dasjenige am Boden des Hammerstiels, ausgewählt worden sein. Das noch nicht ausgewählte Face des Hammerstiels kann bei gedrückter <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste durch einen Mausklick zur Auswahl hinzugefügt werden.</p>
 <div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_23/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_27/4_Faces_Holz.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4: Aktiviertes Node-Wrangler-Add-on.
+Abbildung&nbsp;4: Faces für das Holz-Material.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Vorlage für Image-Textures hinzufügen</p>
-</div></div><p>Wenn nun ein Node ausgewählt wird, indem er angeklickt wird, kann die Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> gedrückt werden. Danach wird automatisch ein Texture-Coordinate-Node, verbunden mit einem Mapping-Node und dieser wiederum verbunden mit einem Image-Texture-Node, hinzugefügt und mit dem ersten freien Input des ausgewählten Nodes verbunden. Dies erspart das Suchen und Anordnen der einzelnen Komponenten.</p>
+<p>Materialien anwenden</p>
+</div></div><p>Die ausgewählten Faces können als Nächstes dem Holz-Material hinzugefügt werden. Hierfür wird im Properties-Editor der zweite Material-Slot mit dem Holz-Material ausgewählt und auf die Schaltfläche «<em>Assign</em>» geklickt. Wenn nun die Auswahl von Faces aufgelöst wird, indem in den leeren Raum im 3D-Viewport-Editor geklickt wird, kann die Taste «<em>Select</em>» im Properties-Editor verwendet werden, um die zum Holz-Material hinzugefügten Faces auszuwählen. Dadurch kann überprüft werden, ob die Faces korrekt zugewiesen wurden.</p>
+</section>
+<section id="metall-texturieren" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="metall-texturieren">Metall texturieren</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Bilder direkt in den Shader-Editor hineinziehen</p>
-</div></div><p>Weiterhin ist es zudem möglich, dass Bilddateien direkt vom Desktop oder aus Ordnern in den Shader-Editor hineingezogen werden. Diese Bilddateien werden anschliessend dem aktuell bearbeiteten Material als Image-Texture-Node hinzugefügt, müssen allerdings noch mit dem entsprechenden Shader verbunden werden. Wenn das Node-Wrangler-Add-on aktiviert ist, können diesem Image Texture-Node mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> zudem ein Texture-Coordinate-Node und ein Mapping-Node hinzugefügt werden.</p>
-<div class="rememberbox">
-<div class="rememberbox-header">
-<div class="rememberbox-icon">
+<p>Shader-Editor öffnen</p>
+</div></div><p>Im Properties-Editor kann nun das Metall-Material ausgewählt werden. Dieses Material wird nun als Nächstes bearbeitet. Hierfür muss der Shader-Editor verwendet werden. Deshalb wird der UV-Editor, welcher fortan nicht mehr benötigt wird, zum Shader-Editor umgewandelt. Zusätzlich sollte im 3D-Viewport-Editor der Material-Preview-Shading-Mode ausgewählt werden, damit Änderungen am Material auch dargestellt werden.</p>
 
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Image-Texture-Node hinzufügen</p>
+</div></div><p>Als erstes wird dem Principled-BSDF-Shader im Shader-Editor eine Image-Textur hinzugefügt. Hierfür kann der Principled-BSDF-Shader ausgewählt und die Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> gedrückt werden. Durch das Node-Wrangler-Add-on entsteht links vom Principled-BSDF-Shader eine Image-Textur, welche durch einen Mapping-Node und einen Textur-Coordinate-Node ihre Inputs bekommt. Der Image-Textur-Node sollte automatisch mit der Base-Color des Principled-BSDF-Shaders verbunden worden sein. Für den Fall, dass diese Tastenkombination nicht funktionieren, sollte überprüft werden, ob das Node-Wrangler-Add-on aktiviert ist.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Color-Textur öffnen</p>
+</div></div><p>Anschliessend kann im Image-Texture-Node auf die Schaltfläche «<em>Open</em>» geklickt werden. Im anschliessend geöffneten Browser kann zum Speicherort des Hammers navigiert werden und dort im Ordner «<em>Metal022_4K-JPG</em>» die Datei «<em>Metal022_4K_Color.jpg</em>» ausgewählt werden. Dabei handelt es sich um die Color-Textur, welche jeweils mit der Base-Color des Principled-BSDF-Shaders verbunden wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Image-Texture-Node für Metallic hinzufügen</p>
+</div></div><p>Als Nächstes wird die Metallic-Textur zum Material hinzugefügt. Hierfür kann der Image-Textur-Node ausgewählt und mit der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">D</kbd><span class="visually-hidden">D</span> dupliziert werden. Das Duplikat kann unterhalb des originalen Image-Textur-Nodes platziert werden. Anschliessend sollte der Vector-Output des Mapping-Nodes mit dem Vector-Input des duplizierten Image-Textur-Nodes verbunden werden. Der Color-Output des Image-Textur-Nodes kann mit dem Metallic-Input des Principled-BSDF-Shaders verbunden werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bilddatei auswechseln</p>
+</div></div><p>Der Image-Textur-Node beinhaltet als Bild immer noch die Datei «<em>Metal022_4K_Color.jpg</em>». Mittels des Ordner-Icons kann nach einer anderen Textur gesucht werden, welche diesem Node hinzugefügt wird. Hierfür wird die Datei «<em>Metal022_4K_Metalness.jpg</em>» verwendet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Roughness-Textur hinzufügen</p>
+</div></div><p>Die Schritte zum Einfügen der Metallic-Textur können nun wiederholt werden, um die Roughness-Textur einzufügen. Das heisst, der Image-Texture-Node kann dupliziert werden, mit dem Mapping-Node und mit dem Roughness-Input des Principled-BSDF-Shaders verbunden werden. Anschliessend muss die Textur mit der Datei «<em>Metal022_4K_Roughness.jpg</em>» ausgewechselt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Normal-Textur hinzufügen</p>
+</div></div><p>Für die Normal-Textur wird ebenfalls ein Duplikat des Image-Texture-Nodes erstellt, dessen Input mit dem Vector-Output des Mapping Nodes verbunden und die Datei «<em>Metal022_4K_NormalGL.jpg</em>» geöffnet. Zusätzlich wird nun ein neuer Node benötigt, welcher minimale visuelle Unebenheiten basierend auf der Normal-Textur simuliert. Hierfür wird mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> das «<em>Add</em>»-Menü geöffnet und unter «<em>Vector | Bump</em>» ein Bump-Node hinzugefügt. Dieser wird zwischen dem Image-Textur-Node und dem Principled-BSDF-Shader platziert. Der Normal-Output des Bump-Nodes wird anschliessend mit dem Normal-Input des Principled-BSDF-Shaders verbunden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bump einstellen</p>
+</div></div><p>Der Bump-Node nimmt die Informationen aus der Normal-Textur auf und simuliert drauf basierend kleine Unebenheiten im Material. Die Normal-Textur beschreibt jeweils die Höhe dieser Unebenheiten. Aus diesem Grund kann der Color-output der Normal-Textur mit dem Height-Input des Bump-Nodes verbunden werden. Mittels des Reiters «<em>Strength</em>» kann zudem eingestellt werden, wie stark diese Unebenheiten dargestellt werden sollen. Beispielsweise kann der Wert 0.45 verwendet werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Displacement-Textur hinzufügen</p>
+</div></div><p>Zu guter Letzt wird erneut eine Kopie des Image-Texture-Nodes erstellt, mit dem Mapping Node verbunden und die Datei «<em>Metal022_4K_Displacement.jpg</em>» geöffnet. Die Displacement-Textur bietet ebenfalls die Möglichkeit, um Unebenheiten im Material zu simulieren. Im Vergleich zur Normal-Textur handelt es sich hierbei um grössere Unebenheiten.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Displacement verbinden</p>
+</div></div><p>Zur Verwendung der Displacement-Textur wird ein weiterer Node benötigt, welcher im «<em>Add</em>»-Menü unter «<em>Vector | Displacement</em>» zu finden ist Dieser wird anschliessend neben dem Image-Texture-Node verbunden. Der Displacement-Output des Displacement-Nodes wird, anders als bei den anderen Texturen, nicht mit einem Shader verbunden, sondern direkt mit dem Displacement-Output des Material-Output-Nodes.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Displacement einstellen</p>
+</div></div><p>Der Color-Output der Displacement-Textur kann wie auch bei der Normal-Textur und dem Bump-Node mit dem Height-Input verbunden werden. Mittels des Reiters «<em>Scale</em>» kann zudem eingestellt werden, wie stark diese Unebenheiten erstellt werden. In der Regel reichen bereits sehr kleine Werte aus, wie beispielsweise 0.025.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Grösse der Textur einstellen</p>
+</div></div><p>Nachdem alle Texturen eingefügt wurden, kann im Mapping Node die Grösse der Textur angepasst werden. Hierfür kann der Wert bei der Skalierung entlang der drei Achsen vergrössert oder verkleinert werden. Beispielsweise könnte die Textur dreimal so klein dargestellt werden, indem die Skalierung für alle drei Achsen auf den Wert 3 gesetzt wird.</p>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_27/5_Nodes_Metall.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
-<p>Merke…</p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5: Node-Struktur für das Metall-Material.
+</figcaption>
+</figure>
 </div>
-<div class="rememberbox-body">
-<p>Texturen werden mit einem Mapping- und einem Texture-Coordinate-Node versehen, damit die Texturen über den Mapping-Node angepasst werden können.</p>
-</div>
-</div>
+</section>
+<section id="holz-texturieren" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="holz-texturieren">Holz texturieren</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Quelle der Metall-Textur</p>
+</div></div><p>Die Metall-Texturen stammen von der Website <a href="https://ambientcg.com/" class="uri">https://ambientcg.com/</a>. Diese Website bietet weitere Texturen an, die etwa für die Texturierung des Holz-Stiels verwendet werden können. So könnte für das Holzmaterial die Textur «Wood 057» verwendet werden.6 Hierfür muss die entsprechende Textur heruntergeladen werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Node-System kopieren</p>
+</div></div><p>Nun müsste für das Holz-Material dieselbe Node-Struktur erneut aufgebaut werden. Dies kann etwas übersprungen werden, indem alle Nodes aus dem Metall-Material mittels der Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> ausgewählt und mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">C</kbd><span class="visually-hidden">C</span> kopiert werden. Anschliessend kann im Properties-Editor der Slot für das zweite Material –das Holz – ausgewählt werden. Dadurch erscheint im Shader-Editor nun die Node-Struktur des Holz-Materials. Hier kann mit der Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> alles ausgewählt und die bestehenden Nodes mit der Taste <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> gelöscht werden. Anschliessend kann mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">V</kbd><span class="visually-hidden">V</span>die Node-Struktur aus dem Metall-Material eingefügt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Node-System kopieren</p>
+</div></div><p>Das neu eingefügt Node-System beinhaltet noch die Texturen, welche im Metall-Material verwendet wurden. Deshalb müssen bei allen Image-Texture-Nodes die entsprechenden Texturen mit der äquivalenten Texturart der Holztexturen ersetz werden. Bei dieser Textur wurde allerdings keine Metall-Textur angeboten, weshalb der Image-Texture-Node, welcher mit dem Metallic-Input des Principled-BSDF-Shaders verbunden ist, entfernt werden kann. Zudem können bei Bedarf die Einstellungen im Bump-Node für die Normal-Textur und die Einstellungen im Displacement-Node für die Displacement-Textur angepasst werden. Im Mapping-Node könnte zudem noch die Einstellung für die Skalierung der Textur angepasst werden, beispielsweise auf einen Wert von 1.5 pro Achse. Anschliessend ist der Hammer fertig texturiert.</p>
 <div class="exercisebox">
 <div class="exercisebox-header">
 <div class="exercisebox-icon">
 
 </div>
-<p>Übung 14: Textur zuweisen</p>
+<p>Übung 15: Texturieren</p>
 </div>
 <div class="exercisebox-body">
-<p><strong>Übung 14.1</strong></p>
-<p>Fügen Sie die Textur «Rocks024S_4K_Color.jpg» der Base-Color eines Materials hinzu, welches Sie dem Standardwürfel zugewiesen haben.</p>
+<p><strong>Übung 15.1</strong></p>
+<p>Suchen Sie nach einer anderen Holz-Textur und fügen Sie diese dem Material «Holz» des Hammers zu. Suchen Sie hierfür nach Texturen, die verschiedene Texturarten beinhalten.</p>
 </div>
 </div>
 

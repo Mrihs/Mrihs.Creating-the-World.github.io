@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>28. Displacement mit dem Displacement-Modifier erstellen – Creating the World</title>
+<title>29. Erstellen von Landschaften – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,8 +39,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
-<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -270,15 +268,29 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#die-optionen-im-a.n.t.-landscape-add-on" id="toc-die-optionen-im-a.n.t.-landscape-add-on" class="nav-link active" data-scroll-target="#die-optionen-im-a.n.t.-landscape-add-on">Die Optionen im A.N.T. Landscape-Add-on</a>
+  <ul class="collapse">
+  <li><a href="#presets" id="toc-presets" class="nav-link" data-scroll-target="#presets">Presets</a></li>
+  <li><a href="#refresh" id="toc-refresh" class="nav-link" data-scroll-target="#refresh">Refresh</a></li>
+  <li><a href="#main-settings" id="toc-main-settings" class="nav-link" data-scroll-target="#main-settings">Main Settings</a></li>
+  <li><a href="#noise-settings" id="toc-noise-settings" class="nav-link" data-scroll-target="#noise-settings">Noise Settings</a></li>
+  <li><a href="#displace-settings" id="toc-displace-settings" class="nav-link" data-scroll-target="#displace-settings">Displace Settings</a></li>
+  <li><a href="#water-plane" id="toc-water-plane" class="nav-link" data-scroll-target="#water-plane">Water Plane</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">28. Displacement mit dem Displacement-Modifier erstellen</h1>
+<h1 class="title">29. Erstellen von Landschaften</h1>
 </div>
 
 
@@ -297,110 +309,156 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Was macht die Displacement-Textur genau?</p>
-</div></div><p>Bislang wurden Texturen innerhalb von Objekten als Bestandteil von Materialien verwendet. So wurde etwa mittels der Color-Textur die Farbe für ein Material über eine Fläche hinweg festgelegt oder mittels der Roughness-Textur bestimmt, welchen Wert die Roughness an einer bestimmten Stelle hat. Im nächsten Schritt wird aufgezeigt, welche Mechanismen hinter der Displacement-Textur stecken. Abbildung 1 zeigt eine Displacement Textur. Was könnte sich hinter dieser Textur verbergen?</p>
+<p>Landschaften erstellen</p>
+</div></div><p>Um geografische Landschaften zu erstellen, müssen nicht zwingend Displacement-Texturen verwendet werden. Es ist auch möglich, von Hand Landschaften zu erstellen, was etwa durch die proportionale Bearbeitung etwas vereinfacht wird. Allerdings handelt es sich dabei trotzdem um einen aufwendigen Prozess. Blender beinhaltet jedoch ein integriertes Add-on, welches die schnelle Erstellung von Landschaften ermöglicht. Dieses Add-on heisst «<em>A.N.T.Landscape</em>» und muss zunächst in den Einstellungen von Blender aktiviert werden (unter «<em>Edit | Preferences</em>» und anschliessend unter dem Reiter «<em>Add-ons</em>»).</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Weiterführende Informationen</p>
+</div>
+<div class="tippbox-body">
+<p>Die Abkürzung A.N.T. des Add-ons «<em>A.N.T.Landscape</em>» steht für «<em>another noise tool</em>». Dies bezieht sich auf die Erstellung der Landschaften. Es wird jeweils eine Plane gebildet und anhand von zufälligem Noise die Landschaft daraus erstellt.</p>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Hinzufügen von neuen Landschaften</p>
+</div></div><p>Durch das Aktivieren dieses Add-ons wird im «<em>Add</em>»-Menü unter dem Menü punkt «<em>Mesh</em>» die Option «<em>Landscape</em>» verfügbar. Wird eine solche Landschaft hinzugefügt, erstellt Blender eine Fläche in der Welt und bearbeitet diese zu einer Landschaft um. Die Einstellungen dieser Landschaft sind im Kontext-Menü zum Hinzufügen von Objekten in der unteren linken Ecke aufzufinden.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_28/1_displacement_map.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_29/Aktivieren_Landscape.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Eine Displacement-Textur. Was könnte sich dahinter verbergen?
+Abbildung&nbsp;1: Aktivieren des Add-ons «A.N.T.Landscape».
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Plane hinzufügen</p>
-</div></div><p>Um zu erkennen, was die Displacement-Textur in diesem Beispiel darstellt, wird sie für einmal nicht als Material verwendet, sondern innerhalb eines Modifiers. Hierfür wird eine flache Oberfläche benötigt, auf welche der Modifier angewendet wird. Deshalb wird im 3D-Viewport-Display eine Plane hinzugefügt. Diese wird über das «<em>Add</em>»-Menü (<kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span>) unter «<em>Mesh | Plane</em>» erstellt.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Subdivision-Surface-Modifier hinzufügen</p>
-</div></div><p>Der Plane werden zwei Modifier hinzugefügt. Zunächst wird ein Subdivision-Surface-Modifier hinzugefügt. Damit soll die Fläche in kleinere, gleich grosse Quads unterteilt werden. Allerdings wird dadurch auch die Form der Fläche verändert, da über die Option «<em>Catmull-Clark</em>» die Kanten geglättet werden. Deshalb ist es nötig, im Subdivision-Surface-Modifier den Reiter «<em>Simple</em>» auszuwählen. Dadurch sollte die Fläche ihre originale Form beibehalten.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Displace-Modifier hinzufügen</p>
-</div></div><p>Als Nächstes wird ein neuer Modifier hinzugefügt. Hierbei handelt es sich um einen Modifier, der bislang noch nicht eingeführt wurde – nämlich um den «<em>Displace</em>»-Modifier. Dieser ist in der dritten Spalte der Modifier-Auswahl unter «<em>Deform</em>» aufzufinden. Sobald dieser hinzugefügt wurde, empfiehlt es sich, die Einstellung «<em>Coordinates</em>» auf «<em>UV</em>» umzuschalten.</p>
+<p>Problem der Bearbeitung im Kontext-Menü</p>
+</div></div><p>Die Einstellung der Landschaft im Kontext-Menü birgt das Problem, dass das Kontext-Menü jeweils wieder verschwindet, sobald ein Klick in den dreidimensionalen Raum des 3D-Viewport-Editors erfolgt. Auch das Durchführen anderer Operationen ausserhalb dieses Kontext-Menüs führt zum Verschwinden des Menüs. Die Bearbeitung der Landschaften erfolgt allerdings innerhalb des Kontext-Menüs. Durch einen Klick ausserhalb des Kontext-Menüs werden alle Einstellungen in diesem Menü unwiderruflich auf das Objekt angewendet. Sollte dies aus Versehen geschehen, obwohl man noch nicht mit der Einstellung der Landschaft fertig ist, muss man das Landschaftsobjekt löschen und erneut eine Landschaft hinzufügen. Glücklicherweise erinnert sich Blender an die zuletzt verwendeten Einstellungen, sodass die Einstellungen an derselben Stelle weitergeführt werden können.</p>
 <div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_28/Icon_Texture_Tab.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_29/Landscape_example.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Icon für den Textur-Reiter im Properties-Editor.
+Abbildung&nbsp;2: Eine Landschaft, erstellt mit «<em>A.N.T.Landscape</em>».
 </figcaption>
 </figure>
 </div>
+<section id="die-optionen-im-a.n.t.-landscape-add-on" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="die-optionen-im-a.n.t.-landscape-add-on">Die Optionen im A.N.T. Landscape-Add-on</h2>
+<section id="presets" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="presets">Presets</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Textur zum Displace-Modifier hinzufügen</p>
-</div></div><p>Dem Displace-Modifier kann eine Textur hinzugefügt werden. Hierfür muss auf die Schaltfläche «<em>New</em>» geklickt werden. Anschliessend wird von Blender ein Slot für eine neue Textur erstellt, welche nun im Displace-Modifier verwendet wird. Um diese Textur bearbeiten zu können, muss der Textur-Reiter, welcher sich zuunterst im Properties-Editor befindet, geöffnet werden. Alternativ kann auch innerhalb des Displace-Modifiers auf die Schaltfläche «<em>Show texture in texture tab</em>» geklickt werden, welche sich ganz rechts innerhalb des neu erstellten Textur-Slots befindet.</p>
+<p>Voreingestellte Landschaften</p>
+</div></div><p>Zuoberst im Kontext-Menü befindet sich ein Dropdown-Menü, welches eine Reihe verschiedener Voreinstellungen für Landschaften liefert. Soll die Landschaft etwa einen Canyon abbilden, so kann die Voreinstellung «<em>Canyon</em>» ausgewählt werden. Soll ein See abgebildet werden, so kann die Voreinstellung «<em>Lake</em>» gewählt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Voreinstellungen verwerfen vorherige Änderungen</p>
+</div></div><p>Werden nach der Auswahl einer Voreinstellung weitere Änderungen vorgenommen, werden diese nicht in den Voreinstellungen abgespeichert. Durch das Auswählen einer anderen Voreinstellung werden alle vorher gemachten Anpassungen zurückgesetzt und können nicht wieder rückgängig gemacht werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Hinzufügen und Löschen von eigenen Voreinstellungen</p>
+</div></div><p>Mittels der Schaltfläche «+» können jedoch eigene Voreinstellungen abgespeichert werden. Dadurch erscheint ein Dialogfeld, bei dem ein Name für die Voreinstellung eingegeben werden kann. Anschliessend kann diese Voreinstellung im Dropdown-Menü ausgewählt werden. Durch das Klicken der Schaltfläche «-» wird die aktuelle Voreinstellung gelöscht.</p>
+</section>
+<section id="refresh" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="refresh">Refresh</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Automatic refresh</p>
+</div></div><p>Unterhalb des Dropdown-Menüs befinden sich zwei Schaltflächen. Die erste Schaltfläche, welche ein Auto abbildet, steht für «<em>automatic refresh</em>». Wenn diese Schaltfläche aktiviert ist, werden alle Änderungen in den Landscape-Einstellungen automatisch im Mesh dargestellt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Refresh</p>
+</div></div><p>Die zweite Schalfläche «<em>refresh</em>» wird verwendet, wenn Änderungen in den Landscape-Einstellungen übernommen und im Mesh dargestellt werden sollen. Wenn allerdings die Option «<em>automatic refresh</em>» aktiviert ist, wird diese Schaltfläche obsolet, weshalb sie automatisch mit dieser Option mit ausgewählt wird.</p>
+</section>
+<section id="main-settings" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="main-settings">Main Settings</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Grundlegende Einstellungen</p>
+</div></div><p>Innerhalb der Main-Settings sind grundlegende Eigenschaften des Meshes zusammengefasst. Zunächst können mittels drei Schaltflächen folgende Optionen durchgeführt werden:</p>
+<ul>
+<li>«<strong><em>Cursor</em></strong>»: Ist diese Option aktiviert, wird die Landschaft an der Position des 3D-Cursors hinzu gefügt. Wenn diese Option deaktiviert ist, wird die Landschaft im Zentrum der Welt hinzugefügt.</li>
+<li>«<strong><em>Smooth</em></strong>»: Durch diese Option kann direkt bei der Landschaftserstellung «Shade Smooth» aktiviert werden, um das Objekt möglichst geglättet darzustellen. Ansonsten wird das Objekt anhand von «Shade Flat» erstellt.</li>
+<li>«<strong><em>Triangulate</em></strong>»: Wenn dies Option aktiviert ist, werden die Faces als Tris statt als Quads im Mesh gebildet.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Planeten statt Landschaften bilden</p>
+</div></div><p>Unterhalb dieser drei Optionen befindet sich zudem die Schaltfläche «<em>Sphere</em>». Wird diese aktiviert, wird statt einer flachen Landschaft eine Kugel erstellt, welche anhand der Einstellungen bearbeitet wird. Dies ermöglicht es, dass dieses Add-on auch zur Erstellung von Planeten verwendet werden kann. Wenn die Option «<em>Sphere</em>» aktiviert ist, kann zudem die Option «<em>Remove Doubles</em>» aktiviert werden, um mögliche doppelte Vertices an derselben Position direkt miteinander zu verbinden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Weitere Einstellungen</p>
+</div></div><p>Über die Zeile «<em>Name</em>» kann ein Name für das erstellte Mesh definiert werden und mittels der Zeile «<em>Material</em>» kann ein bereits erstelltes Material ausgewählt werden, welches dem Objekt hinzugefügt werden soll. Die beiden Zeilen «<em>Subdivisions</em>» geben jeweils an, wie viele Subdivisions entlang der jeweiligen Achse im Mesh erstellt werden. Je höher die Anzahl dieser Subdivisions, desto detailliertere Landschaften können erstellt werden, aber desto mehr Leistung wird vom Rechner benötigt. Mittels der Zeile «<em>Mesh Size</em>» kann zudem eingestellt werden, wie gross das zu erstellende Mesh sein soll.</p>
+</section>
+<section id="noise-settings" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="noise-settings">Noise Settings</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Noises generieren die Grundlage des Displacements</p>
+</div></div><p>Die erstellten Landschaften werden im Hintergrund basierend auf einer zufällig generierten Displacement-Textur erstellt. Mittels verschiedener Einstellungsparameter berechnet Blender dabei eine Textur aus Noise, welche anschliessend die Displacement-Textur darstellt. Diese Einstellungen werden im Bereich «<em>Noise Settings</em>» vollzogen. Hierfür können unter dem Dropdown-Menü «<em>Noise Type</em>» verschiedene Arten von zufällig generierten Noises ausgewählt werden. Im Dropdown-Menü «<em>Noise Basis</em>» kann zwischen verschiedenen Algorithmen zur Berechnung des Noises ausgewählt werden. Mittels der Einstellung «<em>Random Seed</em>» kann zudem eine Option der Zufallsauswahl im Computer ausgewählt werden. Dadurch können die zufällig erstellten Noises reproduziert werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Noise ausrichten und skalieren</p>
+</div></div><p>Über die Optionen «<em>Offset</em>» und «<em>Size</em>» kann der resultierende Noise vergrössert oder verkleinert werden. Im Grunde genommen wird über die Einstellung «<em>Offset</em>» entlang einer unendlich grossen, automatisch generierten Displacement-Textur gescrollt und mittels der Einstellung «<em>Size</em>» diese Textur vergrössert oder verkleinert. Mittels der Option «<em>Noise Size</em>» lässt sich diese Option für den Noise ebenfalls vergrössern oder verkleinern.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Weiterführende Informationen</p>
+</div>
+<div class="tippbox-body">
+<p>Wenn ein Computer auf Befehl Dinge «zufällig» verändern oder generieren soll, erfolgt dies gar nicht zufällig. Bei solchen Zufallsoperationen gibt es jeweils eine Reihe von «vorgefertigten Zufällen», welche jeweils eintreten. Dies ermöglicht es, dass scheinbar zufällige Einstellungen ausgewählt werden können. Die Seeds beschreiben jeweils einen Startpunkt, von dem aus der Computer den «Zufall» generiert. Wenn mehrere Computer für dieselbe zufallsbasierte Anwendung denselben Seed verwenden, resultiert dasselbe Ergebnis, da alle auf derselben ausgewählten Zufallsreihenfolge basieren.</p>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Weitere Einstellungen zu Noise sind verfügbar</p>
+</div></div><p>Unterhalb dieser Optionen gibt es einige weitere Parameter, mit denen der Noise weiterbearbeitet werden kann. Zudem kann mittels des Dropdown-Menüs «<em>Effect Type</em>» ein zusätzlicher Effekt mit dem Noise kombiniert werden. Für diesen Effekttyp stehen nochmals eine Reihe weiterer Einstellungsoptionen zur Verfügung.</p>
+</section>
+<section id="displace-settings" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="displace-settings">Displace Settings</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Displacement wendet Noise an</p>
+</div></div><p>Während die Einstellungen in den Noise-Settings für die Veränderung des Noises innerhalb einer generierten Displacement-Textur verwendet werden, kann mittels der Displace-Settings deren Anwendung auf das Mesh verfeinert werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Höhe des Displacements anpassen</p>
+</div></div><p>Mittels der Zeile «<em>Height</em>» kann eingestellt werden, zu welcher Höhe das Displacement jeweils führen soll. Mit der Zeile «<em>Offset</em>» kann zudem eine gewisse Abweichung von dieser Höhe eingestellt werden. Mittels der Zeilen «<em>Maximum</em>» und «<em>Minimum</em>» kann zudem definiert werden, in welchen Bereichen der Höhe das Displacement lediglich berücksichtigt wird. Ist beispielsweise als Maximum der Wert 0.5 und als Minimum der Wert 0.1 eingestellt, werden alle Vertices, welche durch das Displacement unter der lokalen Höhe von 0.1 liegen, auf die Höhe 0.1 hochgesetzt. Analog dazu werden alle Vertices, welche in der Höhe über dem Wert 0.5 liegen, auf den Wert 0.5 heruntergesetzt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Falloff</p>
+</div></div><p>Am Rand der Landschaft wird in der Regel der Effekt des Displacements entfernt. Dies beschreibt der Falloff. Über das Dropdown-Menü «<em>Falloff</em>» kann definiert werden, auf welche Achsen des Meshes dieser Effekt angewendet werden soll. Zudem kann mit der Zeile «<em>Edge Level</em>» definiert werden, auf welcher Höhe sich der Rand des Objektes befinden soll. Mittels der beiden Zeilen «<em>Falloff X</em>» und «<em>Falloff Y</em>» kann angegeben werden, wie gross der Bereich des Falloffs sein soll.</p>
+</section>
+<section id="water-plane" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="water-plane">Water Plane</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Water Plane</p>
+</div></div><p>Mittels der Option «<em>Water Plane</em>» wird eine weitere Fläche hinzugefügt, die als Wasserfläche dienen kann. Es handelt sich dabei um eine Plane, welche als separates Objekt hinzugefügt wird. Dieser Fläche kann ebenfalls bereits ein Material zugewiesen werden. Mittels der Zeile «<em>Level</em>» wird bestimmt, wie hoch der Wasserspiegel sein soll.</p>
 <div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_28/Show_texture_in_Texture_Tab.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_29/Landscape_comparison.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Icon zur Einstellung der Texturen im Textur-Reiter.
+Abbildung&nbsp;3: Links ein mit A.N.T.Landscape erstellter Berg. Daneben ein Berg, dessen Displacement als Minimum 0.1 und als Maximum 0.5 hat. Durch die Anhebung des Wertes «Minimum» auf 0.1 werden alle Vertices im Objekt auf diese Höhe hinaufgesetzt. Danaben zwei Versionen desselben Berges mit unterschiedlichen Falloff-Werten.
 </figcaption>
 </figure>
 </div>
 
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Einstellungen im Textur-Reiter</p>
-</div></div><p>Im Textur-Reiter des Properties-Editors wird nun angegeben, welche Textur für den Displace-Modifier verwendet wird. Dies ist anhand des ersten Dropdown-Menüs ersichtlich, in welchem «<em>Displace</em>» ausgewählt ist. Mithilfe dieses Dropdown-Menüs könnten Texturen auch für andere Funktionen (z.B. Brushes) verwendet werden. Im zweiten Dropdown-Menü können Texturen, welche bereits in Blender geladen wurden, als Textur ausgewählt werden. Mithilfe der Einstellung «<em>Type</em>» können verschiedene Arten von Texturen anvisiert werden. Dadurch können prozedurale Texturen innerhalb von Blender anhand von Parametern erstellt werden, oder es wird die Einstellung «<em>Image or Movie</em>» verwendet, um ein Bild oder einen Film als Textur zu verwenden. In diesem Fall wird ein Bild verwendet, weshalb die Einstellung «<em>Image or Movie</em>» als Type korrekt ist.</p>
-<div class="tippbox">
-<div class="tippbox-header">
-<div class="tippbox-icon">
 
-</div>
-<p>Weiterführende Informationen</p>
-</div>
-<div class="tippbox-body">
-<p>Blender unterscheidet intern zwischen Bilddateien und Texturen. Dadurch sind teilweise Bilddateien in Blender geladen, allerdings nicht als Textur verwendbar. Hierfür muss im Textur-Reiter des Properties-Editors das in Blender geladene Bild noch einer Textur hinzufügt werden. Um nachzuvollziehen, ob man in Blender gerade Bilddateien oder Texturen auswählt, kann man sich jeweils am Icon des Dropdown-Menüs orientieren.</p>
-</div>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Bild zur Textur hinzufügen</p>
-</div></div><p>Sobald die Einstellung «<em>Image or Movie</em>» ausgewählt ist, wird der Reiter «<em>Image</em>» sichtbar. Darin kann auf dieselben Arten wie innerhalb eines Image-Texture-Nodes ein Bild geladen werden. In diesem Fall wird über die Schaltfläche «<em>Open</em>» die Bilddatei «<em>displacement_map.png</em>» geöffnet. Anschliessend sollte die entsprechende Bilddatei der Textur hinzugefügt worden sein und die Textur sollte über den Displacement-Modifier eine Veränderung im Mesh bewirken.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Effekte der Displacement-Textur</p>
-</div></div><p>Was ist dabei passiert? Jeder Vertex des Meshes wurde entlang der Normalen verschoben. Der Grad dieser Verschiebung ergibt sich anhand der soeben eingefügten Displacement-Textur. Über die UVs ermittelt Blender für jeden Vertex, wo sich dieser auf der Displacement-Textur befindet, und extrahiert aus den Schwarz-weiss-Werten der Textur an dieser Stelle, wie stark die Verschiebung entlang der Normalen vollzogen werden soll. Hellere Werte in der Textur stehen für höhere Bereiche (grösseres Displacement), während dunklere Werte in der Textur für tiefere Bereiche stehen (geringeres Displacement). Dadurch können anhand von Displacement-Texturen Abweichungen im Objekt vollzogen werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Displacement benötigt viele Vertices</p>
-</div></div><p>Bislang ist noch nicht zu erkennen, was die Displacement-Textur eigentlich abbilden soll. Dies liegt daran, dass das Mesh zu wenige Vertices beinhaltet, um möglichst die gesamte Form der Textur abzudecken. Zudem befinden sich die Vertices auch nicht zwingend an den höchsten oder tiefsten Punkten der Textur, wodurch das Maximum und das Minimum der Abweichungen innerhalb der Displacement-Textur möglicherweise nicht abgebildet werden. Hierfür werden demnach weitere Vertices benötigt.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Weitere Vertices hinzufügen</p>
-</div></div><p>Durch den Subdivision-Surface-Modifier können weitere Vertices hinzugefügt werden, indem die Anzahl Subdivisions im Reiter «<em>Levels Viewport</em>» erhöht wird. Diese Option reicht maximal für sechs Subdivisions. Dadurch wird bereits ersichtlich, was sich hinter der Displacement-Textur befindet. Sollten noch mehr Subdivisions benötigt oder gewünscht werden, kann der Subdivision-Surface-Modifier dupliziert werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Vorsicht beim Duplizieren des Subdivision-Surface-Modifiers</p>
-</div></div><p>Beim Duplizieren des Subdivision-Surface-Modifiers ist dringend zu empfehlen, dass die Anzahl Subdivisions vor dem Duplizieren zurückgesetzt wird. Wird ein Subdivision-Surface-Modifier mit sechs Subdivisions dupliziert, führt dies dazu, dass durch das resultierende Duplikat insgesamt zwölf Subdivisions durchgeführt werden. Dies kann je nach Computer einen Grossteil der verfügbaren Leistung benötigen. Durch das Zurücksetzen der Anzahl Subdivisions auf beispielsweise zwei Subdivisions werden mit dem Duplikat zusammen lediglich vier Subdivision durchgeführt.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Reihenfolge der Modifier beachten</p>
-</div></div><p>Weiterhin ist wichtig, dass die Subdivision-Surface-Modifier in der Platzierung der Modifier vor dem Displace-Modifier platziert werden. Nur Vertices, welche vor dem Displace-Modifier erstellt werden, können von diesem Modifier berücksichtigt werden. Modifier, welche nach dem Displace-Modifier platziert werden, kann der Displace-Modifier nicht berücksichtigen.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Tangram Heightmapper</p>
-</div></div><p>Die Bilddatei «<em>displacement_map.png</em>» wurde mithilfe des «Tangram Heightmappers» (<a href="http://www.tangrams.github.io/heightmapper" class="uri">http://www.tangrams.github.io/heightmapper</a>) erstellt. Dadurch können Areale der Erde ausgewählt und eine Höhentextur des entsprechenden Gebiets erstellt werden. Diese Höhentexturen können anschliessend als Displacement-/Height-Textur verwendet werden.</p>
-<div class="tippbox">
-<div class="tippbox-header">
-<div class="tippbox-icon">
-
-</div>
-<p>Weiterführende Informationen</p>
-</div>
-<div class="tippbox-body">
-<p>In diesem Beispiel wurde das Material des Objektes nicht bearbeitet. Die Displacement-Textur wurde lediglich verwendet, um damit die Oberfläche des Objektes zu verformen.</p>
-</div>
-
-
-</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

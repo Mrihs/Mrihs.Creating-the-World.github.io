@@ -1,0 +1,166 @@
+---
+title: "29. Erstellen von Landschaften"
+editor: visual
+---
+
+::: column-margin
+Landschaften erstellen
+:::
+
+Um geografische Landschaften zu erstellen, müssen nicht zwingend Displacement-Texturen verwendet werden. Es ist auch möglich, von Hand Landschaften zu erstellen, was etwa durch die proportionale Bearbeitung etwas vereinfacht wird. Allerdings handelt es sich dabei trotzdem um einen aufwendigen Prozess. Blender beinhaltet jedoch ein integriertes Add-on, welches die schnelle Erstellung von Landschaften ermöglicht. Dieses Add-on heisst «*A.N.T.Landscape*» und muss zunächst in den Einstellungen von Blender aktiviert werden (unter «*Edit \| Preferences*» und anschliessend unter dem Reiter «*Add-ons*»).
+
+:::::::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Weiterführende Informationen
+::::
+
+::: tippbox-body
+Die Abkürzung A.N.T. des Add-ons «*A.N.T.Landscape*» steht für «*another noise tool*». Dies bezieht sich auf die Erstellung der Landschaften. Es wird jeweils eine Plane gebildet und anhand von zufälligem Noise die Landschaft daraus erstellt.
+:::
+::::::::::
+
+::: column-margin
+Hinzufügen von neuen Landschaften
+:::
+
+Durch das Aktivieren dieses Add-ons wird im «*Add*»-Menü unter dem Menü punkt «*Mesh*» die Option «*Landscape*» verfügbar. Wird eine solche Landschaft hinzugefügt, erstellt Blender eine Fläche in der Welt und bearbeitet diese zu einer Landschaft um. Die Einstellungen dieser Landschaft sind im Kontext-Menü zum Hinzufügen von Objekten in der unteren linken Ecke aufzufinden.
+
+![Aktivieren des Add-ons «A.N.T.Landscape».](Images/Chapter_29/Aktivieren_Landscape.png){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Problem der Bearbeitung im Kontext-Menü
+:::
+
+Die Einstellung der Landschaft im Kontext-Menü birgt das Problem, dass das Kontext-Menü jeweils wieder verschwindet, sobald ein Klick in den dreidimensionalen Raum des 3D-Viewport-Editors erfolgt. Auch das Durchführen anderer Operationen ausserhalb dieses Kontext-Menüs führt zum Verschwinden des Menüs. Die Bearbeitung der Landschaften erfolgt allerdings innerhalb des Kontext-Menüs. Durch einen Klick ausserhalb des Kontext-Menüs werden alle Einstellungen in diesem Menü unwiderruflich auf das Objekt angewendet. Sollte dies aus Versehen geschehen, obwohl man noch nicht mit der Einstellung der Landschaft fertig ist, muss man das Landschaftsobjekt löschen und erneut eine Landschaft hinzufügen. Glücklicherweise erinnert sich Blender an die zuletzt verwendeten Einstellungen, sodass die Einstellungen an derselben Stelle weitergeführt werden können.
+
+![Eine Landschaft, erstellt mit «*A.N.T.Landscape*».](Images/Chapter_29/Landscape_example.png){#fig-1_2 fig-align="left"}
+
+## Die Optionen im A.N.T. Landscape-Add-on
+
+### Presets
+
+::: column-margin
+Voreingestellte Landschaften
+:::
+
+Zuoberst im Kontext-Menü befindet sich ein Dropdown-Menü, welches eine Reihe verschiedener Voreinstellungen für Landschaften liefert. Soll die Landschaft etwa einen Canyon abbilden, so kann die Voreinstellung «*Canyon*» ausgewählt werden. Soll ein See abgebildet werden, so kann die Voreinstellung «*Lake*» gewählt werden.
+
+::: column-margin
+Voreinstellungen verwerfen vorherige Änderungen
+:::
+
+Werden nach der Auswahl einer Voreinstellung weitere Änderungen vorgenommen, werden diese nicht in den Voreinstellungen abgespeichert. Durch das Auswählen einer anderen Voreinstellung werden alle vorher gemachten Anpassungen zurückgesetzt und können nicht wieder rückgängig gemacht werden.
+
+::: column-margin
+Hinzufügen und Löschen von eigenen Voreinstellungen
+::::::::::
+
+Mittels der Schaltfläche «+» können jedoch eigene Voreinstellungen abgespeichert werden. Dadurch erscheint ein Dialogfeld, bei dem ein Name für die Voreinstellung eingegeben werden kann. Anschliessend kann diese Voreinstellung im Dropdown-Menü ausgewählt werden. Durch das Klicken der Schaltfläche «-» wird die aktuelle Voreinstellung gelöscht.
+
+### Refresh
+
+::: column-margin
+Automatic refresh
+:::
+
+Unterhalb des Dropdown-Menüs befinden sich zwei Schaltflächen. Die erste Schaltfläche, welche ein Auto abbildet, steht für «*automatic refresh*». Wenn diese Schaltfläche aktiviert ist, werden alle Änderungen in den Landscape-Einstellungen automatisch im Mesh dargestellt.
+
+::: column-margin
+Refresh
+:::
+
+Die zweite Schalfläche «*refresh*» wird verwendet, wenn Änderungen in den Landscape-Einstellungen übernommen und im Mesh dargestellt werden sollen. Wenn allerdings die Option «*automatic refresh*» aktiviert ist, wird diese Schaltfläche obsolet, weshalb sie automatisch mit dieser Option mit ausgewählt wird.
+
+### Main Settings
+
+::: column-margin
+Grundlegende Einstellungen
+:::
+
+Innerhalb der Main-Settings sind grundlegende Eigenschaften des Meshes zusammengefasst. Zunächst können mittels drei Schaltflächen folgende Optionen durchgeführt werden:
+
+-   «***Cursor***»: Ist diese Option aktiviert, wird die Landschaft an der Position des 3D-Cursors hinzu gefügt. Wenn diese Option deaktiviert ist, wird die Landschaft im Zentrum der Welt hinzugefügt.
+-   «***Smooth***»: Durch diese Option kann direkt bei der Landschaftserstellung «Shade Smooth» aktiviert werden, um das Objekt möglichst geglättet darzustellen. Ansonsten wird das Objekt anhand von «Shade Flat» erstellt.
+-   «***Triangulate***»: Wenn dies Option aktiviert ist, werden die Faces als Tris statt als Quads im Mesh gebildet.
+
+::: column-margin
+Planeten statt Landschaften bilden
+:::
+
+Unterhalb dieser drei Optionen befindet sich zudem die Schaltfläche «*Sphere*». Wird diese aktiviert, wird statt einer flachen Landschaft eine Kugel erstellt, welche anhand der Einstellungen bearbeitet wird. Dies ermöglicht es, dass dieses Add-on auch zur Erstellung von Planeten verwendet werden kann. Wenn die Option «*Sphere*» aktiviert ist, kann zudem die Option «*Remove Doubles*» aktiviert werden, um mögliche doppelte Vertices an derselben Position direkt miteinander zu verbinden.
+
+::: column-margin
+Weitere Einstellungen
+:::
+
+Über die Zeile «*Name*» kann ein Name für das erstellte Mesh definiert werden und mittels der Zeile «*Material*» kann ein bereits erstelltes Material ausgewählt werden, welches dem Objekt hinzugefügt werden soll. Die beiden Zeilen «*Subdivisions*» geben jeweils an, wie viele Subdivisions entlang der jeweiligen Achse im Mesh erstellt werden. Je höher die Anzahl dieser Subdivisions, desto detailliertere Landschaften können erstellt werden, aber desto mehr Leistung wird vom Rechner benötigt. Mittels der Zeile «*Mesh Size*» kann zudem eingestellt werden, wie gross das zu erstellende Mesh sein soll.
+
+### Noise Settings
+
+::: column-margin
+Noises generieren die Grundlage des Displacements
+:::
+
+Die erstellten Landschaften werden im Hintergrund basierend auf einer zufällig generierten Displacement-Textur erstellt. Mittels verschiedener Einstellungsparameter berechnet Blender dabei eine Textur aus Noise, welche anschliessend die Displacement-Textur darstellt. Diese Einstellungen werden im Bereich «*Noise Settings*» vollzogen. Hierfür können unter dem Dropdown-Menü «*Noise Type*» verschiedene Arten von zufällig generierten Noises ausgewählt werden. Im Dropdown-Menü «*Noise Basis*» kann zwischen verschiedenen Algorithmen zur Berechnung des Noises ausgewählt werden. Mittels der Einstellung «*Random Seed*» kann zudem eine Option der Zufallsauswahl im Computer ausgewählt werden. Dadurch können die zufällig erstellten Noises reproduziert werden.
+
+::: column-margin
+Noise ausrichten und skalieren
+:::
+
+Über die Optionen «*Offset*» und «*Size*» kann der resultierende Noise vergrössert oder verkleinert
+werden. Im Grunde genommen wird über die Einstellung «*Offset*» entlang einer unendlich grossen, automatisch generierten Displacement-Textur gescrollt und mittels der Einstellung «*Size*» diese Textur vergrössert oder verkleinert. Mittels der Option «*Noise Size*» lässt sich
+diese Option für den Noise ebenfalls vergrössern oder verkleinern.
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Weiterführende Informationen
+::::
+
+::: tippbox-body
+Wenn ein Computer auf Befehl Dinge «zufällig» verändern oder generieren soll, erfolgt dies gar nicht zufällig. Bei solchen Zufallsoperationen gibt es jeweils eine Reihe von «vorgefertigten Zufällen», welche jeweils eintreten. Dies ermöglicht es, dass scheinbar zufällige Einstellungen ausgewählt werden können. Die Seeds beschreiben jeweils einen Startpunkt, von dem aus der Computer den «Zufall» generiert. Wenn mehrere Computer für dieselbe zufallsbasierte Anwendung denselben Seed verwenden, resultiert dasselbe Ergebnis, da alle auf derselben ausgewählten Zufallsreihenfolge basieren. 
+:::
+::::::
+
+::: column-margin
+Weitere Einstellungen zu Noise sind verfügbar
+:::
+
+Unterhalb dieser Optionen gibt es einige weitere Parameter, mit denen 
+der Noise weiterbearbeitet werden kann. Zudem kann mittels des Dropdown-Menüs «*Effect Type*» ein zusätzlicher Effekt mit dem Noise kombiniert werden. Für diesen Effekttyp stehen nochmals eine Reihe weiterer Einstellungsoptionen zur Verfügung.
+
+### Displace Settings
+
+::: column-margin
+Displacement wendet Noise an 
+:::
+
+Während die Einstellungen in den Noise-Settings für die Veränderung des Noises innerhalb einer generierten Displacement-Textur verwendet werden, kann mittels der Displace-Settings deren Anwendung auf das Mesh verfeinert werden. 
+
+::: column-margin
+Höhe des Displacements anpassen 
+:::
+
+Mittels der Zeile «*Height*» kann eingestellt werden, zu welcher Höhe das Displacement jeweils führen soll. Mit der Zeile «*Offset*» kann zudem eine gewisse Abweichung von dieser Höhe eingestellt werden. Mittels der Zeilen «*Maximum*» und «*Minimum*» kann zudem definiert werden, in welchen 
+Bereichen der Höhe das Displacement lediglich berücksichtigt wird. Ist beispielsweise als Maximum der Wert 0.5 und als Minimum der Wert 0.1 eingestellt, werden alle Vertices, welche durch das Displacement unter der lokalen Höhe von 0.1 liegen, auf die Höhe 0.1 hochgesetzt. Analog dazu werden alle Vertices, welche in der Höhe über dem Wert 0.5 liegen, auf den Wert 0.5 heruntergesetzt. 
+
+::: column-margin
+Falloff
+:::
+
+Am Rand der Landschaft wird in der Regel der Effekt des Displacements entfernt. Dies beschreibt der Falloff. Über das Dropdown-Menü «*Falloff*» kann definiert werden, auf welche Achsen des Meshes dieser Effekt angewendet werden soll. Zudem kann mit der Zeile «*Edge Level*» definiert werden, auf welcher Höhe sich der Rand des Objektes befinden soll. Mittels der beiden Zeilen «*Falloff X*» und «*Falloff Y*» kann angegeben werden, wie gross der Bereich des Falloffs sein soll.
+
+### Water Plane
+
+::: column-margin
+Water Plane 
+:::
+
+Mittels der Option «*Water Plane*» wird eine weitere Fläche hinzugefügt, die als Wasserfläche dienen kann. Es handelt sich dabei um eine Plane, welche als separates Objekt hinzugefügt wird. Dieser Fläche kann ebenfalls bereits ein Material zugewiesen werden. Mittels der Zeile «*Level*» wird bestimmt, wie hoch der Wasserspiegel sein soll. 
+
+![Links ein mit A.N.T.Landscape erstellter Berg. Daneben ein Berg, dessen Displacement als Minimum 0.1 und als Maximum 0.5 hat. Durch die Anhebung des Wertes «Minimum» auf 0.1 werden alle Vertices im Objekt auf diese Höhe hinaufgesetzt. Danaben zwei Versionen desselben Berges mit unterschiedlichen Falloff-Werten. ](Images/Chapter_29/Landscape_comparison.png){#fig-1_3 fig-align="left"}

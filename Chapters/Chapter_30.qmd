@@ -149,7 +149,7 @@ White-Noise aufhellen mittels Bright/Contrast-Node
 
 Durch eine Erhöhung der Zeile «*Bright*» wird anschliessend die Noise-Textur farblich erhellt. Dies führt dazu, dass die dunkleren Anteile, welche zu einer tieferen Roughness führen, aufgehellt werden und dadurch eine höhere Roughness aufweisen. Hier könnte beispielweise ein Wert von 0.3 verwendet werden.
 
-![Nodes-System für prozedurale Sand-Texturen.](Images/Chapter_30/){#fig-1_1 fig-align="left"}
+![Nodes-System für prozedurale Sand-Texturen.](Images/Chapter_30/Nodes_System.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 White-Noise-Textur als Normal-Textur verwenden

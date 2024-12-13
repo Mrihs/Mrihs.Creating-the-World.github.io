@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>31. Parameter im Principled-BSDF-Shader – Creating the World</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Creating the World</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Suchen"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navigation umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../Sites/Overview.html"> <i class="bi bi-calendar-range" role="img">
+</i> 
+<span class="menu-text">Kursübersicht</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cheatsheets" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-lightbulb" role="img">
+</i> 
+ <span class="menu-text">Cheatsheets</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-cheatsheets">    
+        <li>
+    <a class="dropdown-item" href="../Cheatsheets/cheatsheet_keys.pdf">
+ <span class="dropdown-text">Tastenkombinationen</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Cheatsheets/cheatsheet_shading.pdf">
+ <span class="dropdown-text">Shading</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <span class="nav-link">
+    <i class="bi bi-folder" role="img">
+</i> 
+<span class="menu-text">Ressourcen</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+    <i class="bi bi-images" role="img">
+</i> 
+<span class="menu-text">Folien</span>
+    </span>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-skript" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-eyeglasses" role="img">
+</i> 
+ <span class="menu-text">Skript</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-skript">    
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_1.html">
+ <span class="dropdown-text">Kapitel 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_2.html">
+ <span class="dropdown-text">Kapitel 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_3.html">
+ <span class="dropdown-text">Kapitel 3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_4.html">
+ <span class="dropdown-text">Kapitel 4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_5.html">
+ <span class="dropdown-text">Kapitel 5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_6.html">
+ <span class="dropdown-text">Kapitel 6</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_7.html">
+ <span class="dropdown-text">Kapitel 7</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_8.html">
+ <span class="dropdown-text">Kapitel 8</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_9.html">
+ <span class="dropdown-text">Kapitel 9</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_10.html">
+ <span class="dropdown-text">Kapitel 10</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_11.html">
+ <span class="dropdown-text">Kapitel 11</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_12.html">
+ <span class="dropdown-text">Kapitel 12</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_13.html">
+ <span class="dropdown-text">Kapitel 13</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_14.html">
+ <span class="dropdown-text">Kapitel 14</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_15.html">
+ <span class="dropdown-text">Kapitel 15</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_16.html">
+ <span class="dropdown-text">Kapitel 16</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_17.html">
+ <span class="dropdown-text">Kapitel 17</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_18.html">
+ <span class="dropdown-text">Kapitel 18</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_19.html">
+ <span class="dropdown-text">Kapitel 19</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_20.html">
+ <span class="dropdown-text">Kapitel 20</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_21.html">
+ <span class="dropdown-text">Kapitel 21</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_22.html">
+ <span class="dropdown-text">Kapitel 22</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_23.html">
+ <span class="dropdown-text">Kapitel 23</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_24.html">
+ <span class="dropdown-text">Kapitel 24</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_25.html">
+ <span class="dropdown-text">Kapitel 25</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_25.html">
+ <span class="dropdown-text">Kapitel 25</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_26.html">
+ <span class="dropdown-text">Kapitel 26</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_27.html">
+ <span class="dropdown-text">Kapitel 27</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_28.html">
+ <span class="dropdown-text">Kapitel 28</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_29.html">
+ <span class="dropdown-text">Kapitel 29</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_30.html">
+ <span class="dropdown-text">Kapitel 30</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_31.html">
+ <span class="dropdown-text">Kapitel 31</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> <i class="bi bi-info-circle" role="img">
+</i> 
+<span class="menu-text">Über</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#subsurface-scattering" id="toc-subsurface-scattering" class="nav-link active" data-scroll-target="#subsurface-scattering">Subsurface-Scattering</a></li>
+  <li><a href="#specularity" id="toc-specularity" class="nav-link" data-scroll-target="#specularity">Specularity</a>
+  <ul class="collapse">
+  <li><a href="#einfallswinkel-und-index-of-refraction" id="toc-einfallswinkel-und-index-of-refraction" class="nav-link" data-scroll-target="#einfallswinkel-und-index-of-refraction">Einfallswinkel und Index of Refraction</a></li>
+  <li><a href="#specularity-ermitteln" id="toc-specularity-ermitteln" class="nav-link" data-scroll-target="#specularity-ermitteln">Specularity ermitteln</a></li>
+  </ul></li>
+  <li><a href="#anisotropie" id="toc-anisotropie" class="nav-link" data-scroll-target="#anisotropie">Anisotropie</a></li>
+  <li><a href="#sheen" id="toc-sheen" class="nav-link" data-scroll-target="#sheen">Sheen</a></li>
+  <li><a href="#clearcoat" id="toc-clearcoat" class="nav-link" data-scroll-target="#clearcoat">Clearcoat</a></li>
+  <li><a href="#transmission" id="toc-transmission" class="nav-link" data-scroll-target="#transmission">Transmission</a></li>
+  <li><a href="#emission" id="toc-emission" class="nav-link" data-scroll-target="#emission">Emission</a></li>
+  <li><a href="#distribution" id="toc-distribution" class="nav-link" data-scroll-target="#distribution">Distribution</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">31. Parameter im Principled-BSDF-Shader</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Parameter im Principled-BSDF-Shader</p>
+</div></div><p>Mittlerweile wurde bereits sehr viel mit dem Principled-BSDF-Shader gearbeitet. Dadurch sollten die wichtigsten Parameter, welche bei dessen Verwendung berücksichtigt werden, bekannt geworden sein. So wurden die Base-Color, die Roughness und der Metallic-Wert bereits erläutert und durch die Verwendung von Texturen wurden auch bereits die Normal-Werte verwendet. Es gibt allerdings noch eine Vielzahl weiterer Parameter im Principled-BSDF-Shader, welche variiert werden können. Einige davon werden, allerdings sehr selten</p>
+<section id="subsurface-scattering" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="subsurface-scattering">Subsurface-Scattering</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Was ist Subsurface-Scattering?</p>
+</div></div><p>Bei der Refraktion von Lichtstrahlen dringen diese Lichtstrahlen in ein Objekt ein. Anschliessend werden sie in der Oberfläche des Objektes gestreut und dringen anschliessend wieder aus dem Objekt aus. Diese Lichtstrahlen können dabei un terschiedlich weit innerhalb des Objektes eindringen. Dadurch kann es in manchen Situationen vorkommen, dass die Lichtstrahlen auch aus der anderen Seite des Objektes wieder austreten. Dieser Effekt wird als Subsurface-Scattering bezeichnet. Dabei dringen Lichtstrahlen durch das Objekt hindurch und scheinen auch das Innere des Objektes zu beleuchten.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_31/Subsurface Scattering.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Lichtstrahlen beim Subsurface-Scattering. Die Strahlen dringen deutlich weiter in das Objekt ein und erhellen dessen Inneres. Bei dünnen Objekten dringen die Strahlen durch das Objekt hindurch.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Beispiel Subsurface-Scattering</p>
+</div></div><p>Abbildung 2 zeigt ein Beispiel für Subsurface-Scattering. Die Katze wird von hinten beleuchtet und die Lichtstrahlen berühren die Rückseite ihrer Ohren. Aus der Perspektive der Fotografie werden anschliessen die Strahlen, die durch das Objekt hindurchdringen, ersichtlich, und führen dadurch zum Effekt des Subsurface-Scattering.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_31/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Ein Beispiel für Subsurface-Scattering.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Subsurface-Scattering tritt häufig bei Haut auf</p>
+</div></div><p>Abbildung 2 zeigt bereits einen der wichtigsten Anwendungspunkte für Subsurface-Scattering, nämlich die Haut von Lebewesen. Sie können auch bei sich selbst einen Subsurface-Scattering-Effekt induzieren. Schalten Sie eine kleine Taschenlampe (z.B. diejenige Ihres Smartphones) ein und legen Sie einen Finger mit dessen Fingerkuppel direkt auf die Lichtquelle. Wenn Sie dadurch den gesamten Bereich der Lichtquelle abdecken, sollten eigentlich alle Lichtstrahlen abgefangen werden. Sie werden allerdings feststellen, dass ein Teil der Lichtstrahlen durch ihre Haut hindurchdringt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Subsurface-Scattering muss nicht zwingen durch Objekt hindurchdringen</p>
+</div></div><p>Es gibt allerdings auch viele Situationen, in denen das Licht nicht ganz durch das Objekt hindurchdringt, allerdings trotzdem besonders tief in das Material einzudringen scheint. Dies wird ebenfalls als Subsurface-Scattering bezeichnet. Dieser Terminus beinhaltet sowohl Licht, welches durch die Refraktion durch das Objekt hindurchdringt, als auch solches, welches so tief in das Objekt hinein dringt, dass dessen Beleuchtung im Inneren sichtbar wird. Ein weiteres Beispiel für Subsurface-Scattering sind etwa Wachsobjekte oder Kerzen. Bei diesen reicht das Subsurface-Scattering oftmals nicht durch das Objekt hindurch, aber eine Beleuchtung im Inneren des Objektes wird erkennbar.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Parameter für das Subsurface-Scattering im Principled-BSDF-Shader</p>
+</div></div><p>Für das Subsurface-Scattering gibt es vier Parameter im Principled-BSDF-Shader:</p>
+<ul>
+<li>Subsurface</li>
+<li>Subsurface Radius</li>
+<li>Subsurface Color</li>
+<li>Subsurface Method</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Subsurface-Parameter</p>
+</div></div><p>In der Zeile «<em>Subsurface</em>» des Principled-BSDF-Shaders kann definiert werden, wie stark der Subsurface-Scattering-Effekt bei einem Material eintreten soll. Per Default ist Subsurface-Scattering deaktiviert, indem dessen Subsurface-Wert auf 0 gesetzt ist. Wenn man diesen Wert allerdings erhöht, wird auch der Subsurface-Scattering-Effekt erhöht.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Subsurface-Radius</p>
+</div></div><p>Mittels des Dropdown-Menüs «<em>Subsurface Radius</em>» lässt sich einstellen, wie hoch der Radius der eindringenden Lichtstrahlen ist. Dabei stehen drei Eingabewerte zur Verfügung. Normalerweise würde man bei der Kombination von Radius und drei Eingabewerten denken, dass es sich um die drei Achsen (X, Y und Z) handeln müsste. Dies ist beim Subsurface-Radius allerdings nicht der Fall. Der Radius ist entlang aller Achsen gleich gross, er unterscheidet sich allerdings hinsichtlich verschiedener Lichtstrahlen. Die drei Achsen stehen für die Farbwerte innerhalb des RGB-Spektrums und beschreiben den Radius von Lichtstrahlen der entsprechenden Farbe.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Rote Lichtstrahlen sind oft am wichtigsten für Subsurface-Scattering</p>
+</div></div><p>Per Default ist der Subsurface-Radius der ersten Zeile, welche für rote Lichtstrahlen steht, am höchsten. Dies macht auch Sinn, da Subsurface-Scattering-Effekte am häufigsten bei Haut anzutreffen sind und dabei rote Lichtstrahlen am stärksten zu erkennen sind. Die zweite Zeile steht für grüne Lichtstrahlen und die dritte Zeile für blaue Lichtstrahlen. In der Regel werden diese Zahlen so belassen, wie sie sind.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Subsurface-Color</p>
+</div></div><p>Mittels der Farbbox «<em>Subsurface Color</em>» kann eine Farbe definiert werden, welche sich unterhalb der Oberfläche befinden soll und so durch das Subsurface-Scattering erscheinen soll. Oftmals handelt es sich dabei um eine hellere Farbe der Base-Color.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Subsurface-Method</p>
+</div></div><p>Das zweite Dropdown-Menü im Principled-BSDF-Shader, in dem per Default «<em>Christensen-Burley</em>» ausgewählt ist, beschreibt die «<em>Subsurface Method</em>». Dabei kann zwischen zwei Arten der Berechnung des Subsurface-Scattering-Effekts ausgewählt werden. Die Option «<em>Christensen-Burley</em>» ist physikalisch weniger akkurat als die Option «<em>Random Walk</em>», benötigt dafür allerdings weniger Leistung beim Rendern von Materialien.</p>
+</section>
+<section id="specularity" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="specularity">Specularity</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Specularity für Bereich der Lichtreflexion</p>
+</div></div><p>Bislang wurden die Einstellungen «<em>Metallic</em>» und «<em>Roughness</em>» verwendet, um eine Reflexion zu erzielen. Der Metallic-Wert beschrieb dabei, wie hoch der Anteil der Refraktion ist, welcher zur Reflexion hinzukommt, während die Roughness durch eine unebenere Oberfläche zu einer diffuseren Lichtreflexion führt. Die Specularity wurde dabei jeweils konstant gelassen. Tatsächlich ist allerdings auch die Specularity für die Reflexion mitverantwortlich. Sie dient der Berechnung, an welchen Stellen eine Reflexion erfolgen soll.</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_31/Tiefer Einfallswinkel.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Lichtstrahlen mit einem tiefen Einfallswinkel. In solchen Fällen kommt es eher zu einer Refraktion.
+</figcaption>
+</figure>
+</div>
+<section id="einfallswinkel-und-index-of-refraction" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="einfallswinkel-und-index-of-refraction">Einfallswinkel und Index of Refraction</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Fresnel</p>
+</div></div><p>Jedes Objekt hat ein gewisses Potenzial, um Licht zu reflektieren. Abbildung 2 zeigt eine Katze innerhalb einer Kartonschachtel. Diese Kartonschachtel reflektiert die Umgebung nicht besonders stark, allerdings zeigt sie an den vorderen und hinteren Kanten des Kartons einen etwas helleren Bereich. An diesen Stellen entsteht ein Effekt, der als Fresnel bezeichnet wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Einfallswinkel sorgt für Fresnel</p>
+</div></div><p>Ein Fresnel-Effekt ergibt sich durch den Einfallswinkel des Lichtes. Je höher der Einfallswinkel des Lichtes ist, desto eher kommt es zu einer Reflexion des Lichtes. Ist der Einfallswinkel des Lichtes geringer, kommt es eher zu einer Refraktion. An Kanten ergeben sich dadurch höhere Einfallswinkel je nach Ausrichtung zu einer Lichtquelle und dadurch wird dort ein höherer Anteil von Licht reflektiert.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_31/Hoher Einfallswinkel.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Lichtstrahlen mit einem hohen Einfallswinkel. In solchen Fällen kommt es eher zu einer Reflexion.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>IOR</p>
+</div></div><p>Dieser Fresnel-Effekt hängt nebst dem Einfallswinkel des Lichtes auch vom «Index of Refraction» (IOR) eines Materials ab. Jedes physikalische Material besitzt diese Eigenschaft und beschreibt, wie stark dieses Material Lichtreflexionen bricht. Eine genauere Beschreibung hierzu erfolgt später bei den Transmission-Einstellungen.</p>
+</section>
+<section id="specularity-ermitteln" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="specularity-ermitteln">Specularity ermitteln</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>IOR berechnen</p>
+</div></div><p>Durch eine kurze Internetrecherche lässt sich schnell der IOR für ein Material ausfindig machen. So hat Gold einen IOR von 0.479, Eis einen IOR von 1.309, Milch einen IOR von 1.350 und Asphalt weist einen IOR von 1.635 auf.8 Diese Werte könnten nun direkt in die Zeile «<em>Specular</em>» eingegeben werden. Das Problem ist jedoch, dass diese Zeile nicht für physikalisch korrekte IOR-Werte angepasst ist und mit Inputs von 0 bis 1 arbeitet. Aus diesem Grund muss der IOR von Hand in den Specular-Input umgewandelt werden. Die Formel hierfür lautet:</p>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_31/Formel.png" id="fig-1_5" class="img-fluid quarto-figure quarto-figure-left anchored figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Value-Node hinzufügen und IOR eintragen</p>
+</div></div><p>Somit könnte man von Hand die Specularity anhand dieser Formel ausrechnen. Es gibt allerdings auch die Möglichkeit, dass Blender diese Formel automatisch für ein Material berechnet. Hierfür wird im Shader-Editor ein «<em>Value</em>»-Node hinzugefügt, welcher im «<em>Add</em>»-Menü unter «<em>Input | Value</em>» zu finden ist. In diesem Node wird anschliessend der Wert des IORs für das entsprechende Material eingegeben, beispielsweise 0.479 für ein goldenes Material.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Math-Node zum Addieren verwenden</p>
+</div></div><p>Nun wird ein «<em>Math</em>»-Node benötigt. Dieser ermöglicht die Durchführung mathematischer Operationen anhand eingegebener Werte. Der Math-Node kann im «<em>Add</em>»-Menü unter «<em>Converter | Math</em>» hinzugefügt und rechts neben dem Value-Node platziert werden. Der Value-Output des Value-Nodes wird anschliessend mit dem ersten Value-Input des Math-Nodes verbunden. Im zweiten Value-Felddes Math-Nodes kann anschliessend der Wert 1 eingegeben werden. Dies führt nun dazu, dass die Operation, welche im Math-Node ausgewählt ist, mit diesen beiden Werten durchgeführt wird. In dem Fall berechnet der Node also 0.479 + 1.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Math-Node zum Subtrahieren verwenden</p>
+</div></div><p>Der Math-Node kann nun mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">D</kbd><span class="visually-hidden">D</span> dupliziert und oberhalb des ersten Math-Nodes platziert werden. Sein erster Value-Input sollte ebenfalls die Informationen aus dem Value-Output des Value-Nodes erhalten. Nun soll allerdings die Differenz zwischen dem Value-Input und 1 berechnet werden. Deshalb wird im Dropdown-Menü innerhalb des Nodes statt der Operation «<em>Add</em>» die Operation «<em>Subtract</em>» ausgewählt. Dadurch wird nun 0.479 – 1 berechnet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Math-Node zum Dividieren verwenden</p>
+</div></div><p>Nun wird der Math-Node erneut dupliziert und das Duplikat rechts neben den beiden bisherigen Math-Nodes platziert. Der erste Value-Input dieses neuen Math-Nodes sollte den Value-Output des subtrahierenden Math-Nodes erhalten und der zweite Value-Input den Value-Output des addierenden Math-Nodes. Dieser Math-Node wird anschliessend im Dropdown-Menü auf «<em>Divide</em>» umgestellt. Dadurch wird der Output des subtrahierenden Math-Nodes durch den Output des addierenden Math-Nodes dividiert.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Math-Node zum Potenzieren verwenden</p>
+</div></div><p>Als Nächstes wird erneut ein Duplikat des Math-Nodes erstellt und rechts neben den dividierenden Math-Node platziert. Dieser Math-Node sollte als ersten Value-Input den Value-Output des dividierenden Math-Nodes erhalten und in der zweiten Zeile sollte der Wert 2 eingegeben werden. Die Operation dieses Math-Nodes sollte auf «<em>Power</em>» gestellt werden. Dadurch wird nun das Ergebnis der Division potenziert.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Math-Node zum erneuten Dividieren</p>
+</div></div><p>Nun wird noch ein letztes Mal ein Duplikat des dividierenden Math-Nodes erstellt und rechts neben den potenzierenden Math-Node platziert. Der erste Value-Input wird mit dem Value-Output des potenzierenden Math-Nodes verbunden und die zweite Value-Zeile wird auf 0.08 gesetzt. Dadurch wird der Output des potenzierenden Math-Nodes durch den Wert 0.08 dividiert. Wenn nun alle Nodes entsprechend der Abbildung 6 eingefügt wurden, sollte der Output des letzten Math-Nodes nun den Wert für den Specular-Input enthalten.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Images/Chapter_31/Speculraity_Examples.png" class="img-fluid figure-img"></p>
+<figcaption>Node-Anordnung, um die Specularity anhand des IORs zu berechnen.</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Was ist dabei passiert?</p>
+</div></div><p>Über den Value-Node wird eine Zahl als Input definiert – in diesem Fall der IOR, welcher für das Material bekannt ist. Dieser IOR durchläuft anschliessend die Operationen zur Berechnung der Specularity und gibt dieses anschliessend als Wert des letzten Math-Nodes aus. Dieser kann nun direkt mit dem Specular-Input des Principled-BSDF-Nodes verbunden werden. Wenn ein anderer IOR verwendet werden müsste, kann lediglich der Wert innerhalb des Value-Nodes verändert werden und Blender berechnet basierend auf dem Node-System anschliessend die korrekte Specularity und überweist diese dem Specular-Input des Principled-BSDF-Shaders.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Weiterführende Informationen</p>
+</div>
+<div class="tippbox-body">
+<p>Wenn Sie mit Nodes in Blender arbeiten, stellt dies eine Form des Programmierens dar. Statt mit Codes und Zeilen wird allerdings mit Nodes und Verbindungen zwischen den Nodes gearbeitet. Dies stellt eine Form des Programmierens dar, welche auch in einigen Game-Engines zur Verfügung steht. Sollten Sie die Anlei tung zur Berechnung des IORs selbst ausprobiert haben: Gratulation, Sie haben eine Funktion zur Berechnung der Specularity anhand des IORs in Blender erstellt!</p>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Specular-Tint</p>
+</div></div><p>Nebst dem Specular-Reiter verfügt der Principled-BSDF-Shader noch über den Reiter «<em>Specular Tint</em>». Die Reflexion der Lichtstrahlen basierend auf dem Specular-Wert erfolgt jeweils anhand weisser Farbe. Diese Farbe kann allerdings auch mit der Base-Color des jeweiligen Materials gemischt werden. Hierfür steht der Reiter Specular-Tint zur Verfügung. Je höher dieser Reiter ist, desto höher ist der Anteil der Base-Color in der Mischung der weissen Reflexionsfarbe.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Muss die Specularity angepasst werden?</p>
+</div></div><p>Über den Nutzen des Specularity-Effekts gibt es verschiedene Meinungen. Jedes Material verfügt über einen Fresnel-Effekt. Dementsprechend verfügt auch jedes Material über eine gewisse Specularity. Per Default ist der Wert für den Specular-Reiter bereits auf 0.5 eingestellt. Einige Nutzer von Blender verweisen darauf, dass dieser Wert direkt so belassen werden kann, da dies in den meisten Fällen ausreichend ist.</p>
+</section>
+</section>
+<section id="anisotropie" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="anisotropie">Anisotropie</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Anisotropie</p>
+</div></div><p>Mithilfe der Einstellungen zur Anisotropie kann die räumliche Ausbreitung von Reflexionen gesteuert werden. Hierbei ist allerdings zu berücksichtigen, dass diese Einstellung in der bislang verwendeten Render-Engine (Eevee) nicht berücksichtigt wird. Um den Effekt der Anisotropie auf einem Modell nachvollziehen zu können, müsste Cycles als Render-Engine ausgewählt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Tangente</p>
+</div></div><p>Die Reflexion durch die Anisotropie erfolgt entlang der sogenannten Tangente. Diese Tangente kann angesteuert und verändert werden, indem ein entsprechender «Tangent»-Node, welcher im «<em>Add</em>»-Menü unter «<em>Input | Tangent</em>» zu finden ist, mit dem Tangent-Input des Principled-BSDF-Shaders verbunden wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Anisotropic</p>
+</div></div><p>Mithilfe des Reiters «<em>Anisotropic</em>» kann bearbeitet werden, wie sich Glanzlichter einer Reflexion entlang eines Objekts vollziehen. Je höher dieser Wert eingestellt ist, desto mehr werden Reflexionslichter entlang der Tangente erstreckt. Negative Werte führen hingegen dazu, dass sich die Reflexionslichter senkrecht zur Tangente erstrecken.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Anisotropic Rotation</p>
+</div></div><p>Mithilfe des Reiters «<em>Anisotropic Rotation</em>» kann zudem eine Rotation für die Anisotropie erzeugt werden. Ein Wert von 1 bedeutet dabei, dass die Anisotropie kreisförmig verläuft, während ein Wert von 0 zu einer Ausbreitung entlang einer Linie führt.</p>
+</section>
+<section id="sheen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sheen">Sheen</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Sheen</p>
+</div></div><p>Die Einstellung «<em>Sheen</em>» wird lediglich in sehr seltenen Fällen verwendet. Dadurch wird die Reflexion von Oberflächen an deren Kanten abgedämpft. Dieser Effekt ist vor allem bei Textilien relevant, da diese an den Kanten etwas weniger stark reflektieren. Mithilfe des Reiters «Sheen» wird angegeben, wie stark dieser Abdämpfungseffekt vollzogen werden soll. Für Textilien wäre ein Wert von 1 zu empfehlen, während für andere Materialien die Standardeinstellung von 0 verwendet werden kann.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Sheen Tint</p>
+</div></div><p>Mithilfe des Reiters «<em>Sheen Tint</em>» kann dem Sheen-Effekt ein Mass für die Einfärbung mittels der Base-Color zugewiesen werden. Der Effekt der Sheen-Reflexion basiert auf einer Reflexion mit weisser Farbe. Mithilfe des Reglers «<em>Sheen Tint</em>» kann diese Farbe mit der Base-Color vermischt werden. Je höher der Wert des Sheen-Tints, desto höher der Anteil der Base-Color am Sheen-Effekt.</p>
+</section>
+<section id="clearcoat" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="clearcoat">Clearcoat</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Clearcoat</p>
+</div></div><p>Mittels der Clearcoat-Einstellungen kann eine weitere Schicht über einem Material simuliert werden. Dadurch erscheint das Material, als würde es aus mehreren Schichten bestehen. Die zweite Schicht stellt den Clearcoat dar. Dabei handelt es sich um eine reflektierende Oberfläche. Clearcoat kann etwa für Lack verwendet werden, welcher eine zusätzliche reflektierende Oberfläche auf einem bestehenden Metall-Material darstellt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Einstellungen für den Clearcoat</p>
+</div></div><p>Für den Clearcoat gibt es folgende Einstellungsmöglichkeiten im Principled-BSDF-Shader:</p>
+<ul>
+<li>«<strong><em>Clearcoat</em></strong>»: Mittels des Reiters «Clearcoat» kann das Ausmass der Reflexion der Clearcoat Schicht, welche über dem Material simuliert wird, eingestellt werden. Ein Wert von 0 bedeutet dabei, dass der Clearcoat nicht berücksichtigt wird, während ein Wert von 1 für einen stark re flektierenden Clearcoat verwendet wird.</li>
+<li>«<strong><em>Clearcoat Roughness</em></strong>»: Mittels des Reiters «Clearcoat Roughness» kann für die Clearcoat Schicht ein individuelles Ausmass der Roughness definiert werden.</li>
+<li>«<strong><em>Clearcoat Normal</em></strong>»: Mittels des Inputs «Clearcoat Normal» kann für die Clearcoat-Schicht ein eigener Normalen-Input verwendet werden. Dies ermöglicht es etwa, dass ein Bump-Node mit der Clearcoat-Normal verbunden wird. Dadurch können Unebenheiten auf der Clearcoat-Schicht individuell erstellt werden.</li>
+</ul>
+</section>
+<section id="transmission" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="transmission">Transmission</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Transmission</p>
+</div></div><p>Die Einstellungen zur Transmission werden verwendet, um Materialien zu erstellen, durch die man hindurchblicken kann – beispielsweise Gläser. In solchen Fällen durchdringen die Lichtstrahlen das Objekt vollständig und Inhalte, welche sich hinter dem Objekt befinden, werden sichtbar. Dabei werden die Lichtstrahlen je nach Beschaffenheit des Materials gebrochen. Dadurch werden Inhalte, die sich hinter dem Glas befinden, zu einem gewissen Grad verschoben dargestellt. Diese Brechung der Lichtstrahlen beschreibt der IOR.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>IOR</p>
+</div></div><p>Ein IOR mit einem Wert von 1 würde bedeuten, dass keine Brechung der Lichtstrahlen erfolgt. Je stärker der IOR vom Wert 1 abweicht, desto stärker werden die Lichtstrahlen gebrochen. Das heisst: Ein Glas, welches einen IOR von 1 aufweist, würde Licht refraktieren lassen, aber es gäbe keine Brechung in der Refraktion. Dadurch würde das Glas unsichtbar und könnte nicht mehr erkannt werden. Ein IOR von 1.01 würde allerdings bereits zu einer Brechung der Lichtstrahlen führen, wodurch das Glas ersichtlich wird. Durch einen IOR von 1.45 wird diese Brechung nochmals erhöht.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>IOR für Gläser festlegen</p>
+</div></div><p>Um den IOR bei der Transmission festzulegen, kann im Principled-BSDF-Shader die Zeile «<em>IOR</em>» verwendet werden und dort der jeweilige IOR eingegeben werden. Die Zeile «<em>IOR</em>» bezieht sich lediglich auf den IOR im Falle einer Transmission. Deshalb ist es beispielsweise bei der Einstellung der Specularity nötig, den IOR mittels des Specular-Reiters zu definieren.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Transmission</p>
+</div></div><p>Der Reiter «<em>Transmission</em>» beschreibt anschliessend den Anteil an Lichtstrahlen, welche das Material durchdringen. Eine Transmission von 0 bedeutet, dass kein Licht das Objekt durchdringt, während eine Transmission von 1 bedeutet, dass das gesamte Licht durchdringt. In der Regel wird für die Erstellung eines Glas-Materials dieser Wert auf 1 gesetzt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Transmission-Roughness</p>
+</div></div><p>Mittels des Reiters «<em>Transmission Roughness</em>» kann zudem eingestellt werden, wie gebündelt die Lichtstrahlen das Objekt durchdringen sollen. Durch eine erhöhte Transmission-Roughness erscheint ein Glas zunehmend milchiger, weil die Lichtstrahlen zunehmend diffuser durch das Glas hindurchscheinen.</p>
+</section>
+<section id="emission" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="emission">Emission</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Abhängigkeit von Lichtquellen</p>
+</div></div><p>Die Einstellungen des Materials hängen zu einem Grossteil auch von den Lichtquellen innerhalb einer Szene ab. Wenn ein Material kein Licht bekommt, kann es kein Licht reflektieren und wird deshalb schwarz dargestellt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Emission, um Licht durch das Material auszustrahlen</p>
+</div></div><p>Es ist allerdings möglich, dass ein Material Licht aussendet. Hierfür können die Parameter «<em>Emission</em>» und «<em>Emission Strength</em>» verwendet werden. In der Farbbox «<em>Emission</em>» kann eine Farbe ausgewählt werden, welche das Material anschliessend ausstrahlt. Mittels des Reiters «<em>Emission Strength</em>» kann eingestellt werden, wie stark diese Farbe ausgestrahlt wird. Eine Emission von 0 steht für keine Ausstrahlung und eine Emission von 1 steht für eine Ausstrahlung. Dieser Wert kann allerdings noch deutlich erhöht werden, um eine noch stärkere Ausstrahlung zu erzielen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Schwarze Farbe strahlt nicht aus</p>
+</div></div><p>Bei einer genauen Betrachtung fällt allerdings auf, dass der Principled-BSDF-Shader in seinen Standardeinstellungen eine Emission-Strength von 1 aufweist. Trotzdem wurde bislang nie eine Farbe ausgestrahlt. Dies liegt daran, dass in den Standardeinstellungen die Farbe Schwarz in der Emission-Farbbox ausgewählt ist. Diese verfügt über keine Helligkeitswerte, welche ausgestrahlt werden können. Deshalb wird in diesem Fall keine Farbe ausgestrahlt. Sobald eine andere Farbe in der Emission-Farbbox ausgewählt wird, sollte diese Farbe ausgestrahlt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Emission überdeckt andere Parameter des Materials</p>
+</div></div><p>Die ausgestrahlte Farbe überdeckt jeweils die anderen Einstellungen im Principled-BSDF-Shader. So bleibt die Darstellung der Materialien identisch, wenn beispielsweise die Roughness- oder die Metallic-Parameter verändert werden. Lediglich bei einer sehr geringen Emission-Strength lässt sich noch ein minimaler Einfluss, beispielsweise der Base-Color, erkennen.</p>
+</section>
+<section id="distribution" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="distribution">Distribution</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Distribution-Einstellungen</p>
+</div></div><p>Zuoberst im Principled-BSDF-Shader befindet sich das Dropdown-Menü «Distribution». Dieses ist standardmässig auf «<em>GGX</em>» eingestellt. Alternativ kann die Einstellung «<em>Multiscatter GGX</em>» eingestellt werden. Bei diesen Optionen handelt es sich um Einstellungen, anhand derer Blender die Materialien berechnet. GGX ist schneller in der Berechnung als Multiscatter-GGX, aber physikalisch weniger akkurat. In der Regel kann GGX als Einstellung beibehalten werden. Zudem ist zu beachten, dass bei der Verwendung von Multiscatter-GGX die Transmission-Roughness nicht mehr definiert werden kann.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

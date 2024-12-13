@@ -256,6 +256,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../Chapters/Chapter_30.html">
  <span class="dropdown-text">Kapitel 30</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_31.html">
+ <span class="dropdown-text">Kapitel 31</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -350,11 +354,11 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>White-Noise-Textur hinzufügen</p>
-</div></div><p>Mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> wird innerhalb des Shader-Editors das «<em>Add</em>»-Menü geöffnet und unter «<em>Texture | White Noise</em>» eine White-Noise-Textur hinzugefügt. Diese wird anschliessend links vom Principled-BSDF-Shader platziert. Wird der neu hinzugefügte White-Noise-Texture-Node bei gedrückter {&lt; kbd Ctrl &gt;}}- + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste angeklickt, wird über den Viewer-Node eine Vorschau des White-Noise-Texture-Nodes ermöglicht. Sollte dieser Node im Shader-Editor nicht erscheinen, sollte über prüft werden, ob das Node-Wrangler-Add-on aktiviert wurde.</p>
+</div></div><p>Mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> wird innerhalb des Shader-Editors das «<em>Add</em>»-Menü geöffnet und unter «<em>Texture | White Noise</em>» eine White-Noise-Textur hinzugefügt. Diese wird anschliessend links vom Principled-BSDF-Shader platziert. Wird der neu hinzugefügte White-Noise-Texture-Node bei gedrückter <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span>- + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste angeklickt, wird über den Viewer-Node eine Vorschau des White-Noise-Texture-Nodes ermöglicht. Sollte dieser Node im Shader-Editor nicht erscheinen, sollte überprüft werden, ob das Node-Wrangler-Add-on aktiviert wurde.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Texture-Coordinate-und Mapping-Node hinzufügen</p>
-</div></div><p>Im 3D-Viewport-Editor wird allerdings keine Veränderung durch die Vorschau des White-Noise-Texture-Nodes sichtbar. Dies liegt daran, dass der White-Noise-Texture-Node noch einen Bezugspunkt zum Mesh benötigt. Deshalb wird der White-Noise-Texture-Node ausgewählt und die Tastenkombination {&lt; kbd Ctrl &gt;}} + <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span>+ gedrückt. Dadurch werden ein Texture-Coordinate-Node und ein Mapping-Node dem White-Noise-Texture-Node vorangestellt. Somit kann der White-Noise-Texture-Node nun einen Bezugspunkt zum Mesh generieren und eine Vorschau auf das Mesh sollte möglich sein.</p>
+</div></div><p>Im 3D-Viewport-Editor wird allerdings keine Veränderung durch die Vorschau des White-Noise-Texture-Nodes sichtbar. Dies liegt daran, dass der White-Noise-Texture-Node noch einen Bezugspunkt zum Mesh benötigt. Deshalb wird der White-Noise-Texture-Node ausgewählt und die Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> gedrückt. Dadurch werden ein Texture-Coordinate-Node und ein Mapping-Node dem White-Noise-Texture-Node vorangestellt. Somit kann der White-Noise-Texture-Node nun einen Bezugspunkt zum Mesh generieren und eine Vorschau auf das Mesh sollte möglich sein.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Farbvariation fehlt in White-Noise-Textur</p>
@@ -373,7 +377,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Was bewirkt eine Verschiebung der Farbmarker in der Color-Ramp?</p>
-</div></div><p>Wenn nun einer der beiden Farbmarker verschoben wird, beispielsweise der linke Farbmarker, so vergrössert sich sein Anteil am Spektrum der Color-Ramp. Die gesamte Fläche, welche sich links von diesem Farbmarker befindet, wird zu einer schwarzen Farbe umgewandelt. Gleichzeitig wird der Bereich, in dem eine graduelle Abstufung von Schwarz auf Weiss geschieht, zunehmend kleiner. Dieser Effekt lässt sich am besten betrachten, indem die Color-Ramp ausgewählt und mittels der Tastenkombination {&lt; kbd Ctrl &gt;}} + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> über den Viewer-Node betrachtet wird. Je weiter der schwarze Farbmarker nach rechts gezogen wird, desto mehr Anteile an der White-Noise-Textur, welche den Input der Color-Ramp darstellt, werden schwarz. Analog dazu werden mehr Anteile der White-Noise-Textur weiss, wenn der weisse Farbmarker nach links verschoben wird.</p>
+</div></div><p>Wenn nun einer der beiden Farbmarker verschoben wird, beispielsweise der linke Farbmarker, so vergrössert sich sein Anteil am Spektrum der Color-Ramp. Die gesamte Fläche, welche sich links von diesem Farbmarker befindet, wird zu einer schwarzen Farbe umgewandelt. Gleichzeitig wird der Bereich, in dem eine graduelle Abstufung von Schwarz auf Weiss geschieht, zunehmend kleiner. Dieser Effekt lässt sich am besten betrachten, indem die Color-Ramp ausgewählt und mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> über den Viewer-Node betrachtet wird. Je weiter der schwarze Farbmarker nach rechts gezogen wird, desto mehr Anteile an der White-Noise-Textur, welche den Input der Color-Ramp darstellt, werden schwarz. Analog dazu werden mehr Anteile der White-Noise-Textur weiss, wenn der weisse Farbmarker nach links verschoben wird.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Rangfolge der Farbmarker</p>
@@ -389,7 +393,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Color-Ramp für Düne anpassen</p>
-</div></div><p>Um nun die White-Noise-Textur etwas mehr nach Sand aussehen zu lassen, sollten zunächst die Farben der beiden Farbmarker ausgewechselt werden. Der schwarze Farbmarker wird deshalb auf den RGB-Wert von 0.2-0.1-0 gesetzt und der weisse Farbmarker auf den RGB-Wert 0.5-0.45-0.35 gestellt. Dadurch werden die schwarz-weissen Abstufungen der White-Noise-Textur nun in Abstufungen dieser beiden Farbmarker umgewandelt. Der Color-Output des Color-Ramp-Nodes kann deshalb nun mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden. Zudem sollte bei gedrückter Tastenkombination {&lt; kbd Ctrl &gt;}} + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> auf den Principled-BSDF-Shader geklickt werden, um den Viewer-Node wieder zu deaktivieren.</p>
+</div></div><p>Um nun die White-Noise-Textur etwas mehr nach Sand aussehen zu lassen, sollten zunächst die Farben der beiden Farbmarker ausgewechselt werden. Der schwarze Farbmarker wird deshalb auf den RGB-Wert von 0.2-0.1-0 gesetzt und der weisse Farbmarker auf den RGB-Wert 0.5-0.45-0.35 gestellt. Dadurch werden die schwarz-weissen Abstufungen der White-Noise-Textur nun in Abstufungen dieser beiden Farbmarker umgewandelt. Der Color-Output des Color-Ramp-Nodes kann deshalb nun mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden. Zudem sollte bei gedrückter Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> auf den Principled-BSDF-Shader geklickt werden, um den Viewer-Node wieder zu deaktivieren.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Roughness variieren lassen</p>
@@ -409,7 +413,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_30/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_30/Nodes_System.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;1: Nodes-System für prozedurale Sand-Texturen.

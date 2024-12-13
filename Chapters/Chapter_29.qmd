@@ -9,7 +9,7 @@ Landschaften erstellen
 
 Um geografische Landschaften zu erstellen, müssen nicht zwingend Displacement-Texturen verwendet werden. Es ist auch möglich, von Hand Landschaften zu erstellen, was etwa durch die proportionale Bearbeitung etwas vereinfacht wird. Allerdings handelt es sich dabei trotzdem um einen aufwendigen Prozess. Blender beinhaltet jedoch ein integriertes Add-on, welches die schnelle Erstellung von Landschaften ermöglicht. Dieses Add-on heisst «*A.N.T.Landscape*» und muss zunächst in den Einstellungen von Blender aktiviert werden (unter «*Edit \| Preferences*» und anschliessend unter dem Reiter «*Add-ons*»).
 
-:::::::::: tippbox
+:::::: tippbox
 :::: tippbox-header
 ::: tippbox-icon
 :::
@@ -20,7 +20,7 @@ Weiterführende Informationen
 ::: tippbox-body
 Die Abkürzung A.N.T. des Add-ons «*A.N.T.Landscape*» steht für «*another noise tool*». Dies bezieht sich auf die Erstellung der Landschaften. Es wird jeweils eine Plane gebildet und anhand von zufälligem Noise die Landschaft daraus erstellt.
 :::
-::::::::::
+::::::
 
 ::: column-margin
 Hinzufügen von neuen Landschaften
@@ -56,7 +56,7 @@ Werden nach der Auswahl einer Voreinstellung weitere Änderungen vorgenommen, we
 
 ::: column-margin
 Hinzufügen und Löschen von eigenen Voreinstellungen
-::::::::::
+:::
 
 Mittels der Schaltfläche «+» können jedoch eigene Voreinstellungen abgespeichert werden. Dadurch erscheint ein Dialogfeld, bei dem ein Name für die Voreinstellung eingegeben werden kann. Anschliessend kann diese Voreinstellung im Dropdown-Menü ausgewählt werden. Durch das Klicken der Schaltfläche «-» wird die aktuelle Voreinstellung gelöscht.
 
@@ -110,9 +110,7 @@ Die erstellten Landschaften werden im Hintergrund basierend auf einer zufällig 
 Noise ausrichten und skalieren
 :::
 
-Über die Optionen «*Offset*» und «*Size*» kann der resultierende Noise vergrössert oder verkleinert
-werden. Im Grunde genommen wird über die Einstellung «*Offset*» entlang einer unendlich grossen, automatisch generierten Displacement-Textur gescrollt und mittels der Einstellung «*Size*» diese Textur vergrössert oder verkleinert. Mittels der Option «*Noise Size*» lässt sich
-diese Option für den Noise ebenfalls vergrössern oder verkleinern.
+Über die Optionen «*Offset*» und «*Size*» kann der resultierende Noise vergrössert oder verkleinert werden. Im Grunde genommen wird über die Einstellung «*Offset*» entlang einer unendlich grossen, automatisch generierten Displacement-Textur gescrollt und mittels der Einstellung «*Size*» diese Textur vergrössert oder verkleinert. Mittels der Option «*Noise Size*» lässt sich diese Option für den Noise ebenfalls vergrössern oder verkleinern.
 
 :::::: tippbox
 :::: tippbox-header
@@ -123,7 +121,7 @@ Weiterführende Informationen
 ::::
 
 ::: tippbox-body
-Wenn ein Computer auf Befehl Dinge «zufällig» verändern oder generieren soll, erfolgt dies gar nicht zufällig. Bei solchen Zufallsoperationen gibt es jeweils eine Reihe von «vorgefertigten Zufällen», welche jeweils eintreten. Dies ermöglicht es, dass scheinbar zufällige Einstellungen ausgewählt werden können. Die Seeds beschreiben jeweils einen Startpunkt, von dem aus der Computer den «Zufall» generiert. Wenn mehrere Computer für dieselbe zufallsbasierte Anwendung denselben Seed verwenden, resultiert dasselbe Ergebnis, da alle auf derselben ausgewählten Zufallsreihenfolge basieren. 
+Wenn ein Computer auf Befehl Dinge «zufällig» verändern oder generieren soll, erfolgt dies gar nicht zufällig. Bei solchen Zufallsoperationen gibt es jeweils eine Reihe von «vorgefertigten Zufällen», welche jeweils eintreten. Dies ermöglicht es, dass scheinbar zufällige Einstellungen ausgewählt werden können. Die Seeds beschreiben jeweils einen Startpunkt, von dem aus der Computer den «Zufall» generiert. Wenn mehrere Computer für dieselbe zufallsbasierte Anwendung denselben Seed verwenden, resultiert dasselbe Ergebnis, da alle auf derselben ausgewählten Zufallsreihenfolge basieren.
 :::
 ::::::
 
@@ -131,23 +129,21 @@ Wenn ein Computer auf Befehl Dinge «zufällig» verändern oder generieren soll
 Weitere Einstellungen zu Noise sind verfügbar
 :::
 
-Unterhalb dieser Optionen gibt es einige weitere Parameter, mit denen 
-der Noise weiterbearbeitet werden kann. Zudem kann mittels des Dropdown-Menüs «*Effect Type*» ein zusätzlicher Effekt mit dem Noise kombiniert werden. Für diesen Effekttyp stehen nochmals eine Reihe weiterer Einstellungsoptionen zur Verfügung.
+Unterhalb dieser Optionen gibt es einige weitere Parameter, mit denen der Noise weiterbearbeitet werden kann. Zudem kann mittels des Dropdown-Menüs «*Effect Type*» ein zusätzlicher Effekt mit dem Noise kombiniert werden. Für diesen Effekttyp stehen nochmals eine Reihe weiterer Einstellungsoptionen zur Verfügung.
 
 ### Displace Settings
 
 ::: column-margin
-Displacement wendet Noise an 
+Displacement wendet Noise an
 :::
 
-Während die Einstellungen in den Noise-Settings für die Veränderung des Noises innerhalb einer generierten Displacement-Textur verwendet werden, kann mittels der Displace-Settings deren Anwendung auf das Mesh verfeinert werden. 
+Während die Einstellungen in den Noise-Settings für die Veränderung des Noises innerhalb einer generierten Displacement-Textur verwendet werden, kann mittels der Displace-Settings deren Anwendung auf das Mesh verfeinert werden.
 
 ::: column-margin
-Höhe des Displacements anpassen 
+Höhe des Displacements anpassen
 :::
 
-Mittels der Zeile «*Height*» kann eingestellt werden, zu welcher Höhe das Displacement jeweils führen soll. Mit der Zeile «*Offset*» kann zudem eine gewisse Abweichung von dieser Höhe eingestellt werden. Mittels der Zeilen «*Maximum*» und «*Minimum*» kann zudem definiert werden, in welchen 
-Bereichen der Höhe das Displacement lediglich berücksichtigt wird. Ist beispielsweise als Maximum der Wert 0.5 und als Minimum der Wert 0.1 eingestellt, werden alle Vertices, welche durch das Displacement unter der lokalen Höhe von 0.1 liegen, auf die Höhe 0.1 hochgesetzt. Analog dazu werden alle Vertices, welche in der Höhe über dem Wert 0.5 liegen, auf den Wert 0.5 heruntergesetzt. 
+Mittels der Zeile «*Height*» kann eingestellt werden, zu welcher Höhe das Displacement jeweils führen soll. Mit der Zeile «*Offset*» kann zudem eine gewisse Abweichung von dieser Höhe eingestellt werden. Mittels der Zeilen «*Maximum*» und «*Minimum*» kann zudem definiert werden, in welchen Bereichen der Höhe das Displacement lediglich berücksichtigt wird. Ist beispielsweise als Maximum der Wert 0.5 und als Minimum der Wert 0.1 eingestellt, werden alle Vertices, welche durch das Displacement unter der lokalen Höhe von 0.1 liegen, auf die Höhe 0.1 hochgesetzt. Analog dazu werden alle Vertices, welche in der Höhe über dem Wert 0.5 liegen, auf den Wert 0.5 heruntergesetzt.
 
 ::: column-margin
 Falloff
@@ -158,9 +154,9 @@ Am Rand der Landschaft wird in der Regel der Effekt des Displacements entfernt. 
 ### Water Plane
 
 ::: column-margin
-Water Plane 
+Water Plane
 :::
 
-Mittels der Option «*Water Plane*» wird eine weitere Fläche hinzugefügt, die als Wasserfläche dienen kann. Es handelt sich dabei um eine Plane, welche als separates Objekt hinzugefügt wird. Dieser Fläche kann ebenfalls bereits ein Material zugewiesen werden. Mittels der Zeile «*Level*» wird bestimmt, wie hoch der Wasserspiegel sein soll. 
+Mittels der Option «*Water Plane*» wird eine weitere Fläche hinzugefügt, die als Wasserfläche dienen kann. Es handelt sich dabei um eine Plane, welche als separates Objekt hinzugefügt wird. Dieser Fläche kann ebenfalls bereits ein Material zugewiesen werden. Mittels der Zeile «*Level*» wird bestimmt, wie hoch der Wasserspiegel sein soll.
 
-![Links ein mit A.N.T.Landscape erstellter Berg. Daneben ein Berg, dessen Displacement als Minimum 0.1 und als Maximum 0.5 hat. Durch die Anhebung des Wertes «Minimum» auf 0.1 werden alle Vertices im Objekt auf diese Höhe hinaufgesetzt. Danaben zwei Versionen desselben Berges mit unterschiedlichen Falloff-Werten. ](Images/Chapter_29/Landscape_comparison.png){#fig-1_3 fig-align="left"}
+![Links ein mit A.N.T.Landscape erstellter Berg. Daneben ein Berg, dessen Displacement als Minimum 0.1 und als Maximum 0.5 hat. Durch die Anhebung des Wertes «Minimum» auf 0.1 werden alle Vertices im Objekt auf diese Höhe hinaufgesetzt. Danaben zwei Versionen desselben Berges mit unterschiedlichen Falloff-Werten.](Images/Chapter_29/Landscape_comparison.png){#fig-1_3 fig-align="left"}

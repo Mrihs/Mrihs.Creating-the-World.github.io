@@ -1,0 +1,317 @@
+---
+title: "31. Parameter im Principled-BSDF-Shader"
+editor: visual
+---
+
+::: column-margin
+Parameter im Principled-BSDF-Shader
+:::
+
+Mittlerweile wurde bereits sehr viel mit dem Principled-BSDF-Shader gearbeitet. Dadurch sollten die wichtigsten Parameter, welche bei dessen Verwendung berücksichtigt werden, bekannt geworden sein. So wurden die Base-Color, die Roughness und der Metallic-Wert bereits erläutert und durch die Verwendung von Texturen wurden auch bereits die Normal-Werte verwendet. Es gibt allerdings noch eine Vielzahl weiterer Parameter im Principled-BSDF-Shader, welche variiert werden können. Einige davon werden, allerdings sehr selten
+
+## Subsurface-Scattering
+
+::: column-margin
+Was ist Subsurface-Scattering?
+:::
+
+Bei der Refraktion von Lichtstrahlen dringen diese Lichtstrahlen in ein Objekt ein. Anschliessend werden sie in der Oberfläche des Objektes gestreut und dringen anschliessend wieder aus dem Objekt aus. Diese Lichtstrahlen können dabei unterschiedlich weit innerhalb des Objektes eindringen. Dadurch kann es in manchen Situationen vorkommen, dass die Lichtstrahlen auch aus der anderen Seite des Objektes wieder austreten. Dieser Effekt wird als Subsurface-Scattering bezeichnet. Dabei dringen Lichtstrahlen durch das Objekt hindurch und scheinen auch das Innere des Objektes zu beleuchten.
+
+![Lichtstrahlen beim Subsurface-Scattering. Die Strahlen dringen deutlich weiter in das Objekt ein und erhellen dessen Inneres. Bei dünnen Objekten dringen die Strahlen durch das Objekt hindurch.](Images/Chapter_31/Subsurface%20Scattering.png){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Beispiel Subsurface-Scattering
+:::
+
+Abbildung 2 zeigt ein Beispiel für Subsurface-Scattering. Die Katze wird von hinten beleuchtet und die Lichtstrahlen berühren die Rückseite ihrer Ohren. Aus der Perspektive der Fotografie werden anschliessen die Strahlen, die durch das Objekt hindurchdringen, ersichtlich, und führen dadurch zum Effekt des Subsurface-Scattering.
+
+![Ein Beispiel für Subsurface-Scattering.](Images/Chapter_31/.png){#fig-1_2 fig-align="left"}
+
+::: column-margin
+Subsurface-Scattering tritt häufig bei Haut auf
+:::
+
+Abbildung 2 zeigt bereits einen der wichtigsten Anwendungspunkte für Subsurface-Scattering, nämlich die Haut von Lebewesen. Sie können auch bei sich selbst einen Subsurface-Scattering-Effekt induzieren. Schalten Sie eine kleine Taschenlampe (z.B. diejenige Ihres Smartphones) ein und legen Sie einen Finger mit dessen Fingerkuppel direkt auf die Lichtquelle. Wenn Sie dadurch den gesamten Bereich der Lichtquelle abdecken, sollten eigentlich alle Lichtstrahlen abgefangen werden. Sie werden allerdings feststellen, dass ein Teil der Lichtstrahlen durch ihre Haut hindurchdringt.
+
+::: column-margin
+Subsurface-Scattering muss nicht zwingen durch Objekt hindurchdringen
+:::
+
+Es gibt allerdings auch viele Situationen, in denen das Licht nicht ganz durch das Objekt hindurchdringt, allerdings trotzdem besonders tief in das Material einzudringen scheint. Dies wird ebenfalls als Subsurface-Scattering bezeichnet. Dieser Terminus beinhaltet sowohl Licht, welches durch die Refraktion durch das Objekt hindurchdringt, als auch solches, welches so tief in das Objekt hinein dringt, dass dessen Beleuchtung im Inneren sichtbar wird. Ein weiteres Beispiel für Subsurface-Scattering sind etwa Wachsobjekte oder Kerzen. Bei diesen reicht das Subsurface-Scattering oftmals nicht durch das Objekt hindurch, aber eine Beleuchtung im Inneren des Objektes wird erkennbar.
+
+::: column-margin
+Parameter für das Subsurface-Scattering im Principled-BSDF-Shader
+:::
+
+Für das Subsurface-Scattering gibt es vier Parameter im Principled-BSDF-Shader:
+
+-   Subsurface
+-   Subsurface Radius
+-   Subsurface Color
+-   Subsurface Method
+
+::: column-margin
+Subsurface-Parameter
+:::
+
+In der Zeile «*Subsurface*» des Principled-BSDF-Shaders kann definiert werden, wie stark der Subsurface-Scattering-Effekt bei einem Material eintreten soll. Per Default ist Subsurface-Scattering deaktiviert, indem dessen Subsurface-Wert auf 0 gesetzt ist. Wenn man diesen Wert allerdings erhöht, wird auch der Subsurface-Scattering-Effekt erhöht.
+
+::: column-margin
+Subsurface-Radius
+:::
+
+Mittels des Dropdown-Menüs «*Subsurface Radius*» lässt sich einstellen, wie hoch der Radius der eindringenden Lichtstrahlen ist. Dabei stehen drei Eingabewerte zur Verfügung. Normalerweise würde man bei der Kombination von Radius und drei Eingabewerten denken, dass es sich um die drei Achsen (X, Y und Z) handeln müsste. Dies ist beim Subsurface-Radius allerdings nicht der Fall. Der Radius ist entlang aller Achsen gleich gross, er unterscheidet sich allerdings hinsichtlich verschiedener Lichtstrahlen. Die drei Achsen stehen für die Farbwerte innerhalb des RGB-Spektrums und beschreiben den Radius von Lichtstrahlen der entsprechenden Farbe.
+
+::: column-margin
+Rote Lichtstrahlen sind oft am wichtigsten für Subsurface-Scattering
+:::
+
+Per Default ist der Subsurface-Radius der ersten Zeile, welche für rote Lichtstrahlen steht, am höchsten. Dies macht auch Sinn, da Subsurface-Scattering-Effekte am häufigsten bei Haut anzutreffen sind und dabei rote Lichtstrahlen am stärksten zu erkennen sind. Die zweite Zeile steht für grüne Lichtstrahlen und die dritte Zeile für blaue Lichtstrahlen. In der Regel werden diese Zahlen so belassen, wie sie sind.
+
+::: column-margin
+Subsurface-Color
+:::
+
+Mittels der Farbbox «*Subsurface Color*» kann eine Farbe definiert werden, welche sich unterhalb der Oberfläche befinden soll und so durch das Subsurface-Scattering erscheinen soll. Oftmals handelt es sich dabei um eine hellere Farbe der Base-Color.
+
+::: column-margin
+Subsurface-Method
+:::
+
+Das zweite Dropdown-Menü im Principled-BSDF-Shader, in dem per Default «*Christensen-Burley*» ausgewählt ist, beschreibt die «*Subsurface Method*». Dabei kann zwischen zwei Arten der Berechnung des Subsurface-Scattering-Effekts ausgewählt werden. Die Option «*Christensen-Burley*» ist physikalisch weniger akkurat als die Option «*Random Walk*», benötigt dafür allerdings weniger Leistung beim Rendern von Materialien.
+
+## Specularity
+
+::: column-margin
+Specularity für Bereich der Lichtreflexion
+:::
+
+Bislang wurden die Einstellungen «*Metallic*» und «*Roughness*» verwendet, um eine Reflexion zu erzielen. Der Metallic-Wert beschrieb dabei, wie hoch der Anteil der Refraktion ist, welcher zur Reflexion hinzukommt, während die Roughness durch eine unebenere Oberfläche zu einer diffuseren Lichtreflexion führt. Die Specularity wurde dabei jeweils konstant gelassen. Tatsächlich ist allerdings auch die Specularity für die Reflexion mitverantwortlich. Sie dient der Berechnung, an welchen Stellen eine Reflexion erfolgen soll.
+
+![Lichtstrahlen mit einem tiefen Einfallswinkel. In solchen Fällen kommt es eher zu einer Refraktion.](Images/Chapter_31/Tiefer%20Einfallswinkel.png){#fig-1_3 fig-align="left"}
+
+### Einfallswinkel und Index of Refraction
+
+::: column-margin
+Fresnel
+:::
+
+Jedes Objekt hat ein gewisses Potenzial, um Licht zu reflektieren. Abbildung 2 zeigt eine Katze innerhalb einer Kartonschachtel. Diese Kartonschachtel reflektiert die Umgebung nicht besonders stark, allerdings zeigt sie an den vorderen und hinteren Kanten des Kartons einen etwas helleren Bereich. An diesen Stellen entsteht ein Effekt, der als Fresnel bezeichnet wird.
+
+::: column-margin
+Einfallswinkel sorgt für Fresnel
+:::
+
+Ein Fresnel-Effekt ergibt sich durch den Einfallswinkel des Lichtes. Je höher der Einfallswinkel des Lichtes ist, desto eher kommt es zu einer Reflexion des Lichtes. Ist der Einfallswinkel des Lichtes geringer, kommt es eher zu einer Refraktion. An Kanten ergeben sich dadurch höhere Einfallswinkel je nach Ausrichtung zu einer Lichtquelle und dadurch wird dort ein höherer Anteil von Licht reflektiert.
+
+![Lichtstrahlen mit einem hohen Einfallswinkel. In solchen Fällen kommt es eher zu einer Reflexion.](Images/Chapter_31/Hoher%20Einfallswinkel.png){#fig-1_4 fig-align="left"}
+
+::: column-margin
+IOR
+:::
+
+Dieser Fresnel-Effekt hängt nebst dem Einfallswinkel des Lichtes auch vom «Index of Refraction» (IOR) eines Materials ab. Jedes physikalische Material besitzt diese Eigenschaft und beschreibt, wie stark dieses Material Lichtreflexionen bricht. Eine genauere Beschreibung hierzu erfolgt später bei den Transmission-Einstellungen.
+
+### Specularity ermitteln
+
+::: column-margin
+IOR berechnen
+:::
+
+Durch eine kurze Internetrecherche lässt sich schnell der IOR für ein Material ausfindig machen. So hat Gold einen IOR von 0.479, Eis einen IOR von 1.309, Milch einen IOR von 1.350 und Asphalt weist einen IOR von 1.635 auf (Quelle: <https://pixelandpoly.com/ior.html>). Diese Werte könnten nun direkt in die Zeile «*Specular*» eingegeben werden. Das Problem ist jedoch, dass diese Zeile nicht für physikalisch korrekte IOR-Werte angepasst ist und mit Inputs von 0 bis 1 arbeitet. Aus diesem Grund muss der IOR von Hand in den Specular-Input umgewandelt werden. Die Formel hierfür lautet:
+
+![](Images/Chapter_31/Formel.png){#fig-1_5 fig-align="left"}
+
+::: column-margin
+Value-Node hinzufügen und IOR eintragen
+:::
+
+Somit könnte man von Hand die Specularity anhand dieser Formel ausrechnen. Es gibt allerdings auch die Möglichkeit, dass Blender diese Formel automatisch für ein Material berechnet. Hierfür wird im Shader-Editor ein «*Value*»-Node hinzugefügt, welcher im «*Add*»-Menü unter «*Input \| Value*» zu finden ist. In diesem Node wird anschliessend der Wert des IORs für das entsprechende Material eingegeben, beispielsweise 0.479 für ein goldenes Material.
+
+::: column-margin
+Math-Node zum Addieren verwenden
+:::
+
+Nun wird ein «*Math*»-Node benötigt. Dieser ermöglicht die Durchführung mathematischer Operationen anhand eingegebener Werte. Der Math-Node kann im «*Add*»-Menü unter «*Converter \| Math*» hinzugefügt und rechts neben dem Value-Node platziert werden. Der Value-Output des Value-Nodes wird anschliessend mit dem ersten Value-Input des Math-Nodes verbunden. Im zweiten Value-Felddes Math-Nodes kann anschliessend der Wert 1 eingegeben werden. Dies führt nun dazu, dass die Operation, welche im Math-Node ausgewählt ist, mit diesen beiden Werten durchgeführt wird. In dem Fall berechnet der Node also 0.479 + 1.
+
+::: column-margin
+Math-Node zum Subtrahieren verwenden
+:::
+
+Der Math-Node kann nun mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd D >}} dupliziert und oberhalb des ersten Math-Nodes platziert werden. Sein erster Value-Input sollte ebenfalls die Informationen aus dem Value-Output des Value-Nodes erhalten. Nun soll allerdings die Differenz zwischen dem Value-Input und 1 berechnet werden. Deshalb wird im Dropdown-Menü innerhalb des Nodes statt der Operation «*Add*» die Operation «*Subtract*» ausgewählt. Dadurch wird nun 0.479 – 1 berechnet.
+
+::: column-margin
+Math-Node zum Dividieren verwenden
+:::
+
+Nun wird der Math-Node erneut dupliziert und das Duplikat rechts neben den beiden bisherigen Math-Nodes platziert. Der erste Value-Input dieses neuen Math-Nodes sollte den Value-Output des subtrahierenden Math-Nodes erhalten und der zweite Value-Input den Value-Output des addierenden Math-Nodes. Dieser Math-Node wird anschliessend im Dropdown-Menü auf «*Divide*» umgestellt. Dadurch wird der Output des subtrahierenden Math-Nodes durch den Output des addierenden Math-Nodes dividiert.
+
+::: column-margin
+Math-Node zum Potenzieren verwenden
+:::
+
+Als Nächstes wird erneut ein Duplikat des Math-Nodes erstellt und rechts neben den dividierenden Math-Node platziert. Dieser Math-Node sollte als ersten Value-Input den Value-Output des dividierenden Math-Nodes erhalten und in der zweiten Zeile sollte der Wert 2 eingegeben werden. Die Operation dieses Math-Nodes sollte auf «*Power*» gestellt werden. Dadurch wird nun das Ergebnis der Division potenziert.
+
+::: column-margin
+Math-Node zum erneuten Dividieren
+:::
+
+Nun wird noch ein letztes Mal ein Duplikat des dividierenden Math-Nodes erstellt und rechts neben den potenzierenden Math-Node platziert. Der erste Value-Input wird mit dem Value-Output des potenzierenden Math-Nodes verbunden und die zweite Value-Zeile wird auf 0.08 gesetzt. Dadurch wird der Output des potenzierenden Math-Nodes durch den Wert 0.08 dividiert. Wenn nun alle Nodes entsprechend der Abbildung 6 eingefügt wurden, sollte der Output des letzten Math-Nodes nun den Wert für den Specular-Input enthalten.
+
+![Node-Anordnung, um die Specularity anhand des IORs zu berechnen.](Images/Chapter_31/Specularity calc..png){fig-align="left"}
+
+::: column-margin
+Was ist dabei passiert?
+:::
+
+Über den Value-Node wird eine Zahl als Input definiert – in diesem Fall der IOR, welcher für das Material bekannt ist. Dieser IOR durchläuft anschliessend die Operationen zur Berechnung der Specularity und gibt dieses anschliessend als Wert des letzten Math-Nodes aus. Dieser kann nun direkt mit dem Specular-Input des Principled-BSDF-Nodes verbunden werden. Wenn ein anderer IOR verwendet werden müsste, kann lediglich der Wert innerhalb des Value-Nodes verändert werden und Blender berechnet basierend auf dem Node-System anschliessend die korrekte Specularity und überweist diese dem Specular-Input des Principled-BSDF-Shaders.
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Weiterführende Informationen
+::::
+
+::: tippbox-body
+Wenn Sie mit Nodes in Blender arbeiten, stellt dies eine Form des Programmierens dar. Statt mit Codes und Zeilen wird allerdings mit Nodes und Verbindungen zwischen den Nodes gearbeitet. Dies stellt eine Form des Programmierens dar, welche auch in einigen Game-Engines zur Verfügung steht. Sollten Sie die Anleitung zur Berechnung des IORs selbst ausprobiert haben: Gratulation, Sie haben eine Funktion zur Berechnung der Specularity anhand des IORs in Blender erstellt!
+:::
+::::::
+
+::: column-margin
+Specular-Tint
+:::
+
+Nebst dem Specular-Reiter verfügt der Principled-BSDF-Shader noch über den Reiter «*Specular Tint*». Die Reflexion der Lichtstrahlen basierend auf dem Specular-Wert erfolgt jeweils anhand weisser Farbe. Diese Farbe kann allerdings auch mit der Base-Color des jeweiligen Materials gemischt werden. Hierfür steht der Reiter Specular-Tint zur Verfügung. Je höher dieser Reiter ist, desto höher ist der Anteil der Base-Color in der Mischung der weissen Reflexionsfarbe.
+
+::: column-margin
+Muss die Specularity angepasst werden?
+:::
+
+Über den Nutzen des Specularity-Effekts gibt es verschiedene Meinungen. Jedes Material verfügt über einen Fresnel-Effekt. Dementsprechend verfügt auch jedes Material über eine gewisse Specularity. Per Default ist der Wert für den Specular-Reiter bereits auf 0.5 eingestellt. Einige Nutzer von Blender verweisen darauf, dass dieser Wert direkt so belassen werden kann, da dies in den meisten Fällen ausreichend ist.
+
+## Anisotropie
+
+::: column-margin
+Anisotropie
+:::
+
+Mithilfe der Einstellungen zur Anisotropie kann die räumliche Ausbreitung von Reflexionen gesteuert werden. Hierbei ist allerdings zu berücksichtigen, dass diese Einstellung in der bislang verwendeten Render-Engine (Eevee) nicht berücksichtigt wird. Um den Effekt der Anisotropie auf einem Modell nachvollziehen zu können, müsste Cycles als Render-Engine ausgewählt werden.
+
+::: column-margin
+Tangente
+:::
+
+Die Reflexion durch die Anisotropie erfolgt entlang der sogenannten Tangente. Diese Tangente kann angesteuert und verändert werden, indem ein entsprechender «Tangent»-Node, welcher im «*Add*»-Menü unter «*Input \| Tangent*» zu finden ist, mit dem Tangent-Input des Principled-BSDF-Shaders verbunden wird.
+
+::: column-margin
+Anisotropic
+:::
+
+Mithilfe des Reiters «*Anisotropic*» kann bearbeitet werden, wie sich Glanzlichter einer Reflexion entlang eines Objekts vollziehen. Je höher dieser Wert eingestellt ist, desto mehr werden Reflexionslichter entlang der Tangente erstreckt. Negative Werte führen hingegen dazu, dass sich die Reflexionslichter senkrecht zur Tangente erstrecken.
+
+::: column-margin
+Anisotropic Rotation
+:::
+
+Mithilfe des Reiters «*Anisotropic Rotation*» kann zudem eine Rotation für die Anisotropie erzeugt werden. Ein Wert von 1 bedeutet dabei, dass die Anisotropie kreisförmig verläuft, während ein Wert von 0 zu einer Ausbreitung entlang einer Linie führt.
+
+## Sheen
+
+::: column-margin
+Sheen
+:::
+
+Die Einstellung «*Sheen*» wird lediglich in sehr seltenen Fällen verwendet. Dadurch wird die Reflexion von Oberflächen an deren Kanten abgedämpft. Dieser Effekt ist vor allem bei Textilien relevant, da diese an den Kanten etwas weniger stark reflektieren. Mithilfe des Reiters «Sheen» wird angegeben, wie stark dieser Abdämpfungseffekt vollzogen werden soll. Für Textilien wäre ein Wert von 1 zu empfehlen, während für andere Materialien die Standardeinstellung von 0 verwendet werden kann.
+
+::: column-margin
+Sheen Tint
+:::
+
+Mithilfe des Reiters «*Sheen Tint*» kann dem Sheen-Effekt ein Mass für die Einfärbung mittels der Base-Color zugewiesen werden. Der Effekt der Sheen-Reflexion basiert auf einer Reflexion mit weisser Farbe. Mithilfe des Reglers «*Sheen Tint*» kann diese Farbe mit der Base-Color vermischt werden. Je höher der Wert des Sheen-Tints, desto höher der Anteil der Base-Color am Sheen-Effekt.
+
+## Clearcoat
+
+::: column-margin
+Clearcoat
+:::
+
+Mittels der Clearcoat-Einstellungen kann eine weitere Schicht über einem Material simuliert werden. Dadurch erscheint das Material, als würde es aus mehreren Schichten bestehen. Die zweite Schicht stellt den Clearcoat dar. Dabei handelt es sich um eine reflektierende Oberfläche. Clearcoat kann etwa für Lack verwendet werden, welcher eine zusätzliche reflektierende Oberfläche auf einem bestehenden Metall-Material darstellt.
+
+::: column-margin
+Einstellungen für den Clearcoat
+:::
+
+Für den Clearcoat gibt es folgende Einstellungsmöglichkeiten im Principled-BSDF-Shader:
+
+-   «***Clearcoat***»: Mittels des Reiters «Clearcoat» kann das Ausmass der Reflexion der Clearcoat Schicht, welche über dem Material simuliert wird, eingestellt werden. Ein Wert von 0 bedeutet dabei, dass der Clearcoat nicht berücksichtigt wird, während ein Wert von 1 für einen stark reflektierenden Clearcoat verwendet wird.
+-   «***Clearcoat Roughness***»: Mittels des Reiters «Clearcoat Roughness» kann für die Clearcoat Schicht ein individuelles Ausmass der Roughness definiert werden.
+-   «***Clearcoat Normal***»: Mittels des Inputs «Clearcoat Normal» kann für die Clearcoat-Schicht ein eigener Normalen-Input verwendet werden. Dies ermöglicht es etwa, dass ein Bump-Node mit der Clearcoat-Normal verbunden wird. Dadurch können Unebenheiten auf der Clearcoat-Schicht individuell erstellt werden.
+
+## Transmission
+
+::: column-margin
+Transmission
+:::
+
+Die Einstellungen zur Transmission werden verwendet, um Materialien zu erstellen, durch die man hindurchblicken kann – beispielsweise Gläser. In solchen Fällen durchdringen die Lichtstrahlen das Objekt vollständig und Inhalte, welche sich hinter dem Objekt befinden, werden sichtbar. Dabei werden die Lichtstrahlen je nach Beschaffenheit des Materials gebrochen. Dadurch werden Inhalte, die 
+sich hinter dem Glas befinden, zu einem gewissen Grad verschoben dargestellt. Diese Brechung der Lichtstrahlen beschreibt der IOR.
+
+::: column-margin
+IOR
+:::
+
+Ein IOR mit einem Wert von 1 würde bedeuten, dass keine Brechung der Lichtstrahlen erfolgt. Je stärker der IOR vom Wert 1 abweicht, desto stärker werden die Lichtstrahlen gebrochen. Das heisst: Ein Glas, welches einen IOR von 1 aufweist, würde Licht refraktieren lassen, aber es gäbe keine Brechung in der Refraktion. Dadurch würde das Glas unsichtbar und könnte nicht mehr erkannt werden. Ein IOR von 1.01 würde allerdings bereits zu einer Brechung der Lichtstrahlen führen, wodurch das Glas ersichtlich wird. Durch einen IOR von 1.45 wird diese Brechung nochmals erhöht. 
+
+::: column-margin
+IOR für Gläser festlegen
+:::
+
+Um den IOR bei der Transmission festzulegen, kann im Principled-BSDF-Shader die Zeile «*IOR*» verwendet werden und dort der jeweilige IOR eingegeben werden. Die Zeile «*IOR*» bezieht sich lediglich auf den IOR im Falle einer Transmission. Deshalb ist es beispielsweise bei der Einstellung der Specularity nötig, den IOR mittels des Specular-Reiters zu definieren.
+
+::: column-margin
+Transmission
+:::
+
+Der Reiter «*Transmission*» beschreibt anschliessend den Anteil an Lichtstrahlen, welche das Material durchdringen. Eine Transmission von 0 bedeutet, dass kein Licht das Objekt durchdringt, während eine Transmission von 1 bedeutet, dass das gesamte Licht durchdringt. In der Regel wird für die Erstellung eines Glas-Materials dieser Wert auf 1 gesetzt. 
+
+::: column-margin
+Transmission-Roughness
+:::
+
+Mittels des Reiters «*Transmission Roughness*» kann zudem eingestellt werden, wie gebündelt die Lichtstrahlen das Objekt durchdringen sollen. Durch eine erhöhte Transmission-Roughness erscheint ein Glas zunehmend milchiger, weil die Lichtstrahlen zunehmend diffuser durch das Glas hindurchscheinen. 
+
+## Emission
+
+::: column-margin
+Abhängigkeit von Lichtquellen
+:::
+
+Die Einstellungen des Materials hängen zu einem Grossteil auch von den Lichtquellen innerhalb einer Szene ab. Wenn ein Material kein Licht bekommt, kann es kein Licht reflektieren und wird deshalb schwarz dargestellt.
+
+::: column-margin
+Emission, um Licht durch das Material auszustrahlen
+:::
+
+Es ist allerdings möglich, dass ein Material Licht aussendet. Hierfür können die Parameter «*Emission*» und «*Emission Strength*» verwendet werden. In der Farbbox «*Emission*» kann eine Farbe ausgewählt werden, welche das Material anschliessend ausstrahlt. Mittels des Reiters «*Emission Strength*» kann eingestellt werden, wie stark diese Farbe ausgestrahlt wird. Eine Emission von 0 steht für keine Ausstrahlung und eine Emission von 1 steht für eine Ausstrahlung. Dieser Wert kann allerdings noch deutlich erhöht werden, um eine noch stärkere Ausstrahlung zu erzielen. 
+
+::: column-margin
+Schwarze Farbe strahlt nicht aus
+:::
+
+Bei einer genauen Betrachtung fällt allerdings auf, dass der Principled-BSDF-Shader in seinen Standardeinstellungen eine Emission-Strength von 1 aufweist. Trotzdem wurde bislang nie eine Farbe ausgestrahlt. Dies liegt daran, dass in den Standardeinstellungen die Farbe Schwarz in der Emission-Farbbox ausgewählt ist. Diese verfügt über keine Helligkeitswerte, welche ausgestrahlt werden können. Deshalb wird in diesem Fall keine Farbe ausgestrahlt. Sobald eine andere Farbe in der Emission-Farbbox ausgewählt wird, sollte diese Farbe ausgestrahlt werden.
+
+::: column-margin
+Emission überdeckt andere Parameter des Materials
+:::
+
+Die ausgestrahlte Farbe überdeckt jeweils die anderen Einstellungen im Principled-BSDF-Shader. So bleibt die Darstellung der Materialien identisch, wenn beispielsweise die Roughness- oder die Metallic-Parameter verändert werden. Lediglich bei einer sehr geringen Emission-Strength lässt sich noch ein minimaler Einfluss, beispielsweise der Base-Color, erkennen.
+
+## Distribution
+
+::: column-margin
+Distribution-Einstellungen
+:::
+
+Zuoberst im Principled-BSDF-Shader befindet sich das Dropdown-Menü «*Distribution*». Dieses ist standardmässig auf «*GGX*» eingestellt. Alternativ kann die Einstellung «*Multiscatter GGX*» eingestellt werden. Bei diesen Optionen handelt es sich um Einstellungen, anhand derer Blender die Materialien berechnet. GGX ist schneller in der Berechnung als Multiscatter-GGX, aber physikalisch weniger akkurat. In der Regel kann GGX als Einstellung beibehalten werden. Zudem ist zu beachten, dass bei der Verwendung von Multiscatter-GGX die Transmission-Roughness nicht mehr definiert werden kann. 

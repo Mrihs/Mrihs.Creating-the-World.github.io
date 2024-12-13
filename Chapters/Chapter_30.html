@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>21. Texturen – Creating the World</title>
+<title>30. Tutorial: Erstellen einer Düne – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-05798b36db35dfecaedaec0bbed5404c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -272,15 +274,26 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#landschaft-erstellen" id="toc-landschaft-erstellen" class="nav-link active" data-scroll-target="#landschaft-erstellen">Landschaft erstellen</a></li>
+  <li><a href="#prozedurales-texturieren" id="toc-prozedurales-texturieren" class="nav-link" data-scroll-target="#prozedurales-texturieren">Prozedurales Texturieren</a></li>
+  <li><a href="#arbeiten-mit-der-color-ramp" id="toc-arbeiten-mit-der-color-ramp" class="nav-link" data-scroll-target="#arbeiten-mit-der-color-ramp">Arbeiten mit der Color-Ramp</a></li>
+  <li><a href="#wave-texture" id="toc-wave-texture" class="nav-link" data-scroll-target="#wave-texture">Wave-Texture</a></li>
+  <li><a href="#mix-rgb" id="toc-mix-rgb" class="nav-link" data-scroll-target="#mix-rgb">Mix RGB</a></li>
+  <li><a href="#prozedurales-texturieren-1" id="toc-prozedurales-texturieren-1" class="nav-link" data-scroll-target="#prozedurales-texturieren-1">Prozedurales Texturieren</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">21. Texturen</h1>
+<h1 class="title">30. Tutorial: Erstellen einer Düne</h1>
 </div>
 
 
@@ -299,56 +312,172 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Parameter</p>
-</div></div><p>Bislang wurden für die verschiedenen Einstellungsoptionen von Materialien konstante Werte verwendet. Das heisst: Einem Material wurde stets eine gewisse Farbe zugewiesen (z.B. Rot) und diese Farbe wurde auf alle Oberflächen, die diesem Material zugewiesen wurden, aufgetragen – so wie in Abbildung 1. Ebenso verhielt es sich mit der Roughness: Für diese wurde ein fixer Wert definiert, welcher für das ganze Material angewendet wurde. Eine Variation innerhalb des Materials war dabei nicht möglich.</p>
+<p>Ziel dieses Tutorials</p>
+</div></div><p>Ziel dieses Tutorials ist die Erstellung einer Sanddüne. Hierfür wird zunächst mittels des A.N.T.Land-scape-Add-ons eine Landschaft erstellt und diese anschliessend im Shader-Editor mit einem Material versehen. Diesmal wird allerdings auf die Verwendung von Bilddateien zur Texturierung verzichtet.</p>
+<section id="landschaft-erstellen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="landschaft-erstellen">Landschaft erstellen</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Mesh hinzufügen</p>
+</div></div><p>Als Erstes wird eine neue Landschaft hinzugefügt. Hierfür wird mit der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> das «<em>Add</em>»-Menü geöffnet und «<em>Mesh | Landscape</em>» ausgewählt. Dadurch erscheint ein neues Landschaftsobjekt in der Szene.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Düne erstellen</p>
+</div></div><p>Bei dem Objekt soll es sich um eine Düne handeln. Praktischerweise gibt es hierfür bereits eine Voreinstellung. Im Dropdown-Menü «<em>Operator Presets</em>» kann die Option «<em>Dunes</em>» ausgewählt werden. Dadurch wird das Mesh zu einer Düne angepasst. Für dieses Tutorial wird zudem der «<em>Random Seed</em>» 64 ausgewählt und der Wert für den «<em>Falloff X</em>» und den «<em>Falloff Y</em>» auf 5 gesetzt. Die restlichen Einstellungen können in den Standardeinstellungen belassen werden. Damit ist das Mesh der Landschaft bereits erstellt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Material hinzufügen</p>
+</div></div><p>Als Nächstes geht es darum, dem Mesh ein Material zuzuweisen. Hierfür wird im Properties-Editor unter dem Material-Reiter auf die Schaltfläche «<em>New</em>» geklickt. Dies fügt ein neues Material hinzu und erstellt ebenso den benötigten Material-Slot für das Material. Damit die Änderungen am Material sichtbar sind, wird im 3D-Viewport-Editor auf den Material-Preview-Shading-Modus gewechselt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Shader-Editor öffnen</p>
+</div></div><p>Der nächste Schritt benötigt den Shader-Editor. Hierfür muss aus den Ecken des 3D-Viewport-Editors ein neuer Editor herausgezogen werden und der neue Editor zum Shader-Editor umgewandelt werden. Nun könnte im Internet nach Sand-Texturen gesucht werden und diese anhand der bereits bekannten Methoden dem Material hinzugefügt werden. Dieses Tutorial verzichtet allerdings auf die Verwendung von Bildmaterialen zur Erstellung von Texturen. Stattdessen werden sämtliche Texturen in Blender selbst generiert.</p>
+</section>
+<section id="prozedurales-texturieren" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="prozedurales-texturieren">Prozedurales Texturieren</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Noise als Grundlage</p>
+</div></div><p>Eine Düne besteht aus einer immensen Anzahl kleiner Sandpartikel. Diese wären in einer Textur als Ansammlung minimaler Punkte sichtbar – ähnlich einem rauschenden Bild. Innerhalb von Blender gibt es zwei Möglichkeiten, um einen solchen Effekt zu erzielen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Noise-Textur</p>
+</div></div><p>Die erste Möglichkeit besteht darin, dass eine Noise-Textur hinzugefügt wird. Diese erstellt prozedural eine verrauschte Textur, die skaliert und verzogen werden kann. Sie hat allerdings den Nachteil, dass sie bei besonders kleinem Noise sehr viel Rechenleistung benötigt. Deshalb wird in diesem Tutorial auf diese Option verzichtet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>White-Noise-Textur</p>
+</div></div><p>Die zweite Möglichkeit besteht aus der Verwendung einer White-Noise-Textur. Diese kann nicht verzogen oder skaliert werden, sondern bildet automatisch möglichst kleine Rauschpunkte. Diese Art der Textur kann besser für besonders kleine Rausch-Elemente verwendet werden, weshalb in diesem Tutorial diese Textur verwendet wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>White-Noise-Textur hinzufügen</p>
+</div></div><p>Mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> wird innerhalb des Shader-Editors das «<em>Add</em>»-Menü geöffnet und unter «<em>Texture | White Noise</em>» eine White-Noise-Textur hinzugefügt. Diese wird anschliessend links vom Principled-BSDF-Shader platziert. Wird der neu hinzugefügte White-Noise-Texture-Node bei gedrückter <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span>- + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste angeklickt, wird über den Viewer-Node eine Vorschau des White-Noise-Texture-Nodes ermöglicht. Sollte dieser Node im Shader-Editor nicht erscheinen, sollte überprüft werden, ob das Node-Wrangler-Add-on aktiviert wurde.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Texture-Coordinate-und Mapping-Node hinzufügen</p>
+</div></div><p>Im 3D-Viewport-Editor wird allerdings keine Veränderung durch die Vorschau des White-Noise-Texture-Nodes sichtbar. Dies liegt daran, dass der White-Noise-Texture-Node noch einen Bezugspunkt zum Mesh benötigt. Deshalb wird der White-Noise-Texture-Node ausgewählt und die Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> gedrückt. Dadurch werden ein Texture-Coordinate-Node und ein Mapping-Node dem White-Noise-Texture-Node vorangestellt. Somit kann der White-Noise-Texture-Node nun einen Bezugspunkt zum Mesh generieren und eine Vorschau auf das Mesh sollte möglich sein.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Farbvariation fehlt in White-Noise-Textur</p>
+</div></div><p>Würde nun der Color-Output des White-Noise-Texture-Nodes mit dem Base-Color-Input des Principled-BSFD-Shaders verbunden werden, würde lediglich schwarz-weisser Noise resultieren. Sand besteht jedoch aus einer Farbe und nicht nur aus Schwarz-Weiss-Abstufungen. Deshalb muss diese Schwarz-Weiss-Abstufung in eine farbige Abstufung umgewandelt werden. Dies kann mittels eines Color-Ramp-Nodes erzielt werden.</p>
+</section>
+<section id="arbeiten-mit-der-color-ramp" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="arbeiten-mit-der-color-ramp">Arbeiten mit der Color-Ramp</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Color-Ramp hinzufügen und verbinden</p>
+</div></div><p>Mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> kann das «<em>Add</em>»-Menü aufgerufen und unter «<em>Converter | ColorRamp</em>» eine Color-Ramp hinzugefügt werden. Diese wird anschliessend zwischen dem White-Noise-Texture-Node und dem Principled-BSDF-Shader platziert. Zusätzlich wird der Color-Output des White-Noise-Texture-Nodes mit dem Faktor-Input des Color-Ramp-Nodes verbunden. Der Color-Output des Color-Ramp-Nodes wird anschliessend mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Was macht die Color-Ramp genau?</p>
+</div></div><p>Die Color-Ramp nimmt die jeweiligen Inputs, seien es nun Faktoren oder Farben, auf und erstreckt sie entlang einer Farbachse. Diese wird in der Mitte des Color-Ramp-Nodes ersichtlich. Anhand dieser Achse werden anschliessend neue Farbmarker definiert, welche an den jeweiligen Punkten der Input-Achse stehen. Per Default befindet sich ganz links am Ende dieser Achse ein Farbmarker mit der Farbe Schwarz (RGB 0-0-0) und rechts ein Farbmarker mit der Farbe Weiss (RGB 1-1-1). Alle Faktorwerte oder Farbwerte, welche die Color-Ramp als Input bekommt, werden somit entlang dieser Achse ausgestreckt und graduell zwischen den beiden Farbwerten abgestuft.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Was bewirkt eine Verschiebung der Farbmarker in der Color-Ramp?</p>
+</div></div><p>Wenn nun einer der beiden Farbmarker verschoben wird, beispielsweise der linke Farbmarker, so vergrössert sich sein Anteil am Spektrum der Color-Ramp. Die gesamte Fläche, welche sich links von diesem Farbmarker befindet, wird zu einer schwarzen Farbe umgewandelt. Gleichzeitig wird der Bereich, in dem eine graduelle Abstufung von Schwarz auf Weiss geschieht, zunehmend kleiner. Dieser Effekt lässt sich am besten betrachten, indem die Color-Ramp ausgewählt und mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> über den Viewer-Node betrachtet wird. Je weiter der schwarze Farbmarker nach rechts gezogen wird, desto mehr Anteile an der White-Noise-Textur, welche den Input der Color-Ramp darstellt, werden schwarz. Analog dazu werden mehr Anteile der White-Noise-Textur weiss, wenn der weisse Farbmarker nach links verschoben wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Rangfolge der Farbmarker</p>
+</div></div><p>Jeder Farbmarker innerhalb der Color-Ramp hat dabei eine Rangliste von links nach rechts inne. Der schwarze Farbmarker auf der linken Seite ist der erste Marker und wird deshalb mit der Nummer «0» beschrieben. Dies liegt daran, dass Blender auf Python beruht und Python seine Nummerierungen jeweils bei 0 beginnt. Der zweite Farbmarker hat deshalb die Nummer 1 und ein dritter Farbmarker hätte die Nummer 2, und so weiter. Diese Nummerierung ist jeweils links neben dem Eingabefeld «<em>Pos</em>» ersichtlich. Dadurch können die jeweiligen Marker alternativ zu einer Auswahl mittels eines Mausklicks angesteuert werden. Mittels der Schaltfläche «+» kann jeweils ein zusätzlicher Farbmarker hinzugefügt und mittels der Schaltfläche «-» der ausgewählte Farbmarker entfernt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Position des Markers entlang der Color-Ramp</p>
+</div></div><p>Die Position des aktuell ausgewählten Markers wird zudem Anhand des Eingabefeldes «<em>Pos</em>» dargestellt. Dieses Feld kann Werte von 0 bis 1 annehmen. Der Wert 0 befindet sich dabei am linken Ende und der Wert 1 am rechten Ende der Color-Ramp.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Farben von Farbmarkern einstellen</p>
+</div></div><p>Unterhalb der Rangfolge und der Position des ausgewählten Farbmarkers befindet sich eine Farbbox, welche die Farbe des ausgewählten Farbmarkers darstellt. So kann für jeden Farbmarker eine eigene Farbe ausgewählt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Color-Ramp für Düne anpassen</p>
+</div></div><p>Um nun die White-Noise-Textur etwas mehr nach Sand aussehen zu lassen, sollten zunächst die Farben der beiden Farbmarker ausgewechselt werden. Der schwarze Farbmarker wird deshalb auf den RGB-Wert von 0.2-0.1-0 gesetzt und der weisse Farbmarker auf den RGB-Wert 0.5-0.45-0.35 gestellt. Dadurch werden die schwarz-weissen Abstufungen der White-Noise-Textur nun in Abstufungen dieser beiden Farbmarker umgewandelt. Der Color-Output des Color-Ramp-Nodes kann deshalb nun mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden. Zudem sollte bei gedrückter Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> auf den Principled-BSDF-Shader geklickt werden, um den Viewer-Node wieder zu deaktivieren.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Roughness variieren lassen</p>
+</div></div><p>Als Nächstes benötigt der Principled-BSDF-Shader Informationen für den Roughness-Input. Diese Information sollte idealerweise auch gerade auf dem White-Noise-Texture-Node beruhen. Mittels dessen Value-Outputs könnte etwa diese Information übertragen werden. Dies würde allerdings dazu führen, dass das Material ziemlich glatt erscheint und Licht gebündelt reflektiert, was bei einer Düne nicht erwartet wird. Deshalb müsste der Anteil der geringen Roughness-Werte reduziert werden. Um dies zu erreichen, kann erneut eine Color-Ramp hinzugefügt werden, welche Ebenfalls den Color-Output des White-Noise-Texture-Nodes erhält, deren Color-Output allerdings mit dem Roughness-Input des Principled-BSDF-Shaders verbunden wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Roughness mit Farbmarkern variieren</p>
+</div></div><p>Der linke, schwarze Farbmarker deckt nun die tiefstmöglichen Bereiche der Roughness ab, nämlich den Wert 0. Dieser Wert ist allerdings nicht im Sand zu erwarten. Deshalb kann seine Farbbox geöffnet und ihm eine hellere Farbe zugeordnet werden (z.B. RGB = 0.6-0.6-0.6). Dadurch gibt es immer noch eine graduelle Variation der Roughness, allerding in einem geringeren Ausmass.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bright/Contrast-Node für alternative Vorgehensweise</p>
+</div></div><p>Es gibt noch eine weitere Option, welche verwendet werden könnte, um die Roughness zu erhöhen. So könnte statt eines Color-Ramp-Nodes ein Bright/Contrast-Node verwendet werden. Dieser ist im «<em>Add</em>»-Menü unter «<em>Color | Bright Contrast</em>» zu finden. Hierbei würde anschliessend der Color-Output des White-Noise-Texture-Nodes mit dem Color-Input des Bright/Contrast-Nodes verbunden werden und dessen Color-Output mit dem Roughness-Input des Principled-BSDF-Shaders.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>White-Noise aufhellen mittels Bright/Contrast-Node</p>
+</div></div><p>Durch eine Erhöhung der Zeile «<em>Bright</em>» wird anschliessend die Noise-Textur farblich erhellt. Dies führt dazu, dass die dunkleren Anteile, welche zu einer tieferen Roughness führen, aufgehellt werden und dadurch eine höhere Roughness aufweisen. Hier könnte beispielweise ein Wert von 0.3 verwendet werden.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_21/red_cube.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_30/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Der Standardwürfel mit einer roten Base-Color.
+Abbildung&nbsp;1: Nodes-System für prozedurale Sand-Texturen.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Texturen</p>
-</div></div><p>Texturen stellen eine Möglichkeit dar, um verschiedene Werte für eine Einstellung zu definieren und diese auf ein Objekt zu übertragen. Dadurch können komplexere Farbverläufe oder Variationen von Farben über die Breite einer Oberfläche erstreckt werden – wie beispielsweise in Abbildung 2.</p>
+<p>White-Noise-Textur als Normal-Textur verwenden</p>
+</div></div><p>Zusätzlich kann der White-Noise-Texture-Node auch verwendet werden, um die Normal-Textur zu ersetzen. Hierfür wird ein Bump-Node im «<em>Add</em>»-Menü unter «<em>Vector | Bump</em>» hinzugefügt und links vom Principled-BSDF-Shader platziert. Der Normal-Output des Bump-Nodes kann anschliessend mit dem Normal-Input des Principled-BSDF-Shaders verbunden werden. Dadurch generiert der Bump-Node nun minimale Abweichungen, welche das Material jeweils simuliert. Um die Höhe dieser Abweichungen einstellen zu können, wird der Color-Output des White-Noise-Texture-Nodes mit dem Height-Input des Bump-Nodes verbunden.</p>
+</section>
+<section id="wave-texture" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="wave-texture">Wave-Texture</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Abstufungen in den Dünen hinzufügen</p>
+</div></div><p>Teilweise beinhalten Dünen auch leichte Abstufungen, welche der Wind durch seine Verwehungen mit sich bringt. Diese können mittels einer zusätzlichen Textur ebenfalls simuliert werden. Das Ziel hierfür besteht darin, dass sich kreisförmig um alle Hügel innerhalb der Landschaft Abstufungen ergeben.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Wave-Textur hinzufügen</p>
+</div></div><p>Eine ideale Grundlage für dieses Unterfangen bildet die Wave-Textur. Diese ist im «<em>Add</em>»-Menü unter «<em>Texture | Wave Texture</em>» zu finden. Der Vector-Input kann dabei mit dem Vector-Output des bereits erstellten Mapping-Nodes verbunden werden. Die Wave-Textur erstellt nun wellenartige Muster über das Mesh hinweg. Dabei orientiert sich die Wave-Textur entlang der X-Achse. Dies ist im zweiten Dropdown-Menü des Wave-Texture-Nodes definiert. Indem in diesem Menü stattdessen die Z-Achse ausgewählt wird, werden die Wellen entlang der Z-Achse gebildet. Dies führt dazu, dass sie sich kreisförmig entlang der Hügel des Meshes erstrecken. Mittels der Zeile «*Scale» kann zudem die Skalierung dieser Wellen erhöht werden, sodass mehr Wellen ersichtlich sind. Hierfür kann beispielsweise der Wert 10 verwendet werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Anpassungen der Wave-Textur</p>
+</div></div><p>Mittels der Zeile «<em>Distortion</em>» kann ein Wert festgelegt werden, welcher zu einer Verzerrung der Wellentextur führt. Je grösser dieser Wert, desto mehr wird die originale Wellentextur zufällig verzerrt. Hier könnte beispielsweise der Wert 9 verwendet werden, um auf die Zufälligkeit von natürlichen Verwehungen Rücksicht zu nehmen. Zusätzlich könnte das Ausmass an ersichtlichen Details in den Wellen mittels der Reiter «<em>Detail</em>», «<em>Detail Scale</em>» und «<em>Detail Roughness</em>» bei Bedarf noch variiert werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Displacement hinzufügen</p>
+</div></div><p>Nun kann ein Displacement-Node über das «<em>Add</em>»-Menü unter «<em>Vector | Displacement</em>» hinzugefügt und unterhalb des Bump-Nodes eingefügt werden. Der Displacement-Node soll nun grössere Oberflächenveränderungen im Mesh simulieren und die Werte für die Höhe anhand des Wave-Texture-Nodes übernehmen. Deshalb wird der Color-Output des Wave-Texture-Nodes mit dem Height-Input des Displacement-Nodes verbunden. Der Wert für die Skalierung sollte innerhalb des Displacement-Nodes zudem noch minimiert werden, da der Effekt sonst zu stark ausfällt. Ein Wert von 0.01 für die Zeile «<em>Scale</em>» sollte daher ausreichen. Zu guter Letzt kann der Discplacement-Output des Displacement-Nodes mit dem Displacement-Input des Material-Output-Nodes verbunden werden. Dadurch sollte das Displacement auf dem Mesh ersichtlich werden.</p>
+</section>
+<section id="mix-rgb" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="mix-rgb">Mix RGB</h2>
+<div class="colum-margin">
+<p>Mix-RGB-Node hinzufügen</p>
+</div>
+<p>Die Abstufungen, welche der Wave-Texture-Node erzielt, sind nun lediglich als Displacement ersichtlich, haben allerdings keinen Einfluss auf die Farbe, die Roughness oder die Normalen des Materials. Wenn diese Abstufungen hierfür auch berücksichtigt werden sollen, müssten die Farbwerte der Wave-Textur mit den Farbwerten der White-Noise-Textur kombiniert werden. Für die Kombination von verschiedenen Farben oder Texturen kann der Mix-RGB-Node verwendet werden. Dieser kann unter dem «<em>Add</em>»-Menü unter «<em>Color | MixRGB</em>» hinzugefügt und neben dem White-Noise-Texture-Node platziert werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Graduelle Abstufung von Farbinputs</p>
+</div></div><p>Der Color1-Input des Mix-RGB-Nodes sollte seine Informationen aus dem Color-Output des White-Noise-Texture-Nodes beziehen. Der Color2-Input sollte seine Informationen aus dem Color-Output des Wave-Texture-Nodes beziehen. Dadurch wird anschliessend mittels des Reiters «<em>Fac</em>» eine graduelle Abstufung zwischen den beiden Texturen möglich.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Multiplizieren von Farben</p>
+</div></div><p>Das Ziel ist allerdings keine graduelle Abstufung zwischen den beiden Texture-Nodes. Stattdessen sollten die Wellen der Wave-Textur über die White-Noise-Textur gelegt werden. Um dies zu erzielen, kann im Dropdown-Menü, welches mit «<em>Mix</em>» angeschrieben ist, die Option «<em>Multiply</em>» ausgewählt werden. Dadurch werden die beiden Texturen nun nicht mehr miteinander gemischt, sondern multipliziert. Mittel des Reiters «<em>Fac</em>» kann nun ein Grad für diese Multiplikation ausgewählt werden, beispielsweise 0.675. Anschliessend kann der Color-Output des Mix-RGB-Nodes verwendet werden, um die Inputs, welche bisher vom White-Noise-Texture-Node anvisiert wurden, zu ersetzen.</p>
 <div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_21/Cube_Textured.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_30/finalDunes.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Der Standardwürfel mit einer Textur in der Base-Color.
+Abbildung&nbsp;2: Kombination der Wave-Textur mit der White-Noise-Textur.
 </figcaption>
 </figure>
 </div>
+</section>
+<section id="prozedurales-texturieren-1" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="prozedurales-texturieren-1">Prozedurales Texturieren</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Beispiel mit zwei verschiedenen Texturen</p>
-</div></div><p>Der Unterschied zwischen Abbildung 1 und Abbildung 2 ist in Abbildung 3 ersichtlich. Beide Bilder in der Abbildung 3 zeigen eine Textur. Die linke Textur, welche komplett aus einer roten Fläche besteht, beschreibt die Textur, welche auf den Würfel in Abbildung 1 aufgetragen wird. Die rechte Textur aus der Abbildung 3 zeigt eine Textur, welche auf den Würfel in der Abbildung 2 aufgetragen wird.</p>
-<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_21/Textures_Comparison.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Links eine einfarbige rote Textur und rechts eine Textur mit einem Mauer-Muster.
-</figcaption>
-</figure>
-</div>
+<p>Prozedurales Texturieren</p>
+</div></div><p>In diesem Tutorial wurde nun auf Bilddateien zum Texturieren verzichtet. Stattdessen wurden Blenders interne, vorberechnete Texturen verwendet, um eine Texturierung der Oberfläche zu erstellen. Eine solche Herangehensweise wird als prozedurales Texturieren bezeichnet. Dies hat den Vorteil, dass man sich keine Gedanken machen muss, wie hochauflösend die Texturen sein sollten. Durch die Berechnung können jeweils höhere Auflösungen erzielt werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Texturen werden nicht für Parameter verwendet</p>
-</div></div><p>Die linke Textur müsste allerdings nicht verwendet werden. Die gesamte Textur beschreibt eine konstante Farbe, namentlich die Farbe Rot, und weist keinerlei Variation im Bild auf. Deshalb könnte man stattdessen die Grundfarbe im Principled-BSDF-Shader auf Rot stellen und bräuchte keine Textur. Der Parameter für die Base-Color wäre dann auf die Farbe Rot eingestellt. In solchen Fällen würde man meistens auf die Textur verzichten, da diese als zusätzliche Bilddatei mit dem 3D-Objekt abgespeichert wird und mehr Speicherplatz benötigt.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Textur für Variation</p>
-</div></div><p>Die rechte Textur, welche auf den Würfel der Abbildung 2 übertragen wird, könnte nicht mittels einer einzelnen Farbe im Principled-BSDF-Shader dargestellt werden. In der Base-Color des Shaders kann leidglich eine Farbe ausgewählt werden, welche angezeigt wird – also kann lediglich ein Parameter definiert werden. Um eine Variation an Parametern zu erzielen, wie in Abbildung 2, wird eine Textur benötigt, welche anschliessend der Base-Color im Principled-BSDF-Shader zugewiesen wird.</p>
+<p>Nachteile des prozeduralen Texturierens</p>
+</div></div><p>Ein Nachteil des prozeduralen Texturierens besteht allerdings darin, dass die Texturen eben gerade nicht als Bild vorhanden sind. Dies führt etwa dazu, dass die erstellten prozeduralen Texturen nicht in anderen Programmen (z.B. Unity oder Unreal Engine) dargestellt werden können. Es ist zwar möglich, die prozeduralen Texturen zu extrahieren, indem man sie sozusagen in eine Bilddatei hineinspeichert (ein Prozess, der als Baking bezeichnet wird), allerdings gehen dabei oft Details der prozeduralen Texturen verloren.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

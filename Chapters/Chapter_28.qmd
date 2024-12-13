@@ -7,8 +7,7 @@ editor: visual
 Was macht die Displacement-Textur genau?
 :::
 
-Bislang wurden Texturen innerhalb von Objekten als Bestandteil von Materialien verwendet. So wurde etwa mittels der Color-Textur die Farbe für ein Material über eine Fläche hinweg festgelegt oder mittels der Roughness-Textur bestimmt, welchen Wert die Roughness an einer bestimmten Stelle hat. Im nächsten Schritt wird aufgezeigt, welche Mechanismen hinter der Displacement-Textur stecken. Abbildung 1 zeigt eine Displacement
-Textur. Was könnte sich hinter dieser Textur verbergen?
+Bislang wurden Texturen innerhalb von Objekten als Bestandteil von Materialien verwendet. So wurde etwa mittels der Color-Textur die Farbe für ein Material über eine Fläche hinweg festgelegt oder mittels der Roughness-Textur bestimmt, welchen Wert die Roughness an einer bestimmten Stelle hat. Im nächsten Schritt wird aufgezeigt, welche Mechanismen hinter der Displacement-Textur stecken. Abbildung 1 zeigt eine Displacement Textur. Was könnte sich hinter dieser Textur verbergen?
 
 ![Eine Displacement-Textur. Was könnte sich dahinter verbergen?](Images/Chapter_28/1_displacement_map.png){#fig-1_1 fig-align="left"}
 
@@ -16,15 +15,13 @@ Textur. Was könnte sich hinter dieser Textur verbergen?
 Plane hinzufügen
 :::
 
-Um zu erkennen, was die Displacement-Textur in diesem Beispiel darstellt, wird sie für einmal nicht als Material verwendet, sondern innerhalb eines Modifiers. Hierfür wird eine flache Oberfläche benötigt, auf welche der Modifier angewendet wird. Deshalb wird im 3D-Viewport-Display eine Plane hinzugefügt. Diese wird über das «*Add*»-Menü ({{< kbd Shift >}} + {{< kbd A >}}) unter «*Mesh | Plane*» erstellt.
+Um zu erkennen, was die Displacement-Textur in diesem Beispiel darstellt, wird sie für einmal nicht als Material verwendet, sondern innerhalb eines Modifiers. Hierfür wird eine flache Oberfläche benötigt, auf welche der Modifier angewendet wird. Deshalb wird im 3D-Viewport-Display eine Plane hinzugefügt. Diese wird über das «*Add*»-Menü ({{< kbd Shift >}} + {{< kbd A >}}) unter «*Mesh \| Plane*» erstellt.
 
 ::: column-margin
 Subdivision-Surface-Modifier hinzufügen
 :::
 
-Der Plane werden zwei Modifier hinzugefügt. Zunächst wird ein Subdivision-Surface-Modifier hinzugefügt. Damit soll die Fläche in kleinere, gleich grosse Quads unterteilt werden. Allerdings wird 
-dadurch auch die Form der Fläche verändert, da über die Option «*Catmull-Clark*» die Kanten geglättet werden. Deshalb ist es nötig, im Subdivision-Surface-Modifier den Reiter «*Simple*» auszuwählen. 
-Dadurch sollte die Fläche ihre originale Form beibehalten.
+Der Plane werden zwei Modifier hinzugefügt. Zunächst wird ein Subdivision-Surface-Modifier hinzugefügt. Damit soll die Fläche in kleinere, gleich grosse Quads unterteilt werden. Allerdings wird dadurch auch die Form der Fläche verändert, da über die Option «*Catmull-Clark*» die Kanten geglättet werden. Deshalb ist es nötig, im Subdivision-Surface-Modifier den Reiter «*Simple*» auszuwählen. Dadurch sollte die Fläche ihre originale Form beibehalten.
 
 ::: column-margin
 Displace-Modifier hinzufügen
@@ -38,7 +35,7 @@ Als Nächstes wird ein neuer Modifier hinzugefügt. Hierbei handelt es sich um e
 Textur zum Displace-Modifier hinzufügen
 :::
 
-Dem Displace-Modifier kann eine Textur hinzugefügt werden. Hierfür muss auf die Schaltfläche «*New*» geklickt werden. Anschliessend wird von Blender ein Slot für eine neue Textur erstellt, welche nun im Displace-Modifier verwendet wird. Um diese Textur bearbeiten zu können, muss der Textur-Reiter, welcher sich zuunterst im Properties-Editor befindet, geöffnet werden. Alternativ kann auch innerhalb des Displace-Modifiers auf die Schaltfläche «*Show texture in texture tab*» geklickt werden, welche sich ganz rechts innerhalb des neu erstellten Textur-Slots befindet. 
+Dem Displace-Modifier kann eine Textur hinzugefügt werden. Hierfür muss auf die Schaltfläche «*New*» geklickt werden. Anschliessend wird von Blender ein Slot für eine neue Textur erstellt, welche nun im Displace-Modifier verwendet wird. Um diese Textur bearbeiten zu können, muss der Textur-Reiter, welcher sich zuunterst im Properties-Editor befindet, geöffnet werden. Alternativ kann auch innerhalb des Displace-Modifiers auf die Schaltfläche «*Show texture in texture tab*» geklickt werden, welche sich ganz rechts innerhalb des neu erstellten Textur-Slots befindet.
 
 ![Icon zur Einstellung der Texturen im Textur-Reiter.](Images/Chapter_28/Show_texture_in_Texture_Tab.png){#fig-1_3 fig-align="left"}
 
@@ -46,7 +43,7 @@ Dem Displace-Modifier kann eine Textur hinzugefügt werden. Hierfür muss auf di
 Einstellungen im Textur-Reiter
 :::
 
-Im Textur-Reiter des Properties-Editors wird nun angegeben, welche Textur für den Displace-Modifier verwendet wird. Dies ist anhand des ersten Dropdown-Menüs ersichtlich, in welchem «*Displace*» ausgewählt ist. Mithilfe dieses Dropdown-Menüs könnten Texturen auch für andere Funktionen (z.B. Brushes) verwendet werden. Im zweiten Dropdown-Menü können Texturen, welche bereits in Blender geladen wurden, als Textur ausgewählt werden. Mithilfe der Einstellung «*Type*» können verschiedene Arten von Texturen anvisiert werden. Dadurch können prozedurale Texturen innerhalb von Blender anhand von Parametern erstellt werden, oder es wird die Einstellung «*Image or Movie*» verwendet, um ein Bild oder einen Film als Textur zu verwenden. In diesem Fall wird ein Bild verwendet, weshalb die Einstellung «*Image or Movie*» als Type korrekt ist. 
+Im Textur-Reiter des Properties-Editors wird nun angegeben, welche Textur für den Displace-Modifier verwendet wird. Dies ist anhand des ersten Dropdown-Menüs ersichtlich, in welchem «*Displace*» ausgewählt ist. Mithilfe dieses Dropdown-Menüs könnten Texturen auch für andere Funktionen (z.B. Brushes) verwendet werden. Im zweiten Dropdown-Menü können Texturen, welche bereits in Blender geladen wurden, als Textur ausgewählt werden. Mithilfe der Einstellung «*Type*» können verschiedene Arten von Texturen anvisiert werden. Dadurch können prozedurale Texturen innerhalb von Blender anhand von Parametern erstellt werden, oder es wird die Einstellung «*Image or Movie*» verwendet, um ein Bild oder einen Film als Textur zu verwenden. In diesem Fall wird ein Bild verwendet, weshalb die Einstellung «*Image or Movie*» als Type korrekt ist.
 
 :::::: tippbox
 :::: tippbox-header
@@ -57,8 +54,7 @@ Weiterführende Informationen
 ::::
 
 ::: tippbox-body
-Blender unterscheidet intern zwischen Bilddateien und Texturen. Dadurch sind teilweise Bilddateien in Blender geladen, allerdings nicht als Textur verwendbar. Hierfür muss im Textur-Reiter des Properties-Editors das in Blender geladene Bild noch einer Textur 
-hinzufügt werden. Um nachzuvollziehen, ob man in Blender gerade Bilddateien oder Texturen auswählt, kann man sich jeweils am Icon des Dropdown-Menüs orientieren.
+Blender unterscheidet intern zwischen Bilddateien und Texturen. Dadurch sind teilweise Bilddateien in Blender geladen, allerdings nicht als Textur verwendbar. Hierfür muss im Textur-Reiter des Properties-Editors das in Blender geladene Bild noch einer Textur hinzufügt werden. Um nachzuvollziehen, ob man in Blender gerade Bilddateien oder Texturen auswählt, kann man sich jeweils am Icon des Dropdown-Menüs orientieren.
 :::
 ::::::
 
@@ -66,52 +62,43 @@ hinzufügt werden. Um nachzuvollziehen, ob man in Blender gerade Bilddateien ode
 Bild zur Textur hinzufügen
 :::
 
-Sobald die Einstellung «*Image or Movie*» ausgewählt ist, wird der Reiter «*Image*» sichtbar. Darin kann auf dieselben Arten wie innerhalb eines Image-Texture-Nodes ein Bild geladen werden. In diesem Fall wird über die Schaltfläche «*Open*» die Bilddatei «*displacement_map.png*» geöffnet. Anschliessend sollte die entsprechende Bilddatei der Textur hinzugefügt worden sein und die Textur sollte über den Displacement-Modifier eine Veränderung im Mesh bewirken. 
+Sobald die Einstellung «*Image or Movie*» ausgewählt ist, wird der Reiter «*Image*» sichtbar. Darin kann auf dieselben Arten wie innerhalb eines Image-Texture-Nodes ein Bild geladen werden. In diesem Fall wird über die Schaltfläche «*Open*» die Bilddatei «*displacement_map.png*» geöffnet. Anschliessend sollte die entsprechende Bilddatei der Textur hinzugefügt worden sein und die Textur sollte über den Displacement-Modifier eine Veränderung im Mesh bewirken.
 
 ::: column-margin
 Effekte der Displacement-Textur
 :::
 
-Was ist dabei passiert? Jeder Vertex des Meshes wurde entlang der Normalen verschoben. Der Grad dieser Verschiebung ergibt sich anhand der soeben eingefügten Displacement-Textur. Über die UVs ermittelt Blender für jeden Vertex, wo sich dieser auf der Displacement-Textur befindet, und extrahiert aus den Schwarz-weiss-Werten der Textur an dieser Stelle, wie stark die Verschiebung entlang der Normalen vollzogen werden soll. Hellere Werte in der Textur stehen für höhere Bereiche (grösseres Displacement), während dunklere Werte in der Textur für tiefere Bereiche stehen (geringeres Displacement). Dadurch können anhand von Displacement-Texturen Abweichungen im Objekt 
-vollzogen werden. 
+Was ist dabei passiert? Jeder Vertex des Meshes wurde entlang der Normalen verschoben. Der Grad dieser Verschiebung ergibt sich anhand der soeben eingefügten Displacement-Textur. Über die UVs ermittelt Blender für jeden Vertex, wo sich dieser auf der Displacement-Textur befindet, und extrahiert aus den Schwarz-weiss-Werten der Textur an dieser Stelle, wie stark die Verschiebung entlang der Normalen vollzogen werden soll. Hellere Werte in der Textur stehen für höhere Bereiche (grösseres Displacement), während dunklere Werte in der Textur für tiefere Bereiche stehen (geringeres Displacement). Dadurch können anhand von Displacement-Texturen Abweichungen im Objekt vollzogen werden.
 
 ::: column-margin
 Displacement benötigt viele Vertices
 :::
 
-
-Bislang ist noch nicht zu erkennen, was die Displacement-Textur eigentlich abbilden soll. Dies liegt daran, dass das Mesh zu wenige Vertices beinhaltet, um möglichst die gesamte Form der Textur 
-abzudecken. Zudem befinden sich die Vertices auch nicht zwingend an den höchsten oder tiefsten Punkten der Textur, wodurch das Maximum und das Minimum der Abweichungen innerhalb der Displacement-Textur möglicherweise nicht abgebildet werden. Hierfür werden demnach weitere Vertices benötigt. 
+Bislang ist noch nicht zu erkennen, was die Displacement-Textur eigentlich abbilden soll. Dies liegt daran, dass das Mesh zu wenige Vertices beinhaltet, um möglichst die gesamte Form der Textur abzudecken. Zudem befinden sich die Vertices auch nicht zwingend an den höchsten oder tiefsten Punkten der Textur, wodurch das Maximum und das Minimum der Abweichungen innerhalb der Displacement-Textur möglicherweise nicht abgebildet werden. Hierfür werden demnach weitere Vertices benötigt.
 
 ::: column-margin
 Weitere Vertices hinzufügen
 :::
 
-Durch den Subdivision-Surface-Modifier können weitere Vertices hinzugefügt werden, indem die Anzahl Subdivisions im Reiter «*Levels Viewport*» erhöht wird. Diese Option reicht maximal für sechs 
-Subdivisions. Dadurch wird bereits ersichtlich, was sich hinter der Displacement-Textur befindet. Sollten noch mehr Subdivisions benötigt oder gewünscht werden, kann der Subdivision-Surface-Modifier dupliziert werden.
+Durch den Subdivision-Surface-Modifier können weitere Vertices hinzugefügt werden, indem die Anzahl Subdivisions im Reiter «*Levels Viewport*» erhöht wird. Diese Option reicht maximal für sechs Subdivisions. Dadurch wird bereits ersichtlich, was sich hinter der Displacement-Textur befindet. Sollten noch mehr Subdivisions benötigt oder gewünscht werden, kann der Subdivision-Surface-Modifier dupliziert werden.
 
 ::: column-margin
 Vorsicht beim Duplizieren des Subdivision-Surface-Modifiers
 :::
 
-Beim Duplizieren des Subdivision-Surface-Modifiers ist dringend zu empfehlen, dass die Anzahl Subdivisions vor dem Duplizieren zurückgesetzt wird. Wird ein Subdivision-Surface-Modifier mit 
-sechs Subdivisions dupliziert, führt dies dazu, dass durch das resultierende Duplikat insgesamt zwölf Subdivisions durchgeführt werden. Dies kann je nach Computer einen Grossteil der verfügbaren 
-Leistung benötigen. Durch das Zurücksetzen der Anzahl Subdivisions auf beispielsweise zwei Subdivisions werden mit dem Duplikat zusammen lediglich vier Subdivision durchgeführt.
+Beim Duplizieren des Subdivision-Surface-Modifiers ist dringend zu empfehlen, dass die Anzahl Subdivisions vor dem Duplizieren zurückgesetzt wird. Wird ein Subdivision-Surface-Modifier mit sechs Subdivisions dupliziert, führt dies dazu, dass durch das resultierende Duplikat insgesamt zwölf Subdivisions durchgeführt werden. Dies kann je nach Computer einen Grossteil der verfügbaren Leistung benötigen. Durch das Zurücksetzen der Anzahl Subdivisions auf beispielsweise zwei Subdivisions werden mit dem Duplikat zusammen lediglich vier Subdivision durchgeführt.
 
 ::: column-margin
 Reihenfolge der Modifier beachten
 :::
 
-Weiterhin ist wichtig, dass die Subdivision-Surface-Modifier in der Platzierung der Modifier vor dem Displace-Modifier platziert werden. Nur Vertices, welche vor dem Displace-Modifier erstellt werden, 
-können von diesem Modifier berücksichtigt werden. Modifier, welche nach dem Displace-Modifier platziert werden, kann der Displace-Modifier nicht berücksichtigen.
+Weiterhin ist wichtig, dass die Subdivision-Surface-Modifier in der Platzierung der Modifier vor dem Displace-Modifier platziert werden. Nur Vertices, welche vor dem Displace-Modifier erstellt werden, können von diesem Modifier berücksichtigt werden. Modifier, welche nach dem Displace-Modifier platziert werden, kann der Displace-Modifier nicht berücksichtigen.
 
 ::: column-margin
 Tangram Heightmapper
 :::
 
-Die Bilddatei «*displacement_map.png*» wurde mithilfe des «Tangram Heightmappers» (<http://www.tangrams.github.io/heightmapper>) erstellt. Dadurch können Areale der Erde ausgewählt und eine 
-Höhentextur des entsprechenden Gebiets erstellt werden. Diese 
-Höhentexturen können anschliessend als Displacement-/Height-Textur verwendet werden. 
+Die Bilddatei «*displacement_map.png*» wurde mithilfe des «Tangram Heightmappers» (<http://www.tangrams.github.io/heightmapper>) erstellt. Dadurch können Areale der Erde ausgewählt und eine Höhentextur des entsprechenden Gebiets erstellt werden. Diese Höhentexturen können anschliessend als Displacement-/Height-Textur verwendet werden.
 
 :::::: tippbox
 :::: tippbox-header
@@ -123,4 +110,5 @@ Weiterführende Informationen
 
 ::: tippbox-body
 In diesem Beispiel wurde das Material des Objektes nicht bearbeitet. Die Displacement-Textur wurde lediglich verwendet, um damit die Oberfläche des Objektes zu verformen.
+:::
 ::::::

@@ -1,0 +1,224 @@
+---
+title: "30. Tutorial: Erstellen einer Düne"
+editor: visual
+---
+
+::: column-margin
+Ziel dieses Tutorials
+:::
+
+Ziel dieses Tutorials ist die Erstellung einer Sanddüne. Hierfür wird zunächst mittels des A.N.T.Land-scape-Add-ons eine Landschaft erstellt und diese anschliessend im Shader-Editor mit einem Material versehen. Diesmal wird allerdings auf die Verwendung von Bilddateien zur Texturierung verzichtet.
+
+## Landschaft erstellen
+
+::: column-margin
+Mesh hinzufügen
+:::
+
+Als Erstes wird eine neue Landschaft hinzugefügt. Hierfür wird mit der Tastenkombination {{< kbd Shift >}} + {{< kbd A >}} das «*Add*»-Menü geöffnet und «*Mesh \| Landscape*» ausgewählt. Dadurch erscheint ein neues Landschaftsobjekt in der Szene.
+
+::: column-margin
+Düne erstellen
+:::
+
+Bei dem Objekt soll es sich um eine Düne handeln. Praktischerweise gibt es hierfür bereits eine Voreinstellung. Im Dropdown-Menü «*Operator Presets*» kann die Option «*Dunes*» ausgewählt werden. Dadurch wird das Mesh zu einer Düne angepasst. Für dieses Tutorial wird zudem der «*Random Seed*» 64 ausgewählt und der Wert für den «*Falloff X*» und den «*Falloff Y*» auf 5 gesetzt. Die restlichen Einstellungen können in den Standardeinstellungen belassen werden. Damit ist das Mesh der 
+Landschaft bereits erstellt. 
+
+::: column-margin
+Material hinzufügen
+:::
+
+Als Nächstes geht es darum, dem Mesh ein Material zuzuweisen. Hierfür wird im Properties-Editor unter dem Material-Reiter auf die Schaltfläche «*New*» geklickt. Dies fügt ein neues Material hinzu und erstellt ebenso den benötigten Material-Slot für das Material. Damit die Änderungen am Material sichtbar sind, wird im 3D-Viewport-Editor auf den Material-Preview-Shading-Modus gewechselt. 
+
+::: column-margin
+Shader-Editor öffnen
+:::
+
+Der nächste Schritt benötigt den Shader-Editor. Hierfür muss aus den Ecken des 3D-Viewport-Editors ein neuer Editor herausgezogen werden und der neue Editor zum Shader-Editor umgewandelt werden. Nun könnte im Internet nach Sand-Texturen gesucht werden und diese anhand der bereits bekannten Methoden dem Material hinzugefügt werden. Dieses Tutorial verzichtet allerdings auf die Verwendung von Bildmaterialen zur Erstellung von Texturen. Stattdessen werden sämtliche Texturen in Blender selbst generiert.
+
+## Prozedurales Texturieren
+
+::: column-margin
+Noise als Grundlage 
+:::
+
+Eine Düne besteht aus einer immensen Anzahl kleiner Sandpartikel. Diese wären in einer Textur als Ansammlung minimaler Punkte sichtbar – ähnlich einem rauschenden Bild. Innerhalb von Blender gibt es zwei Möglichkeiten, um einen solchen Effekt zu erzielen. 
+
+::: column-margin
+Noise-Textur
+:::
+
+Die erste Möglichkeit besteht darin, dass eine Noise-Textur hinzugefügt wird. Diese erstellt prozedural eine verrauschte Textur, die skaliert und verzogen werden kann. Sie hat allerdings den Nachteil, dass sie bei besonders kleinem Noise sehr viel Rechenleistung benötigt. Deshalb wird in diesem Tutorial auf diese Option verzichtet. 
+
+::: column-margin
+White-Noise-Textur
+:::
+
+Die zweite Möglichkeit besteht aus der Verwendung einer White-Noise-Textur. Diese kann nicht verzogen oder skaliert werden, sondern bildet automatisch möglichst kleine Rauschpunkte. Diese Art der Textur kann besser für besonders kleine Rausch-Elemente verwendet werden, weshalb in diesem Tutorial diese Textur verwendet wird. 
+
+::: column-margin
+White-Noise-Textur hinzufügen
+:::
+
+Mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd A >}} wird innerhalb des Shader-Editors das «*Add*»-Menü geöffnet und unter «*Texture | White Noise*» eine White-Noise-Textur hinzugefügt. Diese wird anschliessend links vom Principled-BSDF-Shader platziert. Wird der neu hinzugefügte White-Noise-Texture-Node bei gedrückter {{< kbd Ctrl >}}- + {{< kbd Shift >}}-Taste angeklickt, wird über den Viewer-Node eine Vorschau des White-Noise-Texture-Nodes ermöglicht. Sollte dieser Node im Shader-Editor nicht erscheinen, sollte überprüft werden, ob das Node-Wrangler-Add-on aktiviert wurde.
+
+::: column-margin
+Texture-Coordinate-und Mapping-Node hinzufügen
+:::
+
+Im 3D-Viewport-Editor wird allerdings keine Veränderung durch die Vorschau des White-Noise-Texture-Nodes sichtbar. Dies liegt daran, dass der White-Noise-Texture-Node noch einen Bezugspunkt zum Mesh benötigt. Deshalb wird der White-Noise-Texture-Node ausgewählt und die Tastenkombination {{< kbd Ctrl >}} + {{< kbd T >}} gedrückt. Dadurch werden ein Texture-Coordinate-Node und ein Mapping-Node dem White-Noise-Texture-Node vorangestellt. Somit kann der White-Noise-Texture-Node nun einen Bezugspunkt zum Mesh generieren und eine Vorschau auf das Mesh sollte möglich sein. 
+
+::: column-margin
+Farbvariation fehlt in White-Noise-Textur
+:::
+
+Würde nun der Color-Output des White-Noise-Texture-Nodes mit dem Base-Color-Input des Principled-BSFD-Shaders verbunden werden, würde lediglich schwarz-weisser Noise resultieren. Sand besteht jedoch aus einer Farbe und nicht nur aus Schwarz-Weiss-Abstufungen. Deshalb muss diese Schwarz-Weiss-Abstufung in eine farbige Abstufung umgewandelt werden. Dies kann mittels eines Color-Ramp-Nodes erzielt werden.
+
+## Arbeiten mit der Color-Ramp
+
+::: column-margin
+Color-Ramp hinzufügen und verbinden
+:::
+
+Mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd A >}} kann das «*Add*»-Menü aufgerufen und unter «*Converter | ColorRamp*» eine Color-Ramp hinzugefügt werden. Diese wird anschliessend zwischen dem White-Noise-Texture-Node und dem Principled-BSDF-Shader platziert. Zusätzlich wird der Color-Output 
+des White-Noise-Texture-Nodes mit dem Faktor-Input des Color-Ramp-Nodes verbunden. Der Color-Output des Color-Ramp-Nodes wird anschliessend mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden. 
+
+
+::: column-margin
+Was macht die Color-Ramp genau?
+:::
+
+Die Color-Ramp nimmt die jeweiligen Inputs, seien es nun Faktoren oder Farben, auf und erstreckt sie entlang einer Farbachse. Diese wird in der Mitte des Color-Ramp-Nodes ersichtlich. Anhand dieser Achse werden anschliessend neue Farbmarker definiert, welche an den jeweiligen Punkten der Input-Achse stehen. Per Default befindet sich ganz links am Ende dieser Achse ein Farbmarker mit der Farbe Schwarz (RGB 0-0-0) und rechts ein Farbmarker mit der Farbe Weiss (RGB 1-1-1). 
+Alle Faktorwerte oder Farbwerte, welche die Color-Ramp als Input bekommt, werden somit entlang dieser Achse ausgestreckt und graduell zwischen den beiden Farbwerten abgestuft.
+
+::: column-margin
+Was bewirkt eine Verschiebung der Farbmarker in der Color-Ramp?
+:::
+
+Wenn nun einer der beiden Farbmarker verschoben wird, beispielsweise der linke Farbmarker, so vergrössert sich sein Anteil am Spektrum der Color-Ramp. Die gesamte Fläche, welche sich links von diesem Farbmarker befindet, wird zu einer schwarzen Farbe umgewandelt. Gleichzeitig wird der Bereich, in dem eine graduelle Abstufung von Schwarz auf Weiss geschieht, zunehmend kleiner. Dieser Effekt lässt sich am besten betrachten, indem die Color-Ramp ausgewählt und mittels der 
+Tastenkombination {{< kbd Ctrl >}} + {{< kbd Shift >}} über den Viewer-Node betrachtet wird. Je weiter der schwarze Farbmarker nach rechts gezogen wird, desto mehr Anteile an der White-Noise-Textur, welche den Input der Color-Ramp darstellt, werden schwarz. Analog dazu werden mehr Anteile der White-Noise-Textur weiss, wenn der weisse Farbmarker nach links verschoben wird.
+
+::: column-margin
+Rangfolge der Farbmarker
+:::
+
+Jeder Farbmarker innerhalb der Color-Ramp hat dabei eine Rangliste von links nach rechts inne. Der schwarze Farbmarker auf der linken Seite ist der erste Marker und wird deshalb mit der Nummer «0» beschrieben. Dies liegt daran, dass Blender auf Python beruht und Python seine Nummerierungen jeweils bei 0 beginnt. Der zweite Farbmarker hat deshalb die Nummer 1 und ein dritter Farbmarker hätte die Nummer 2, und so weiter. Diese Nummerierung ist jeweils links neben dem Eingabefeld «*Pos*» ersichtlich. Dadurch können die jeweiligen Marker alternativ zu einer Auswahl 
+mittels eines Mausklicks angesteuert werden. Mittels der Schaltfläche «+» kann jeweils ein zusätzlicher Farbmarker hinzugefügt und mittels der Schaltfläche «-» der ausgewählte Farbmarker entfernt werden.
+
+::: column-margin
+Position des Markers entlang der Color-Ramp
+:::
+
+Die Position des aktuell ausgewählten Markers wird zudem Anhand des Eingabefeldes «*Pos*» dargestellt. Dieses Feld kann Werte von 0 bis 1 annehmen. Der Wert 0 befindet sich dabei am linken Ende und der Wert 1 am rechten Ende der Color-Ramp.
+
+::: column-margin
+Farben von Farbmarkern einstellen
+:::
+
+Unterhalb der Rangfolge und der Position des ausgewählten Farbmarkers befindet sich eine Farbbox, welche die Farbe des ausgewählten Farbmarkers darstellt. So kann für jeden Farbmarker eine eigene Farbe ausgewählt werden.
+
+::: column-margin
+Color-Ramp für Düne anpassen
+:::
+
+Um nun die White-Noise-Textur etwas mehr nach Sand aussehen zu lassen, sollten zunächst die Farben der beiden Farbmarker ausgewechselt werden. Der schwarze Farbmarker wird deshalb auf den RGB-Wert von 0.2-0.1-0 gesetzt und der weisse Farbmarker auf den RGB-Wert 0.5-0.45-0.35 gestellt. Dadurch werden die schwarz-weissen Abstufungen der White-Noise-Textur nun in Abstufungen dieser beiden Farbmarker umgewandelt. Der Color-Output des Color-Ramp-Nodes kann 
+deshalb nun mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden. Zudem sollte bei gedrückter Tastenkombination {{< kbd Ctrl >}} + {{< kbd Shift >}} auf den Principled-BSDF-Shader geklickt werden, um den Viewer-Node wieder zu deaktivieren.
+
+::: column-margin
+Roughness variieren lassen
+:::
+
+Als Nächstes benötigt der Principled-BSDF-Shader Informationen für den Roughness-Input. Diese Information sollte idealerweise auch gerade auf dem White-Noise-Texture-Node beruhen. Mittels dessen Value-Outputs könnte etwa diese Information übertragen werden. Dies würde allerdings dazu führen, dass das Material ziemlich glatt erscheint und Licht gebündelt reflektiert, was bei einer 
+Düne nicht erwartet wird. Deshalb müsste der Anteil der geringen Roughness-Werte reduziert werden. Um dies zu erreichen, kann erneut eine Color-Ramp hinzugefügt werden, welche Ebenfalls den Color-Output des White-Noise-Texture-Nodes erhält, deren Color-Output allerdings mit dem Roughness-Input des Principled-BSDF-Shaders verbunden wird.
+
+::: column-margin
+Roughness mit Farbmarkern variieren
+:::
+
+Der linke, schwarze Farbmarker deckt nun die tiefstmöglichen Bereiche der Roughness ab, nämlich den Wert 0. Dieser Wert ist allerdings nicht im Sand zu erwarten. Deshalb kann seine Farbbox geöffnet und ihm eine hellere Farbe zugeordnet werden (z.B. RGB = 0.6-0.6-0.6). Dadurch gibt es immer noch eine graduelle Variation der Roughness, allerding in einem geringeren Ausmass.
+
+::: column-margin
+Bright/Contrast-Node für alternative Vorgehensweise
+:::
+
+Es gibt noch eine weitere Option, welche verwendet werden könnte, um die Roughness zu erhöhen. So könnte statt eines Color-Ramp-Nodes ein Bright/Contrast-Node verwendet werden. Dieser ist im «*Add*»-Menü unter «*Color | Bright Contrast*» zu finden. Hierbei würde anschliessend der Color-Output des White-Noise-Texture-Nodes mit dem Color-Input des Bright/Contrast-Nodes verbunden werden und dessen Color-Output mit dem Roughness-Input des Principled-BSDF-Shaders.
+
+::: column-margin
+White-Noise aufhellen mittels Bright/Contrast-Node
+:::
+
+Durch eine Erhöhung der Zeile «*Bright*» wird anschliessend die Noise-Textur farblich erhellt. Dies führt dazu, dass die dunkleren Anteile, welche zu einer tieferen Roughness führen, aufgehellt werden und dadurch eine höhere Roughness aufweisen. Hier könnte beispielweise ein Wert von 0.3 verwendet werden.
+
+![Nodes-System für prozedurale Sand-Texturen.](Images/Chapter_30/){#fig-1_1 fig-align="left"}
+
+::: column-margin
+White-Noise-Textur als Normal-Textur verwenden
+:::
+
+Zusätzlich kann der White-Noise-Texture-Node auch verwendet werden, um die Normal-Textur zu ersetzen. Hierfür wird ein Bump-Node im «*Add*»-Menü unter «*Vector | Bump*» hinzugefügt und links vom Principled-BSDF-Shader platziert. Der Normal-Output des Bump-Nodes kann anschliessend mit dem Normal-Input des Principled-BSDF-Shaders verbunden werden. Dadurch generiert der Bump-Node nun minimale Abweichungen, welche das Material jeweils simuliert. Um die Höhe dieser 
+Abweichungen einstellen zu können, wird der Color-Output des White-Noise-Texture-Nodes mit dem Height-Input des Bump-Nodes verbunden.
+
+## Wave-Texture
+
+::: column-margin
+Abstufungen in den Dünen hinzufügen
+:::
+
+Teilweise beinhalten Dünen auch leichte Abstufungen, welche der Wind durch seine Verwehungen mit sich bringt. Diese können mittels einer zusätzlichen Textur ebenfalls simuliert werden. Das Ziel hierfür besteht darin, dass sich kreisförmig um alle Hügel innerhalb der Landschaft Abstufungen ergeben.
+
+::: column-margin
+Wave-Textur hinzufügen
+:::
+
+Eine ideale Grundlage für dieses Unterfangen bildet die Wave-Textur. Diese ist im «*Add*»-Menü unter «*Texture | Wave Texture*» zu finden. Der Vector-Input kann dabei mit dem Vector-Output des bereits erstellten Mapping-Nodes verbunden werden. Die Wave-Textur erstellt nun wellenartige Muster über das Mesh hinweg. Dabei orientiert sich die Wave-Textur entlang der X-Achse. Dies ist im zweiten Dropdown-Menü des Wave-Texture-Nodes definiert. Indem in diesem Menü stattdessen die Z-Achse ausgewählt wird, werden die Wellen entlang der Z-Achse gebildet. Dies führt dazu, dass sie sich kreisförmig entlang der Hügel des Meshes erstrecken. Mittels der Zeile «*Scale» kann zudem die Skalierung dieser Wellen erhöht werden, sodass mehr Wellen ersichtlich sind. Hierfür kann beispielsweise der Wert 10 verwendet werden.
+
+::: column-margin
+Anpassungen der Wave-Textur
+:::
+
+Mittels der Zeile «*Distortion*» kann ein Wert festgelegt werden, welcher zu einer Verzerrung der Wellentextur führt. Je grösser dieser Wert, desto mehr wird die originale Wellentextur zufällig verzerrt. Hier könnte beispielsweise der Wert 9 verwendet werden, um auf die Zufälligkeit von natürlichen Verwehungen Rücksicht zu nehmen. Zusätzlich könnte das Ausmass an ersichtlichen Details in den Wellen mittels der Reiter «*Detail*», «*Detail Scale*» und «*Detail Roughness*» bei Bedarf noch variiert werden.
+
+::: column-margin
+Displacement hinzufügen
+:::
+
+Nun kann ein Displacement-Node über das «*Add*»-Menü unter «*Vector | Displacement*» hinzugefügt und unterhalb des Bump-Nodes eingefügt werden. Der Displacement-Node soll nun grössere Oberflächenveränderungen im Mesh simulieren und die Werte für die Höhe anhand des Wave-Texture-Nodes übernehmen. Deshalb wird der Color-Output des Wave-Texture-Nodes mit dem Height-Input des Displacement-Nodes verbunden. Der Wert für die Skalierung sollte innerhalb des Displacement-Nodes zudem noch minimiert werden, da der Effekt sonst zu stark ausfällt. Ein Wert von 0.01 für die Zeile «*Scale*» sollte daher ausreichen. Zu guter Letzt kann der Discplacement-Output des Displacement-Nodes mit dem Displacement-Input des Material-Output-Nodes verbunden werden. Dadurch sollte das Displacement auf dem Mesh ersichtlich werden. 
+
+## Mix RGB
+
+::: colum-margin
+Mix-RGB-Node hinzufügen
+:::
+
+Die Abstufungen, welche der Wave-Texture-Node erzielt, sind nun lediglich als Displacement ersichtlich, haben allerdings keinen Einfluss auf die Farbe, die Roughness oder die Normalen des Materials. Wenn diese Abstufungen hierfür auch berücksichtigt werden sollen, müssten die Farbwerte der Wave-Textur mit den Farbwerten der White-Noise-Textur kombiniert werden. Für die Kombination von verschiedenen Farben oder Texturen kann der Mix-RGB-Node verwendet werden. 
+Dieser kann unter dem «*Add*»-Menü unter «*Color | MixRGB*» hinzugefügt und neben dem White-Noise-Texture-Node platziert werden.
+
+::: column-margin
+Graduelle Abstufung von Farbinputs
+:::
+
+Der Color1-Input des Mix-RGB-Nodes sollte seine Informationen aus dem Color-Output des White-Noise-Texture-Nodes beziehen. Der Color2-Input sollte seine Informationen aus dem Color-Output des Wave-Texture-Nodes beziehen. Dadurch wird anschliessend mittels des Reiters «*Fac*» eine graduelle Abstufung zwischen den beiden Texturen möglich.
+
+::: column-margin
+Multiplizieren von Farben
+:::
+
+Das Ziel ist allerdings keine graduelle Abstufung zwischen den beiden Texture-Nodes. Stattdessen sollten die Wellen der Wave-Textur über die White-Noise-Textur gelegt werden. Um dies zu erzielen, kann im Dropdown-Menü, welches mit «*Mix*» angeschrieben ist, die Option «*Multiply*» ausgewählt 
+werden. Dadurch werden die beiden Texturen nun nicht mehr miteinander gemischt, sondern multipliziert. Mittel des Reiters «*Fac*» kann nun ein Grad für diese Multiplikation ausgewählt werden, beispielsweise 0.675. Anschliessend kann der Color-Output des Mix-RGB-Nodes verwendet werden, um die Inputs, welche bisher vom White-Noise-Texture-Node anvisiert wurden, zu ersetzen. 
+
+![Kombination der Wave-Textur mit der White-Noise-Textur.](Images/Chapter_30/finalDunes.png){#fig-1_2 fig-align="left"}
+
+## Prozedurales Texturieren
+
+::: column-margin
+Prozedurales Texturieren
+:::
+
+In diesem Tutorial wurde nun auf Bilddateien zum Texturieren verzichtet. Stattdessen wurden Blenders interne, vorberechnete Texturen verwendet, um eine Texturierung der Oberfläche zu erstellen. Eine solche Herangehensweise wird als prozedurales Texturieren bezeichnet. Dies hat den Vorteil, dass man sich keine Gedanken machen muss, wie hochauflösend die Texturen sein sollten. Durch 
+die Berechnung können jeweils höhere Auflösungen erzielt werden.
+
+::: column-margin
+Nachteile des prozeduralen Texturierens
+:::
+
+Ein Nachteil des prozeduralen Texturierens besteht allerdings darin, dass die Texturen eben gerade nicht als Bild vorhanden sind. Dies führt etwa dazu, dass die erstellten prozeduralen Texturen nicht in anderen Programmen (z.B. Unity oder Unreal Engine) dargestellt werden können. Es ist zwar möglich, die prozeduralen Texturen zu extrahieren, indem man sie sozusagen in eine Bilddatei hineinspeichert (ein Prozess, der als Baking bezeichnet wird), allerdings gehen dabei oft Details der prozeduralen Texturen verloren. 

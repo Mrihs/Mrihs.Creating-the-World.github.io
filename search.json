@@ -224,95 +224,221 @@
     "text": "Speichern\n\n\nZwischenspeichern mittels CtrlCtrl + SS ist unabdingbar\nBisher wurden bereits einige Tastenkombinationen angesprochen. Die wichtigste Tastenkombination stellt allerdings die Kombination für das Abspeichern des aktuellen Projekts dar: CtrlCtrl + SS. Zwischenspeichern ist bei der Arbeit mit Blender eine wichtige Empfehlung. Je nach Komplexität des Projektes kann es manchmal vorkommen, dass das Programm unerwartet abstürzt und die Fortschritte bis zum letzten Speicherpunkt verloren gehen. Aus diesem Grund empfiehlt es sich, das Projekt lieber einmal zu viel als einmal zu wenig abzuspeichern.\n\n\nKopie speichern\nAlternativ kann das Projekt auch unter «File | Save» abgespeichert werden. Nebst der Möglichkeit, dass ein Projekt unter einem neuen Namen gespeichert und fortgeführt wird («File | Save as» bzw. CtrlCtrl + ShiftShift + SS), gibt es auch die Möglichkeit, mittels «File | Save Copy» (CtrlCtrl + AltAlt + SS) eine Backup-Version abzuspeichern und in dem originalen File weiterzuarbeiten.\n\n\n.blend-Files\nDie Projekte werden jeweils in Blenders programmeigenem Format «.blend» abgespeichert. Diese Datei enthält alle Objekte, Animationen und Einstellungen des Projektes. Das .blend-Dateiformat kann lediglich mit Blender geöffnet werden. Wenn externe Dateien (beispielsweise Texturen, Soundeffekte oder Videos) im Projekt eingebunden werden, müssen diese ebenfalls mit dem Projekt weitergegeben werden. Es gibt jedoch die Möglichkeit, unter «File | External Data | Pack all into.blend» alle diese externen Dateien in das .blend-File einzuspeichern. Dadurch erhöht sich allerdings die Grösse des abgespeicherten Files.\n\n\nExportieren\nUm Programme auch für andere Projekte verfügbar zu machen, müssen sie in einem anderen Dateiformat ausgegeben werden. Unter «File | Export» steht eine Reihe von verschiedenen Dateiformaten zur Verfügung, welche von unterschiedlichen Programmen geöffnet werden können. Die meisten dieser Dateiformate kann Blender wiederum importieren und darstellen.\n\n\n\n\n\nMerke…\n\n\nLieber einmal mehr mit der Kombination CtrlCtrl + SS, speichern, als die Fortschritte zu verlieren."
   },
   {
-    "objectID": "Chapters/Chapter_27.html",
-    "href": "Chapters/Chapter_27.html",
-    "title": "27. Tutorial: Einen Hammer texturieren",
-    "section": "",
-    "text": "Ziel dieser Aufgabe\nAls Nächstes wird anhand eines Modelles aufgezeigt, wie das Texturieren erfolgt. Im Zip-Ordner «Hammer» ist ein .blend-File aufzufinden, in dem sich ein Mesh in der Form eines Hammers befindet. Nebst diesem File sind im Ordner «Metal022_4K-JPG» verschiedene Texturarten für ein metallisches Material aufzufinden. Dieses Material wird anhand der Texturen in diesem Ordner erstellt und dem Hammerkopf zugewiesen. Anschliessend wird eine weitere Textur gesucht und dem Holzstiel des Hammers zugewiesen."
-  },
-  {
-    "objectID": "Chapters/Chapter_27.html#uv-mapping",
-    "href": "Chapters/Chapter_27.html#uv-mapping",
-    "title": "27. Tutorial: Einen Hammer texturieren",
-    "section": "UV-Mapping",
-    "text": "UV-Mapping\n\n\nUV-Editor öffnen\nNach dem Öffnen des .blend-Files wird der Hammer in Blender angezeigt. In diesem Beispiel sollten zunächst die UVs betrachtet werden. Hierfür wird der UV-Editor benötigt. Um diesen zu öffnen, wird aus den Ecken des 3D-Viewport-Editors ein zweiter Editor herausgezogen. Dieser Editor wird anschliessend als UV-Editor verwendet.\n\n\nFaces auswählen, um UVs zu betrachten\nUm im UV-Editor die UVs des Hammers betrachten zu können, müssen die jeweils anzuzeigenden Faces ausgewählt werden. Hierfür muss zunächst der Edit-Mode mit dem ausgewählten Hammer aktiviert werden. Damit alle UVs betrachtet werden können, müssen alle Faces des Hammers mittels der Taste AA ausgewählt werden. Danach werden im UV-Editor die UVs angezeigt.\n\n\n\n\n\n\nAbbildung 2: UVs des Hammers.\n\n\n\n\n\nUVs mit Cube Projection neu berechnen\nDie angezeigten UVs müssen noch angepasst werden, da diese durch die Erstellung des Hammers aus einem 3D-Würfel entstanden sind. Deshalb wird Blender der Befehl gegeben, dass das Programm selbstständig neue UVs berechnen soll. Hierfür wird im Editor-Mode des 3D-Viewports-Editors die Taste UU gedrückt. Dadurch erscheint beim Mauszeiger das Menu «UV Mapping» in diesem Menü wird die Option «Cube Projection» ausgewählt. Im UV-Editor werden nun die neu berechneten UVs angezeigt.\n\n\n\n\n\n\nAbbildung 3: UVs nach der Bearbeitung mittels Cube Projection."
-  },
-  {
-    "objectID": "Chapters/Chapter_27.html#materialen-erstellen",
-    "href": "Chapters/Chapter_27.html#materialen-erstellen",
-    "title": "27. Tutorial: Einen Hammer texturieren",
-    "section": "Materialen erstellen",
-    "text": "Materialen erstellen\n\n\nMaterial-Slots hinzufügen\nIm nächsten Schritt geht es darum, dem Objekt die Materialien zuzuweisen. Hierfür werden zwei Material-Slots benötigt. Um diese zu erstellen, wird im Properties-Editor der Material-Reiter geöffnet und darin zwei neue Slots für Materialien hinzugefügt. Hierfür kann zweimal auf die Schaltfläche «+» geklickt werden.\n\n\nReihenfolge der Materialien\nManchmal ist es sinnvoll, sich über die Reihenfolge der zu erstellenden Materialien Gedanken zu machen. Per Default werden alle Faces eines Objekts dem ersten Material zugewiesen. Somit wäre es sinnvoll, als zweites Material dasjenige zu verwenden, für welches die entsprechenden Faces einfacher auszuwählen sind. In diesem Falle wäre dies das Holz, welches lediglich die Faces des Stiels abdeckt. Deshalb ist es sinnvoller dem zweiten Material das Holz zuzuweisen.\n\n\nMaterialien hinzufügen\nZunächst wird auf den ersten Material-Slot geklickt, um diesen auszuwählen und mit der Schaltfläche «New» ein neues Material hinzugefügt. Dieses Material kann zu «Metall» umbenannt werden. Danach wird der zweite Material-Slot ausgewählt und diesem ebenfalls ein neues Material hinzugefügt, welches als «Holz» benannt werden kann.\n\n\nFaces für Holz-Material auswählen\nIm Edit-Mode können anschliessend alle Faces, welche zum Holzstiel gehören, ausgewählt werden. Dazu kann ein Loop-Select verwendet werden. Hierfür wird der Face-Selection-Modus verwendet und bei gedrückter CtrlCtrl-Taste auf ein Edge geklickt, welches entlang dem Stiel des Hammers verläuft. Dadurch sollten alle Faces des Stiels, ausser dasjenige am Boden des Hammerstiels, ausgewählt worden sein. Das noch nicht ausgewählte Face des Hammerstiels kann bei gedrückter ShiftShift-Taste durch einen Mausklick zur Auswahl hinzugefügt werden.\n\n\n\n\n\n\nAbbildung 4: Faces für das Holz-Material.\n\n\n\n\n\nMaterialien anwenden\nDie ausgewählten Faces können als Nächstes dem Holz-Material hinzugefügt werden. Hierfür wird im Properties-Editor der zweite Material-Slot mit dem Holz-Material ausgewählt und auf die Schaltfläche «Assign» geklickt. Wenn nun die Auswahl von Faces aufgelöst wird, indem in den leeren Raum im 3D-Viewport-Editor geklickt wird, kann die Taste «Select» im Properties-Editor verwendet werden, um die zum Holz-Material hinzugefügten Faces auszuwählen. Dadurch kann überprüft werden, ob die Faces korrekt zugewiesen wurden."
-  },
-  {
-    "objectID": "Chapters/Chapter_27.html#metall-texturieren",
-    "href": "Chapters/Chapter_27.html#metall-texturieren",
-    "title": "27. Tutorial: Einen Hammer texturieren",
-    "section": "Metall texturieren",
-    "text": "Metall texturieren\n\n\nShader-Editor öffnen\nIm Properties-Editor kann nun das Metall-Material ausgewählt werden. Dieses Material wird nun als Nächstes bearbeitet. Hierfür muss der Shader-Editor verwendet werden. Deshalb wird der UV-Editor, welcher fortan nicht mehr benötigt wird, zum Shader-Editor umgewandelt. Zusätzlich sollte im 3D-Viewport-Editor der Material-Preview-Shading-Mode ausgewählt werden, damit Änderungen am Material auch dargestellt werden.\n\n\nImage-Texture-Node hinzufügen\nAls erstes wird dem Principled-BSDF-Shader im Shader-Editor eine Image-Textur hinzugefügt. Hierfür kann der Principled-BSDF-Shader ausgewählt und die Tastenkombination CtrlCtrl + TT gedrückt werden. Durch das Node-Wrangler-Add-on entsteht links vom Principled-BSDF-Shader eine Image-Textur, welche durch einen Mapping-Node und einen Textur-Coordinate-Node ihre Inputs bekommt. Der Image-Textur-Node sollte automatisch mit der Base-Color des Principled-BSDF-Shaders verbunden worden sein. Für den Fall, dass diese Tastenkombination nicht funktionieren, sollte überprüft werden, ob das Node-Wrangler-Add-on aktiviert ist.\n\n\nColor-Textur öffnen\nAnschliessend kann im Image-Texture-Node auf die Schaltfläche «Open» geklickt werden. Im anschliessend geöffneten Browser kann zum Speicherort des Hammers navigiert werden und dort im Ordner «Metal022_4K-JPG» die Datei «Metal022_4K_Color.jpg» ausgewählt werden. Dabei handelt es sich um die Color-Textur, welche jeweils mit der Base-Color des Principled-BSDF-Shaders verbunden wird.\n\n\nImage-Texture-Node für Metallic hinzufügen\nAls Nächstes wird die Metallic-Textur zum Material hinzugefügt. Hierfür kann der Image-Textur-Node ausgewählt und mit der Tastenkombination ShiftShift + DD dupliziert werden. Das Duplikat kann unterhalb des originalen Image-Textur-Nodes platziert werden. Anschliessend sollte der Vector-Output des Mapping-Nodes mit dem Vector-Input des duplizierten Image-Textur-Nodes verbunden werden. Der Color-Output des Image-Textur-Nodes kann mit dem Metallic-Input des Principled-BSDF-Shaders verbunden werden.\n\n\nBilddatei auswechseln\nDer Image-Textur-Node beinhaltet als Bild immer noch die Datei «Metal022_4K_Color.jpg». Mittels des Ordner-Icons kann nach einer anderen Textur gesucht werden, welche diesem Node hinzugefügt wird. Hierfür wird die Datei «Metal022_4K_Metalness.jpg» verwendet.\n\n\nRoughness-Textur hinzufügen\nDie Schritte zum Einfügen der Metallic-Textur können nun wiederholt werden, um die Roughness-Textur einzufügen. Das heisst, der Image-Texture-Node kann dupliziert werden, mit dem Mapping-Node und mit dem Roughness-Input des Principled-BSDF-Shaders verbunden werden. Anschliessend muss die Textur mit der Datei «Metal022_4K_Roughness.jpg» ausgewechselt werden.\n\n\nNormal-Textur hinzufügen\nFür die Normal-Textur wird ebenfalls ein Duplikat des Image-Texture-Nodes erstellt, dessen Input mit dem Vector-Output des Mapping Nodes verbunden und die Datei «Metal022_4K_NormalGL.jpg» geöffnet. Zusätzlich wird nun ein neuer Node benötigt, welcher minimale visuelle Unebenheiten basierend auf der Normal-Textur simuliert. Hierfür wird mittels der Tastenkombination ShiftShift + AA das «Add»-Menü geöffnet und unter «Vector | Bump» ein Bump-Node hinzugefügt. Dieser wird zwischen dem Image-Textur-Node und dem Principled-BSDF-Shader platziert. Der Normal-Output des Bump-Nodes wird anschliessend mit dem Normal-Input des Principled-BSDF-Shaders verbunden.\n\n\nBump einstellen\nDer Bump-Node nimmt die Informationen aus der Normal-Textur auf und simuliert drauf basierend kleine Unebenheiten im Material. Die Normal-Textur beschreibt jeweils die Höhe dieser Unebenheiten. Aus diesem Grund kann der Color-output der Normal-Textur mit dem Height-Input des Bump-Nodes verbunden werden. Mittels des Reiters «Strength» kann zudem eingestellt werden, wie stark diese Unebenheiten dargestellt werden sollen. Beispielsweise kann der Wert 0.45 verwendet werden.\n\n\nDisplacement-Textur hinzufügen\nZu guter Letzt wird erneut eine Kopie des Image-Texture-Nodes erstellt, mit dem Mapping Node verbunden und die Datei «Metal022_4K_Displacement.jpg» geöffnet. Die Displacement-Textur bietet ebenfalls die Möglichkeit, um Unebenheiten im Material zu simulieren. Im Vergleich zur Normal-Textur handelt es sich hierbei um grössere Unebenheiten.\n\n\nDisplacement verbinden\nZur Verwendung der Displacement-Textur wird ein weiterer Node benötigt, welcher im «Add»-Menü unter «Vector | Displacement» zu finden ist Dieser wird anschliessend neben dem Image-Texture-Node verbunden. Der Displacement-Output des Displacement-Nodes wird, anders als bei den anderen Texturen, nicht mit einem Shader verbunden, sondern direkt mit dem Displacement-Output des Material-Output-Nodes.\n\n\nDisplacement einstellen\nDer Color-Output der Displacement-Textur kann wie auch bei der Normal-Textur und dem Bump-Node mit dem Height-Input verbunden werden. Mittels des Reiters «Scale» kann zudem eingestellt werden, wie stark diese Unebenheiten erstellt werden. In der Regel reichen bereits sehr kleine Werte aus, wie beispielsweise 0.025.\n\n\nGrösse der Textur einstellen\nNachdem alle Texturen eingefügt wurden, kann im Mapping Node die Grösse der Textur angepasst werden. Hierfür kann der Wert bei der Skalierung entlang der drei Achsen vergrössert oder verkleinert werden. Beispielsweise könnte die Textur dreimal so klein dargestellt werden, indem die Skalierung für alle drei Achsen auf den Wert 3 gesetzt wird.\n\n\n\n\n\n\nAbbildung 5: Node-Struktur für das Metall-Material."
-  },
-  {
-    "objectID": "Chapters/Chapter_27.html#holz-texturieren",
-    "href": "Chapters/Chapter_27.html#holz-texturieren",
-    "title": "27. Tutorial: Einen Hammer texturieren",
-    "section": "Holz texturieren",
-    "text": "Holz texturieren\n\n\nQuelle der Metall-Textur\nDie Metall-Texturen stammen von der Website https://ambientcg.com/. Diese Website bietet weitere Texturen an, die etwa für die Texturierung des Holz-Stiels verwendet werden können. So könnte für das Holzmaterial die Textur «Wood 057» verwendet werden. Hierfür muss die entsprechende Textur heruntergeladen werden.\n\n\nNode-System kopieren\nNun müsste für das Holz-Material dieselbe Node-Struktur erneut aufgebaut werden. Dies kann etwas übersprungen werden, indem alle Nodes aus dem Metall-Material mittels der Taste AA ausgewählt und mit der Tastenkombination CtrlCtrl + CC kopiert werden. Anschliessend kann im Properties-Editor der Slot für das zweite Material –das Holz – ausgewählt werden. Dadurch erscheint im Shader-Editor nun die Node-Struktur des Holz-Materials. Hier kann mit der Taste AA alles ausgewählt und die bestehenden Nodes mit der Taste XX gelöscht werden. Anschliessend kann mit der Tastenkombination CtrlCtrl + VVdie Node-Struktur aus dem Metall-Material eingefügt werden.\n\n\nNode-System kopieren\nDas neu eingefügt Node-System beinhaltet noch die Texturen, welche im Metall-Material verwendet wurden. Deshalb müssen bei allen Image-Texture-Nodes die entsprechenden Texturen mit der äquivalenten Texturart der Holztexturen ersetz werden. Bei dieser Textur wurde allerdings keine Metall-Textur angeboten, weshalb der Image-Texture-Node, welcher mit dem Metallic-Input des Principled-BSDF-Shaders verbunden ist, entfernt werden kann. Zudem können bei Bedarf die Einstellungen im Bump-Node für die Normal-Textur und die Einstellungen im Displacement-Node für die Displacement-Textur angepasst werden. Im Mapping-Node könnte zudem noch die Einstellung für die Skalierung der Textur angepasst werden, beispielsweise auf einen Wert von 1.5 pro Achse. Anschliessend ist der Hammer fertig texturiert.\n\n\n\n\n\nÜbung 15: Texturieren\n\n\nÜbung 15.1\nSuchen Sie nach einer anderen Holz-Textur und fügen Sie diese dem Material «Holz» des Hammers zu. Suchen Sie hierfür nach Texturen, die verschiedene Texturarten beinhalten."
-  },
-  {
-    "objectID": "Chapters/Chapter_9.html",
-    "href": "Chapters/Chapter_9.html",
-    "title": "9. Object- und Edit-Mode",
-    "section": "",
-    "text": "Object-Mode\nDie bisherigen Transformationen, die an Objekten gemacht wurden, haben sich immer auf den Object-Mode bezogen. Dabei wurden grundlegende Eigenschaften von Objekten (Position, Rotation und Skalierung) verändert. Die Form des Objektes selbst wurde dabei nicht verändert, sondern lediglich seine Darstellungsweise. Durch das Zurücksetzen der Werte in der Sidebar erscheint das Objekt wieder in seiner ursprünglichen Form.\n\n\n\n\n\nWeiterführende Informationen\n\n\nDas Zurücksetzen der Transformationen kann direkt mittels folgenden Shortcuts erfolgen:\nZurücksetzen der Position: AltAlt + GG\nZurücksetzen der Rotation: AltAlt + RR\nZurücksetzen der Skalierung: AltAlt + SS\n\n\nDurch die bisherigen Transformationen wurde das Objekt als Ganzes bearbeitet. Dies zeichnet die Transformationen im Object-Mode aus. Nebst dem Object-Mode gibt es noch eine Reihe anderer Modi. In der oberen linken Ecke des Viewports ist jeweils ersichtlich, welcher Modus gerade verwendet wird. Durch einen Klick auf das Dropdown-Menü erscheint eine Liste der verfügbaren Modi:\n\n\nDie verschiedenen Bearbeitungs-Modi\n\nObject Mode: In diesem Modus können die Objekte in einer Szene als Ganzes transformiert und angeordnet werden.\nEdit Mode: In diesem Modus können die einzelnen Bestandteile des Objekts anvisiert und bearbeitet werden.\nSculpt Mode: In diesem Modus kann das Objekt anhand von Sculpting-Tools bearbeitet werden.\nVertex Paint: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen.\nWeight Paint: In diesem Modus werden dem Objekt verschiedene Gewichte aufgemalt, welche anschliessend für weitere Funktionen verwendet werden können.\nTexture Paint: In diesem Modus ist es möglich, ein Objekt mit einer Textur zu bemalen.\n\n\n\nWechsel zwischen Object- und Edit-Mode\nIm Rahmen dieses Kurses wird vorwiegend mit dem Object- und dem Edit-Mode gearbeitet. Der Wechsel zwischen diesen beiden Modi stellt einen wichtigen Wechsel zwischen den Modi dar. Deshalb ist es möglich, mittels einer einzigen Taste zwischen dem Object- und dem Edit-Mode hin- und herzuwechseln – nämlich mittels der Taste TabTab . Dabei wird in den Edit-Mode für das aktuell ausgewählte Objekt gewechselt. Für Objekte, welche nicht aus einzelnen Komponenten bestehen (beispielsweise Kameras oder Lichtquellen), ist kein Edit-Mode verfügbar."
-  },
-  {
-    "objectID": "Chapters/Chapter_9.html#die-verschiedenen-bearbeitungs-modi",
-    "href": "Chapters/Chapter_9.html#die-verschiedenen-bearbeitungs-modi",
-    "title": "9. Object- und Edit-Mode",
-    "section": "",
-    "text": "Object-Mode\nDie bisherigen Transformationen, die an Objekten gemacht wurden, haben sich immer auf den Object-Mode bezogen. Dabei wurden grundlegende Eigenschaften von Objekten (Position, Rotation und Skalierung) verändert. Die Form des Objektes selbst wurde dabei nicht verändert, sondern lediglich seine Darstellungsweise. Durch das Zurücksetzen der Werte in der Sidebar erscheint das Objekt wieder in seiner ursprünglichen Form.\n\n\n\n\n\nWeiterführende Informationen\n\n\nDas Zurücksetzen der Transformationen kann direkt mittels folgenden Shortcuts erfolgen:\nZurücksetzen der Position: AltAlt + GG\nZurücksetzen der Rotation: AltAlt + RR\nZurücksetzen der Skalierung: AltAlt + SS\n\n\nDurch die bisherigen Transformationen wurde das Objekt als Ganzes bearbeitet. Dies zeichnet die Transformationen im Object-Mode aus. Nebst dem Object-Mode gibt es noch eine Reihe anderer Modi. In der oberen linken Ecke des Viewports ist jeweils ersichtlich, welcher Modus gerade verwendet wird. Durch einen Klick auf das Dropdown-Menü erscheint eine Liste der verfügbaren Modi:\n\n\nDie verschiedenen Bearbeitungs-Modi\n\nObject Mode: In diesem Modus können die Objekte in einer Szene als Ganzes transformiert und angeordnet werden.\nEdit Mode: In diesem Modus können die einzelnen Bestandteile des Objekts anvisiert und bearbeitet werden.\nSculpt Mode: In diesem Modus kann das Objekt anhand von Sculpting-Tools bearbeitet werden.\nVertex Paint: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen.\nWeight Paint: In diesem Modus werden dem Objekt verschiedene Gewichte aufgemalt, welche anschliessend für weitere Funktionen verwendet werden können.\nTexture Paint: In diesem Modus ist es möglich, ein Objekt mit einer Textur zu bemalen.\n\n\n\nWechsel zwischen Object- und Edit-Mode\nIm Rahmen dieses Kurses wird vorwiegend mit dem Object- und dem Edit-Mode gearbeitet. Der Wechsel zwischen diesen beiden Modi stellt einen wichtigen Wechsel zwischen den Modi dar. Deshalb ist es möglich, mittels einer einzigen Taste zwischen dem Object- und dem Edit-Mode hin- und herzuwechseln – nämlich mittels der Taste TabTab . Dabei wird in den Edit-Mode für das aktuell ausgewählte Objekt gewechselt. Für Objekte, welche nicht aus einzelnen Komponenten bestehen (beispielsweise Kameras oder Lichtquellen), ist kein Edit-Mode verfügbar."
-  },
-  {
-    "objectID": "Chapters/Chapter_9.html#struktur-von-3d-meshes",
-    "href": "Chapters/Chapter_9.html#struktur-von-3d-meshes",
-    "title": "9. Object- und Edit-Mode",
-    "section": "Struktur von 3D-Meshes",
-    "text": "Struktur von 3D-Meshes\n\n\nDer Gitteraufbau von 3D-Meshes\nBeim Wechseln in den Edit-Mode erscheint das Mesh in seiner Struktur, bestehend aus mehreren Polygonen. Dabei handelt es sich um einzelne Oberflächenstrukturen der Meshes. Die Polygone – und somit auch das Mesh – bestehen in ihrer Struktur aus folgenden Elementen:\n\nVertices: Einzelne Punkte in einem Mesh\nEdges: Linien zwischen zwei Vertices in einem Mesh\nFaces: Flächen zwischen mehreren Edges/Vertices in einem Mesh\n\n\n\n\n\n\n\nAbbildung 1: Vertices, Edges und Faces.\n\n\n\n\n\nSelect-Modus wechseln\nIm Edit-Mode können wahlweise Vertices, Edges oder Faces ausgewählt werden, je nachdem in welchem Select-Modus man sich befindet. Die drei Select-Modi sind in der linken oberen Ecke direkt neben dem Auswahlfeld für den Bearbeitungs-Modus (in dem Fall der Edit-Mode) aufzufinden.\n\n\n\n\n\n\nAbbildung 2: Schaltfläche für den Vertex-, Edge- und Face-Select-Modus in der linken oberen Ecke des Edit-Modes.\n\n\n\n\nVertices\n\n\nVertices\nEin Vertex (Mehrzahl: Vertices) stellt die grundlegendste Einheit in einem Mesh dar. Jeder Vertex beschreibt einen Punkt in einem Mesh. Anders als die Objekte als Ganzes, verfügen Vertices nur über das Merkmal ihrer jeweiligen Position. Die Merkmale Skalierung und Rotation gibt es für Vertices nicht. Ein Vertex hat deshalb auch keine Dimensionen.\n\n\nAuswahl von Vertices\nWerden zwei miteinander verbundene Vertices ausgewählt, so wird automatisch auch das dazwischenliegende Edge ausgewählt. Ebenso wird automatisch das dazugehörige Face mit ausgewählt, wenn alle Vertices dieses Faces ausgewählt werden. Ein einzelner Vertex kann lediglich im Vertex Select-Modus angewählt werden.\n\n\nEdges\n\n\nEdges\nEdges beschreiben Linien, welche zwischen zwei Vertices liegen. Da ein Edge genau der Verbindung zwischen zwei Vertices entspricht, ist dessen Mittelpunkt identisch zur Mitte zwischen den beiden Vertices.\n\n\nAuswahl von Edges\nIm Edge-Select-Modus können die Edges als solche ausgewählt werden. Dabei werden automatisch auch die beiden zum Edge dazugehörigen Vertices ausgewählt. Wenn alle Edges eines Faces ausgewählt werden, dann wird automatisch auch das dazugehörige Face ausgewählt.\n\n\nFaces\n\n\nFaces\nFaces stellen die Flächen zwischen verbundenen Edges/Vertices dar. Die Position des Faces entspricht dem Mittelpunkt dieser Fläche und somit dem Mittelpunkt der dazugehörigen Vertices. Es ist allerdings auch möglich, dass mehrere Vertices mittels Edges verbunden sind, ohne eine Fläche zu beinhalten.\nMittels des Face-Select-Modus können Faces direkt angewählt werden. Alternativ kann ein Face auch angewählt werden, indem im Vertex-Select-Modus alle zum Face dazugehörigen Vertices ausgewählt werden, oder indem im Edge-Select-Modus alle zum Face dazugehörigen Edges ausgewählt werden."
-  },
-  {
-    "objectID": "Chapters/Chapter_9.html#anzahl-vertices-in-einem-face",
-    "href": "Chapters/Chapter_9.html#anzahl-vertices-in-einem-face",
-    "title": "9. Object- und Edit-Mode",
-    "section": "Anzahl Vertices in einem Face",
-    "text": "Anzahl Vertices in einem Face\n\n\n\n\n\nWeiterführende Informationen\n\n\nPolygone und Faces sind in ihrer Bedeutung praktisch deckungsgleich. Faces beschreiben jedoch eher die Fläche eines Polygons, während das Polygon eher die Gesamtheit von Vertices, Edges und Faces beschreibt. Der Begriff Polygon wird innerhalb von Blender allerdings selten verwendet.\n\n\n\n\nAnzahl Vertices in einem Face\nDer Default-Cube, den Blender jeweils beim Start eines neuen Projektes zur Verfügung stellt, besteht aus sechs Faces. Jedes dieser Faces beinhaltet vier Vertices. Es ist allerdings auch möglich, dass ein Face aus mehr oder weniger Vertices besteht. Es gibt verschiedene Begriffe, basierend auf der Anzahl Vertices in einem Face:\n\n\nBezeichnung von Faces aufgrund Anzahl Vertices\n\nTriangles (Tris): Faces, die aus drei Vertices bestehen\nQuadrangles (Quads): Faces, die aus vier Vertices bestehen\nN-Gons: Faces, die aus n Vertices bestehen\n\n\n\n\n\n\n\nAbbildung 3: Der Standardwürfel bestehend aus Tris statt aus Quads.\n\n\n\n\n\nTris aus Quads ableiten\nAus Quads lassen sich sehr einfach Tris bilden. Hierfür muss lediglich jedes Quad zwischen zwei gegenüberliegenden Vertices zerschnitten werden, sodass die Fläche in zwei Dreiecke unterteilt wird. Beim Rendern von Bildern werden Quads in den 3D-Objekten automatisch in Tris unterteilt, was im Normalfall für den Benutzer jedoch kaum ersichtlich ist.\n\n\nBevorzugung von Quads\nTrotzdem ist es sinnvoll, sich beim Modellieren von 3D-Objekten eher an die Verwendung von Quads zu gewöhnen. Viele Tricks und Kniffe der Objektbearbeitung lassen sich einfacher oder teilweise sogar nur auf Quads anwenden. Somit erleichtert die Arbeit mit Quads den Arbeitsprozess erheblich. Weiterhin sind Quads auch in vielen Animationsstudios der Standard.\n\n\n\n\n\n\nAbbildung 4: Links eine gerenderte 3D-Figur und rechts die Figur in ihrer Gitterstruktur.\n\n\n\n\n\nAnwendung von Tris\nArbeiten mit Tris ist trotzdem durchaus möglich und vereinzelte Tris in Objekten sind auch nicht problematisch. In manchen Situationen sind Tris sogar flexibler als Quads. Wenn allerdings die Objekte komplett aus Tris bestehen sollen, macht dies gerade in gemeinschaftlichen Prozessen nur Sinn, wenn alle beteiligten Personen mit Tris umgehen können.\n\n\n\n\n\nMerke…\n\n\nVertices beschreiben die einzelnen Punkte in einem 3D-Objekt.\nEdges beschreiben die verbundenen Punkte in einem 3D-Objekt.\nFaces beschreiben Flächen zwischen mehr als zwei verbundenen Vertices.\nFaces mit vier Vertices (Quads) sind gegenüber Faces mit drei Vertices (Tris) in den meisten Fällen zu bevorzugen."
-  },
-  {
-    "objectID": "Chapters/Chapter_9.html#auswahl-von-vertices-edges-und-faces-im-edit-mode",
-    "href": "Chapters/Chapter_9.html#auswahl-von-vertices-edges-und-faces-im-edit-mode",
-    "title": "9. Object- und Edit-Mode",
-    "section": "Auswahl von Vertices, Edges und Faces im Edit-Mode",
-    "text": "Auswahl von Vertices, Edges und Faces im Edit-Mode\n\n\nAuswahl von Vertices, Edges und Faces im Edit-Mode\nAbhängig davon, welcher Select-Modus gerade aktiviert ist, lassen sich entweder die Vertices, Edges oder Faces auswählen. Die Auswahl der jeweiligen Elemente geschieht mittels der linken Maustaste. Wie auch im Object-Mode können bei gedrückter ShiftShift-Taste zusätzliche Elemente ausgewählt werden. Ebenso können mit der Taste CC der Circle-Select-Modus und mittels der Taste BB der Box-Select-Modus verwendet werden. Zudem kann mit der Tastenkombination CtrlCtrl + II die Auswahl umgekehrt werden.\n\n\nSelect linked mittels LL\nIm Edit-Mode gibt es weitere Auswahl-Optionen. Wenn sich der Mauszeiger über einem Element eines Objekts befindet, können mit der Taste LL alle Elemente, welche über Edges damit verbunden sind, ausgewählt werden. Dies ermöglicht es, alle verbundenen Elemente auszuwählen. Um alle Elemente eines Objektes – also auch unverbundene Elemente – auszuwählen, kann die Taste AA gedrückt werden.\n\n\nEdge-Loop-Select bei gedrückter Taste AltAlt\nWeiterhin lassen sich ganze Verbindungen von Edges auswählen, wenn die Taste AltAlt während der Auswahl gedrückt wird. Dadurch werden alle Edges, die gemeinsam eine Linie mit dem gerade ausgewählten Element bilden, ausgewählt. Dies ist auch im Vertex-Select-Modus möglich. Im Face-Select-Modus werden alle Faces, die gemeinsam eine Linie bilden, ausgewählt (hierfür muss der Mausklick allerdings bei einem Edge erfolgen – nicht in der Fläche des Faces)."
-  },
-  {
-    "objectID": "Chapters/Chapter_9.html#das-innere-des-objekts",
-    "href": "Chapters/Chapter_9.html#das-innere-des-objekts",
-    "title": "9. Object- und Edit-Mode",
-    "section": "Das Innere des Objekts",
-    "text": "Das Innere des Objekts\n\n\nVirtuelle Objekte haben meist keine Füllung\nSo wie auch in der realen Welt haben virtuelle 3D-Objekte Flächen, welche aus mindestens drei Kanten bestehen und mindestens drei Ecken. Im Gegensatz zu Objekten in der realen Welt bestehen virtuelle Objekte nicht aus einer Füllung. Wird ein realer Apfel mit einem Messer in der Mitte geteilt, so wird der Inhalt unter der Schale – etwa das Fruchtfleisch oder das Kerngehäuse – sichtbar. Bei einem 3D-Mesh gibt es jedoch kein Inneres, sodass lediglich die Oberflächen der äusseren Struktur von der anderen Seite aus ersichtlich werden. Das Mesh besteht somit nur aus der Oberfläche, welche ein leeres Volumen überdeckt.\nAus dem Umgang mit realen Objekten ist der Mensch sich gewohnt, dass Objekte einen Inhalt haben. Dies trifft auf digitale Objekte selten zu. Als Betrachter von digitalen Objekten ist dieser Sachverhalt nur in den seltensten Fällen bemerkbar. Dadurch wird durch fehlende Auseinandersetzung mit dieser Thematik die Illusion eines möglichen Inhaltes verstärkt.\n\n\nWenn das Innere sichtbar wird\nIn Videospielen kann es vorkommen, dass die Kamera durch einen Fehler in ein Objekt hineingelangt. Dadurch wird das Objekt anschliessend von der Innenseite aus betrachtet. Dies muss allerdings nicht immer der Fall sein. In manchen Situationen ist dieses Objekt gar nicht mehr sichtbar, wenn es von innen betrachtet wird."
-  },
-  {
-    "objectID": "Chapters/Chapter_9.html#normalen-die-richtige-seite-der-faces-finden",
-    "href": "Chapters/Chapter_9.html#normalen-die-richtige-seite-der-faces-finden",
-    "title": "9. Object- und Edit-Mode",
-    "section": "Normalen: die richtige Seite der Faces finden",
-    "text": "Normalen: die richtige Seite der Faces finden\n\n\nDie zwei Seiten von Faces\nDa 3D-Meshes keinen inneren Hohlraum haben, bilden die Faces die Oberfläche, welche das Objekt abdeckt. Dies bedeutet aber auch, dass es zwei Seiten von dieser Oberfläche geben muss: eine Seite, die betrachtet werden soll, und eine, die nicht betrachtet werden soll. In den meisten Fällen ist schnell klar, welche Seite eines Objektes von Bedeutung ist. Einen Apfel betrachtet man jeweils von aussen, also ist die nach aussen gerichtete Seite jene Seite, welche betrachtet werden soll. Ebenso verhält es sich bei einem Charakter. In diesem Fall ist ebenfalls die nach aussen gerichtete Seite von Bedeutung und nicht das Innere seines Körpers.\n\n\n\n\n\nWeiterführende Informationen\n\n\nBei bestimmten Einstellungen werden die Rückseiten der Oberflächen von Objekten fehlerhaft dargestellt. In diesen Fällen hilft es oftmals, die Ausrichtung der Normalen zu überprüfen und bei Bedarf anzupassen.\nIn manchen Game-Engines werden die Rückseiten von Objekten in den Grundeinstellungen gar nicht angezeigt. Dadurch blickt man bei den Oberflächen mit der falschen Ausrichtung durch das Objekt hindurch. Dies vermittelt den Eindruck, dass ein Teil des Objekts fehlen würde. Dieser Teil ist noch da – allerdings der falschen Richtung zugewendet.\n\n\n\n\nDie zu betrachtende Seite eines Würfels\nWie verhält es sich bei Blenders Standardwürfel? Bei diesem wird zunächst die Aussenseite betrachtet. Allerdings wäre es auch möglich, dass der Default-Cube von innen betrachtet werden soll – etwa, wenn eine Szene im Inneren eines Raumes dargestellt werden soll und der Würfel die Wände, den Boden und die Decke des Raumes darstellt. In diesem Fall ist nicht mehr die Aussenseite des Würfels relevant, sondern die Innenseite.\n\n\nNormalen\nDie Normalen eines Objektes geben jeweils an, in welche Richtung Vertices, Edges und Faces gerichtet sind. Wenn ein Würfel etwa von innen betrachtet werden soll, müssen die Normalen nach innen gekehrt werden. Wenn der Würfel allerdings als solcher von aussen betrachtet werden soll, dann müssen die Normalen nach aussen gekehrt sein.\n\n\nNormalen darstellen\nDie Normalen eines 3D-Objektes lassen sich im Edit-Mode betrachten, indem die entsprechende Ansicht aktiviert wird. Diese wird im Dropdown-Menü zu den Viewport-Overlays in der rechten oberen Ecke des 3D-Viewports unter dem Abschnitt «Normals» mit der Schaltfläche «Display Normals» aktiviert. Anschliessend erscheinen in den Faces kleine blaue Striche, welche in diejenige Richtung zeigen, gegen die das Face dargestellt ist.\n\n\n\n\n\n\nAbbildung 5: Icon zur Darstellung der Normalen in den Viewport-Overlays.\n\n\n\n\n\nFace-Orientation darstellen\nEs ist auch möglich, in den Viewport-Overlays die «Face Orientation» zu aktivieren. Dadurch werden die Oberflächen eines Objekts in blauer Farbe dargestellt, wenn es sich um die Seite der Normalen handelt, oder in roter Farbe, wenn es sich um die Seite ohne Normalen handelt. Diese Ansicht ist auch im Object-Mode verfügbar, allerdings nur in der Solid-Ansicht und wenn X-Ray deaktiviert ist.\n\n\nNormalen umkehren und neu berechnen\nWenn alle Faces innerhalb eines Objekts ausgewählt werden, kann mittels der Tastenkombination AltAlt + NN das Menü «Normals» beim Mauszeiger geöffnet werden. Mit der Option «Flip» können anschliessend alle Normalen in die umgekehrte Richtung gekehrt werden. Zudem können die Normalen mittels der Option «Recalculate Outside» zur äusseren Seite hin oder mittels «Recalculate Inside» zur inneren Seite hin berechnet werden."
-  },
-  {
-    "objectID": "Chapters/Chapter_32.html",
-    "href": "Chapters/Chapter_32.html",
-    "title": "32. Lichtquellen in einer Szene",
+    "objectID": "Chapters/Chapter_33.html",
+    "href": "Chapters/Chapter_33.html",
+    "title": "33. Lichtquellen in einer Szene",
     "section": "",
     "text": "Lichtstrahlen werden benötigt\nDie Abbildung 1zeigt eine in Blender gerenderte Szene einer Spielfigur auf einem Spielbrett. Damit diese Szene überhaupt erstellt werden kann, benötigt es eine Beleuchtung. Anhand der Beleuchtung erhalten die Objekte Lichtstrahlen, welche sie reflektieren können. Ohne die reflektierten Lichtstrahlen würde das Objekt schwarz dargestellt. Wenn kein Licht in einer Szene vorhanden ist, wird eine gerenderte Szene komplett schwarz dargestellt.\n {#fig-1_1 fig-align=“left}\n\n\nMöglichkeiten, um Lichtstrahlen zu erzeugen\n\nEin Lichtobjekt wird der Szene hinzugefügt (z.B. Lampe, Sonne).\nDie Welt im Hintergrund der Szene wird als Lichtquelle verwendet.\nEin Material wird als Lichtquelle verwendet (z.B. über die Einstellung «Emission» im Principled BSDF-Shader).\n\n\n\nWelt als Lichtquelle\nIn der Abbildung 1 werden das Spielbrett, der darunterliegende blaue Boden und die Spielfigur durch die Hintergrundwelt beleuchtet. Die Hintergrundwelt besteht in diesem Beispiel aus einer konstanten Farbe, welche aus allen Winkeln gleich stark ausgestrahlt wird. Dadurch reflektieren die Objekte die Strahlen aus allen Richtungen gleich stark.\n\n\nEinfluss von einzelnen Lichtquellen\nDie Abbildung 2 zeigt dieselbe Szene. In dieser Szene wurde zusätzlich ein Lichtobjekt der Szene hinzugefügt. Die Objekte werden durch die Hintergrundwelt immer noch aus allen Winkeln mit dem gleichen Ausmass beleuchtet. Anhand des Lichtobjekts werden die Objekte nun allerdings zusätzlich durch dieses Objekt beleuchtet, wodurch sich beispielsweise auf der Spielfigur eine zusätzliche Reflexion ergibt. Ausserdem ist nun etwas deutlicher zu erkennen, dass das Spielfeld am Rand eine kleine Einkerbung hat. Diese war im vorangehenden Beispiel nicht ersichtlich, da sich durch die identische Beleuchtung aus allen Winkeln keine Schatten innerhalb der Kerbe bilden konnten.\n {#fig-1_2 fig-align=“left}\n\n\nSzene mit Schatten\nDie Abbildung 3 zeigt erneut dieselbe Szene wie in Abbildung 1 und Abbildung 2. In den vorherigen Szenen wurde in den Material-Einstellungen der Figur der Schatten für das entsprechende Material deaktiviert. Deshalb wurde kein Schatten dargestellt. Nun mit dem Schatten der Figur werden zusätzliche Informationen zu den Verhältnissen im dreidimensionalen Raum dargestellt. Durch den Abstand des Schattens zur Figur wird klar, dass die Figur sich nicht direkt auf dem Spielfeld befindet und stattdessen darüber schwebt. Tatsächlich befindet sich die Spielfigur über dem Spielfeld I2 und schwebt darüber.\n {#fig-1_3 fig-align=“left}\n\n\nEinfluss von Schatten\nAnhand dieses simplen Beispiels wird bereits deutlich, dass Schatten auch verwendet werden, um Objekte im dreidimensionalen Raum zu verordnen. Damit es Schatten aber überhaupt geben kann, wird eine Lichtquelle benötigt.\n\n\nMaterial als Lichtquelle\nEine weitere Option für eine Lichtquelle könnte in diesem Beispiel die Figur respektive deren Material darstellen. Die Abbildung 4 zeigt eine gelbe Spielfigur, welche sich tatsächlich auf dem Spielfeld J1 befindet. Sämtliche Lichtquellen, also das Lichtobjekt und die Hintergrundwelt, wurden ausgeschaltet. Bei beiden Beispielen innerhalb der Abbildung 4 wurden beim Material der Spielfigur der «**Emission*»-Wert im Principled-BSDF-Shader auf 25 und die Farbe auf gelb (RGB 1-1-0) gestellt. Dadurch sendet die Spielfigur nun Licht aus. Beide Beispiele in der Abbildung 4 zeigen diese Grundeinstellung, allerdings wurde für die linke Abbildung Eevee und für die rechte Abbildung Cycles verwendet.\n {#fig-1_4 fig-align=“left}\n\n\nLimitation der Emission von Materialien\nCycles verarbeitet die Informationen akkurater und viel weitläufiger, wodurch sich eine bessere Beleuchtung der Szene durch das Material ergibt. Anhand dieses Beispiels wird allerdings bereits ersichtlich, dass das Material nur begrenzt als Lichtquelle verwendet werden kann. Nichtsdestotrotz kann die Emission manchmal auch sinnvoll sein, wenn etwa ein Material ohne Lichtquelle oder unabhängig von der Lichtquelle dargestellt werden soll."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html",
+    "href": "Chapters/Chapter_5.html",
+    "title": "5. Objektarten",
+    "section": "",
+    "text": "Verschiedene Arten von Objekten\nBeim Hinzufügen von Objekten mittels der Tastenkombination ShiftShift + AA erscheint das Menü für das Hinzufügen von Objekten beim Mauszeiger. Die verschiedenen Objekte sind dabei in verschiedene Typen von Objekten unterteilt. Diese Objekte unterscheiden sich hinsichtlich ihres Aufbaus, aber auch hinsichtlich ihrer Funktion."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#mesh",
+    "href": "Chapters/Chapter_5.html#mesh",
+    "title": "5. Objektarten",
+    "section": "Mesh",
+    "text": "Mesh\n\n\nMeshes\nEin Mesh stellt ein 3D-Objekt dar. Meshes haben eine gitterähnliche Struktur aus Punkten, Linien und verbundenen Flächen, welche in ihrer Gesamtstruktur das Objekt darstellen. Der Hauptfokus dieses Kurses wird auf die Meshes gelegt, von daher werden sie später noch ausführlich beschrieben."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#curve",
+    "href": "Chapters/Chapter_5.html#curve",
+    "title": "5. Objektarten",
+    "section": "Curve",
+    "text": "Curve\n\n\nKurven\nVor der Entwicklung der Meshes wurden in Computergrafiken Kurven und Oberflächen verwendet. Sie haben den Vorteil, dass sie weniger Computerleistung benötigen. Kurven verfügen über weniger Kontrollpunkte, wodurch sie auch einfacher zu bearbeiten sind. In einigen Anwendungen werden sie heute immer noch verwendet. Blender verfügt über zwei Arten von Kurven: Bézier-Kurven und Nurbs-Kurven. Die beiden Arten von Kurven unterscheiden sich hinsichtlich ihrer zugrundeliegenden Berechnungen.\n\n\nKurven können Oberflächen enthalten\nNeu hinzugefügte Kurven beinhalten zunächst keine Oberfläche und erscheinen dadurch nicht beim Rendern. Allerdings können ihnen Oberflächen hinzugefügt werden, sodass sie auch als Objekte erkennbar werden. Zudem können Kurven auch als Hilfestellung bei Animationen verwendet werden, indem etwa Pfade für eine Animation mit ihnen vorgegeben werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#surface",
+    "href": "Chapters/Chapter_5.html#surface",
+    "title": "5. Objektarten",
+    "section": "Surface",
+    "text": "Surface\n\n\nSurfaces\nDie Surfaces sind ähnlich zu den Kurven. Während Kurven 2D-Objekte darstellen, sind die Surfaces ihre 3D-Erweiterungen. Obwohl Kurven und Surfaces somit denselben Typ von Objekten darstellen, können sie nicht gleichzeitig auftreten. In einem Objekt können somit nicht sowohl Kurven als auch Surfaces vorhanden sein."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#metaball",
+    "href": "Chapters/Chapter_5.html#metaball",
+    "title": "5. Objektarten",
+    "section": "Metaball",
+    "text": "Metaball\n\n\nMetas\nMetabälle gehören zur Objekt-Familie der Metas, welche Blender prozedural aufbaut. Anders als beispielsweise Meshes oder Kurven sind sie nicht durch Kontrollpunkte oder Gitternetze aufgebaut, sondern werden mathematisch von Blender berechnet. Wenn zwei Meta-Objekte in der Nähe voneinander sind, können sie miteinander interagieren."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#text",
+    "href": "Chapters/Chapter_5.html#text",
+    "title": "5. Objektarten",
+    "section": "Text",
+    "text": "Text\n\n\nText\nText-Objekte beinhalten einen Text, der anschliessend als Objekt dargestellt wird. Der Text hat dabei wie die Kurven oder die Oberflächen lediglich zwei Dimensionen."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#volume",
+    "href": "Chapters/Chapter_5.html#volume",
+    "title": "5. Objektarten",
+    "section": "Volume",
+    "text": "Volume\n\n\nVolumen-Objekte\nVolumen-Objekte sind lediglich Objekt-Container. Ihnen können OpenVDB-Dateien angehängt werden, um volumetrische Daten (beispielsweise Wolken oder Rauch) zu erzeugen. Diese Dateien können mithilfe von Blenders eigenen Simulationen erzeugt werden, oder in anderen Programmen erzeugt und abgespeichert werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#grease-pencil",
+    "href": "Chapters/Chapter_5.html#grease-pencil",
+    "title": "5. Objektarten",
+    "section": "Grease Pencil",
+    "text": "Grease Pencil\n\n\nGrease Pencil\nGrease Pencils sind Objekte, welche es ermöglichen, direkt in den dreidimensionalen Raum zu zeichnen. Zudem können mit ihnen 2D-Animationen erstellt werden – etwa wenn Blender für ein 2D- statt 3D-Projekt verwendet wird. Objekte der Kategorie «Grease Pencil» sind dabei eigentlich Behälter-Objekte, in welche anschliessend die Linien gezeichnet werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#armature",
+    "href": "Chapters/Chapter_5.html#armature",
+    "title": "5. Objektarten",
+    "section": "Armature",
+    "text": "Armature\n\n\nArmaturen\nArmaturen werden verwendet, um Meshes zu animieren. Hierbei wird innerhalb eines Meshes ein Gerüst erstellt, anhand dessen die Animation anschliessend erfolgen soll. Dieses Gerüst stellt sozusagen das Skelett dar, welches anschliessend für die Animation verwendet werden soll. Dementsprechend werden die einzelnen Gerüstteile auch Bones (Knochen) genannt. Armaturen werden beim Rendern nicht angezeigt. Bei ihnen handelt es sich lediglich um ein Werkzeug zur Animation."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#lattice",
+    "href": "Chapters/Chapter_5.html#lattice",
+    "title": "5. Objektarten",
+    "section": "Lattice",
+    "text": "Lattice\n\n\nLattice\nDas Lattice stellt ein dreidimensionales Gerüst aus Punkten dar, welches allerdings nicht gerendert werden kann. Es dient als Werkzeug zur komplexeren Transformation von Objekten."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#empty",
+    "href": "Chapters/Chapter_5.html#empty",
+    "title": "5. Objektarten",
+    "section": "Empty",
+    "text": "Empty\n\n\nEmpties\nEmpties sind Knotenpunkte an einem einzigen Punkt in der virtuellen Welt. Sie beinhalten weder Oberflächen noch Volumen und können auch nicht gerendert werden. Sie lassen sich allerdings beispielsweise als Bezugspunkte für Objekte verwenden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#image",
+    "href": "Chapters/Chapter_5.html#image",
+    "title": "5. Objektarten",
+    "section": "Image",
+    "text": "Image\n\n\nBilder\nBlender ermöglichet es, dass auch externe Bilddateien direkt einer Szene hinzugefügt werden können. Hierfür kann ein solches Image-Objekt erstellt und das Bild anschliessend diesem Objekt angefügt werden. Bilder können allerdings auch direkt in den Viewport-Display gezogen werden, wodurch sie anschliessend hinzugefügt werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#light",
+    "href": "Chapters/Chapter_5.html#light",
+    "title": "5. Objektarten",
+    "section": "Light",
+    "text": "Light\n\n\nLichtquellen\nLicht-Objekte stellen die Quelle für die Beleuchtung von Szenen dar. Sie sind nicht als Mesh oder Kurve modellierbar, sondern stellen vielmehr einen Punkt oder Bereich dar, von dem die Beleuchtung ausgeht."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#light-probe",
+    "href": "Chapters/Chapter_5.html#light-probe",
+    "title": "5. Objektarten",
+    "section": "Light-Probe",
+    "text": "Light-Probe\n\n\nLight Probes\nLight Probes werden in der Eevee-Render-Engine als Hilfsobjekte verwendet. Dabei werden beispielsweise Informationen über indirekte Beleuchtungseffekte gespeichert. Diese Informationen werden anschliessend im finalen Render berücksichtigt, während das Light-Probe-Objekt als solches nicht im finalen Render dargestellt wird."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#camera",
+    "href": "Chapters/Chapter_5.html#camera",
+    "title": "5. Objektarten",
+    "section": "Camera",
+    "text": "Camera\n\n\nKamera\nKameras stellen den Punkt dar, von dem aus die Welt in der gerenderten Szene betrachtet wird. Die Kameras als solche sind in den gerenderten Bildern nicht sichtbar."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#speaker",
+    "href": "Chapters/Chapter_5.html#speaker",
+    "title": "5. Objektarten",
+    "section": "Speaker",
+    "text": "Speaker\n\n\nLautsprecher\nSpeaker werden verwendet, um an bestimmten Positionen in der Szene Töne erklingen zu lassen. So wie die Lichtquellen sind die Speaker nicht modellierbar, sondern stellen einen Punkt in der drei dimensionalen Welt dar, von dessen Position ein Klang ausgeht."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#force-field",
+    "href": "Chapters/Chapter_5.html#force-field",
+    "title": "5. Objektarten",
+    "section": "Force Field",
+    "text": "Force Field\n\n\nKraftfelder\nForce Fields sind Objekte, welche in Simulationen Kräfte auf andere Objekte ausüben können. So können andere Objekte beispielsweise angezogen oder absorbiert werden. Beim Rendern sind diese Objekte als solche nicht sichtbar, allerdings die Auswirkungen, welche deren Kräfte auf Objekte haben können."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#collection-instance",
+    "href": "Chapters/Chapter_5.html#collection-instance",
+    "title": "5. Objektarten",
+    "section": "Collection Instance",
+    "text": "Collection Instance\n\n\nCollections\nCollections sind Einheiten, um Objekte anzuordnen und zu gruppieren. Sie erscheinen nicht im Viewport, sind aber im Outliner aufzufinden. Sie können wie Dateiordner verstanden werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_5.html#zusammenfassung-der-objektarten",
+    "href": "Chapters/Chapter_5.html#zusammenfassung-der-objektarten",
+    "title": "5. Objektarten",
+    "section": "Zusammenfassung der Objektarten",
+    "text": "Zusammenfassung der Objektarten\n\n\nVerschiedene Objektarten\nDie verschiedenen Objektarten dienen also entweder der Darstellung von Objekten, der Darstellung von externen Dateien, der Darstellung der Szene oder haben vor allem unterstützende Funktionen:\n\nRenderbare Objekte\n\n\n\n\n\n\n\n\n\n\n\nGitter-basiert\nKurven-basiert\nMetas\nLinien\nSzenen-Tools\nExterne Daten\nHilfs-Werkzeuge\n\n\n\n\nMesh\nCurve\nMetaball\nGrease Pencil\nCamera\nVolume\nArmature\n\n\n\nSurface\n\n\nLight\nImage\nLattice\n\n\n\nText\n\n\nSpeaker\n\nEmpty\n\n\n\n\n\n\n\n\nForce Field\n\n\n\n\n\n\n\n\nSpeaker\n\n\n\n\n\n\n\n\nLight Probe\n\n\n\n\n\n\n\n\nCollection Instance"
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html",
+    "href": "Chapters/Chapter_6.html",
+    "title": "6. Primitive Meshes",
+    "section": "",
+    "text": "Primitives\nWie bereits erwähnt fokussiert sich dieser Kurs auf den Umgang mit Meshes. In der Auswahl zum Hinzufügen werden verschiedene grundlegende Formen von Meshes bereitgestellt. Diese grundlegenden Formen werden als Primitives bezeichnet. Zu den Primitives gehören:"
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#plane",
+    "href": "Chapters/Chapter_6.html#plane",
+    "title": "6. Primitive Meshes",
+    "section": "Plane",
+    "text": "Plane\n\n\nFläche\nDie Plane stellt das grundlegendste Primitive dar. Es handelt sich dabei lediglich um eine einzelne Fläche, bestehend aus einer Fläche mit vier Eckpunkten. Per Default hat die Plane eine Dimensionalität von 2x2x0 Metern."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#cube",
+    "href": "Chapters/Chapter_6.html#cube",
+    "title": "6. Primitive Meshes",
+    "section": "Cube",
+    "text": "Cube\n\n\nWürfel\nDer Cube entspricht dem Standardwürfel, den Blender bei der Default-Szene anzeigt. Per Default hat der Würfel eine Dimensionalität von 2x2x2 Metern."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#circle",
+    "href": "Chapters/Chapter_6.html#circle",
+    "title": "6. Primitive Meshes",
+    "section": "Circle",
+    "text": "Circle\n\n\nKreis\nDer Circle entspricht einem runden Kreis mit dem Radius von einem Meter, wodurch er eine Dimensionalität von 2x2x2 Metern innehat. Der Kreis besteht lediglich aus mit Linien verbundenen Punkten, ohne eine innere Fläche. Allerdings kann im Kontext-Menü zum Hinzufügen des Kreises auch eine Füllfläche erstellt werden."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#uv-sphere",
+    "href": "Chapters/Chapter_6.html#uv-sphere",
+    "title": "6. Primitive Meshes",
+    "section": "UV Sphere",
+    "text": "UV Sphere\n\n\nKugel bestehend aus Vierecken\nDie UV-Sphere stellt eine Kugel dar, mit der Dimensionalität von 2x2x2 Metern. Die Kugel besteht aus viereckigen Flächen, wobei sie an den Endpunkten der Z-Achse durch dreieckige Flächen verbunden ist. Die Anzahl der Segmente um die Kugel herum sowie die Anzahl Ringe lassen sich im Kontext-Menü beim Erstellen der Kugel einstellen. Die Segmente beschreiben dabei die Anzahl Unterteilungen, welche ein Ring entlang der XY-Achse der Kugel beinhaltet, während die Anzahl Ringe beschreibt, wie oft die Kugel der Z-Achse entlang unterteilt werden soll."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#ico-sphere",
+    "href": "Chapters/Chapter_6.html#ico-sphere",
+    "title": "6. Primitive Meshes",
+    "section": "Ico Sphere",
+    "text": "Ico Sphere\n\n\nKugel bestehend aus Dreiecken\nDie Ico-Sphere stellt ebenfalls eine Kugel dar, allerdings mit den Dimensionen 1.9x2x2 Meter. Anders als die UV-Sphere besteht sie nur aus dreieckigen Flächen. Dies hat den Vorteil, dass die Form der Faces über die ganze Kugel hinweg etwa gleich bleibt. Im Kontext-Menü zur Erstellung der Ico Sphere kann mit der Anzahl Subdivisions eingestellt werden, wie oft die Dreiecke dieser Kugel unterteilt werden sollen. Mit zunehmenden Subdivisions nähert sich die X-Dimensionalität auch 2 Metern an."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#cylinder",
+    "href": "Chapters/Chapter_6.html#cylinder",
+    "title": "6. Primitive Meshes",
+    "section": "Cylinder",
+    "text": "Cylinder\n\n\nZylinder\nDer Zylinder stellt zwei Kreise dar, welche durch Flächen miteinander verbunden sind. Seine Dimensionalität entspricht 2x2x2 Metern mit einem Radius der Kreise von 1 Meter. Im Kontext-Menü zur Erstellung des Zylinders lässt sich die Anzahl Unterteilungen im Kreis einstellen. Zudem lässt sich hier analog zum Kreis einstellen, ob die Kreisfläche mit einer Füllfläche versehen werden soll und mit welcher Art von Füllfläche."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#cone",
+    "href": "Chapters/Chapter_6.html#cone",
+    "title": "6. Primitive Meshes",
+    "section": "Cone",
+    "text": "Cone\n\n\nKegel\nDer Kegel stellt einen Spezialfall des Zylinders dar, bei dem die Radien der beiden Enden variiert werden können und einer der beiden Kreise einen Radius von 0 innehat. Auch hier kann wieder eingestellt werden, wie viele Unterteilungen die Kreise innehaben sollen und wie die Kreisflächen gestaltet werden sollen."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#torus",
+    "href": "Chapters/Chapter_6.html#torus",
+    "title": "6. Primitive Meshes",
+    "section": "Torus",
+    "text": "Torus\n\n\nTorus\nDer Torus stellt eine ringförmige Gestalt dar, welche aus einer Major- und einer Minor-Komponente besteht. Die Major-Komponente beschreibt dabei den Kreis von der Vogelperspektive herab auf den Torus und die Minor-Komponente den Kreis, welcher sich aus dem Querschnitt des Torus ergibt. Für beide Komponenten kann die Anzahl Unterteilungen über das Segment-Feld im Kontext-Menü eingegeben werden. Die Dimensionalität kann entweder hinsichtlich der Major- und Minor-Komponente festgelegt werden oder alternativ als Radius des inneren und des äusseren Ringes.\n\n\n\n\n\n\nAbbildung 1: Major- und Minor-Komponente des Torus."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#grid",
+    "href": "Chapters/Chapter_6.html#grid",
+    "title": "6. Primitive Meshes",
+    "section": "Grid",
+    "text": "Grid\n\n\nGitternetz\nDas Grid stellt eine Alternative zur glatten Fläche dar, ist allerdings bereits in weitere kleine viereckige Flächen unterteilt. Im Kontext-Menü lässt sich anhand der Subdivisions eingeben, wie viele Unterteilungen das Gitternetz entlang der X- und der Y-Achse haben soll. Die Dimensionalität des Grids ist analog zur Plane per Default 2x2x0 Meter."
+  },
+  {
+    "objectID": "Chapters/Chapter_6.html#monkey",
+    "href": "Chapters/Chapter_6.html#monkey",
+    "title": "6. Primitive Meshes",
+    "section": "Monkey",
+    "text": "Monkey\n\n\nSuzanne\nBei der Auswahl des Monkeys generiert Blender das Modell eines Affenkopfs. Dabei handelt es sich um Suzanne, das Maskottchen von Blender."
   },
   {
     "objectID": "Chapters/Chapter_16.html",
@@ -931,214 +1057,88 @@
     "text": "Dargestellte Viewport-Overlays\n\n\nAchsen\nSofern die Ansicht der Viewport-Overlays aktiviert ist, werden im 3D-Viewport einige nützliche Dinge dargestellt. Zum einen werden die verschiedenen drei Achsen in unterschiedlichen Farben vom Nullpunkt der Szene aus dargestellt:\n\nX-Achse: rot\nY-Achse: grün\nZ-Achse: blau\n\nZudem wird leicht schattiert ein Gitternetz dargestellt, bei dem jedes Quadrat eine Einheit von einem Meter darstellt. Wird aus der Szene hinausgezoomt, werden diese Quadrate zunehmend kleiner, dafür werden anschliessend quadratische Felder mit der Einheit von 10 Metern sichtbar.\n\n\n\n\n\n\nAbbildung 9: 3D-Cursor.\n\n\n\n\n\n3D-Cursor\nInnerhalb des 3D-Viewports ist ausserdem der 3D-Cursor sichtbar. Dieser ist an einer bestimmten Position in der Szene platziert und dort mittels eines rot-weissen Kreises dargestellt. Neu erstellte Objekte werden an seiner Position in die Szene eingefügt und der 3D-Cursor kann als Bezugspunkt für Transformationen verwendet werden."
   },
   {
-    "objectID": "Chapters/Chapter_6.html",
-    "href": "Chapters/Chapter_6.html",
-    "title": "6. Primitive Meshes",
+    "objectID": "Chapters/Chapter_9.html",
+    "href": "Chapters/Chapter_9.html",
+    "title": "9. Object- und Edit-Mode",
     "section": "",
-    "text": "Primitives\nWie bereits erwähnt fokussiert sich dieser Kurs auf den Umgang mit Meshes. In der Auswahl zum Hinzufügen werden verschiedene grundlegende Formen von Meshes bereitgestellt. Diese grundlegenden Formen werden als Primitives bezeichnet. Zu den Primitives gehören:"
+    "text": "Object-Mode\nDie bisherigen Transformationen, die an Objekten gemacht wurden, haben sich immer auf den Object-Mode bezogen. Dabei wurden grundlegende Eigenschaften von Objekten (Position, Rotation und Skalierung) verändert. Die Form des Objektes selbst wurde dabei nicht verändert, sondern lediglich seine Darstellungsweise. Durch das Zurücksetzen der Werte in der Sidebar erscheint das Objekt wieder in seiner ursprünglichen Form.\n\n\n\n\n\nWeiterführende Informationen\n\n\nDas Zurücksetzen der Transformationen kann direkt mittels folgenden Shortcuts erfolgen:\nZurücksetzen der Position: AltAlt + GG\nZurücksetzen der Rotation: AltAlt + RR\nZurücksetzen der Skalierung: AltAlt + SS\n\n\nDurch die bisherigen Transformationen wurde das Objekt als Ganzes bearbeitet. Dies zeichnet die Transformationen im Object-Mode aus. Nebst dem Object-Mode gibt es noch eine Reihe anderer Modi. In der oberen linken Ecke des Viewports ist jeweils ersichtlich, welcher Modus gerade verwendet wird. Durch einen Klick auf das Dropdown-Menü erscheint eine Liste der verfügbaren Modi:\n\n\nDie verschiedenen Bearbeitungs-Modi\n\nObject Mode: In diesem Modus können die Objekte in einer Szene als Ganzes transformiert und angeordnet werden.\nEdit Mode: In diesem Modus können die einzelnen Bestandteile des Objekts anvisiert und bearbeitet werden.\nSculpt Mode: In diesem Modus kann das Objekt anhand von Sculpting-Tools bearbeitet werden.\nVertex Paint: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen.\nWeight Paint: In diesem Modus werden dem Objekt verschiedene Gewichte aufgemalt, welche anschliessend für weitere Funktionen verwendet werden können.\nTexture Paint: In diesem Modus ist es möglich, ein Objekt mit einer Textur zu bemalen.\n\n\n\nWechsel zwischen Object- und Edit-Mode\nIm Rahmen dieses Kurses wird vorwiegend mit dem Object- und dem Edit-Mode gearbeitet. Der Wechsel zwischen diesen beiden Modi stellt einen wichtigen Wechsel zwischen den Modi dar. Deshalb ist es möglich, mittels einer einzigen Taste zwischen dem Object- und dem Edit-Mode hin- und herzuwechseln – nämlich mittels der Taste TabTab . Dabei wird in den Edit-Mode für das aktuell ausgewählte Objekt gewechselt. Für Objekte, welche nicht aus einzelnen Komponenten bestehen (beispielsweise Kameras oder Lichtquellen), ist kein Edit-Mode verfügbar."
   },
   {
-    "objectID": "Chapters/Chapter_6.html#plane",
-    "href": "Chapters/Chapter_6.html#plane",
-    "title": "6. Primitive Meshes",
-    "section": "Plane",
-    "text": "Plane\n\n\nFläche\nDie Plane stellt das grundlegendste Primitive dar. Es handelt sich dabei lediglich um eine einzelne Fläche, bestehend aus einer Fläche mit vier Eckpunkten. Per Default hat die Plane eine Dimensionalität von 2x2x0 Metern."
-  },
-  {
-    "objectID": "Chapters/Chapter_6.html#cube",
-    "href": "Chapters/Chapter_6.html#cube",
-    "title": "6. Primitive Meshes",
-    "section": "Cube",
-    "text": "Cube\n\n\nWürfel\nDer Cube entspricht dem Standardwürfel, den Blender bei der Default-Szene anzeigt. Per Default hat der Würfel eine Dimensionalität von 2x2x2 Metern."
-  },
-  {
-    "objectID": "Chapters/Chapter_6.html#circle",
-    "href": "Chapters/Chapter_6.html#circle",
-    "title": "6. Primitive Meshes",
-    "section": "Circle",
-    "text": "Circle\n\n\nKreis\nDer Circle entspricht einem runden Kreis mit dem Radius von einem Meter, wodurch er eine Dimensionalität von 2x2x2 Metern innehat. Der Kreis besteht lediglich aus mit Linien verbundenen Punkten, ohne eine innere Fläche. Allerdings kann im Kontext-Menü zum Hinzufügen des Kreises auch eine Füllfläche erstellt werden."
-  },
-  {
-    "objectID": "Chapters/Chapter_6.html#uv-sphere",
-    "href": "Chapters/Chapter_6.html#uv-sphere",
-    "title": "6. Primitive Meshes",
-    "section": "UV Sphere",
-    "text": "UV Sphere\n\n\nKugel bestehend aus Vierecken\nDie UV-Sphere stellt eine Kugel dar, mit der Dimensionalität von 2x2x2 Metern. Die Kugel besteht aus viereckigen Flächen, wobei sie an den Endpunkten der Z-Achse durch dreieckige Flächen verbunden ist. Die Anzahl der Segmente um die Kugel herum sowie die Anzahl Ringe lassen sich im Kontext-Menü beim Erstellen der Kugel einstellen. Die Segmente beschreiben dabei die Anzahl Unterteilungen, welche ein Ring entlang der XY-Achse der Kugel beinhaltet, während die Anzahl Ringe beschreibt, wie oft die Kugel der Z-Achse entlang unterteilt werden soll."
-  },
-  {
-    "objectID": "Chapters/Chapter_6.html#ico-sphere",
-    "href": "Chapters/Chapter_6.html#ico-sphere",
-    "title": "6. Primitive Meshes",
-    "section": "Ico Sphere",
-    "text": "Ico Sphere\n\n\nKugel bestehend aus Dreiecken\nDie Ico-Sphere stellt ebenfalls eine Kugel dar, allerdings mit den Dimensionen 1.9x2x2 Meter. Anders als die UV-Sphere besteht sie nur aus dreieckigen Flächen. Dies hat den Vorteil, dass die Form der Faces über die ganze Kugel hinweg etwa gleich bleibt. Im Kontext-Menü zur Erstellung der Ico Sphere kann mit der Anzahl Subdivisions eingestellt werden, wie oft die Dreiecke dieser Kugel unterteilt werden sollen. Mit zunehmenden Subdivisions nähert sich die X-Dimensionalität auch 2 Metern an."
-  },
-  {
-    "objectID": "Chapters/Chapter_6.html#cylinder",
-    "href": "Chapters/Chapter_6.html#cylinder",
-    "title": "6. Primitive Meshes",
-    "section": "Cylinder",
-    "text": "Cylinder\n\n\nZylinder\nDer Zylinder stellt zwei Kreise dar, welche durch Flächen miteinander verbunden sind. Seine Dimensionalität entspricht 2x2x2 Metern mit einem Radius der Kreise von 1 Meter. Im Kontext-Menü zur Erstellung des Zylinders lässt sich die Anzahl Unterteilungen im Kreis einstellen. Zudem lässt sich hier analog zum Kreis einstellen, ob die Kreisfläche mit einer Füllfläche versehen werden soll und mit welcher Art von Füllfläche."
-  },
-  {
-    "objectID": "Chapters/Chapter_6.html#cone",
-    "href": "Chapters/Chapter_6.html#cone",
-    "title": "6. Primitive Meshes",
-    "section": "Cone",
-    "text": "Cone\n\n\nKegel\nDer Kegel stellt einen Spezialfall des Zylinders dar, bei dem die Radien der beiden Enden variiert werden können und einer der beiden Kreise einen Radius von 0 innehat. Auch hier kann wieder eingestellt werden, wie viele Unterteilungen die Kreise innehaben sollen und wie die Kreisflächen gestaltet werden sollen."
-  },
-  {
-    "objectID": "Chapters/Chapter_6.html#torus",
-    "href": "Chapters/Chapter_6.html#torus",
-    "title": "6. Primitive Meshes",
-    "section": "Torus",
-    "text": "Torus\n\n\nTorus\nDer Torus stellt eine ringförmige Gestalt dar, welche aus einer Major- und einer Minor-Komponente besteht. Die Major-Komponente beschreibt dabei den Kreis von der Vogelperspektive herab auf den Torus und die Minor-Komponente den Kreis, welcher sich aus dem Querschnitt des Torus ergibt. Für beide Komponenten kann die Anzahl Unterteilungen über das Segment-Feld im Kontext-Menü eingegeben werden. Die Dimensionalität kann entweder hinsichtlich der Major- und Minor-Komponente festgelegt werden oder alternativ als Radius des inneren und des äusseren Ringes.\n\n\n\n\n\n\nAbbildung 1: Major- und Minor-Komponente des Torus."
-  },
-  {
-    "objectID": "Chapters/Chapter_6.html#grid",
-    "href": "Chapters/Chapter_6.html#grid",
-    "title": "6. Primitive Meshes",
-    "section": "Grid",
-    "text": "Grid\n\n\nGitternetz\nDas Grid stellt eine Alternative zur glatten Fläche dar, ist allerdings bereits in weitere kleine viereckige Flächen unterteilt. Im Kontext-Menü lässt sich anhand der Subdivisions eingeben, wie viele Unterteilungen das Gitternetz entlang der X- und der Y-Achse haben soll. Die Dimensionalität des Grids ist analog zur Plane per Default 2x2x0 Meter."
-  },
-  {
-    "objectID": "Chapters/Chapter_6.html#monkey",
-    "href": "Chapters/Chapter_6.html#monkey",
-    "title": "6. Primitive Meshes",
-    "section": "Monkey",
-    "text": "Monkey\n\n\nSuzanne\nBei der Auswahl des Monkeys generiert Blender das Modell eines Affenkopfs. Dabei handelt es sich um Suzanne, das Maskottchen von Blender."
-  },
-  {
-    "objectID": "Chapters/Chapter_5.html",
-    "href": "Chapters/Chapter_5.html",
-    "title": "5. Objektarten",
+    "objectID": "Chapters/Chapter_9.html#die-verschiedenen-bearbeitungs-modi",
+    "href": "Chapters/Chapter_9.html#die-verschiedenen-bearbeitungs-modi",
+    "title": "9. Object- und Edit-Mode",
     "section": "",
-    "text": "Verschiedene Arten von Objekten\nBeim Hinzufügen von Objekten mittels der Tastenkombination ShiftShift + AA erscheint das Menü für das Hinzufügen von Objekten beim Mauszeiger. Die verschiedenen Objekte sind dabei in verschiedene Typen von Objekten unterteilt. Diese Objekte unterscheiden sich hinsichtlich ihres Aufbaus, aber auch hinsichtlich ihrer Funktion."
+    "text": "Object-Mode\nDie bisherigen Transformationen, die an Objekten gemacht wurden, haben sich immer auf den Object-Mode bezogen. Dabei wurden grundlegende Eigenschaften von Objekten (Position, Rotation und Skalierung) verändert. Die Form des Objektes selbst wurde dabei nicht verändert, sondern lediglich seine Darstellungsweise. Durch das Zurücksetzen der Werte in der Sidebar erscheint das Objekt wieder in seiner ursprünglichen Form.\n\n\n\n\n\nWeiterführende Informationen\n\n\nDas Zurücksetzen der Transformationen kann direkt mittels folgenden Shortcuts erfolgen:\nZurücksetzen der Position: AltAlt + GG\nZurücksetzen der Rotation: AltAlt + RR\nZurücksetzen der Skalierung: AltAlt + SS\n\n\nDurch die bisherigen Transformationen wurde das Objekt als Ganzes bearbeitet. Dies zeichnet die Transformationen im Object-Mode aus. Nebst dem Object-Mode gibt es noch eine Reihe anderer Modi. In der oberen linken Ecke des Viewports ist jeweils ersichtlich, welcher Modus gerade verwendet wird. Durch einen Klick auf das Dropdown-Menü erscheint eine Liste der verfügbaren Modi:\n\n\nDie verschiedenen Bearbeitungs-Modi\n\nObject Mode: In diesem Modus können die Objekte in einer Szene als Ganzes transformiert und angeordnet werden.\nEdit Mode: In diesem Modus können die einzelnen Bestandteile des Objekts anvisiert und bearbeitet werden.\nSculpt Mode: In diesem Modus kann das Objekt anhand von Sculpting-Tools bearbeitet werden.\nVertex Paint: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen.\nWeight Paint: In diesem Modus werden dem Objekt verschiedene Gewichte aufgemalt, welche anschliessend für weitere Funktionen verwendet werden können.\nTexture Paint: In diesem Modus ist es möglich, ein Objekt mit einer Textur zu bemalen.\n\n\n\nWechsel zwischen Object- und Edit-Mode\nIm Rahmen dieses Kurses wird vorwiegend mit dem Object- und dem Edit-Mode gearbeitet. Der Wechsel zwischen diesen beiden Modi stellt einen wichtigen Wechsel zwischen den Modi dar. Deshalb ist es möglich, mittels einer einzigen Taste zwischen dem Object- und dem Edit-Mode hin- und herzuwechseln – nämlich mittels der Taste TabTab . Dabei wird in den Edit-Mode für das aktuell ausgewählte Objekt gewechselt. Für Objekte, welche nicht aus einzelnen Komponenten bestehen (beispielsweise Kameras oder Lichtquellen), ist kein Edit-Mode verfügbar."
   },
   {
-    "objectID": "Chapters/Chapter_5.html#mesh",
-    "href": "Chapters/Chapter_5.html#mesh",
-    "title": "5. Objektarten",
-    "section": "Mesh",
-    "text": "Mesh\n\n\nMeshes\nEin Mesh stellt ein 3D-Objekt dar. Meshes haben eine gitterähnliche Struktur aus Punkten, Linien und verbundenen Flächen, welche in ihrer Gesamtstruktur das Objekt darstellen. Der Hauptfokus dieses Kurses wird auf die Meshes gelegt, von daher werden sie später noch ausführlich beschrieben."
+    "objectID": "Chapters/Chapter_9.html#struktur-von-3d-meshes",
+    "href": "Chapters/Chapter_9.html#struktur-von-3d-meshes",
+    "title": "9. Object- und Edit-Mode",
+    "section": "Struktur von 3D-Meshes",
+    "text": "Struktur von 3D-Meshes\n\n\nDer Gitteraufbau von 3D-Meshes\nBeim Wechseln in den Edit-Mode erscheint das Mesh in seiner Struktur, bestehend aus mehreren Polygonen. Dabei handelt es sich um einzelne Oberflächenstrukturen der Meshes. Die Polygone – und somit auch das Mesh – bestehen in ihrer Struktur aus folgenden Elementen:\n\nVertices: Einzelne Punkte in einem Mesh\nEdges: Linien zwischen zwei Vertices in einem Mesh\nFaces: Flächen zwischen mehreren Edges/Vertices in einem Mesh\n\n\n\n\n\n\n\nAbbildung 1: Vertices, Edges und Faces.\n\n\n\n\n\nSelect-Modus wechseln\nIm Edit-Mode können wahlweise Vertices, Edges oder Faces ausgewählt werden, je nachdem in welchem Select-Modus man sich befindet. Die drei Select-Modi sind in der linken oberen Ecke direkt neben dem Auswahlfeld für den Bearbeitungs-Modus (in dem Fall der Edit-Mode) aufzufinden.\n\n\n\n\n\n\nAbbildung 2: Schaltfläche für den Vertex-, Edge- und Face-Select-Modus in der linken oberen Ecke des Edit-Modes.\n\n\n\n\nVertices\n\n\nVertices\nEin Vertex (Mehrzahl: Vertices) stellt die grundlegendste Einheit in einem Mesh dar. Jeder Vertex beschreibt einen Punkt in einem Mesh. Anders als die Objekte als Ganzes, verfügen Vertices nur über das Merkmal ihrer jeweiligen Position. Die Merkmale Skalierung und Rotation gibt es für Vertices nicht. Ein Vertex hat deshalb auch keine Dimensionen.\n\n\nAuswahl von Vertices\nWerden zwei miteinander verbundene Vertices ausgewählt, so wird automatisch auch das dazwischenliegende Edge ausgewählt. Ebenso wird automatisch das dazugehörige Face mit ausgewählt, wenn alle Vertices dieses Faces ausgewählt werden. Ein einzelner Vertex kann lediglich im Vertex Select-Modus angewählt werden.\n\n\nEdges\n\n\nEdges\nEdges beschreiben Linien, welche zwischen zwei Vertices liegen. Da ein Edge genau der Verbindung zwischen zwei Vertices entspricht, ist dessen Mittelpunkt identisch zur Mitte zwischen den beiden Vertices.\n\n\nAuswahl von Edges\nIm Edge-Select-Modus können die Edges als solche ausgewählt werden. Dabei werden automatisch auch die beiden zum Edge dazugehörigen Vertices ausgewählt. Wenn alle Edges eines Faces ausgewählt werden, dann wird automatisch auch das dazugehörige Face ausgewählt.\n\n\nFaces\n\n\nFaces\nFaces stellen die Flächen zwischen verbundenen Edges/Vertices dar. Die Position des Faces entspricht dem Mittelpunkt dieser Fläche und somit dem Mittelpunkt der dazugehörigen Vertices. Es ist allerdings auch möglich, dass mehrere Vertices mittels Edges verbunden sind, ohne eine Fläche zu beinhalten.\nMittels des Face-Select-Modus können Faces direkt angewählt werden. Alternativ kann ein Face auch angewählt werden, indem im Vertex-Select-Modus alle zum Face dazugehörigen Vertices ausgewählt werden, oder indem im Edge-Select-Modus alle zum Face dazugehörigen Edges ausgewählt werden."
   },
   {
-    "objectID": "Chapters/Chapter_5.html#curve",
-    "href": "Chapters/Chapter_5.html#curve",
-    "title": "5. Objektarten",
-    "section": "Curve",
-    "text": "Curve\n\n\nKurven\nVor der Entwicklung der Meshes wurden in Computergrafiken Kurven und Oberflächen verwendet. Sie haben den Vorteil, dass sie weniger Computerleistung benötigen. Kurven verfügen über weniger Kontrollpunkte, wodurch sie auch einfacher zu bearbeiten sind. In einigen Anwendungen werden sie heute immer noch verwendet. Blender verfügt über zwei Arten von Kurven: Bézier-Kurven und Nurbs-Kurven. Die beiden Arten von Kurven unterscheiden sich hinsichtlich ihrer zugrundeliegenden Berechnungen.\n\n\nKurven können Oberflächen enthalten\nNeu hinzugefügte Kurven beinhalten zunächst keine Oberfläche und erscheinen dadurch nicht beim Rendern. Allerdings können ihnen Oberflächen hinzugefügt werden, sodass sie auch als Objekte erkennbar werden. Zudem können Kurven auch als Hilfestellung bei Animationen verwendet werden, indem etwa Pfade für eine Animation mit ihnen vorgegeben werden."
+    "objectID": "Chapters/Chapter_9.html#anzahl-vertices-in-einem-face",
+    "href": "Chapters/Chapter_9.html#anzahl-vertices-in-einem-face",
+    "title": "9. Object- und Edit-Mode",
+    "section": "Anzahl Vertices in einem Face",
+    "text": "Anzahl Vertices in einem Face\n\n\n\n\n\nWeiterführende Informationen\n\n\nPolygone und Faces sind in ihrer Bedeutung praktisch deckungsgleich. Faces beschreiben jedoch eher die Fläche eines Polygons, während das Polygon eher die Gesamtheit von Vertices, Edges und Faces beschreibt. Der Begriff Polygon wird innerhalb von Blender allerdings selten verwendet.\n\n\n\n\nAnzahl Vertices in einem Face\nDer Default-Cube, den Blender jeweils beim Start eines neuen Projektes zur Verfügung stellt, besteht aus sechs Faces. Jedes dieser Faces beinhaltet vier Vertices. Es ist allerdings auch möglich, dass ein Face aus mehr oder weniger Vertices besteht. Es gibt verschiedene Begriffe, basierend auf der Anzahl Vertices in einem Face:\n\n\nBezeichnung von Faces aufgrund Anzahl Vertices\n\nTriangles (Tris): Faces, die aus drei Vertices bestehen\nQuadrangles (Quads): Faces, die aus vier Vertices bestehen\nN-Gons: Faces, die aus n Vertices bestehen\n\n\n\n\n\n\n\nAbbildung 3: Der Standardwürfel bestehend aus Tris statt aus Quads.\n\n\n\n\n\nTris aus Quads ableiten\nAus Quads lassen sich sehr einfach Tris bilden. Hierfür muss lediglich jedes Quad zwischen zwei gegenüberliegenden Vertices zerschnitten werden, sodass die Fläche in zwei Dreiecke unterteilt wird. Beim Rendern von Bildern werden Quads in den 3D-Objekten automatisch in Tris unterteilt, was im Normalfall für den Benutzer jedoch kaum ersichtlich ist.\n\n\nBevorzugung von Quads\nTrotzdem ist es sinnvoll, sich beim Modellieren von 3D-Objekten eher an die Verwendung von Quads zu gewöhnen. Viele Tricks und Kniffe der Objektbearbeitung lassen sich einfacher oder teilweise sogar nur auf Quads anwenden. Somit erleichtert die Arbeit mit Quads den Arbeitsprozess erheblich. Weiterhin sind Quads auch in vielen Animationsstudios der Standard.\n\n\n\n\n\n\nAbbildung 4: Links eine gerenderte 3D-Figur und rechts die Figur in ihrer Gitterstruktur.\n\n\n\n\n\nAnwendung von Tris\nArbeiten mit Tris ist trotzdem durchaus möglich und vereinzelte Tris in Objekten sind auch nicht problematisch. In manchen Situationen sind Tris sogar flexibler als Quads. Wenn allerdings die Objekte komplett aus Tris bestehen sollen, macht dies gerade in gemeinschaftlichen Prozessen nur Sinn, wenn alle beteiligten Personen mit Tris umgehen können.\n\n\n\n\n\nMerke…\n\n\nVertices beschreiben die einzelnen Punkte in einem 3D-Objekt.\nEdges beschreiben die verbundenen Punkte in einem 3D-Objekt.\nFaces beschreiben Flächen zwischen mehr als zwei verbundenen Vertices.\nFaces mit vier Vertices (Quads) sind gegenüber Faces mit drei Vertices (Tris) in den meisten Fällen zu bevorzugen."
   },
   {
-    "objectID": "Chapters/Chapter_5.html#surface",
-    "href": "Chapters/Chapter_5.html#surface",
-    "title": "5. Objektarten",
-    "section": "Surface",
-    "text": "Surface\n\n\nSurfaces\nDie Surfaces sind ähnlich zu den Kurven. Während Kurven 2D-Objekte darstellen, sind die Surfaces ihre 3D-Erweiterungen. Obwohl Kurven und Surfaces somit denselben Typ von Objekten darstellen, können sie nicht gleichzeitig auftreten. In einem Objekt können somit nicht sowohl Kurven als auch Surfaces vorhanden sein."
+    "objectID": "Chapters/Chapter_9.html#auswahl-von-vertices-edges-und-faces-im-edit-mode",
+    "href": "Chapters/Chapter_9.html#auswahl-von-vertices-edges-und-faces-im-edit-mode",
+    "title": "9. Object- und Edit-Mode",
+    "section": "Auswahl von Vertices, Edges und Faces im Edit-Mode",
+    "text": "Auswahl von Vertices, Edges und Faces im Edit-Mode\n\n\nAuswahl von Vertices, Edges und Faces im Edit-Mode\nAbhängig davon, welcher Select-Modus gerade aktiviert ist, lassen sich entweder die Vertices, Edges oder Faces auswählen. Die Auswahl der jeweiligen Elemente geschieht mittels der linken Maustaste. Wie auch im Object-Mode können bei gedrückter ShiftShift-Taste zusätzliche Elemente ausgewählt werden. Ebenso können mit der Taste CC der Circle-Select-Modus und mittels der Taste BB der Box-Select-Modus verwendet werden. Zudem kann mit der Tastenkombination CtrlCtrl + II die Auswahl umgekehrt werden.\n\n\nSelect linked mittels LL\nIm Edit-Mode gibt es weitere Auswahl-Optionen. Wenn sich der Mauszeiger über einem Element eines Objekts befindet, können mit der Taste LL alle Elemente, welche über Edges damit verbunden sind, ausgewählt werden. Dies ermöglicht es, alle verbundenen Elemente auszuwählen. Um alle Elemente eines Objektes – also auch unverbundene Elemente – auszuwählen, kann die Taste AA gedrückt werden.\n\n\nEdge-Loop-Select bei gedrückter Taste AltAlt\nWeiterhin lassen sich ganze Verbindungen von Edges auswählen, wenn die Taste AltAlt während der Auswahl gedrückt wird. Dadurch werden alle Edges, die gemeinsam eine Linie mit dem gerade ausgewählten Element bilden, ausgewählt. Dies ist auch im Vertex-Select-Modus möglich. Im Face-Select-Modus werden alle Faces, die gemeinsam eine Linie bilden, ausgewählt (hierfür muss der Mausklick allerdings bei einem Edge erfolgen – nicht in der Fläche des Faces)."
   },
   {
-    "objectID": "Chapters/Chapter_5.html#metaball",
-    "href": "Chapters/Chapter_5.html#metaball",
-    "title": "5. Objektarten",
-    "section": "Metaball",
-    "text": "Metaball\n\n\nMetas\nMetabälle gehören zur Objekt-Familie der Metas, welche Blender prozedural aufbaut. Anders als beispielsweise Meshes oder Kurven sind sie nicht durch Kontrollpunkte oder Gitternetze aufgebaut, sondern werden mathematisch von Blender berechnet. Wenn zwei Meta-Objekte in der Nähe voneinander sind, können sie miteinander interagieren."
+    "objectID": "Chapters/Chapter_9.html#das-innere-des-objekts",
+    "href": "Chapters/Chapter_9.html#das-innere-des-objekts",
+    "title": "9. Object- und Edit-Mode",
+    "section": "Das Innere des Objekts",
+    "text": "Das Innere des Objekts\n\n\nVirtuelle Objekte haben meist keine Füllung\nSo wie auch in der realen Welt haben virtuelle 3D-Objekte Flächen, welche aus mindestens drei Kanten bestehen und mindestens drei Ecken. Im Gegensatz zu Objekten in der realen Welt bestehen virtuelle Objekte nicht aus einer Füllung. Wird ein realer Apfel mit einem Messer in der Mitte geteilt, so wird der Inhalt unter der Schale – etwa das Fruchtfleisch oder das Kerngehäuse – sichtbar. Bei einem 3D-Mesh gibt es jedoch kein Inneres, sodass lediglich die Oberflächen der äusseren Struktur von der anderen Seite aus ersichtlich werden. Das Mesh besteht somit nur aus der Oberfläche, welche ein leeres Volumen überdeckt.\nAus dem Umgang mit realen Objekten ist der Mensch sich gewohnt, dass Objekte einen Inhalt haben. Dies trifft auf digitale Objekte selten zu. Als Betrachter von digitalen Objekten ist dieser Sachverhalt nur in den seltensten Fällen bemerkbar. Dadurch wird durch fehlende Auseinandersetzung mit dieser Thematik die Illusion eines möglichen Inhaltes verstärkt.\n\n\nWenn das Innere sichtbar wird\nIn Videospielen kann es vorkommen, dass die Kamera durch einen Fehler in ein Objekt hineingelangt. Dadurch wird das Objekt anschliessend von der Innenseite aus betrachtet. Dies muss allerdings nicht immer der Fall sein. In manchen Situationen ist dieses Objekt gar nicht mehr sichtbar, wenn es von innen betrachtet wird."
   },
   {
-    "objectID": "Chapters/Chapter_5.html#text",
-    "href": "Chapters/Chapter_5.html#text",
-    "title": "5. Objektarten",
-    "section": "Text",
-    "text": "Text\n\n\nText\nText-Objekte beinhalten einen Text, der anschliessend als Objekt dargestellt wird. Der Text hat dabei wie die Kurven oder die Oberflächen lediglich zwei Dimensionen."
+    "objectID": "Chapters/Chapter_9.html#normalen-die-richtige-seite-der-faces-finden",
+    "href": "Chapters/Chapter_9.html#normalen-die-richtige-seite-der-faces-finden",
+    "title": "9. Object- und Edit-Mode",
+    "section": "Normalen: die richtige Seite der Faces finden",
+    "text": "Normalen: die richtige Seite der Faces finden\n\n\nDie zwei Seiten von Faces\nDa 3D-Meshes keinen inneren Hohlraum haben, bilden die Faces die Oberfläche, welche das Objekt abdeckt. Dies bedeutet aber auch, dass es zwei Seiten von dieser Oberfläche geben muss: eine Seite, die betrachtet werden soll, und eine, die nicht betrachtet werden soll. In den meisten Fällen ist schnell klar, welche Seite eines Objektes von Bedeutung ist. Einen Apfel betrachtet man jeweils von aussen, also ist die nach aussen gerichtete Seite jene Seite, welche betrachtet werden soll. Ebenso verhält es sich bei einem Charakter. In diesem Fall ist ebenfalls die nach aussen gerichtete Seite von Bedeutung und nicht das Innere seines Körpers.\n\n\n\n\n\nWeiterführende Informationen\n\n\nBei bestimmten Einstellungen werden die Rückseiten der Oberflächen von Objekten fehlerhaft dargestellt. In diesen Fällen hilft es oftmals, die Ausrichtung der Normalen zu überprüfen und bei Bedarf anzupassen.\nIn manchen Game-Engines werden die Rückseiten von Objekten in den Grundeinstellungen gar nicht angezeigt. Dadurch blickt man bei den Oberflächen mit der falschen Ausrichtung durch das Objekt hindurch. Dies vermittelt den Eindruck, dass ein Teil des Objekts fehlen würde. Dieser Teil ist noch da – allerdings der falschen Richtung zugewendet.\n\n\n\n\nDie zu betrachtende Seite eines Würfels\nWie verhält es sich bei Blenders Standardwürfel? Bei diesem wird zunächst die Aussenseite betrachtet. Allerdings wäre es auch möglich, dass der Default-Cube von innen betrachtet werden soll – etwa, wenn eine Szene im Inneren eines Raumes dargestellt werden soll und der Würfel die Wände, den Boden und die Decke des Raumes darstellt. In diesem Fall ist nicht mehr die Aussenseite des Würfels relevant, sondern die Innenseite.\n\n\nNormalen\nDie Normalen eines Objektes geben jeweils an, in welche Richtung Vertices, Edges und Faces gerichtet sind. Wenn ein Würfel etwa von innen betrachtet werden soll, müssen die Normalen nach innen gekehrt werden. Wenn der Würfel allerdings als solcher von aussen betrachtet werden soll, dann müssen die Normalen nach aussen gekehrt sein.\n\n\nNormalen darstellen\nDie Normalen eines 3D-Objektes lassen sich im Edit-Mode betrachten, indem die entsprechende Ansicht aktiviert wird. Diese wird im Dropdown-Menü zu den Viewport-Overlays in der rechten oberen Ecke des 3D-Viewports unter dem Abschnitt «Normals» mit der Schaltfläche «Display Normals» aktiviert. Anschliessend erscheinen in den Faces kleine blaue Striche, welche in diejenige Richtung zeigen, gegen die das Face dargestellt ist.\n\n\n\n\n\n\nAbbildung 5: Icon zur Darstellung der Normalen in den Viewport-Overlays.\n\n\n\n\n\nFace-Orientation darstellen\nEs ist auch möglich, in den Viewport-Overlays die «Face Orientation» zu aktivieren. Dadurch werden die Oberflächen eines Objekts in blauer Farbe dargestellt, wenn es sich um die Seite der Normalen handelt, oder in roter Farbe, wenn es sich um die Seite ohne Normalen handelt. Diese Ansicht ist auch im Object-Mode verfügbar, allerdings nur in der Solid-Ansicht und wenn X-Ray deaktiviert ist.\n\n\nNormalen umkehren und neu berechnen\nWenn alle Faces innerhalb eines Objekts ausgewählt werden, kann mittels der Tastenkombination AltAlt + NN das Menü «Normals» beim Mauszeiger geöffnet werden. Mit der Option «Flip» können anschliessend alle Normalen in die umgekehrte Richtung gekehrt werden. Zudem können die Normalen mittels der Option «Recalculate Outside» zur äusseren Seite hin oder mittels «Recalculate Inside» zur inneren Seite hin berechnet werden."
   },
   {
-    "objectID": "Chapters/Chapter_5.html#volume",
-    "href": "Chapters/Chapter_5.html#volume",
-    "title": "5. Objektarten",
-    "section": "Volume",
-    "text": "Volume\n\n\nVolumen-Objekte\nVolumen-Objekte sind lediglich Objekt-Container. Ihnen können OpenVDB-Dateien angehängt werden, um volumetrische Daten (beispielsweise Wolken oder Rauch) zu erzeugen. Diese Dateien können mithilfe von Blenders eigenen Simulationen erzeugt werden, oder in anderen Programmen erzeugt und abgespeichert werden."
+    "objectID": "Chapters/Chapter_27.html",
+    "href": "Chapters/Chapter_27.html",
+    "title": "27. Tutorial: Einen Hammer texturieren",
+    "section": "",
+    "text": "Ziel dieser Aufgabe\nAls Nächstes wird anhand eines Modelles aufgezeigt, wie das Texturieren erfolgt. Im Zip-Ordner «Hammer» ist ein .blend-File aufzufinden, in dem sich ein Mesh in der Form eines Hammers befindet. Nebst diesem File sind im Ordner «Metal022_4K-JPG» verschiedene Texturarten für ein metallisches Material aufzufinden. Dieses Material wird anhand der Texturen in diesem Ordner erstellt und dem Hammerkopf zugewiesen. Anschliessend wird eine weitere Textur gesucht und dem Holzstiel des Hammers zugewiesen."
   },
   {
-    "objectID": "Chapters/Chapter_5.html#grease-pencil",
-    "href": "Chapters/Chapter_5.html#grease-pencil",
-    "title": "5. Objektarten",
-    "section": "Grease Pencil",
-    "text": "Grease Pencil\n\n\nGrease Pencil\nGrease Pencils sind Objekte, welche es ermöglichen, direkt in den dreidimensionalen Raum zu zeichnen. Zudem können mit ihnen 2D-Animationen erstellt werden – etwa wenn Blender für ein 2D- statt 3D-Projekt verwendet wird. Objekte der Kategorie «Grease Pencil» sind dabei eigentlich Behälter-Objekte, in welche anschliessend die Linien gezeichnet werden."
+    "objectID": "Chapters/Chapter_27.html#uv-mapping",
+    "href": "Chapters/Chapter_27.html#uv-mapping",
+    "title": "27. Tutorial: Einen Hammer texturieren",
+    "section": "UV-Mapping",
+    "text": "UV-Mapping\n\n\nUV-Editor öffnen\nNach dem Öffnen des .blend-Files wird der Hammer in Blender angezeigt. In diesem Beispiel sollten zunächst die UVs betrachtet werden. Hierfür wird der UV-Editor benötigt. Um diesen zu öffnen, wird aus den Ecken des 3D-Viewport-Editors ein zweiter Editor herausgezogen. Dieser Editor wird anschliessend als UV-Editor verwendet.\n\n\nFaces auswählen, um UVs zu betrachten\nUm im UV-Editor die UVs des Hammers betrachten zu können, müssen die jeweils anzuzeigenden Faces ausgewählt werden. Hierfür muss zunächst der Edit-Mode mit dem ausgewählten Hammer aktiviert werden. Damit alle UVs betrachtet werden können, müssen alle Faces des Hammers mittels der Taste AA ausgewählt werden. Danach werden im UV-Editor die UVs angezeigt.\n\n\n\n\n\n\nAbbildung 2: UVs des Hammers.\n\n\n\n\n\nUVs mit Cube Projection neu berechnen\nDie angezeigten UVs müssen noch angepasst werden, da diese durch die Erstellung des Hammers aus einem 3D-Würfel entstanden sind. Deshalb wird Blender der Befehl gegeben, dass das Programm selbstständig neue UVs berechnen soll. Hierfür wird im Editor-Mode des 3D-Viewports-Editors die Taste UU gedrückt. Dadurch erscheint beim Mauszeiger das Menu «UV Mapping» in diesem Menü wird die Option «Cube Projection» ausgewählt. Im UV-Editor werden nun die neu berechneten UVs angezeigt.\n\n\n\n\n\n\nAbbildung 3: UVs nach der Bearbeitung mittels Cube Projection."
   },
   {
-    "objectID": "Chapters/Chapter_5.html#armature",
-    "href": "Chapters/Chapter_5.html#armature",
-    "title": "5. Objektarten",
-    "section": "Armature",
-    "text": "Armature\n\n\nArmaturen\nArmaturen werden verwendet, um Meshes zu animieren. Hierbei wird innerhalb eines Meshes ein Gerüst erstellt, anhand dessen die Animation anschliessend erfolgen soll. Dieses Gerüst stellt sozusagen das Skelett dar, welches anschliessend für die Animation verwendet werden soll. Dementsprechend werden die einzelnen Gerüstteile auch Bones (Knochen) genannt. Armaturen werden beim Rendern nicht angezeigt. Bei ihnen handelt es sich lediglich um ein Werkzeug zur Animation."
+    "objectID": "Chapters/Chapter_27.html#materialen-erstellen",
+    "href": "Chapters/Chapter_27.html#materialen-erstellen",
+    "title": "27. Tutorial: Einen Hammer texturieren",
+    "section": "Materialen erstellen",
+    "text": "Materialen erstellen\n\n\nMaterial-Slots hinzufügen\nIm nächsten Schritt geht es darum, dem Objekt die Materialien zuzuweisen. Hierfür werden zwei Material-Slots benötigt. Um diese zu erstellen, wird im Properties-Editor der Material-Reiter geöffnet und darin zwei neue Slots für Materialien hinzugefügt. Hierfür kann zweimal auf die Schaltfläche «+» geklickt werden.\n\n\nReihenfolge der Materialien\nManchmal ist es sinnvoll, sich über die Reihenfolge der zu erstellenden Materialien Gedanken zu machen. Per Default werden alle Faces eines Objekts dem ersten Material zugewiesen. Somit wäre es sinnvoll, als zweites Material dasjenige zu verwenden, für welches die entsprechenden Faces einfacher auszuwählen sind. In diesem Falle wäre dies das Holz, welches lediglich die Faces des Stiels abdeckt. Deshalb ist es sinnvoller dem zweiten Material das Holz zuzuweisen.\n\n\nMaterialien hinzufügen\nZunächst wird auf den ersten Material-Slot geklickt, um diesen auszuwählen und mit der Schaltfläche «New» ein neues Material hinzugefügt. Dieses Material kann zu «Metall» umbenannt werden. Danach wird der zweite Material-Slot ausgewählt und diesem ebenfalls ein neues Material hinzugefügt, welches als «Holz» benannt werden kann.\n\n\nFaces für Holz-Material auswählen\nIm Edit-Mode können anschliessend alle Faces, welche zum Holzstiel gehören, ausgewählt werden. Dazu kann ein Loop-Select verwendet werden. Hierfür wird der Face-Selection-Modus verwendet und bei gedrückter CtrlCtrl-Taste auf ein Edge geklickt, welches entlang dem Stiel des Hammers verläuft. Dadurch sollten alle Faces des Stiels, ausser dasjenige am Boden des Hammerstiels, ausgewählt worden sein. Das noch nicht ausgewählte Face des Hammerstiels kann bei gedrückter ShiftShift-Taste durch einen Mausklick zur Auswahl hinzugefügt werden.\n\n\n\n\n\n\nAbbildung 4: Faces für das Holz-Material.\n\n\n\n\n\nMaterialien anwenden\nDie ausgewählten Faces können als Nächstes dem Holz-Material hinzugefügt werden. Hierfür wird im Properties-Editor der zweite Material-Slot mit dem Holz-Material ausgewählt und auf die Schaltfläche «Assign» geklickt. Wenn nun die Auswahl von Faces aufgelöst wird, indem in den leeren Raum im 3D-Viewport-Editor geklickt wird, kann die Taste «Select» im Properties-Editor verwendet werden, um die zum Holz-Material hinzugefügten Faces auszuwählen. Dadurch kann überprüft werden, ob die Faces korrekt zugewiesen wurden."
   },
   {
-    "objectID": "Chapters/Chapter_5.html#lattice",
-    "href": "Chapters/Chapter_5.html#lattice",
-    "title": "5. Objektarten",
-    "section": "Lattice",
-    "text": "Lattice\n\n\nLattice\nDas Lattice stellt ein dreidimensionales Gerüst aus Punkten dar, welches allerdings nicht gerendert werden kann. Es dient als Werkzeug zur komplexeren Transformation von Objekten."
+    "objectID": "Chapters/Chapter_27.html#metall-texturieren",
+    "href": "Chapters/Chapter_27.html#metall-texturieren",
+    "title": "27. Tutorial: Einen Hammer texturieren",
+    "section": "Metall texturieren",
+    "text": "Metall texturieren\n\n\nShader-Editor öffnen\nIm Properties-Editor kann nun das Metall-Material ausgewählt werden. Dieses Material wird nun als Nächstes bearbeitet. Hierfür muss der Shader-Editor verwendet werden. Deshalb wird der UV-Editor, welcher fortan nicht mehr benötigt wird, zum Shader-Editor umgewandelt. Zusätzlich sollte im 3D-Viewport-Editor der Material-Preview-Shading-Mode ausgewählt werden, damit Änderungen am Material auch dargestellt werden.\n\n\nImage-Texture-Node hinzufügen\nAls erstes wird dem Principled-BSDF-Shader im Shader-Editor eine Image-Textur hinzugefügt. Hierfür kann der Principled-BSDF-Shader ausgewählt und die Tastenkombination CtrlCtrl + TT gedrückt werden. Durch das Node-Wrangler-Add-on entsteht links vom Principled-BSDF-Shader eine Image-Textur, welche durch einen Mapping-Node und einen Textur-Coordinate-Node ihre Inputs bekommt. Der Image-Textur-Node sollte automatisch mit der Base-Color des Principled-BSDF-Shaders verbunden worden sein. Für den Fall, dass diese Tastenkombination nicht funktionieren, sollte überprüft werden, ob das Node-Wrangler-Add-on aktiviert ist.\n\n\nColor-Textur öffnen\nAnschliessend kann im Image-Texture-Node auf die Schaltfläche «Open» geklickt werden. Im anschliessend geöffneten Browser kann zum Speicherort des Hammers navigiert werden und dort im Ordner «Metal022_4K-JPG» die Datei «Metal022_4K_Color.jpg» ausgewählt werden. Dabei handelt es sich um die Color-Textur, welche jeweils mit der Base-Color des Principled-BSDF-Shaders verbunden wird.\n\n\nImage-Texture-Node für Metallic hinzufügen\nAls Nächstes wird die Metallic-Textur zum Material hinzugefügt. Hierfür kann der Image-Textur-Node ausgewählt und mit der Tastenkombination ShiftShift + DD dupliziert werden. Das Duplikat kann unterhalb des originalen Image-Textur-Nodes platziert werden. Anschliessend sollte der Vector-Output des Mapping-Nodes mit dem Vector-Input des duplizierten Image-Textur-Nodes verbunden werden. Der Color-Output des Image-Textur-Nodes kann mit dem Metallic-Input des Principled-BSDF-Shaders verbunden werden.\n\n\nBilddatei auswechseln\nDer Image-Textur-Node beinhaltet als Bild immer noch die Datei «Metal022_4K_Color.jpg». Mittels des Ordner-Icons kann nach einer anderen Textur gesucht werden, welche diesem Node hinzugefügt wird. Hierfür wird die Datei «Metal022_4K_Metalness.jpg» verwendet.\n\n\nRoughness-Textur hinzufügen\nDie Schritte zum Einfügen der Metallic-Textur können nun wiederholt werden, um die Roughness-Textur einzufügen. Das heisst, der Image-Texture-Node kann dupliziert werden, mit dem Mapping-Node und mit dem Roughness-Input des Principled-BSDF-Shaders verbunden werden. Anschliessend muss die Textur mit der Datei «Metal022_4K_Roughness.jpg» ausgewechselt werden.\n\n\nNormal-Textur hinzufügen\nFür die Normal-Textur wird ebenfalls ein Duplikat des Image-Texture-Nodes erstellt, dessen Input mit dem Vector-Output des Mapping Nodes verbunden und die Datei «Metal022_4K_NormalGL.jpg» geöffnet. Zusätzlich wird nun ein neuer Node benötigt, welcher minimale visuelle Unebenheiten basierend auf der Normal-Textur simuliert. Hierfür wird mittels der Tastenkombination ShiftShift + AA das «Add»-Menü geöffnet und unter «Vector | Bump» ein Bump-Node hinzugefügt. Dieser wird zwischen dem Image-Textur-Node und dem Principled-BSDF-Shader platziert. Der Normal-Output des Bump-Nodes wird anschliessend mit dem Normal-Input des Principled-BSDF-Shaders verbunden.\n\n\nBump einstellen\nDer Bump-Node nimmt die Informationen aus der Normal-Textur auf und simuliert drauf basierend kleine Unebenheiten im Material. Die Normal-Textur beschreibt jeweils die Höhe dieser Unebenheiten. Aus diesem Grund kann der Color-output der Normal-Textur mit dem Height-Input des Bump-Nodes verbunden werden. Mittels des Reiters «Strength» kann zudem eingestellt werden, wie stark diese Unebenheiten dargestellt werden sollen. Beispielsweise kann der Wert 0.45 verwendet werden.\n\n\nDisplacement-Textur hinzufügen\nZu guter Letzt wird erneut eine Kopie des Image-Texture-Nodes erstellt, mit dem Mapping Node verbunden und die Datei «Metal022_4K_Displacement.jpg» geöffnet. Die Displacement-Textur bietet ebenfalls die Möglichkeit, um Unebenheiten im Material zu simulieren. Im Vergleich zur Normal-Textur handelt es sich hierbei um grössere Unebenheiten.\n\n\nDisplacement verbinden\nZur Verwendung der Displacement-Textur wird ein weiterer Node benötigt, welcher im «Add»-Menü unter «Vector | Displacement» zu finden ist Dieser wird anschliessend neben dem Image-Texture-Node verbunden. Der Displacement-Output des Displacement-Nodes wird, anders als bei den anderen Texturen, nicht mit einem Shader verbunden, sondern direkt mit dem Displacement-Output des Material-Output-Nodes.\n\n\nDisplacement einstellen\nDer Color-Output der Displacement-Textur kann wie auch bei der Normal-Textur und dem Bump-Node mit dem Height-Input verbunden werden. Mittels des Reiters «Scale» kann zudem eingestellt werden, wie stark diese Unebenheiten erstellt werden. In der Regel reichen bereits sehr kleine Werte aus, wie beispielsweise 0.025.\n\n\nGrösse der Textur einstellen\nNachdem alle Texturen eingefügt wurden, kann im Mapping Node die Grösse der Textur angepasst werden. Hierfür kann der Wert bei der Skalierung entlang der drei Achsen vergrössert oder verkleinert werden. Beispielsweise könnte die Textur dreimal so klein dargestellt werden, indem die Skalierung für alle drei Achsen auf den Wert 3 gesetzt wird.\n\n\n\n\n\n\nAbbildung 5: Node-Struktur für das Metall-Material."
   },
   {
-    "objectID": "Chapters/Chapter_5.html#empty",
-    "href": "Chapters/Chapter_5.html#empty",
-    "title": "5. Objektarten",
-    "section": "Empty",
-    "text": "Empty\n\n\nEmpties\nEmpties sind Knotenpunkte an einem einzigen Punkt in der virtuellen Welt. Sie beinhalten weder Oberflächen noch Volumen und können auch nicht gerendert werden. Sie lassen sich allerdings beispielsweise als Bezugspunkte für Objekte verwenden."
-  },
-  {
-    "objectID": "Chapters/Chapter_5.html#image",
-    "href": "Chapters/Chapter_5.html#image",
-    "title": "5. Objektarten",
-    "section": "Image",
-    "text": "Image\n\n\nBilder\nBlender ermöglichet es, dass auch externe Bilddateien direkt einer Szene hinzugefügt werden können. Hierfür kann ein solches Image-Objekt erstellt und das Bild anschliessend diesem Objekt angefügt werden. Bilder können allerdings auch direkt in den Viewport-Display gezogen werden, wodurch sie anschliessend hinzugefügt werden."
-  },
-  {
-    "objectID": "Chapters/Chapter_5.html#light",
-    "href": "Chapters/Chapter_5.html#light",
-    "title": "5. Objektarten",
-    "section": "Light",
-    "text": "Light\n\n\nLichtquellen\nLicht-Objekte stellen die Quelle für die Beleuchtung von Szenen dar. Sie sind nicht als Mesh oder Kurve modellierbar, sondern stellen vielmehr einen Punkt oder Bereich dar, von dem die Beleuchtung ausgeht."
-  },
-  {
-    "objectID": "Chapters/Chapter_5.html#light-probe",
-    "href": "Chapters/Chapter_5.html#light-probe",
-    "title": "5. Objektarten",
-    "section": "Light-Probe",
-    "text": "Light-Probe\n\n\nLight Probes\nLight Probes werden in der Eevee-Render-Engine als Hilfsobjekte verwendet. Dabei werden beispielsweise Informationen über indirekte Beleuchtungseffekte gespeichert. Diese Informationen werden anschliessend im finalen Render berücksichtigt, während das Light-Probe-Objekt als solches nicht im finalen Render dargestellt wird."
-  },
-  {
-    "objectID": "Chapters/Chapter_5.html#camera",
-    "href": "Chapters/Chapter_5.html#camera",
-    "title": "5. Objektarten",
-    "section": "Camera",
-    "text": "Camera\n\n\nKamera\nKameras stellen den Punkt dar, von dem aus die Welt in der gerenderten Szene betrachtet wird. Die Kameras als solche sind in den gerenderten Bildern nicht sichtbar."
-  },
-  {
-    "objectID": "Chapters/Chapter_5.html#speaker",
-    "href": "Chapters/Chapter_5.html#speaker",
-    "title": "5. Objektarten",
-    "section": "Speaker",
-    "text": "Speaker\n\n\nLautsprecher\nSpeaker werden verwendet, um an bestimmten Positionen in der Szene Töne erklingen zu lassen. So wie die Lichtquellen sind die Speaker nicht modellierbar, sondern stellen einen Punkt in der drei dimensionalen Welt dar, von dessen Position ein Klang ausgeht."
-  },
-  {
-    "objectID": "Chapters/Chapter_5.html#force-field",
-    "href": "Chapters/Chapter_5.html#force-field",
-    "title": "5. Objektarten",
-    "section": "Force Field",
-    "text": "Force Field\n\n\nKraftfelder\nForce Fields sind Objekte, welche in Simulationen Kräfte auf andere Objekte ausüben können. So können andere Objekte beispielsweise angezogen oder absorbiert werden. Beim Rendern sind diese Objekte als solche nicht sichtbar, allerdings die Auswirkungen, welche deren Kräfte auf Objekte haben können."
-  },
-  {
-    "objectID": "Chapters/Chapter_5.html#collection-instance",
-    "href": "Chapters/Chapter_5.html#collection-instance",
-    "title": "5. Objektarten",
-    "section": "Collection Instance",
-    "text": "Collection Instance\n\n\nCollections\nCollections sind Einheiten, um Objekte anzuordnen und zu gruppieren. Sie erscheinen nicht im Viewport, sind aber im Outliner aufzufinden. Sie können wie Dateiordner verstanden werden."
-  },
-  {
-    "objectID": "Chapters/Chapter_5.html#zusammenfassung-der-objektarten",
-    "href": "Chapters/Chapter_5.html#zusammenfassung-der-objektarten",
-    "title": "5. Objektarten",
-    "section": "Zusammenfassung der Objektarten",
-    "text": "Zusammenfassung der Objektarten\n\n\nVerschiedene Objektarten\nDie verschiedenen Objektarten dienen also entweder der Darstellung von Objekten, der Darstellung von externen Dateien, der Darstellung der Szene oder haben vor allem unterstützende Funktionen:\n\nRenderbare Objekte\n\n\n\n\n\n\n\n\n\n\n\nGitter-basiert\nKurven-basiert\nMetas\nLinien\nSzenen-Tools\nExterne Daten\nHilfs-Werkzeuge\n\n\n\n\nMesh\nCurve\nMetaball\nGrease Pencil\nCamera\nVolume\nArmature\n\n\n\nSurface\n\n\nLight\nImage\nLattice\n\n\n\nText\n\n\nSpeaker\n\nEmpty\n\n\n\n\n\n\n\n\nForce Field\n\n\n\n\n\n\n\n\nSpeaker\n\n\n\n\n\n\n\n\nLight Probe\n\n\n\n\n\n\n\n\nCollection Instance"
+    "objectID": "Chapters/Chapter_27.html#holz-texturieren",
+    "href": "Chapters/Chapter_27.html#holz-texturieren",
+    "title": "27. Tutorial: Einen Hammer texturieren",
+    "section": "Holz texturieren",
+    "text": "Holz texturieren\n\n\nQuelle der Metall-Textur\nDie Metall-Texturen stammen von der Website https://ambientcg.com/. Diese Website bietet weitere Texturen an, die etwa für die Texturierung des Holz-Stiels verwendet werden können. So könnte für das Holzmaterial die Textur «Wood 057» verwendet werden. Hierfür muss die entsprechende Textur heruntergeladen werden.\n\n\nNode-System kopieren\nNun müsste für das Holz-Material dieselbe Node-Struktur erneut aufgebaut werden. Dies kann etwas übersprungen werden, indem alle Nodes aus dem Metall-Material mittels der Taste AA ausgewählt und mit der Tastenkombination CtrlCtrl + CC kopiert werden. Anschliessend kann im Properties-Editor der Slot für das zweite Material –das Holz – ausgewählt werden. Dadurch erscheint im Shader-Editor nun die Node-Struktur des Holz-Materials. Hier kann mit der Taste AA alles ausgewählt und die bestehenden Nodes mit der Taste XX gelöscht werden. Anschliessend kann mit der Tastenkombination CtrlCtrl + VVdie Node-Struktur aus dem Metall-Material eingefügt werden.\n\n\nNode-System kopieren\nDas neu eingefügt Node-System beinhaltet noch die Texturen, welche im Metall-Material verwendet wurden. Deshalb müssen bei allen Image-Texture-Nodes die entsprechenden Texturen mit der äquivalenten Texturart der Holztexturen ersetz werden. Bei dieser Textur wurde allerdings keine Metall-Textur angeboten, weshalb der Image-Texture-Node, welcher mit dem Metallic-Input des Principled-BSDF-Shaders verbunden ist, entfernt werden kann. Zudem können bei Bedarf die Einstellungen im Bump-Node für die Normal-Textur und die Einstellungen im Displacement-Node für die Displacement-Textur angepasst werden. Im Mapping-Node könnte zudem noch die Einstellung für die Skalierung der Textur angepasst werden, beispielsweise auf einen Wert von 1.5 pro Achse. Anschliessend ist der Hammer fertig texturiert.\n\n\n\n\n\nÜbung 15: Texturieren\n\n\nÜbung 15.1\nSuchen Sie nach einer anderen Holz-Textur und fügen Sie diese dem Material «Holz» des Hammers zu. Suchen Sie hierfür nach Texturen, die verschiedene Texturarten beinhalten."
   },
   {
     "objectID": "Chapters/Chapter_24.html",

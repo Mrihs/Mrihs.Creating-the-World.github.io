@@ -158,7 +158,7 @@ Math-Node zum erneuten Dividieren
 
 Nun wird noch ein letztes Mal ein Duplikat des dividierenden Math-Nodes erstellt und rechts neben den potenzierenden Math-Node platziert. Der erste Value-Input wird mit dem Value-Output des potenzierenden Math-Nodes verbunden und die zweite Value-Zeile wird auf 0.08 gesetzt. Dadurch wird der Output des potenzierenden Math-Nodes durch den Wert 0.08 dividiert. Wenn nun alle Nodes entsprechend der Abbildung 6 eingefügt wurden, sollte der Output des letzten Math-Nodes nun den Wert für den Specular-Input enthalten.
 
-![Node-Anordnung, um die Specularity anhand des IORs zu berechnen.](Images/Chapter_31/Specularity calc..png){fig-align="left"}
+![Node-Anordnung, um die Specularity anhand des IORs zu berechnen.](Images/Chapter_31/Specularity calc..png){#fig-1_6 fig-align="left"}
 
 ::: column-margin
 Was ist dabei passiert?

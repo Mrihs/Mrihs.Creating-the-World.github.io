@@ -1,5 +1,5 @@
 ---
-title: "32. Lichtquellen in einer Szene"
+title: "33. Lichtquellen in einer Szene"
 editor: visual
 ---
 
@@ -10,7 +10,6 @@ Lichtstrahlen werden benötigt
 Die Abbildung 1zeigt eine in Blender gerenderte Szene einer Spielfigur auf einem Spielbrett. Damit diese Szene überhaupt erstellt werden kann, benötigt es eine Beleuchtung. Anhand der Beleuchtung erhalten die Objekte Lichtstrahlen, welche sie reflektieren können. Ohne die reflektierten Lichtstrahlen würde das Objekt schwarz dargestellt. Wenn kein Licht in einer Szene vorhanden ist, wird eine gerenderte Szene komplett schwarz dargestellt.
 
 ![Eine Spielfigur auf einem Spielfeld. Die Beleuchtung erfolgt aus allen Winkeln gleichmässig durch die Hintergrundwelt.](Chapters/Images/Chapter_32/.png) {#fig-1_1 fig-align="left}
-
 
 ::: column-margin
 Möglichkeiten, um Lichtstrahlen zu erzeugen
@@ -24,7 +23,7 @@ Möglichkeiten, um Lichtstrahlen zu erzeugen
 Welt als Lichtquelle
 :::
 
-In der Abbildung 1 werden das Spielbrett, der darunterliegende blaue Boden und die Spielfigur durch die Hintergrundwelt beleuchtet. Die Hintergrundwelt besteht in diesem Beispiel aus einer konstanten Farbe, welche aus allen Winkeln gleich stark ausgestrahlt wird. Dadurch reflektieren die Objekte die Strahlen aus allen Richtungen gleich stark. 
+In der Abbildung 1 werden das Spielbrett, der darunterliegende blaue Boden und die Spielfigur durch die Hintergrundwelt beleuchtet. Die Hintergrundwelt besteht in diesem Beispiel aus einer konstanten Farbe, welche aus allen Winkeln gleich stark ausgestrahlt wird. Dadurch reflektieren die Objekte die Strahlen aus allen Richtungen gleich stark.
 
 ::: column-margin
 Einfluss von einzelnen Lichtquellen
@@ -38,8 +37,7 @@ Die Abbildung 2 zeigt dieselbe Szene. In dieser Szene wurde zusätzlich ein Lich
 Szene mit Schatten
 :::
 
-Die Abbildung 3 zeigt erneut dieselbe Szene wie in Abbildung 1 und Abbildung 2. In den vorherigen Szenen wurde in den Material-Einstellungen der Figur der Schatten für das entsprechende Material deaktiviert. Deshalb wurde kein Schatten dargestellt. Nun mit dem Schatten der Figur werden zusätzliche Informationen zu 
-den Verhältnissen im dreidimensionalen Raum dargestellt. Durch den Abstand des Schattens zur Figur wird klar, dass die Figur sich nicht direkt auf dem Spielfeld befindet und stattdessen darüber schwebt. Tatsächlich befindet sich die Spielfigur über dem Spielfeld I2 und schwebt darüber. 
+Die Abbildung 3 zeigt erneut dieselbe Szene wie in Abbildung 1 und Abbildung 2. In den vorherigen Szenen wurde in den Material-Einstellungen der Figur der Schatten für das entsprechende Material deaktiviert. Deshalb wurde kein Schatten dargestellt. Nun mit dem Schatten der Figur werden zusätzliche Informationen zu den Verhältnissen im dreidimensionalen Raum dargestellt. Durch den Abstand des Schattens zur Figur wird klar, dass die Figur sich nicht direkt auf dem Spielfeld befindet und stattdessen darüber schwebt. Tatsächlich befindet sich die Spielfigur über dem Spielfeld I2 und schwebt darüber.
 
 ![Dieselbe Szene erneut dargestellt. Im Material der Spielfigur wurde nun ein Schatten hinzugefügt. Dadurch wird erkennbar, dass sich die Spielfigur gar nicht auf dem Feld J1 befindet, sondern über dem Feld I2 schwebt.](Chapters/Images/Chapter_32/.png) {#fig-1_3 fig-align="left}
 
@@ -47,17 +45,13 @@ den Verhältnissen im dreidimensionalen Raum dargestellt. Durch den Abstand des 
 Einfluss von Schatten
 :::
 
-Anhand dieses simplen Beispiels wird bereits deutlich, dass Schatten auch verwendet werden, um Objekte im dreidimensionalen Raum zu verordnen. Damit es Schatten aber überhaupt geben kann, wird eine 
-Lichtquelle benötigt.
+Anhand dieses simplen Beispiels wird bereits deutlich, dass Schatten auch verwendet werden, um Objekte im dreidimensionalen Raum zu verordnen. Damit es Schatten aber überhaupt geben kann, wird eine Lichtquelle benötigt.
 
 ::: column-margin
 Material als Lichtquelle
 :::
 
-Eine weitere Option für eine Lichtquelle könnte in diesem Beispiel die Figur respektive deren Material darstellen. Die Abbildung 4 zeigt eine gelbe Spielfigur, welche sich tatsächlich auf dem Spielfeld 
-J1 befindet. Sämtliche Lichtquellen, also das Lichtobjekt und die Hintergrundwelt, wurden ausgeschaltet. Bei beiden Beispielen innerhalb der Abbildung 4 wurden beim Material der Spielfigur der 
-«**Emission*»-Wert im Principled-BSDF-Shader auf 25 und die Farbe auf gelb (RGB 1-1-0) gestellt. Dadurch sendet die Spielfigur nun Licht aus. Beide Beispiele in der Abbildung 4 zeigen diese Grundeinstellung, allerdings wurde für die linke Abbildung Eevee und für die rechte Abbildung Cycles verwendet. 
-
+Eine weitere Option für eine Lichtquelle könnte in diesem Beispiel die Figur respektive deren Material darstellen. Die Abbildung 4 zeigt eine gelbe Spielfigur, welche sich tatsächlich auf dem Spielfeld J1 befindet. Sämtliche Lichtquellen, also das Lichtobjekt und die Hintergrundwelt, wurden ausgeschaltet. Bei beiden Beispielen innerhalb der Abbildung 4 wurden beim Material der Spielfigur der «\*\*Emission\*»-Wert im Principled-BSDF-Shader auf 25 und die Farbe auf gelb (RGB 1-1-0) gestellt. Dadurch sendet die Spielfigur nun Licht aus. Beide Beispiele in der Abbildung 4 zeigen diese Grundeinstellung, allerdings wurde für die linke Abbildung Eevee und für die rechte Abbildung Cycles verwendet.
 
 ![Zweimal eine Szene, deren einzige Lichtquelle aus dem Material einer Spielfigur besteht. Links ein Beispiel mit Eevee als Render-Engine, rechts ein Beispiel mit Cycles als Render-Engine.](Chapters/Images/Chapter_32/.png) {#fig-1_4 fig-align="left}
 

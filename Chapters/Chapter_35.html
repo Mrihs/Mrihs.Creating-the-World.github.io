@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7. Methoden der Objekt-Transformation – Creating the World</title>
+<title>35. Welten – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,8 +39,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-05798b36db35dfecaedaec0bbed5404c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
-<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -299,12 +297,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#die-drei-grundlegenden-objekt-transformationen" id="toc-die-drei-grundlegenden-objekt-transformationen" class="nav-link active" data-scroll-target="#die-drei-grundlegenden-objekt-transformationen">Die drei grundlegenden Objekt-Transformationen</a></li>
-  <li><a href="#location" id="toc-location" class="nav-link" data-scroll-target="#location">Location</a></li>
-  <li><a href="#rotation" id="toc-rotation" class="nav-link" data-scroll-target="#rotation">Rotation</a></li>
-  <li><a href="#scale" id="toc-scale" class="nav-link" data-scroll-target="#scale">Scale</a></li>
-  <li><a href="#dimension" id="toc-dimension" class="nav-link" data-scroll-target="#dimension">Dimension</a></li>
-  <li><a href="#transformationen-sperren" id="toc-transformationen-sperren" class="nav-link" data-scroll-target="#transformationen-sperren">Transformationen sperren</a></li>
+  <li><a href="#hdris-hinzufügen" id="toc-hdris-hinzufügen" class="nav-link active" data-scroll-target="#hdris-hinzufügen">HDRIs hinzufügen</a></li>
   </ul>
 </nav>
     </div>
@@ -313,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">7. Methoden der Objekt-Transformation</h1>
+<h1 class="title">35. Welten</h1>
 </div>
 
 
@@ -330,115 +323,77 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="die-drei-grundlegenden-objekt-transformationen" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="die-drei-grundlegenden-objekt-transformationen">Die drei grundlegenden Objekt-Transformationen</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Grundlegende Transformationen</p>
-</div></div><p>Jegliche 3D-Meshes beinhalten drei grundlegende Eigenschaften. Diese Grundeigenschaften können jederzeit variiert werden. Es handelt sich dabei um:</p>
-<ul>
-<li>Position</li>
-<li>Rotation</li>
-<li>Skalierung</li>
-</ul>
-<p>Alle drei Optionen sind in der Sidebar (ein /ausblenden mittels <kbd aria-hidden="true">N</kbd><span class="visually-hidden">N</span>) unter dem Menü «<em>Item</em>» unter dem Reiter «<em>Transform</em>» sichtbar. Die Eigenschaften beziehen sich jeweils auf das ausgewählte Objekt. Wenn kein Objekt ausgewählt ist, beziehen sie sich auf das zuletzt ausgewählte Objekt. Mittels der Einstellungen in der Sidebar lassen sich diese drei Eigenschaften beliebig durch die Eingabe von Zahlen variieren.</p>
-<div class="tippbox">
-<div class="tippbox-header">
-<div class="tippbox-icon">
-
-</div>
-<p>Weiterführende Informationen</p>
-</div>
-<div class="tippbox-body">
-<p>Statt Zahlen können auch mathematische Berechnungen in die Felder eingegeben werden. Dadurch lassen sich komplexere Positionen ermitteln. Wenn etwa ein Objekt genau mittig zwischen einem Objekt mit einer Position von X = 4 und einem Objekt mit einer Position von X = 17 platziert werden soll, kann der X-Wert des zu platzierenden Objektes auf X = 4 + ((17 – 4) / 2) festgelegt werden. Das Objekt wird anschliessend mittig der beiden Objekte (X = 10.5) platziert.</p>
-</div>
-</div>
-</section>
-<section id="location" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="location">Location</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Position</p>
-</div></div><p>Die Location beschreibt die Position eines 3D-Meshes in der dreidimensionalen Welt. Die Position wird mittels drei Werten angegeben: einem Wert für die X-Achse, einem für die Y-Achse und einem für die Z-Achse. Jeder dieser drei Werte lässt sich individuell verändern. Durch das Verschieben des X Wertes verschiebt sich das Objekt beispielsweise der X-Achse entlang.</p>
+<p>Verwendung von Licht beim Rendern</p>
+</div></div><p>Mithilfe der Lichtobjekte ist es nun möglich, die Szenen in Blender mit Licht auszustatten. Damit der Einfluss dieser Lichtobjekte sichtbar ist, muss allerdings der Rendered-Viewport-Shading-Modus im 3D-Viewport-Editor ausgewählt werden. Im Material-Preview-Viewport-Shading-Modus werden diese Lichtobjekte per Default nicht mit angezeigt.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_7/1. Origin.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_35/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Der orangene Punkt markiert den Ursprung (Origin) eines Objektes.
+Abbildung&nbsp;1: Eine gerenderte Szene.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Position befindet sich am Ursprung des Objekts</p>
-</div></div><p>Die genaue Position des Objektes wird anhand eines kleinen orangen Punktes im Viewport-Display angezeigt. Bei diesem Punkt handelt es sich um den Ursprung des Objektes (Origin). Die Position eines Objektes bezieht sich immer auf diesen orangen Punkt, selbst wenn das Mesh selbst diese Position gar nicht abdeckt.</p>
-</section>
-<section id="rotation" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="rotation">Rotation</h2>
+<p>Der gerenderte Hintergrund</p>
+</div></div><p>Die Abbildung 1, welche auch in der Datei «<em>Dune</em>» zu finden ist, zeigt eine gerenderte Szene, so wie sie auch im Rendered-Viewport-Shading-Modus dargestellt wird. Das Objekt zeigt eine Düne mit einer Sandtextur, welche von einer Sonne beleuchtet wird. Dahinter verbirgt sich ein leerer, grauer Hintergrund. Dabei handelt es sich um den Standardhintergrund, der in einer Szene per Default eingestellt ist. Dieser Hintergrund bildet die sogenannte Welt der Szene ab.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Rotation</p>
-</div></div><p>Die Rotation eines Objektes beschreibt, wie sehr das Objekt entlang der drei Achsen rotiert wird. Analog zur Position ist die Rotation ebenfalls in die drei Achsen X, Y und Z aufgeteilt. Beispielsweise führt eine Veränderung der Rotation beim Wert X dazu, dass das Objekt entsprechend entlang der X-Achse rotiert wird. Durch die Verwendung aller drei Achsen können so komplexe Rotationen erfolgen. Indem alle Werte erneut auf 0 gesetzt werden, befindet sich das Objekt wieder in seiner Grundposition.</p>
+<p>Die Unendlichkeit der Welt</p>
+</div></div><p>Die Welt stellt im Grunde genommen eine unendlich grosse Kugel dar, welche um die Szene gespannt wird. Das Ende dieser Welt kann somit nie erreicht werden. Man könnte sich dies auch als eine UV-Sphere vorstellen, welche so stark vergrössert wird, dass sie die gesamte Szene in sich beheimatet. Im Unterschied zur Welt, wäre die UV-Sphere allerdings endlich, da sie einen klar definierten Durchmesser innehat, welcher die Szene umfasst. Die Welt hingegen, stellt ein unendliches Konstrukt dar.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Drehpunkt der Rotation</p>
-</div></div><p>Der Ursprung des Objektes stellt den Drehpunkt für die Rotation mittels der Sidebar dar. Das heisst, die Objekte werden jeweils um den Ursprungspunkt herumrotiert. Dies wird beispielsweise deutlich, wenn sich der Ursprungspunkt ausserhalb des Objektes befindet.</p>
-</section>
-<section id="scale" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="scale">Scale</h2>
+<p>World-Properties</p>
+</div></div><p>Für die Einstellung der Welt findet sich im Properties-Editor unter dem Reiter «<em>World Properties</em>» die Möglichkeit, Eigenschaften der Welt zu definieren. Allerdings kann diese Einstellung der Welt auch im Shader-Editor vorgenommen werden. Im Shader-Editor können nicht nur Materialien, sondern auch die Welt und Linien bearbeitet werden.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_35/1. Icon_World_Properties.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Icon des «<em>World Properties</em>»-Reiters im Properties-Editor.
+</figcaption>
+</figure>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Skalierung</p>
-</div></div><p>Die Skalierung eines Objekts beschreibt, wie stark ein Objekt vergrössert oder verkleinert wird. Diese Objekteigenschaft lässt sich ebenfalls individuell für alle drei Achsen einstellen. So kann ein Objekt entlang der X-Achse vergrössert werden, indem der dazugehörige X-Wert auf einen Wert über 1 festgelegt wird. Werte im Bereich von grösser als 0 und kleiner als 1 führen zu einer Verkleinerung des Objektes entlang der entsprechenden Achse. Ein Wert von 0 führt dazu, dass das Objekt entlang der entsprechenden Achse keine Grösse mehr hat und aus der entsprechenden Perspektive dem entsprechend nicht mehr sichtbar ist.</p>
+<p>Weltbearbeitung im Shader-Editor öffnen</p>
+</div></div><p>In der linken oberen Ecke des Shader-Editors, direkt neben dem Dropdown-Menü zur Auswahl des Editors, findet sich ein weiteres Dropdown-Menü, welches standardmässig auf «<em>Object</em>» eingestellt ist. Unter dieser Auswahl werden jeweils die Materialien des Objekts dargestellt und bearbeitet. Wird im entsprechenden Dropdown-Menü allerdings «World» ausgewählt, werden die Einstellungen der Welt dargestellt und können bearbeitet werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Bezugspunkt der Skalierung</p>
-</div></div><p>Analog zu der Position und der Rotation bezieht sich die Skalierung ebenfalls auf den Ursprung des Objektes. Wenn sich das Mesh ausserhalb des Ursprungs befindet, führt dies dazu, dass auch der Leerraum zwischen dem Mesh und dem Ursprung entsprechend skaliert wird. Befindet sich die Grenze eines Objektes etwa um den Wert 1 vom Ursprung entfernt, führt eine Skalierung um den Wert 2 dazu, dass das Mesh selbst verdoppelt wird – allerdings wird die Distanz zum Ursprung des Objektes ebenfalls verdoppelt.</p>
-</section>
-<section id="dimension" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="dimension">Dimension</h2>
+<p>Background-Node</p>
+</div></div><p>Standardmässig wird für die Welt der «Background»-Shader verwendet. Dieser verfügt lediglich über die Einstellungen «<em>Color</em>» und «<em>Strength</em>». Bei der Farbe handelt es sich um die Hintergrundfarbe, welche in der gerenderten Ansicht dargestellt wird. Diese Farbe sendet zudem auch Lichtstrahlen aus. Das Ausmass, in dem Licht ausgestrahlt werden soll, kann mit der Einstellung «<em>Strength</em>» definiert werden. Indem diese beiden Parameter variiert werden, können bereits unterschiedliche Hintergrundbeleuchtungen erzielt werden.</p>
+<section id="hdris-hinzufügen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="hdris-hinzufügen">HDRIs hinzufügen</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Dimensionen von Objekten</p>
-</div></div><p>Unterhalb des Eingabefeldes für die Skalierung befindet sich ein weiteres Feld, welches die Dimensionen eines 3D-Meshes basierend auf den drei Achsen angibt. Die Dimensionen des Objektes sind direkt mit der Skalierung des Objektes verbunden. Eine Veränderung der X-Achsen-Dimension führt dazu, dass die Skalierung anhand der X-Achse so angepasst wird, dass sie der eingegebenen Grösse des Objektes entsprechen. Dadurch kann etwa direkt bestimmt werden, dass ein Objekt entlang der verschiedenen Achsen eine bestimmte Grösse innehat, ohne dass die Skalierung der entsprechenden Grösse angepasst wird.</p>
-</section>
-<section id="transformationen-sperren" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="transformationen-sperren">Transformationen sperren</h2>
+<p>HDRI</p>
+</div></div><p>Welten können, so wie auch bei Materialien, Texturen hinzugefügt werden. Dabei werden allerdings in der Regel besondere Arten von Texturen verwendet, sogenannte HDRIs. HDRI steht für «<em>High Dynamic Range Image</em>» und beschreibt Bilder, welche sehr hohe Helligkeitsunterschiede innerhalb des Bildes aufweisen. Dies ist besonders zur Darstellung von Welten geeignet.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Transformationen sperren</p>
-</div></div><p>Neben den Werten für die Position, Rotation und Skalierung befinden sich drei aufgeschlossene Schlösser. Durch das Anklicken dieser Schlösser lässt sich die dazugehörige Eigenschaft auf einer Achse sperren, sodass sie nicht mehr verändert werden kann. Das entsprechende Symbol verändert sich dadurch zu einem geschlossenen Schloss.</p>
+<p>HDRIs im Internet beziehen</p>
+</div></div><p>HDRIs können so wie auch Texturen im Internet bezogen werden. Teilweise bieten die Datenbanken, welche Texturen anbieten, in einer gesonderten Kategorie zusätzlich HDRIs an. Etwa die Webseiten <a href="https://polyhaven.com/" class="uri">https://polyhaven.com/</a> und <a href="https://ambientcg.com/" class="uri">https://ambientcg.com/</a> beinhalten gesonderte Kategorien für HDRIs. Oftmals werden verschiedene Auflösungen angeboten. Bei den HDRIs, welche für die Hintergrundwelt verwendet werden, empfiehlt es sich, eine etwas grössere Auflösung zu verwenden, da die entsprechenden Bilder anschliessend über die gesamte Welt gezogen werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Sperrung gilt nur für Viewport-Display</p>
-</div></div><p>Die Werte links neben dem Schloss lassen sich allerdings immer noch verändern, was kontraintuitiv wirken mag. Dies liegt daran, dass sich diese Sperrung auf Veränderungen mittels des Viewport Displays bezieht, welche nun als Nächstes betrachtet werden.</p>
-<div class="exercisebox">
-<div class="exercisebox-header">
-<div class="exercisebox-icon">
+<p>HDRI in Blender einfügen</p>
+</div></div><p>Die HDRIs können nun im Shader-Editor als Textur hinzugefügt werden. Hierfür kann der Background-Shader-Node ausgewählt werden und die Tastenkombination  +  gedrückt werden. Dadurch werden automatisch ein Texture-Node, ein Mapping-Node und ein Texture-CoordinateNode hinzugefügt. Anders als bei den Materialien wird allerdings kein Image-Texture-Node hinzugefügt, sondern ein Environment-Texture-Node. Dieser fungiert ähnlich wie der Image-Texture-Node, ist allerdings darauf angepasst, dass er die runde Welt überspannt, statt ein Objekt. Im «<em>Add</em>»-Menü kann dieser Node unter «Texture | Environment Texture» hinzugefügt werden. Innerhalb dieses Environment-Texture-Nodes kann anschliessend das HDRI-Bild geöffnet werden.</p>
 
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Welten rotieren und verschieben</p>
+</div></div><p>Abbildung 3 zeigt eine gerenderte Szene, deren Welt auf einem HDRI basiert. Hierfür wurde das HDRI «<em>Sky-Only HDRI 009</em>» von der Website <a href="https://ambientcg.com/" class="uri">https://ambientcg.com/</a> verwendet.10 Mittels des Mapping-Nodes kann die Welt zusätzlich angepasst werden. Durch eine Rotation entlang der Z-Achse kann die Textur etwa innerhalb der Szene gedreht werden, oder mittels einer Veränderung der Position entlang der Z-Achse kann der Horizont in der Höhe etwas verschoben werden.</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_35/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
-<p>Übung 3: Verwendung der Sidebar</p>
-</div>
-<div class="exercisebox-body">
-<p><strong>Übung 3.1</strong></p>
-<p>Versuchen Sie den Standardwürfel so zu skalieren, dass er entsprechend der Abbildung einen in die Höhe ragenden Quader darstellt.</p>
-<p><strong>Übung 3.2</strong></p>
-<p>Versuchen Sie den Standardwürfel so zu verändern, dass er aus der orthogonalen (Taste <kbd aria-hidden="true">5</kbd><span class="visually-hidden">5</span> ) Vorder/Rück-Ansicht (Taste <kbd aria-hidden="true">1</kbd><span class="visually-hidden">1</span> ) nicht mehr sichtbar ist.</p>
-</div>
-</div>
-<div class="rememberbox">
-<div class="rememberbox-header">
-<div class="rememberbox-icon">
-
-</div>
-<p>Merke…</p>
-</div>
-<div class="rememberbox-body">
-<p>Die drei Transformationen Location, Rotation und Scale aus der Sidebar beziehen sich alle drei jeweils auf den Ursprung des Objektes.</p>
-<p>Dimension des Objektes hängt mit dessen Skalierung zusammen.</p>
-</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Eine gerenderte Szene mit einem HDRI-Bild als Welt.
+</figcaption>
+</figure>
 </div>
 
 

@@ -1,0 +1,79 @@
+---
+title: "35. Welten"
+editor: visual
+---
+
+::: column-margin
+Verwendung von Licht beim Rendern
+:::
+
+Mithilfe der Lichtobjekte ist es nun möglich, die Szenen in Blender mit Licht 
+auszustatten. Damit der Einfluss dieser Lichtobjekte sichtbar ist, muss allerdings der Rendered-Viewport-Shading-Modus im 3D-Viewport-Editor ausgewählt werden. 
+Im Material-Preview-Viewport-Shading-Modus werden diese Lichtobjekte per Default nicht mit angezeigt.
+
+![Eine gerenderte Szene.](Images/Chapter_35/.png){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Der gerenderte Hintergrund
+:::
+
+Die Abbildung 1, welche auch in der Datei «*Dune*» zu finden ist, zeigt eine gerenderte Szene, so wie sie auch im Rendered-Viewport-Shading-Modus dargestellt wird. Das Objekt zeigt eine Düne mit einer Sandtextur, welche von einer Sonne beleuchtet wird. Dahinter verbirgt sich ein leerer, grauer Hintergrund. Dabei handelt es sich um den Standardhintergrund, der in einer Szene per Default eingestellt ist. Dieser Hintergrund bildet die sogenannte Welt der Szene ab.
+
+::: column-margin
+Die Unendlichkeit der Welt
+:::
+
+Die Welt stellt im Grunde genommen eine unendlich grosse Kugel dar, welche um die Szene gespannt wird. Das Ende dieser Welt kann somit nie erreicht werden. Man könnte sich dies auch als eine UV-Sphere vorstellen, welche so stark vergrössert wird, dass sie die gesamte Szene in sich beheimatet. Im Unterschied zur Welt, wäre die UV-Sphere allerdings endlich, da sie einen klar definierten Durchmesser innehat, welcher die Szene umfasst. Die Welt hingegen, stellt ein unendliches Konstrukt dar. 
+
+::: column-margin
+World-Properties
+:::
+
+Für die Einstellung der Welt findet sich im Properties-Editor unter dem Reiter 
+«*World Properties*» die Möglichkeit, Eigenschaften der Welt zu definieren. Allerdings kann diese Einstellung der Welt auch im Shader-Editor vorgenommen 
+werden. Im Shader-Editor können nicht nur Materialien, sondern auch die Welt 
+und Linien bearbeitet werden.
+
+![Icon des «*World Properties*»-Reiters im Properties-Editor.](Images/Chapter_35/1. Icon_World_Properties.png){#fig-1_2 fig-align="left"}
+
+::: column-margin
+Weltbearbeitung im Shader-Editor öffnen
+:::
+
+In der linken oberen Ecke des Shader-Editors, direkt neben dem Dropdown-Menü zur Auswahl des Editors, findet sich ein weiteres Dropdown-Menü, welches standardmässig auf «*Object*» eingestellt ist. Unter dieser Auswahl werden jeweils die Materialien des Objekts dargestellt und bearbeitet. Wird im entsprechenden Dropdown-Menü allerdings «World» ausgewählt, werden die Einstellungen der Welt dargestellt und können bearbeitet werden. 
+
+::: column-margin
+Background-Node
+:::
+
+Standardmässig wird für die Welt der «Background»-Shader verwendet. Dieser verfügt lediglich über die Einstellungen «*Color*» und «*Strength*». Bei der Farbe handelt es sich um die Hintergrundfarbe, welche in der gerenderten Ansicht dargestellt wird. Diese Farbe sendet zudem auch Lichtstrahlen aus. Das Ausmass, in dem Licht ausgestrahlt werden soll, kann mit der Einstellung «*Strength*» definiert werden. Indem diese beiden Parameter variiert werden, können bereits unterschiedliche 
+Hintergrundbeleuchtungen erzielt werden. 
+
+## HDRIs hinzufügen 
+
+::: column-margin
+HDRI 
+:::
+
+Welten können, so wie auch bei Materialien, Texturen hinzugefügt werden. Dabei werden allerdings in der Regel besondere Arten von Texturen verwendet, sogenannte HDRIs. HDRI steht für «*High Dynamic Range Image*» und beschreibt Bilder, welche sehr hohe Helligkeitsunterschiede innerhalb des Bildes aufweisen. Dies ist besonders zur Darstellung von Welten geeignet. 
+
+::: column-margin
+HDRIs im Internet beziehen 
+:::
+
+HDRIs können so wie auch Texturen im Internet bezogen werden. Teilweise bieten die Datenbanken, welche Texturen anbieten, in einer gesonderten Kategorie zusätzlich HDRIs an. Etwa die Webseiten <https://polyhaven.com/> und <https://ambientcg.com/> beinhalten gesonderte Kategorien für HDRIs. Oftmals werden verschiedene Auflösungen angeboten. Bei den HDRIs, welche für die Hintergrundwelt verwendet werden, empfiehlt es sich, eine etwas grössere Auflösung zu verwenden, da 
+die entsprechenden Bilder anschliessend über die gesamte Welt gezogen werden. 
+
+::: column-margin
+HDRI in Blender einfügen 
+:::
+
+Die HDRIs können nun im Shader-Editor als Textur hinzugefügt werden. Hierfür kann der Background-Shader-Node ausgewählt werden und die Tastenkombination </hdr/ Ctrl> + </hdr/ T> gedrückt werden. Dadurch werden automatisch ein Texture-Node, ein Mapping-Node und ein Texture-CoordinateNode hinzugefügt. Anders als bei den Materialien wird allerdings kein Image-Texture-Node hinzugefügt, sondern ein Environment-Texture-Node. Dieser fungiert ähnlich wie der Image-Texture-Node, ist allerdings darauf angepasst, dass er die runde Welt überspannt, statt ein Objekt. Im «*Add*»-Menü kann dieser Node unter «Texture | Environment Texture» hinzugefügt werden. Innerhalb dieses Environment-Texture-Nodes kann anschliessend das HDRI-Bild geöffnet werden.
+
+::: column-margin
+Welten rotieren und verschieben 
+:::
+
+Abbildung 3 zeigt eine gerenderte Szene, deren Welt auf einem HDRI basiert. Hierfür wurde das HDRI «*Sky-Only HDRI 009*» von der Website <https://ambientcg.com/> verwendet.10 Mittels des Mapping-Nodes kann die Welt zusätzlich angepasst werden. Durch eine Rotation entlang der Z-Achse kann die Textur etwa innerhalb der Szene gedreht werden, oder mittels einer Veränderung der Position entlang der Z-Achse kann der Horizont in der Höhe etwas verschoben werden. 
+
+![Eine gerenderte Szene mit einem HDRI-Bild als Welt.](Images/Chapter_35/.png){#fig-1_3 fig-align="left"}

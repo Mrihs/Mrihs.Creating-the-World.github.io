@@ -335,11 +335,20 @@ ul.task-list li input[type="checkbox"] {
 <li>Spot</li>
 <li>Area</li>
 </ul>
-<div class="column-marign">
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p>Object-Data-Properties für Licht</p>
+</div></div><p>Wird ein Lichtobjekt hinzugefügt und ausgewählt, wird das Icon des Reiters «<em>Object Data Properties</em>» im Properties-Editor mit dem Icon einer Glühbirne ausgewechselt. Dadurch wird visualisiert, dass das ausgewählte Objekt nun kein Mesh mehr darstellt, sondern ein Lichtobjekt.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_34/1. Icon_Object_Data.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
-<p>Wird ein Lichtobjekt hinzugefügt und ausgewählt, wird das Icon des Reiters «<em>Object Data Properties</em>» im Properties-Editor mit dem Icon einer Glühbirne ausgewechselt. Dadurch wird visualisiert, dass das ausgewählte Objekt nun kein Mesh mehr darstellt, sondern ein Lichtobjekt.</p>
-<p><img src="Chapters/Images/Chapter_34/Icon_Object_Data.png" class="img-fluid" alt="Icon des «Object Data Properties»-Reiters im Properties-Editor, wenn ein Lichtobjekt ausgewählt wurde."> {#fig-1_1 fig-align=“left}</p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Icon des «<em>Object Data Properties</em>»-Reiters im Properties-Editor, wenn ein Lichtobjekt ausgewählt wurde.
+</figcaption>
+</figure>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Unterschiedliche Einstellungen in Eevee und Cycles</p>
@@ -351,7 +360,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Stärke des Lichts</p>
-</div></div><p>Während in der Farbbox «<em>Color</em>» eine Farbe für das Licht ausgewählt werden kann, kann im Feld «<em>Power</em>» die Stärke des ausgestrahlten Lichts eingestellt werden. Je höher dieser Wert ist, desto stärker wird die Szene durch das Lichtobjekt beleuchtet. Die Stärke des Lichts wird in Watt angegeben. Dabei handelt es sich allerdings nicht um dieselben Watt-Angaben, wie sie beispielsweise auf Glühbirnen angegeben werden. Eine LED-Birne mit 60 Watt (oder etwa 800 Lumen) würde mittels der Power von etwa 2.1 W angegeben werden. Um die jeweiligen Werte, welche in Blender verwendet werden sollten, zu erzielen, müssten komplexe Umrechnungen erfolgen. Im Handbuch zu Blender sind allerdings einige Beispielwerte aufgelistet sowie die dazu verwendeten Arten von Lichtobjekten (Quelle:<a href="https://docs.blender.org/manual/en/latest/render/lights/light_object.html" class="uri">https://docs.blender.org/manual/en/latest/render/lights/light_object.html</a>).</p>
+</div></div><p>Während in der Farbbox «<em>Color</em>» eine Farbe für das Licht ausgewählt werden kann, kann im Feld «<em>Power</em>» die Stärke des ausgestrahlten Lichts eingestellt werden. Je höher dieser Wert ist, desto stärker wird die Szene durch das Lichtobjekt beleuchtet. Die Stärke des Lichts wird in Watt angegeben. Dabei handelt es sich allerdings nicht um dieselben Watt-Angaben, wie sie beispielsweise auf Glühbirnen angegeben werden. Eine LED-Birne mit 60 Watt (oder etwa 800 Lumen) würde mittels der Power von etwa 2.1 W angegeben werden. Um die jeweiligen Werte, welche in Blender verwendet werden sollten, zu erzielen, müssten komplexe Umrechnungen erfolgen. Im Handbuch zu Blender sind allerdings einige Beispielwerte aufgelistet sowie die dazu verwendeten Arten von Lichtobjekten (Quelle: <a href="https://docs.blender.org/manual/en/latest/render/lights/light_object.html" class="uri">https://docs.blender.org/manual/en/latest/render/lights/light_object.html</a>).</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -419,7 +428,7 @@ ul.task-list li input[type="checkbox"] {
 </div></div><p>Um das Licht etwas genauer bearbeiten zu können, stehen drei zusätzliche Faktorwerte zur Verfügung:</p>
 <ul>
 <li>«<strong><em>Diffuse</em></strong>»: Der Faktor «<em>Diffuse</em>» beschreibt, ob das Licht der Lichtquelle stark gebündelt ausgesendet wird oder stärker streut. Je höher der Diffuse-Wert ist, desto breiter wird das Licht gestreut. Bei einem tieferen Diffuse-Wert wird das Licht stärker gebündelt.</li>
-<li>«<strong><em>Specular</em></strong>»: Der Faktor «<em>Specular</em>» beschreibt, wie stark das Licht der Lichtquelle die Fähigkeit zur Specularity aufweist. Wenn dieser Faktor auf 0 gesetzt wird, können keine Lichtstrahlen ba sierend auf dieser Lichtquelle reflektiert werden.</li>
+<li>«<strong><em>Specular</em></strong>»: Der Faktor «<em>Specular</em>» beschreibt, wie stark das Licht der Lichtquelle die Fähigkeit zur Specularity aufweist. Wenn dieser Faktor auf 0 gesetzt wird, können keine Lichtstrahlen basierend auf dieser Lichtquelle reflektiert werden.</li>
 <li>«<strong><em>Volume</em></strong>»: Mittels des Faktors «<em>Volume</em>» kann ein Wert festgelegt werden, mit dem Lichtstrahlen in Volumen multipliziert werden. Da dieser Kurs allerdings nicht auf Volumen eingeht, kann dieser Faktor ignoriert werden.</li>
 </ul>
 
@@ -441,11 +450,20 @@ ul.task-list li input[type="checkbox"] {
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Navigation zwischen Szenen</p>
 </div></div><p>In der Datei «<em>Gameboard_Lights</em>» sind verschiedene Beispielszenen für unterschiedliche Belichtungen aufzufinden. Die verschiedenen Beispiele sind in unterschiedliche Szenen aufgeteilt. Um zwischen den Szenen wechseln zu können, muss im Dropdown-Menü «<em>Browse Scene to be linked</em>», welches in der Ecke oben rechts zu finden ist, die entsprechende Szene ausgewählt werden. Auch die Beispiele aus dem vorangehenden Kapitel sind in dieser Datei aufzufinden.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_34/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Eine Szene, welche mit einer Point-Lichtquelle beleuchtet wird.
+</figcaption>
+</figure>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Beispiel eines Point-Lichtobjektes</p>
-</div></div><p><img src="Chapters/Images/Chapter_34/.png" class="img-fluid" alt="Eine Szene, welche mit einer Point-Lichtquelle beleuchtet wird."> {#fig-1_2 fig-align=“left}</p>
-<p>«<em>Example6_Light_Point</em>» beinhaltet das Beispiel aus der Abbildung 2. In diesem Beispiel befindet sich ein Lichtobjekt des Typs «<em>Point</em>» oberhalb des Spielfelds J1. Die Lichtobjekte als solche werden beim Rendern nicht dargestellt, sondern lediglich die Reflexionen des Lichtes. Aus diesem Grund wurde die Position des Point-Lichtobjektes in der Abbildung 153 mit einer Sphere visualisiert.</p>
+</div></div><p>«<em>Example6_Light_Point</em>» beinhaltet das Beispiel aus der Abbildung 2. In diesem Beispiel befindet sich ein Lichtobjekt des Typs «<em>Point</em>» oberhalb des Spielfelds J1. Die Lichtobjekte als solche werden beim Rendern nicht dargestellt, sondern lediglich die Reflexionen des Lichtes. Aus diesem Grund wurde die Position des Point-Lichtobjektes in der Abbildung 2 mit einer Sphere visualisiert.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Points können bewegt werden, aber ihre Rotation hat keine Auswirkung</p>
@@ -457,7 +475,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Beispiel eines Sun-Lichtobjektes</p>
 </div></div><p>Die Abbildung 3 zeigt ein Beispiel, in dem eine Szene mit einem Sun-Lichtobjekt beleuchtet wird. Die Sonne ist dabei auf derselben Höhe wie die Köpfe der anderen Spielfiguren auf dem Feld J1 platziert und gegen die blaue Spielfigur rotiert.</p>
-<p><img src="Chapters/Images/Chapter_34/.png" class="img-fluid" alt="Eine Szene, welche mit einer Sun-Lichtquelle beleuchtet wird."> {#fig-1_3 fig-align=“left}</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_34/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Eine Szene, welche mit einer Sun-Lichtquelle beleuchtet wird.
+</figcaption>
+</figure>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Sonnen können rotiert werden, allerdings hat ihre Position keine Auswirkung</p>
@@ -465,7 +492,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Andere Masseinheit für die Stärke der Lichtstrahlen</p>
-</div></div><p>Da die Distanz von Sonnen-Objekten keinen Einfluss auf die Wirkung der Sonne hat, wird die Masseinheit für die Sonnenausstrahlung mit «Strength» ausgegeben und anhand von Watt pro Quadratmeter definiert. Zudem werden für Sonnen sehr hohe Werte verwendet (200-1000 W/m<sup>2</sup>).</p>
+</div></div><p>Da die Distanz von Sonnen-Objekten keinen Einfluss auf die Wirkung der Sonne hat, wird die Masseinheit für die Sonnenausstrahlung mit «<em>Strength</em>» ausgegeben und anhand von Watt pro Quadratmeter definiert. Zudem werden für Sonnen sehr hohe Werte verwendet (200-1000 W/m<sup>2</sup>).</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Helligkeitsadaption erstellen</p>
@@ -477,7 +504,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Spot als Beleuchtungsoption</p>
 </div></div><p>In Abbildung 4 wird eine Szene mittels eines Spot-Lichtobjektes beleuchtet. Der Spot agiert wie ein Scheinwerfer, mit dem gezielt ein Objekt beleuchtet werden kann. Hierfür sind sowohl die Position als auch die Rotation des Spot-Lichtobjektes bedeutsam. Anhand dieser beiden Merkmale kann der Spot entsprechend auf ein Objekt ausgerichtet werden. Die Beleuchtung erfolgt anschliessend ausgehend von der Form eines Cones, der von der Position des Lichtobjektes ausgeht.</p>
-<p><img src="Chapters/Images/Chapter_34/.png" class="img-fluid" alt="Eine Szene, welche mit einer Spot-Lichtquelle beleuchtet wird."> {#fig-1_4 fig-align=“left}</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_34/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Eine Szene, welche mit einer Spot-Lichtquelle beleuchtet wird.
+</figcaption>
+</figure>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Grösse des Spots einstellen</p>
@@ -497,7 +533,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Grösse der Areale variieren</p>
 </div></div><p>Mittels des Reiters «<em>Size</em>» kann die Grösse des Areals definiert werden. Bei aktivierten Viewport-Overlays kann diese Veränderung direkt visuell nachverfolgt werden. Das Quadrat und der Kreis als Option verfügen leidglich über einen Reiter für die Grösse. Bei den Formen Rechteck und Ellipse können zwei Achsen für die Grösse unabhängig voneinander definiert werden.</p>
-<p><img src="Chapters/Images/Chapter_34/.png" class="img-fluid" alt="Eine Szene, welche mit einer Area-Lichtquelle beleuchtet wird."> {#fig-1_4 fig-align=“left}</p>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_34/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5: Eine Szene, welche mit einer Area-Lichtquelle beleuchtet wird.
+</figcaption>
+</figure>
+</div>
 <div class="exercisebox">
 <div class="exercisebox-header">
 <div class="exercisebox-icon">
@@ -508,6 +553,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="exercisebox-body">
 <p><strong>Übung 16.1</strong></p>
 <p>Öffnen Sie in der Datei «<em>Gameboard_Lights</em>» die Szene «<em>Exercise_Lights</em>» und versuchen Sie, die abgebildete Beleuchtungssituation nachzustellen.</p>
+<div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_34/.png" id="fig-1_6" class="img-fluid quarto-figure quarto-figure-left anchored figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6
+</figcaption>
+</figure>
+</div>
 <p>Die Lösung finden Sie in der Szene «<em>Exercise_Lights_Solution</em>»</p>
 </div>
 </div>

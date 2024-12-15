@@ -158,7 +158,7 @@ Math-Node zum erneuten Dividieren
 
 Nun wird noch ein letztes Mal ein Duplikat des dividierenden Math-Nodes erstellt und rechts neben den potenzierenden Math-Node platziert. Der erste Value-Input wird mit dem Value-Output des potenzierenden Math-Nodes verbunden und die zweite Value-Zeile wird auf 0.08 gesetzt. Dadurch wird der Output des potenzierenden Math-Nodes durch den Wert 0.08 dividiert. Wenn nun alle Nodes entsprechend der Abbildung 6 eingefügt wurden, sollte der Output des letzten Math-Nodes nun den Wert für den Specular-Input enthalten.
 
-![Node-Anordnung, um die Specularity anhand des IORs zu berechnen.](Images/Chapter_31/Specularity calc..png){#fig-1_6 fig-align="left"}
+![Node-Anordnung, um die Specularity anhand des IORs zu berechnen.](Images/Chapter_31/Specularity%20calc..png){#fig-1_6 fig-align="left"}
 
 ::: column-margin
 Was ist dabei passiert?
@@ -255,14 +255,13 @@ Für den Clearcoat gibt es folgende Einstellungsmöglichkeiten im Principled-BSD
 Transmission
 :::
 
-Die Einstellungen zur Transmission werden verwendet, um Materialien zu erstellen, durch die man hindurchblicken kann – beispielsweise Gläser. In solchen Fällen durchdringen die Lichtstrahlen das Objekt vollständig und Inhalte, welche sich hinter dem Objekt befinden, werden sichtbar. Dabei werden die Lichtstrahlen je nach Beschaffenheit des Materials gebrochen. Dadurch werden Inhalte, die 
-sich hinter dem Glas befinden, zu einem gewissen Grad verschoben dargestellt. Diese Brechung der Lichtstrahlen beschreibt der IOR.
+Die Einstellungen zur Transmission werden verwendet, um Materialien zu erstellen, durch die man hindurchblicken kann – beispielsweise Gläser. In solchen Fällen durchdringen die Lichtstrahlen das Objekt vollständig und Inhalte, welche sich hinter dem Objekt befinden, werden sichtbar. Dabei werden die Lichtstrahlen je nach Beschaffenheit des Materials gebrochen. Dadurch werden Inhalte, die sich hinter dem Glas befinden, zu einem gewissen Grad verschoben dargestellt. Diese Brechung der Lichtstrahlen beschreibt der IOR.
 
 ::: column-margin
 IOR
 :::
 
-Ein IOR mit einem Wert von 1 würde bedeuten, dass keine Brechung der Lichtstrahlen erfolgt. Je stärker der IOR vom Wert 1 abweicht, desto stärker werden die Lichtstrahlen gebrochen. Das heisst: Ein Glas, welches einen IOR von 1 aufweist, würde Licht refraktieren lassen, aber es gäbe keine Brechung in der Refraktion. Dadurch würde das Glas unsichtbar und könnte nicht mehr erkannt werden. Ein IOR von 1.01 würde allerdings bereits zu einer Brechung der Lichtstrahlen führen, wodurch das Glas ersichtlich wird. Durch einen IOR von 1.45 wird diese Brechung nochmals erhöht. 
+Ein IOR mit einem Wert von 1 würde bedeuten, dass keine Brechung der Lichtstrahlen erfolgt. Je stärker der IOR vom Wert 1 abweicht, desto stärker werden die Lichtstrahlen gebrochen. Das heisst: Ein Glas, welches einen IOR von 1 aufweist, würde Licht refraktieren lassen, aber es gäbe keine Brechung in der Refraktion. Dadurch würde das Glas unsichtbar und könnte nicht mehr erkannt werden. Ein IOR von 1.01 würde allerdings bereits zu einer Brechung der Lichtstrahlen führen, wodurch das Glas ersichtlich wird. Durch einen IOR von 1.45 wird diese Brechung nochmals erhöht.
 
 ::: column-margin
 IOR für Gläser festlegen
@@ -274,13 +273,13 @@ Um den IOR bei der Transmission festzulegen, kann im Principled-BSDF-Shader die 
 Transmission
 :::
 
-Der Reiter «*Transmission*» beschreibt anschliessend den Anteil an Lichtstrahlen, welche das Material durchdringen. Eine Transmission von 0 bedeutet, dass kein Licht das Objekt durchdringt, während eine Transmission von 1 bedeutet, dass das gesamte Licht durchdringt. In der Regel wird für die Erstellung eines Glas-Materials dieser Wert auf 1 gesetzt. 
+Der Reiter «*Transmission*» beschreibt anschliessend den Anteil an Lichtstrahlen, welche das Material durchdringen. Eine Transmission von 0 bedeutet, dass kein Licht das Objekt durchdringt, während eine Transmission von 1 bedeutet, dass das gesamte Licht durchdringt. In der Regel wird für die Erstellung eines Glas-Materials dieser Wert auf 1 gesetzt.
 
 ::: column-margin
 Transmission-Roughness
 :::
 
-Mittels des Reiters «*Transmission Roughness*» kann zudem eingestellt werden, wie gebündelt die Lichtstrahlen das Objekt durchdringen sollen. Durch eine erhöhte Transmission-Roughness erscheint ein Glas zunehmend milchiger, weil die Lichtstrahlen zunehmend diffuser durch das Glas hindurchscheinen. 
+Mittels des Reiters «*Transmission Roughness*» kann zudem eingestellt werden, wie gebündelt die Lichtstrahlen das Objekt durchdringen sollen. Durch eine erhöhte Transmission-Roughness erscheint ein Glas zunehmend milchiger, weil die Lichtstrahlen zunehmend diffuser durch das Glas hindurchscheinen.
 
 ## Emission
 
@@ -294,7 +293,7 @@ Die Einstellungen des Materials hängen zu einem Grossteil auch von den Lichtque
 Emission, um Licht durch das Material auszustrahlen
 :::
 
-Es ist allerdings möglich, dass ein Material Licht aussendet. Hierfür können die Parameter «*Emission*» und «*Emission Strength*» verwendet werden. In der Farbbox «*Emission*» kann eine Farbe ausgewählt werden, welche das Material anschliessend ausstrahlt. Mittels des Reiters «*Emission Strength*» kann eingestellt werden, wie stark diese Farbe ausgestrahlt wird. Eine Emission von 0 steht für keine Ausstrahlung und eine Emission von 1 steht für eine Ausstrahlung. Dieser Wert kann allerdings noch deutlich erhöht werden, um eine noch stärkere Ausstrahlung zu erzielen. 
+Es ist allerdings möglich, dass ein Material Licht aussendet. Hierfür können die Parameter «*Emission*» und «*Emission Strength*» verwendet werden. In der Farbbox «*Emission*» kann eine Farbe ausgewählt werden, welche das Material anschliessend ausstrahlt. Mittels des Reiters «*Emission Strength*» kann eingestellt werden, wie stark diese Farbe ausgestrahlt wird. Eine Emission von 0 steht für keine Ausstrahlung und eine Emission von 1 steht für eine Ausstrahlung. Dieser Wert kann allerdings noch deutlich erhöht werden, um eine noch stärkere Ausstrahlung zu erzielen.
 
 ::: column-margin
 Schwarze Farbe strahlt nicht aus
@@ -314,4 +313,4 @@ Die ausgestrahlte Farbe überdeckt jeweils die anderen Einstellungen im Principl
 Distribution-Einstellungen
 :::
 
-Zuoberst im Principled-BSDF-Shader befindet sich das Dropdown-Menü «*Distribution*». Dieses ist standardmässig auf «*GGX*» eingestellt. Alternativ kann die Einstellung «*Multiscatter GGX*» eingestellt werden. Bei diesen Optionen handelt es sich um Einstellungen, anhand derer Blender die Materialien berechnet. GGX ist schneller in der Berechnung als Multiscatter-GGX, aber physikalisch weniger akkurat. In der Regel kann GGX als Einstellung beibehalten werden. Zudem ist zu beachten, dass bei der Verwendung von Multiscatter-GGX die Transmission-Roughness nicht mehr definiert werden kann. 
+Zuoberst im Principled-BSDF-Shader befindet sich das Dropdown-Menü «*Distribution*». Dieses ist standardmässig auf «*GGX*» eingestellt. Alternativ kann die Einstellung «*Multiscatter GGX*» eingestellt werden. Bei diesen Optionen handelt es sich um Einstellungen, anhand derer Blender die Materialien berechnet. GGX ist schneller in der Berechnung als Multiscatter-GGX, aber physikalisch weniger akkurat. In der Regel kann GGX als Einstellung beibehalten werden. Zudem ist zu beachten, dass bei der Verwendung von Multiscatter-GGX die Transmission-Roughness nicht mehr definiert werden kann.

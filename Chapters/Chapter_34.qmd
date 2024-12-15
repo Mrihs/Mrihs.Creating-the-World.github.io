@@ -1,0 +1,193 @@
+---
+title: "34. Lichtobjekte"
+editor: visual
+---
+
+## Lichtquellen einstellen
+
+::: column-margin
+Lichtobjekte hinzufügen
+:::
+
+Lichtobjekte werden wie auch Meshes im «*Add*»-Menü hinzugefügt. Unter «*Light*» sind die jeweiligen Lichtquellen zu finden. Es gibt vier verschiedene Arten von Lichtquellen, welche jeweils unterschiedliche Eigenschaften mit sich bringen. Nach dem Hinzufügen einer Art von Lichtobjekten kann die Art des Lichtobjektes jederzeit wieder geändert werden. Die verschiedenen Arten von Lichtobjekten sind:
+
+-   Point
+-   Sun
+-   Spot
+-   Area
+
+::: column-marign
+Object-Data-Properties für Licht
+:::
+
+Wird ein Lichtobjekt hinzugefügt und ausgewählt, wird das Icon des Reiters «*Object Data Properties*» im Properties-Editor mit dem Icon einer Glühbirne ausgewechselt. Dadurch wird visualisiert, dass das ausgewählte Objekt nun kein Mesh mehr darstellt, sondern ein Lichtobjekt.
+
+![Icon des «Object Data Properties»-Reiters im Properties-Editor, wenn ein Lichtobjekt ausgewählt wurde.](Chapters/Images/Chapter_34/Icon_Object_Data.png) {#fig-1_1 fig-align="left}
+
+::: column-margin
+Unterschiedliche Einstellungen in Eevee und Cycles
+:::
+
+Innerhalb des Reiters «*Object Data Properties*» können nun genauere Einstellungen für das Licht-Objekt vorgenommen werden. Die nachfolgende Beschreibung der Lichtobjekte orientiert sich an den Einstellungsoptionen in Eevee. Einige dieser Einstellungsoptionen stehen in Cycles nicht zur Verfügung. In Cycles ist es dafür möglich, die Lichtobjekte mittels des Shader-Editors genauer zu bearbeiten. Hierfür muss allerdings jeweils die Einstellung «*Use Nodes*» in den «*Object Data Properties*» ausgewählt werden.
+
+::: column-margin
+Wechsel zwischen den Lichtobjekt-Arten
+:::
+
+Unter dem Reiter «*Light*» kann die Art, wie das Objekt Licht ausstrahlt, bearbeitet werden. Darin befindet sich zuoberst eine Auflistung der vier Arten von Lichtobjekten. Durch die Auswahl einer anderen Art kann so jederzeit unkompliziert zwischen den Lichtarten gewechselt werden. Einige der Einstellungsoptionen variieren zwischen den verschiedenen Objektarten.
+
+::: column-margin
+Stärke des Lichts
+:::
+
+Während in der Farbbox «*Color*» eine Farbe für das Licht ausgewählt werden kann, kann im Feld «*Power*» die Stärke des ausgestrahlten Lichts eingestellt werden. Je höher dieser Wert ist, desto stärker wird die Szene durch das Lichtobjekt beleuchtet. Die Stärke des Lichts wird in Watt angegeben. Dabei handelt es sich allerdings nicht um dieselben Watt-Angaben, wie sie beispielsweise auf Glühbirnen angegeben werden. Eine LED-Birne mit 60 Watt (oder etwa 800 Lumen) würde mittels der Power von etwa 2.1 W angegeben werden. Um die jeweiligen Werte, welche in Blender verwendet werden sollten, zu erzielen, müssten komplexe Umrechnungen erfolgen. Im Handbuch zu Blender sind allerdings einige Beispielwerte aufgelistet sowie die dazu verwendeten Arten von Lichtobjekten (Quelle:<https://docs.blender.org/manual/en/latest/render/lights/light_object.html>).
+
+| Objekt                     | Power/Strength | Lichtobjekt_Art        |
+|----------------------------|----------------|------------------------|
+| Kerze                      | 0.05 W         | Point                  |
+| LED-Birne (800 lm)         | 2.1 W          | Point                  |
+| Glühbirne (1000 lm)        | 2.9 W          | Point                  |
+| Scheinwerfer (1500 lm)     | 4 W            | Area (Form: Disk)      |
+| Leuchtstoffröhre (2500 lm) | 4.5 W          | Area (Form: Rectangle) |
+| Autoscheinwerfer (5000 lm) | 22 W           | Spot (Grösse: 125°)    |
+| Klarer Himmel              | 1000 W/m^2^    | Sun                    |
+| Bewölkter Himmel           | 500 W/m^2^     | Sun                    |
+| Wolkenbedeckter Himmel     | 200 W/m^2^     | Sun                    |
+| Mondlicht                  | 0.001 W/m^2^   | Sun                    |
+
+::: column-margin
+Faktoren, um die Lichtquelle zu präzisieren
+:::
+
+Um das Licht etwas genauer bearbeiten zu können, stehen drei zusätzliche Faktorwerte zur Verfügung:
+
+-   «***Diffuse***»: Der Faktor «*Diffuse*» beschreibt, ob das Licht der Lichtquelle stark gebündelt ausgesendet wird oder stärker streut. Je höher der Diffuse-Wert ist, desto breiter wird das Licht gestreut. Bei einem tieferen Diffuse-Wert wird das Licht stärker gebündelt.
+-   «***Specular***»: Der Faktor «*Specular*» beschreibt, wie stark das Licht der Lichtquelle die Fähigkeit zur Specularity aufweist. Wenn dieser Faktor auf 0 gesetzt wird, können keine Lichtstrahlen ba sierend auf dieser Lichtquelle reflektiert werden.
+-   «***Volume***»: Mittels des Faktors «*Volume*» kann ein Wert festgelegt werden, mit dem Lichtstrahlen in Volumen multipliziert werden. Da dieser Kurs allerdings nicht auf Volumen eingeht, kann dieser Faktor ignoriert werden.
+
+::: column-margin
+Je kleiner die Lichtquelle, desto heller
+:::
+
+Anhand des Feldes «*Radius*» respektive «*Size*» kann definiert werden, wie gross das Lichtobjekt ist. Je kleiner der Radius ist, desto stärker erhellt die Lichtquelle die unmittelbare Umgebung. Durch eine Vergrösserung des Radius wird der Bereich, von dem aus die Punkt-Beleuchtung, ausgedehnt. Da die Lichtstärke allerdings gleich bleibt – nämlich entsprechend dem Wert der «*Power*» – wird diese Stärke nun über einen grösseren Bereich ausgestrahlt. Dies hat zur Folge, dass die umliegenden Objekte weniger hell beleuchtet werden.
+
+::: column-margin
+Custom Distance
+:::
+
+Mittels der Option «*Custom Distance*» kann definiert werden, dass die Lichtstrahlen des Lichtobjektes lediglich bis zu einer gewissen Distanz reichen. Alle Bereiche, welche weiter als diese definierte Distanz von der Lichtquelle entfernt liegen, werden nicht davon beleuchtet. Per Default ist diese Option allerdings ausgeschaltet.
+
+::: column-margin
+Schatten
+:::
+
+Im Reiter «*Shadow*» sind weitere Einstellungen zu Schatten, welche diese Lichtquelle erzeugt, zu finden. So kann der gesamte Reiter deaktiviert werden, wenn diese Lichtquelle keine Schatten erzeugen soll. Zudem kann mittels «*Clip Start*» eine Distanz definiert werden, ab welcher Objekte ausgehend von der Lichtquelle einen Schatten werfen können.
+
+## Point
+
+::: column-margin
+Navigation zwischen Szenen
+:::
+
+In der Datei «*Gameboard_Lights*» sind verschiedene Beispielszenen für unterschiedliche Belichtungen aufzufinden. Die verschiedenen Beispiele sind in unterschiedliche Szenen aufgeteilt. Um zwischen den Szenen wechseln zu können, muss im Dropdown-Menü «*Browse Scene to be linked*», welches in der Ecke oben rechts zu finden ist, die entsprechende Szene ausgewählt werden. Auch die Beispiele aus dem vorangehenden Kapitel sind in dieser Datei aufzufinden.
+
+::: column-margin
+Beispiel eines Point-Lichtobjektes
+:::
+
+![Eine Szene, welche mit einer Point-Lichtquelle beleuchtet wird.](Chapters/Images/Chapter_34/.png) {#fig-1_2 fig-align="left}
+
+«*Example6_Light_Point*» beinhaltet das Beispiel aus der Abbildung 2. In diesem Beispiel befindet sich ein Lichtobjekt des Typs «*Point*» oberhalb des Spielfelds J1. Die Lichtobjekte als solche werden beim Rendern nicht dargestellt, sondern lediglich die Reflexionen des Lichtes. Aus diesem Grund wurde die Position des Point-Lichtobjektes in der Abbildung 153 mit einer Sphere visualisiert.
+
+::: column-margin
+Points können bewegt werden, aber ihre Rotation hat keine Auswirkung
+:::
+
+Anhand eines Point-Lichtobjektes werden ausgehend von der Position des Lichtobjektes die Lichtstrahlen kreisförmig ausgestrahlt. Dementsprechend führt eine Rotation des Objektes zu keiner Veränderung der Lichtausstrahlung. Lediglich aufgrund der Position des Lichtobjektes des Typs «*Point*» kann eine Veränderung der Beleuchtung erfolgen.
+
+## Sun
+
+::: column-margin
+Beispiel eines Sun-Lichtobjektes
+:::
+
+Die Abbildung 3 zeigt ein Beispiel, in dem eine Szene mit einem Sun-Lichtobjekt beleuchtet wird. Die Sonne ist dabei auf derselben Höhe wie die Köpfe der anderen Spielfiguren auf dem Feld J1 platziert und gegen die blaue Spielfigur rotiert.
+
+![Eine Szene, welche mit einer Sun-Lichtquelle beleuchtet wird.](Chapters/Images/Chapter_34/.png) {#fig-1_3 fig-align="left}
+
+::: column-margin
+Sonnen können rotiert werden, allerdings hat ihre Position keine Auswirkung
+:::
+
+Ein Lichtobjekt des Typs «*Sun*» wird jeweils über die gesamte Szene erstreckt und beleuchtet die Objekte allesamt entsprechend der Rotation der Sonne. In ihren Grundeinstellungen mit einer Rotation von 0-0-0 werden alle Objekte senkrecht entlang der Z-Achse beleuchtet. Durch eine Veränderung der Rotationswerte kann der Winkel, mit dem die Sonne auf die Objekte eintrifft, variiert werden. Zu beachten ist dabei, dass die Position der Sonne keinen Einfluss auf die Beleuchtung hat. Mithilfe der Sonne wird eine Beleuchtung erschaffen, welche im gleichen Winkel über die ganze Szene erstreckt wird.
+
+::: column-margin
+Andere Masseinheit für die Stärke der Lichtstrahlen
+:::
+
+Da die Distanz von Sonnen-Objekten keinen Einfluss auf die Wirkung der Sonne hat, wird die Masseinheit für die Sonnenausstrahlung mit «Strength» ausgegeben und anhand von Watt pro Quadratmeter definiert. Zudem werden für Sonnen sehr hohe Werte verwendet (200-1000 W/m^2^).
+
+::: column-margin
+Helligkeitsadaption erstellen
+:::
+
+Die hohen Werte für die Sonnenausstrahlung führen dazu, dass die Objekte deutlich überbelichtet werden. Im Gegensatz zum menschlichen Auge verfügen der Computer und die Render-Engine über keine Möglichkeiten, um an die Helligkeit der Sonne zu adaptieren. Cycles verfügt über die Möglichkeit, dass in den Render-Einstellungen im Properties-Editor unter «*Film*» der Exposure-Wert reduziert werden kann. In Eevee steht diese Option nicht zur Verfügung, allerdings kann zumindest für die gerenderten Farben der Exposure-Wert unter dem Reiter «*Color Management*» angepasst werden. Alternativ kann auch ein geringerer Wert für die Sonne verwendet und auf die realitätsgetreuen Werte verzichtet werden. 
+
+## Spot
+
+::: column-margin
+Spot als Beleuchtungsoption
+:::
+
+In Abbildung 4 wird eine Szene mittels eines Spot-Lichtobjektes beleuchtet. Der Spot agiert wie ein Scheinwerfer, mit dem gezielt ein Objekt beleuchtet werden kann. Hierfür sind sowohl die Position als auch die Rotation des Spot-Lichtobjektes bedeutsam. Anhand dieser beiden Merkmale kann der Spot entsprechend auf ein Objekt ausgerichtet werden. Die Beleuchtung erfolgt anschliessend ausgehend von der Form eines Cones, der von der Position des Lichtobjektes ausgeht.
+
+![Eine Szene, welche mit einer Spot-Lichtquelle beleuchtet wird.](Chapters/Images/Chapter_34/.png) {#fig-1_4 fig-align="left}
+
+
+::: column-margin
+Grösse des Spots einstellen
+:::
+
+In den Einstellungen zum Lichtobjekt findet sich unter dem Reiter «*Spot*» zusätzlich ein Reiter «*Spot Shape*». Innerhalb dieses Reiters können weitere Verfeinerungen an der Art der Beleuchtung vor
+genommen werden. Mittels der Option «*Size*» kann definiert werden, wie gross der Bereich ist, welcher der Spot erfassen kann. Dieser Bereich kann von 0° bis 180° variieren. Bei einer Grösse von 180° wird der gesamte Bereich, welcher sich vor dem Spot befindet, beleuchtet. Je kleiner die Grösse ist, desto mehr fokussiert sich die Beleuchtung auf einen entsprechenden Bereich.
+
+::: column-margin
+Blend-Einstellung
+:::
+
+Mittels des Feldes «*Blend*» kann der Übergang vom Bereich, welcher durch den Spot beleuchtet wird, zu dem Bereich, welcher nicht beleuchtet wird, beschrieben werden. Je höher dieser Wert ist, 
+desto weicher wird der Übergang von beleuchteten zu nicht beleuchteten Arealen. Bei einem tiefen Wert erscheint dieser Übergang als klare Linie. Zudem kann mittels der Option «*Show Cone*» das Licht auch innerhalb des Volumens der Spotbeleuchtung dargestellt werden. 
+
+## Area
+
+::: column-margin
+Areale als Beleuchtungsobjekt
+:::
+
+Die Abbildung 5 zeigt eine Szene, welche mit einem Area-Lichtobjekt beleuchtet wird. Diese Art der Beleuchtung hängt wie auch der Spot von der Position und der Rotation des Lichtobjektes ab. Mithilfe des Area-Lichtobjektes kann ein Bereich erstellt werden, welcher Licht aussendet. Dabei kann ein viereckiges Areal definiert werden, indem im Dropdown-Menü «*Shape*» die Option «*Square*» für ein Quadrat oder die Option «Rectangle» für ein Rechteck ausgewählt wird. Mittels der Optionen «*Disk*» für einen Kreis und «*Ellipse*» für eine Ellipse können auch runde Areale gewählt werden.
+
+::: column-margin
+Grösse der Areale variieren
+:::
+
+Mittels des Reiters «*Size*» kann die Grösse des Areals definiert werden. Bei aktivierten Viewport-Overlays kann diese Veränderung direkt visuell nachverfolgt werden. Das Quadrat und der Kreis als 
+Option verfügen leidglich über einen Reiter für die Grösse. Bei den Formen Rechteck und Ellipse können zwei Achsen für die Grösse unabhängig voneinander definiert werden. 
+
+![Eine Szene, welche mit einer Area-Lichtquelle beleuchtet wird.](Chapters/Images/Chapter_34/.png) {#fig-1_4 fig-align="left}
+
+:::::: exercisebox
+:::: exercisebox-header
+::: exercisebox-icon
+:::
+
+Weiterführende Informationen
+::::
+
+::: exercisebox-body
+**Übung 16.1**
+
+Öffnen Sie in der Datei «*Gameboard_Lights*» die Szene «*Exercise_Lights*» und versuchen Sie, die abgebildete Beleuchtungssituation nachzustellen. 
+
+ Die Lösung finden Sie in der Szene  «*Exercise_Lights_Solution*» 
+:::
+::::::

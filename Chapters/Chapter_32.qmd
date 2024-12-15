@@ -80,3 +80,50 @@ Pausieren des Renderns
 Durch den Wechsel der Render-Engine erscheint im 3D-Viewport-Editor in der rechten oberen Ecke eine zusätzliche Schaltfläche. Diese gibt jeweils an, ob gerade gerendert wird oder nicht. Sollte das Bild einmal einfrieren und nicht neu gerendert werden, sollte anhand dieser Schaltfläche überprüft werden, ob das Rendern gerade pausiert wurde.
 
 ## Rendern mit der GPU in Cycles 
+
+::: column-margin
+Prozessorleistung benötigt für Cycles
+:::
+
+Bei der Erstellung der 3D-Objekte wird jeweils der Prozessor des Computers verwendet. Die Leistung, welcher dieser Prozessor aufweist, hängt dabei vom jeweiligen Modell ab. Dadurch kann es vorkommen, dass manche Computer für komplexere Projekte weniger geeignet sind. Durch den Wechsel der Render-Engine von Eevee auf Cycles wird die Rechenleistung des Prozessors zunehmend bedeutsamer, da in Cycles bereits die Vorschau im 3D-Viewport-Editor im Render-Shading-Modus vom Prozessor abhängt. Etwas schneller verläuft hingegen die Darstellung im Material-Preview-Shading-Modus. Dies liegt daran, dass dieser Modus auf Eevee zurückgreift, selbst wenn Cycles als Render-Engine ausgewählt ist.
+
+::: column-margin
+GPU kann zum Rendern in Cycles verwendet werden
+:::
+
+Auf einigen Computern ist es möglich, dass die Grafikkarte verwendet wird, um die nötige Renderleistung zu erzielen. Dies bringt allerdings nur einen Vorteil mit sich, wenn die Grafikkarte die entsprechende Leistung aufbringen kann. Zudem hängt dies auch von Eigenschaften des Gerätes und des Betriebssystems ab. Auf Apple-Geräten steht diese Option beispielsweise nicht zur Verfügung.
+
+::: column-margin
+Cycles-Render-Devices
+:::
+
+Windows-Nutzer können unter «*Edit | Preferences*» im Reiter «*System*» nachverfolgen, ob das Ansteuern der Grafikkarte möglich ist. Unter dem Bereich «*Cycles Render Devices*» sind jeweils vier Tabs aufzufinden. Für Mac-Nutzer wird dieser Reiter gar nicht angezeigt. In den Reitern «*CUDA*», «*OptiX*» und «*OpenCL*» wird jeweils die Grafikkarte nebst dem Prozessor aufgeführt, insofern diese durch die entsprechenden Optionen anwählbar sind. Sollte die Grafikkarte dort auffindbar sein, kann diese angewählt werden. Von nun an kann die Grafikkarte (GPU) statt des Prozessors (CPU) für das Rendern in Cycles verwendet werden.
+
+::: column-margin
+GPU zum Rendern aktivieren
+:::
+
+Damit die GPU auch wirklich beim Rendern verwendet wird, muss im Render-Properties-Reiter des Properties-Editors die Einstellung «*Device*» von der Auswahl «*CPU*» auf «*GPU Compute*» umgestellt werden. Die erste gerenderte Darstellung mittels der GPU wird allerdings eine Weile benötigen. Blender nimmt 
+im Hintergrund einige Anpassungen vor, um mit der GPU zu arbeiten. Dadurch erscheint es, als ob das Unterfangen nicht funktioniert. Sollten die Viewport
+Overlays aktiviert sein, wird allerdings mittels eines Textes in der linken oberen Hälfte erläutert, dass aktuell die Render-Kerne geladen werden und dies einige 
+Minuten in Anspruch nehmen wird.
+
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Weiterführende Informationen
+::::
+
+::: tippbox-body
+Unterschiedliche GPUs und CPUs benötigen in Cycles unterschiedlich lange zum Rendern von Szenen. Auf der Website <https://opendata.blender.org/> sind Benchmarks für verschiedene Prozessoren, Grafikkarten und Betriebssysteme ersichtlich. So kann verglichen werden, wie lange verschiedene Hardware-Optionen zum Rendern verschiedener Beispielszenen benötigen. Zudem kann auch eine Applikation heruntergeladen werden, welche einen Benchmark auf dem eigenen Rechner durchführt.
+:::
+::::::
+
+::: column-margin
+GPU Compute ohne entsprechende Devices auswählen bringt nichts
+:::
+
+Die Option «*GPU Compute*» kann auch von Nutzern ohne die entsprechende Hardware ausgewählt werden, allerdings wird sich kein Effekt zeigen. Dies ist jeweils daran zu erkennen, dass das Dropdown-Menü mit der Auswahl von «*GPU Compute*» dann grau hinterlegt wird.

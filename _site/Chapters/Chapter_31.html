@@ -260,6 +260,14 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../Chapters/Chapter_31.html">
  <span class="dropdown-text">Kapitel 31</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_32.html">
+ <span class="dropdown-text">Kapitel 32</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_33.html">
+ <span class="dropdown-text">Kapitel 33</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -329,7 +337,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Was ist Subsurface-Scattering?</p>
-</div></div><p>Bei der Refraktion von Lichtstrahlen dringen diese Lichtstrahlen in ein Objekt ein. Anschliessend werden sie in der Oberfläche des Objektes gestreut und dringen anschliessend wieder aus dem Objekt aus. Diese Lichtstrahlen können dabei un terschiedlich weit innerhalb des Objektes eindringen. Dadurch kann es in manchen Situationen vorkommen, dass die Lichtstrahlen auch aus der anderen Seite des Objektes wieder austreten. Dieser Effekt wird als Subsurface-Scattering bezeichnet. Dabei dringen Lichtstrahlen durch das Objekt hindurch und scheinen auch das Innere des Objektes zu beleuchten.</p>
+</div></div><p>Bei der Refraktion von Lichtstrahlen dringen diese Lichtstrahlen in ein Objekt ein. Anschliessend werden sie in der Oberfläche des Objektes gestreut und dringen anschliessend wieder aus dem Objekt aus. Diese Lichtstrahlen können dabei unterschiedlich weit innerhalb des Objektes eindringen. Dadurch kann es in manchen Situationen vorkommen, dass die Lichtstrahlen auch aus der anderen Seite des Objektes wieder austreten. Dieser Effekt wird als Subsurface-Scattering bezeichnet. Dabei dringen Lichtstrahlen durch das Objekt hindurch und scheinen auch das Innere des Objektes zu beleuchten.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -439,7 +447,7 @@ Abbildung&nbsp;4: Lichtstrahlen mit einem hohen Einfallswinkel. In solchen Fäll
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>IOR berechnen</p>
-</div></div><p>Durch eine kurze Internetrecherche lässt sich schnell der IOR für ein Material ausfindig machen. So hat Gold einen IOR von 0.479, Eis einen IOR von 1.309, Milch einen IOR von 1.350 und Asphalt weist einen IOR von 1.635 auf.8 Diese Werte könnten nun direkt in die Zeile «<em>Specular</em>» eingegeben werden. Das Problem ist jedoch, dass diese Zeile nicht für physikalisch korrekte IOR-Werte angepasst ist und mit Inputs von 0 bis 1 arbeitet. Aus diesem Grund muss der IOR von Hand in den Specular-Input umgewandelt werden. Die Formel hierfür lautet:</p>
+</div></div><p>Durch eine kurze Internetrecherche lässt sich schnell der IOR für ein Material ausfindig machen. So hat Gold einen IOR von 0.479, Eis einen IOR von 1.309, Milch einen IOR von 1.350 und Asphalt weist einen IOR von 1.635 auf (Quelle: <a href="https://pixelandpoly.com/ior.html" class="uri">https://pixelandpoly.com/ior.html</a>). Diese Werte könnten nun direkt in die Zeile «<em>Specular</em>» eingegeben werden. Das Problem ist jedoch, dass diese Zeile nicht für physikalisch korrekte IOR-Werte angepasst ist und mit Inputs von 0 bis 1 arbeitet. Aus diesem Grund muss der IOR von Hand in den Specular-Input umgewandelt werden. Die Formel hierfür lautet:</p>
 <div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -474,10 +482,14 @@ Abbildung&nbsp;5
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Math-Node zum erneuten Dividieren</p>
 </div></div><p>Nun wird noch ein letztes Mal ein Duplikat des dividierenden Math-Nodes erstellt und rechts neben den potenzierenden Math-Node platziert. Der erste Value-Input wird mit dem Value-Output des potenzierenden Math-Nodes verbunden und die zweite Value-Zeile wird auf 0.08 gesetzt. Dadurch wird der Output des potenzierenden Math-Nodes durch den Wert 0.08 dividiert. Wenn nun alle Nodes entsprechend der Abbildung 6 eingefügt wurden, sollte der Output des letzten Math-Nodes nun den Wert für den Specular-Input enthalten.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="Images/Chapter_31/Speculraity_Examples.png" class="img-fluid figure-img"></p>
-<figcaption>Node-Anordnung, um die Specularity anhand des IORs zu berechnen.</figcaption>
+<div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_31/Specularity calc..png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6: Node-Anordnung, um die Specularity anhand des IORs zu berechnen.
+</figcaption>
 </figure>
 </div>
 
@@ -492,7 +504,7 @@ Abbildung&nbsp;5
 <p>Weiterführende Informationen</p>
 </div>
 <div class="tippbox-body">
-<p>Wenn Sie mit Nodes in Blender arbeiten, stellt dies eine Form des Programmierens dar. Statt mit Codes und Zeilen wird allerdings mit Nodes und Verbindungen zwischen den Nodes gearbeitet. Dies stellt eine Form des Programmierens dar, welche auch in einigen Game-Engines zur Verfügung steht. Sollten Sie die Anlei tung zur Berechnung des IORs selbst ausprobiert haben: Gratulation, Sie haben eine Funktion zur Berechnung der Specularity anhand des IORs in Blender erstellt!</p>
+<p>Wenn Sie mit Nodes in Blender arbeiten, stellt dies eine Form des Programmierens dar. Statt mit Codes und Zeilen wird allerdings mit Nodes und Verbindungen zwischen den Nodes gearbeitet. Dies stellt eine Form des Programmierens dar, welche auch in einigen Game-Engines zur Verfügung steht. Sollten Sie die Anleitung zur Berechnung des IORs selbst ausprobiert haben: Gratulation, Sie haben eine Funktion zur Berechnung der Specularity anhand des IORs in Blender erstellt!</p>
 </div>
 </div>
 
@@ -546,7 +558,7 @@ Abbildung&nbsp;5
 <p>Einstellungen für den Clearcoat</p>
 </div></div><p>Für den Clearcoat gibt es folgende Einstellungsmöglichkeiten im Principled-BSDF-Shader:</p>
 <ul>
-<li>«<strong><em>Clearcoat</em></strong>»: Mittels des Reiters «Clearcoat» kann das Ausmass der Reflexion der Clearcoat Schicht, welche über dem Material simuliert wird, eingestellt werden. Ein Wert von 0 bedeutet dabei, dass der Clearcoat nicht berücksichtigt wird, während ein Wert von 1 für einen stark re flektierenden Clearcoat verwendet wird.</li>
+<li>«<strong><em>Clearcoat</em></strong>»: Mittels des Reiters «Clearcoat» kann das Ausmass der Reflexion der Clearcoat Schicht, welche über dem Material simuliert wird, eingestellt werden. Ein Wert von 0 bedeutet dabei, dass der Clearcoat nicht berücksichtigt wird, während ein Wert von 1 für einen stark reflektierenden Clearcoat verwendet wird.</li>
 <li>«<strong><em>Clearcoat Roughness</em></strong>»: Mittels des Reiters «Clearcoat Roughness» kann für die Clearcoat Schicht ein individuelles Ausmass der Roughness definiert werden.</li>
 <li>«<strong><em>Clearcoat Normal</em></strong>»: Mittels des Inputs «Clearcoat Normal» kann für die Clearcoat-Schicht ein eigener Normalen-Input verwendet werden. Dies ermöglicht es etwa, dass ein Bump-Node mit der Clearcoat-Normal verbunden wird. Dadurch können Unebenheiten auf der Clearcoat-Schicht individuell erstellt werden.</li>
 </ul>
@@ -598,7 +610,7 @@ Abbildung&nbsp;5
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Distribution-Einstellungen</p>
-</div></div><p>Zuoberst im Principled-BSDF-Shader befindet sich das Dropdown-Menü «Distribution». Dieses ist standardmässig auf «<em>GGX</em>» eingestellt. Alternativ kann die Einstellung «<em>Multiscatter GGX</em>» eingestellt werden. Bei diesen Optionen handelt es sich um Einstellungen, anhand derer Blender die Materialien berechnet. GGX ist schneller in der Berechnung als Multiscatter-GGX, aber physikalisch weniger akkurat. In der Regel kann GGX als Einstellung beibehalten werden. Zudem ist zu beachten, dass bei der Verwendung von Multiscatter-GGX die Transmission-Roughness nicht mehr definiert werden kann.</p>
+</div></div><p>Zuoberst im Principled-BSDF-Shader befindet sich das Dropdown-Menü «<em>Distribution</em>». Dieses ist standardmässig auf «<em>GGX</em>» eingestellt. Alternativ kann die Einstellung «<em>Multiscatter GGX</em>» eingestellt werden. Bei diesen Optionen handelt es sich um Einstellungen, anhand derer Blender die Materialien berechnet. GGX ist schneller in der Berechnung als Multiscatter-GGX, aber physikalisch weniger akkurat. In der Regel kann GGX als Einstellung beibehalten werden. Zudem ist zu beachten, dass bei der Verwendung von Multiscatter-GGX die Transmission-Roughness nicht mehr definiert werden kann.</p>
 
 
 </section>

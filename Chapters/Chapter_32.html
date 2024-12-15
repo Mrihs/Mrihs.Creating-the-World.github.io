@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kursübersicht – Creating the World</title>
+<title>32. Der Wechsel von Eevee zu Cycles am Beispiel von Glas – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -289,16 +289,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#skript-kapitel" id="toc-skript-kapitel" class="nav-link active" data-scroll-target="#skript-kapitel">Skript-Kapitel:</a></li>
+  <li><a href="#gläser-in-eevee-richtig-darstellen-lassen" id="toc-gläser-in-eevee-richtig-darstellen-lassen" class="nav-link active" data-scroll-target="#gläser-in-eevee-richtig-darstellen-lassen">Gläser in Eevee richtig darstellen lassen</a></li>
+  <li><a href="#der-wechsel-von-eevee-zu-cycles" id="toc-der-wechsel-von-eevee-zu-cycles" class="nav-link" data-scroll-target="#der-wechsel-von-eevee-zu-cycles">Der Wechsel von Eevee zu Cycles</a></li>
+  <li><a href="#rendern-mit-der-gpu-in-cycles" id="toc-rendern-mit-der-gpu-in-cycles" class="nav-link" data-scroll-target="#rendern-mit-der-gpu-in-cycles">Rendern mit der GPU in Cycles</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Kursübersicht</h1>
+<h1 class="title">32. Der Wechsel von Eevee zu Cycles am Beispiel von Glas</h1>
 </div>
 
 
@@ -315,60 +317,63 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><img src="../icons/Logo.png" class="img-fluid"></p>
-<section id="skript-kapitel" class="level2">
-<h2 class="anchored" data-anchor-id="skript-kapitel">Skript-Kapitel:</h2>
-<ol type="1">
-<li><a href="../Chapters/Chapter_1.html">Vorbereitung von Blender</a></li>
-<li><a href="../Chapters/Chapter_2.html">Die Arbeitsoberfläche des 3D-Viewports</a></li>
-<li>Navigation der Ansicht im 3D-Viewport</li>
-<li>Erste Schritte</li>
-<li>Objektarten</li>
-<li>Primitive Meshes</li>
-<li>Methoden der Objekt-Transformation</li>
-<li>Objekte im Viewport-Display transformieren</li>
-<li>Object- und Edit-Mode</li>
-<li>Einstieg in den Edit-Mode</li>
-<li>Methoden der Objektbearbeitung im Edit-Mode</li>
-<li>Hilfestellungen für die Objektbearbeitung</li>
-<li>Tutorial: Erstellen eines Glases</li>
-<li>Objekterstellung mittels Modifiern</li>
-<li>Eigenschaften innerhalb eines Meshes definieren</li>
-<li>Materialien, Texturen und Shader</li>
-<li>Materialien</li>
-<li>Der Shader-Editor</li>
-<li>Grundlegende Eigenschaften von Materialien</li>
-<li>Tutorial: Strandball</li>
-<li>Texturen</li>
-<li>UVs</li>
-<li>Texturen zu einem Material hinzufügen</li>
-<li>Texturen für Parameter verwenden</li>
-<li>Welche Bilder eignen sich als Texturen?</li>
-<li>Arten von Texturen</li>
-<li>Tutorial: Einen Hammer texturieren</li>
-<li>Displacement mit dem Displacement-Modifier erstellen</li>
-<li>Erstellen von Landschaften</li>
-<li>Tutorial: Erstellen einer Düne</li>
-<li>Parameter im Principled-BSDF-Shader</li>
-<li>Der Wechsel von Eevee zu Cycles am Beispiel von Glas</li>
-<li>Lichtquellen in einer Szene</li>
-<li>Lichtobjekte</li>
-<li>Welten</li>
-<li>Kamera</li>
-<li>Rendern</li>
-<li>Tutorial: Ein Glas mit Wasser erstellen</li>
-<li>Bäume mittels Add-on erstellen</li>
-<li>Workflows der Charaktererstellung</li>
-<li>Character-Modeling</li>
-<li>Tutorial: Eine Cartoon-Katze als Charakter erstellen</li>
-<li>Was ist Rigging?</li>
-<li>Objekte mit Armaturen verformen</li>
-<li>Charakter-Rigging</li>
-<li>Vom Bild zur Animation</li>
-<li>Animationen erstellen</li>
-<li>Animationen verfeinern</li>
-<li>Animationen rendern</li>
-</ol>
+<section id="gläser-in-eevee-richtig-darstellen-lassen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="gläser-in-eevee-richtig-darstellen-lassen">Gläser in Eevee richtig darstellen lassen</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Beispiel mit Glas auf Tisch</p>
+</div></div><p>Das Arbeiten mit Glas als Material benötigt einige Anpassungen bei der Darstellung innerhalb der Einstellungen der aktuellen Render-Engine (Eevee). Die Datei «<em>Beispiel_Glas_Material</em>» wird nachfolgend verwendet, um diese Problematik aufzuzeigen. Innerhalb dieser Datei ist ein Glas auf einem Tisch dargestellt. Sämtliche Texturen und Materialien wurden bereits für die verschiedenen Objekte erstellt. Deshalb kann das Beispiel im Render-Shading-Modus betrachtet werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Weitere Einstellungen benötigt, um Glasmaterialien zu verwenden</p>
+</div></div><p>Das Glas reflektiert seine Umwelt zu einem bestimmten Grad, allerdings wirkt die Umwelt stark verzogen. Dies liegt daran, dass die aktuell ausgewählte Render-Engine (Eevee) darauf ausgelegt ist, dass Inhalte möglichst schnell und idealerweise in Echtzeit gerendert werden. Hierfür müssen einige Abstriche gemacht werden. Ein solcher Abstrich ist nun bei diesem Glas sichtbar.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Screen-Space-Reflections aktivieren</p>
+</div></div><p>Um möglichst schnell arbeiten zu können, ist bei Eevee standardmässig eine komplexere Berechnung von Reflexionen ausgeschaltet. Diese wird nun allerdings benötigt, damit das Glas realistischer erscheint. Um diese Option einzuschalten, muss im Properties-Editor der zweitoberste Reiter «<em>Render Properties</em>» geöffnet werden. Darin ist ein Reiter für die «<em>Screen Space Reflections</em>» aufzufinden, der allerdings deaktiviert ist. Dieser Reiter sollte aktiviert werden. Durch die Aktivierung dieses Reiters ist bereits ersichtlich, dass Reflexionen nun deutlicher wiedergeben werden. Zusätzlich sollte allerdings dieser Reiter geöffnet und «<em>Refraction</em>» aktiviert werden. Dadurch sollte nun auch das Fenster im Hintergrund lichtdurchlässig und die Aussenwelt sichtbar werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Screen-Space-Refraction für ein Material aktivieren</p>
+</div></div><p>Im Glas selbst hat sich allerdings bislang noch keine Veränderung gezeigt. Dies liegt daran, dass in Eevee zusätzlich für jedes Material per Default die Einstellung zur komplexeren Berechnung von Reflexionen deaktiviert ist. Deshalb muss das Glas ausgewählt werden und der Material-Reiter im Properties-Editor geöffnet werden. Unter dem Reiter «<em>Settings</em>» können anschliessend weitere Einstellungen vorgenommen werden. Hier muss nun für das ausgewählte Material die Einstellung «<em>Screen Space Refraction</em>» aktiviert werden. Dadurch werden auch beim Glas, welches sich auf dem Tisch befindet, die Reflexionen durch das Glas korrekt berechnet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Zusammenfassung der Einstellungen, um Gläser in Eevee anzeigen zu lassen</p>
+</div></div><p>Um Gläser korrekt anzeigen zu lassen, sind somit folgende drei Einstellungen in Eevee nötig:</p>
+<ul>
+<li>In den Render-Properties muss «<em>Screen Space Reflections</em>» aktiviert werden.</li>
+<li>Im Reiter zu den Screen-Space-Reflections muss «<em>Refraction</em>» aktiviert werden.</li>
+<li>In den Einstellungen zum Glas-Material muss zusätzlich «<em>Screen Space Refraction</em>» aktiviert werden.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Glas-Parameter variieren</p>
+</div></div><p>Mithilfe dieser Vorbereitungen kann nun anhand dieses Beispiels betrachtet werden, welche Auswirkungen verschiedene IOR-, Transmission- und Transmission-Roughness-Werte mit sich bringen. Ein IOR von 1 führt beispielsweise dazu, dass das Glas praktisch unsichtbar erscheint. Durch eine Erhöhung der Transmission-Roughness wird das Glas wiederum etwas milchiger.</p>
+</section>
+<section id="der-wechsel-von-eevee-zu-cycles" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="der-wechsel-von-eevee-zu-cycles">Der Wechsel von Eevee zu Cycles</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Eevee vs.&nbsp;Cycles</p>
+</div></div><p>Wie bereits erwähnt, ist Eevee als Render-Engine darauf ausgerichtet, dass Bilder möglichst in Echtzeit erzeugt werden. Dies geschieht auf Kosten von realitätsgetreuen Darstellungen. Blender verfügt nebst Eevee noch über eine zweite Render-Engine namens Cycles. Diese Engine benötigt deutlich mehr Leistung und braucht dadurch auch länger, um die Darstellung von Inhalten zu berechnen. Dabei hängt es stark von den Kapazitäten des jeweiligen Rechners ab, wie lange diese Berechnung dauert. Zusätzlich gibt es noch die Render-Engine «Workbench». Diese ist sehr rudimentär aufgebaut und ist nicht für realistische Darstellungen geeignet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Render-Engine wechseln</p>
+</div></div><p>Die Render-Engine lässt sich im Properties-Editor unter dem Reiter für die Render-Properties einstellen. Zuoberst wird dabei unter «<em>Render Engine</em>» ein Dropdown-Menü dargestellt, in dem zwischen den verschiedenen Engines gewechselt werden kann. Durch die Auswahl von Cycles wird das Bild anschliessend mittels dieser Engine berechnet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Arbeitsweise von Cycles</p>
+</div></div><p>Cycles funktioniert etwas anders als Eevee. Während Eevee ein finales Bild erzeugt hat, erstellt Cycles eine Vielzahl von Bildern (sogenannte Samples) und überlappt diese zu einem finalen Bild. Dies führt zu realistischeren Darstellungen, aber auch dazu, dass es Fehler in der Abbildung gibt. Dies zeigt sich in der Form von weissem Noise, welcher über das Bild gestreut wird. Die einzelnen Punkte dieses Noises werden als Fireflies bezeichnet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Fireflies entfernen</p>
+</div></div><p>In Blender gibt es eine eingebaute Option, damit die Fireflies entfernt werden. Diese ist in den Render-Properties unter dem Reiter «<em>Sampling</em>» unter dem darunterliegenden Reiter «<em>Denoising</em>» zu finden. Dort kann die Einstellung «<em>Viewport</em>» aktiviert werden. Dadurch entfernt Blender automatisch die Fireflies im 3D-Viewport-Editor. Wird zudem die Option «<em>Render</em>» ausgewählt, geschieht dies auch bei finalen Renders.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Pausieren des Renderns</p>
+</div></div><p>Durch den Wechsel der Render-Engine erscheint im 3D-Viewport-Editor in der rechten oberen Ecke eine zusätzliche Schaltfläche. Diese gibt jeweils an, ob gerade gerendert wird oder nicht. Sollte das Bild einmal einfrieren und nicht neu gerendert werden, sollte anhand dieser Schaltfläche überprüft werden, ob das Rendern gerade pausiert wurde.</p>
+</section>
+<section id="rendern-mit-der-gpu-in-cycles" class="level2">
+<h2 class="anchored" data-anchor-id="rendern-mit-der-gpu-in-cycles">Rendern mit der GPU in Cycles</h2>
 
 
 </section>

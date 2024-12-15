@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5. Objektarten – Creating the World</title>
+<title>34. Lichtobjekte – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,8 +39,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
-<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -295,24 +293,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#mesh" id="toc-mesh" class="nav-link active" data-scroll-target="#mesh">Mesh</a></li>
-  <li><a href="#curve" id="toc-curve" class="nav-link" data-scroll-target="#curve">Curve</a></li>
-  <li><a href="#surface" id="toc-surface" class="nav-link" data-scroll-target="#surface">Surface</a></li>
-  <li><a href="#metaball" id="toc-metaball" class="nav-link" data-scroll-target="#metaball">Metaball</a></li>
-  <li><a href="#text" id="toc-text" class="nav-link" data-scroll-target="#text">Text</a></li>
-  <li><a href="#volume" id="toc-volume" class="nav-link" data-scroll-target="#volume">Volume</a></li>
-  <li><a href="#grease-pencil" id="toc-grease-pencil" class="nav-link" data-scroll-target="#grease-pencil">Grease Pencil</a></li>
-  <li><a href="#armature" id="toc-armature" class="nav-link" data-scroll-target="#armature">Armature</a></li>
-  <li><a href="#lattice" id="toc-lattice" class="nav-link" data-scroll-target="#lattice">Lattice</a></li>
-  <li><a href="#empty" id="toc-empty" class="nav-link" data-scroll-target="#empty">Empty</a></li>
-  <li><a href="#image" id="toc-image" class="nav-link" data-scroll-target="#image">Image</a></li>
-  <li><a href="#light" id="toc-light" class="nav-link" data-scroll-target="#light">Light</a></li>
-  <li><a href="#light-probe" id="toc-light-probe" class="nav-link" data-scroll-target="#light-probe">Light-Probe</a></li>
-  <li><a href="#camera" id="toc-camera" class="nav-link" data-scroll-target="#camera">Camera</a></li>
-  <li><a href="#speaker" id="toc-speaker" class="nav-link" data-scroll-target="#speaker">Speaker</a></li>
-  <li><a href="#force-field" id="toc-force-field" class="nav-link" data-scroll-target="#force-field">Force Field</a></li>
-  <li><a href="#collection-instance" id="toc-collection-instance" class="nav-link" data-scroll-target="#collection-instance">Collection Instance</a></li>
-  <li><a href="#zusammenfassung-der-objektarten" id="toc-zusammenfassung-der-objektarten" class="nav-link" data-scroll-target="#zusammenfassung-der-objektarten">Zusammenfassung der Objektarten</a></li>
+  <li><a href="#lichtquellen-einstellen" id="toc-lichtquellen-einstellen" class="nav-link active" data-scroll-target="#lichtquellen-einstellen">Lichtquellen einstellen</a></li>
+  <li><a href="#point" id="toc-point" class="nav-link" data-scroll-target="#point">Point</a></li>
+  <li><a href="#sun" id="toc-sun" class="nav-link" data-scroll-target="#sun">Sun</a></li>
+  <li><a href="#spot" id="toc-spot" class="nav-link" data-scroll-target="#spot">Spot</a></li>
+  <li><a href="#area" id="toc-area" class="nav-link" data-scroll-target="#area">Area</a></li>
   </ul>
 </nav>
     </div>
@@ -321,7 +306,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">5. Objektarten</h1>
+<h1 class="title">34. Lichtobjekte</h1>
 </div>
 
 
@@ -338,227 +323,203 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="lichtquellen-einstellen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="lichtquellen-einstellen">Lichtquellen einstellen</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Verschiedene Arten von Objekten</p>
-</div></div><p>Beim Hinzufügen von Objekten mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> erscheint das Menü für das Hinzufügen von Objekten beim Mauszeiger. Die verschiedenen Objekte sind dabei in verschiedene Typen von Objekten unterteilt. Diese Objekte unterscheiden sich hinsichtlich ihres Aufbaus, aber auch hinsichtlich ihrer Funktion.</p>
-<section id="mesh" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="mesh">Mesh</h2>
+<p>Lichtobjekte hinzufügen</p>
+</div></div><p>Lichtobjekte werden wie auch Meshes im «<em>Add</em>»-Menü hinzugefügt. Unter «<em>Light</em>» sind die jeweiligen Lichtquellen zu finden. Es gibt vier verschiedene Arten von Lichtquellen, welche jeweils unterschiedliche Eigenschaften mit sich bringen. Nach dem Hinzufügen einer Art von Lichtobjekten kann die Art des Lichtobjektes jederzeit wieder geändert werden. Die verschiedenen Arten von Lichtobjekten sind:</p>
+<ul>
+<li>Point</li>
+<li>Sun</li>
+<li>Spot</li>
+<li>Area</li>
+</ul>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Meshes</p>
-</div></div><p>Ein Mesh stellt ein 3D-Objekt dar. Meshes haben eine gitterähnliche Struktur aus Punkten, Linien und verbundenen Flächen, welche in ihrer Gesamtstruktur das Objekt darstellen. Der Hauptfokus dieses Kurses wird auf die Meshes gelegt, von daher werden sie später noch ausführlich beschrieben.</p>
-</section>
-<section id="curve" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="curve">Curve</h2>
+<p>Object-Data-Properties für Licht</p>
+</div></div><p>Wird ein Lichtobjekt hinzugefügt und ausgewählt, wird das Icon des Reiters «<em>Object Data Properties</em>» im Properties-Editor mit dem Icon einer Glühbirne ausgewechselt. Dadurch wird visualisiert, dass das ausgewählte Objekt nun kein Mesh mehr darstellt, sondern ein Lichtobjekt.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_34/1. Icon_Object_Data.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Icon des «<em>Object Data Properties</em>»-Reiters im Properties-Editor, wenn ein Lichtobjekt ausgewählt wurde.
+</figcaption>
+</figure>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Kurven</p>
-</div></div><p>Vor der Entwicklung der Meshes wurden in Computergrafiken Kurven und Oberflächen verwendet. Sie haben den Vorteil, dass sie weniger Computerleistung benötigen. Kurven verfügen über weniger Kontrollpunkte, wodurch sie auch einfacher zu bearbeiten sind. In einigen Anwendungen werden sie heute immer noch verwendet. Blender verfügt über zwei Arten von Kurven: Bézier-Kurven und Nurbs-Kurven. Die beiden Arten von Kurven unterscheiden sich hinsichtlich ihrer zugrundeliegenden Berechnungen.</p>
+<p>Unterschiedliche Einstellungen in Eevee und Cycles</p>
+</div></div><p>Innerhalb des Reiters «<em>Object Data Properties</em>» können nun genauere Einstellungen für das Licht-Objekt vorgenommen werden. Die nachfolgende Beschreibung der Lichtobjekte orientiert sich an den Einstellungsoptionen in Eevee. Einige dieser Einstellungsoptionen stehen in Cycles nicht zur Verfügung. In Cycles ist es dafür möglich, die Lichtobjekte mittels des Shader-Editors genauer zu bearbeiten. Hierfür muss allerdings jeweils die Einstellung «<em>Use Nodes</em>» in den «<em>Object Data Properties</em>» ausgewählt werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Kurven können Oberflächen enthalten</p>
-</div></div><p>Neu hinzugefügte Kurven beinhalten zunächst keine Oberfläche und erscheinen dadurch nicht beim Rendern. Allerdings können ihnen Oberflächen hinzugefügt werden, sodass sie auch als Objekte erkennbar werden. Zudem können Kurven auch als Hilfestellung bei Animationen verwendet werden, indem etwa Pfade für eine Animation mit ihnen vorgegeben werden.</p>
-</section>
-<section id="surface" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="surface">Surface</h2>
+<p>Wechsel zwischen den Lichtobjekt-Arten</p>
+</div></div><p>Unter dem Reiter «<em>Light</em>» kann die Art, wie das Objekt Licht ausstrahlt, bearbeitet werden. Darin befindet sich zuoberst eine Auflistung der vier Arten von Lichtobjekten. Durch die Auswahl einer anderen Art kann so jederzeit unkompliziert zwischen den Lichtarten gewechselt werden. Einige der Einstellungsoptionen variieren zwischen den verschiedenen Objektarten.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Surfaces</p>
-</div></div><p>Die Surfaces sind ähnlich zu den Kurven. Während Kurven 2D-Objekte darstellen, sind die Surfaces ihre 3D-Erweiterungen. Obwohl Kurven und Surfaces somit denselben Typ von Objekten darstellen, können sie nicht gleichzeitig auftreten. In einem Objekt können somit nicht sowohl Kurven als auch Surfaces vorhanden sein.</p>
-</section>
-<section id="metaball" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="metaball">Metaball</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Metas</p>
-</div></div><p>Metabälle gehören zur Objekt-Familie der Metas, welche Blender prozedural aufbaut. Anders als beispielsweise Meshes oder Kurven sind sie nicht durch Kontrollpunkte oder Gitternetze aufgebaut, sondern werden mathematisch von Blender berechnet. Wenn zwei Meta-Objekte in der Nähe voneinander sind, können sie miteinander interagieren.</p>
-</section>
-<section id="text" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="text">Text</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Text</p>
-</div></div><p>Text-Objekte beinhalten einen Text, der anschliessend als Objekt dargestellt wird. Der Text hat dabei wie die Kurven oder die Oberflächen lediglich zwei Dimensionen.</p>
-</section>
-<section id="volume" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="volume">Volume</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Volumen-Objekte</p>
-</div></div><p>Volumen-Objekte sind lediglich Objekt-Container. Ihnen können OpenVDB-Dateien angehängt werden, um volumetrische Daten (beispielsweise Wolken oder Rauch) zu erzeugen. Diese Dateien können mithilfe von Blenders eigenen Simulationen erzeugt werden, oder in anderen Programmen erzeugt und abgespeichert werden.</p>
-</section>
-<section id="grease-pencil" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="grease-pencil">Grease Pencil</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Grease Pencil</p>
-</div></div><p>Grease Pencils sind Objekte, welche es ermöglichen, direkt in den dreidimensionalen Raum zu zeichnen. Zudem können mit ihnen 2D-Animationen erstellt werden – etwa wenn Blender für ein 2D- statt 3D-Projekt verwendet wird. Objekte der Kategorie «Grease Pencil» sind dabei eigentlich Behälter-Objekte, in welche anschliessend die Linien gezeichnet werden.</p>
-</section>
-<section id="armature" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="armature">Armature</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Armaturen</p>
-</div></div><p>Armaturen werden verwendet, um Meshes zu animieren. Hierbei wird innerhalb eines Meshes ein Gerüst erstellt, anhand dessen die Animation anschliessend erfolgen soll. Dieses Gerüst stellt sozusagen das Skelett dar, welches anschliessend für die Animation verwendet werden soll. Dementsprechend werden die einzelnen Gerüstteile auch Bones (Knochen) genannt. Armaturen werden beim Rendern nicht angezeigt. Bei ihnen handelt es sich lediglich um ein Werkzeug zur Animation.</p>
-</section>
-<section id="lattice" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="lattice">Lattice</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Lattice</p>
-</div></div><p>Das Lattice stellt ein dreidimensionales Gerüst aus Punkten dar, welches allerdings nicht gerendert werden kann. Es dient als Werkzeug zur komplexeren Transformation von Objekten.</p>
-</section>
-<section id="empty" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="empty">Empty</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Empties</p>
-</div></div><p>Empties sind Knotenpunkte an einem einzigen Punkt in der virtuellen Welt. Sie beinhalten weder Oberflächen noch Volumen und können auch nicht gerendert werden. Sie lassen sich allerdings beispielsweise als Bezugspunkte für Objekte verwenden.</p>
-</section>
-<section id="image" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="image">Image</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Bilder</p>
-</div></div><p>Blender ermöglichet es, dass auch externe Bilddateien direkt einer Szene hinzugefügt werden können. Hierfür kann ein solches Image-Objekt erstellt und das Bild anschliessend diesem Objekt angefügt werden. Bilder können allerdings auch direkt in den Viewport-Display gezogen werden, wodurch sie anschliessend hinzugefügt werden.</p>
-</section>
-<section id="light" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="light">Light</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Lichtquellen</p>
-</div></div><p>Licht-Objekte stellen die Quelle für die Beleuchtung von Szenen dar. Sie sind nicht als Mesh oder Kurve modellierbar, sondern stellen vielmehr einen Punkt oder Bereich dar, von dem die Beleuchtung ausgeht.</p>
-</section>
-<section id="light-probe" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="light-probe">Light-Probe</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Light Probes</p>
-</div></div><p>Light Probes werden in der Eevee-Render-Engine als Hilfsobjekte verwendet. Dabei werden beispielsweise Informationen über indirekte Beleuchtungseffekte gespeichert. Diese Informationen werden anschliessend im finalen Render berücksichtigt, während das Light-Probe-Objekt als solches nicht im finalen Render dargestellt wird.</p>
-</section>
-<section id="camera" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="camera">Camera</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Kamera</p>
-</div></div><p>Kameras stellen den Punkt dar, von dem aus die Welt in der gerenderten Szene betrachtet wird. Die Kameras als solche sind in den gerenderten Bildern nicht sichtbar.</p>
-</section>
-<section id="speaker" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="speaker">Speaker</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Lautsprecher</p>
-</div></div><p>Speaker werden verwendet, um an bestimmten Positionen in der Szene Töne erklingen zu lassen. So wie die Lichtquellen sind die Speaker nicht modellierbar, sondern stellen einen Punkt in der drei dimensionalen Welt dar, von dessen Position ein Klang ausgeht.</p>
-</section>
-<section id="force-field" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="force-field">Force Field</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Kraftfelder</p>
-</div></div><p>Force Fields sind Objekte, welche in Simulationen Kräfte auf andere Objekte ausüben können. So können andere Objekte beispielsweise angezogen oder absorbiert werden. Beim Rendern sind diese Objekte als solche nicht sichtbar, allerdings die Auswirkungen, welche deren Kräfte auf Objekte haben können.</p>
-</section>
-<section id="collection-instance" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="collection-instance">Collection Instance</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Collections</p>
-</div></div><p>Collections sind Einheiten, um Objekte anzuordnen und zu gruppieren. Sie erscheinen nicht im Viewport, sind aber im Outliner aufzufinden. Sie können wie Dateiordner verstanden werden.</p>
-</section>
-<section id="zusammenfassung-der-objektarten" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="zusammenfassung-der-objektarten">Zusammenfassung der Objektarten</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Verschiedene Objektarten</p>
-</div></div><p>Die verschiedenen Objektarten dienen also entweder der Darstellung von Objekten, der Darstellung von externen Dateien, der Darstellung der Szene oder haben vor allem unterstützende Funktionen:</p>
+<p>Stärke des Lichts</p>
+</div></div><p>Während in der Farbbox «<em>Color</em>» eine Farbe für das Licht ausgewählt werden kann, kann im Feld «<em>Power</em>» die Stärke des ausgestrahlten Lichts eingestellt werden. Je höher dieser Wert ist, desto stärker wird die Szene durch das Lichtobjekt beleuchtet. Die Stärke des Lichts wird in Watt angegeben. Dabei handelt es sich allerdings nicht um dieselben Watt-Angaben, wie sie beispielsweise auf Glühbirnen angegeben werden. Eine LED-Birne mit 60 Watt (oder etwa 800 Lumen) würde mittels der Power von etwa 2.1 W angegeben werden. Um die jeweiligen Werte, welche in Blender verwendet werden sollten, zu erzielen, müssten komplexe Umrechnungen erfolgen. Im Handbuch zu Blender sind allerdings einige Beispielwerte aufgelistet sowie die dazu verwendeten Arten von Lichtobjekten (Quelle:<a href="https://docs.blender.org/manual/en/latest/render/lights/light_object.html" class="uri">https://docs.blender.org/manual/en/latest/render/lights/light_object.html</a>).</p>
 <table class="caption-top table">
-<caption>Renderbare Objekte</caption>
-<colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-</colgroup>
 <thead>
 <tr class="header">
-<th>Gitter-basiert</th>
-<th>Kurven-basiert</th>
-<th><strong>Metas</strong></th>
-<th>Linien</th>
-<th>Szenen-Tools</th>
-<th>Externe Daten</th>
-<th>Hilfs-Werkzeuge</th>
+<th>Objekt</th>
+<th>Power/Strength</th>
+<th>Lichtobjekt_Art</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Mesh</strong></td>
-<td>Curve</td>
-<td>Metaball</td>
-<td>Grease Pencil</td>
-<td>Camera</td>
-<td>Volume</td>
-<td>Armature</td>
+<td>Kerze</td>
+<td>0.05 W</td>
+<td>Point</td>
 </tr>
 <tr class="even">
-<td></td>
-<td>Surface</td>
-<td></td>
-<td></td>
-<td>Light</td>
-<td>Image</td>
-<td>Lattice</td>
+<td>LED-Birne (800 lm)</td>
+<td>2.1 W</td>
+<td>Point</td>
 </tr>
 <tr class="odd">
-<td></td>
-<td>Text</td>
-<td></td>
-<td></td>
-<td>Speaker</td>
-<td></td>
-<td>Empty</td>
+<td>Glühbirne (1000 lm)</td>
+<td>2.9 W</td>
+<td>Point</td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>Force Field</td>
+<td>Scheinwerfer (1500 lm)</td>
+<td>4 W</td>
+<td>Area (Form: Disk)</td>
 </tr>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>Speaker</td>
+<td>Leuchtstoffröhre (2500 lm)</td>
+<td>4.5 W</td>
+<td>Area (Form: Rectangle)</td>
 </tr>
 <tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>Light Probe</td>
+<td>Autoscheinwerfer (5000 lm)</td>
+<td>22 W</td>
+<td>Spot (Grösse: 125°)</td>
 </tr>
 <tr class="odd">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td>Collection Instance</td>
+<td>Klarer Himmel</td>
+<td>1000 W/m<sup>2</sup></td>
+<td>Sun</td>
+</tr>
+<tr class="even">
+<td>Bewölkter Himmel</td>
+<td>500 W/m<sup>2</sup></td>
+<td>Sun</td>
+</tr>
+<tr class="odd">
+<td>Wolkenbedeckter Himmel</td>
+<td>200 W/m<sup>2</sup></td>
+<td>Sun</td>
+</tr>
+<tr class="even">
+<td>Mondlicht</td>
+<td>0.001 W/m<sup>2</sup></td>
+<td>Sun</td>
 </tr>
 </tbody>
 </table>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Faktoren, um die Lichtquelle zu präzisieren</p>
+</div></div><p>Um das Licht etwas genauer bearbeiten zu können, stehen drei zusätzliche Faktorwerte zur Verfügung:</p>
+<ul>
+<li>«<strong><em>Diffuse</em></strong>»: Der Faktor «<em>Diffuse</em>» beschreibt, ob das Licht der Lichtquelle stark gebündelt ausgesendet wird oder stärker streut. Je höher der Diffuse-Wert ist, desto breiter wird das Licht gestreut. Bei einem tieferen Diffuse-Wert wird das Licht stärker gebündelt.</li>
+<li>«<strong><em>Specular</em></strong>»: Der Faktor «<em>Specular</em>» beschreibt, wie stark das Licht der Lichtquelle die Fähigkeit zur Specularity aufweist. Wenn dieser Faktor auf 0 gesetzt wird, können keine Lichtstrahlen ba sierend auf dieser Lichtquelle reflektiert werden.</li>
+<li>«<strong><em>Volume</em></strong>»: Mittels des Faktors «<em>Volume</em>» kann ein Wert festgelegt werden, mit dem Lichtstrahlen in Volumen multipliziert werden. Da dieser Kurs allerdings nicht auf Volumen eingeht, kann dieser Faktor ignoriert werden.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Je kleiner die Lichtquelle, desto heller</p>
+</div></div><p>Anhand des Feldes «<em>Radius</em>» respektive «<em>Size</em>» kann definiert werden, wie gross das Lichtobjekt ist. Je kleiner der Radius ist, desto stärker erhellt die Lichtquelle die unmittelbare Umgebung. Durch eine Vergrösserung des Radius wird der Bereich, von dem aus die Punkt-Beleuchtung, ausgedehnt. Da die Lichtstärke allerdings gleich bleibt – nämlich entsprechend dem Wert der «<em>Power</em>» – wird diese Stärke nun über einen grösseren Bereich ausgestrahlt. Dies hat zur Folge, dass die umliegenden Objekte weniger hell beleuchtet werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Custom Distance</p>
+</div></div><p>Mittels der Option «<em>Custom Distance</em>» kann definiert werden, dass die Lichtstrahlen des Lichtobjektes lediglich bis zu einer gewissen Distanz reichen. Alle Bereiche, welche weiter als diese definierte Distanz von der Lichtquelle entfernt liegen, werden nicht davon beleuchtet. Per Default ist diese Option allerdings ausgeschaltet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Schatten</p>
+</div></div><p>Im Reiter «<em>Shadow</em>» sind weitere Einstellungen zu Schatten, welche diese Lichtquelle erzeugt, zu finden. So kann der gesamte Reiter deaktiviert werden, wenn diese Lichtquelle keine Schatten erzeugen soll. Zudem kann mittels «<em>Clip Start</em>» eine Distanz definiert werden, ab welcher Objekte ausgehend von der Lichtquelle einen Schatten werfen können.</p>
+</section>
+<section id="point" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="point">Point</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Navigation zwischen Szenen</p>
+</div></div><p>In der Datei «<em>Gameboard_Lights</em>» sind verschiedene Beispielszenen für unterschiedliche Belichtungen aufzufinden. Die verschiedenen Beispiele sind in unterschiedliche Szenen aufgeteilt. Um zwischen den Szenen wechseln zu können, muss im Dropdown-Menü «<em>Browse Scene to be linked</em>», welches in der Ecke oben rechts zu finden ist, die entsprechende Szene ausgewählt werden. Auch die Beispiele aus dem vorangehenden Kapitel sind in dieser Datei aufzufinden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Beispiel eines Point-Lichtobjektes</p>
+</div></div><p><img src="Chapters/Images/Chapter_34/.png" class="img-fluid" alt="Eine Szene, welche mit einer Point-Lichtquelle beleuchtet wird."> {#fig-1_2 fig-align=“left}</p>
+<p>«<em>Example6_Light_Point</em>» beinhaltet das Beispiel aus der Abbildung 2. In diesem Beispiel befindet sich ein Lichtobjekt des Typs «<em>Point</em>» oberhalb des Spielfelds J1. Die Lichtobjekte als solche werden beim Rendern nicht dargestellt, sondern lediglich die Reflexionen des Lichtes. Aus diesem Grund wurde die Position des Point-Lichtobjektes in der Abbildung 153 mit einer Sphere visualisiert.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Points können bewegt werden, aber ihre Rotation hat keine Auswirkung</p>
+</div></div><p>Anhand eines Point-Lichtobjektes werden ausgehend von der Position des Lichtobjektes die Lichtstrahlen kreisförmig ausgestrahlt. Dementsprechend führt eine Rotation des Objektes zu keiner Veränderung der Lichtausstrahlung. Lediglich aufgrund der Position des Lichtobjektes des Typs «<em>Point</em>» kann eine Veränderung der Beleuchtung erfolgen.</p>
+</section>
+<section id="sun" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sun">Sun</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Beispiel eines Sun-Lichtobjektes</p>
+</div></div><p>Die Abbildung 3 zeigt ein Beispiel, in dem eine Szene mit einem Sun-Lichtobjekt beleuchtet wird. Die Sonne ist dabei auf derselben Höhe wie die Köpfe der anderen Spielfiguren auf dem Feld J1 platziert und gegen die blaue Spielfigur rotiert.</p>
+<p><img src="Chapters/Images/Chapter_34/.png" class="img-fluid" alt="Eine Szene, welche mit einer Sun-Lichtquelle beleuchtet wird."> {#fig-1_3 fig-align=“left}</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Sonnen können rotiert werden, allerdings hat ihre Position keine Auswirkung</p>
+</div></div><p>Ein Lichtobjekt des Typs «<em>Sun</em>» wird jeweils über die gesamte Szene erstreckt und beleuchtet die Objekte allesamt entsprechend der Rotation der Sonne. In ihren Grundeinstellungen mit einer Rotation von 0-0-0 werden alle Objekte senkrecht entlang der Z-Achse beleuchtet. Durch eine Veränderung der Rotationswerte kann der Winkel, mit dem die Sonne auf die Objekte eintrifft, variiert werden. Zu beachten ist dabei, dass die Position der Sonne keinen Einfluss auf die Beleuchtung hat. Mithilfe der Sonne wird eine Beleuchtung erschaffen, welche im gleichen Winkel über die ganze Szene erstreckt wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Andere Masseinheit für die Stärke der Lichtstrahlen</p>
+</div></div><p>Da die Distanz von Sonnen-Objekten keinen Einfluss auf die Wirkung der Sonne hat, wird die Masseinheit für die Sonnenausstrahlung mit «Strength» ausgegeben und anhand von Watt pro Quadratmeter definiert. Zudem werden für Sonnen sehr hohe Werte verwendet (200-1000 W/m<sup>2</sup>).</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Helligkeitsadaption erstellen</p>
+</div></div><p>Die hohen Werte für die Sonnenausstrahlung führen dazu, dass die Objekte deutlich überbelichtet werden. Im Gegensatz zum menschlichen Auge verfügen der Computer und die Render-Engine über keine Möglichkeiten, um an die Helligkeit der Sonne zu adaptieren. Cycles verfügt über die Möglichkeit, dass in den Render-Einstellungen im Properties-Editor unter «<em>Film</em>» der Exposure-Wert reduziert werden kann. In Eevee steht diese Option nicht zur Verfügung, allerdings kann zumindest für die gerenderten Farben der Exposure-Wert unter dem Reiter «<em>Color Management</em>» angepasst werden. Alternativ kann auch ein geringerer Wert für die Sonne verwendet und auf die realitätsgetreuen Werte verzichtet werden.</p>
+</section>
+<section id="spot" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="spot">Spot</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Spot als Beleuchtungsoption</p>
+</div></div><p>In Abbildung 4 wird eine Szene mittels eines Spot-Lichtobjektes beleuchtet. Der Spot agiert wie ein Scheinwerfer, mit dem gezielt ein Objekt beleuchtet werden kann. Hierfür sind sowohl die Position als auch die Rotation des Spot-Lichtobjektes bedeutsam. Anhand dieser beiden Merkmale kann der Spot entsprechend auf ein Objekt ausgerichtet werden. Die Beleuchtung erfolgt anschliessend ausgehend von der Form eines Cones, der von der Position des Lichtobjektes ausgeht.</p>
+<p><img src="Chapters/Images/Chapter_34/.png" class="img-fluid" alt="Eine Szene, welche mit einer Spot-Lichtquelle beleuchtet wird."> {#fig-1_4 fig-align=“left}</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Grösse des Spots einstellen</p>
+</div></div><p>In den Einstellungen zum Lichtobjekt findet sich unter dem Reiter «<em>Spot</em>» zusätzlich ein Reiter «<em>Spot Shape</em>». Innerhalb dieses Reiters können weitere Verfeinerungen an der Art der Beleuchtung vor genommen werden. Mittels der Option «<em>Size</em>» kann definiert werden, wie gross der Bereich ist, welcher der Spot erfassen kann. Dieser Bereich kann von 0° bis 180° variieren. Bei einer Grösse von 180° wird der gesamte Bereich, welcher sich vor dem Spot befindet, beleuchtet. Je kleiner die Grösse ist, desto mehr fokussiert sich die Beleuchtung auf einen entsprechenden Bereich.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Blend-Einstellung</p>
+</div></div><p>Mittels des Feldes «<em>Blend</em>» kann der Übergang vom Bereich, welcher durch den Spot beleuchtet wird, zu dem Bereich, welcher nicht beleuchtet wird, beschrieben werden. Je höher dieser Wert ist, desto weicher wird der Übergang von beleuchteten zu nicht beleuchteten Arealen. Bei einem tiefen Wert erscheint dieser Übergang als klare Linie. Zudem kann mittels der Option «<em>Show Cone</em>» das Licht auch innerhalb des Volumens der Spotbeleuchtung dargestellt werden.</p>
+</section>
+<section id="area" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="area">Area</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Areale als Beleuchtungsobjekt</p>
+</div></div><p>Die Abbildung 5 zeigt eine Szene, welche mit einem Area-Lichtobjekt beleuchtet wird. Diese Art der Beleuchtung hängt wie auch der Spot von der Position und der Rotation des Lichtobjektes ab. Mithilfe des Area-Lichtobjektes kann ein Bereich erstellt werden, welcher Licht aussendet. Dabei kann ein viereckiges Areal definiert werden, indem im Dropdown-Menü «<em>Shape</em>» die Option «<em>Square</em>» für ein Quadrat oder die Option «Rectangle» für ein Rechteck ausgewählt wird. Mittels der Optionen «<em>Disk</em>» für einen Kreis und «<em>Ellipse</em>» für eine Ellipse können auch runde Areale gewählt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Grösse der Areale variieren</p>
+</div></div><p>Mittels des Reiters «<em>Size</em>» kann die Grösse des Areals definiert werden. Bei aktivierten Viewport-Overlays kann diese Veränderung direkt visuell nachverfolgt werden. Das Quadrat und der Kreis als Option verfügen leidglich über einen Reiter für die Grösse. Bei den Formen Rechteck und Ellipse können zwei Achsen für die Grösse unabhängig voneinander definiert werden.</p>
+<p><img src="Chapters/Images/Chapter_34/.png" class="img-fluid" alt="Eine Szene, welche mit einer Area-Lichtquelle beleuchtet wird."> {#fig-1_4 fig-align=“left}</p>
+<div class="exercisebox">
+<div class="exercisebox-header">
+<div class="exercisebox-icon">
+
+</div>
+<p>Weiterführende Informationen</p>
+</div>
+<div class="exercisebox-body">
+<p><strong>Übung 16.1</strong></p>
+<p>Öffnen Sie in der Datei «<em>Gameboard_Lights</em>» die Szene «<em>Exercise_Lights</em>» und versuchen Sie, die abgebildete Beleuchtungssituation nachzustellen.</p>
+<p>Die Lösung finden Sie in der Szene «<em>Exercise_Lights_Solution</em>»</p>
+</div>
+</div>
 
 
 </section>

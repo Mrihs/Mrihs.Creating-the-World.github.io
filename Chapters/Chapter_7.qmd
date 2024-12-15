@@ -21,6 +21,7 @@ Alle drei Optionen sind in der Sidebar (ein /ausblenden mittels {{< kbd N >}}) u
 :::: tippbox-header
 ::: tippbox-icon
 :::
+
 Weiterführende Informationen
 ::::
 

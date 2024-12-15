@@ -1,0 +1,82 @@
+---
+title: "32. Der Wechsel von Eevee zu Cycles am Beispiel von Glas"
+editor: visual
+---
+
+## Gläser in Eevee richtig darstellen lassen
+
+::: column-margin
+Beispiel mit Glas auf Tisch
+:::
+
+Das Arbeiten mit Glas als Material benötigt einige Anpassungen bei der Darstellung innerhalb der Einstellungen der aktuellen Render-Engine (Eevee). Die Datei «*Beispiel_Glas_Material*» wird nachfolgend verwendet, um diese Problematik aufzuzeigen. Innerhalb dieser Datei ist ein Glas auf einem Tisch dargestellt. Sämtliche Texturen und Materialien wurden bereits für die verschiedenen Objekte erstellt. Deshalb kann das Beispiel im Render-Shading-Modus betrachtet werden.
+
+::: column-margin
+Weitere Einstellungen benötigt, um Glasmaterialien zu verwenden
+:::
+
+Das Glas reflektiert seine Umwelt zu einem bestimmten Grad, allerdings wirkt die Umwelt stark verzogen. Dies liegt daran, dass die aktuell ausgewählte Render-Engine (Eevee) darauf ausgelegt ist, dass Inhalte möglichst schnell und idealerweise in Echtzeit gerendert werden. Hierfür müssen einige Abstriche gemacht werden. Ein solcher Abstrich ist nun bei diesem Glas sichtbar.
+
+::: column-margin
+Screen-Space-Reflections aktivieren
+:::
+
+Um möglichst schnell arbeiten zu können, ist bei Eevee standardmässig eine komplexere Berechnung von Reflexionen ausgeschaltet. Diese wird nun allerdings benötigt, damit das Glas realistischer erscheint. Um diese Option einzuschalten, muss im Properties-Editor der zweitoberste Reiter «*Render Properties*» geöffnet werden. Darin ist ein Reiter für die «*Screen Space Reflections*» aufzufinden, der allerdings deaktiviert ist. Dieser Reiter sollte aktiviert werden. Durch die Aktivierung dieses Reiters ist bereits ersichtlich, dass Reflexionen nun deutlicher wiedergeben werden. Zusätzlich sollte allerdings dieser Reiter geöffnet und «*Refraction*» aktiviert werden. Dadurch sollte nun auch das Fenster im Hintergrund lichtdurchlässig und die Aussenwelt sichtbar werden.
+
+::: column-margin
+Screen-Space-Refraction für ein Material aktivieren
+:::
+
+Im Glas selbst hat sich allerdings bislang noch keine Veränderung gezeigt. Dies liegt daran, dass in Eevee zusätzlich für jedes Material per Default die Einstellung zur komplexeren Berechnung von Reflexionen deaktiviert ist. Deshalb muss das Glas ausgewählt werden und der Material-Reiter im Properties-Editor geöffnet werden. Unter dem Reiter «*Settings*» können anschliessend weitere Einstellungen vorgenommen werden. Hier muss nun für das ausgewählte Material die Einstellung «*Screen Space Refraction*» aktiviert werden. Dadurch werden auch beim Glas, welches sich auf dem Tisch befindet, die Reflexionen durch das Glas korrekt berechnet.
+
+::: column-margin
+Zusammenfassung der Einstellungen, um Gläser in Eevee anzeigen zu lassen
+:::
+
+Um Gläser korrekt anzeigen zu lassen, sind somit folgende drei Einstellungen in Eevee nötig:
+
+-   In den Render-Properties muss «*Screen Space Reflections*» aktiviert werden.
+-   Im Reiter zu den Screen-Space-Reflections muss «*Refraction*» aktiviert werden.
+-   In den Einstellungen zum Glas-Material muss zusätzlich «*Screen Space Refraction*» aktiviert werden.
+
+::: column-margin
+Glas-Parameter variieren
+:::
+
+Mithilfe dieser Vorbereitungen kann nun anhand dieses Beispiels betrachtet werden, welche Auswirkungen verschiedene IOR-, Transmission- und Transmission-Roughness-Werte mit sich bringen. Ein IOR von 1 führt beispielsweise dazu, dass das Glas praktisch unsichtbar erscheint. Durch eine Erhöhung der Transmission-Roughness wird das Glas wiederum etwas milchiger.
+
+## Der Wechsel von Eevee zu Cycles
+
+::: column-margin
+Eevee vs. Cycles
+:::
+
+Wie bereits erwähnt, ist Eevee als Render-Engine darauf ausgerichtet, dass Bilder möglichst in Echtzeit erzeugt werden. Dies geschieht auf Kosten von realitätsgetreuen Darstellungen. Blender verfügt nebst Eevee noch über eine zweite Render-Engine namens Cycles. Diese Engine benötigt deutlich mehr Leistung und braucht dadurch auch länger, um die Darstellung von Inhalten zu berechnen. Dabei hängt es stark von den Kapazitäten des jeweiligen Rechners ab, wie lange diese Berechnung 
+dauert. Zusätzlich gibt es noch die Render-Engine «Workbench». Diese ist sehr rudimentär aufgebaut und ist nicht für realistische Darstellungen geeignet.
+
+::: column-margin
+Render-Engine wechseln
+:::
+
+Die Render-Engine lässt sich im Properties-Editor unter dem Reiter für die Render-Properties einstellen. Zuoberst wird dabei unter «*Render Engine*» ein Dropdown-Menü dargestellt, in dem zwischen den verschiedenen Engines gewechselt werden kann. Durch die Auswahl von Cycles wird 
+das Bild anschliessend mittels dieser Engine berechnet.
+
+::: column-margin
+Arbeitsweise von Cycles
+:::
+
+Cycles funktioniert etwas anders als Eevee. Während Eevee ein finales Bild erzeugt hat, erstellt Cycles eine Vielzahl von Bildern (sogenannte Samples) und überlappt diese zu einem finalen Bild. Dies führt zu realistischeren Darstellungen, aber auch dazu, dass es Fehler in der Abbildung gibt. Dies zeigt sich in der Form von weissem Noise, welcher über das Bild gestreut wird. Die einzelnen Punkte dieses Noises werden als Fireflies bezeichnet.
+
+::: column-margin
+Fireflies entfernen
+:::
+
+In Blender gibt es eine eingebaute Option, damit die Fireflies entfernt werden. Diese ist in den Render-Properties unter dem Reiter «*Sampling*» unter dem darunterliegenden Reiter «*Denoising*» zu finden. Dort kann die Einstellung «*Viewport*» aktiviert werden. Dadurch entfernt Blender automatisch die Fireflies im 3D-Viewport-Editor. Wird zudem die Option «*Render*» ausgewählt, geschieht dies auch bei finalen Renders.
+
+::: column-margin
+Pausieren des Renderns
+:::
+
+Durch den Wechsel der Render-Engine erscheint im 3D-Viewport-Editor in der rechten oberen Ecke eine zusätzliche Schaltfläche. Diese gibt jeweils an, ob gerade gerendert wird oder nicht. Sollte das Bild einmal einfrieren und nicht neu gerendert werden, sollte anhand dieser Schaltfläche überprüft werden, ob das Rendern gerade pausiert wurde.
+
+## Rendern mit der GPU in Cycles 

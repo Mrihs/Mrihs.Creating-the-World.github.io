@@ -1,0 +1,112 @@
+---
+title: "37. Rendern"
+editor: visual
+---
+
+::: column-margin
+Renderprozess starten
+:::
+
+Um ein Bild ausgehend von der Perspektive der Kamera in einer Szene zu erhalten, muss dieses Bild gerendert werden. Diese Funktion ist in der Menüleiste «*Render \| Render Image*» aufzufinden, kann allerdings auch mit der Taste {{< kbd F12 >}} gestartet werden. Dadurch öffnet sich ein neues Fenster mit dem Image-Editor. Abhängig von der Leistungsstärke des Computers kann es einen Moment dauern, bis das gerenderte Bild im Image-Editor dargestellt wird.
+
+::: column-margin
+Bild abspeichern
+:::
+
+Das gerenderte Bild kann in der Menüleiste unter «*Image \| Save*» abgespeichert werden. Dabei sind zusätzlich verschiedene Optionen einstellbar. Per Default wird das Bild als PNG-File abgespeichert. Allerdings sind auch andere Bildformate möglich, wie beispielsweise JPEG oder TIFF.
+
+::: column-margin
+Rendern abbrechen
+:::
+
+Während des Renderprozesses kann die Taste {{< kbd esc >}} gedrückt werden, um den Renderprozess abzubrechen. Ebenfalls erscheint während des Renderprozesses in der Fussleiste von Blender ein Fortschrittsbalken inklusive einer Schaltfläche mit einem Kreuz. Durch einen Klick auf dieses Kreuz kann der Renderprozess ebenfalls abgebrochen werden. Wenn der Renderprozess allerdings abgebrochen wird, kann der Prozess nicht später an der Abbruchstelle fortgeführt werden. Es ist also nötig, dass der gesamte Renderprozess am Stück absolviert wird.
+
+::: column-margin
+Was passiert beim Rendern?
+:::
+
+Beim Rendern wird ein Bild erzeugt. Dabei wird für jedes Pixel des Bildes ermittelt, wie dieses auszusehen hat. Dies geschieht anhand mehrerer Samples, die miteinander abgeglichen werden. Die Anzahl der Samples lässt sich im Render-Properties-Reiter des Properties-Editors unter «*Sampling*» definieren. Die Anzahl der Samples hat einen Einfluss auf die Dauer des Renderprozesses. Je mehr Samples benötigt werden, desto länger dauert das Rendern.
+
+![Icon für den Reiter «*Render Properties*».](Images/Chapter_37/Render%20Properties.png){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Dauer des Renderprozesses
+:::
+
+Die ausgewählten Render-Engines unterscheiden sich deutlich in der Zeit, welche sie für das Rendern benötigen. Eevee erzielt jeweils schnellere Render-Ergebnisse, während Cycles in der Regel deutlich länger braucht. Dies liegt daran, dass Cycles das zu erstellende Bild in kleine Unterareale aufteilt – sogenannte Tiles – und diese einzeln nacheinander rendert. Dies führt auch dazu, dass Eevee jeweils das ganze Bild auf einmal erstellt, während man bei Cycles die Erstellung jedes einzelnen Tiles auf dem Bildschirm nachverfolgen kann. Cycles gibt während des Renderprozesses in der oberen linken Ecke des Image-Editors an, wie lange der Renderprozess bereits benötigte, und schätzt die noch benötigte Dauer des Renderprozesses.
+
+::: column-margin
+Auflösung verändern
+:::
+
+Die Grösse und die Auflösung des Bildformats basieren auf den Render-Einstellungen, welche wiederum auch das Format der aktiven Kamera beeinflussen. Im Properties-Editor kann im Reiter «*Output Properties*» definiert werden, wie der Output erzeugt wird. Unter dem Reiter «*Dimensions*» kann die Auflösung des Bildformats anhand der X- und der Y-Achse der Kamera definiert werden. Je höher diese Auflösung ist, desto mehr Pixel werden verwendet, um das Bild zu erzeugen. Dies führt allerdings auch zu einem grösseren Dateiformat des gerenderten Bildes und zu einer längeren Dauer des Renderprozesses.
+
+![Icon für den Reiter «*Output Properties*».](Images/Chapter_37/Output%20Properties.png){#fig-1_2 fig-align="left"}
+
+::: column-margin
+Bildformat verändern
+:::
+
+Durch eine Veränderung der Pixelwerte lediglich anhand einer Achse der Dimensionen wird das Bildformat der Kamera verändert. Wenn etwa ein quadratisches Bild entstehen soll, müssten die Werte der Auflösung für die X- und die Y-Achse identisch sein. Um die Veränderung der Bildschirmauflösung nachvollziehen zu können, empfiehlt es sich, jeweils die Kameraansicht im 3D-Viewport-Editor mit der Taste {{< kbd 0 >}} zu aktivieren.
+
+::: column-margin
+Bezeichnungen für verschiedene Bildschirmauflösungen
+:::
+
+Per Default beträgt die Auflösung 1920 x 1080 Pixel. Eine solche Auflösung wird als «High Definition» (HD) bezeichnet. Durch eine Verdopplung der Anzahl Pixel auf 3840 x 2160 Pixel wird eine Ultra-HD-Auflösung erzielt. Teilweise wird diese Auflösung als «4K» bezeichnet. Die Auflösung 4K wird allerdings in einem anderen Bildformat erzielt. Die Bildauflösung HD und Ultra-HD verwenden ein Bildformat von 16:9. Das heisst, die Auflösung 3840 x 2160 ist ein Vielfaches von 16 x 9. Die Auflösung 4K basiert hingegen auf dem Bildformat 17:9 und entspricht 4096 x 2160. Dadurch beinhaltet 4K in der Breite über 4000 Pixel.
+
+::: column-margin
+Bezeichnung der Auflösung anhand der vertikalen Anzahl Pixel
+:::
+
+Nebst den bisher erwähnten Bezeichnungen wird die Auflösung von Bildern teilweise auch anhand der vertikalen Anzahl Pixel angegeben. Beispielsweise kann auf YouTube die Bildschirmauflösung von Videos anhand dieser Bezeichnung eingestellt werden. Diese Angabe wird jeweils mit dem Kürzel «p» angegeben. Eine Ultra-HD-Auflösung mit 3840 x 2160 Pixeln würde dementsprechend als 2160 p bezeichnet. Ebenso wird die 4K-Auflösung mit 4096 x 2160 Pixeln mit 2160 p bezeichnet.
+
+| Auflösung | Format | Anzahl Pixel | Vertikale Anzahl Pixel |
+|---------------------|-----------------|-----------------|-----------------|
+| **Standard-Definition (SD)** | 16:9 | 720 x 576 | 576 p |
+| **HD-Ready/Half-HD** | 16:9 | 1280 x 720 | 720 p |
+| **High Definition (HD)** | 16:9 | 1920 x 1080 | 1080 p |
+| **Ultra-HD** | 16:9 | 3840 x 2160 | 2160 p |
+| **Ultra-HD-2** | 16:9 | 7680 x 4320 | 4320 p |
+| **Digital Cinema Initiatives (DCI) 4K** | 17:9 | 4096 x 2160 | 2160 p |
+| **Digital Cinema Initiatives (DCI) 8K** | 17:9 | 8192 x 4320 | 4320 p |
+
+::: column-margin
+Transparenter Hintergrund
+:::
+
+Es ist auch möglich, ein transparentes Bild zu Rendern. Dabei handelt es sich um eine Render-Einstellung, welche im Properties-Editor im Reiter «*Render Properties*» vorgenommen werden muss. Im Reiter «*Film*» kann das Kontrollkästchen für «*Transparent*» aktiviert werden. In der gerenderten Ansicht wird die Hintergrund-Welt anschliessend mit einem schachbrettartigen Muster überzogen, um die Transparenz zu signalisieren. Dieses Muster wird nach dem Rendern ebenfalls im Image-Editor angezeigt, um darauf hinzuweisen, dass der Hintergrund transparent ist.
+
+::: column-margin
+Transparente Bilder speichern
+:::
+
+Beim Abspeichern von transparenten Bildern sollte darauf geachtet werden, dass ein Dateiformat verwendet wird, welches Transparenz unterstützt. JPEG unterstützt beispielsweise keine Transparenz, während PNG Transparenz unterstützt. Zudem sollte auch darauf geachtet werden, dass die korrekte Farbeinstellung beim Abspeichern von transparenten Bildern verwendet wird. In der Regel werden die Farbeinstellungen «*BW*» (schwarz-weiss), «*RGB*» (Farben, ohne Transparenz) und «*RGBA*» (Farben, mit Transparenz) angeboten. Für transparente Bilder müsste die Option «*RGBA*» verwendet werden.
+
+## Renderprozess in Cycles beschleunigen
+
+Quelle: <https://www.blenderguru.com/articles/4-easy-ways-to-speed-up-cycles>
+
+::: column-margin
+Renderprozess beschleunigen
+:::
+
+Beim Rendern in Cycles kann es ratsam sein, gewisse Vorkehrungen zu treffen, um den Renderprozess zu beschleunigen. Hierfür gibt es einige Tricks, um dies zu erzielen:
+
+-   GPU statt CPU fürs Rendern verwenden.
+-   Die Auflösung des Bildes reduzieren.
+-   Sampling reduzieren.
+-   Tile-Grösse reduzieren.
+-   Anzahl berechneter Lichtreflexionen reduzieren.
+
+::: column-margin
+Tile-Grösse variieren
+:::
+
+Die Anzahl Pixel, welche in einem Tile erzeugt werden, kann in den Render-Properties unter «*Performance \| Tiles*» definiert werden. Bei der Verwendung der CPU ist eine geringere Grösse der Tiles mit kürzeren Renderzeiten verbunden. Diese Faustregel kann allerdings nicht bei der GPU angewendet werden. Zudem sollten die Anzahl Tiles eine Potenzierung von 2 darstellen (beispielsweise 26 = 64 Pixel pro Tiles).
+
+::: column-margin
+Anzahl Light-Bounces reduzieren
+:::
+
+Der realistische Effekt von Cycles basiert darauf, dass auch Lichtreflexionen, welche sich durch die Reflexion anderer Objekte ergeben, fürs Rendern berücksichtigt werden. Dies führt dazu, dass das Rendern längere Zeit in Anspruch nimmt. In den Render-Properties kann unter «*Light Paths \| Max Bounces*» definiert werden, wie oft das Licht von Oberflächen abprallen kann. Je höher dieser Wert ist, desto mehr Berechnungen müssen beim Rendern durchgeführt werden. Hierbei können die Anzahl berücksichtigter Lichtreflexionen auch für verschiedene Einstellungen («*Glossy*», «*Transparency*», «*Volume*», usw.) einzeln definiert werden.

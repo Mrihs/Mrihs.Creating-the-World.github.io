@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kursübersicht – Creating the World</title>
+<title>37. Rendern – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -88,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../Sites/Overview.html" aria-current="page"> <i class="bi bi-calendar-range" role="img">
+    <a class="nav-link" href="../Sites/Overview.html"> <i class="bi bi-calendar-range" role="img">
 </i> 
 <span class="menu-text">Kursübersicht</span></a>
   </li>  
@@ -279,7 +281,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Kapitel 36</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../Chapters/Chapter_37.qmd">
+    <a class="dropdown-item" href="../Chapters/Chapter_37.html">
  <span class="dropdown-text">Kapitel 37</span></a>
   </li>  
     </ul>
@@ -305,18 +307,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#semesterplan" id="toc-semesterplan" class="nav-link active" data-scroll-target="#semesterplan">Semesterplan</a></li>
-  <li><a href="#skript-kapitel" id="toc-skript-kapitel" class="nav-link" data-scroll-target="#skript-kapitel">Skript-Kapitel:</a></li>
-  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
+  <li><a href="#renderprozess-in-cycles-beschleunigen" id="toc-renderprozess-in-cycles-beschleunigen" class="nav-link active" data-scroll-target="#renderprozess-in-cycles-beschleunigen">Renderprozess in Cycles beschleunigen</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Kursübersicht</h1>
+<h1 class="title">37. Rendern</h1>
 </div>
 
 
@@ -333,216 +333,164 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><img src="..\icons/Logo.png" class="img-fluid"></p>
-<section id="semesterplan" class="level2">
-<h2 class="anchored" data-anchor-id="semesterplan">Semesterplan</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Renderprozess starten</p>
+</div></div><p>Um ein Bild ausgehend von der Perspektive der Kamera in einer Szene zu erhalten, muss dieses Bild gerendert werden. Diese Funktion ist in der Menüleiste «<em>Render | Render Image</em>» aufzufinden, kann allerdings auch mit der Taste <kbd aria-hidden="true">F12</kbd><span class="visually-hidden">F12</span> gestartet werden. Dadurch öffnet sich ein neues Fenster mit dem Image-Editor. Abhängig von der Leistungsstärke des Computers kann es einen Moment dauern, bis das gerenderte Bild im Image-Editor dargestellt wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bild abspeichern</p>
+</div></div><p>Das gerenderte Bild kann in der Menüleiste unter «<em>Image | Save</em>» abgespeichert werden. Dabei sind zusätzlich verschiedene Optionen einstellbar. Per Default wird das Bild als PNG-File abgespeichert. Allerdings sind auch andere Bildformate möglich, wie beispielsweise JPEG oder TIFF.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Rendern abbrechen</p>
+</div></div><p>Während des Renderprozesses kann die Taste <kbd aria-hidden="true">esc</kbd><span class="visually-hidden">esc</span> gedrückt werden, um den Renderprozess abzubrechen. Ebenfalls erscheint während des Renderprozesses in der Fussleiste von Blender ein Fortschrittsbalken inklusive einer Schaltfläche mit einem Kreuz. Durch einen Klick auf dieses Kreuz kann der Renderprozess ebenfalls abgebrochen werden. Wenn der Renderprozess allerdings abgebrochen wird, kann der Prozess nicht später an der Abbruchstelle fortgeführt werden. Es ist also nötig, dass der gesamte Renderprozess am Stück absolviert wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Was passiert beim Rendern?</p>
+</div></div><p>Beim Rendern wird ein Bild erzeugt. Dabei wird für jedes Pixel des Bildes ermittelt, wie dieses auszusehen hat. Dies geschieht anhand mehrerer Samples, die miteinander abgeglichen werden. Die Anzahl der Samples lässt sich im Render-Properties-Reiter des Properties-Editors unter «<em>Sampling</em>» definieren. Die Anzahl der Samples hat einen Einfluss auf die Dauer des Renderprozesses. Je mehr Samples benötigt werden, desto länger dauert das Rendern.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_37/Render Properties.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Icon für den Reiter «<em>Render Properties</em>».
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Dauer des Renderprozesses</p>
+</div></div><p>Die ausgewählten Render-Engines unterscheiden sich deutlich in der Zeit, welche sie für das Rendern benötigen. Eevee erzielt jeweils schnellere Render-Ergebnisse, während Cycles in der Regel deutlich länger braucht. Dies liegt daran, dass Cycles das zu erstellende Bild in kleine Unterareale aufteilt – sogenannte Tiles – und diese einzeln nacheinander rendert. Dies führt auch dazu, dass Eevee jeweils das ganze Bild auf einmal erstellt, während man bei Cycles die Erstellung jedes einzelnen Tiles auf dem Bildschirm nachverfolgen kann. Cycles gibt während des Renderprozesses in der oberen linken Ecke des Image-Editors an, wie lange der Renderprozess bereits benötigte, und schätzt die noch benötigte Dauer des Renderprozesses.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Auflösung verändern</p>
+</div></div><p>Die Grösse und die Auflösung des Bildformats basieren auf den Render-Einstellungen, welche wiederum auch das Format der aktiven Kamera beeinflussen. Im Properties-Editor kann im Reiter «<em>Output Properties</em>» definiert werden, wie der Output erzeugt wird. Unter dem Reiter «Dimensions» kann die Auflösung des Bildformats anhand der X- und der Y-Achse der Kamera definiert werden. Je höher diese Auflösung ist, desto mehr Pixel werden verwendet, um das Bild zu erzeugen. Dies führt allerdings auch zu einem grösseren Dateiformat des gerenderten Bildes und zu einer längeren Dauer des Renderprozesses.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_37/Output Properties.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Icon für den Reiter «<em>Output Properties</em>».
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bildformat verändern</p>
+</div></div><p>Durch eine Veränderung der Pixelwerte lediglich anhand einer Achse der Dimensionen wird das Bildformat der Kamera verändert. Wenn etwa ein quadratisches Bild entstehen soll, müssten die Werte der Auflösung für die X- und die Y-Achse identisch sein. Um die Veränderung der Bildschirmauflösung nachvollziehen zu können, empfiehlt es sich, jeweils die Kameraansicht im 3D-Viewport-Editor mit der Taste <kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span> zu aktivieren.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bezeichnungen für verschiedene Bildschirmauflösungen</p>
+</div></div><p>Per Default beträgt die Auflösung 1920 x 1080 Pixel. Eine solche Auflösung wird als «High Definition» (HD) bezeichnet. Durch eine Verdopplung der Anzahl Pixel auf 3840 x 2160 Pixel wird eine Ultra-HD-Auflösung erzielt. Teilweise wird diese Auflösung als «4K» bezeichnet. Die Auflösung 4K wird allerdings in einem anderen Bildformat erzielt. Die Bildauflösung HD und Ultra-HD verwenden ein Bildformat von 16:9. Das heisst, die Auflösung 3840 x 2160 ist ein Vielfaches von 16 x 9. Die Auflösung 4K basiert hingegen auf dem Bildformat 17:9 und entspricht 4096 x 2160. Dadurch beinhaltet 4K in der Breite über 4000 Pixel.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bezeichnung der Auflösung anhand der vertikalen Anzahl Pixel</p>
+</div></div><p>Nebst den bisher erwähnten Bezeichnungen wird die Auflösung von Bildern teilweise auch anhand der vertikalen Anzahl Pixel angegeben. Beispielsweise kann auf YouTube die Bildschirmauflösung von Videos anhand dieser Bezeichnung eingestellt werden. Diese Angabe wird jeweils mit dem Kürzel «p» angegeben. Eine Ultra-HD-Auflösung mit 3840 x 2160 Pixeln würde dementsprechend als 2160 p bezeichnet. Ebenso wird die 4K-Auflösung mit 4096 x 2160 Pixeln mit 2160 p bezeichnet.</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 30%">
+<col style="width: 22%">
+<col style="width: 23%">
+<col style="width: 23%">
+</colgroup>
 <thead>
 <tr class="header">
-<th>Woche</th>
-<th>Praxis</th>
-<th>Kapitel</th>
-<th>Theorie</th>
-<th>Literatur</th>
-<th>Folien</th>
-<th>Abgabe</th>
+<th>Auflösung</th>
+<th>Format</th>
+<th>Anzahl Pixel</th>
+<th>Vertikale Anzahl Pixel</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1</td>
-<td><p>Die Arbeitsoberfläche von Blender</p>
-<p>Eigenschaften von 3D-Objekten</p></td>
-<td><a href="../Chapters/Chapter_1.html">1</a>, <a href="../Chapters/Chapter_2.html">2</a>, 3, 4, 5, 6, 7, 8, 9</td>
-<td><p>Organisatorisches</p>
-<p>Bedeutung von 3D-Objekten</p></td>
-<td>Tarr et al.&nbsp;(1998)</td>
-<td>Sitzung 1</td>
-<td></td>
+<td><strong>Standard-Definition (SD)</strong></td>
+<td>16:9</td>
+<td>720 x 576</td>
+<td>576 p</td>
 </tr>
 <tr class="even">
-<td>2</td>
-<td>Grundmechanismen der Objektbearbeitung I</td>
-<td>10, 11, 12</td>
-<td></td>
+<td><strong>HD-Ready/Half-HD</strong></td>
+<td>16:9</td>
+<td>1280 x 720</td>
+<td>720 p</td>
+</tr>
+<tr class="odd">
+<td><strong>High Definition (HD)</strong></td>
+<td>16:9</td>
+<td>1920 x 1080</td>
+<td>1080 p</td>
+</tr>
+<tr class="even">
+<td><strong>Ultra-HD</strong></td>
+<td>16:9</td>
+<td>3840 x 2160</td>
+<td>2160 p</td>
+</tr>
+<tr class="odd">
+<td><strong>Ultra-HD-2</strong></td>
+<td>16:9</td>
+<td>7680 x 4320</td>
+<td>4320 p</td>
+</tr>
+<tr class="even">
+<td>**Digital Cinema Initiatives (DCI)</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>3</td>
-<td>Grundmechanismen der Objektbearbeitung II</td>
-<td>13, 14</td>
-<td>Referenzbilder oder Fantasie?</td>
-<td>Brainbridge et al.&nbsp;(2021)</td>
-<td></td>
-<td></td>
+<td>4K**</td>
+<td>17:9</td>
+<td>4096 x 2160</td>
+<td>2160 p</td>
 </tr>
 <tr class="even">
-<td>4</td>
-<td>Objektbearbeitung mit Modifiers</td>
-<td>15, 16</td>
+<td>**Digital Cinema Initiatives (DCI)</td>
 <td></td>
 <td></td>
 <td></td>
-<td>1</td>
 </tr>
 <tr class="odd">
-<td>5</td>
-<td>Materialien</td>
-<td>17, 18, 19, 20, 21</td>
-<td>Visuelle Wahrnehmung von Materialien</td>
-<td>Flemming (2014)</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>Texturen</td>
-<td>22, 23, 24, 25, 26, 27, 28</td>
-<td>Lizenzen &amp; Lizenzarten</td>
-<td></td>
-<td></td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>Physical based Rendering</td>
-<td>29, 30, 31, 32, 33</td>
-<td>Cartoon oder Realismus?</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>Beleuchtung und Welten</td>
-<td>34, 35</td>
-<td>Farbwahrnehmung unter Beleuchtung</td>
-<td>Brainard &amp; Hurlbert (2015)</td>
-<td></td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>9</td>
-<td>Partikel/Haare, Kamera &amp; Rendering</td>
-<td>36, 37, 38</td>
-<td>Dateiformate &amp; Hardware</td>
-<td>Joon (2010)</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>10</td>
-<td>Workflow der Charaktererstellung</td>
-<td>39, 40, 41, 42</td>
-<td>Uncanny Valley Effect</td>
-<td>Kätsyri et al.&nbsp;(2015)</td>
-<td></td>
-<td>4</td>
-</tr>
-<tr class="odd">
-<td>11</td>
-<td>Character Rigging</td>
-<td>43, 44, 45</td>
-<td>Fotorealismus</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>12</td>
-<td>Animationen</td>
-<td>46, 47</td>
-<td>Wahrnehmung von Animationen</td>
-<td>Scholl &amp; Tremoulet (2000)</td>
-<td></td>
-<td>5</td>
-</tr>
-<tr class="odd">
-<td>13</td>
-<td>Blender in VR</td>
-<td></td>
-<td>Virtual Reality</td>
-<td></td>
-<td></td>
-<td>6</td>
-</tr>
-<tr class="even">
-<td>14</td>
-<td>Abschluss</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>8K**</td>
+<td>17:9</td>
+<td>8192 x 4320</td>
+<td>4320 p</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="skript-kapitel" class="level2">
-<h2 class="anchored" data-anchor-id="skript-kapitel">Skript-Kapitel:</h2>
-<ol type="1">
-<li><a href="../Chapters/Chapter_1.html">Vorbereitung von Blender</a></li>
-<li><a href="../Chapters/Chapter_2.html">Die Arbeitsoberfläche des 3D-Viewports</a></li>
-<li>Navigation der Ansicht im 3D-Viewport</li>
-<li>Erste Schritte</li>
-<li>Objektarten</li>
-<li>Primitive Meshes</li>
-<li>Methoden der Objekt-Transformation</li>
-<li>Objekte im Viewport-Display transformieren</li>
-<li>Object- und Edit-Mode</li>
-<li>Einstieg in den Edit-Mode</li>
-<li>Methoden der Objektbearbeitung im Edit-Mode</li>
-<li>Hilfestellungen für die Objektbearbeitung</li>
-<li>Tutorial: Erstellen eines Glases</li>
-<li>Objekterstellung mittels Modifiern</li>
-<li>Eigenschaften innerhalb eines Meshes definieren</li>
-<li>Materialien, Texturen und Shader</li>
-<li>Materialien</li>
-<li>Der Shader-Editor</li>
-<li>Grundlegende Eigenschaften von Materialien</li>
-<li>Tutorial: Strandball</li>
-<li>Texturen</li>
-<li>UVs</li>
-<li>Texturen zu einem Material hinzufügen</li>
-<li>Texturen für Parameter verwenden</li>
-<li>Welche Bilder eignen sich als Texturen?</li>
-<li>Arten von Texturen</li>
-<li>Tutorial: Einen Hammer texturieren</li>
-<li>Displacement mit dem Displacement-Modifier erstellen</li>
-<li>Erstellen von Landschaften</li>
-<li>Tutorial: Erstellen einer Düne</li>
-<li>Parameter im Principled-BSDF-Shader</li>
-<li>Der Wechsel von Eevee zu Cycles am Beispiel von Glas</li>
-<li>Lichtquellen in einer Szene</li>
-<li>Lichtobjekte</li>
-<li>Welten</li>
-<li>Kamera</li>
-<li>Rendern</li>
-<li>Tutorial: Ein Glas mit Wasser erstellen</li>
-<li>Bäume mittels Add-on erstellen</li>
-<li>Workflows der Charaktererstellung</li>
-<li>Character-Modeling</li>
-<li>Tutorial: Eine Cartoon-Katze als Charakter erstellen</li>
-<li>Was ist Rigging?</li>
-<li>Objekte mit Armaturen verformen</li>
-<li>Charakter-Rigging</li>
-<li>Vom Bild zur Animation</li>
-<li>Animationen erstellen</li>
-<li>Animationen verfeinern</li>
-<li>Animationen rendern</li>
-</ol>
-</section>
-<section id="literatur" class="level2">
-<h2 class="anchored" data-anchor-id="literatur">Literatur</h2>
-<p>Brainard, D. H., &amp; Hurlbert, A. C. (2015). Colour vision: understanding# TheDress.&nbsp;<em>Current Biology</em>,&nbsp;<em>25</em>(13), R551-R554.</p>
-<p>Bainbridge, W. A., Pounder, Z., Eardley, A. F., &amp; Baker, C. I. (2021). Quantifying Aphantasia through drawing: Those without visual imagery show deficits in object but not spatial memory.&nbsp;<em>Cortex</em>,&nbsp;<em>135</em>, 159-172.</p>
-<p>Fleming, R. W. (2014). Visual perception of materials and their properties.&nbsp;<em>Vision research</em>,&nbsp;<em>94</em>, 62-75.</p>
-<p>Joon, J. S. (2010, August). Principles of photorealism to develop photorealistic visualisation for interface design: A review. In&nbsp;<em>2010 Seventh International Conference on Computer Graphics, Imaging and Visualization</em>&nbsp;(pp.&nbsp;17-25). IEEE.</p>
-<p>Kätsyri, J., Förger, K., Mäkäräinen, M., &amp; Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses: support for perceptual mismatch as one road to the valley of eeriness.&nbsp;<em>Frontiers in psychology</em>,&nbsp;<em>6</em>, 390.</p>
-<p>Scholl, B. J., &amp; Tremoulet, P. D. (2000). Perceptual causality and animacy. <em>Trends in cognitive sciences, 4</em>(8), 299-309.</p>
-<p>Tarr, M. J., Williams, P., Hayward, W. G., &amp; Gauthier, I. (1998). Three-dimensional object recognition is viewpoint dependent.&nbsp;<em>Nature neuroscience</em>,&nbsp;<em>1</em>(4), 275-277.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Transparenter Hintergrund</p>
+</div></div><p>Es ist auch möglich, ein transparentes Bild zu Rendern. Dabei handelt es sich um eine Render-Einstellung, welche im Properties-Editor im Reiter «<em>Render Properties</em>» vorgenommen werden muss. Im Reiter «<em>Film</em>» kann das Kontrollkästchen für «Transparent» aktiviert werden. In der gerenderten Ansicht wird die Hintergrund-Welt anschliessend mit einem schachbrettartigen Muster überzogen, um die Transparenz zu signalisieren. Dieses Muster wird nach dem Rendern ebenfalls im Image-Editor angezeigt, um darauf hinzuweisen, dass der Hintergrund transparent ist.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Transparente Bilder speichern</p>
+</div></div><p>Beim Abspeichern von transparenten Bildern sollte darauf geachtet werden, dass ein Dateiformat verwendet wird, welches Transparenz unterstützt. JPEG unterstützt beispielsweise keine Transparenz, während PNG Transparenz unterstützt. Zudem sollte auch darauf geachtet werden, dass die korrekte Farbeinstellung beim Abspeichern von transparenten Bildern verwendet wird. In der Regel werden die Farbeinstellungen «<em>BW</em>» (schwarz-weiss), «<em>RGB</em>» (Farben, ohne Transparenz) und «<em>RGBA</em>» (Farben, mit Transparenz) angeboten. Für transparente Bilder müsste die Option «<em>RGBA</em>» verwendet werden.</p>
+<section id="renderprozess-in-cycles-beschleunigen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="renderprozess-in-cycles-beschleunigen">Renderprozess in Cycles beschleunigen</h2>
+<p>Quelle: <a href="https://www.blenderguru.com/articles/4-easy-ways-to-speed-up-cycles" class="uri">https://www.blenderguru.com/articles/4-easy-ways-to-speed-up-cycles</a></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Renderprozess beschleunigen</p>
+</div></div><p>Beim Rendern in Cycles kann es ratsam sein, gewisse Vorkehrungen zu treffen, um den Renderprozess zu beschleunigen. Hierfür gibt es einige Tricks, um dies zu erzielen:</p>
+<ul>
+<li>GPU statt CPU fürs Rendern verwenden.</li>
+<li>Die Auflösung des Bildes reduzieren.</li>
+<li>Sampling reduzieren.</li>
+<li>Tile-Grösse reduzieren.</li>
+<li>Anzahl berechneter Lichtreflexionen reduzieren.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Tile-Grösse variieren</p>
+</div></div><p>Die Anzahl Pixel, welche in einem Tile erzeugt werden, kann in den Render-Properties unter «<em>Performance | Tiles</em>» definiert werden. Bei der Verwendung der CPU ist eine geringere Grösse der Tiles mit kürzeren Renderzeiten verbunden. Diese Faustregel kann allerdings nicht bei der GPU angewendet werden. Zudem sollten die Anzahl Tiles eine Potenzierung von 2 darstellen (beispielsweise 26 = 64 Pixel pro Tiles).</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Anzahl Light-Bounces reduzieren</p>
+</div></div><p>Der realistische Effekt von Cycles basiert darauf, dass auch Lichtreflexionen, welche sich durch die Reflexion anderer Objekte ergeben, fürs Rendern berücksichtigt werden. Dies führt dazu, dass das Rendern längere Zeit in Anspruch nimmt. In den Render-Properties kann unter «<em>Light Paths | Max Bounces</em>» definiert werden, wie oft das Licht von Oberflächen abprallen kann. Je höher dieser Wert ist, desto mehr Berechnungen müssen beim Rendern durchgeführt werden. Hierbei können die Anzahl berücksichtigter Lichtreflexionen auch für verschiedene Einstellungen («<em>Glossy</em>», «<em>Transparency</em>», «<em>Volume</em>», usw.) einzeln definiert werden.</p>
 
 
 </section>

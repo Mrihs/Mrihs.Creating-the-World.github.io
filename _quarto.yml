@@ -96,6 +96,8 @@ website:
             text: Kapitel 35
           - href: Chapters/Chapter_36.qmd
             text: Kapitel 36
+          - href: Chapters/Chapter_37.qmd
+            text: Kapitel 37
       - href: about.qmd
         icon: info-circle
         text: Über

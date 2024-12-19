@@ -1,0 +1,88 @@
+---
+title: "36. Kamera"
+editor: visual
+---
+
+::: column-margin
+Kameras
+:::
+
+Mit den bisher besprochenen Inhalten können komplexe Szenen erstellt und in Blender betrachtet werden. Durch das finale Rendern der Szenen können Bilder oder Filme erstellt werden, welche auch in anderen Programmen betrachtet werden können. Die Erstellung dieser Bilder und Filme geht von der Kamera aus, welche jeweils in einer Szene platziert wird und auch in der Default-Szene vorzufinden ist.
+
+::: column-margin
+Kamera-Objekttyp
+:::
+
+Falls eine neue Kamera innerhalb einer Szene benötigt wird, kann diese jederzeit im «*Add*»-Menü unter «*Camera*» hinzugefügt werden. Die Kamera stellt eine eigene Objektart dar. Um die Einstellungen der Kamera anzupassen, kann im Properties-Editor der Reiter «*Object Data Properties*» ausgewählt werden. Für die Kameras wird ein anderes Symbol als bei einem Mesh angezeigt, um zu verdeutlichen, dass es sich um eine andere Objektart handelt. Um den Einfluss der Kameraeinstellungen besser nachvollziehen zu können, empfiehlt es sich, die Kamera als Ansicht im 3D-Viewport mit der Taste {{< kbd 0 >}} auszuwählen.
+
+![Icon für den Reiter «*Object Data Properties*» bei einer Kamera.](Images/Chapter_36/Camera.png){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Kameralinsen
+:::
+
+In den Object-Data-Properties kann im ersten Reiter «*Lens*» die Linse der Kamera angepasst werden. Je nach Art der Kameralinse werden die Objekte innerhalb einer Szene unterschiedlich dargestellt. Hierfür stehen drei verschiedene Ansichten zur Verfügung:
+
+-   «Perspective»
+-   «Orthographic»
+-   «Panoramic»
+
+::: column-margin
+Perspektivische Kameralinse
+:::
+
+Die perspektivische Linse entspricht der perspektivischen Ansicht, die im 3D-Viewport-Editor verwendet werden kann. Dabei werden tiefenperspektivische Inhalte berücksichtigt. Dies hat zur Folge, dass Objekte zunehmend kleiner dargestellt werden, je weiter weg sie sich von der Kamera befinden. Abbildung 2 zeigt den Standardwürfel aus der Kameraansicht mit einer perspektivischen Linse. Obwohl die Edges des oberen Faces gleich lang sind, werden sie durch die perspektivische Linse unterschiedlich lang dargestellt.
+
+![Die Default-Szene aus der Sicht der Kamera.](Images/Chapter_36/Default_Scene.png){#fig-1_2 fig-align="left"}
+
+::: column-margin
+Orthografische Kameralinse
+:::
+
+Die orthografische Linse entspricht der orthografischen Ansicht, die im 3D-Viewport-Editor verwendet werden kann. Tiefenperspektivische Inhalte werden dabei nicht berücksichtigt. Dies hat zur Folge, dass Objekte mit derselben Grösse gleich gross dargestellt werden, unabhängig von der Distanz zur Kamera. Abbildung 3 zeigt den Standardwürfel mit einer orthografischen Kameralinse. Da die Tiefenperspektive nicht berücksichtigt wird, sind die Edges gleich lang dargestellt.
+
+![Die Default-Szene aus einer orthografischen Kameraperspektive.](Images/Chapter_36/Default_Scene_Otho.png){#fig-1_3 fig-align="left"}
+
+::: column-margin
+Panoramische Kameralinse
+:::
+
+Mithilfe der panoramischen Kameralinse können Panoramabilder erstellt werden. Diese Option ist lediglich in der Render-Engine Cycles verfügbar. Dabei wird ausgehend von der Kameraposition ein Panoramabild erstellt. Mithilfe des Dropdown-Menüs «*Panorama Type*» können verschiedene Formen von Panoramabildern ausgewählt werden.
+
+::: column-margin
+Sichtfeld der Kamera
+:::
+
+Mittels der Zeile «*Focal Length*» kann mit der Kamera hinein- oder hinausgezoomt werden. Dadurch wird das Blickfeld von der Kamera vergrössert oder verkleinert. Durch einen höheren Wert für die Focal-Length wird hineingezoomt und mit einem tieferen Wert wird hinausgezoomt. Alternativ kann die «*Lens Unit*» von «*Millimeters*» auf «*Field of View*» umgestellt werden. Dadurch kann ein Winkel für die Breite des Sichtfelds angegeben werden.
+
+::: column-margin
+Wie weit reicht die Kamera?
+:::
+
+Die Kamera erfasst nicht alle Inhalte, welche sich in ihrem Sichtfeld befinden. Wenn Objekte zu nah oder zu weit von der Kamera entfernt sind, werden diese von der Kamera nicht berücksichtigt – unabhängig davon, wie gross und deutlich ersichtlich die Objekte eigentlich sind. Standardmässig werden Objekte, welche näher als 0.1 Meter vor der Kamera liegen, und Objekte, die über 100 Meter von der Kamera entfernt sind, nicht berücksichtigt. Diese Werte können allerdings in den Zeilen «*Clip Start*» und «*End*» verändert werden.
+
+::: column-margin
+Tiefenschärfe definieren
+:::
+
+Innerhalb des Reiters «*Depth of Field*» kann die Tiefenschärfe bearbeitet werden, sofern diese Option aktiviert wurde. Dabei kann die Tiefenschärfe entweder mittels «*Focus Distance*» auf Objekte mit einer bestimmten Distanz zur Kamera oder mit der Option «*Focus on Object*» direkt passend auf ein Objekt fokussiert werden.
+
+::: column-margin
+Kamera auf die Ansicht ausrichten
+:::
+
+Um die Kamera im Raum auszurichten, kann ihre Position und ihre Rotation wie bei anderen Objekten bearbeitet werden. Eine alternative Bearbeitungsform besteht darin, die Kamera an die Ansicht im 3D-Viewport anzupassen. Hierfür muss zunächst die Kameraansicht mit der Taste {{< kbd 0 >}} ausgewählt werden. In der Sidebar kann unter dem Reiter «*View*» unter «*View Lock*» die Option «*Camera to View*» aktiviert werden. Durch diese Einstellung wird die Kamera nun an die eigene Ansicht gekoppelt. Bei einer Veränderung der Ansicht wird dementsprechend automatisch die Kamera verschoben und rotiert. Anhand der roten Umrandung des Kamerafelds ist jeweils ersichtlich, dass die Option «*Camera to View*» aktiviert ist. Um die Ansicht verändern zu können, ohne die Kamera zu verschieben, muss die Option «*Camera to View*» wieder deaktiviert werden.
+
+:::: column-margin
+Kamera auf aktuelle Ansicht umsetzen
+:::
+
+Die beste Ansicht für eine Kamera zu finden, ist manchmal schwierig. Teilweise findet man während des Bearbeitungsprozesses plötzlich eine Ansicht, die besonders für die Kameraansicht geeignet wäre. In solchen Fällen kann die Kamera direkt zur aktuellen Ansicht umgeändert werden, indem die Tastenkombination {{< kbd Ctrl >}} + {{< kbd Alt >}} + {{< kbd 0 >}} gedrückt wird.
+
+::: column-margin
+Aktive Kamera auswählen
+:::
+
+Sollten sich innerhalb einer Szene mehrere Kameras befinden, kann lediglich eine davon als aktive Kamera verwendet werden, um Szenen zu rendern. Im Properties-Editor innerhalb des Reiters «*Scene Properties*» kann jeweils nachverfolgt werden, welche Kamera die Szene rendern wird. Innerhalb des Reiters «*Scene*» wird in der Zeile «*Camera*» das entsprechende Kamera-Objekt aufgeführt, oder kann bei Bedarf gewechselt werden.
+
+![Icon für den Reiter «*Scene Properties*».](Images/Chapter_36/Scene%20Properties.png){#fig-1_4 fig-align="left"}

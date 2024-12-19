@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>35. Welten – Creating the World</title>
+<title>36. Kamera – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -277,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Kapitel 35</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../Chapters/Chapter_36.qmd">
+    <a class="dropdown-item" href="../Chapters/Chapter_36.html">
  <span class="dropdown-text">Kapitel 36</span></a>
   </li>  
     </ul>
@@ -298,22 +298,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Auf dieser Seite</h2>
-   
-  <ul>
-  <li><a href="#hdris-hinzufügen" id="toc-hdris-hinzufügen" class="nav-link active" data-scroll-target="#hdris-hinzufügen">HDRIs hinzufügen</a></li>
-  <li><a href="#einen-prozeduralen-sternenhimmel-erstellen" id="toc-einen-prozeduralen-sternenhimmel-erstellen" class="nav-link" data-scroll-target="#einen-prozeduralen-sternenhimmel-erstellen">Einen prozeduralen Sternenhimmel erstellen</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">35. Welten</h1>
+<h1 class="title">36. Kamera</h1>
 </div>
 
 
@@ -332,145 +325,99 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Verwendung von Licht beim Rendern</p>
-</div></div><p>Mithilfe der Lichtobjekte ist es nun möglich, die Szenen in Blender mit Licht auszustatten. Damit der Einfluss dieser Lichtobjekte sichtbar ist, muss allerdings der Rendered-Viewport-Shading-Modus im 3D-Viewport-Editor ausgewählt werden. Im Material-Preview-Viewport-Shading-Modus werden diese Lichtobjekte per Default nicht mit angezeigt.</p>
+<p>Kameras</p>
+</div></div><p>Mit den bisher besprochenen Inhalten können komplexe Szenen erstellt und in Blender betrachtet werden. Durch das finale Rendern der Szenen können Bilder oder Filme erstellt werden, welche auch in anderen Programmen betrachtet werden können. Die Erstellung dieser Bilder und Filme geht von der Kamera aus, welche jeweils in einer Szene platziert wird und auch in der Default-Szene vorzufinden ist.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kamera-Objekttyp</p>
+</div></div><p>Falls eine neue Kamera innerhalb einer Szene benötigt wird, kann diese jederzeit im «<em>Add</em>»-Menü unter «<em>Camera</em>» hinzugefügt werden. Die Kamera stellt eine eigene Objektart dar. Um die Einstellungen der Kamera anzupassen, kann im Properties-Editor der Reiter «<em>Object Data Properties</em>» ausgewählt werden. Für die Kameras wird ein anderes Symbol als bei einem Mesh angezeigt, um zu verdeutlichen, dass es sich um eine andere Objektart handelt. Um den Einfluss der Kameraeinstellungen besser nachvollziehen zu können, empfiehlt es sich, die Kamera als Ansicht im 3D-Viewport mit der Taste <kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span> auszuwählen.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_35/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_36/Camera.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Eine gerenderte Szene.
+Abbildung&nbsp;1: Icon für den Reiter «<em>Object Data Properties</em>» bei einer Kamera.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Der gerenderte Hintergrund</p>
-</div></div><p>Die Abbildung 1, welche auch in der Datei «<em>Dune</em>» zu finden ist, zeigt eine gerenderte Szene, so wie sie auch im Rendered-Viewport-Shading-Modus dargestellt wird. Das Objekt zeigt eine Düne mit einer Sandtextur, welche von einer Sonne beleuchtet wird. Dahinter verbirgt sich ein leerer, grauer Hintergrund. Dabei handelt es sich um den Standardhintergrund, der in einer Szene per Default eingestellt ist. Dieser Hintergrund bildet die sogenannte Welt der Szene ab.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Die Unendlichkeit der Welt</p>
-</div></div><p>Die Welt stellt im Grunde genommen eine unendlich grosse Kugel dar, welche um die Szene gespannt wird. Das Ende dieser Welt kann somit nie erreicht werden. Man könnte sich dies auch als eine UV-Sphere vorstellen, welche so stark vergrössert wird, dass sie die gesamte Szene in sich beheimatet. Im Unterschied zur Welt, wäre die UV-Sphere allerdings endlich, da sie einen klar definierten Durchmesser innehat, welcher die Szene umfasst. Die Welt hingegen, stellt ein unendliches Konstrukt dar.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>World-Properties</p>
-</div></div><p>Für die Einstellung der Welt findet sich im Properties-Editor unter dem Reiter «<em>World Properties</em>» die Möglichkeit, Eigenschaften der Welt zu definieren. Allerdings kann diese Einstellung der Welt auch im Shader-Editor vorgenommen werden. Im Shader-Editor können nicht nur Materialien, sondern auch die Welt und Linien bearbeitet werden.</p>
-<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_35/1. Icon_World_Properties.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Icon des «<em>World Properties</em>»-Reiters im Properties-Editor.
-</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Weltbearbeitung im Shader-Editor öffnen</p>
-</div></div><p>In der linken oberen Ecke des Shader-Editors, direkt neben dem Dropdown-Menü zur Auswahl des Editors, findet sich ein weiteres Dropdown-Menü, welches standardmässig auf «<em>Object</em>» eingestellt ist. Unter dieser Auswahl werden jeweils die Materialien des Objekts dargestellt und bearbeitet. Wird im entsprechenden Dropdown-Menü allerdings «<em>World</em>» ausgewählt, werden die Einstellungen der Welt dargestellt und können bearbeitet werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Background-Node</p>
-</div></div><p>Standardmässig wird für die Welt der «<em>Background</em>»-Shader verwendet. Dieser verfügt lediglich über die Einstellungen «<em>Color</em>» und «<em>Strength</em>». Bei der Farbe handelt es sich um die Hintergrundfarbe, welche in der gerenderten Ansicht dargestellt wird. Diese Farbe sendet zudem auch Lichtstrahlen aus. Das Ausmass, in dem Licht ausgestrahlt werden soll, kann mit der Einstellung «<em>Strength</em>» definiert werden. Indem diese beiden Parameter variiert werden, können bereits unterschiedliche Hintergrundbeleuchtungen erzielt werden.</p>
-<section id="hdris-hinzufügen" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="hdris-hinzufügen">HDRIs hinzufügen</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>HDRI</p>
-</div></div><p>Welten können, so wie auch bei Materialien, Texturen hinzugefügt werden. Dabei werden allerdings in der Regel besondere Arten von Texturen verwendet, sogenannte HDRIs. HDRI steht für «<em>High Dynamic Range Image</em>» und beschreibt Bilder, welche sehr hohe Helligkeitsunterschiede innerhalb des Bildes aufweisen. Dies ist besonders zur Darstellung von Welten geeignet.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>HDRIs im Internet beziehen</p>
-</div></div><p>HDRIs können so wie auch Texturen im Internet bezogen werden. Teilweise bieten die Datenbanken, welche Texturen anbieten, in einer gesonderten Kategorie zusätzlich HDRIs an. Etwa die Webseiten <a href="https://polyhaven.com/" class="uri">https://polyhaven.com/</a> und <a href="https://ambientcg.com/" class="uri">https://ambientcg.com/</a> beinhalten gesonderte Kategorien für HDRIs. Oftmals werden verschiedene Auflösungen angeboten. Bei den HDRIs, welche für die Hintergrundwelt verwendet werden, empfiehlt es sich, eine etwas grössere Auflösung zu verwenden, da die entsprechenden Bilder anschliessend über die gesamte Welt gezogen werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>HDRI in Blender einfügen</p>
-</div></div><p>Die HDRIs können nun im Shader-Editor als Textur hinzugefügt werden. Hierfür kann der Background-Shader-Node ausgewählt werden und die Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> gedrückt werden. Dadurch werden automatisch ein Texture-Node, ein Mapping-Node und ein Texture-Coordinate-Node hinzugefügt. Anders als bei den Materialien wird allerdings kein Image-Texture-Node hinzugefügt, sondern ein Environment-Texture-Node. Dieser fungiert ähnlich wie der Image-Texture-Node, ist allerdings darauf angepasst, dass er die runde Welt überspannt, statt ein Objekt. Im «<em>Add</em>»-Menü kann dieser Node unter «<em>Texture | Environment Texture</em>» hinzugefügt werden. Innerhalb dieses Environment-Texture-Nodes kann anschliessend das HDRI-Bild geöffnet werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Welten rotieren und verschieben</p>
-</div></div><p>Abbildung 3 zeigt eine gerenderte Szene, deren Welt auf einem HDRI basiert. Hierfür wurde das HDRI «<em>Sky-Only HDRI 009</em>» von der Website <a href="https://ambientcg.com/" class="uri">https://ambientcg.com/</a> verwendet. Mittels des Mapping-Nodes kann die Welt zusätzlich angepasst werden. Durch eine Rotation entlang der Z-Achse kann die Textur etwa innerhalb der Szene gedreht werden, oder mittels einer Veränderung der Position entlang der Z-Achse kann der Horizont in der Höhe etwas verschoben werden.</p>
-<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_35/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Eine gerenderte Szene mit einem HDRI-Bild als Welt.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="einen-prozeduralen-sternenhimmel-erstellen" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="einen-prozeduralen-sternenhimmel-erstellen">Einen prozeduralen Sternenhimmel erstellen</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Prozedurale Welten erstellen</p>
-</div></div><p>Welten können, so wie bereits bei den Texturen betrachtet, auch prozedural aufgebaut werden. So kann etwa ein Sternenhimmel erstellt werden, ohne dass eine Bilddatei dafür benötigt wird. Abbildung 4 zeigt ein Beispiel für eine gerenderte Szene, die im Hintergrund einen solchen prozedural erstellen Sternenhimmel beinhaltet.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Noise-Textur hinzufügen</p>
-</div></div><p>Um einen solchen Effekt zu erzielen, kann eine Noise-Textur verwendet werden. Diese kann im «<em>Add</em>»-Menü des Shader-Editors unter «<em>Texture | Noise Texture</em>» hinzugefügt werden. Diese Noise Textur kann anschliessend ausgewählt werden und mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> ein Mapping- und ein Texture-Coordinate-Node hinzugefügt werden. Die Noise-Textur erzeugt ein zufälliges schwarz-weisses Bild, bestehend aus Noise.</p>
-<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_35/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4: Eine gerenderte Szene mit einem prozedural erstellten Sternenhimmel als Hintergrundwelt.
-</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Parameter des Noise-Texture-Nodes</p>
-</div></div><p>Der Noise-Texture-Node beinhaltet verschiedene Möglichkeiten, um bearbeitet zu werden. Die entsprechenden Parameter sind:</p>
+<p>Kameralinsen</p>
+</div></div><p>In den Object-Data-Properties kann im ersten Reiter «<em>Lens</em>» die Linse der Kamera angepasst werden. Je nach Art der Kameralinse werden die Objekte innerhalb einer Szene unterschiedlich dargestellt. Hierfür stehen drei verschiedene Ansichten zur Verfügung:</p>
 <ul>
-<li>«<strong><em>Scale</em></strong>»: Wie stark soll das resultierende Bild mit dem Noise skaliert werden? Je grösser der Wert, desto grösser wird das dargestellte Bild und desto detaillierter werden die dargestellten Inhalte. Gleichzeitig benötigt ein höherer Wert allerdings auch mehr Leistung.</li>
-<li>«<strong><em>Detail</em></strong>»: Mittels des Detail-Parameters kann definiert werden, dass der Noise detaillierter dar gestellt wird. Auch dies geht zulasten der Computerleistung.</li>
-<li>«<strong><em>Roughness</em></strong>»: Mittels der Roughness-Einstellung kann definiert werden, wie sehr die Übergänge des Noises ineinander überfliessen sollen. Je höher der Roughness-Wert, desto weicher und fliessender werden die Übergänge.</li>
-<li>«<strong><em>Distortion</em></strong>»: Mittels des Distortion-Parameters kann der Noise zusätzlich verzogen werden. Je höher dieser Wert, desto mehr wird der Noise verzogen.</li>
+<li>«Perspective»</li>
+<li>«Orthographic»</li>
+<li>«Panoramic»</li>
 </ul>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>4D-Option, um mittels des W-Werts den Noise zu variieren</p>
-</div></div><p>Zusätzlich verfügt der Noise-Texture-Node über ein Dropdown-Menü, mit dem eine Dimensionalität der Noise-Textur ausgewählt werden kann. In der Regel wird die Option «<em>3D</em>» ausgewählt. Die Option «<em>4D</em>» hat allerdings den Vorteil, dass ein zusätzliches «<em>W</em>» im Noise-Texture-Node hinzugefügt wird. Mithilfe dieses Parameters kann zwischen verschiedenen Abstufungen des Noises gewählt werden. Dadurch können unkompliziert andere Ergebnisse in dem prozedural erstellten Sternenhimmel erzielt werden, lediglich indem dieser Parameter variiert wird.</p>
-<p>Für das Beispiel aus der Abbildung 4 wurde die Dimensionalität «<em>4D</em>» verwendet und der Parameter «<em>W</em>» auf 15.2 eingestellt. Zudem wurde der Faktor «<em>Scale</em>» auf den Wert 10 und die «<em>Roughness</em>» auf 1 erhöht. Im Mapping-Node wurde die Skalierung ebenfalls auf den Wert 15 entlang aller drei Achsen erhöht.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Color-Ramp hinzufügen</p>
-</div></div><p>Um den Noise der Noise-Textur nun in einen Sternenhimmel zu verwandeln, wird eine Color-Ramp benötigt. Diese ist im «<em>Add</em>»-Menü unter «<em>Converter | ColorRamp</em>» zu finden. Der Fac-Output des Noise-Texture-Nodes kann anschliessend mit dem Fac-Input des Color-Ramp-Nodes verbunden werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Wieso wird der Fac-Output der Noise-Textur verwendet?</p>
-</div></div><p>Der Noise-Texture-Node kann sowohl farbigen Noise als auch schwarz-weissen Noise erzeugen. Mittels des Color-Outputs kann die farbige Version des Noises verwendet werden, mittels des Fac-Outputs kann die schwarz-weisse Version des Noises verwendet werden. Die schwarz-weisse Version des Noises hat den Vorteil, dass die Schwarz-weiss-Abstufungen direkt als Faktor verwendet werden können. Die Color-Ramp kann auch mit farbigen Inputs umgehen und diese umwandeln, allerdings werden die Farben dann anders über die Colo-Ramp aufgespannt. Schlussendlich können allerdings beide Outputs verwendet werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Viewer-Node zur Color-Ramp hinzufügen</p>
-</div></div><p>Innerhalb der Color-Ramp kann anschliessend der Noise zum Sternenhimmel umgewandelt werden. Um diese Prozesse zu verstehen, empfiehlt es sich, bei gedrückter Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> die Color-Ramp auszuwählen, um den Viewer-Node zu öffnen und mit der Color-Ramp zu verbinden. Dadurch kann der Effekt der Color-Ramp im 3D-Viewport-Editor betrachtet werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Schwarzanteil durch die Color-Ramp erhöhen</p>
-</div></div><p>Innerhalb der Color-Ramp werden nun die schwarz-weissen Abstufungen der Noise-Textur entlang der Farbachse aufgespannt. Schwarze Farben befinden sich am linken Ende der Farbachse und weisen den Faktor 0 auf, während weisse Farben am rechten Ende der Farbachse zu finden sind und den Faktor 1 aufweisen. Wenn nun der schwarze Farbmarker am linken Ende nach rechts verschoben wird, beispielsweise auf die Position 0.732, werden alle Schwarz-weiss-Abstufungen, welche für einen Wert unterhalb von 0.732 stehen, konstant schwarz gehalten. Die Werte rechts daneben, welche zwischen dem schwarzen und dem weissen Farbmarken liegen, werden graduell neu berechnet. Visuell hat dies die Folge, dass ein Grossteil der Noise-Textur nun schwarz geworden ist.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Weissanteil durch die Color-Ramp erhöhen</p>
-</div></div><p>Damit nun vereinzelt weisse Punkte in der Noise-Textur erscheinen, muss der zweite, weisse Farbmarker am rechten Ende etwas nach links verschoben werden. Wird dieser beispielsweise auf die Position 0.795 gesetzt, werden alle Faktor-Werte der Noise-Textur, welche über 0.795 liegen, weiss eingefärbt. Durch diese Einstellung sollte sich nun ein schwarzer Himmel mit vereinzelten weissen Punkten ergeben. Dieser kann nun als Sternenhimmel verwendet werden, indem der Color-Output der Color-Ramp mit dem Color-Input des Background-Nodes verbunden wird. Durch einen Klick auf den Background-Node bei gedrückter Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> wird der Viewer-Node zudem wieder geschlossen.</p>
-<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<p>Perspektivische Kameralinse</p>
+</div></div><p>Die perspektivische Linse entspricht der perspektivischen Ansicht, die im 3D-Viewport-Editor verwendet werden kann. Dabei werden tiefenperspektivische Inhalte berücksichtigt. Dies hat zur Folge, dass Objekte zunehmend kleiner dargestellt werden, je weiter weg sie sich von der Kamera befinden. Abbildung 2 zeigt den Standardwürfel aus der Kameraansicht mit einer perspektivischen Linse. Obwohl die Edges des oberen Faces gleich lang sind, werden sie durch die perspektivische Linse unterschiedlich lang dargestellt.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_35/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_36/Default_Scene.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5: Node-System, um einen prozeduralen Sternenhimmel als Welt zu erstellen.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Die Default-Szene aus der Sicht der Kamera.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Orthografische Kameralinse</p>
+</div></div><p>Die orthografische Linse entspricht der orthografischen Ansicht, die im 3D-Viewport-Editor verwendet werden kann. Tiefenperspektivische Inhalte werden dabei nicht berücksichtigt. Dies hat zur Folge, dass Objekte mit derselben Grösse gleich gross dargestellt werden, unabhängig von der Distanz zur Kamera. Abbildung 3 zeigt den Standardwürfel mit einer orthografischen Kameralinse. Da die Tiefenperspektive nicht berücksichtigt wird, sind die Edges gleich lang dargestellt.</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_36/Default_Scene_Otho.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Die Default-Szene aus einer orthografischen Kameraperspektive.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Panoramische Kameralinse</p>
+</div></div><p>Mithilfe der panoramischen Kameralinse können Panoramabilder erstellt werden. Diese Option ist lediglich in der Render-Engine Cycles verfügbar. Dabei wird ausgehend von der Kameraposition ein Panoramabild erstellt. Mithilfe des Dropdown-Menüs «<em>Panorama Type</em>» können verschiedene Formen von Panoramabildern ausgewählt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Sichtfeld der Kamera</p>
+</div></div><p>Mittels der Zeile «<em>Focal Length</em>» kann mit der Kamera hinein- oder hinausgezoomt werden. Dadurch wird das Blickfeld von der Kamera vergrössert oder verkleinert. Durch einen höheren Wert für die Focal-Length wird hineingezoomt und mit einem tieferen Wert wird hinausgezoomt. Alternativ kann die «<em>Lens Unit</em>» von «<em>Millimeters</em>» auf «<em>Field of View</em>» umgestellt werden. Dadurch kann ein Winkel für die Breite des Sichtfelds angegeben werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Wie weit reicht die Kamera?</p>
+</div></div><p>Die Kamera erfasst nicht alle Inhalte, welche sich in ihrem Sichtfeld befinden. Wenn Objekte zu nah oder zu weit von der Kamera entfernt sind, werden diese von der Kamera nicht berücksichtigt – unabhängig davon, wie gross und deutlich ersichtlich die Objekte eigentlich sind. Standardmässig werden Objekte, welche näher als 0.1 Meter vor der Kamera liegen, und Objekte, die über 100 Meter von der Kamera entfernt sind, nicht berücksichtigt. Diese Werte können allerdings in den Zeilen «<em>Clip Start</em>» und «<em>End</em>» verändert werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Tiefenschärfe definieren</p>
+</div></div><p>Innerhalb des Reiters «<em>Depth of Field</em>» kann die Tiefenschärfe bearbeitet werden, sofern diese Option aktiviert wurde. Dabei kann die Tiefenschärfe entweder mittels «<em>Focus Distance</em>» auf Objekte mit einer bestimmten Distanz zur Kamera oder mit der Option «<em>Focus on Object</em>» direkt passend auf ein Objekt fokussiert werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kamera auf die Ansicht ausrichten</p>
+</div></div><p>Um die Kamera im Raum auszurichten, kann ihre Position und ihre Rotation wie bei anderen Objekten bearbeitet werden. Eine alternative Bearbeitungsform besteht darin, die Kamera an die Ansicht im 3D-Viewport anzupassen. Hierfür muss zunächst die Kameraansicht mit der Taste <kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span> ausgewählt werden. In der Sidebar kann unter dem Reiter «<em>View</em>» unter «<em>View Lock</em>» die Option «<em>Camera to View</em>» aktiviert werden. Durch diese Einstellung wird die Kamera nun an die eigene Ansicht gekoppelt. Bei einer Veränderung der Ansicht wird dementsprechend automatisch die Kamera verschoben und rotiert. Anhand der roten Umrandung des Kamerafelds ist jeweils ersichtlich, dass die Option «<em>Camera to View</em>» aktiviert ist. Um die Ansicht verändern zu können, ohne die Kamera zu verschieben, muss die Option «<em>Camera to View</em>» wieder deaktiviert werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kamera auf aktuelle Ansicht umsetzen</p>
+</div></div><p>Die beste Ansicht für eine Kamera zu finden, ist manchmal schwierig. Teilweise findet man während des Bearbeitungsprozesses plötzlich eine Ansicht, die besonders für die Kameraansicht geeignet wäre. In solchen Fällen kann die Kamera direkt zur aktuellen Ansicht umgeändert werden, indem die Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span> gedrückt wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Aktive Kamera auswählen</p>
+</div></div><p>Sollten sich innerhalb einer Szene mehrere Kameras befinden, kann lediglich eine davon als aktive Kamera verwendet werden, um Szenen zu rendern. Im Properties-Editor innerhalb des Reiters «<em>Scene Properties</em>» kann jeweils nachverfolgt werden, welche Kamera die Szene rendern wird. Innerhalb des Reiters «<em>Scene</em>» wird in der Zeile «<em>Camera</em>» das entsprechende Kamera-Objekt aufgeführt, oder kann bei Bedarf gewechselt werden.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_36/Scene Properties.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Icon für den Reiter «<em>Scene Properties</em>».
 </figcaption>
 </figure>
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>34. Lichtobjekte – Creating the World</title>
+<title>39. Bäume mittels Add-on erstellen – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -313,11 +315,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#lichtquellen-einstellen" id="toc-lichtquellen-einstellen" class="nav-link active" data-scroll-target="#lichtquellen-einstellen">Lichtquellen einstellen</a></li>
-  <li><a href="#point" id="toc-point" class="nav-link" data-scroll-target="#point">Point</a></li>
-  <li><a href="#sun" id="toc-sun" class="nav-link" data-scroll-target="#sun">Sun</a></li>
-  <li><a href="#spot" id="toc-spot" class="nav-link" data-scroll-target="#spot">Spot</a></li>
-  <li><a href="#area" id="toc-area" class="nav-link" data-scroll-target="#area">Area</a></li>
+  <li><a href="#die-einstellungsoptionen-von-sapling-tree-gen" id="toc-die-einstellungsoptionen-von-sapling-tree-gen" class="nav-link active" data-scroll-target="#die-einstellungsoptionen-von-sapling-tree-gen">Die Einstellungsoptionen von «Sapling Tree Gen»</a>
+  <ul class="collapse">
+  <li><a href="#geometry" id="toc-geometry" class="nav-link" data-scroll-target="#geometry">Geometry</a></li>
+  <li><a href="#branch-radius" id="toc-branch-radius" class="nav-link" data-scroll-target="#branch-radius">Branch Radius</a></li>
+  <li><a href="#branch-splitting" id="toc-branch-splitting" class="nav-link" data-scroll-target="#branch-splitting">Branch Splitting</a></li>
+  <li><a href="#branch-growth" id="toc-branch-growth" class="nav-link" data-scroll-target="#branch-growth">Branch Growth</a></li>
+  <li><a href="#pruning" id="toc-pruning" class="nav-link" data-scroll-target="#pruning">Pruning</a></li>
+  <li><a href="#leaves" id="toc-leaves" class="nav-link" data-scroll-target="#leaves">Leaves</a></li>
+  </ul></li>
+  <li><a href="#blätter-texturieren" id="toc-blätter-texturieren" class="nav-link" data-scroll-target="#blätter-texturieren">Blätter texturieren</a></li>
   </ul>
 </nav>
     </div>
@@ -326,7 +333,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">34. Lichtobjekte</h1>
+<h1 class="title">39. Bäume mittels Add-on erstellen</h1>
 </div>
 
 
@@ -343,243 +350,210 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="lichtquellen-einstellen" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="lichtquellen-einstellen">Lichtquellen einstellen</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Lichtobjekte hinzufügen</p>
-</div></div><p>Lichtobjekte werden wie auch Meshes im «<em>Add</em>»-Menü hinzugefügt. Unter «<em>Light</em>» sind die jeweiligen Lichtquellen zu finden. Es gibt vier verschiedene Arten von Lichtquellen, welche jeweils unterschiedliche Eigenschaften mit sich bringen. Nach dem Hinzufügen einer Art von Lichtobjekten kann die Art des Lichtobjektes jederzeit wieder geändert werden. Die verschiedenen Arten von Lichtobjekten sind:</p>
+<p>Partikel und Haare können für Vielzahl von Objekten verwendet werden</p>
+</div></div><p>Mithilfe des Partikelsystems lassen sich Objekte mit vielen Details erstellen. Dies muss nicht nur auf Haare als solche beschränkt sein, sondern kann auch auf eine Reihe weiterer Objekte angewendet werden. Eine Anwendungsoption wäre auch die Erstellung von Bäumen, welche anschliessend Blätter als Haare aussenden. Allerdings gibt es für die Erstellung von Bäumen alternative Vorgehensweisen. Zudem wird mit Blender automatisch ein Add-on mitgeliefert, welches die Erstellung von Bäumen vereinfacht.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Add-on aktivieren</p>
+</div></div><p>Das Add-on, welches für die Erstellung der Bäume benötigt wird, heisst «<em>Sapling Tree Gen</em>». Um dieses Add-on zu aktivieren, müssen die Benutzereinstellungen unter «<em>Edit | Preferences</em>» geöffnet werden und im Reiter «<em>Add-ons</em>» nach dem Add-on gesucht werden. Anschliessend kann das entsprechende Add-on aktiviert werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Baum hinzufügen</p>
+</div></div><p>Durch das Aktivieren des Add-ons ist eine neue Option zum Erstellen von Bäumen verfügbar. Diese Option basiert auf Kurven und muss deshalb im «<em>Add</em>»-Menü unter «<em>Curve | Sapling Tree Gen</em>» hinzugefügt werden. Anschliessend wird innerhalb der Szene ein Baum hinzugefügt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bearbeitung der Bäume geschieht im Kontext-Menü</p>
+</div></div><p>Unten links im 3D-Viewport-Editor öffnet sich zudem das Kontext-Menü zum hinzugefügten Baum-Objekt. Dieses Menü verschwindet jeweils, wenn mit der Maus ausserhalb des Kontext-Menüs geklickt wird. Dementsprechend ist darauf zu achten, dass nicht ungewollt ausserhalb des Kontext-Menüs geklickt wird und das Menü geschlossen wird. Anders als das A.N.T.Landscape-Add-on erinnert sich das Sapling-Tree-Gen-Add-on nicht an die zuletzt verwendeten Einstellungen und präsentiert bei jedem neuen Objekt wieder dasselbe Standardobjekt. Zur Not kann allerdings die Taste <kbd aria-hidden="true">F9</kbd><span class="visually-hidden">F9</span> gedrückt werden. Diese blendet das Kontext-Menü zur letzten durchgeführten Einstellung nochmals bei der Maus ein. Dieses zurückgeholte Kontext-Menü verschwindet allerdings wieder, sobald sich der Mauszeiger ausserhalb des Menüs befindet.</p>
+<section id="die-einstellungsoptionen-von-sapling-tree-gen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="die-einstellungsoptionen-von-sapling-tree-gen">Die Einstellungsoptionen von «Sapling Tree Gen»</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Vergabelungen von Ästen</p>
+</div></div><p>Das Sapling-Tree-Gen-Add-on erstellt jeweils Bäume basierend auf Kurven-Objekten. Dabei wird eine Kurve erstellt und zufällig in einzelne Äste des Baumes unterteilt. Diese Äste können wiederum in weitere Vergabelungen unterteilt werden, und diese Vergabelungen können erneut weitere Vergabelungen von Ästen aufweisen. Mittels des Add-ons können bis zu vier Stufen von Vergabelungen vorgenommen werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Einstellungen werden pro Ebene der Vergabelung definiert</p>
+</div></div><p>Die vier Stufen der Vergabelungen können einzeln innerhalb des Add-ons bearbeitet werden. So können für die Äste der einzelnen Stufen der Vergabelungen individuelle Werte angegeben werden. Hierfür werden die jeweiligen Einstellungswerte innerhalb von vier Feldern, die untereinander dargestellt werden, angezeigt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Unterteilung der Einstellungen auf verschiedene Seiten</p>
+</div></div><p>Die Einstellungen des Sapling-Tree-Gen-Add-ons sind jeweils auf verschiedene Menüseiten verteilt. Diese lassen sich mittels des Dropdown-Menüs «<em>Settings</em>» auswählen. Innerhalb dieses Kapitels werden ein paar grundlegende Einstellungsoptionen erläutert.</p>
+<section id="geometry" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="geometry">Geometry</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bevel-Option</p>
+</div></div><p>Im Bereich «<em>Geometry</em>» können grundlegende Einstellungen zu der Geometrie der Bäume vorgenommen werden. Dabei besteht die wichtigste Einstellung aus dem Kontrollkästchen «<em>Bevel</em>». Wenn dieses Kästchen aktiviert ist, wird der Baum nicht anhand einer Kurve dargestellt, sondern auch mit einer Oberfläche versehen. Zudem kann mit der «<em>Bevel Resolution</em>» und der «<em>Curve Resolution</em>» jeweils angegeben werden, wie detailliert die Kurve respektive das Bevel erfolgen soll. Höhere Werte sind dabei mit einer höheren Leistung des Computers verbunden.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_39/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Die verschiedenen Formen von Bäumen.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Shape</p>
+</div></div><p>Mittels des Dropdown-Menüs «<em>Shape</em>» lassen sich verschiedene Formen für den Baum einstellen.Es ist auch möglich, eine eigene Form zu erstellen. Hierfür muss die Option «<em>Custom Shape</em>» für die Form ausgewählt werden. Anschliessend kann mittels der vier Zeilen für die Option «<em>Custom Shape</em>» definiert werden, wie lang die Äste des Baumes sein sollen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Custom-Shape-Optionen</p>
+</div></div><p>Die vier Zeilen der Custom-Shape-Option beschreiben:</p>
 <ul>
-<li>Point</li>
-<li>Sun</li>
-<li>Spot</li>
-<li>Area</li>
+<li>Die Länge der unteren Äste</li>
+<li>Die Länge der mittleren Äste</li>
+<li>Die Position der mittleren Äste</li>
+<li>Die Länge der oberen Äste</li>
 </ul>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Object-Data-Properties für Licht</p>
-</div></div><p>Wird ein Lichtobjekt hinzugefügt und ausgewählt, wird das Icon des Reiters «<em>Object Data Properties</em>» im Properties-Editor mit dem Icon einer Glühbirne ausgewechselt. Dadurch wird visualisiert, dass das ausgewählte Objekt nun kein Mesh mehr darstellt, sondern ein Lichtobjekt.</p>
+<p>Astverteilung</p>
+</div></div><p>Zusätzlich können auch die Äste von weiteren Vergabelungen mit einer speziellen Form versehen werden. Hierfür wird im Dropdown-Menü «<em>Secondary Splits</em>» die entsprechende Form ausgewählt. Mittels der Einstellung «<em>Branch Distribution</em>» kann zudem die Verteilung der Äste eher in den unteren Bereich des Baumes verlagert werden, indem Werte gegen 0 verwendet werden, oder in den oberen Bereich des Baumes, indem Werte gegen 10 verwendet werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Zufällige Bäume</p>
+</div></div><p>Mittels der Option «<em>Random Seed</em>» lassen sich verschiedene Formen von zufällig erstellen Bäumen anzeigen, indem ein anderer Seed für den Zufall verwendet wird. Zudem kann der Baum mittels «<em>Scale</em>» in der Grösse verändert werden und diese Grösse mittels «<em>Scale Variation</em>» zufällig variiert werden. Diese Variation der Skalierung führt dazu, dass die Bäume bei einer Veränderung der Seed mit zufälligen Grössen erstellt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Voreinstellungen</p>
+</div></div><p>Zuunterst im Dropdown-Menü «<em>Load Preset</em>» können verschiedene Voreinstellungen von Bäumen geladen werden. Wenn die Option «<em>Limit Import</em>» aktiviert ist, werden lediglich basale Einstellungen dieser Voreinstellung übernommen. Durch eine Deaktivierung von «<em>Limit Import</em>» wird die gesamte Voreinstellung übernommen. Zudem können eigene Voreinstellungen abgespeichert werden. Hierfür muss im Feld «<em>Preset Name</em>» ein Name eingegeben werden und anschliessend auf «<em>Export Preset</em>» geklickt werden. Die abgespeicherte Voreinstellung sollte anschliessend unter den Voreinstellungen abrufbar sein.</p>
 <div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_34/1. Icon_Object_Data.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_39/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Icon des «<em>Object Data Properties</em>»-Reiters im Properties-Editor, wenn ein Lichtobjekt ausgewählt wurde.
+Abbildung&nbsp;2: Die verschiedenen Voreinstellungen von Baumarten.
 </figcaption>
 </figure>
 </div>
+</section>
+<section id="branch-radius" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="branch-radius">Branch Radius</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Unterschiedliche Einstellungen in Eevee und Cycles</p>
-</div></div><p>Innerhalb des Reiters «<em>Object Data Properties</em>» können nun genauere Einstellungen für das Licht-Objekt vorgenommen werden. Die nachfolgende Beschreibung der Lichtobjekte orientiert sich an den Einstellungsoptionen in Eevee. Einige dieser Einstellungsoptionen stehen in Cycles nicht zur Verfügung. In Cycles ist es dafür möglich, die Lichtobjekte mittels des Shader-Editors genauer zu bearbeiten. Hierfür muss allerdings jeweils die Einstellung «<em>Use Nodes</em>» in den «<em>Object Data Properties</em>» ausgewählt werden.</p>
+<p>Ratio der Astdicke bestimmen</p>
+</div></div><p>Im Bereich «<em>Branch Radius</em>» können Einstellungen bezüglich der Radien der Äste vorgenommen werden. So kann unter «<em>Ratio</em>» ein Verhältnis für die Dicke der Äste zur Grösse des Baumes definiert werden. Mittels der zusätzlichen Einstellungen kann diese Dicke weiter verfeinert werden. Zudem kann der Baumstamm am Ende mittels des Werts «<em>Root Flare</em>» proportional skaliert werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Wechsel zwischen den Lichtobjekt-Arten</p>
-</div></div><p>Unter dem Reiter «<em>Light</em>» kann die Art, wie das Objekt Licht ausstrahlt, bearbeitet werden. Darin befindet sich zuoberst eine Auflistung der vier Arten von Lichtobjekten. Durch die Auswahl einer anderen Art kann so jederzeit unkompliziert zwischen den Lichtarten gewechselt werden. Einige der Einstellungsoptionen variieren zwischen den verschiedenen Objektarten.</p>
+<p>Close Tip</p>
+</div></div><p>Mittels der Funktion «<em>Close Tip</em>» werden die Äste an ihren Enden geschlossen. Ist diese Option deaktiviert, werden die Enden der Äste zylinderförmig dargestellt, ohne mit einem Face geschlossen zu werden. Durch die Option «<em>Close Tip</em>» werden die Enden der Äste jeweils in ihrem Mittelpunk zusammengeführt und geschlossen.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Stärke des Lichts</p>
-</div></div><p>Während in der Farbbox «<em>Color</em>» eine Farbe für das Licht ausgewählt werden kann, kann im Feld «<em>Power</em>» die Stärke des ausgestrahlten Lichts eingestellt werden. Je höher dieser Wert ist, desto stärker wird die Szene durch das Lichtobjekt beleuchtet. Die Stärke des Lichts wird in Watt angegeben. Dabei handelt es sich allerdings nicht um dieselben Watt-Angaben, wie sie beispielsweise auf Glühbirnen angegeben werden. Eine LED-Birne mit 60 Watt (oder etwa 800 Lumen) würde mittels der Power von etwa 2.1 W angegeben werden. Um die jeweiligen Werte, welche in Blender verwendet werden sollten, zu erzielen, müssten komplexe Umrechnungen erfolgen. Im Handbuch zu Blender sind allerdings einige Beispielwerte aufgelistet sowie die dazu verwendeten Arten von Lichtobjekten (Quelle: <a href="https://docs.blender.org/manual/en/latest/render/lights/light_object.html" class="uri">https://docs.blender.org/manual/en/latest/render/lights/light_object.html</a>).</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Objekt</th>
-<th>Power/Strength</th>
-<th>Lichtobjekt_Art</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Kerze</td>
-<td>0.05 W</td>
-<td>Point</td>
-</tr>
-<tr class="even">
-<td>LED-Birne (800 lm)</td>
-<td>2.1 W</td>
-<td>Point</td>
-</tr>
-<tr class="odd">
-<td>Glühbirne (1000 lm)</td>
-<td>2.9 W</td>
-<td>Point</td>
-</tr>
-<tr class="even">
-<td>Scheinwerfer (1500 lm)</td>
-<td>4 W</td>
-<td>Area (Form: Disk)</td>
-</tr>
-<tr class="odd">
-<td>Leuchtstoffröhre (2500 lm)</td>
-<td>4.5 W</td>
-<td>Area (Form: Rectangle)</td>
-</tr>
-<tr class="even">
-<td>Autoscheinwerfer (5000 lm)</td>
-<td>22 W</td>
-<td>Spot (Grösse: 125°)</td>
-</tr>
-<tr class="odd">
-<td>Klarer Himmel</td>
-<td>1000 W/m<sup>2</sup></td>
-<td>Sun</td>
-</tr>
-<tr class="even">
-<td>Bewölkter Himmel</td>
-<td>500 W/m<sup>2</sup></td>
-<td>Sun</td>
-</tr>
-<tr class="odd">
-<td>Wolkenbedeckter Himmel</td>
-<td>200 W/m<sup>2</sup></td>
-<td>Sun</td>
-</tr>
-<tr class="even">
-<td>Mondlicht</td>
-<td>0.001 W/m<sup>2</sup></td>
-<td>Sun</td>
-</tr>
-</tbody>
-</table>
+<p>Taper</p>
+</div></div><p>Mittels der «<em>Taper</em>»-Funktion können die Äste verjüngt werden. Das heisst, dass weiter entfernte Äste dünner werden. Per Default sind die Taper-Werte für alle Stufen der Vergabelungen auf den Wert 1 gesetzt, sodass die Äste verjüngt werden. Dieser Wert kann reduziert werden, damit die Äste weniger verjüngt werden. Zudem kann die Option «<em>Auto Taper</em>» aktiviert werden, damit dieser Effekt automatisch angepasst wird.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Faktoren, um die Lichtquelle zu präzisieren</p>
-</div></div><p>Um das Licht etwas genauer bearbeiten zu können, stehen drei zusätzliche Faktorwerte zur Verfügung:</p>
+<p>Tweak-Radius</p>
+</div></div><p>Mittels der Zeilen für «<em>Tweak Radius</em>» können die Radien der einzelnen Stufen der Vergabelungen individuell angesteuert werden. Dabei wird der Radius jede Stufe mit dem Tweak-Faktor multipliziert. Je kleiner dieser Wert ist, desto dünner werden die Äste auf dieser Stufe.</p>
+</section>
+<section id="branch-splitting" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="branch-splitting">Branch Splitting</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Aufteilung der Äste definieren</p>
+</div></div><p>Im Bereich «<em>Branch Splitting</em>» können die einzelnen Stufen der Baumvergabelungen anvisiert werden. Zunächst kann mittels des Werts «<em>Levels</em>» definiert werden, wie viele Stufen von Vergabelungen der Baum beinhalten soll. Diese Option kann Werte von 1 bis 4 annehmen. Zudem kann im Bereich «<em>Base Splits</em>» definiert werden, in wie viele Äste der Baumstamm aufgeteilt werden soll. Mittels der «<em>Trunk Height</em>» kann die Höhe des Baumstamms definiert werden. Mittels des Werts «<em>Split Height</em>» kann zudem eingestellt werden, ab welcher Höhe des Baumes die Vergabelungen beginnen sollen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Einstellungen der Vergabelungen</p>
+</div></div><p>Für die Vergabelungen gibt es eine Reihe verschiedener Optionen, welche für die verschiedenen Ebenen der Vergabelungen individuell angesteuert werden können:</p>
 <ul>
-<li>«<strong><em>Diffuse</em></strong>»: Der Faktor «<em>Diffuse</em>» beschreibt, ob das Licht der Lichtquelle stark gebündelt ausgesendet wird oder stärker streut. Je höher der Diffuse-Wert ist, desto breiter wird das Licht gestreut. Bei einem tieferen Diffuse-Wert wird das Licht stärker gebündelt.</li>
-<li>«<strong><em>Specular</em></strong>»: Der Faktor «<em>Specular</em>» beschreibt, wie stark das Licht der Lichtquelle die Fähigkeit zur Specularity aufweist. Wenn dieser Faktor auf 0 gesetzt wird, können keine Lichtstrahlen basierend auf dieser Lichtquelle reflektiert werden.</li>
-<li>«<strong><em>Volume</em></strong>»: Mittels des Faktors «<em>Volume</em>» kann ein Wert festgelegt werden, mit dem Lichtstrahlen in Volumen multipliziert werden. Da dieser Kurs allerdings nicht auf Volumen eingeht, kann dieser Faktor ignoriert werden.</li>
+<li>«<strong><em>Branches</em></strong>»: Damit wird definiert, wie viele Äste pro Stufe erzeugt werden sollen.</li>
+<li>«<strong><em>Segment Splits</em></strong>»: Damit wird ein Verhältnis definiert, mit dem die Äste innerhalb einer Stufe in mehrere Äste aufgeteilt werden sollen. Je höher dieser Wert ist, desto mehr Äste werden auf derselben Stufe aufgeteilt.</li>
+<li>«<strong><em>Split Angle</em></strong>»: Mittels dieser Option kann eine Krümmung auf den einzelnen Stufen der Äste definiert werden.</li>
+<li>«<strong><em>Split Angle Variation</em></strong>»: Mittels dieser Option kann definiert werden, wie stark der Wert für «<em>Split Angle</em>» auf dem jeweiligen Level zufällig variiert werden soll.</li>
+<li>«<strong><em>Rotate Angle</em></strong>»: Mittels dieser Option kann ein Wert festgelegt werden, mit dem sich Vergabelungen von neuen Ästen vom Ursprungsast wegrotieren.</li>
+<li>«<strong><em>Rotate Angle Variation</em></strong>»: Mittels dieser Option kann definiert werden, wie sehr der Wert für «<em>Rotate Angle</em>» auf der jeweiligen Stufe zufällig variiert werden soll.</li>
+<li>«<strong><em>Outward Attraction</em></strong>»: Mit diesem Wert kann für jede Stufe des Baumes angegeben werden, wie stark sich die Äste nach aussen hin orientieren sollen.</li>
+<li>«<strong><em>Curve Resolution</em></strong>»: Mit diesem Wert können die einzelnen Stufen des Baumes detaillierter erstellt werden. Je höher diese Werte sind, desto mehr Leistung wird benötigt.</li>
+</ul>
+</section>
+<section id="branch-growth" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="branch-growth">Branch Growth</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Branch-Growth-Einstellungen</p>
+</div></div><p>Im Bereich «<em>Branch Growth</em>» können Einstellungen gemacht werden, welche die Verformung der Äste beschreiben:</p>
+<ul>
+<li>«<strong><em>Length</em></strong>»: Mit dieser Option kann die Länge der Äste für die einzelnen Stufen des Baumes definiert werden.</li>
+<li>«<strong><em>Length Variation</em></strong>»: Mit dieser Option können die Längen der Äste des Baumes auf den einzelnen Stufen zufällig variiert werden.</li>
+<li>«<strong><em>Down Angle</em></strong>»: Mit dieser Option kann ein Winkel angegeben werden, in dem die Äste nach unten gezogen werden.</li>
+<li>«<strong><em>Down Angle Variation</em></strong>»: Mit dieser Option kann der maximale Winkel, welcher zufällig dem Wert «<em>Down Angle</em>» hinzugefügt wird, eingestellt werden.</li>
+<li>«<strong><em>Curvature</em></strong>»: Mit dieser Option kann ein Winkel angegeben werden, mit dem sich die Äste an deren Ende krümmen.</li>
+<li>«<strong><em>Curvature Variation</em></strong>»: Mit dieser Option kann der maximale Winkel, welcher zufällig dem Wert «<em>Curvature</em>» hinzugefügt wird, eingestellt werden.</li>
+<li>«<strong><em>Back Curvature</em></strong>»: Mit dieser Option kann ein Winkel für die Krümmung in der zweiten Hälfte der Äste definiert werden.</li>
+<li>«<strong><em>Vertical Attraction</em></strong>»: Mit diesem Wert kann ein Wert für eine vertikale Anziehung der Äste nach oben definiert werden.</li>
+</ul>
+</section>
+<section id="pruning" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="pruning">Pruning</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bäume beschneiden</p>
+</div></div><p>Innerhalb der Einstellungen zum «<em>Pruning</em>» kann der Baum geschnitten werden. Hierfür muss die Option «<em>Prune</em>» aktiviert werden. Anschliessend erscheint ein Viewport-Overlay, welche die Form der Beschneidung des Baumes veranschaulicht. Diese Beschneidung kann dabei in der Breite variiert werden mit dem Wert «<em>Prune Width</em>» und in der Höhe mit dem Wert «<em>Prune Base</em>». Mittels «<em>Prune Width Peak</em>» kann die Baumkrone bearbeitet werden und mittels der Zeilen «<em>Prune Power</em>» kann die Beschneidung am unteren Ende und am oberen Ende nicht-linear variiert werden.</p>
+</section>
+<section id="leaves" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="leaves">Leaves</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Blätter hinzufügen</p>
+</div></div><p>Sofern nicht gerade Winter ist, besitzen Bäume auch Blätter. Diese können in den Einstellungen zu den «<em>Leaves</em>» bearbeitet werden. Hierfür muss allerdings die Option «<em>Show Leaves</em>» aktiviert werden. Mit dem Wert «<em>Leaves</em>» kann die maximale Anzahl der Blätter pro Ast definiert werden. Dabei ist darauf zu achten, dass eine hohe Anzahl Blätter sehr viel Leistung vom Computer benötigt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Blätter-Formen</p>
+</div></div><p>Die Blätter können verschiedene Formen annehmen und unter «<em>Leaf Object</em>» kann auch ein Objekt als Blatt verwendet werden. Es gibt folgende Formoptionen:</p>
+<ul>
+<li>«<strong><em>Hexagonal</em></strong>»: Ein achteckiges Blatt.</li>
+<li>«<strong><em>Rectangular</em></strong>»: Ein viereckiges Blatt.</li>
+<li>«<strong><em>DupliFaces</em></strong>»: Faces, welche sich quer durch den Ast erstrecken.</li>
+<li>«<strong><em>DupliVertcs</em></strong>»: Es werden lediglich Vertices an den Stellen der Blätter erstellt.</li>
 </ul>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Je kleiner die Lichtquelle, desto heller</p>
-</div></div><p>Anhand des Feldes «<em>Radius</em>» respektive «<em>Size</em>» kann definiert werden, wie gross das Lichtobjekt ist. Je kleiner der Radius ist, desto stärker erhellt die Lichtquelle die unmittelbare Umgebung. Durch eine Vergrösserung des Radius wird der Bereich, von dem aus die Punkt-Beleuchtung, ausgedehnt. Da die Lichtstärke allerdings gleich bleibt – nämlich entsprechend dem Wert der «<em>Power</em>» – wird diese Stärke nun über einen grösseren Bereich ausgestrahlt. Dies hat zur Folge, dass die umliegenden Objekte weniger hell beleuchtet werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Custom Distance</p>
-</div></div><p>Mittels der Option «<em>Custom Distance</em>» kann definiert werden, dass die Lichtstrahlen des Lichtobjektes lediglich bis zu einer gewissen Distanz reichen. Alle Bereiche, welche weiter als diese definierte Distanz von der Lichtquelle entfernt liegen, werden nicht davon beleuchtet. Per Default ist diese Option allerdings ausgeschaltet.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Schatten</p>
-</div></div><p>Im Reiter «<em>Shadow</em>» sind weitere Einstellungen zu Schatten, welche diese Lichtquelle erzeugt, zu finden. So kann der gesamte Reiter deaktiviert werden, wenn diese Lichtquelle keine Schatten erzeugen soll. Zudem kann mittels «<em>Clip Start</em>» eine Distanz definiert werden, ab welcher Objekte ausgehend von der Lichtquelle einen Schatten werfen können.</p>
+<p>Einstellungen der Blätter</p>
+</div></div><p>Für die Blätter können weitere Einstellungen vorgenommen werden:</p>
+<ul>
+<li>«<strong><em>Leaf Down</em></strong>»: Der Winkel, zu dem die Blätter vom Ast herabhängen.</li>
+<li>«<strong><em>Leaf Down Variation</em></strong>»: Der Wert, zu dem die Einstellung «<em>Leaf Down</em>» zufällig variiert werden.</li>
+<li>«<strong><em>Leaf Rotation</em></strong>»: Der Winkel, zwischen einem Blatt und dem Ast.</li>
+<li>«<strong><em>Leaf Rotation Variation</em></strong>»: Der Wert, zu dem die Einstellung «<em>Leaf Rotation</em>» zufällig variiert wird.</li>
+<li>«<strong><em>Leaf Scale</em></strong>»: Einstellung der Grösse der Blätter.</li>
+<li>«<strong><em>Leaf Scale X</em></strong>»: Einstellung der Breite der Blätter.</li>
+<li>«<strong><em>Leaf Scale Taper</em></strong>»: Wie lange die Blätter sein sollen.</li>
+<li>«<strong><em>Leaf Scale Variation</em></strong>»: Der Wert, zu dem die Grösse der Blätter variieren darf.</li>
+<li>«<strong><em>Leaf Angle</em></strong>»: Ein Wert, der beschreibt, wie stark die Blätter vertikal ausgerichtet werden sollen.</li>
+</ul>
 </section>
-<section id="point" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="point">Point</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Navigation zwischen Szenen</p>
-</div></div><p>In der Datei «<em>Gameboard_Lights</em>» sind verschiedene Beispielszenen für unterschiedliche Belichtungen aufzufinden. Die verschiedenen Beispiele sind in unterschiedliche Szenen aufgeteilt. Um zwischen den Szenen wechseln zu können, muss im Dropdown-Menü «<em>Browse Scene to be linked</em>», welches in der Ecke oben rechts zu finden ist, die entsprechende Szene ausgewählt werden. Auch die Beispiele aus dem vorangehenden Kapitel sind in dieser Datei aufzufinden.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="Images/Chapter_34/.png" class="img-fluid figure-img"></p>
-<figcaption>Eine Szene, welche mit einer Point-Lichtquelle beleuchtet wird.</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Beispiel eines Point-Lichtobjektes</p>
-</div></div><p>«<em>Example6_Light_Point</em>» beinhaltet das Beispiel aus der Abbildung 2. In diesem Beispiel befindet sich ein Lichtobjekt des Typs «<em>Point</em>» oberhalb des Spielfelds J1. Die Lichtobjekte als solche werden beim Rendern nicht dargestellt, sondern lediglich die Reflexionen des Lichtes. Aus diesem Grund wurde die Position des Point-Lichtobjektes in der Abbildung 2 mit einer Sphere visualisiert.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Points können bewegt werden, aber ihre Rotation hat keine Auswirkung</p>
-</div></div><p>Anhand eines Point-Lichtobjektes werden ausgehend von der Position des Lichtobjektes die Lichtstrahlen kreisförmig ausgestrahlt. Dementsprechend führt eine Rotation des Objektes zu keiner Veränderung der Lichtausstrahlung. Lediglich aufgrund der Position des Lichtobjektes des Typs «<em>Point</em>» kann eine Veränderung der Beleuchtung erfolgen.</p>
 </section>
-<section id="sun" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="sun">Sun</h2>
+<section id="blätter-texturieren" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="blätter-texturieren">Blätter texturieren</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Beispiel eines Sun-Lichtobjektes</p>
-</div></div><p>Die Abbildung 3 zeigt ein Beispiel, in dem eine Szene mit einem Sun-Lichtobjekt beleuchtet wird. Die Sonne ist dabei auf derselben Höhe wie die Köpfe der anderen Spielfiguren auf dem Feld J1 platziert und gegen die blaue Spielfigur rotiert.</p>
-<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_34/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Eine Szene, welche mit einer Sun-Lichtquelle beleuchtet wird.
-</figcaption>
-</figure>
-</div>
+<p>UVs der Blätter</p>
+</div></div><p>Sobald ein Baum mit Blättern erstellt wurde, werden die Blätter in einem separaten Objekt erstellt. Die Blätter haben alle Form und dieselben UVs pro Blatt. Dementsprechend kann mit diesen UVs ein Material erstellt werden. Häufig werden dabei Texturen für Blätter verwendet. Einige dieser Texturen beinhalten auch mehrere Blätter, sodass die UVs so angepasst werden müssen, dass sie jeweils ein Blatt der Textur abbilden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Sonnen können rotiert werden, allerdings hat ihre Position keine Auswirkung</p>
-</div></div><p>Ein Lichtobjekt des Typs «<em>Sun</em>» wird jeweils über die gesamte Szene erstreckt und beleuchtet die Objekte allesamt entsprechend der Rotation der Sonne. In ihren Grundeinstellungen mit einer Rotation von 0-0-0 werden alle Objekte senkrecht entlang der Z-Achse beleuchtet. Durch eine Veränderung der Rotationswerte kann der Winkel, mit dem die Sonne auf die Objekte eintrifft, variiert werden. Zu beachten ist dabei, dass die Position der Sonne keinen Einfluss auf die Beleuchtung hat. Mithilfe der Sonne wird eine Beleuchtung erschaffen, welche im gleichen Winkel über die ganze Szene erstreckt wird.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Andere Masseinheit für die Stärke der Lichtstrahlen</p>
-</div></div><p>Da die Distanz von Sonnen-Objekten keinen Einfluss auf die Wirkung der Sonne hat, wird die Masseinheit für die Sonnenausstrahlung mit «<em>Strength</em>» ausgegeben und anhand von Watt pro Quadratmeter definiert. Zudem werden für Sonnen sehr hohe Werte verwendet (200-1000 W/m<sup>2</sup>).</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Helligkeitsadaption erstellen</p>
-</div></div><p>Die hohen Werte für die Sonnenausstrahlung führen dazu, dass die Objekte deutlich überbelichtet werden. Im Gegensatz zum menschlichen Auge verfügen der Computer und die Render-Engine über keine Möglichkeiten, um an die Helligkeit der Sonne zu adaptieren. Cycles verfügt über die Möglichkeit, dass in den Render-Einstellungen im Properties-Editor unter «<em>Film</em>» der Exposure-Wert reduziert werden kann. In Eevee steht diese Option nicht zur Verfügung, allerdings kann zumindest für die gerenderten Farben der Exposure-Wert unter dem Reiter «<em>Color Management</em>» angepasst werden. Alternativ kann auch ein geringerer Wert für die Sonne verwendet und auf die realitätsgetreuen Werte verzichtet werden.</p>
-</section>
-<section id="spot" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="spot">Spot</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Spot als Beleuchtungsoption</p>
-</div></div><p>In Abbildung 4 wird eine Szene mittels eines Spot-Lichtobjektes beleuchtet. Der Spot agiert wie ein Scheinwerfer, mit dem gezielt ein Objekt beleuchtet werden kann. Hierfür sind sowohl die Position als auch die Rotation des Spot-Lichtobjektes bedeutsam. Anhand dieser beiden Merkmale kann der Spot entsprechend auf ein Objekt ausgerichtet werden. Die Beleuchtung erfolgt anschliessend ausgehend von der Form eines Cones, der von der Position des Lichtobjektes ausgeht.</p>
-<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_34/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Eine Szene, welche mit einer Spot-Lichtquelle beleuchtet wird.
-</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Grösse des Spots einstellen</p>
-</div></div><p>In den Einstellungen zum Lichtobjekt findet sich unter dem Reiter «<em>Spot</em>» zusätzlich ein Reiter «<em>Spot Shape</em>». Innerhalb dieses Reiters können weitere Verfeinerungen an der Art der Beleuchtung vor genommen werden. Mittels der Option «<em>Size</em>» kann definiert werden, wie gross der Bereich ist, welcher der Spot erfassen kann. Dieser Bereich kann von 0° bis 180° variieren. Bei einer Grösse von 180° wird der gesamte Bereich, welcher sich vor dem Spot befindet, beleuchtet. Je kleiner die Grösse ist, desto mehr fokussiert sich die Beleuchtung auf einen entsprechenden Bereich.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Blend-Einstellung</p>
-</div></div><p>Mittels des Feldes «<em>Blend</em>» kann der Übergang vom Bereich, welcher durch den Spot beleuchtet wird, zu dem Bereich, welcher nicht beleuchtet wird, beschrieben werden. Je höher dieser Wert ist, desto weicher wird der Übergang von beleuchteten zu nicht beleuchteten Arealen. Bei einem tiefen Wert erscheint dieser Übergang als klare Linie. Zudem kann mittels der Option «<em>Show Cone</em>» das Licht auch innerhalb des Volumens der Spotbeleuchtung dargestellt werden.</p>
-</section>
-<section id="area" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="area">Area</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Areale als Beleuchtungsobjekt</p>
-</div></div><p>Die Abbildung 5 zeigt eine Szene, welche mit einem Area-Lichtobjekt beleuchtet wird. Diese Art der Beleuchtung hängt wie auch der Spot von der Position und der Rotation des Lichtobjektes ab. Mithilfe des Area-Lichtobjektes kann ein Bereich erstellt werden, welcher Licht aussendet. Dabei kann ein viereckiges Areal definiert werden, indem im Dropdown-Menü «<em>Shape</em>» die Option «<em>Square</em>» für ein Quadrat oder die Option «Rectangle» für ein Rechteck ausgewählt wird. Mittels der Optionen «<em>Disk</em>» für einen Kreis und «<em>Ellipse</em>» für eine Ellipse können auch runde Areale gewählt werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Grösse der Areale variieren</p>
-</div></div><p>Mittels des Reiters «<em>Size</em>» kann die Grösse des Areals definiert werden. Bei aktivierten Viewport-Overlays kann diese Veränderung direkt visuell nachverfolgt werden. Das Quadrat und der Kreis als Option verfügen leidglich über einen Reiter für die Grösse. Bei den Formen Rechteck und Ellipse können zwei Achsen für die Grösse unabhängig voneinander definiert werden.</p>
-<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_34/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4: Eine Szene, welche mit einer Area-Lichtquelle beleuchtet wird.
-</figcaption>
-</figure>
-</div>
+<p>Transparenz zu Blättern hinzufügen</p>
+</div></div><p>Im Material des Blattes sollte jeweils darauf geachtet werden, dass eine Alpha-Textur verwendet wird, welche mit dem Alpha-Input des Principled-BSDF-Shaders verbunden wird. Dadurch wird nicht das gesamte Bild, sondern lediglich der nicht-transparente Bereich des Bildes dargestellt. Dies erfordert bei der Verwendung von Eevee zusätzlich, dass im Material-Reiter des Properties-Editors unter dem Reiter «<em>Settings</em>» der «<em>Blend Mode</em>» auf «<em>Alpha Hashed</em>» oder «<em>Alpha Blend</em>» gestellt wird.</p>
 <div class="exercisebox">
 <div class="exercisebox-header">
 <div class="exercisebox-icon">
 
 </div>
-<p>Übung 16: Lichtobjekte</p>
+<p>Übung 17: Baum erstellen</p>
 </div>
 <div class="exercisebox-body">
-<p><strong>Übung 16.1</strong></p>
-<p>Öffnen Sie in der Datei «<em>Gameboard_Lights</em>» die Szene «<em>Exercise_Lights</em>» und versuchen Sie, die abgebildete Beleuchtungssituation nachzustellen.</p>
-<div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_34/.png" id="fig-1_6" class="img-fluid quarto-figure quarto-figure-left anchored figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5
-</figcaption>
-</figure>
-</div>
-<p>Die Lösung finden Sie in der Szene «<em>Exercise_Lights_Solution</em>»</p>
+<p><strong>Übung 17.1</strong></p>
+<p>Erstellen Sie einen eigenen Baum mittels des Sapling-Tree-Gen-Add-ons und fügen Sie dem Baum Blätter hinzu.</p>
+<p><strong>Übung 17.2</strong></p>
+<p>Texturieren Sie den Baum und die Blätter.</p>
+<p><strong>Übung 17.3</strong></p>
+<p>Rendern Sie ein Bild ihres Baumes.</p>
 </div>
 </div>
 

@@ -99,7 +99,9 @@ website:
           - href: Chapters/Chapter_37.qmd
             text: Kapitel 37
           - href: Chapters/Chapter_38.qmd
-            text: Kapitel 38           
+            text: Kapitel 38 
+          - href: Chapters/Chapter_39.qmd
+            text: Kapitel 39
       - href: about.qmd
         icon: info-circle
         text: Über

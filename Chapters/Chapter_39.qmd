@@ -1,0 +1,244 @@
+---
+title: "39. Bäume mittels Add-on erstellen"
+editor: visual
+---
+
+::: column-margin
+Partikel und Haare können für Vielzahl von Objekten verwendet werden
+:::
+
+Mithilfe des Partikelsystems lassen sich Objekte mit vielen Details erstellen. Dies muss nicht nur auf Haare als solche beschränkt sein, sondern kann auch auf eine Reihe weiterer Objekte angewendet werden. Eine Anwendungsoption wäre auch die Erstellung von Bäumen, welche anschliessend Blätter als Haare aussenden. Allerdings gibt es für die Erstellung von Bäumen alternative Vorgehensweisen. Zudem wird mit Blender automatisch ein Add-on mitgeliefert, welches die Erstellung von Bäumen vereinfacht.
+
+::: column-margin
+Add-on aktivieren
+:::
+
+Das Add-on, welches für die Erstellung der Bäume benötigt wird, heisst «*Sapling Tree Gen*». Um dieses Add-on zu aktivieren, müssen die Benutzereinstellungen unter «*Edit \| Preferences*» geöffnet werden und im Reiter «*Add-ons*» nach dem Add-on gesucht werden. Anschliessend kann das entsprechende Add-on aktiviert werden.
+
+::: column-margin
+Baum hinzufügen
+:::
+
+Durch das Aktivieren des Add-ons ist eine neue Option zum Erstellen von Bäumen verfügbar. Diese Option basiert auf Kurven und muss deshalb im «*Add*»-Menü unter «*Curve \| Sapling Tree Gen*» hinzugefügt werden. Anschliessend wird innerhalb der Szene ein Baum hinzugefügt.
+
+::: column-margin
+Bearbeitung der Bäume geschieht im Kontext-Menü
+:::
+
+Unten links im 3D-Viewport-Editor öffnet sich zudem das Kontext-Menü zum hinzugefügten Baum-Objekt. Dieses Menü verschwindet jeweils, wenn mit der Maus ausserhalb des Kontext-Menüs geklickt wird. Dementsprechend ist darauf zu achten, dass nicht ungewollt ausserhalb des Kontext-Menüs geklickt wird und das Menü geschlossen wird. Anders als das A.N.T.Landscape-Add-on erinnert sich das Sapling-Tree-Gen-Add-on nicht an die zuletzt verwendeten Einstellungen und präsentiert bei jedem neuen Objekt wieder dasselbe Standardobjekt. Zur Not kann allerdings die Taste {{< kbd F9 >}} gedrückt werden. Diese blendet das Kontext-Menü zur letzten durchgeführten Einstellung nochmals bei der Maus ein. Dieses zurückgeholte Kontext-Menü verschwindet allerdings wieder, sobald sich der Mauszeiger ausserhalb des Menüs befindet.
+
+## Die Einstellungsoptionen von «Sapling Tree Gen»
+
+::: column-margin
+Vergabelungen von Ästen
+:::
+
+Das Sapling-Tree-Gen-Add-on erstellt jeweils Bäume basierend auf Kurven-Objekten. Dabei wird eine Kurve erstellt und zufällig in einzelne Äste des Baumes unterteilt. Diese Äste können wiederum in weitere Vergabelungen unterteilt werden, und diese Vergabelungen können erneut weitere Vergabelungen von Ästen aufweisen. Mittels des Add-ons können bis zu vier Stufen von Vergabelungen vorgenommen werden.
+
+::: column-margin
+Einstellungen werden pro Ebene der Vergabelung definiert
+:::
+
+Die vier Stufen der Vergabelungen können einzeln innerhalb des Add-ons bearbeitet werden. So können für die Äste der einzelnen Stufen der Vergabelungen individuelle Werte angegeben werden. Hierfür werden die jeweiligen Einstellungswerte innerhalb von vier Feldern, die untereinander dargestellt werden, angezeigt.
+
+::: column-margin
+Unterteilung der Einstellungen auf verschiedene Seiten
+:::
+
+Die Einstellungen des Sapling-Tree-Gen-Add-ons sind jeweils auf verschiedene Menüseiten verteilt. Diese lassen sich mittels des Dropdown-Menüs «*Settings*» auswählen. Innerhalb dieses Kapitels werden ein paar grundlegende Einstellungsoptionen erläutert.
+
+### Geometry
+
+::: column-margin
+Bevel-Option
+:::
+
+Im Bereich «*Geometry*» können grundlegende Einstellungen zu der Geometrie der Bäume vorgenommen werden. Dabei besteht die wichtigste Einstellung aus dem Kontrollkästchen «*Bevel*». Wenn dieses Kästchen aktiviert ist, wird der Baum nicht anhand einer Kurve dargestellt, sondern auch mit einer Oberfläche versehen. Zudem kann mit der «*Bevel Resolution*» und der «*Curve Resolution*» jeweils angegeben werden, wie detailliert die Kurve respektive das Bevel erfolgen soll. Höhere Werte sind dabei mit einer höheren Leistung des Computers verbunden.
+
+![Die verschiedenen Formen von Bäumen.](Images/Chapter_39/.png){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Shape
+:::
+
+Mittels des Dropdown-Menüs «*Shape*» lassen sich verschiedene Formen für den Baum einstellen.Es ist auch möglich, eine eigene Form zu erstellen. Hierfür muss die Option «*Custom Shape*» für die Form ausgewählt werden. Anschliessend kann mittels der vier Zeilen für die Option «*Custom Shape*» definiert werden, wie lang die Äste des Baumes sein sollen.
+
+::: column-margin
+Custom-Shape-Optionen
+:::
+
+Die vier Zeilen der Custom-Shape-Option beschreiben:
+
+-   Die Länge der unteren Äste
+-   Die Länge der mittleren Äste
+-   Die Position der mittleren Äste
+-   Die Länge der oberen Äste
+
+::: column-margin
+Astverteilung
+:::
+
+Zusätzlich können auch die Äste von weiteren Vergabelungen mit einer speziellen Form versehen werden. Hierfür wird im Dropdown-Menü «*Secondary Splits*» die entsprechende Form ausgewählt. Mittels der Einstellung «*Branch Distribution*» kann zudem die Verteilung der Äste eher in den unteren Bereich des Baumes verlagert werden, indem Werte gegen 0 verwendet werden, oder in den oberen Bereich des Baumes, indem Werte gegen 10 verwendet werden.
+
+::: column-margin
+Zufällige Bäume
+:::
+
+Mittels der Option «*Random Seed*» lassen sich verschiedene Formen von zufällig erstellen Bäumen anzeigen, indem ein anderer Seed für den Zufall verwendet wird. Zudem kann der Baum mittels «*Scale*» in der Grösse verändert werden und diese Grösse mittels «*Scale Variation*» zufällig variiert werden. Diese Variation der Skalierung führt dazu, dass die Bäume bei einer Veränderung der Seed mit zufälligen Grössen erstellt werden.
+
+::: column-margin
+Voreinstellungen
+:::
+
+Zuunterst im Dropdown-Menü «*Load Preset*» können verschiedene Voreinstellungen von Bäumen geladen werden. Wenn die Option «*Limit Import*» aktiviert ist, werden lediglich basale Einstellungen dieser Voreinstellung übernommen. Durch eine Deaktivierung von «*Limit Import*» wird die gesamte Voreinstellung übernommen. Zudem können eigene Voreinstellungen abgespeichert werden. Hierfür muss im Feld «*Preset Name*» ein Name eingegeben werden und anschliessend auf «*Export Preset*» geklickt werden. Die abgespeicherte Voreinstellung sollte anschliessend unter den Voreinstellungen abrufbar sein.
+
+![Die verschiedenen Voreinstellungen von Baumarten.](Images/Chapter_39/.png){#fig-1_2 fig-align="left"}
+
+### Branch Radius
+
+::: column-margin
+Ratio der Astdicke bestimmen
+:::
+
+Im Bereich «*Branch Radius*» können Einstellungen bezüglich der Radien der Äste vorgenommen werden. So kann unter «*Ratio*» ein Verhältnis für die Dicke der Äste zur Grösse des Baumes definiert werden. Mittels der zusätzlichen Einstellungen kann diese Dicke weiter verfeinert werden. Zudem kann der Baumstamm am Ende mittels des Werts «*Root Flare*» proportional skaliert werden.
+
+::: column-margin
+Close Tip
+:::
+
+Mittels der Funktion «*Close Tip*» werden die Äste an ihren Enden geschlossen. Ist diese Option deaktiviert, werden die Enden der Äste zylinderförmig dargestellt, ohne mit einem Face geschlossen zu werden. Durch die Option «*Close Tip*» werden die Enden der Äste jeweils in ihrem Mittelpunk zusammengeführt und geschlossen.
+
+::: column-margin
+Taper
+:::
+
+Mittels der «*Taper*»-Funktion können die Äste verjüngt werden. Das heisst, dass weiter entfernte Äste dünner werden. Per Default sind die Taper-Werte für alle Stufen der Vergabelungen auf den Wert 1 gesetzt, sodass die Äste verjüngt werden. Dieser Wert kann reduziert werden, damit die Äste weniger verjüngt werden. Zudem kann die Option «*Auto Taper*» aktiviert werden, damit dieser Effekt automatisch angepasst wird.
+
+::: column-margin
+Tweak-Radius
+:::
+
+Mittels der Zeilen für «*Tweak Radius*» können die Radien der einzelnen Stufen der Vergabelungen individuell angesteuert werden. Dabei wird der Radius jede Stufe mit dem Tweak-Faktor multipliziert. Je kleiner dieser Wert ist, desto dünner werden die Äste auf dieser Stufe.
+
+### Branch Splitting
+
+::: column-margin
+Aufteilung der Äste definieren
+:::
+
+Im Bereich «*Branch Splitting*» können die einzelnen Stufen der Baumvergabelungen anvisiert werden. Zunächst kann mittels des Werts «*Levels*» definiert werden, wie viele Stufen von Vergabelungen der Baum beinhalten soll. Diese Option kann Werte von 1 bis 4 annehmen. Zudem kann im Bereich «*Base Splits*» definiert werden, in wie viele Äste der Baumstamm aufgeteilt werden soll. Mittels der «*Trunk Height*» kann die Höhe des Baumstamms definiert werden. Mittels des Werts «*Split Height*» kann zudem eingestellt werden, ab welcher Höhe des Baumes die Vergabelungen beginnen sollen.
+
+::: column-margin
+Einstellungen der Vergabelungen
+:::
+
+Für die Vergabelungen gibt es eine Reihe verschiedener Optionen, welche für die verschiedenen Ebenen der Vergabelungen individuell angesteuert werden können:
+
+-   «***Branches***»: Damit wird definiert, wie viele Äste pro Stufe erzeugt werden sollen.
+-   «***Segment Splits***»: Damit wird ein Verhältnis definiert, mit dem die Äste innerhalb einer Stufe in mehrere Äste aufgeteilt werden sollen. Je höher dieser Wert ist, desto mehr Äste werden auf derselben Stufe aufgeteilt.
+-   «***Split Angle***»: Mittels dieser Option kann eine Krümmung auf den einzelnen Stufen der Äste definiert werden.
+-   «***Split Angle Variation***»: Mittels dieser Option kann definiert werden, wie stark der Wert für «*Split Angle*» auf dem jeweiligen Level zufällig variiert werden soll.
+-   «***Rotate Angle***»: Mittels dieser Option kann ein Wert festgelegt werden, mit dem sich Vergabelungen von neuen Ästen vom Ursprungsast wegrotieren.
+-   «***Rotate Angle Variation***»: Mittels dieser Option kann definiert werden, wie sehr der Wert für «*Rotate Angle*» auf der jeweiligen Stufe zufällig variiert werden soll.
+-   «***Outward Attraction***»: Mit diesem Wert kann für jede Stufe des Baumes angegeben werden, wie stark sich die Äste nach aussen hin orientieren sollen.
+-   «***Curve Resolution***»: Mit diesem Wert können die einzelnen Stufen des Baumes detaillierter erstellt werden. Je höher diese Werte sind, desto mehr Leistung wird benötigt.
+
+### Branch Growth
+
+::: column-margin
+Branch-Growth-Einstellungen
+:::
+
+Im Bereich «*Branch Growth*» können Einstellungen gemacht werden, welche die Verformung der Äste beschreiben:
+
+-   «***Length***»: Mit dieser Option kann die Länge der Äste für die einzelnen Stufen des Baumes definiert werden.
+-   «***Length Variation***»: Mit dieser Option können die Längen der Äste des Baumes auf den einzelnen Stufen zufällig variiert werden.
+-   «***Down Angle***»: Mit dieser Option kann ein Winkel angegeben werden, in dem die Äste nach unten gezogen werden.
+-   «***Down Angle Variation***»: Mit dieser Option kann der maximale Winkel, welcher zufällig dem Wert «*Down Angle*» hinzugefügt wird, eingestellt werden.
+-   «***Curvature***»: Mit dieser Option kann ein Winkel angegeben werden, mit dem sich die Äste an deren Ende krümmen.
+-   «***Curvature Variation***»: Mit dieser Option kann der maximale Winkel, welcher zufällig dem Wert «*Curvature*» hinzugefügt wird, eingestellt werden.
+-   «***Back Curvature***»: Mit dieser Option kann ein Winkel für die Krümmung in der zweiten Hälfte der Äste definiert werden.
+-   «***Vertical Attraction***»: Mit diesem Wert kann ein Wert für eine vertikale Anziehung der Äste nach oben definiert werden.
+
+### Pruning
+
+::: column-margin
+Bäume beschneiden
+:::
+
+Innerhalb der Einstellungen zum «*Pruning*» kann der Baum geschnitten werden. Hierfür muss die Option «*Prune*» aktiviert werden. Anschliessend erscheint ein Viewport-Overlay, welche die Form der Beschneidung des Baumes veranschaulicht. Diese Beschneidung kann dabei in der Breite variiert werden mit dem Wert «*Prune Width*» und in der Höhe mit dem Wert «*Prune Base*». Mittels «*Prune Width Peak*» kann die Baumkrone bearbeitet werden und mittels der Zeilen «*Prune Power*» kann die Beschneidung am unteren Ende und am oberen Ende nicht-linear variiert werden.
+
+### Leaves
+
+::: column-margin
+Blätter hinzufügen
+:::
+
+Sofern nicht gerade Winter ist, besitzen Bäume auch Blätter. Diese können in den Einstellungen zu den «*Leaves*» bearbeitet werden. Hierfür muss allerdings die Option «*Show Leaves*» aktiviert werden. Mit dem Wert «*Leaves*» kann die maximale Anzahl der Blätter pro Ast definiert werden. Dabei ist darauf zu achten, dass eine hohe Anzahl Blätter sehr viel Leistung vom Computer benötigt.
+
+::: column-margin
+Blätter-Formen
+:::
+
+Die Blätter können verschiedene Formen annehmen und unter «*Leaf Object*» kann auch ein Objekt als Blatt verwendet werden. Es gibt folgende Formoptionen:
+
+-   «***Hexagonal***»: Ein achteckiges Blatt.
+-   «***Rectangular***»: Ein viereckiges Blatt.
+-   «***DupliFaces***»: Faces, welche sich quer durch den Ast erstrecken.
+-   «***DupliVertcs***»: Es werden lediglich Vertices an den Stellen der Blätter erstellt.
+
+::: column-margin
+Einstellungen der Blätter
+:::
+
+Für die Blätter können weitere Einstellungen vorgenommen werden:
+
+-   «***Leaf Down***»: Der Winkel, zu dem die Blätter vom Ast herabhängen.
+-   «***Leaf Down Variation***»: Der Wert, zu dem die Einstellung «*Leaf Down*» zufällig variiert werden.
+-   «***Leaf Rotation***»: Der Winkel, zwischen einem Blatt und dem Ast.
+-   «***Leaf Rotation Variation***»: Der Wert, zu dem die Einstellung «*Leaf Rotation*» zufällig variiert wird.
+-   «***Leaf Scale***»: Einstellung der Grösse der Blätter.
+-   «***Leaf Scale X***»: Einstellung der Breite der Blätter.
+-   «***Leaf Scale Taper***»: Wie lange die Blätter sein sollen.
+-   «***Leaf Scale Variation***»: Der Wert, zu dem die Grösse der Blätter variieren darf.
+-   «***Leaf Angle***»: Ein Wert, der beschreibt, wie stark die Blätter vertikal ausgerichtet werden sollen.
+
+## Blätter texturieren 
+
+::: column-margin
+UVs der Blätter 
+:::
+
+Sobald ein Baum mit Blättern erstellt wurde, werden die Blätter in einem separaten Objekt erstellt. Die Blätter haben alle Form und dieselben UVs pro Blatt. Dementsprechend kann mit diesen UVs ein Material erstellt werden. Häufig werden dabei Texturen für Blätter verwendet. Einige dieser Texturen beinhalten auch mehrere Blätter, sodass die UVs so angepasst werden müssen, dass sie jeweils ein Blatt der Textur abbilden.
+
+::: column-margin
+Transparenz zu Blättern hinzufügen
+:::
+
+Im Material des Blattes sollte jeweils darauf geachtet werden, dass eine Alpha-Textur verwendet wird, welche mit dem Alpha-Input des Principled-BSDF-Shaders verbunden wird. Dadurch wird nicht das gesamte Bild, sondern lediglich der nicht-transparente Bereich des Bildes dargestellt. Dies erfordert bei der Verwendung von Eevee zusätzlich, dass im Material-Reiter des Properties-Editors unter dem Reiter «*Settings*» der «*Blend Mode*» auf «*Alpha Hashed*» oder «*Alpha Blend*» gestellt wird.
+
+
+:::::: exercisebox
+:::: exercisebox-header
+::: exercisebox-icon
+:::
+
+Übung 17: Baum erstellen
+::::
+
+::: exercisebox-body
+**Übung 17.1**
+
+Erstellen Sie einen eigenen Baum mittels des Sapling-Tree-Gen-Add-ons und fügen Sie dem Baum Blätter hinzu.
+
+**Übung 17.2**
+
+Texturieren Sie den Baum und die Blätter.
+
+**Übung 17.3**
+
+Rendern Sie ein Bild ihres Baumes. 
+
+
+:::
+::::::

@@ -312,6 +312,13 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#wasser-hinzufügen" id="toc-wasser-hinzufügen" class="nav-link active" data-scroll-target="#wasser-hinzufügen">Wasser hinzufügen</a></li>
+  <li><a href="#lichtbrechung-zwischen-mehreren-materialien" id="toc-lichtbrechung-zwischen-mehreren-materialien" class="nav-link" data-scroll-target="#lichtbrechung-zwischen-mehreren-materialien">Lichtbrechung zwischen mehreren Materialien</a></li>
+  <li><a href="#kondenswasser-am-glas-hinzufügen" id="toc-kondenswasser-am-glas-hinzufügen" class="nav-link" data-scroll-target="#kondenswasser-am-glas-hinzufügen">Kondenswasser am Glas hinzufügen</a>
+  <ul class="collapse">
+  <li><a href="#vorbereitung" id="toc-vorbereitung" class="nav-link" data-scroll-target="#vorbereitung">Vorbereitung</a></li>
+  <li><a href="#haare" id="toc-haare" class="nav-link" data-scroll-target="#haare">Haare</a></li>
+  </ul></li>
+  <li><a href="#partikel" id="toc-partikel" class="nav-link" data-scroll-target="#partikel">Partikel</a></li>
   </ul>
 </nav>
     </div>
@@ -340,7 +347,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Ziel dieses Tutorials</p>
-</div></div><p>Im Rahmen dieses Tutorials wird ein vorgefertigtes Glas mit Wasser, Kondenswasser und Kohlensäurebläschen ergänzt. Damit wird auch die Funktionsweise von Partikeln und Haaren erläutert. Als Vorlage kann die Datei «Glas_Particles» verwendet werden. Diese Vorlage beinhaltet ein Glas innerhalb einer Szene, welches mit Materialien ausgestattet ist.</p>
+</div></div><p>Im Rahmen dieses Tutorials wird ein vorgefertigtes Glas mit Wasser, Kondenswasser und Kohlensäurebläschen ergänzt. Damit wird auch die Funktionsweise von Partikeln und Haaren erläutert. Als Vorlage kann die Datei «<em>Glas_Particles</em>» verwendet werden. Diese Vorlage beinhaltet ein Glas innerhalb einer Szene, welches mit Materialien ausgestattet ist.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -390,11 +397,254 @@ Abbildung&nbsp;3: Die Form des Wasser-Objekts.
 </figure>
 </div>
 
-
-
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Auto-Smooth der Normalen</p>
-</div></div></section>
+</div></div><p>An der Kante der Wasseroberfläche ist nun eine Scharfe Kante zwischen den horizontalen und den vertikalen Faces entstanden. Dies führt dazu, dass das geglättete Shading des Objekts verzerrt wird. Um dies zu eliminieren, kann Blender damit beauftragt werden, die dazugehörigen Normalen ebenfalls zu glätten. Diese Option findet sich im Objekt-Data-Properties-Reiter des Properties-Editors unter dem Abschnitt «<em>Normals</em>». Dort kann die Option «<em>Auto Smooth</em>» aktiviert werden. Dadurch werden die Normalen von nebeneinanderliegenden Faces geglättet, wenn der Winkel zwischen diesen Faces grösser als ein vordefinierter Winkel ist. Dieser vordefinierte Winkel lässt sich im Feld neben der Option «<em>Auto Smooth</em>» definieren.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Neues Material</p>
+</div></div><p>Das Wasser-Objekt beinhaltet noch die Materialien des Glases. Aus diesem Grund wird im Material-Reiter des Properties-Editors eine Kopie des Materials erstellt, welches anschliessend umbenannt werden kann (beispielsweise in «<em>Wasser</em>»). Das Wasser kann in seinen Einstellungen praktisch identisch zum Glas belassen werden. Lediglich der Wert für die IOR sollte auf 1.33 gesetzt werden.</p>
+</section>
+<section id="lichtbrechung-zwischen-mehreren-materialien" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="lichtbrechung-zwischen-mehreren-materialien">Lichtbrechung zwischen mehreren Materialien</h2>
+<p>Quelle: <a href="https://www.aversis.be/tutorials/vray/vray-20-glass-liquid-01.htm" class="uri">https://www.aversis.be/tutorials/vray/vray-20-glass-liquid-01.htm</a></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Wasser innerhalb des Glases verschieben</p>
+</div></div><p>Das erstellte Wasser stellt eine exakte Kopie der Innenfläche des Glases dar und beinhaltet den korrekten IOR für Wasser. Ebenso beinhaltet das Glas den korrekten IOR von Glas. Da sich allerdings sowohl das Glas als auch das Wasser an einer bestimmten Stelle berühren, resultiert ein komplexerer, inakkurater IOR-Wert.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>IOR zwischen zwei Materialien</p>
+</div></div><p>Der IOR beschreibt die Brechung des Lichtes, wenn es auf ein bestimmtes Material trifft oder dieses Material durchdringt. Genauer gesagt beschreibt der IOR die Brechung des Lichts an der Übergangsstelle zwischen zwei Materialien. Was ist das zweite Material? Bei diesem Material handelt es sich um Luft. Jede Lichtbrechung durch Materialien stellt also nicht eine Brechung durch das Material, sondern eine Brechung durch den Übergang vom Material zur Luft dar. Hierfür wird der Luft per Definition ein IOR von 1 zugewiesen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Anpassung der Lichtbrechung zwischen zwei Materialien</p>
+</div></div><p>Wenn sich nun zwei Materialien berühren, ohne dass sich Luft dazwischen befindet, so müssten die jeweiligen IORs miteinander dividiert werden. Da diese Werte allerdings anschliessend inakkurat sind, müssten die Normalen dieser Faces umgekehrt werden, um damit die IOR anzupassen. Dies hat allerdings einen negativen Effekt auf das Shading, weshalb diese Faces in separate Objekte aufgeteilt werden müssten. Ein komplexer Prozess.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Behelfslösung: Wasser in das Glas hineinverschieben</p>
+</div></div><p>Eine Alternative zu diesem Prozess besteht darin, das Wasser so anzupassen, dass es sich ein wenig im Inneren des Glases befindet. Hierfür können alle Vertices im Wasser-Objekt ausgewählt und mittels der Taste <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> vergrössert werden, sodass sich das Wasser etwas innerhalb des Glases befindet. Lediglich die Vertices am Rand der Wasseroberfläche sollten dabei an derselben Position wie das Glas bleiben.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Water_Top_MoveDown.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Die Vertices an der Wasseroberfläche werden etwas nach unten verschoben, sodass die Vertices am Rand eine gewisse Wasserspannung simulieren.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Wasser anpassen</p>
+</div></div><p>Zusätzlich sollte allerdings auch eine gewisse Oberflächenspannung erzeugt werden, sodass sich der Rand der Wasseroberfläche ein wenig oberhalb der Wasseroberfläche befindet. Da der Rand der Wasseroberfläche allerdings genau der Position des Glases entspricht, ist es sinnvoller, den Rest der Wasseroberfläche tiefer zu setzen. Hierfür wird die gesamte Oberfläche des Wassers ausgewählt und der Rand der Wasseroberfläche abgewählt. Anschliessend können die inneren Vertices der Wasseroberfläche etwas tiefer gesetzt werden.</p>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Water_Select_Space.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5: Die Vertices unterhalb der Wasseroberfläche werden ausgewählt und vergrössert, damit sie sich etwas innerhalb des Glases befinden.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="kondenswasser-am-glas-hinzufügen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="kondenswasser-am-glas-hinzufügen">Kondenswasser am Glas hinzufügen</h2>
+<section id="vorbereitung" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="vorbereitung">Vorbereitung</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kondenswasser mit Wassertropfen erzeugen</p>
+</div></div><p>Der nächste Schritt besteht darin, dass der äussere Rand des Glases mit Kondenswasser ergänzt wird. Hierfür wird zunächst ein Wassertropfen erzeugt, welcher anschliessend über das Mesh verteilt wird. Dieser Wassertropfen wird sehr klein und sehr häufig dargestellt. Damit dies nicht zu viel Leistung benötigt, sollte der Wassertropfen möglichst wenig Vertices beinhalten. Idealerweise wird hierfür ein Würfel als Mesh verwendet und in seiner Form verändert, ohne weitere Vertices hinzuzufügen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Tropfen des Kondenswassers erstellen</p>
+</div></div><p>Durch die Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> kann das «<em>Add</em>»-Menü geöffnet werden und unter «<em>Mesh | Cube</em>» ein Würfel hinzugefügt werden. Dabei ist allerdings wichtig, dass der Würfel anschliessend im Edit-Mode so verschoben wird, dass sich der Ursprung des Würfels am Rand des Würfels befindet. Aus diesem Grund muss der gesamte Würfel im Edit-Mode um den Faktor 1 entlang der Z-Achse verschoben werden (mittels den Tasten <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span>, <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> und <kbd aria-hidden="true">1</kbd><span class="visually-hidden">1</span>).</p>
+<p>Anschliessend kann das obere Face des Würfels um den Faktor 0.5 skaliert werden (mittels den Tasten <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span>, <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> und danach <kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span><kbd aria-hidden="true">.</kbd><span class="visually-hidden">.</span><kbd aria-hidden="true">5</kbd><span class="visually-hidden">5</span> ) und um einen Meter entlang der Z-Achse nach unten verschoben werden (mittels den Tasten <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span>, <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> und <kbd aria-hidden="true">-</kbd><span class="visually-hidden">-</span><kbd aria-hidden="true">1</kbd><span class="visually-hidden">1</span>). Dadurch sollte eine Form wie in Abbildung 6 entstehen.</p>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Drop_Obj..png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6: Die Form eines sehr simplen Wassertropfens.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Material des Wassertropfens</p>
+</div></div><p>Der Wassertropfen wird wie auch das Wasserobjekt aus einem Wasser-Material bestehen. Damit die Wassertropfen allerdings etwas stärker auffallen, kann ihr Anteil von reflektiertem Licht erhöht werden. Hierfür wird eine Kopie des Wasser-Materials erstellt und dem Wassertropfen zugewiesen. Innerhalb dieses kopierten Materials kann anschliessend der Metallic-Wert etwas erhöht werden (beispielsweise auf 0.3).</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Einzelne Collection für den Wassertropfen wird erstellt und deaktiviert</p>
+</div></div><p>Dieser Wassertropfen sollte nun versteckt werden. Da der Wassertropfen auch im finalen Render nicht dargestellt werden sollte, empfiehlt es sich, im Outliner eine neue Collection hinzuzufügen und den Wassertropfen in diese Collection zu verschieben. Diese Collection kann wahlweise innerhalb oder ausserhalb der bereits bestehenden Collection platziert werden. Anschliessend sollte der Wassertropfen noch sinnvoll benannt werden (beispielsweise «<em>Wassertropfen</em>»). Die Collection, welche den Wassertropfen nun beinhaltet, kann nun deaktiviert werden, indem deren dazugehöriges Kontrollkästchen deaktiviert wird.</p>
+<p>Als Nächstes muss definiert werden, an welchen Stellen des Glases das Kondenswasser auftreten soll. Hierfür werden im Mesh des Glases alle Faces ausgewählt, welche die Wassertropfen aufweisen sollen. Hierfür kann die gesamte äussere Fläche des Glases ausgewählt werden. Anschliessend wird im Object-Data Properties-Reiter des Meshes eine neue Vertex-Gruppe hinzugefügt und mit einem Namen versehen (beispielsweise «Kondenswasser-Bereich»). Durch einen Klick auf die Taste «<em>Assign</em>» werden anschliessend die ausgewählten Vertices – und somit auch die damit verbundenen Faces – der neuen Vertex-Gruppe zugewiesen. Dadurch sind alle Vorbereitungen abgeschlossen.</p>
+<div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Condense_Select_Group.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;7: Vertices, welche später das Kondenswasser abbilden und zu einer Vertex-Gruppe zusammegefasst werden.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="haare" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="haare">Haare</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Particle-Properties</p>
+</div></div><p>Nun wird das Glas mit Haaren versehen. Wieso ein haariges Glas erstellt wird, sollte im Verlaufe des Kapitels klar werden. Hierfür wird das Glas-Objekt ausgewählt und im Properties-Editor der Reiter «<em>Particle Properties</em>» geöffnet. Innerhalb dieses Reiters finden sich die Partikel- und Haar-Systeme, welche auf das aktuell ausgewählte Objekt angewendet werden. Zuoberst in diesem Reiter befindet sich ein Feld, in dem mehrere Slots für Partikel- oder Haarsysteme hinzugefügt werden können, indem die Schaltfläche «+» für das Hinzufügen und die Schaltfläche «-» für das Entfernen gedrückt wird. Wenn solche Systeme vorhanden sind, wird jeweils die Einstellung für das jeweilige Partikelsystem darunter angezeigt. Die Partikel-Einstellungen und die Partikelsysteme lassen sich dabei individuell benennen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Haare hinzufügen</p>
+</div></div><p>Zunächst werden dem Glas ein paar Haare hinzugefügt. Hierfür sollte die Option «<em>Hair</em>» unterhalb des Namens der Partikel-Einstellungen ausgewählt werden. Im 3D-Viewport werden anschliessend dem Glas Haare hinzugefügt. Diese Haare werden jeweils vom Mesh aus in der Richtung der Normalen erstreckt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Haar-Einstellungen</p>
+</div></div><p>Innerhalb des «<em>Emission</em>»-Reiters können genauere Einstellungen zu den Haaren vorgenommen werden. So lässt sich unter «<em>Number</em>» die Anzahl der Haare definieren und unter «<em>Hair Length</em>» die Länge der Haare. Da doch etwas mehr Haare benötigt werden, kann die Anzahl Haare unter «<em>Number</em>» auf 5000 gesetzt werden. Da die Haare deutlich zu lang sind, kann die «Hair Length» auf 0.01 reduziert werden.</p>
+<div id="fig-1_7" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Condense_Hair_All.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8: Das Glas mit Haaren.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Haarquelle</p>
+</div></div><p>Die Quelle der Haare kann zusätzlich im Reiter «<em>Emission | Source</em>» bearbeitet werden. Dort kann definiert werden, ob die Haare an den Positionen der Vertices, der Faces oder aus dem Volumen des Objekts erzeugt werden sollen. Diese Einstellung kann unter «<em>Emit From</em>» vorgenommen werden. Zusätzlich kann definiert werden, wie die Haare über das Objekt verteilt werden sollen. Hierfür kann im Dropdown-Menü «<em>Distribution</em>» entweder «<em>Jittered</em>», wenn ein bestimmter Abstandswert zwischen den einzelnen Haaren verwendet werden soll, oder «<em>Random</em>» für eine zufällige Platzierung ausgewählt werden. Mittels des Kontrollkästchens «<em>Random Order</em>» werden die einzelnen Haare in einer zufälligen Reihenfolge auf dem Objekt erstellt. Zusätzlich kann mit der Option «<em>Even Distribution</em>» eingestellt werden, ob alle Faces gleichmässig viele Haare aufweisen oder nicht.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Einstellungen der Haarquelle für das Glas</p>
+</div></div><p>Für dieses Beispiel sollten die Einstellungen «<em>Emit From | Faces</em>» und «<em>Distribution | Random</em>» ausgewählt werden. Zusätzlich kann die Auswahl «<em>Even Distribution</em>» deaktiviert werden. So werden die Faces des Glases verwendet, um Haare zu erzeugen. Diese Haare werden anschliessend zufällig über das Mesh hinweg erzeugt und dabei nicht gleichmässig auf die einzelnen Faces verteilt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Wassertropfen als Haare</p>
+</div></div><p>Natürlich besteht das Ziel dieses Tutorials nicht darin, dass ein haariges Glas erstellt wird. Anstelle der Haare sollen jeweils die Wassertröpfchen des Kondenswassers erstellt werden. Im Reiter «<em>Render</em>» lässt sich definieren, was die einzelnen Haare darstellen sollen. In diesem Fall sollen die Haare jeweils das Wassertropfen-Objekt darstellen. Deshalb wird die Einstellung «<em>Render As</em>» von «<em>Path</em>» auf «<em>Object</em>» umgestellt. Dadurch kann nun im Reiter «<em>Render | Object</em>» unter «<em>Instance Object</em>» das Objekt, welches als Haar erzeugt werden soll, ausgewählt werden. Hier wird deshalb nun das Wassertropfen-Objekt ausgewählt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Grösse der Wassertropfen anpassen</p>
+</div></div><p>Anstelle der einzelnen Härchen werden nun die Wassertropfen als Objekt erstellt. Da diese noch klein dargestellt werden, kann ihre Grösse unter «<em>Render | Scale</em>» etwas vergrössert werden, etwa auf den Wert 0.2. Zusätzlich kann die Grösse unter «<em>Scale Randomness</em>» zufällig variiert werden. Wird dieser Wert auf 1 gesetzt, erfolgt eine maximale zufällige Variation der Grösse. Dadurch werden die Wassertropfen nun etwas grösser, aber unterschiedlich gross dargestellt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Haare auf Vertex-Gruppe beschränken</p>
+</div></div><p>Die Wassertropfen werden allerdings über das gesamte Mesh erzeugt. Tatsächlich werden diese Wassertropfen allerdings lediglich an den Faces benötigt, welche vorhin einer Vertex-Gruppe zugewiesen wurden. Deshalb wird im Reiter «<em>Vertex Groups</em>» unter «<em>Density</em>» die vorher definierte Vertex-Gruppe ausgewählt. Dadurch wird definiert, dass die Haare lediglich an den Stellen dieser Vertex-Gruppe dargestellt werden.</p>
+<div id="fig-1_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Condense_Hair_Object.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;9: Das Glas, dessen Haare nun aus Wassertropfen bestehen.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Wassertropfen rotieren</p>
+</div></div><p>Bei einer genauen Betrachtung fällt nun auf, dass die Wassertropfen im falschen Winkel dargestellt werden. Dies liegt daran, dass Objekte im Partikelsystem jeweils um 90° gedreht werden. Um dies zu beheben, muss der Wassertropfen nochmals bearbeitet werden. Hierfür muss die Collection des Wassertropfens nochmals aktiviert werden, damit der Wassertropfen wieder angezeigt wird und bearbeitet werden kann. Idealerweise stellt man den 3D-Cursor mittels des Snap-Tools (<kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span>) auf den Ursprung des Wassertropfens. Hierfür muss der Wassertropfen im Object-Mode ausgewählt werden und im Snap-Tool «<em>Cursor to Selected</em>» ausgewählt werden. Nun kann der Pivot-Point auf den 3D-Cursor gesetzt werden und der Wassertropfen im Edit-Mode um -90° entlang der X-Achse rotiert werden (<kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span>, <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> und <kbd aria-hidden="true">9</kbd><span class="visually-hidden">9</span><kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span> ). Anschliessend kann die Collection des Wassertropfens wieder deaktiviert werden.</p>
+</section>
+</section>
+<section id="partikel" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="partikel">Partikel</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Vertex-Gruppe im Wasserobjekt definieren</p>
+</div></div><p>Das jetzt erstellte Glas beinhaltet Wasser ohne Kohlensäure. Im nächsten Schritt werden dem Wasser Kohlensäurebläschen hinzugefügt. Hierfür wird erneut das Wassertropfen-Objekt verwendet. Nun werden die Wassertropfen allerdings vom Boden des Wassers aus aufsteigen. Hierfür wird eine Vertex-Gruppe im Wasser-Objekt erstellt. Im Edit-Mode werden deshalb alle Vertices, welche am Boden des Wassers zu finden sind, ausgewählt und einer neuen Vertex-Gruppe für das Wasser-Objekt hinzugefügt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Emitter-Einstellungen</p>
+</div></div><p>Nun kann dem Wasser-Objekt im Particle-Properties-Reiter des Properties-Editors ein neues Partikelsystem hinzugefügt werden. Dieses Partikelsystem wird allerdings nicht aus Haaren bestehen, sondern aus Partikeln. Deshalb wird die Option «<em>Emitter</em>» anstelle der Option «<em>Hair</em>» verwendet. Auch hier werden die Einstellungen «<em>Emit From | Faces</em>», «<em>Distribution | Random</em>» und keine «<em>Even Distribution</em>» im Reiter «<em>Emission | Source</em>» verwendet. Unter «<em>Vertex Groups</em>» wird für die «<em>Density</em>» die neu definierte Vertex-Gruppe ausgewählt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Wasserbläschen erstellen</p>
+</div></div><p>Nun kann das Wassertropfen-Objekt für das Erzeugen der Kohlensäurebläschen verwendet werden. Hierfür muss in der Option «<em>Render As</em>» die Einstellung «<em>Object</em>» ausgewählt werden und anschliessend der Wassertropfen als «<em>Instance Object</em>» definiert werden. Die Grösse des Objekts sollte reduziert werden, indem der Wert «<em>Scale</em>» beispielsweise auf 0.0025 und der Wert «<em>Scale Randomness</em>» auf 1 erhöht wird.</p>
+<div id="fig-1_9" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Bubbles_Select_Group.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;10: Die Vertices am unteren Bereich des Wasser-Objekts werden zu einer Vertex-Gruppe zusammengefasst.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Emitter fungieren als Animationen</p>
+</div></div><p>Trotz all dieser Einstellungen sind die Effekte des Partikelsystems wohl nicht klar ersichtlich. Dies liegt daran, dass Partikelsysteme vom Typ «<em>Emitter</em>» anders funktionieren als Haare. Bei diesem Typ werden nacheinander Partikel erzeugt, welche sich physikalisch während einer Animation durch den Raum bewegen. Dementsprechend muss die Animation gestartet werden, damit der Effekt des Partikelsystems sichtbar wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Timeline-Editor</p>
+</div></div><p>Zum Starten der Animation kann die <kbd aria-hidden="true">Space</kbd><span class="visually-hidden">Space</span>-Taste verwendet werden. Je nach Grundeinstellungen in Blender ist dieser Taste möglicherweise eine andere Funktion zugewiesen. In diesen Fällen kann die Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">Space</kbd><span class="visually-hidden">Space</span> verwendet werden. Alternativ kann der Timeline-Editor geöffnet werden und darin auf den «<em>Play</em>»-Button gedrückt werden, um die Animation zu starten. Der Timeline-Editor ermöglicht zudem eine Übersicht der Animation.</p>
+<div id="fig-1_10" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Timeline_Icon.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;11: Icon für den Timeline-Editor.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Frames</p>
+</div></div><p>Per Default dauert eine Animation 250 Frames, wobei auch eine höhere oder geringere Animationsdauer definiert werden kann. Frames bezeichnen einzelne Bilder, welche im Rahmen einer Animation erstellt werden. Durch die Aneinanderreihung der einzelnen Frames entsteht anschliessend eine Animation. Im Timeline-Editor werden diese Frames anhand eines Zeitstrahls aufgelistet. Durch das Starten der Animation bewegt sich ein blauer Marker entlang dieses Zeitstrahls, während parallel im 3D-Viewport die Szene während dieser Frames dargestellt wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Partikelsystem als Animation</p>
+</div></div><p>Die Grundeinstellungen zum Partikelsystem des Typs «<em>Emitter</em>» hängen von diesen Frames ab. So wird das ganze Partikelsystem über eine gewisse Dauer erzeugt, welche sich aus dem Startpunkt der Animation und dem Endpunkt der Animation ergibt. Im Reiter «<em>Emission</em>» kann unter «<em>Frame Start</em>» definiert werden, beim wievielten Frame das Partikelsystem starten soll, und unter «<em>End</em>», beim wievielten Frame dieses Partikelsystem enden soll. Die Anzahl Partikel, welche unter «<em>Number</em>» definiert sind, werden anschliessend gleichmässig über die ganze Animationsdauer aufgeteilt.</p>
+<div id="fig-1_11" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Bubles_Emit.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;12: Das Wasser-Objekt schüttet Wassertropfen aus.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Tote Partikel</p>
+</div></div><p>Sobald ein einzelner Partikel erzeugt wird, bestreitet er einen physikalischen Weg – beispielsweise indem er entlang der Z-Achse fällt. Diese Animation ist allerdings nicht unendlich. Jeder einzelne Partikel lebt nur für eine gewisse Zeit lang und verschwindet anschliessend. Unter der Zeile «<em>Lifetime</em>» kann definiert werden, für wie viele Frames ein Partikel existieren soll. Wenn die Lifetime auf 50 gestellt ist, existiert ein Partikel für 50 Frames. Das heisst allerdings nicht, dass nach 50 Frames keine Partikel mehr vorhanden sind, da laufend neue Partikel erstellt werden. Es heisst aber auch, dass nach dem Frame, ab dem der letzte Partikel erzeugt wurde, dieser Partikel noch entsprechend seiner Lebensdauer durch die Szene wandert.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Gravitationskräfte und wie sie verändert werden können</p>
+</div></div><p>In diesem Beispiel wurden am Boden des Glases Partikel erzeugt. Diese Partikel fallen entlang der Z-Achse durch den physikalischen Raum. Dies basiert auf simulierten Gravitationskräften. Im Reiter «<em>Field Weights</em>» lässt sich der Einfluss dieser Gravitationskraft, aber auch anderer Kräfte, einstellen. So kann der Wert «<em>Gravity</em>» beispielsweise auf -1 gesetzt werden, um die Gravitationskräfte für dieses Partikelsystem umzukehren. Dadurch steigen die Partikel entlang der Z-Achse hinauf, da die Gravitationskräfte umgekehrt wurden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Ausschütten der Partikel erfolgt entgegen der neuen Schwerkraft</p>
+</div></div><p>Obwohl die Gravitationskräfte umgekehrt wurden, scheinen die einzelnen Partikel zunächst zu fallen, bevor sie entlang der Z-Achse aufsteigen. Dies liegt daran, dass die Partikel zunächst aus dem Mesh ausgeschüttet werden. Dies geschieht entlang der Normalen des Meshes. Die Partikel werden also entlang der Normalen ausgeschüttet und erhalten dadurch einen physikalischen Antrieb, bevor sie schliesslich der manuell erstellten Gravitationskraft folgen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Partikel umgekehrt ausschütten</p>
+</div></div><p>Durch ein Umkehren der Normalen würden die Partikel nach oben ausgestossen und dadurch von Anfang an der Gravitationskraft folgen. Dies würde allerdings dazu führen, dass die Normalen des Wasser-Objekts für die Materialien falsch ausgerichtet wären. Stattdessen kann im Reiter «<em>Velocity</em>» der Wert für «<em>Normal</em>» von 1 auf -1 gesetzt werden. Dadurch werden die Partikel entgegengesetzt der Normalen ausgeschüttet.</p>
+<div id="fig-1_12" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Bubles_Emit_Gravity.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13: Trotz umgekehrter Schwerkraft werden die Wassertropfen entlang der Normalen des Objektes – also nach unten – ausgeschüttet, bevor sie aufsteigen.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Letzte Anpassungen</p>
+</div></div><p>Zu guter Letzt werden noch zwei Anpassungen benötigt: Indem unter «<em>Velocity</em>» der Wert für «<em>Tangent</em>» erhöht wird, beispielsweise auf 0.75, verteilen sich die Partikel etwas mehr entlang der Tangente. Zusätzlich sollte die Lifetime der Partikel so angepasst werden, dass die Partikel nicht so lange leben, dass sie das Glas verlassen (beispielsweise eine «<em>Lifetime</em>» von 9, je nach Höhe des Wassers).</p>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

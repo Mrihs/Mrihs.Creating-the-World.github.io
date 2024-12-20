@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>38. Tutorial: Ein Glas mit Wasser erstellen – Creating the World</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Creating the World</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Suchen"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navigation umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../Sites/Overview.html"> <i class="bi bi-calendar-range" role="img">
+</i> 
+<span class="menu-text">Kursübersicht</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cheatsheets" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-lightbulb" role="img">
+</i> 
+ <span class="menu-text">Cheatsheets</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-cheatsheets">    
+        <li>
+    <a class="dropdown-item" href="../Cheatsheets/cheatsheet_keys.pdf">
+ <span class="dropdown-text">Tastenkombinationen</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Cheatsheets/cheatsheet_shading.pdf">
+ <span class="dropdown-text">Shading</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <span class="nav-link">
+    <i class="bi bi-folder" role="img">
+</i> 
+<span class="menu-text">Ressourcen</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+    <i class="bi bi-images" role="img">
+</i> 
+<span class="menu-text">Folien</span>
+    </span>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-skript" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-eyeglasses" role="img">
+</i> 
+ <span class="menu-text">Skript</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-skript">    
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_1.html">
+ <span class="dropdown-text">Kapitel 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_2.html">
+ <span class="dropdown-text">Kapitel 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_3.html">
+ <span class="dropdown-text">Kapitel 3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_4.html">
+ <span class="dropdown-text">Kapitel 4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_5.html">
+ <span class="dropdown-text">Kapitel 5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_6.html">
+ <span class="dropdown-text">Kapitel 6</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_7.html">
+ <span class="dropdown-text">Kapitel 7</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_8.html">
+ <span class="dropdown-text">Kapitel 8</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_9.html">
+ <span class="dropdown-text">Kapitel 9</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_10.html">
+ <span class="dropdown-text">Kapitel 10</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_11.html">
+ <span class="dropdown-text">Kapitel 11</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_12.html">
+ <span class="dropdown-text">Kapitel 12</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_13.html">
+ <span class="dropdown-text">Kapitel 13</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_14.html">
+ <span class="dropdown-text">Kapitel 14</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_15.html">
+ <span class="dropdown-text">Kapitel 15</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_16.html">
+ <span class="dropdown-text">Kapitel 16</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_17.html">
+ <span class="dropdown-text">Kapitel 17</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_18.html">
+ <span class="dropdown-text">Kapitel 18</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_19.html">
+ <span class="dropdown-text">Kapitel 19</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_20.html">
+ <span class="dropdown-text">Kapitel 20</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_21.html">
+ <span class="dropdown-text">Kapitel 21</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_22.html">
+ <span class="dropdown-text">Kapitel 22</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_23.html">
+ <span class="dropdown-text">Kapitel 23</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_24.html">
+ <span class="dropdown-text">Kapitel 24</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_25.html">
+ <span class="dropdown-text">Kapitel 25</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_25.html">
+ <span class="dropdown-text">Kapitel 25</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_26.html">
+ <span class="dropdown-text">Kapitel 26</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_27.html">
+ <span class="dropdown-text">Kapitel 27</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_28.html">
+ <span class="dropdown-text">Kapitel 28</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_29.html">
+ <span class="dropdown-text">Kapitel 29</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_30.html">
+ <span class="dropdown-text">Kapitel 30</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_31.html">
+ <span class="dropdown-text">Kapitel 31</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_32.html">
+ <span class="dropdown-text">Kapitel 32</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_33.html">
+ <span class="dropdown-text">Kapitel 33</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_34.html">
+ <span class="dropdown-text">Kapitel 34</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_35.html">
+ <span class="dropdown-text">Kapitel 35</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_36.html">
+ <span class="dropdown-text">Kapitel 36</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_37.html">
+ <span class="dropdown-text">Kapitel 37</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_38.html">
+ <span class="dropdown-text">Kapitel 38</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> <i class="bi bi-info-circle" role="img">
+</i> 
+<span class="menu-text">Über</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#wasser-hinzufügen" id="toc-wasser-hinzufügen" class="nav-link active" data-scroll-target="#wasser-hinzufügen">Wasser hinzufügen</a></li>
+  <li><a href="#lichtbrechung-zwischen-mehreren-materialien" id="toc-lichtbrechung-zwischen-mehreren-materialien" class="nav-link" data-scroll-target="#lichtbrechung-zwischen-mehreren-materialien">Lichtbrechung zwischen mehreren Materialien</a></li>
+  <li><a href="#kondenswasser-am-glas-hinzufügen" id="toc-kondenswasser-am-glas-hinzufügen" class="nav-link" data-scroll-target="#kondenswasser-am-glas-hinzufügen">Kondenswasser am Glas hinzufügen</a>
+  <ul class="collapse">
+  <li><a href="#vorbereitung" id="toc-vorbereitung" class="nav-link" data-scroll-target="#vorbereitung">Vorbereitung</a></li>
+  <li><a href="#haare" id="toc-haare" class="nav-link" data-scroll-target="#haare">Haare</a></li>
+  </ul></li>
+  <li><a href="#partikel" id="toc-partikel" class="nav-link" data-scroll-target="#partikel">Partikel</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">38. Tutorial: Ein Glas mit Wasser erstellen</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Ziel dieses Tutorials</p>
+</div></div><p>Im Rahmen dieses Tutorials wird ein vorgefertigtes Glas mit Wasser, Kondenswasser und Kohlensäurebläschen ergänzt. Damit wird auch die Funktionsweise von Partikeln und Haaren erläutert. Als Vorlage kann die Datei «<em>Glas_Particles</em>» verwendet werden. Diese Vorlage beinhaltet ein Glas innerhalb einer Szene, welches mit Materialien ausgestattet ist.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Water_Final.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Das Ziel dieses Tutorials: Ein Glas mit Wasser, Kondenswasser am Glas und Kohlensäurebläschen.
+</figcaption>
+</figure>
+</div>
+<section id="wasser-hinzufügen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="wasser-hinzufügen">Wasser hinzufügen</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Duplikat des Glases erstellen</p>
+</div></div><p>Im ersten Schritt geht es darum, das Glas mit Wasser zu ergänzen. Hierfür wird ein Mesh benötigt, welches dieselbe Form wie das Innere des Glases hat. Hierfür kann das bereits vorhandene Glas mit der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">D</kbd><span class="visually-hidden">D</span> dupliziert und an derselben Stelle platziert werden. Auf diesem Duplikat sollte anschliessend der Subdivision-Surface-Modifier im Modifier-Properties-Reiter des Properties-Editors angewendet werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Nicht benötigte Vertices aus Duplikat entfernen</p>
+</div></div><p>Das Duplikat kann anschliessend im Edit-Mode bearbeitet werden. Als Erstes wird die erste Reihe Vertices auf der Innenseite des Glases, welche sich oberhalb der gewünschten Wasserhöhe befindet, bei gedrückter <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span>-Taste mit einem Mausklick ausgewählt. Diese Reihe wird danach mit der Taste <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> und dem Befehl «<em>Delete | Vertices</em>» gelöscht. Nun kann der Mauszeiger über den äusseren Bereich des Glases bewegt werden und die Taste <kbd aria-hidden="true">L</kbd><span class="visually-hidden">L</span> gedrückt werden. Dadurch werden alle verbundenen Vertices ausgewählt, sodass der gesamte Teil des Glases, welcher nicht für das Wasser verwendet wird, mit der Taste <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> gelöscht werden kann.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Water_Select_Linked.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Die Kopie des Glases, aus der eine Reihe von Vertices im Inneren entfernt wurde. Der äussere Rand kann nun mittels «<em>Select Linked</em>» einfach ausgewählt werden.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Oberfläche des Wassers nach innen extrudieren</p>
+</div></div><p>Das Wasser beinhaltet noch keine Oberfläche. Aus diesem Grund wird die oberste Reihe der Vertices ausgewählt und der ausgewählte Kreis mittels der Taste <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span> extrudiert und mittels der Taste <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> verkleinert. Dieser Schritt wird mehrmals wiederholt, bis nur noch ein kleines Loch übrigbleibt. Dieses Loch kann anschliessend mit der Taste <kbd aria-hidden="true">F</kbd><span class="visually-hidden">F</span> gefüllt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Normalen umkehren</p>
+</div></div><p>Das nun resultierende Mesh hat bereits die Form des Wassers, welches erstellt werden soll. Allerdings sind die Normalen des Wassers in die falsche Richtung ausgerichtet. Die Seite, welche zuvor im Glas nach aussen gerichtet war, ist nun beim Wasser nach innen ausgerichtet. Deshalb sollten alle Vertices ausgewählt werden, mittels der Tastenkombination <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">N</kbd><span class="visually-hidden">N</span> das «<em>Normals</em>»-Menü geöffnet werden und die Option «<em>Flip</em>» ausgewählt werden.</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Water_Top_Fill.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Die Form des Wasser-Objekts.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Auto-Smooth der Normalen</p>
+</div></div><p>An der Kante der Wasseroberfläche ist nun eine Scharfe Kante zwischen den horizontalen und den vertikalen Faces entstanden. Dies führt dazu, dass das geglättete Shading des Objekts verzerrt wird. Um dies zu eliminieren, kann Blender damit beauftragt werden, die dazugehörigen Normalen ebenfalls zu glätten. Diese Option findet sich im Objekt-Data-Properties-Reiter des Properties-Editors unter dem Abschnitt «<em>Normals</em>». Dort kann die Option «<em>Auto Smooth</em>» aktiviert werden. Dadurch werden die Normalen von nebeneinanderliegenden Faces geglättet, wenn der Winkel zwischen diesen Faces grösser als ein vordefinierter Winkel ist. Dieser vordefinierte Winkel lässt sich im Feld neben der Option «<em>Auto Smooth</em>» definieren.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Neues Material</p>
+</div></div><p>Das Wasser-Objekt beinhaltet noch die Materialien des Glases. Aus diesem Grund wird im Material-Reiter des Properties-Editors eine Kopie des Materials erstellt, welches anschliessend umbenannt werden kann (beispielsweise in «<em>Wasser</em>»). Das Wasser kann in seinen Einstellungen praktisch identisch zum Glas belassen werden. Lediglich der Wert für die IOR sollte auf 1.33 gesetzt werden.</p>
+</section>
+<section id="lichtbrechung-zwischen-mehreren-materialien" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="lichtbrechung-zwischen-mehreren-materialien">Lichtbrechung zwischen mehreren Materialien</h2>
+<p>Quelle: <a href="https://www.aversis.be/tutorials/vray/vray-20-glass-liquid-01.htm" class="uri">https://www.aversis.be/tutorials/vray/vray-20-glass-liquid-01.htm</a></p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Wasser innerhalb des Glases verschieben</p>
+</div></div><p>Das erstellte Wasser stellt eine exakte Kopie der Innenfläche des Glases dar und beinhaltet den korrekten IOR für Wasser. Ebenso beinhaltet das Glas den korrekten IOR von Glas. Da sich allerdings sowohl das Glas als auch das Wasser an einer bestimmten Stelle berühren, resultiert ein komplexerer, inakkurater IOR-Wert.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>IOR zwischen zwei Materialien</p>
+</div></div><p>Der IOR beschreibt die Brechung des Lichtes, wenn es auf ein bestimmtes Material trifft oder dieses Material durchdringt. Genauer gesagt beschreibt der IOR die Brechung des Lichts an der Übergangsstelle zwischen zwei Materialien. Was ist das zweite Material? Bei diesem Material handelt es sich um Luft. Jede Lichtbrechung durch Materialien stellt also nicht eine Brechung durch das Material, sondern eine Brechung durch den Übergang vom Material zur Luft dar. Hierfür wird der Luft per Definition ein IOR von 1 zugewiesen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Anpassung der Lichtbrechung zwischen zwei Materialien</p>
+</div></div><p>Wenn sich nun zwei Materialien berühren, ohne dass sich Luft dazwischen befindet, so müssten die jeweiligen IORs miteinander dividiert werden. Da diese Werte allerdings anschliessend inakkurat sind, müssten die Normalen dieser Faces umgekehrt werden, um damit die IOR anzupassen. Dies hat allerdings einen negativen Effekt auf das Shading, weshalb diese Faces in separate Objekte aufgeteilt werden müssten. Ein komplexer Prozess.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Behelfslösung: Wasser in das Glas hineinverschieben</p>
+</div></div><p>Eine Alternative zu diesem Prozess besteht darin, das Wasser so anzupassen, dass es sich ein wenig im Inneren des Glases befindet. Hierfür können alle Vertices im Wasser-Objekt ausgewählt und mittels der Taste <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> vergrössert werden, sodass sich das Wasser etwas innerhalb des Glases befindet. Lediglich die Vertices am Rand der Wasseroberfläche sollten dabei an derselben Position wie das Glas bleiben.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Water_Top_MoveDown.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Die Vertices an der Wasseroberfläche werden etwas nach unten verschoben, sodass die Vertices am Rand eine gewisse Wasserspannung simulieren.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Wasser anpassen</p>
+</div></div><p>Zusätzlich sollte allerdings auch eine gewisse Oberflächenspannung erzeugt werden, sodass sich der Rand der Wasseroberfläche ein wenig oberhalb der Wasseroberfläche befindet. Da der Rand der Wasseroberfläche allerdings genau der Position des Glases entspricht, ist es sinnvoller, den Rest der Wasseroberfläche tiefer zu setzen. Hierfür wird die gesamte Oberfläche des Wassers ausgewählt und der Rand der Wasseroberfläche abgewählt. Anschliessend können die inneren Vertices der Wasseroberfläche etwas tiefer gesetzt werden.</p>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Water_Select_Space.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5: Die Vertices unterhalb der Wasseroberfläche werden ausgewählt und vergrössert, damit sie sich etwas innerhalb des Glases befinden.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="kondenswasser-am-glas-hinzufügen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="kondenswasser-am-glas-hinzufügen">Kondenswasser am Glas hinzufügen</h2>
+<section id="vorbereitung" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="vorbereitung">Vorbereitung</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kondenswasser mit Wassertropfen erzeugen</p>
+</div></div><p>Der nächste Schritt besteht darin, dass der äussere Rand des Glases mit Kondenswasser ergänzt wird. Hierfür wird zunächst ein Wassertropfen erzeugt, welcher anschliessend über das Mesh verteilt wird. Dieser Wassertropfen wird sehr klein und sehr häufig dargestellt. Damit dies nicht zu viel Leistung benötigt, sollte der Wassertropfen möglichst wenig Vertices beinhalten. Idealerweise wird hierfür ein Würfel als Mesh verwendet und in seiner Form verändert, ohne weitere Vertices hinzuzufügen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Tropfen des Kondenswassers erstellen</p>
+</div></div><p>Durch die Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> kann das «<em>Add</em>»-Menü geöffnet werden und unter «<em>Mesh | Cube</em>» ein Würfel hinzugefügt werden. Dabei ist allerdings wichtig, dass der Würfel anschliessend im Edit-Mode so verschoben wird, dass sich der Ursprung des Würfels am Rand des Würfels befindet. Aus diesem Grund muss der gesamte Würfel im Edit-Mode um den Faktor 1 entlang der Z-Achse verschoben werden (mittels den Tasten <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span>, <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> und <kbd aria-hidden="true">1</kbd><span class="visually-hidden">1</span>).</p>
+<p>Anschliessend kann das obere Face des Würfels um den Faktor 0.5 skaliert werden (mittels den Tasten <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span>, <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> und danach <kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span><kbd aria-hidden="true">.</kbd><span class="visually-hidden">.</span><kbd aria-hidden="true">5</kbd><span class="visually-hidden">5</span> ) und um einen Meter entlang der Z-Achse nach unten verschoben werden (mittels den Tasten <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span>, <kbd aria-hidden="true">Z</kbd><span class="visually-hidden">Z</span> und <kbd aria-hidden="true">-</kbd><span class="visually-hidden">-</span><kbd aria-hidden="true">1</kbd><span class="visually-hidden">1</span>). Dadurch sollte eine Form wie in Abbildung 6 entstehen.</p>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Drop_Obj..png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6: Die Form eines sehr simplen Wassertropfens.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Material des Wassertropfens</p>
+</div></div><p>Der Wassertropfen wird wie auch das Wasserobjekt aus einem Wasser-Material bestehen. Damit die Wassertropfen allerdings etwas stärker auffallen, kann ihr Anteil von reflektiertem Licht erhöht werden. Hierfür wird eine Kopie des Wasser-Materials erstellt und dem Wassertropfen zugewiesen. Innerhalb dieses kopierten Materials kann anschliessend der Metallic-Wert etwas erhöht werden (beispielsweise auf 0.3).</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Einzelne Collection für den Wassertropfen wird erstellt und deaktiviert</p>
+</div></div><p>Dieser Wassertropfen sollte nun versteckt werden. Da der Wassertropfen auch im finalen Render nicht dargestellt werden sollte, empfiehlt es sich, im Outliner eine neue Collection hinzuzufügen und den Wassertropfen in diese Collection zu verschieben. Diese Collection kann wahlweise innerhalb oder ausserhalb der bereits bestehenden Collection platziert werden. Anschliessend sollte der Wassertropfen noch sinnvoll benannt werden (beispielsweise «<em>Wassertropfen</em>»). Die Collection, welche den Wassertropfen nun beinhaltet, kann nun deaktiviert werden, indem deren dazugehöriges Kontrollkästchen deaktiviert wird.</p>
+<p>Als Nächstes muss definiert werden, an welchen Stellen des Glases das Kondenswasser auftreten soll. Hierfür werden im Mesh des Glases alle Faces ausgewählt, welche die Wassertropfen aufweisen sollen. Hierfür kann die gesamte äussere Fläche des Glases ausgewählt werden. Anschliessend wird im Object-Data Properties-Reiter des Meshes eine neue Vertex-Gruppe hinzugefügt und mit einem Namen versehen (beispielsweise «Kondenswasser-Bereich»). Durch einen Klick auf die Taste «<em>Assign</em>» werden anschliessend die ausgewählten Vertices – und somit auch die damit verbundenen Faces – der neuen Vertex-Gruppe zugewiesen. Dadurch sind alle Vorbereitungen abgeschlossen.</p>
+<div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Condense_Select_Group.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;7: Vertices, welche später das Kondenswasser abbilden und zu einer Vertex-Gruppe zusammegefasst werden.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="haare" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="haare">Haare</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Particle-Properties</p>
+</div></div><p>Nun wird das Glas mit Haaren versehen. Wieso ein haariges Glas erstellt wird, sollte im Verlaufe des Kapitels klar werden. Hierfür wird das Glas-Objekt ausgewählt und im Properties-Editor der Reiter «<em>Particle Properties</em>» geöffnet. Innerhalb dieses Reiters finden sich die Partikel- und Haar-Systeme, welche auf das aktuell ausgewählte Objekt angewendet werden. Zuoberst in diesem Reiter befindet sich ein Feld, in dem mehrere Slots für Partikel- oder Haarsysteme hinzugefügt werden können, indem die Schaltfläche «+» für das Hinzufügen und die Schaltfläche «-» für das Entfernen gedrückt wird. Wenn solche Systeme vorhanden sind, wird jeweils die Einstellung für das jeweilige Partikelsystem darunter angezeigt. Die Partikel-Einstellungen und die Partikelsysteme lassen sich dabei individuell benennen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Haare hinzufügen</p>
+</div></div><p>Zunächst werden dem Glas ein paar Haare hinzugefügt. Hierfür sollte die Option «<em>Hair</em>» unterhalb des Namens der Partikel-Einstellungen ausgewählt werden. Im 3D-Viewport werden anschliessend dem Glas Haare hinzugefügt. Diese Haare werden jeweils vom Mesh aus in der Richtung der Normalen erstreckt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Haar-Einstellungen</p>
+</div></div><p>Innerhalb des «<em>Emission</em>»-Reiters können genauere Einstellungen zu den Haaren vorgenommen werden. So lässt sich unter «<em>Number</em>» die Anzahl der Haare definieren und unter «<em>Hair Length</em>» die Länge der Haare. Da doch etwas mehr Haare benötigt werden, kann die Anzahl Haare unter «<em>Number</em>» auf 5000 gesetzt werden. Da die Haare deutlich zu lang sind, kann die «Hair Length» auf 0.01 reduziert werden.</p>
+<div id="fig-1_7" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Condense_Hair_All.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8: Das Glas mit Haaren.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Haarquelle</p>
+</div></div><p>Die Quelle der Haare kann zusätzlich im Reiter «<em>Emission | Source</em>» bearbeitet werden. Dort kann definiert werden, ob die Haare an den Positionen der Vertices, der Faces oder aus dem Volumen des Objekts erzeugt werden sollen. Diese Einstellung kann unter «<em>Emit From</em>» vorgenommen werden. Zusätzlich kann definiert werden, wie die Haare über das Objekt verteilt werden sollen. Hierfür kann im Dropdown-Menü «<em>Distribution</em>» entweder «<em>Jittered</em>», wenn ein bestimmter Abstandswert zwischen den einzelnen Haaren verwendet werden soll, oder «<em>Random</em>» für eine zufällige Platzierung ausgewählt werden. Mittels des Kontrollkästchens «<em>Random Order</em>» werden die einzelnen Haare in einer zufälligen Reihenfolge auf dem Objekt erstellt. Zusätzlich kann mit der Option «<em>Even Distribution</em>» eingestellt werden, ob alle Faces gleichmässig viele Haare aufweisen oder nicht.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Einstellungen der Haarquelle für das Glas</p>
+</div></div><p>Für dieses Beispiel sollten die Einstellungen «<em>Emit From | Faces</em>» und «<em>Distribution | Random</em>» ausgewählt werden. Zusätzlich kann die Auswahl «<em>Even Distribution</em>» deaktiviert werden. So werden die Faces des Glases verwendet, um Haare zu erzeugen. Diese Haare werden anschliessend zufällig über das Mesh hinweg erzeugt und dabei nicht gleichmässig auf die einzelnen Faces verteilt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Wassertropfen als Haare</p>
+</div></div><p>Natürlich besteht das Ziel dieses Tutorials nicht darin, dass ein haariges Glas erstellt wird. Anstelle der Haare sollen jeweils die Wassertröpfchen des Kondenswassers erstellt werden. Im Reiter «<em>Render</em>» lässt sich definieren, was die einzelnen Haare darstellen sollen. In diesem Fall sollen die Haare jeweils das Wassertropfen-Objekt darstellen. Deshalb wird die Einstellung «<em>Render As</em>» von «<em>Path</em>» auf «<em>Object</em>» umgestellt. Dadurch kann nun im Reiter «<em>Render | Object</em>» unter «<em>Instance Object</em>» das Objekt, welches als Haar erzeugt werden soll, ausgewählt werden. Hier wird deshalb nun das Wassertropfen-Objekt ausgewählt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Grösse der Wassertropfen anpassen</p>
+</div></div><p>Anstelle der einzelnen Härchen werden nun die Wassertropfen als Objekt erstellt. Da diese noch klein dargestellt werden, kann ihre Grösse unter «<em>Render | Scale</em>» etwas vergrössert werden, etwa auf den Wert 0.2. Zusätzlich kann die Grösse unter «<em>Scale Randomness</em>» zufällig variiert werden. Wird dieser Wert auf 1 gesetzt, erfolgt eine maximale zufällige Variation der Grösse. Dadurch werden die Wassertropfen nun etwas grösser, aber unterschiedlich gross dargestellt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Haare auf Vertex-Gruppe beschränken</p>
+</div></div><p>Die Wassertropfen werden allerdings über das gesamte Mesh erzeugt. Tatsächlich werden diese Wassertropfen allerdings lediglich an den Faces benötigt, welche vorhin einer Vertex-Gruppe zugewiesen wurden. Deshalb wird im Reiter «<em>Vertex Groups</em>» unter «<em>Density</em>» die vorher definierte Vertex-Gruppe ausgewählt. Dadurch wird definiert, dass die Haare lediglich an den Stellen dieser Vertex-Gruppe dargestellt werden.</p>
+<div id="fig-1_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Condense_Hair_Object.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;9: Das Glas, dessen Haare nun aus Wassertropfen bestehen.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Wassertropfen rotieren</p>
+</div></div><p>Bei einer genauen Betrachtung fällt nun auf, dass die Wassertropfen im falschen Winkel dargestellt werden. Dies liegt daran, dass Objekte im Partikelsystem jeweils um 90° gedreht werden. Um dies zu beheben, muss der Wassertropfen nochmals bearbeitet werden. Hierfür muss die Collection des Wassertropfens nochmals aktiviert werden, damit der Wassertropfen wieder angezeigt wird und bearbeitet werden kann. Idealerweise stellt man den 3D-Cursor mittels des Snap-Tools (<kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span>) auf den Ursprung des Wassertropfens. Hierfür muss der Wassertropfen im Object-Mode ausgewählt werden und im Snap-Tool «<em>Cursor to Selected</em>» ausgewählt werden. Nun kann der Pivot-Point auf den 3D-Cursor gesetzt werden und der Wassertropfen im Edit-Mode um -90° entlang der X-Achse rotiert werden (<kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span>, <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> und <kbd aria-hidden="true">9</kbd><span class="visually-hidden">9</span><kbd aria-hidden="true">0</kbd><span class="visually-hidden">0</span> ). Anschliessend kann die Collection des Wassertropfens wieder deaktiviert werden.</p>
+</section>
+</section>
+<section id="partikel" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="partikel">Partikel</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Vertex-Gruppe im Wasserobjekt definieren</p>
+</div></div><p>Das jetzt erstellte Glas beinhaltet Wasser ohne Kohlensäure. Im nächsten Schritt werden dem Wasser Kohlensäurebläschen hinzugefügt. Hierfür wird erneut das Wassertropfen-Objekt verwendet. Nun werden die Wassertropfen allerdings vom Boden des Wassers aus aufsteigen. Hierfür wird eine Vertex-Gruppe im Wasser-Objekt erstellt. Im Edit-Mode werden deshalb alle Vertices, welche am Boden des Wassers zu finden sind, ausgewählt und einer neuen Vertex-Gruppe für das Wasser-Objekt hinzugefügt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Emitter-Einstellungen</p>
+</div></div><p>Nun kann dem Wasser-Objekt im Particle-Properties-Reiter des Properties-Editors ein neues Partikelsystem hinzugefügt werden. Dieses Partikelsystem wird allerdings nicht aus Haaren bestehen, sondern aus Partikeln. Deshalb wird die Option «<em>Emitter</em>» anstelle der Option «<em>Hair</em>» verwendet. Auch hier werden die Einstellungen «<em>Emit From | Faces</em>», «<em>Distribution | Random</em>» und keine «<em>Even Distribution</em>» im Reiter «<em>Emission | Source</em>» verwendet. Unter «<em>Vertex Groups</em>» wird für die «<em>Density</em>» die neu definierte Vertex-Gruppe ausgewählt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Wasserbläschen erstellen</p>
+</div></div><p>Nun kann das Wassertropfen-Objekt für das Erzeugen der Kohlensäurebläschen verwendet werden. Hierfür muss in der Option «<em>Render As</em>» die Einstellung «<em>Object</em>» ausgewählt werden und anschliessend der Wassertropfen als «<em>Instance Object</em>» definiert werden. Die Grösse des Objekts sollte reduziert werden, indem der Wert «<em>Scale</em>» beispielsweise auf 0.0025 und der Wert «<em>Scale Randomness</em>» auf 1 erhöht wird.</p>
+<div id="fig-1_9" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Bubbles_Select_Group.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;10: Die Vertices am unteren Bereich des Wasser-Objekts werden zu einer Vertex-Gruppe zusammengefasst.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Emitter fungieren als Animationen</p>
+</div></div><p>Trotz all dieser Einstellungen sind die Effekte des Partikelsystems wohl nicht klar ersichtlich. Dies liegt daran, dass Partikelsysteme vom Typ «<em>Emitter</em>» anders funktionieren als Haare. Bei diesem Typ werden nacheinander Partikel erzeugt, welche sich physikalisch während einer Animation durch den Raum bewegen. Dementsprechend muss die Animation gestartet werden, damit der Effekt des Partikelsystems sichtbar wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Timeline-Editor</p>
+</div></div><p>Zum Starten der Animation kann die <kbd aria-hidden="true">Space</kbd><span class="visually-hidden">Space</span>-Taste verwendet werden. Je nach Grundeinstellungen in Blender ist dieser Taste möglicherweise eine andere Funktion zugewiesen. In diesen Fällen kann die Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">Space</kbd><span class="visually-hidden">Space</span> verwendet werden. Alternativ kann der Timeline-Editor geöffnet werden und darin auf den «<em>Play</em>»-Button gedrückt werden, um die Animation zu starten. Der Timeline-Editor ermöglicht zudem eine Übersicht der Animation.</p>
+<div id="fig-1_10" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Timeline_Icon.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;11: Icon für den Timeline-Editor.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Frames</p>
+</div></div><p>Per Default dauert eine Animation 250 Frames, wobei auch eine höhere oder geringere Animationsdauer definiert werden kann. Frames bezeichnen einzelne Bilder, welche im Rahmen einer Animation erstellt werden. Durch die Aneinanderreihung der einzelnen Frames entsteht anschliessend eine Animation. Im Timeline-Editor werden diese Frames anhand eines Zeitstrahls aufgelistet. Durch das Starten der Animation bewegt sich ein blauer Marker entlang dieses Zeitstrahls, während parallel im 3D-Viewport die Szene während dieser Frames dargestellt wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Partikelsystem als Animation</p>
+</div></div><p>Die Grundeinstellungen zum Partikelsystem des Typs «<em>Emitter</em>» hängen von diesen Frames ab. So wird das ganze Partikelsystem über eine gewisse Dauer erzeugt, welche sich aus dem Startpunkt der Animation und dem Endpunkt der Animation ergibt. Im Reiter «<em>Emission</em>» kann unter «<em>Frame Start</em>» definiert werden, beim wievielten Frame das Partikelsystem starten soll, und unter «<em>End</em>», beim wievielten Frame dieses Partikelsystem enden soll. Die Anzahl Partikel, welche unter «<em>Number</em>» definiert sind, werden anschliessend gleichmässig über die ganze Animationsdauer aufgeteilt.</p>
+<div id="fig-1_11" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Bubles_Emit.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;12: Das Wasser-Objekt schüttet Wassertropfen aus.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Tote Partikel</p>
+</div></div><p>Sobald ein einzelner Partikel erzeugt wird, bestreitet er einen physikalischen Weg – beispielsweise indem er entlang der Z-Achse fällt. Diese Animation ist allerdings nicht unendlich. Jeder einzelne Partikel lebt nur für eine gewisse Zeit lang und verschwindet anschliessend. Unter der Zeile «<em>Lifetime</em>» kann definiert werden, für wie viele Frames ein Partikel existieren soll. Wenn die Lifetime auf 50 gestellt ist, existiert ein Partikel für 50 Frames. Das heisst allerdings nicht, dass nach 50 Frames keine Partikel mehr vorhanden sind, da laufend neue Partikel erstellt werden. Es heisst aber auch, dass nach dem Frame, ab dem der letzte Partikel erzeugt wurde, dieser Partikel noch entsprechend seiner Lebensdauer durch die Szene wandert.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Gravitationskräfte und wie sie verändert werden können</p>
+</div></div><p>In diesem Beispiel wurden am Boden des Glases Partikel erzeugt. Diese Partikel fallen entlang der Z-Achse durch den physikalischen Raum. Dies basiert auf simulierten Gravitationskräften. Im Reiter «<em>Field Weights</em>» lässt sich der Einfluss dieser Gravitationskraft, aber auch anderer Kräfte, einstellen. So kann der Wert «<em>Gravity</em>» beispielsweise auf -1 gesetzt werden, um die Gravitationskräfte für dieses Partikelsystem umzukehren. Dadurch steigen die Partikel entlang der Z-Achse hinauf, da die Gravitationskräfte umgekehrt wurden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Ausschütten der Partikel erfolgt entgegen der neuen Schwerkraft</p>
+</div></div><p>Obwohl die Gravitationskräfte umgekehrt wurden, scheinen die einzelnen Partikel zunächst zu fallen, bevor sie entlang der Z-Achse aufsteigen. Dies liegt daran, dass die Partikel zunächst aus dem Mesh ausgeschüttet werden. Dies geschieht entlang der Normalen des Meshes. Die Partikel werden also entlang der Normalen ausgeschüttet und erhalten dadurch einen physikalischen Antrieb, bevor sie schliesslich der manuell erstellten Gravitationskraft folgen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Partikel umgekehrt ausschütten</p>
+</div></div><p>Durch ein Umkehren der Normalen würden die Partikel nach oben ausgestossen und dadurch von Anfang an der Gravitationskraft folgen. Dies würde allerdings dazu führen, dass die Normalen des Wasser-Objekts für die Materialien falsch ausgerichtet wären. Stattdessen kann im Reiter «Velocity» der Wert für «<em>Normal</em>» von 1 auf -1 gesetzt werden. Dadurch werden die Partikel entgegengesetzt der Normalen ausgeschüttet.</p>
+<div id="fig-1_12" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_38/Bubles_Emit_Gravity.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13: Trotz umgekehrter Schwerkraft werden die Wassertropfen entlang der Normalen des Objektes – also nach unten – ausgeschüttet, bevor sie aufsteigen.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Letzte Anpassungen</p>
+</div></div><p>Zu guter Letzt werden noch zwei Anpassungen benötigt: Indem unter «<em>Velocity</em>» der Wert für «<em>Tangent</em>» erhöht wird, beispielsweise auf 0.75, verteilen sich die Partikel etwas mehr entlang der Tangente. Zusätzlich sollte die Lifetime der Partikel so angepasst werden, dass die Partikel nicht so lange leben, dass sie das Glas verlassen (beispielsweise eine «<em>Lifetime</em>» von 9, je nach Höhe des Wassers).</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,48 @@
+---
+title: "38. Tutorial: Ein Glas mit Wasser erstellen"
+editor: visual
+---
+
+::: column-margin
+Ziel dieses Tutorials
+:::
+
+Im Rahmen dieses Tutorials wird ein vorgefertigtes Glas mit Wasser, Kondenswasser und Kohlensäurebläschen ergänzt. Damit wird auch die Funktionsweise von Partikeln und Haaren erläutert. Als Vorlage kann die Datei «Glas_Particles» verwendet werden. Diese Vorlage beinhaltet ein Glas innerhalb einer Szene, welches mit Materialien ausgestattet ist. 
+
+![Das Ziel dieses Tutorials: Ein Glas mit Wasser, Kondenswasser am Glas und Kohlensäurebläschen.](Images/Chapter_38/Water_Final.png){#fig-1_1 fig-align="left"}
+
+## Wasser hinzufügen
+
+::: column-margin
+Duplikat des Glases erstellen
+:::
+
+Im ersten Schritt geht es darum, das Glas mit Wasser zu ergänzen. Hierfür wird ein Mesh benötigt, welches dieselbe Form wie das Innere des Glases hat. Hierfür kann das bereits vorhandene Glas mit der Tastenkombination {{< kbd Shift >}} + {{< kbd D >}} dupliziert und an derselben Stelle platziert werden. Auf diesem Duplikat sollte anschliessend der Subdivision-Surface-Modifier im Modifier-Properties-Reiter des Properties-Editors angewendet werden. 
+
+::: column-margin
+Nicht benötigte Vertices aus Duplikat entfernen
+:::
+
+Das Duplikat kann anschliessend im Edit-Mode bearbeitet werden. Als Erstes wird die erste Reihe Vertices auf der Innenseite des Glases, welche sich oberhalb der gewünschten Wasserhöhe befindet, bei gedrückter {{< kbd Alt >}}-Taste mit einem Mausklick ausgewählt. Diese Reihe wird danach mit der Taste {{< kbd X >}} und dem Befehl «*Delete | Vertices*» gelöscht. Nun kann der Mauszeiger über den äusseren 
+Bereich des Glases bewegt werden und die Taste {{< kbd L >}} gedrückt werden. Dadurch werden alle verbundenen Vertices ausgewählt, sodass der gesamte Teil des Glases, welcher nicht für das Wasser verwendet wird, mit der Taste {{< kbd X >}} gelöscht werden kann. 
+
+![Die Kopie des Glases, aus der eine Reihe von Vertices im Inneren entfernt wurde. Der äussere Rand kann nun mittels «*Select Linked*» einfach ausgewählt werden.](Images/Chapter_38/Water_Select_Linked.png){#fig-1_2 fig-align="left"}
+
+::: column-margin
+Oberfläche des Wassers nach innen extrudieren
+:::
+
+Das Wasser beinhaltet noch keine Oberfläche. Aus diesem Grund wird die oberste Reihe der Vertices ausgewählt und der ausgewählte Kreis mittels der Taste {{< kbd E >}} extrudiert und mittels der Taste {{< kbd S >}} verkleinert. Dieser Schritt wird mehrmals wiederholt, bis nur noch ein kleines Loch übrigbleibt. Dieses Loch kann anschliessend mit der Taste {{< kbd F >}} gefüllt werden.
+
+::: column-margin
+Normalen umkehren
+:::
+
+Das nun resultierende Mesh hat bereits die Form des Wassers, welches erstellt werden soll. Allerdings sind die Normalen des Wassers in die falsche Richtung ausgerichtet. Die Seite, welche zuvor im Glas nach aussen gerichtet war, ist nun beim Wasser nach innen ausgerichtet. Deshalb sollten alle Vertices ausgewählt werden, mittels der Tastenkombination {{< kbd Alt >}} + {{< kbd N >}} das «*Normals*»-Menü geöffnet werden und die Option «*Flip*» ausgewählt werden.
+
+![ Die Form des Wasser-Objekts.](Images/Chapter_38/Water_Top_Fill.png){#fig-1_3 fig-align="left"}
+
+::: column-margin
+Auto-Smooth der Normalen
+:::
+

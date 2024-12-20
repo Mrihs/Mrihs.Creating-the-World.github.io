@@ -1,0 +1,36 @@
+---
+title: "40. Workflows der Charaktererstellung"
+editor: visual
+---
+
+## Charaktererstellung
+
+::: column-margin
+Komplexität von Charakteren
+:::
+
+Die Erstellung von Charakteren stellt einen komplexen Bereich der Erstellung von 3D-Objekten dar. Charakteren beinhalten deutlich komplexere Oberflächen als Gegenstände, was deutlich mehr Zeit erfordert. Wenn zudem ein möglichst fotorealistischer Charakter erzielt werden soll, müssen Unebenheiten und Feinheiten genau ausgearbeitet werden.
+
+::: column-margin
+Charakter können Posen verändern
+:::
+
+Eine weitere Herausrforderung von Charakteren ergibt sich daraus, dass sie stark verformbar sind und verschiedene Posen einnehmen können. Dieses Problem ergibt sich bei den meisten Gegenständen nicht. Dementsprechend sollte bei der Charaktererstellung auch berücksichtigt werden, ob der Charakter in verschiedenen Situationen benötigt wird und ob daher eine Veränderung der Pose benötigt wird. In den meisten Fällen ist dies der Fall. Dementsprechend muss bei der Bearbeitung des Meshes jeweils darauf geachtet werden, dass das Mesh diese Veränderungen der Pose überhaupt ermöglicht.
+
+::: column-margin
+Schritt für Schritt
+:::
+
+Die Erstellung von Charakteren wird in der Regel in unterschiedliche Teilaufgaben unterteilt. Diese Teilaufgaben werden in grossen Studios teilweise auch auf verschiedene Gruppen oder Abteilungen aufgeteilt.
+
+-   **Character-Modeling**: Der Charakter wird als Mesh erstellt. Hierfür gibt es eine Reihe verschiedener Vorgehensweisen. Zudem wird der Charakter bereits mit Texturen und texturierten Kleidern ausgestattet.
+
+-   **Character-Rigging**: Der Charakter wird für Animationen oder die Erstellung von Posen vorbereitet.
+
+    -   Es wird ein Skelett aus Knochen erstellt, welches eine Verformung des Meshes ermöglicht.
+
+    -   Das Skelett aus Knochen wird dem Charakter zugewiesen, sodass eine Verformung dieses Skeletts zu einer Verformung des Charakter-Meshes führt.
+
+    -   Die Datenstruktur des Meshes wird bearbeitet, sodass das Mesh besser auf das Skelett abgestimmt wird.
+
+-   **Character-Animation**: Der geriggte Charakter kann anschliessend verformt werden. Dadurch können verschieden Posen angesteuert werden (z.B. für Standbilder) oder ein Bewegungsablauf des Charakters erstellt werden (z.B. für Animationen).

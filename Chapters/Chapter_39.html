@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kursübersicht – Creating the World</title>
+<title>39. Bäume mittels Add-on erstellen – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-05798b36db35dfecaedaec0bbed5404c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -88,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../Sites/Overview.html" aria-current="page"> <i class="bi bi-calendar-range" role="img">
+    <a class="nav-link" href="../Sites/Overview.html"> <i class="bi bi-calendar-range" role="img">
 </i> 
 <span class="menu-text">Kursübersicht</span></a>
   </li>  
@@ -313,18 +315,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#semesterplan" id="toc-semesterplan" class="nav-link active" data-scroll-target="#semesterplan">Semesterplan</a></li>
-  <li><a href="#skript-kapitel" id="toc-skript-kapitel" class="nav-link" data-scroll-target="#skript-kapitel">Skript-Kapitel:</a></li>
-  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
+  <li><a href="#die-einstellungsoptionen-von-sapling-tree-gen" id="toc-die-einstellungsoptionen-von-sapling-tree-gen" class="nav-link active" data-scroll-target="#die-einstellungsoptionen-von-sapling-tree-gen">Die Einstellungsoptionen von «Sapling Tree Gen»</a>
+  <ul class="collapse">
+  <li><a href="#geometry" id="toc-geometry" class="nav-link" data-scroll-target="#geometry">Geometry</a></li>
+  <li><a href="#branch-radius" id="toc-branch-radius" class="nav-link" data-scroll-target="#branch-radius">Branch Radius</a></li>
+  <li><a href="#branch-splitting" id="toc-branch-splitting" class="nav-link" data-scroll-target="#branch-splitting">Branch Splitting</a></li>
+  <li><a href="#branch-growth" id="toc-branch-growth" class="nav-link" data-scroll-target="#branch-growth">Branch Growth</a></li>
+  <li><a href="#pruning" id="toc-pruning" class="nav-link" data-scroll-target="#pruning">Pruning</a></li>
+  <li><a href="#leaves" id="toc-leaves" class="nav-link" data-scroll-target="#leaves">Leaves</a></li>
+  </ul></li>
+  <li><a href="#blätter-texturieren" id="toc-blätter-texturieren" class="nav-link" data-scroll-target="#blätter-texturieren">Blätter texturieren</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Kursübersicht</h1>
+<h1 class="title">39. Bäume mittels Add-on erstellen</h1>
 </div>
 
 
@@ -341,216 +350,212 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><img src="../icons/Logo.png" class="img-fluid"></p>
-<section id="semesterplan" class="level2">
-<h2 class="anchored" data-anchor-id="semesterplan">Semesterplan</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Woche</th>
-<th>Praxis</th>
-<th>Kapitel</th>
-<th>Theorie</th>
-<th>Literatur</th>
-<th>Folien</th>
-<th>Abgabe</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td><p>Die Arbeitsoberfläche von Blender</p>
-<p>Eigenschaften von 3D-Objekten</p></td>
-<td><a href="../Chapters/Chapter_1.html">1</a>, <a href="../Chapters/Chapter_2.html">2</a>, 3, 4, 5, 6, 7, 8, 9</td>
-<td><p>Organisatorisches</p>
-<p>Bedeutung von 3D-Objekten</p></td>
-<td>Tarr et al.&nbsp;(1998)</td>
-<td>Sitzung 1</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>Grundmechanismen der Objektbearbeitung I</td>
-<td>10, 11, 12</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>Grundmechanismen der Objektbearbeitung II</td>
-<td>13, 14</td>
-<td>Referenzbilder oder Fantasie?</td>
-<td>Brainbridge et al.&nbsp;(2021)</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>Objektbearbeitung mit Modifiers</td>
-<td>15, 16</td>
-<td></td>
-<td></td>
-<td></td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>Materialien</td>
-<td>17, 18, 19, 20, 21</td>
-<td>Visuelle Wahrnehmung von Materialien</td>
-<td>Flemming (2014)</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>Texturen</td>
-<td>22, 23, 24, 25, 26, 27, 28</td>
-<td>Lizenzen &amp; Lizenzarten</td>
-<td></td>
-<td></td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>Physical based Rendering</td>
-<td>29, 30, 31, 32, 33</td>
-<td>Cartoon oder Realismus?</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>Beleuchtung und Welten</td>
-<td>34, 35</td>
-<td>Farbwahrnehmung unter Beleuchtung</td>
-<td>Brainard &amp; Hurlbert (2015)</td>
-<td></td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>9</td>
-<td>Partikel/Haare, Kamera &amp; Rendering</td>
-<td>36, 37, 38</td>
-<td>Dateiformate &amp; Hardware</td>
-<td>Joon (2010)</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>10</td>
-<td>Workflow der Charaktererstellung</td>
-<td>39, 40, 41, 42</td>
-<td>Uncanny Valley Effect</td>
-<td>Kätsyri et al.&nbsp;(2015)</td>
-<td></td>
-<td>4</td>
-</tr>
-<tr class="odd">
-<td>11</td>
-<td>Character Rigging</td>
-<td>43, 44, 45</td>
-<td>Fotorealismus</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>12</td>
-<td>Animationen</td>
-<td>46, 47</td>
-<td>Wahrnehmung von Animationen</td>
-<td>Scholl &amp; Tremoulet (2000)</td>
-<td></td>
-<td>5</td>
-</tr>
-<tr class="odd">
-<td>13</td>
-<td>Blender in VR</td>
-<td></td>
-<td>Virtual Reality</td>
-<td></td>
-<td></td>
-<td>6</td>
-</tr>
-<tr class="even">
-<td>14</td>
-<td>Abschluss</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Partikel und Haare können für Vielzahl von Objekten verwendet werden</p>
+</div></div><p>Mithilfe des Partikelsystems lassen sich Objekte mit vielen Details erstellen. Dies muss nicht nur auf Haare als solche beschränkt sein, sondern kann auch auf eine Reihe weiterer Objekte angewendet werden. Eine Anwendungsoption wäre auch die Erstellung von Bäumen, welche anschliessend Blätter als Haare aussenden. Allerdings gibt es für die Erstellung von Bäumen alternative Vorgehensweisen. Zudem wird mit Blender automatisch ein Add-on mitgeliefert, welches die Erstellung von Bäumen vereinfacht.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Add-on aktivieren</p>
+</div></div><p>Das Add-on, welches für die Erstellung der Bäume benötigt wird, heisst «<em>Sapling Tree Gen</em>». Um dieses Add-on zu aktivieren, müssen die Benutzereinstellungen unter «<em>Edit | Preferences</em>» geöffnet werden und im Reiter «<em>Add-ons</em>» nach dem Add-on gesucht werden. Anschliessend kann das entsprechende Add-on aktiviert werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Baum hinzufügen</p>
+</div></div><p>Durch das Aktivieren des Add-ons ist eine neue Option zum Erstellen von Bäumen verfügbar. Diese Option basiert auf Kurven und muss deshalb im «<em>Add</em>»-Menü unter «<em>Curve | Sapling Tree Gen</em>» hinzugefügt werden. Anschliessend wird innerhalb der Szene ein Baum hinzugefügt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bearbeitung der Bäume geschieht im Kontext-Menü</p>
+</div></div><p>Unten links im 3D-Viewport-Editor öffnet sich zudem das Kontext-Menü zum hinzugefügten Baum-Objekt. Dieses Menü verschwindet jeweils, wenn mit der Maus ausserhalb des Kontext-Menüs geklickt wird. Dementsprechend ist darauf zu achten, dass nicht ungewollt ausserhalb des Kontext-Menüs geklickt wird und das Menü geschlossen wird. Anders als das A.N.T.Landscape-Add-on erinnert sich das Sapling-Tree-Gen-Add-on nicht an die zuletzt verwendeten Einstellungen und präsentiert bei jedem neuen Objekt wieder dasselbe Standardobjekt. Zur Not kann allerdings die Taste <kbd aria-hidden="true">F9</kbd><span class="visually-hidden">F9</span> gedrückt werden. Diese blendet das Kontext-Menü zur letzten durchgeführten Einstellung nochmals bei der Maus ein. Dieses zurückgeholte Kontext-Menü verschwindet allerdings wieder, sobald sich der Mauszeiger ausserhalb des Menüs befindet.</p>
+<section id="die-einstellungsoptionen-von-sapling-tree-gen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="die-einstellungsoptionen-von-sapling-tree-gen">Die Einstellungsoptionen von «Sapling Tree Gen»</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Vergabelungen von Ästen</p>
+</div></div><p>Das Sapling-Tree-Gen-Add-on erstellt jeweils Bäume basierend auf Kurven-Objekten. Dabei wird eine Kurve erstellt und zufällig in einzelne Äste des Baumes unterteilt. Diese Äste können wiederum in weitere Vergabelungen unterteilt werden, und diese Vergabelungen können erneut weitere Vergabelungen von Ästen aufweisen. Mittels des Add-ons können bis zu vier Stufen von Vergabelungen vorgenommen werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Einstellungen werden pro Ebene der Vergabelung definiert</p>
+</div></div><p>Die vier Stufen der Vergabelungen können einzeln innerhalb des Add-ons bearbeitet werden. So können für die Äste der einzelnen Stufen der Vergabelungen individuelle Werte angegeben werden. Hierfür werden die jeweiligen Einstellungswerte innerhalb von vier Feldern, die untereinander dargestellt werden, angezeigt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Unterteilung der Einstellungen auf verschiedene Seiten</p>
+</div></div><p>Die Einstellungen des Sapling-Tree-Gen-Add-ons sind jeweils auf verschiedene Menüseiten verteilt. Diese lassen sich mittels des Dropdown-Menüs «<em>Settings</em>» auswählen. Innerhalb dieses Kapitels werden ein paar grundlegende Einstellungsoptionen erläutert.</p>
+<section id="geometry" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="geometry">Geometry</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bevel-Option</p>
+</div></div><p>Im Bereich «<em>Geometry</em>» können grundlegende Einstellungen zu der Geometrie der Bäume vorgenommen werden. Dabei besteht die wichtigste Einstellung aus dem Kontrollkästchen «<em>Bevel</em>». Wenn dieses Kästchen aktiviert ist, wird der Baum nicht anhand einer Kurve dargestellt, sondern auch mit einer Oberfläche versehen. Zudem kann mit der «<em>Bevel Resolution</em>» und der «<em>Curve Resolution</em>» jeweils angegeben werden, wie detailliert die Kurve respektive das Bevel erfolgen soll. Höhere Werte sind dabei mit einer höheren Leistung des Computers verbunden.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_39/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Die verschiedenen Formen von Bäumen.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Shape</p>
+</div></div><p>Mittels des Dropdown-Menüs «<em>Shape</em>» lassen sich verschiedene Formen für den Baum einstellen.Es ist auch möglich, eine eigene Form zu erstellen. Hierfür muss die Option «<em>Custom Shape</em>» für die Form ausgewählt werden. Anschliessend kann mittels der vier Zeilen für die Option «<em>Custom Shape</em>» definiert werden, wie lang die Äste des Baumes sein sollen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Custom-Shape-Optionen</p>
+</div></div><p>Die vier Zeilen der Custom-Shape-Option beschreiben:</p>
+<ul>
+<li>Die Länge der unteren Äste</li>
+<li>Die Länge der mittleren Äste</li>
+<li>Die Position der mittleren Äste</li>
+<li>Die Länge der oberen Äste</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Astverteilung</p>
+</div></div><p>Zusätzlich können auch die Äste von weiteren Vergabelungen mit einer speziellen Form versehen werden. Hierfür wird im Dropdown-Menü «<em>Secondary Splits</em>» die entsprechende Form ausgewählt. Mittels der Einstellung «<em>Branch Distribution</em>» kann zudem die Verteilung der Äste eher in den unteren Bereich des Baumes verlagert werden, indem Werte gegen 0 verwendet werden, oder in den oberen Bereich des Baumes, indem Werte gegen 10 verwendet werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Zufällige Bäume</p>
+</div></div><p>Mittels der Option «<em>Random Seed</em>» lassen sich verschiedene Formen von zufällig erstellen Bäumen anzeigen, indem ein anderer Seed für den Zufall verwendet wird. Zudem kann der Baum mittels «<em>Scale</em>» in der Grösse verändert werden und diese Grösse mittels «<em>Scale Variation</em>» zufällig variiert werden. Diese Variation der Skalierung führt dazu, dass die Bäume bei einer Veränderung der Seed mit zufälligen Grössen erstellt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Voreinstellungen</p>
+</div></div><p>Zuunterst im Dropdown-Menü «<em>Load Preset</em>» können verschiedene Voreinstellungen von Bäumen geladen werden. Wenn die Option «<em>Limit Import</em>» aktiviert ist, werden lediglich basale Einstellungen dieser Voreinstellung übernommen. Durch eine Deaktivierung von «<em>Limit Import</em>» wird die gesamte Voreinstellung übernommen. Zudem können eigene Voreinstellungen abgespeichert werden. Hierfür muss im Feld «<em>Preset Name</em>» ein Name eingegeben werden und anschliessend auf «<em>Export Preset</em>» geklickt werden. Die abgespeicherte Voreinstellung sollte anschliessend unter den Voreinstellungen abrufbar sein.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_39/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Die verschiedenen Voreinstellungen von Baumarten.
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="skript-kapitel" class="level2">
-<h2 class="anchored" data-anchor-id="skript-kapitel">Skript-Kapitel:</h2>
-<ol type="1">
-<li><a href="../Chapters/Chapter_1.html">Vorbereitung von Blender</a></li>
-<li><a href="../Chapters/Chapter_2.html">Die Arbeitsoberfläche des 3D-Viewports</a></li>
-<li>Navigation der Ansicht im 3D-Viewport</li>
-<li>Erste Schritte</li>
-<li>Objektarten</li>
-<li>Primitive Meshes</li>
-<li>Methoden der Objekt-Transformation</li>
-<li>Objekte im Viewport-Display transformieren</li>
-<li>Object- und Edit-Mode</li>
-<li>Einstieg in den Edit-Mode</li>
-<li>Methoden der Objektbearbeitung im Edit-Mode</li>
-<li>Hilfestellungen für die Objektbearbeitung</li>
-<li>Tutorial: Erstellen eines Glases</li>
-<li>Objekterstellung mittels Modifiern</li>
-<li>Eigenschaften innerhalb eines Meshes definieren</li>
-<li>Materialien, Texturen und Shader</li>
-<li>Materialien</li>
-<li>Der Shader-Editor</li>
-<li>Grundlegende Eigenschaften von Materialien</li>
-<li>Tutorial: Strandball</li>
-<li>Texturen</li>
-<li>UVs</li>
-<li>Texturen zu einem Material hinzufügen</li>
-<li>Texturen für Parameter verwenden</li>
-<li>Welche Bilder eignen sich als Texturen?</li>
-<li>Arten von Texturen</li>
-<li>Tutorial: Einen Hammer texturieren</li>
-<li>Displacement mit dem Displacement-Modifier erstellen</li>
-<li>Erstellen von Landschaften</li>
-<li>Tutorial: Erstellen einer Düne</li>
-<li>Parameter im Principled-BSDF-Shader</li>
-<li>Der Wechsel von Eevee zu Cycles am Beispiel von Glas</li>
-<li>Lichtquellen in einer Szene</li>
-<li>Lichtobjekte</li>
-<li>Welten</li>
-<li>Kamera</li>
-<li>Rendern</li>
-<li>Tutorial: Ein Glas mit Wasser erstellen</li>
-<li>Bäume mittels Add-on erstellen</li>
-<li>Workflows der Charaktererstellung</li>
-<li>Character-Modeling</li>
-<li>Tutorial: Eine Cartoon-Katze als Charakter erstellen</li>
-<li>Was ist Rigging?</li>
-<li>Objekte mit Armaturen verformen</li>
-<li>Charakter-Rigging</li>
-<li>Vom Bild zur Animation</li>
-<li>Animationen erstellen</li>
-<li>Animationen verfeinern</li>
-<li>Animationen rendern</li>
-</ol>
+<section id="branch-radius" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="branch-radius">Branch Radius</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Ratio der Astdicke bestimmen</p>
+</div></div><p>Im Bereich «<em>Branch Radius</em>» können Einstellungen bezüglich der Radien der Äste vorgenommen werden. So kann unter «<em>Ratio</em>» ein Verhältnis für die Dicke der Äste zur Grösse des Baumes definiert werden. Mittels der zusätzlichen Einstellungen kann diese Dicke weiter verfeinert werden. Zudem kann der Baumstamm am Ende mittels des Werts «<em>Root Flare</em>» proportional skaliert werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Close Tip</p>
+</div></div><p>Mittels der Funktion «<em>Close Tip</em>» werden die Äste an ihren Enden geschlossen. Ist diese Option deaktiviert, werden die Enden der Äste zylinderförmig dargestellt, ohne mit einem Face geschlossen zu werden. Durch die Option «<em>Close Tip</em>» werden die Enden der Äste jeweils in ihrem Mittelpunk zusammengeführt und geschlossen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Taper</p>
+</div></div><p>Mittels der «<em>Taper</em>»-Funktion können die Äste verjüngt werden. Das heisst, dass weiter entfernte Äste dünner werden. Per Default sind die Taper-Werte für alle Stufen der Vergabelungen auf den Wert 1 gesetzt, sodass die Äste verjüngt werden. Dieser Wert kann reduziert werden, damit die Äste weniger verjüngt werden. Zudem kann die Option «<em>Auto Taper</em>» aktiviert werden, damit dieser Effekt automatisch angepasst wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Tweak-Radius</p>
+</div></div><p>Mittels der Zeilen für «<em>Tweak Radius</em>» können die Radien der einzelnen Stufen der Vergabelungen individuell angesteuert werden. Dabei wird der Radius jede Stufe mit dem Tweak-Faktor multipliziert. Je kleiner dieser Wert ist, desto dünner werden die Äste auf dieser Stufe.</p>
 </section>
-<section id="literatur" class="level2">
-<h2 class="anchored" data-anchor-id="literatur">Literatur</h2>
-<p>Brainard, D. H., &amp; Hurlbert, A. C. (2015). Colour vision: understanding# TheDress.&nbsp;<em>Current Biology</em>,&nbsp;<em>25</em>(13), R551-R554.</p>
-<p>Bainbridge, W. A., Pounder, Z., Eardley, A. F., &amp; Baker, C. I. (2021). Quantifying Aphantasia through drawing: Those without visual imagery show deficits in object but not spatial memory.&nbsp;<em>Cortex</em>,&nbsp;<em>135</em>, 159-172.</p>
-<p>Fleming, R. W. (2014). Visual perception of materials and their properties.&nbsp;<em>Vision research</em>,&nbsp;<em>94</em>, 62-75.</p>
-<p>Joon, J. S. (2010, August). Principles of photorealism to develop photorealistic visualisation for interface design: A review. In&nbsp;<em>2010 Seventh International Conference on Computer Graphics, Imaging and Visualization</em>&nbsp;(pp.&nbsp;17-25). IEEE.</p>
-<p>Kätsyri, J., Förger, K., Mäkäräinen, M., &amp; Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses: support for perceptual mismatch as one road to the valley of eeriness.&nbsp;<em>Frontiers in psychology</em>,&nbsp;<em>6</em>, 390.</p>
-<p>Scholl, B. J., &amp; Tremoulet, P. D. (2000). Perceptual causality and animacy. <em>Trends in cognitive sciences, 4</em>(8), 299-309.</p>
-<p>Tarr, M. J., Williams, P., Hayward, W. G., &amp; Gauthier, I. (1998). Three-dimensional object recognition is viewpoint dependent.&nbsp;<em>Nature neuroscience</em>,&nbsp;<em>1</em>(4), 275-277.</p>
+<section id="branch-splitting" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="branch-splitting">Branch Splitting</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Aufteilung der Äste definieren</p>
+</div></div><p>Im Bereich «<em>Branch Splitting</em>» können die einzelnen Stufen der Baumvergabelungen anvisiert werden. Zunächst kann mittels des Werts «<em>Levels</em>» definiert werden, wie viele Stufen von Vergabelungen der Baum beinhalten soll. Diese Option kann Werte von 1 bis 4 annehmen. Zudem kann im Bereich «<em>Base Splits</em>» definiert werden, in wie viele Äste der Baumstamm aufgeteilt werden soll. Mittels der «<em>Trunk Height</em>» kann die Höhe des Baumstamms definiert werden. Mittels des Werts «<em>Split Height</em>» kann zudem eingestellt werden, ab welcher Höhe des Baumes die Vergabelungen beginnen sollen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Einstellungen der Vergabelungen</p>
+</div></div><p>Für die Vergabelungen gibt es eine Reihe verschiedener Optionen, welche für die verschiedenen Ebenen der Vergabelungen individuell angesteuert werden können:</p>
+<ul>
+<li>«<strong><em>Branches</em></strong>»: Damit wird definiert, wie viele Äste pro Stufe erzeugt werden sollen.</li>
+<li>«<strong><em>Segment Splits</em></strong>»: Damit wird ein Verhältnis definiert, mit dem die Äste innerhalb einer Stufe in mehrere Äste aufgeteilt werden sollen. Je höher dieser Wert ist, desto mehr Äste werden auf derselben Stufe aufgeteilt.</li>
+<li>«<strong><em>Split Angle</em></strong>»: Mittels dieser Option kann eine Krümmung auf den einzelnen Stufen der Äste definiert werden.</li>
+<li>«<strong><em>Split Angle Variation</em></strong>»: Mittels dieser Option kann definiert werden, wie stark der Wert für «<em>Split Angle</em>» auf dem jeweiligen Level zufällig variiert werden soll.</li>
+<li>«<strong><em>Rotate Angle</em></strong>»: Mittels dieser Option kann ein Wert festgelegt werden, mit dem sich Vergabelungen von neuen Ästen vom Ursprungsast wegrotieren.</li>
+<li>«<strong><em>Rotate Angle Variation</em></strong>»: Mittels dieser Option kann definiert werden, wie sehr der Wert für «<em>Rotate Angle</em>» auf der jeweiligen Stufe zufällig variiert werden soll.</li>
+<li>«<strong><em>Outward Attraction</em></strong>»: Mit diesem Wert kann für jede Stufe des Baumes angegeben werden, wie stark sich die Äste nach aussen hin orientieren sollen.</li>
+<li>«<strong><em>Curve Resolution</em></strong>»: Mit diesem Wert können die einzelnen Stufen des Baumes detaillierter erstellt werden. Je höher diese Werte sind, desto mehr Leistung wird benötigt.</li>
+</ul>
+</section>
+<section id="branch-growth" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="branch-growth">Branch Growth</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Branch-Growth-Einstellungen</p>
+</div></div><p>Im Bereich «<em>Branch Growth</em>» können Einstellungen gemacht werden, welche die Verformung der Äste beschreiben:</p>
+<ul>
+<li>«<strong><em>Length</em></strong>»: Mit dieser Option kann die Länge der Äste für die einzelnen Stufen des Baumes definiert werden.</li>
+<li>«<strong><em>Length Variation</em></strong>»: Mit dieser Option können die Längen der Äste des Baumes auf den einzelnen Stufen zufällig variiert werden.</li>
+<li>«<strong><em>Down Angle</em></strong>»: Mit dieser Option kann ein Winkel angegeben werden, in dem die Äste nach unten gezogen werden.</li>
+<li>«<strong><em>Down Angle Variation</em></strong>»: Mit dieser Option kann der maximale Winkel, welcher zufällig dem Wert «<em>Down Angle</em>» hinzugefügt wird, eingestellt werden.</li>
+<li>«<strong><em>Curvature</em></strong>»: Mit dieser Option kann ein Winkel angegeben werden, mit dem sich die Äste an deren Ende krümmen.</li>
+<li>«<strong><em>Curvature Variation</em></strong>»: Mit dieser Option kann der maximale Winkel, welcher zufällig dem Wert «<em>Curvature</em>» hinzugefügt wird, eingestellt werden.</li>
+<li>«<strong><em>Back Curvature</em></strong>»: Mit dieser Option kann ein Winkel für die Krümmung in der zweiten Hälfte der Äste definiert werden.</li>
+<li>«<strong><em>Vertical Attraction</em></strong>»: Mit diesem Wert kann ein Wert für eine vertikale Anziehung der Äste nach oben definiert werden.</li>
+</ul>
+</section>
+<section id="pruning" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="pruning">Pruning</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bäume beschneiden</p>
+</div></div><p>Innerhalb der Einstellungen zum «<em>Pruning</em>» kann der Baum geschnitten werden. Hierfür muss die Option «<em>Prune</em>» aktiviert werden. Anschliessend erscheint ein Viewport-Overlay, welche die Form der Beschneidung des Baumes veranschaulicht. Diese Beschneidung kann dabei in der Breite variiert werden mit dem Wert «<em>Prune Width</em>» und in der Höhe mit dem Wert «<em>Prune Base</em>». Mittels «<em>Prune Width Peak</em>» kann die Baumkrone bearbeitet werden und mittels der Zeilen «<em>Prune Power</em>» kann die Beschneidung am unteren Ende und am oberen Ende nicht-linear variiert werden.</p>
+</section>
+<section id="leaves" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="leaves">Leaves</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Blätter hinzufügen</p>
+</div></div><p>Sofern nicht gerade Winter ist, besitzen Bäume auch Blätter. Diese können in den Einstellungen zu den «<em>Leaves</em>» bearbeitet werden. Hierfür muss allerdings die Option «<em>Show Leaves</em>» aktiviert werden. Mit dem Wert «<em>Leaves</em>» kann die maximale Anzahl der Blätter pro Ast definiert werden. Dabei ist darauf zu achten, dass eine hohe Anzahl Blätter sehr viel Leistung vom Computer benötigt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Blätter-Formen</p>
+</div></div><p>Die Blätter können verschiedene Formen annehmen und unter «<em>Leaf Object</em>» kann auch ein Objekt als Blatt verwendet werden. Es gibt folgende Formoptionen:</p>
+<ul>
+<li>«<strong><em>Hexagonal</em></strong>»: Ein achteckiges Blatt.</li>
+<li>«<strong><em>Rectangular</em></strong>»: Ein viereckiges Blatt.</li>
+<li>«<strong><em>DupliFaces</em></strong>»: Faces, welche sich quer durch den Ast erstrecken.</li>
+<li>«<strong><em>DupliVertcs</em></strong>»: Es werden lediglich Vertices an den Stellen der Blätter erstellt.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Einstellungen der Blätter</p>
+</div></div><p>Für die Blätter können weitere Einstellungen vorgenommen werden:</p>
+<ul>
+<li>«<strong><em>Leaf Down</em></strong>»: Der Winkel, zu dem die Blätter vom Ast herabhängen.</li>
+<li>«<strong><em>Leaf Down Variation</em></strong>»: Der Wert, zu dem die Einstellung «<em>Leaf Down</em>» zufällig variiert werden.</li>
+<li>«<strong><em>Leaf Rotation</em></strong>»: Der Winkel, zwischen einem Blatt und dem Ast.</li>
+<li>«<strong><em>Leaf Rotation Variation</em></strong>»: Der Wert, zu dem die Einstellung «<em>Leaf Rotation</em>» zufällig variiert wird.</li>
+<li>«<strong><em>Leaf Scale</em></strong>»: Einstellung der Grösse der Blätter.</li>
+<li>«<strong><em>Leaf Scale X</em></strong>»: Einstellung der Breite der Blätter.</li>
+<li>«<strong><em>Leaf Scale Taper</em></strong>»: Wie lange die Blätter sein sollen.</li>
+<li>«<strong><em>Leaf Scale Variation</em></strong>»: Der Wert, zu dem die Grösse der Blätter variieren darf.</li>
+<li>«<strong><em>Leaf Angle</em></strong>»: Ein Wert, der beschreibt, wie stark die Blätter vertikal ausgerichtet werden sollen.</li>
+</ul>
+</section>
+</section>
+<section id="blätter-texturieren" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="blätter-texturieren">Blätter texturieren</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>UVs der Blätter</p>
+</div></div><p>Sobald ein Baum mit Blättern erstellt wurde, werden die Blätter in einem separaten Objekt erstellt. Die Blätter haben alle Form und dieselben UVs pro Blatt. Dementsprechend kann mit diesen UVs ein Material erstellt werden. Häufig werden dabei Texturen für Blätter verwendet. Einige dieser Texturen beinhalten auch mehrere Blätter, sodass die UVs so angepasst werden müssen, dass sie jeweils ein Blatt der Textur abbilden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Transparenz zu Blättern hinzufügen</p>
+</div></div><p>Im Material des Blattes sollte jeweils darauf geachtet werden, dass eine Alpha-Textur verwendet wird, welche mit dem Alpha-Input des Principled-BSDF-Shaders verbunden wird. Dadurch wird nicht das gesamte Bild, sondern lediglich der nicht-transparente Bereich des Bildes dargestellt. Dies erfordert bei der Verwendung von Eevee zusätzlich, dass im Material-Reiter des Properties-Editors unter dem Reiter «<em>Settings</em>» der «<em>Blend Mode</em>» auf «<em>Alpha Hashed</em>» oder «<em>Alpha Blend</em>» gestellt wird.</p>
+<div class="exercisebox">
+<div class="exercisebox-header">
+<div class="exercisebox-icon">
+
+</div>
+<p>Übung 17: Baum erstellen</p>
+</div>
+<div class="exercisebox-body">
+<p><strong>Übung 17.1</strong></p>
+<p>Erstellen Sie einen eigenen Baum mittels des Sapling-Tree-Gen-Add-ons und fügen Sie dem Baum Blätter hinzu.</p>
+<p><strong>Übung 17.2</strong></p>
+<p>Texturieren Sie den Baum und die Blätter.</p>
+<p><strong>Übung 17.3</strong></p>
+<p>Rendern Sie ein Bild ihres Baumes.</p>
+</div>
+</div>
 
 
 </section>

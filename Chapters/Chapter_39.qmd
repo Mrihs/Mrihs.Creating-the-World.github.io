@@ -203,10 +203,10 @@ Für die Blätter können weitere Einstellungen vorgenommen werden:
 -   «***Leaf Scale Variation***»: Der Wert, zu dem die Grösse der Blätter variieren darf.
 -   «***Leaf Angle***»: Ein Wert, der beschreibt, wie stark die Blätter vertikal ausgerichtet werden sollen.
 
-## Blätter texturieren 
+## Blätter texturieren
 
 ::: column-margin
-UVs der Blätter 
+UVs der Blätter
 :::
 
 Sobald ein Baum mit Blättern erstellt wurde, werden die Blätter in einem separaten Objekt erstellt. Die Blätter haben alle Form und dieselben UVs pro Blatt. Dementsprechend kann mit diesen UVs ein Material erstellt werden. Häufig werden dabei Texturen für Blätter verwendet. Einige dieser Texturen beinhalten auch mehrere Blätter, sodass die UVs so angepasst werden müssen, dass sie jeweils ein Blatt der Textur abbilden.
@@ -216,7 +216,6 @@ Transparenz zu Blättern hinzufügen
 :::
 
 Im Material des Blattes sollte jeweils darauf geachtet werden, dass eine Alpha-Textur verwendet wird, welche mit dem Alpha-Input des Principled-BSDF-Shaders verbunden wird. Dadurch wird nicht das gesamte Bild, sondern lediglich der nicht-transparente Bereich des Bildes dargestellt. Dies erfordert bei der Verwendung von Eevee zusätzlich, dass im Material-Reiter des Properties-Editors unter dem Reiter «*Settings*» der «*Blend Mode*» auf «*Alpha Hashed*» oder «*Alpha Blend*» gestellt wird.
-
 
 :::::: exercisebox
 :::: exercisebox-header
@@ -237,8 +236,6 @@ Texturieren Sie den Baum und die Blätter.
 
 **Übung 17.3**
 
-Rendern Sie ein Bild ihres Baumes. 
-
-
+Rendern Sie ein Bild ihres Baumes.
 :::
 ::::::

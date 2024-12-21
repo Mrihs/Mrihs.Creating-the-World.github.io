@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9. Object- und Edit-Mode – Creating the World</title>
+<title>41. Character-Modeling – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -323,17 +323,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#die-verschiedenen-bearbeitungs-modi" id="toc-die-verschiedenen-bearbeitungs-modi" class="nav-link active" data-scroll-target="#die-verschiedenen-bearbeitungs-modi">Die verschiedenen Bearbeitungs-Modi</a></li>
-  <li><a href="#struktur-von-3d-meshes" id="toc-struktur-von-3d-meshes" class="nav-link" data-scroll-target="#struktur-von-3d-meshes">Struktur von 3D-Meshes</a>
+  <li><a href="#sculpting-von-charakteren" id="toc-sculpting-von-charakteren" class="nav-link active" data-scroll-target="#sculpting-von-charakteren">Sculpting von Charakteren</a>
   <ul class="collapse">
-  <li><a href="#vertices" id="toc-vertices" class="nav-link" data-scroll-target="#vertices">Vertices</a></li>
-  <li><a href="#edges" id="toc-edges" class="nav-link" data-scroll-target="#edges">Edges</a></li>
-  <li><a href="#faces" id="toc-faces" class="nav-link" data-scroll-target="#faces">Faces</a></li>
+  <li><a href="#der-sculpt-mode" id="toc-der-sculpt-mode" class="nav-link" data-scroll-target="#der-sculpt-mode">Der Sculpt-Mode</a></li>
+  <li><a href="#retopology" id="toc-retopology" class="nav-link" data-scroll-target="#retopology">Retopology</a></li>
+  <li><a href="#sculpt-mesh-neu-berechnen-lassen" id="toc-sculpt-mesh-neu-berechnen-lassen" class="nav-link" data-scroll-target="#sculpt-mesh-neu-berechnen-lassen">Sculpt-Mesh neu berechnen lassen</a></li>
   </ul></li>
-  <li><a href="#anzahl-vertices-in-einem-face" id="toc-anzahl-vertices-in-einem-face" class="nav-link" data-scroll-target="#anzahl-vertices-in-einem-face">Anzahl Vertices in einem Face</a></li>
-  <li><a href="#auswahl-von-vertices-edges-und-faces-im-edit-mode" id="toc-auswahl-von-vertices-edges-und-faces-im-edit-mode" class="nav-link" data-scroll-target="#auswahl-von-vertices-edges-und-faces-im-edit-mode">Auswahl von Vertices, Edges und Faces im Edit-Mode</a></li>
-  <li><a href="#das-innere-des-objekts" id="toc-das-innere-des-objekts" class="nav-link" data-scroll-target="#das-innere-des-objekts">Das Innere des Objekts</a></li>
-  <li><a href="#normalen-die-richtige-seite-der-faces-finden" id="toc-normalen-die-richtige-seite-der-faces-finden" class="nav-link" data-scroll-target="#normalen-die-richtige-seite-der-faces-finden">Normalen: die richtige Seite der Faces finden</a></li>
+  <li><a href="#direktes-modellieren-eines-charakters" id="toc-direktes-modellieren-eines-charakters" class="nav-link" data-scroll-target="#direktes-modellieren-eines-charakters">Direktes Modellieren eines Charakters</a></li>
   </ul>
 </nav>
     </div>
@@ -342,7 +338,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">9. Object- und Edit-Mode</h1>
+<h1 class="title">41. Character-Modeling</h1>
 </div>
 
 
@@ -359,12 +355,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="die-verschiedenen-bearbeitungs-modi" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="die-verschiedenen-bearbeitungs-modi">Die verschiedenen Bearbeitungs-Modi</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Object-Mode</p>
-</div></div><p>Die bisherigen Transformationen, die an Objekten gemacht wurden, haben sich immer auf den Object-Mode bezogen. Dabei wurden grundlegende Eigenschaften von Objekten (Position, Rotation und Skalierung) verändert. Die Form des Objektes selbst wurde dabei nicht verändert, sondern lediglich seine Darstellungsweise. Durch das Zurücksetzen der Werte in der Sidebar erscheint das Objekt wieder in seiner ursprünglichen Form.</p>
+<p>Vorgehensweisen zur Erstellung eines Charakters</p>
+</div></div><p>Um ein Mesh eines Charakters zu erzielen, gibt es verschiedene Vorgehensweisen. Nachfolgend werden einige dieser Vorgehensweisen erläutert. Diese Liste ist allerdings nicht abschliessend.</p>
+<section id="sculpting-von-charakteren" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="sculpting-von-charakteren">Sculpting von Charakteren</h2>
+<section id="der-sculpt-mode" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="der-sculpt-mode">Der Sculpt-Mode</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Sculpt-Mode</p>
+</div></div><p>Eine Möglichkeit besteht darin, dass ein Charakter mittels Sculpting modelliert wird. Da der Sculpting-Prozess ziemlich aufwendig ist, wird er an dieser Stelle nur grob umschrieben. Ein ausgewähltes Objekt kann jeweils im Sculpt-Mode skulpturiert werden. Der Sculpt-Mode ist ein alternativer Modus zum Object- und Edit-Mode und kann mit dem Dropdown-Menü in der linken oberen Ecke des 3D-Viewport-Editors ausgewählt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Pinsel anwenden</p>
+</div></div><p>In der Toolbar auf der linken Seite des Sculpt-Modes befinden sich unterschiedliche Pinsel, mit denen das Mesh bearbeitet werden kann. Für die Bearbeitung muss jeweils mit der Maus auf die Stelle des Objektes geklickt werden, welche bearbeitet werden soll. Anschliessend wird der Effekt dieses Pinsels auf das Objekt angewendet. Wenn der Mauszeiger bei gedrückter Maustaste bewegt wird, wird der Effekt entlang der Bewegung des Mauszeigers auf das Objekt angewendet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Pinsel vergrössern</p>
+</div></div><p>Um den Mauszeiger herum wird dabei ein Kreis angezeigt. Dieser Kreis gibt an, wie gross die Fläche ist, auf welche der Effekt des ausgewählten Pinsels angewendet werden soll. Durch einen Klick mit der Taste <kbd aria-hidden="true">F</kbd><span class="visually-hidden">F</span> kann die Grösse dieses Kreises verändert werden. Durch eine Bewegung der Maus nach links oder rechts wird dabei das der Kreis vergrössert oder verkleinert. Um die Grösse des Kreises zu akzeptieren, kann die linke Maustaste oder die <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span>-Taste gedrückt werden. Mittels der <kbd aria-hidden="true">esc</kbd><span class="visually-hidden">esc</span>-Taste kann der Vorgang abgebrochen werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Einstellung des Pinsels</p>
+</div></div><p>In der Sidebar auf der rechten Seite des Sculpt-Modes kann unter dem Reiter «<em>Tool</em>» der ausgewählte Pinsel unter «<em>Brush Settings</em>» genauer definiert werden. Mit dem Wert «<em>Radius</em>» kann der Kreis für die Bearbeitung des Meshes mittels einer Zahl vergrössert oder verkleinert werden. Mittels des Wertes «<em>Strength</em>» kann definiert werden, wie stark der Effekt des jeweiligen Pinsels auf das Mesh angewendet werden soll. Mittels der «<em>Direction</em>» lässt sich zudem bei vielen Pinseln auswählen, ob mit dem Pinsel der jeweilige Effekt aus dem Mesh herausgezogen werden soll (bei der Option «<em>Add</em>») oder in das Mesh hineingedrückt werden soll (bei der Option «<em>Subtract</em>»). Dabei erfolgt eine Bearbeitung stets entlang der Seite der Faces, auf der die jeweilige Normale liegt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Dyntopo ermöglicht ein dynamisches Skulpturieren von Meshes</p>
+</div></div><p>Beim Skulpturieren werden jeweils die Vertices innerhalb des Meshes entsprechend des Effektes verschoben. Dies bedeutet allerdings auch, dass die Topografie des Meshes genug Vertices beinhalten muss, damit diese bearbeitet werden können. Wird etwa einfach der Standardwürfel verwendet, können lediglich dessen acht Ecken bearbeitet werden. Es ist allerdings auch möglich, in der Sidebar unter dem Reiter «<em>Tools</em>» die Option «<em>Dyntopo</em>» auszuwählen. Diese Option ermöglicht es, dass beim Anwenden der Pinsel auf das Mesh direkt neue Vertices erstellt werden, sodass eine dynamische Bearbeitung der Topografie des Meshes möglich ist. Dies hat allerdings zur Folge, dass Mesh-Daten, wie beispielsweise die UVs, verformt werden.</p>
 <div class="tippbox">
 <div class="tippbox-header">
 <div class="tippbox-icon">
@@ -373,242 +391,118 @@ ul.task-list li input[type="checkbox"] {
 <p>Weiterführende Informationen</p>
 </div>
 <div class="tippbox-body">
-<p>Das Zurücksetzen der Transformationen kann direkt mittels folgenden Shortcuts erfolgen:</p>
-<p>Zurücksetzen der Position: <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span></p>
-<p>Zurücksetzen der Rotation: <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span></p>
-<p>Zurücksetzen der Skalierung: <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span></p>
+<p>Wenn beim Öffnen eines neuen Blender-Projektes die Auswahl «<em>Sculpting</em>» verwendet wird, erstellt Blender ein neues File mit einer Kugel als Startobjekt, welche im Sculpt-Mode bearbeitet werden kann. Bei dieser Kugel handelt es sich um eine «<em>Quad Sphere</em>», welche die beste Grundlage für das Erstellen von Objekten mittels Sculpting darstellt.</p>
 </div>
 </div>
-<p>Durch die bisherigen Transformationen wurde das Objekt als Ganzes bearbeitet. Dies zeichnet die Transformationen im Object-Mode aus. Nebst dem Object-Mode gibt es noch eine Reihe anderer Modi. In der oberen linken Ecke des Viewports ist jeweils ersichtlich, welcher Modus gerade verwendet wird. Durch einen Klick auf das Dropdown-Menü erscheint eine Liste der verfügbaren Modi:</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Die verschiedenen Bearbeitungs-Modi</p>
-</div></div><ul>
-<li><p><strong>Object Mode</strong>: In diesem Modus können die Objekte in einer Szene als Ganzes transformiert und angeordnet werden.</p></li>
-<li><p><strong>Edit Mode</strong>: In diesem Modus können die einzelnen Bestandteile des Objekts anvisiert und bearbeitet werden.</p></li>
-<li><p><strong>Sculpt Mode</strong>: In diesem Modus kann das Objekt anhand von Sculpting-Tools bearbeitet werden.</p></li>
-<li><p><strong>Vertex Paint</strong>: In diesem Modus werden einzelne Punkte des Objekts angesteuert und mit Attributen versehen.</p></li>
-<li><p><strong>Weight Paint</strong>: In diesem Modus werden dem Objekt verschiedene Gewichte aufgemalt, welche anschliessend für weitere Funktionen verwendet werden können.</p></li>
-<li><p><strong>Texture Paint</strong>: In diesem Modus ist es möglich, ein Objekt mit einer Textur zu bemalen.</p></li>
-</ul>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Wechsel zwischen Object- und Edit-Mode</p>
-</div></div><p>Im Rahmen dieses Kurses wird vorwiegend mit dem Object- und dem Edit-Mode gearbeitet. Der Wechsel zwischen diesen beiden Modi stellt einen wichtigen Wechsel zwischen den Modi dar. Deshalb ist es möglich, mittels einer einzigen Taste zwischen dem Object- und dem Edit-Mode hin- und herzuwechseln – nämlich mittels der Taste <kbd aria-hidden="true">Tab</kbd><span class="visually-hidden">Tab</span> . Dabei wird in den Edit-Mode für das aktuell ausgewählte Objekt gewechselt. Für Objekte, welche nicht aus einzelnen Komponenten bestehen (beispielsweise Kameras oder Lichtquellen), ist kein Edit-Mode verfügbar.</p>
 </section>
-<section id="struktur-von-3d-meshes" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="struktur-von-3d-meshes">Struktur von 3D-Meshes</h2>
+<section id="retopology" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="retopology">Retopology</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Der Gitteraufbau von 3D-Meshes</p>
-</div></div><p>Beim Wechseln in den Edit-Mode erscheint das Mesh in seiner Struktur, bestehend aus mehreren Polygonen. Dabei handelt es sich um einzelne Oberflächenstrukturen der Meshes. Die Polygone – und somit auch das Mesh – bestehen in ihrer Struktur aus folgenden Elementen:</p>
-<ul>
-<li><strong>Vertices</strong>: Einzelne Punkte in einem Mesh</li>
-<li><strong>Edges</strong>: Linien zwischen zwei Vertices in einem Mesh</li>
-<li><strong>Faces</strong>: Flächen zwischen mehreren Edges/Vertices in einem Mesh</li>
-</ul>
+<p>Sculpting-Modelle sind nicht für weitere Bearbeitungen geeignet</p>
+</div></div><p>Wenn Charaktere im Sculpt-Mode erstellt werden, weisen diese in der Regel eine sehr hohe Anzahl Vertices auf, die durch die Bearbeitung mittels Sculpting entstehen. Ein solches Mesh ist nicht geeignet zum Animieren. Aus diesem Grund wird das gesculptete Mesh als Vorlage verwendet, um ein neues Mesh zu verwenden, das eine praktischere Gitterstruktur als Topologie aufweist. Dieser Prozess wird als Retopology bezeichnet.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/1. Vertices, Edges and Faces.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_41/1_Plane.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Vertices, Edges und Faces.
+Abbildung&nbsp;1: Eine Plane zur Vorbereitung des Retopology-Prozesses.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Select-Modus wechseln</p>
-</div></div><p>Im Edit-Mode können wahlweise Vertices, Edges oder Faces ausgewählt werden, je nachdem in welchem Select-Modus man sich befindet. Die drei Select-Modi sind in der linken oberen Ecke direkt neben dem Auswahlfeld für den Bearbeitungs-Modus (in dem Fall der Edit-Mode) aufzufinden.</p>
+<p>Mesh für Retopology vorbereiten</p>
+</div></div><p>Das skulpturierte Mesh stellt beim Retopology jeweils das Base-Mesh dar. Anschliessend wird ein neues Mesh, welches lediglich aus einer Fläche besteht, hinzugefügt. Hierfür kann etwa im «<em>Add</em>»-Menü die Option «<em>Mesh | Plane</em>» ausgewählt werden. Diese Fläche wird anschliessend im Edit-Mode vor dem Base-Mesh platziert und um einen Meter entlang der X-Achse verschoben, sodass die beiden linken Vertices der Fläche genau auf dem Nullpunkt der X-Achse liegen. Hierfür muss die Plane zudem um 90 Grad rotiert werden. Anschliessend wird ein Mirror-Modifier hinzugefügt, um das Mesh entlang der XAchse zu spiegeln. Das Hinzufügen des Mirror-Modifiers erübrigt sich bei einem nicht-symmetrischen Mesh. In diesem Falle müssen beide Seiten individuell erstellt werden. Zusätzlich kann ein Subidivision-Surface-Modifier hinzugefügt werden um die Flächen zu unterteilen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Shrinkwrap-Modifier</p>
+</div></div><p>Anschliessend kann dem Mesh ein «<em>Shrinkwrap</em>»-Modifier hinzugefügt werden. Dieser ist in der Modifier-Auswahl in der dritten Spalte unter «<em>Deform</em>» zu finden. Mittels dieses Modifiers werden die Vertices eines Objektes direkt auf ein anderes Objekt projiziert. Hierfür muss unter «<em>Target</em>» das entsprechende Objekt eingestellt werden.</p>
 <div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/2. Select_Mode_Auswahl.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_41/2_Plane_Modified.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Schaltfläche für den Vertex-, Edge- und Face-Select-Modus in der linken oberen Ecke des Edit-Modes.
+Abbildung&nbsp;2: Eine Plane zur Vorbereitung des Retopology-Prozesses.
 </figcaption>
 </figure>
 </div>
-<section id="vertices" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="vertices">Vertices</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Vertices</p>
-</div></div><p>Ein Vertex (Mehrzahl: Vertices) stellt die grundlegendste Einheit in einem Mesh dar. Jeder Vertex beschreibt einen Punkt in einem Mesh. Anders als die Objekte als Ganzes, verfügen Vertices nur über das Merkmal ihrer jeweiligen Position. Die Merkmale Skalierung und Rotation gibt es für Vertices nicht. Ein Vertex hat deshalb auch keine Dimensionen.</p>
+<p>Einstellung der Modifier</p>
+</div></div><p>Um die neu erstellte Fläche auf das Base-Mesh zu übertragen, sollte das Base-Mesh als Target im Shrinkwrap-Modifier ausgewählt werden. Dadurch wird die Fläche des neuen Meshes direkt auf die Fläche des Base-Meshes projiziert. Damit die jeweiligen Veränderungen der Modifier im Edit-Mode betrachtet werden können, empfiehlt es sich, bei den drei Modifiern die Einstellung «<em>On Cage</em>» und «<em>Edit Mode</em>» zu aktivieren.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Auswahl von Vertices</p>
-</div></div><p>Werden zwei miteinander verbundene Vertices ausgewählt, so wird automatisch auch das dazwischenliegende Edge ausgewählt. Ebenso wird automatisch das dazugehörige Face mit ausgewählt, wenn alle Vertices dieses Faces ausgewählt werden. Ein einzelner Vertex kann lediglich im Vertex Select-Modus angewählt werden.</p>
-</section>
-<section id="edges" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="edges">Edges</h3>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Edges</p>
-</div></div><p>Edges beschreiben Linien, welche zwischen zwei Vertices liegen. Da ein Edge genau der Verbindung zwischen zwei Vertices entspricht, ist dessen Mittelpunkt identisch zur Mitte zwischen den beiden Vertices.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Auswahl von Edges</p>
-</div></div><p>Im Edge-Select-Modus können die Edges als solche ausgewählt werden. Dabei werden automatisch auch die beiden zum Edge dazugehörigen Vertices ausgewählt. Wenn alle Edges eines Faces ausgewählt werden, dann wird automatisch auch das dazugehörige Face ausgewählt.</p>
-</section>
-<section id="faces" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="faces">Faces</h3>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Faces</p>
-</div></div><p>Faces stellen die Flächen zwischen verbundenen Edges/Vertices dar. Die Position des Faces entspricht dem Mittelpunkt dieser Fläche und somit dem Mittelpunkt der dazugehörigen Vertices. Es ist allerdings auch möglich, dass mehrere Vertices mittels Edges verbunden sind, ohne eine Fläche zu beinhalten.</p>
-<p>Mittels des Face-Select-Modus können Faces direkt angewählt werden. Alternativ kann ein Face auch angewählt werden, indem im Vertex-Select-Modus alle zum Face dazugehörigen Vertices ausgewählt werden, oder indem im Edge-Select-Modus alle zum Face dazugehörigen Edges ausgewählt werden.</p>
-</section>
-</section>
-<section id="anzahl-vertices-in-einem-face" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="anzahl-vertices-in-einem-face">Anzahl Vertices in einem Face</h2>
-<div class="tippbox">
-<div class="tippbox-header">
-<div class="tippbox-icon">
-
-</div>
-<p>Weiterführende Informationen</p>
-</div>
-<div class="tippbox-body">
-<p>Polygone und Faces sind in ihrer Bedeutung praktisch deckungsgleich. Faces beschreiben jedoch eher die Fläche eines Polygons, während das Polygon eher die Gesamtheit von Vertices, Edges und Faces beschreibt. Der Begriff Polygon wird innerhalb von Blender allerdings selten verwendet.</p>
-</div>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Anzahl Vertices in einem Face</p>
-</div></div><p>Der Default-Cube, den Blender jeweils beim Start eines neuen Projektes zur Verfügung stellt, besteht aus sechs Faces. Jedes dieser Faces beinhaltet vier Vertices. Es ist allerdings auch möglich, dass ein Face aus mehr oder weniger Vertices besteht. Es gibt verschiedene Begriffe, basierend auf der Anzahl Vertices in einem Face:</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Bezeichnung von Faces aufgrund Anzahl Vertices</p>
-</div></div><ul>
-<li><strong>Triangles</strong> (<strong>Tris</strong>): Faces, die aus drei Vertices bestehen</li>
-<li><strong>Quadrangles</strong> (<strong>Quads</strong>): Faces, die aus vier Vertices bestehen</li>
-<li><strong>N-Gons</strong>: Faces, die aus n Vertices bestehen</li>
-</ul>
+<p>Objekt immer im Vordergrund darstellen lassen</p>
+</div></div><p>Teilweise entsteht das Problem, dass das Retopology-Mesh nicht klar sichtbar ist, weil das Base-Mesh darüber dargestellt wird. Im Properties-Editor kann innerhalb des Reiters «<em>Object Properties</em>» der Reiter «<em>Viewport Display</em>» ausgewählt werden. Dort können verschiedene Darstellungsoptionen des Objektes im 3D-Viewport-Editor ausgewählt werden. Durch das Aktivieren der Option «<em>In Front</em>» wird das aktuell ausgewählte Objekt immer vor anderen Objekten dargestellt, selbst wenn sich die anderen Objekte eigentlich zwischen der eigenen Ansicht und dem ausgewählten Objekt befinden. Diese Option sollte aktiviert werden, während das Retopology-Mesh ausgewählt ist.</p>
 <div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/3. Cube by Tris.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_41/3_Mesh_Extrusion.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Der Standardwürfel bestehend aus Tris statt aus Quads.
+Abbildung&nbsp;3: Eine Plane zur Vorbereitung des Retopology-Prozesses.
 </figcaption>
 </figure>
 </div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Tris aus Quads ableiten</p>
-</div></div><p>Aus Quads lassen sich sehr einfach Tris bilden. Hierfür muss lediglich jedes Quad zwischen zwei gegenüberliegenden Vertices zerschnitten werden, sodass die Fläche in zwei Dreiecke unterteilt wird. Beim Rendern von Bildern werden Quads in den 3D-Objekten automatisch in Tris unterteilt, was im Normalfall für den Benutzer jedoch kaum ersichtlich ist.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Bevorzugung von Quads</p>
-</div></div><p>Trotzdem ist es sinnvoll, sich beim Modellieren von 3D-Objekten eher an die Verwendung von Quads zu gewöhnen. Viele Tricks und Kniffe der Objektbearbeitung lassen sich einfacher oder teilweise sogar nur auf Quads anwenden. Somit erleichtert die Arbeit mit Quads den Arbeitsprozess erheblich. Weiterhin sind Quads auch in vielen Animationsstudios der Standard.</p>
 <div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/4. Prof Figures.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_41/4_Mesh_Head.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4: Links eine gerenderte 3D-Figur und rechts die Figur in ihrer Gitterstruktur.
+Abbildung&nbsp;4: Eine Plane zur Vorbereitung des Retopology-Prozesses.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Anwendung von Tris</p>
-</div></div><p>Arbeiten mit Tris ist trotzdem durchaus möglich und vereinzelte Tris in Objekten sind auch nicht problematisch. In manchen Situationen sind Tris sogar flexibler als Quads. Wenn allerdings die Objekte komplett aus Tris bestehen sollen, macht dies gerade in gemeinschaftlichen Prozessen nur Sinn, wenn alle beteiligten Personen mit Tris umgehen können.</p>
-<div class="rememberbox">
-<div class="rememberbox-header">
-<div class="rememberbox-icon">
-
-</div>
-<p>Merke…</p>
-</div>
-<div class="rememberbox-body">
-<p>Vertices beschreiben die einzelnen Punkte in einem 3D-Objekt.</p>
-<p>Edges beschreiben die verbundenen Punkte in einem 3D-Objekt.</p>
-<p>Faces beschreiben Flächen zwischen mehr als zwei verbundenen Vertices.</p>
-<p>Faces mit vier Vertices (Quads) sind gegenüber Faces mit drei Vertices (Tris) in den meisten Fällen zu bevorzugen.</p>
-</div>
-</div>
-</section>
-<section id="auswahl-von-vertices-edges-und-faces-im-edit-mode" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="auswahl-von-vertices-edges-und-faces-im-edit-mode">Auswahl von Vertices, Edges und Faces im Edit-Mode</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Auswahl von Vertices, Edges und Faces im Edit-Mode</p>
-</div></div><p>Abhängig davon, welcher Select-Modus gerade aktiviert ist, lassen sich entweder die Vertices, Edges oder Faces auswählen. Die Auswahl der jeweiligen Elemente geschieht mittels der linken Maustaste. Wie auch im Object-Mode können bei gedrückter <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste zusätzliche Elemente ausgewählt werden. Ebenso können mit der Taste <kbd aria-hidden="true">C</kbd><span class="visually-hidden">C</span> der Circle-Select-Modus und mittels der Taste <kbd aria-hidden="true">B</kbd><span class="visually-hidden">B</span> der Box-Select-Modus verwendet werden. Zudem kann mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> die Auswahl umgekehrt werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Select linked mittels <kbd aria-hidden="true">L</kbd><span class="visually-hidden">L</span></p>
-</div></div><p>Im Edit-Mode gibt es weitere Auswahl-Optionen. Wenn sich der Mauszeiger über einem Element eines Objekts befindet, können mit der Taste <kbd aria-hidden="true">L</kbd><span class="visually-hidden">L</span> alle Elemente, welche über Edges damit verbunden sind, ausgewählt werden. Dies ermöglicht es, alle verbundenen Elemente auszuwählen. Um alle Elemente eines Objektes – also auch unverbundene Elemente – auszuwählen, kann die Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> gedrückt werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Edge-Loop-Select bei gedrückter Taste <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span></p>
-</div></div><p>Weiterhin lassen sich ganze Verbindungen von Edges auswählen, wenn die Taste <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> während der Auswahl gedrückt wird. Dadurch werden alle Edges, die gemeinsam eine Linie mit dem gerade ausgewählten Element bilden, ausgewählt. Dies ist auch im Vertex-Select-Modus möglich. Im Face-Select-Modus werden alle Faces, die gemeinsam eine Linie bilden, ausgewählt (hierfür muss der Mausklick allerdings bei einem Edge erfolgen – nicht in der Fläche des Faces).</p>
-</section>
-<section id="das-innere-des-objekts" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="das-innere-des-objekts">Das Innere des Objekts</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Virtuelle Objekte haben meist keine Füllung</p>
-</div></div><p>So wie auch in der realen Welt haben virtuelle 3D-Objekte Flächen, welche aus mindestens drei Kanten bestehen und mindestens drei Ecken. Im Gegensatz zu Objekten in der realen Welt bestehen virtuelle Objekte nicht aus einer Füllung. Wird ein realer Apfel mit einem Messer in der Mitte geteilt, so wird der Inhalt unter der Schale – etwa das Fruchtfleisch oder das Kerngehäuse – sichtbar. Bei einem 3D-Mesh gibt es jedoch kein Inneres, sodass lediglich die Oberflächen der äusseren Struktur von der anderen Seite aus ersichtlich werden. Das Mesh besteht somit nur aus der Oberfläche, welche ein leeres Volumen überdeckt.</p>
-<p>Aus dem Umgang mit realen Objekten ist der Mensch sich gewohnt, dass Objekte einen Inhalt haben. Dies trifft auf digitale Objekte selten zu. Als Betrachter von digitalen Objekten ist dieser Sachverhalt nur in den seltensten Fällen bemerkbar. Dadurch wird durch fehlende Auseinandersetzung mit dieser Thematik die Illusion eines möglichen Inhaltes verstärkt.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Wenn das Innere sichtbar wird</p>
-</div></div><p>In Videospielen kann es vorkommen, dass die Kamera durch einen Fehler in ein Objekt hineingelangt. Dadurch wird das Objekt anschliessend von der Innenseite aus betrachtet. Dies muss allerdings nicht immer der Fall sein. In manchen Situationen ist dieses Objekt gar nicht mehr sichtbar, wenn es von innen betrachtet wird.</p>
-</section>
-<section id="normalen-die-richtige-seite-der-faces-finden" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="normalen-die-richtige-seite-der-faces-finden">Normalen: die richtige Seite der Faces finden</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Die zwei Seiten von Faces</p>
-</div></div><p>Da 3D-Meshes keinen inneren Hohlraum haben, bilden die Faces die Oberfläche, welche das Objekt abdeckt. Dies bedeutet aber auch, dass es zwei Seiten von dieser Oberfläche geben muss: eine Seite, die betrachtet werden soll, und eine, die nicht betrachtet werden soll. In den meisten Fällen ist schnell klar, welche Seite eines Objektes von Bedeutung ist. Einen Apfel betrachtet man jeweils von aussen, also ist die nach aussen gerichtete Seite jene Seite, welche betrachtet werden soll. Ebenso verhält es sich bei einem Charakter. In diesem Fall ist ebenfalls die nach aussen gerichtete Seite von Bedeutung und nicht das Innere seines Körpers.</p>
-<div class="tippbox">
-<div class="tippbox-header">
-<div class="tippbox-icon">
-
-</div>
-<p>Weiterführende Informationen</p>
-</div>
-<div class="tippbox-body">
-<p>Bei bestimmten Einstellungen werden die Rückseiten der Oberflächen von Objekten fehlerhaft dargestellt. In diesen Fällen hilft es oftmals, die Ausrichtung der Normalen zu überprüfen und bei Bedarf anzupassen.</p>
-<p>In manchen Game-Engines werden die Rückseiten von Objekten in den Grundeinstellungen gar nicht angezeigt. Dadurch blickt man bei den Oberflächen mit der falschen Ausrichtung durch das Objekt hindurch. Dies vermittelt den Eindruck, dass ein Teil des Objekts fehlen würde. Dieser Teil ist noch da – allerdings der falschen Richtung zugewendet.</p>
-</div>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Die zu betrachtende Seite eines Würfels</p>
-</div></div><p>Wie verhält es sich bei Blenders Standardwürfel? Bei diesem wird zunächst die Aussenseite betrachtet. Allerdings wäre es auch möglich, dass der Default-Cube von innen betrachtet werden soll – etwa, wenn eine Szene im Inneren eines Raumes dargestellt werden soll und der Würfel die Wände, den Boden und die Decke des Raumes darstellt. In diesem Fall ist nicht mehr die Aussenseite des Würfels relevant, sondern die Innenseite.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Normalen</p>
-</div></div><p>Die Normalen eines Objektes geben jeweils an, in welche Richtung Vertices, Edges und Faces gerichtet sind. Wenn ein Würfel etwa von innen betrachtet werden soll, müssen die Normalen nach innen gekehrt werden. Wenn der Würfel allerdings als solcher von aussen betrachtet werden soll, dann müssen die Normalen nach aussen gekehrt sein.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Normalen darstellen</p>
-</div></div><p>Die Normalen eines 3D-Objektes lassen sich im Edit-Mode betrachten, indem die entsprechende Ansicht aktiviert wird. Diese wird im Dropdown-Menü zu den Viewport-Overlays in der rechten oberen Ecke des 3D-Viewports unter dem Abschnitt «<em>Normals</em>» mit der Schaltfläche «<em>Display Normals</em>» aktiviert. Anschliessend erscheinen in den Faces kleine blaue Striche, welche in diejenige Richtung zeigen, gegen die das Face dargestellt ist.</p>
+<p>Snap-Funktion aktivieren</p>
+</div></div><p>Anschliessend kann das Retopology-Mesh im Edit-Mode bearbeitet werden. Hierfür wird Schritt für Schritt eine neue Fläche aus dem Retopology-Mesh erstellt, indem die einzelnen Edges der bestehenden Faces extrudiert werden, und so das Base-Mesh mit einer klaren Struktur nachgebildet. Damit die extrudierten Faces einfacher platziert werden können, sollte hierfür die Snap-Funktion im Header des 3D-Viewport-Editors aktiviert und beispielsweise auf die Einstellung «<em>Faces</em>» gesetzt werden.</p>
 <div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_9/5.1.Icon_Normals.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_41/6_Object_Head.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5: Icon zur Darstellung der Normalen in den Viewport-Overlays.
+Abbildung&nbsp;5: Eine Plane zur Vorbereitung des Retopology-Prozesses.
 </figcaption>
 </figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Face-Orientation darstellen</p>
-</div></div><p>Es ist auch möglich, in den Viewport-Overlays die «<em>Face Orientation</em>» zu aktivieren. Dadurch werden die Oberflächen eines Objekts in blauer Farbe dargestellt, wenn es sich um die Seite der Normalen handelt, oder in roter Farbe, wenn es sich um die Seite ohne Normalen handelt. Diese Ansicht ist auch im Object-Mode verfügbar, allerdings nur in der Solid-Ansicht und wenn X-Ray deaktiviert ist.</p>
+<p>Was bewirken die Modifier?</p>
+</div></div><p>Durch den Mirror-Modifier werden Bearbeitungen des Charakters auf der einen Seite der X-Achse direkt auch auf die andere Seite der X-Achse angewendet. Durch den Shrinkwrap-Modifier werden diese Faces direkt an die Form des Base-Meshes angepasst. Da zuvor noch der Subdivision-Surface-Modifier platziert wurde, kann der Shrinkwrap-Modifier mehr Vertices an das Base-Mesh anpassen und so dessen Verformungen etwas besser berücksichtigen.</p>
+<p>Mit diesem Vorgang kann anschliessend der ganze Charakter mit einer sinnvollen Gitterstruktur extrudiert werden. Idealerweise werden die Vertices im Retopology-Mesh so angepasst, dass sie jeweils gewollte Einkerbungen (beispielsweise bei Augenringen) mit abdecken. Zudem sollten Aspekte wie Mund, Nase, Ohren und Augen idealerweise kreisförmig geschlossen sein. Ausserdem sollte beim Retopology darauf geachtet werden, dass Körperbereiche, welche sich stärker verformen (beispielweise, Ellbogen, Knie, Füsse, Hände, Schultern, Gesicht), etwas mehr Vertices aufweisen als Körperteile, welche weniger stark verformbar sein sollten.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Normalen umkehren und neu berechnen</p>
-</div></div><p>Wenn alle Faces innerhalb eines Objekts ausgewählt werden, kann mittels der Tastenkombination <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">N</kbd><span class="visually-hidden">N</span> das Menü «<em>Normals</em>» beim Mauszeiger geöffnet werden. Mit der Option «<em>Flip</em>» können anschliessend alle Normalen in die umgekehrte Richtung gekehrt werden. Zudem können die Normalen mittels der Option «<em>Recalculate Outside</em>» zur äusseren Seite hin oder mittels «<em>Recalculate Inside</em>» zur inneren Seite hin berechnet werden.</p>
+<p>Probleme beim Retopology-Prozess</p>
+</div></div><p>Der Retopology-Prozess ist dabei sehr aufwändig. Zudem kann es manchmal zu Schwierigkeiten kommen, wenn etwa mehrere Reihen von Faces miteinander verknüpft werden müssen, diese aber unterschiedliche Anzahl Faces aufweisen. Zudem sollte auch hier darauf geachtet werden, wenn möglich nur Quads zu verwenden.</p>
+</section>
+<section id="sculpt-mesh-neu-berechnen-lassen" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="sculpt-mesh-neu-berechnen-lassen">Sculpt-Mesh neu berechnen lassen</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Remesh-Funktionen</p>
+</div></div><p>Blender beinhaltet zwei Möglichkeiten, wie ein Sculpt-Mesh in seinem Aufbau neu berechnet werden kann. Zum einen kann dem skulpturierten Mesh ein Remesh-Modifier hinzugefügt werden, zum anderen kann ein Mesh im Object-Data-Properties-Reiter des Properties-Editors unter «<em>Remesh</em>» neu berechnet werden. Im Remesh-Menü stehen dabei verschiedene Berechnungsmethoden zur Verfügung. So kann entweder Voxel-basiert das Mesh neu erstellt werden oder basierend auf den Quads der Faces («<em>QuadriFlow Remesh</em>»).</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Nachteile von Remesh</p>
+</div></div><p>Der Nachteil dieser Methode ist allerdings die geringe Kontrolle. Details im Mesh können nur automatisch ausgearbeitet werden und die resultierende Mesh-Struktur entspricht nicht immer den eigenen Vorstellungen. Zudem werden Symmetrien beim Remesh nicht berücksichtigt.</p>
+</section>
+</section>
+<section id="direktes-modellieren-eines-charakters" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="direktes-modellieren-eines-charakters">Direktes Modellieren eines Charakters</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Charaktere im Edit-Mode erstellen</p>
+</div></div><p>Eine weitere Möglichkeit, um Charaktere zu erstellen, besteht darin, dass das Mesh direkt im Edit-Mode zu einer Figur verformt wird. Dies ist allerdings ebenfalls mit einem gewissen Aufwand verbunden. Dabei ist zu empfehlen, dass mehrere Fenster des 3D-Viewport-Editors geöffnet werden und diese jeweils dasselbe Objekt aus unterschiedlichen Perspektiven darstellen. Dadurch können Veränderungen schnell aus unterschiedlichen Perspektiven betrachtet werden. Auch die Verwendung von Vorlagen kann helfen, um ein Mesh nachzubilden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Erstellung von Charakteren mittels Skin-Modifier</p>
+</div></div><p>Eine etwas einfachere Option zur Erstellung von Charakteren ergibt sich zudem durch die Verwendung des Skin-Modifiers. Hierfür wird ein neues Objekt erstellt und alle dessen Vertices in deren Mittelpunkt verbunden, indem im Edit-Mode mit der Taste alle Vertices ausgewählt werden und mit der Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> das Merge-Menü geöffnet wird. Darin kann anschliessend die Option «<em>Merge | At Center</em>» ausgewählt werden. Anschliessend kann dem Objekt ein Mirror-Modifier, gefolgt von einem Skin-Modifier, hinzugefügt werden.</p>
 
 
 </section>

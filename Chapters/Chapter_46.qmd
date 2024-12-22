@@ -1,0 +1,107 @@
+---
+title: "46. Vom Bild zur Animation"
+editor: visual
+---
+
+## Was sind Animationen?
+
+::: column-margin
+Veränderungen können in Bildern lediglich angedeutet werden 
+:::
+
+Bislang wurde lediglich die Erstellung von statischen Bildern betrachtet. Das Bild ist dann jeweils ein Abbild einer Szene. Das einzelne Bild als solches ermöglicht keine Veränderung der Objekte. So ist es etwa nicht möglich, in einem Bild zu sehen, wie sich jemand bewegt, da das Bild statisch aufgebaut ist. Anhand verschiedener Posen oder Annahmen in Bildern kann allerdings eine Bewegung angedeutet werden, welche vor oder nach dem Bild vollzogen wird. Die Bewegung selbst ist dabei allerdings nie im Bild sichtbar. 
+
+::: column-margin
+Animationen beinhalten Veränderungen 
+:::
+
+Anders als bei statischen Bildern weisen Animationen eine Veränderung von Elementen innerhalb einer Szene auf. Eine Bewegung wird dabei nicht angedeutet oder in einem Bild suggeriert, sondern ist direkt als solche sichtbar. Dies hat zur Folge, dass man sich keine Gedanken machen muss, wie man innerhalb eines einzigen Bildes einen Ablauf darstellen will. 
+
+::: column-margin
+Animationen als Anreihung von einzelnen Bildern 
+:::
+
+Tatsächlich sind Animationen auch Bilder, respektive die Abfolge mehrerer Bilder. Indem diese Bilder schnell aneinandergereiht werden, entsteht der Eindruck, dass es sich um eine Animation handelt. Dieses Prinzip entspricht etwa demjenigen eines Daumenkinos. 
+
+## Framerate
+
+::: column-margin
+Framerate beschreibt die Anzahl Bilder pro Sekunde 
+:::
+
+Die Anzahl Bilder, welche während einer Sekunde in einer Animation dargestellt werden, wird als Framerate bezeichnet. Wenn in einer Animation innerhalb von einer Sekunde 24 Bilder angezeigt werden, spricht man dementsprechend von einer Framerate von 24 «frames per second» (fps). Die Frames beschreiben dabei die einzelnen Bilder, welche während dieser Sekunde dargestellt werden. 24 fps werden in der Videobranche als Standard angesehen.
+
+::: column-margin
+Bildwiederholrate 
+:::
+
+Unabhängig davon, wie viele Frames eine Animation beinhaltet, 
+kann ein Bildschirm nur eine gewisse Anzahl Bilder pro Sekunde 
+erzeugen. Die Anzahl dieser Bilder, die ein Bildschirm erzeugen 
+kann, wird als Bildwiederholrate bezeichnet und mit der Einheit 
+Hertz angegeben. Eine Bildwiederholrate von 120 Hertz bedeutet 
+dabei, dass 120 Bilder pro Sekunde erzeugt werden können. Einige Geräte verfügen dabei über Funktionen, mit denen sie Zwischenbilder berechnen können. Dadurch werden zusätzliche Frames erzeugt, wenn beispielsweise eine Animation weniger Frames in einer Sekunde beinhaltet, als der Bildschirm darstellen könnte. 
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Weiterführende Informationen
+::::
+
+::: tippbox-body
+Teilweise wird die Framerate bei Produkten zusammen mit der 
+Bildauflösung angegeben. Dabei wird die Bildauflösung mit der vertikalen Anzahl Pixel angegeben (beispielsweise 2160 p), gefolgt von der Framerate (beispielsweise 30). Die Bezeichnung 2160p30 würde dementsprechend bedeuten, dass in der vertikalen Ausrichtung 2160 Pixel angezeigt werden und die Framerate 30 fps beträgt. 
+:::
+::::::
+
+::: column-margin
+Framerate-Einbrüche bei EchtzeitRendering 
+:::
+
+In Videos sind die Animationen jeweils vorgegeben und der Betrachter kann keinen aktiven Einfluss auf das Geschehen nehmen. Dementsprechend betrachten alle Nutzer dieselbe Abfolge von Einzel
+bilder, welche vorproduziert werden können. Bei anderen Medien wie etwa Videospielen werden unterschiedliche Bilder erzeugt, abhängig von Entscheidungen des Nutzers. In diesen Fällen muss jedes Bild in Echtzeit gerendert werden. Je nach Komplexität der Szenen und Hardware der benutzten Geräte kann es dabei zu Einbrüchen in der Framerate kommen. 
+
+## Animationseinstellungen in Blender definieren
+
+::: column-margin
+Default-Einstellungen
+:::
+
+Per Default werden in Blender 250 Frames im Rahmen einer Animation mit einer Framerate von 24 fps abgespielt. Im Timeline-Editor wird ein Zeitstrahl dargestellt, welcher diese 250 Frames von links 
+nach rechts anordnet. Mithilfe eines blauen Markers wird signalisiert, welcher Frame gerade ausgewählt ist und im 3D-Viewport-Editor dargestellt wird. 
+
+::: column-margin
+Start- und End-Frame 
+:::
+
+In der oberen rechten Ecke des Timeline-Editors wird angegeben, ab welchem Frame eine Animation beginnt und bis zu welchem Frame die Animation andauert. Im Feld «*Start*» lässt sich dabei der Start-Frame für eine Animation definieren und im Feld «*End*» der End-Frame für eine Animation. Durch eine Veränderung der Start- und End-Frames kann die Animationsdauer angepasst werden. 
+
+::: column-margin
+Frames auswählen
+:::
+
+Links neben dem Feld «*Start*» wird in einem zusätzlichen Feld der aktuell dargestellte Frame angegeben. Durch eine Veränderung dieser Zahl kann ein anderer Frame ausgewählt werden. Alternativ lässt sich auch durch ein Verschieben des blauen Markers in der Zeitleiste ein anderer Frame auswählen. Im 3D-Viewport-Editor wird zudem ebenfalls angezeigt, welcher Frame gerade dargestellt wird. Sofern die Viewport-Overlays aktiviert sind, wird in der linken oberen Ecke anhand einer Textinformation angegeben, welche Ansicht auf die Szene gerade verwendet wird. Darunter wird der aktuelle Frame in einer Klammer angegeben. 
+
+::: column-margin
+Framerate ändern 
+:::
+
+Die Einstellung der Framerate für ein Blender-File lässt sich in den Output-Properties des Properties-Editors einstellen. Unter dem Reiter «*Format*» kann die Framerate ausgewählt werden. Dadurch wird allerdings lediglich angepasst, wie viele Frames Blender innerhalb einer Sekunde darstellen soll. Dies hat zur Folge, dass bereits erstellte Animationen schneller ablaufen, weil die Frames nun zeitlich schneller getaktet werden. Wenn dies verhindert werden soll, kann unter «*Frame Range*» und «*Time Stretching*» die Animation angepasst werden. Hierfür wird im Bereich «*Old*» die alte Frame
+rate angegeben und im Bereich «*New*» die neue Framerate. Dadurch werden anschliessend die bereits gesetzten Animationen umgerechnet. 
+
+:::::: rememberbox
+:::: rememberbox-header
+::: rememberbox-icon
+:::
+
+Merke...
+::::
+
+::: rememberbox-body
+Eine Animation ergibt sich aus der schnellen Abfolge von einzelnen Bildern. Die Zeitspanne für ein Bild wird als Frame bezeichnet. 
+
+Die Anzahl Bilder/Frames pro Sekunde wird als Framerate bezeichnet. 
+:::
+::::::

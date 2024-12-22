@@ -72,7 +72,7 @@ Wenn Charaktere im Sculpt-Mode erstellt werden, weisen diese in der Regel eine s
 Mesh für Retopology vorbereiten
 :::
 
-Das skulpturierte Mesh stellt beim Retopology jeweils das Base-Mesh dar. Anschliessend wird ein neues Mesh, welches lediglich aus einer Fläche besteht, hinzugefügt. Hierfür kann etwa im «*Add*»-Menü die Option «*Mesh | Plane*» ausgewählt werden. Diese Fläche wird anschliessend im Edit-Mode vor dem Base-Mesh platziert und um einen Meter entlang der X-Achse verschoben, sodass die beiden linken Vertices der Fläche genau auf dem Nullpunkt der X-Achse liegen. Hierfür muss die Plane zudem um 90 Grad rotiert werden. Anschliessend wird ein Mirror-Modifier hinzugefügt, um das Mesh entlang der XAchse zu spiegeln. Das Hinzufügen des Mirror-Modifiers erübrigt sich bei einem nicht-symmetrischen Mesh. In diesem Falle müssen beide Seiten individuell erstellt werden. Zusätzlich kann ein Subidivision-Surface-Modifier hinzugefügt werden um die Flächen zu unterteilen.
+Das skulpturierte Mesh stellt beim Retopology jeweils das Base-Mesh dar. Anschliessend wird ein neues Mesh, welches lediglich aus einer Fläche besteht, hinzugefügt. Hierfür kann etwa im «*Add*»-Menü die Option «*Mesh | Plane*» ausgewählt werden. Diese Fläche wird anschliessend im Edit-Mode vor dem Base-Mesh platziert und um einen Meter entlang der X-Achse verschoben, sodass die beiden linken Vertices der Fläche genau auf dem Nullpunkt der X-Achse liegen. Hierfür muss die Plane zudem um 90 Grad rotiert werden. Anschliessend wird ein Mirror-Modifier hinzugefügt, um das Mesh entlang der X-Achse zu spiegeln. Das Hinzufügen des Mirror-Modifiers erübrigt sich bei einem nicht-symmetrischen Mesh. In diesem Falle müssen beide Seiten individuell erstellt werden. Zusätzlich kann ein Subidivision-Surface-Modifier hinzugefügt werden um die Flächen zu unterteilen.
 
 ::: column-margin
 Shrinkwrap-Modifier
@@ -80,7 +80,7 @@ Shrinkwrap-Modifier
 
 Anschliessend kann dem Mesh ein «*Shrinkwrap*»-Modifier hinzugefügt werden. Dieser ist in der Modifier-Auswahl in der dritten Spalte unter «*Deform*» zu finden. Mittels dieses Modifiers werden die Vertices eines Objektes direkt auf ein anderes Objekt projiziert. Hierfür muss unter «*Target*» das entsprechende Objekt eingestellt werden.
 
-![Eine Plane zur Vorbereitung des Retopology-Prozesses.](Images/Chapter_41/2_Plane_Modified.png){#fig-1_2 fig-align="left"}
+![Eine Plane mit Mirror-, Shrinkwrap- und Subidivision-Surface-Modifier.](Images/Chapter_41/2_Plane_Modified.png){#fig-1_2 fig-align="left"}
 
 
 ::: column-margin
@@ -96,9 +96,9 @@ Objekt immer im Vordergrund darstellen lassen
 
 Teilweise entsteht das Problem, dass das Retopology-Mesh nicht klar sichtbar ist, weil das Base-Mesh darüber dargestellt wird. Im Properties-Editor kann innerhalb des Reiters «*Object Properties*» der Reiter «*Viewport Display*» ausgewählt werden. Dort können verschiedene Darstellungsoptionen des Objektes im 3D-Viewport-Editor ausgewählt werden. Durch das Aktivieren der Option «*In Front*» wird das aktuell ausgewählte Objekt immer vor anderen Objekten dargestellt, selbst wenn sich die anderen Objekte eigentlich zwischen der eigenen Ansicht und dem ausgewählten Objekt befinden. Diese Option sollte aktiviert werden, während das Retopology-Mesh ausgewählt ist.
 
-![Eine Plane zur Vorbereitung des Retopology-Prozesses.](Images/Chapter_41/3_Mesh_Extrusion.png){#fig-1_3 fig-align="left"}
+![Die Edges werden schrittweise extrudiert.](Images/Chapter_41/3_Mesh_Extrusion.png){#fig-1_3 fig-align="left"}
 
-![Eine Plane zur Vorbereitung des Retopology-Prozesses.](Images/Chapter_41/4_Mesh_Head.png){#fig-1_4 fig-align="left"}
+![Besondere körperliche Merkmale, wie etwa die Augen, werden mit einer Schlaufe von Faces umreandet.](Images/Chapter_41/4_Mesh_Head.png){#fig-1_4 fig-align="left"}
 
 
 ::: column-margin
@@ -107,7 +107,7 @@ Snap-Funktion aktivieren
 
 Anschliessend kann das Retopology-Mesh im Edit-Mode bearbeitet werden. Hierfür wird Schritt für Schritt eine neue Fläche aus dem Retopology-Mesh erstellt, indem die einzelnen Edges der bestehenden Faces extrudiert werden, und so das Base-Mesh mit einer klaren Struktur nachgebildet. Damit die extrudierten Faces einfacher platziert werden können, sollte hierfür die Snap-Funktion im Header des 3D-Viewport-Editors aktiviert und beispielsweise auf die Einstellung «*Faces*» gesetzt werden.
 
-![Eine Plane zur Vorbereitung des Retopology-Prozesses.](Images/Chapter_41/6_Object_Head.png){#fig-1_5 fig-align="left"}
+![Der Kopf nach dem Retopology-Prozess.](Images/Chapter_41/6_Object_Head.png){#fig-1_5 fig-align="left"}
 
 ::: column-margin
 Was bewirken die Modifier?
@@ -150,6 +150,70 @@ Eine weitere Möglichkeit, um Charaktere zu erstellen, besteht darin, dass das M
 Erstellung von Charakteren mittels Skin-Modifier
 :::
 
-Eine etwas einfachere Option zur Erstellung von Charakteren ergibt sich zudem durch die Verwendung des Skin-Modifiers. Hierfür wird ein neues Objekt erstellt und alle dessen Vertices in deren Mittelpunkt verbunden, indem im Edit-Mode mit der Taste alle Vertices ausgewählt werden und mit der Taste {{< kbd A >}} das Merge-Menü geöffnet wird. Darin kann anschliessend die Option «*Merge | At 
-Center*» ausgewählt werden. Anschliessend kann dem Objekt ein Mirror-Modifier, gefolgt von einem Skin-Modifier, hinzugefügt werden. 
+Eine etwas einfachere Option zur Erstellung von Charakteren ergibt sich zudem durch die Verwendung des Skin-Modifiers. Hierfür wird ein neues Objekt erstellt und alle dessen Vertices in deren Mittelpunkt verbunden, indem im Edit-Mode mit der Taste {{< kbd A >}} alle Vertices ausgewählt werden und mit der Taste {{< kbd M >}} das Merge-Menü geöffnet wird. Darin kann anschliessend die Option «*Merge | At Center*» ausgewählt werden. Anschliessend kann dem Objekt ein Mirror-Modifier, gefolgt von einem Skin-Modifier, hinzugefügt werden. 
 
+::: column-margin
+Modifier vorbereiten
+:::
+
+Der Mirror-Modifier spiegelt nun die Vertices entlang der X-Achse und der Skin-Modifier erstellt eine Oberfläche um den einzelnen Vertex herum. Wichtig ist dabei, dass die Funktion «*Clipping*» im Mirror-Modifier aktiviert ist, damit die Vertices nicht über den Nullpunkt der X-Achse verschoben werden können. Dadurch ist es allerdings nicht mehr möglich, Vertices vom Nullpunkt der X-Achse zu entfernen. Dementsprechend muss die Einstellung «*Clipping*» kurzzeitig deaktiviert werden, um einen Vertex vom Nullpunkt der X-Achse zu entfernen. Zudem sollte die Option «*Merge*» aktiviert sein, damit die Vertices am Nullpunkt der X-Achse miteinander verbunden werden.
+
+::: column-margin
+Charakter anhand eines Vertex erstellen
+:::
+
+Mit diesen Einstellungen kann nun mittels Vertices und Edges ein Gerüst für einen Charakter erstellt werden. Indem die Skalierung der Vertices erhöht oder reduziert wird, kann die Breite verschiedener Körpersegmente, welche durch den Skin-Modifier erzeugt werden, bearbeitet werden. Diese Skalierung der Vertices kann mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd A >}} vorgenommen werden.
+
+::: column-margin
+Kanten aus Charakter entfernen
+:::
+
+Der Charakter wird dabei kantig erstellt. Durch das Hinzufügen eines Subdivision-Surface-Modifiers werden diese Kanten geglättet, wobei die Anzahl Subdivisions in den meisten Fällen noch auf den Wert 2, wenn nicht sogar 3, erhöht werden sollte. Zudem kann im Skin-Modifier die Option «*Smooth Shading*» aktiviert werden. Dadurch werden noch vorhandene Kanten abgerundet dargestellt. Die Aktivierung des Smooth-Shadings unter «*Object | Shade Smooth*» führt zu keiner Veränderung, wenn die Option «*Smooth Shading*» im Skin-Modifier nicht aktiviert wurde.
+
+![Ein Mesh, sowie deren Vertcies im Vergleich zwischen dem gesculpteten original, einer Bearbeitung mit Quadriflow-Remesh und einer Bearbeitung mit dem Remesh-Modifier.](Images/Chapter_41/7_Vergleich_Remesh.png){#fig-1_6 fig-align="left"}
+
+## Alternative Tools zur Erstellung von Charakteren
+
+::: column-margin
+MakeHuman 
+:::
+
+Die Erstellung von realistischen menschlichen Charakteren ist komplex aufgrund der vielen Details des menschlichen Körpers. Es gibt allerdings einige praktische alternative Programme, welche eine schnelle Erstellung von menschlichen Charakteren ermöglichen. Das Programm «*MakeHuman*» stellt eine solche Applikation dar, welche ursprünglich als Add-on für Blender erstellt wurde, mittlerweile aber als eigenständiges Programm zur Verfügung gestellt wird.
+
+::: column-margin
+Download von MakeHuman
+:::
+
+Bei MakeHuman handelt es sich ebenfalls um ein kostenfreies Programm. Auf der Website <http://www.makehumancommunity.org/> kann das Programm heruntergeladen werden. Zudem gibt es auch Plug-ins für MakeHuman und Add-ons für Blender. Durch diese kann unter anderem ein schneller Transfer der in MakeHuman erstellten Avatare in Blender ermöglicht werden. 
+
+::: column-margin
+Funktionsweise von MakeHuman
+:::
+
+Der Vorteil von MakeHuman besteht darin, dass sich leicht sehr unterschiedliche Charaktere erstellen lassen. Diese werden anhand verschiedener Parameter erstellt, welche unterschiedliche Körpereigenschaften der dreidimensionalen Charaktere verändern. Zudem werden Charaktere mit Texturen und Materialien versehen und können auch als 3D-Objekte aus dem Programm exportiert werden. 
+
+## Die Rolle der Kleider
+
+::: column-margin
+Kleider als Duplikat des Körpers
+:::
+
+Charaktere tragen oftmals Kleidung. Simplere Kleidungsstücke können erstellt werden, indem ein Duplikat des Charakters erstellt wird und von diesem Objekt die Flächen ausgewählt werden, welche ein Kleidungsstück abdecken. Für einen Pullover würden demnach die Vertices des Torsos und der Arme ausgewählt. Die restlichen Vertices werden gelöscht. Dieser Pullover kann anschliessend etwas grösser skaliert werden und mit einer Dicke versehen werden. Dadurch erhält man bereits eine simple Form eines Kleidungsstückes.
+
+::: column-margin
+Kleider ohne darunterliegendes Charakter-Mesh
+:::
+
+In dem soeben beschriebenen Fall würden die Kleidungsstücke als Duplikat des Körpers erstellt, welches anschliessend einen Teil des Charakter-Meshes überdeckt. In manchen Fällen werden anschliessend die Vertices des Körpers, welche unterhalb der Kleidung liegen und somit nicht sichtbar sind, gelöscht. Dadurch entsteht ein Charakter-Mesh, welches nur die sichtbaren Teile des Körpers beinhaltet, und ein Mesh für die Kleidung, welches die fehlenden Teile des Körpers überdeckt.
+
+::: column-margin
+Vorteile durch das Entfernen abgedeckter Vertices
+:::
+
+Der Verzicht auf die fehlenden Körperteile hat mehrere Vorteile. Zum einen wird damit die Anzahl Vertices, welche der Charakter benötigt, reduziert. Zum anderen kann es beim Posieren oder bei der Animation von Charakteren vorkommen, dass durch Kleidung abgedeckte Körperteile sich so verformen, dass sie teilweise durch die Kleidung hindurchschauen. Wenn diese Körperteile jedoch fehlen, kann das Problem verhindert werden. 
+
+::: column-margin
+Kleider und Charakter als verbundene Objekte
+:::
+
+Die letzte Option zum Umgang mit Kleidern besteht darin, dass das Mesh so gestaltet wird, dass sich ein fliessender Übergang zwischen den Kleidern und den sichtbaren Körperteilen ergibt und die unsichtbaren Körperteile entfernt werden. Dabei sind die Körperteile und die Kleider direkt mit Vertices verbunden und bilden somit ein verbundenes Objekt. 

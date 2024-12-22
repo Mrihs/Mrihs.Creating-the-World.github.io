@@ -1,0 +1,423 @@
+---
+title: "42. Tutorial: Eine Cartoon-Katze als Charakter erstellen"
+editor: visual
+---
+
+::: column-margin
+Ziel dieses Tutorials
+:::
+
+Das Ziel dieses Tutorials besteht darin, einen simplen Charakter in der Form einer Cartoon-Katze zu erstellen. Hierfür wird zunächst das Mesh der Cartoon-Katze erstellt. Anschliessend wird dieses Mesh texturiert, wobei das Bemalen von eigenen Texturen innerhalb von Blender erläutert wird. Zudem wird der Katze anschliessend ein Fell hinzugefügt.
+
+::: column-margin
+Charaktererstellung mit Referenzbildern
+:::
+
+Bei der Entwicklung von Figuren für Filme oder Videospiele werden in den frühen Planungsphasen Skizzen der Charaktere erstellt. Solche Skizzen und Vorlagen können für die Erstellung der 3D-Modelle im Entwicklungsprozess verwendet werden. Für das Beispiel in diesem Tutorial wurde ebenfalls eine Vorlage erstellt. In der Referenzvorlage ist die Cartoon-Katze aus allen Perspektiven abgebildet. Idealerweise werden in solchen Fällen sechs Versionen des Referenzbildes erstellt und in der Welt bewegt und rotiert, sodass pro Ansicht auf das Objekt ein Referenzbild verfügbar ist.
+
+::: column-margin
+Referenzbilder sind in Datei eingebunden
+:::
+
+In der Datei «*Cat_Character*» wurden bereits sechs Versionen des Referenzbildes erstellt und ausgerichtet und platziert. Um die Referenzbilder zu sehen, muss jeweils eine entsprechende Perspektive (beispielsweise die Vogelperspektive mit der Taste {{< kbd 7 >}}) angesteuert werden. Die Referenzbilder sind in der Collection «*Referenzbilder*» zusammengefasst. Durch ein Deaktivieren dieser Collection im Outliner-Editor werden die Referenzbilder nicht mehr angezeigt.
+
+## Mesh-Erstellung
+
+### Grundformen hinzufügen
+
+::: column-margin
+Mesh-Primitive hinzufügen
+:::
+
+Die Katze hat einen runden Torso und einen runden Kopf. Aus diesem Grund ist eine Kugel das beste Primitiv, um mit der Erstellung der Katze zu beginnen. Allerdings wird die Verwendung einer UV-Sphere im Verlaufe des Tutorials zu Schwierigkeiten führen, da sich am oberen und unteren Ende der UV-Sphere Tris befinden. Aus diesem Grund werden zunächst die Tris aus einer neu erstellten UV-Sphere entfernt. Dies wird allerdings lediglich auf einer Seite der UV-Sphere durchgeführt, da die Tris auf der anderen Seite der UV-Sphere noch von Nutzen sein werden.
+
+![Die Edges zwischen den Tris, welche nicht entlang der Achsen verlaufen, können aufgelöst werden, damit Quads entstehen.](Images/Chapter_42/2_Edges_To_Delete.png){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Tris aus UV-Sphere entfernen
+:::
+
+Um die Tris aus einer UV-Sphere zu entfernen, kann zunächst im «*Add*»-Menü unter «*Mesh \| UV Sphere*» eine neue UV-Sphere hinzugefügt werden. Anschliessend sollte das Kontext-Menü zur zuletzt durchgeführten Aktion in der linken unteren Ecke des 3D-Viewport-Editors ausgeklappt werden und die Anzahl Vertices und Segmente angepasst werden. Die UV-Sphere soll viermal weniger Subdivisions aufweisen als in den Standardeinstellungen. Hierfür wird die Anzahl «*Segments*» auf 8 gesetzt und die Anzahl «*Rings*» auf 4. Anschliessend kann die UV-Sphere von unten aus mit der Tastenkombination {{< kbd Alt >}} + {{< kbd 7 >}} betrachtet werden. Aus dieser Ansicht sollten nun die untersten zwei Reihen von Faces sichtbar sein. Die unterste Reihe besteht aus acht Tris und die untere Reihe aus acht Quads. Je zwei der Tris in der oberen Reihe könnten zu einem Quad zusammengefügt werden. Hierfür muss lediglich jedes zweite Edge zwischen den aneinandergereihten Tris ausgewählt und aufgelöst werden. Dabei ist wichtig, dass jene Edges aufgelöst werden, die nicht direkt auf den Achsen liegen. Zum Auflösen der Edges kann die Taste {{< kbd X >}} zum Öffnen des Lösch-Menüs gedrückt werden, und anschliessend die Option «*Dissolve Edges*» ausgewählt werden. Dadurch werden die Edges entfernt und die jeweiligen Tris zu Quads umgewandelt.
+
+![Eine UV-Sphere, deren unteren Ende lediglich aus Quads besteht und mit einem Subdivision-Surface-Modifier ausgestattet wurde.](Images/Chapter_42/3_Subdivisions.png){#fig-1_2 fig-align="left"}
+
+::: column-margin
+Subdivision-Surface-Modifier hinzufügen
+:::
+
+Der bearbeiteten UV-Sphere, welche nur noch an einem Ende der Kugel Tris aufweist, kann nun ein Subdivision-Surface-Modifier hinzugefügt werden und dessen Anzahl Subdivisions auf 2 erhöht werden. Die Struktur der Faces wird durch den Subdivision-Surface-Modifier nun unterschiedlich an den beiden Enden verformt. An der Seite mit den Tris werden lediglich die Edges, welche auf den Tris basieren, verformt und die darüberliegenden Edges werden gleichmässig als Ringe dargestellt. Die Seite mit den Quads wird ebenfalls verformt, sodass sich weniger gleichmässige Ringe bilden. Dafür sind allerdings alle Faces ähnlich strukturiert.
+
+::: column-margin
+Körper ausrichten
+:::
+
+Die UV-Sphere kann nun als Körper der Katze verwendet werden. Hierfür wird die UV-Sphere mittig in der Höhe des Torsos der Katze platziert. Dabei sollte darauf geachtet werden, dass das Ende der UV-Sphere mit den Tris nach oben gerichtet ist.
+
+::: column-margin
+Kopf erstellen und ausrichten
+:::
+
+Anschliessend wird die UV-Sphere im Object-Mode mit der Tastenkombination {{< kbd Shift >}} + {{< kbd D >}} dupliziert. Das Duplikat wird als Kopf verwendet und wird deshalb mittig des Kopfes ausgerichtet. Das Duplikat der UV-Sphere sollte zudem um 180° entlang der X- oder Y-Achse rotiert werden, damit die Seite mit den Tris bei dieser Kugel nach unten ausgerichtet ist. Zudem kann der Kopf um den Faktor 1.2 skaliert werden, damit er dieselbe Grösse wie auf dem Bild der Katze aufweist.
+
+![Die UV-Sphere wird zur Form des Kopfes ausgerichtet. Dabei befindet sich die Siete mit den Tris unten.](Images/Chapter_42/4_Kopf_ausrichten.png){#fig-1_3 fig-align="left"}
+
+### Körper und Kopf verbinden
+
+::: column-margin
+Subdivision-Surface-Modifier anwenden
+:::
+
+Als Nächstes soll der Kopf mit dem Körper der Katze verbunden werden. Dies erfordert zunächst allerdings noch Vorbereitungen. Zuerst wird der Subdivision Surface-Modifier bei beiden UV-Spheres angewendet. Hierfür muss jeweils bei dem entsprechenden Modifier das Dropdown-Menü geöffnet und auf «*Apply*» geklickt werden.
+
+![Die überlappenden Vertices werden von beiden UV-Spheres entfernt und die beiden UV-Spheres miteinander verbunden.](Images/Chapter_42/5_Kopf_Koerper_verbinden.png){#fig-1_4 fig-align="left"}
+
+::: column-margin
+Überschüssige Vertices löschen und UV-Spheres verbinden
+:::
+
+Bei der UV-Sphere, welche den Körper der Katze bildet, können nun alle Vertices, welche sich über dem Hals befinden, ausgewählt und gelöscht werden. Bei der UV-Sphere, welche den Kopf der Katze darstellt, können zudem alle Vertices, welche sich unterhalb des Halses der Katze befinden gelöscht werden. Anschliessend können die beiden UV-Spheres im Object-Mode ausgewählt und mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd J >}} verbunden werden. Dadurch werden die beiden UV-Spheres zu einem einzigen Objekt verbunden.
+
+::: column-margin
+Kopf mit Körper verbinden
+:::
+
+Als Nächstes können die Vertices der beiden Kugelöffnungen ausgewählt werden. Diese Vertices sollten nun miteinander verbunden werden. Im Edge-Menü, welches mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd E >}} geöffnet werden kann, ist dies direkt mit der Option «*Bridge Edge Loops*» möglich. Dadurch werden die Edges der unteren Kugel passend mit den Edges der oberen Kugel verbunden.
+
+::: column-margin
+Hals der Katze anpassen
+:::
+
+Um den Hals der Katze etwas anzupassen, wird ihm eine zusätzliche Reihe an Edges hinzugefügt. Mittels der Tastenkombination {{< kbd Ctrl >}} + {{< kbd R >}} wird ein Loop-Cut gestartet und damit eine neue Reihe von Edges in der Mitte des Halses hinzugefügt. Diese Edges können anschliessend um den Faktor 0.85 skaliert werden.
+
+![Die Hälfte des Meshes wird entfernt, damit es mit einem Mirror-Modifier für die weitere Bearbeitung gespiegelt werden kann.](Images/Chapter_42/6_Kopf_Koerper_Modifiers.png){#fig-1_5 fig-align="left"}
+
+### Extremitäten hinzufügen
+
+::: column-margin
+Extremitäten hinzufügen
+:::
+
+Der nächste Schritt besteht darin, der Katze Extremitäten – also Arme, Beine und Ohren – hinzuzufügen. Diese Extremitäten sind auf der linken und der rechten Seite des Katzenkörpers identisch. Deshalb macht es Sinn, eine symmetrische Bearbeitung der Katze vorzunehmen.
+
+![Die Faces, aus denen der Arm extrudiert werden soll, werden ausgewählt.](Images/Chapter_42/7_Arm_Vertices.png){#fig-1_6 fig-align="left"}
+
+::: column-margin
+Mirror-Modifier hinzufügen
+:::
+
+Um die Katze symmetrisch bearbeiten zu können, wird ein Mirror-Modifier verwendet. Dieser macht allerdings nur Sinn, wenn vorher alle Vertices der einen Körper hälfte der Katze entfernt wurden. Deshalb werden alle Vertices der einen Körperhälfte – aber nicht diejenigen in der Körpermitte – ausgewählt und mit der Taste {{< kbd X >}} gelöscht. Anschliessend kann der Mirror-Modifier hinzugefügt werden. Im Mirror-Modifier sollte zudem die Option «*Clipping*» aktiviert werden, damit die Vertices nicht über die Köpermitte hinaus verschoben werden, und es sollte überprüft werden, dass die Option «*Merge*» aktiviert ist. Zudem kann ein Subdivision-Surface-Modifier hinzugefügt werden, um die Kanten des Meshes etwas zu glätten.
+
+![Ein Ansatz für den Arm wird extrudiert.](Images/Chapter_42/8_Armansatz.png){#fig-1_7 fig-align="left"}
+
+::: column-margin
+Armansatz erstellen
+:::
+
+Um die Arme der Katze zu erstellen, können vier Faces auf der rechten Seite des Torsos ausgewählt werden, an denen sich nachfolgend die Arme befinden werden. Diese Faces können anschliessend mittels der Taste {{< kbd E >}} extrudiert und entlang der Arme der Katze platziert werden, sodass sich ein Armansatz bildet. Hierbei wird idealerweise die Frontalansicht verwendet, damit die Arme nicht schräg nach hinter oder vorne extrudiert werden.
+
+![Die Vertices, des extrudierten Armes werden kreisförmig angeordnet.](Images/Chapter_42/9_arm_rund.png){#fig-1_8 fig-align="left"}
+
+::: column-margin
+Arme abrunden
+:::
+
+Die extrudierten Arme sind aufgrund der Quads viereckig und würden blockartige Arme mit abgerundeten Kanten ergeben. Deshalb werden die Vertices in den Ecken der vier extrudierten Faces ausgewählt. Diese können anschliessend um den Faktor 0.75 skaliert werden. Dadurch werden die Ecken jeweils näher zueinandergezogen, während die Vertices in der Mitte der extrudierten Faces an ihrer Position bleiben. Dies führt zu einer runden Form des Armes.
+
+![Die Arme werden entsprechend dem Referenzbild schrittweise extrudiert.](Images/Chapter_42/10_arm_extrudiert.png){#fig-1_9 fig-align="left"}
+
+::: column-margin
+Arme extrudieren
+:::
+
+Die Faces, welche das Ende des Armansatzes bilden, können nun wieder ausgewählt und schrittweise entlang des Armes extrudiert werden. Dabei sollten bei jedem Schritt nebst der Position auch die Rotation und die Skalierung etwas angepasst werden, sodass die Form der Arme aus dem Referenzbild dargestellt wird.
+
+::: column-margin
+Faces subdividen
+:::
+
+Für die Beine werden mehr Faces benötigt. Deshalb wird das gesamte Mesh ausgewählt und im Edge-Menü die Option «*Subdivide*» ausgewählt. Dadurch werden alle Faces in kleinere Faces unterteilt, was mehr Faces zum Erstellen der weiteren Extremitäten bietet.
+
+::: column-margin
+Beinansatz erstellen
+:::
+
+Am Unterkörper der Katze können nun 4x4 Faces ausgewählt werden, welche gemeinsam die Beine der Katze bilden werden. Diese Faces können anschliessend entlang der Beine extrudiert werden, sodass sie einen Ansatz der Beine bilden.
+
+![Die Faces, aus denen die Beine extrudiert werden, werden ausgewählt.](Images/Chapter_42/11_Vertices_Beine.png){#fig-1_10 fig-align="left"}
+
+::: column-margin
+Beinansatz rund verformen
+:::
+
+Auch bei den Beinen macht es Sinn, die Vertices des Ansatzes kreisförmig anzuordnen. Hierfür können zunächst alle Vertices, welche diagonal zwischen den Ecken und in den Ecken liegen, ausgewählt und um den Faktor 0.7 skaliert werden. Anschliessend können die Vertices, welche an den Kanten zwischen den Ecken und den Kantenmitten liegen, ausgewählt und um den Faktor 0.9 skaliert werden.
+
+![Die Vertices des Beinansatzes werden kreisförmig angeordnet.](Images/Chapter_42/.png){#fig-1_11 fig-align="left"}
+
+::: column-margin
+Beine extrudieren
+:::
+
+Die Faces, welche den Beinansatz bilden, können nun ausgewählt und schrittweise entlang der Beine extrudiert werden. Dabei sollte, wie bereits bei den Armen, die Position, Rotation und Skalierung der Faces bei jedem Zwischenschritt überprüft werden. Damit sind die Beine bereits erstellt.
+
+![Die Beine werden schrittweise entlang der Referenzvorlage extrudiert.](Images/Chapter_42/13_Beine_extrudiert.png){#fig-1_12 fig-align="left"}
+
+::: column-margin
+Ohren extrudieren
+:::
+
+Um die Ohren der Katze zu erstellen, können 3x2 Faces ausgewählt werden, aus denen die Ohren anschliessend schrittweise extrudiert werden. Dabei sollten bei jeder Extrusion die Faces kleiner skaliert werden. Es könnte etwa folgendermassen vorgegangen werden:
+
+-   Die Faces werden um 0.1 Meter extrudiert.
+-   Die Faces werden um den Faktor 0.9 skaliert.
+-   Die Faces werden um 0.1 Meter extrudiert.
+-   Die Faces werden um den Faktor 0.7 skaliert.
+-   Die Faces werden um 0.1 Meter extrudiert.
+-   Die Faces werden um den Faktor 0.6 skaliert.
+-   Die Faces werden um 0.05 Meter extrudiert.
+-   Die Faces werden um den Faktor 0.4 skaliert.
+
+![Die Faces, aus denen die Ohren extrudiert werden, werden ausgewählt.](Images/Chapter_42/14_Ohren_Vertices.png){#fig-1_13 fig-align="left"}
+
+![Die Ohren werden schrittweise entlang der Referenzvorlage extrudiert.](Images/Chapter_42/15_Ohren_extrudiert.png){#fig-1_14 fig-align="left"}
+
+### Schwanz hinzufügen
+
+::: column-margin
+Mirror-Modifier anwenden
+:::
+
+Der Schwanz der Katze stellt die letzte Extremität dar, welche noch erstellt werden muss. Dieser verläuft allerdings nicht symmetrisch und gerade. Deshalb muss von nun an eine nicht-symmetrische Bearbeitung erfolgen. Aus diesem Grund wird der Mirror-Modifier auf das Mesh angewendet. Dadurch können im Edit-Mode weitere Änderungen durchgeführt werden, welche keine Symmetrie benötigen.
+
+::: column-margin
+Mehrere 3D-Viewport-Editoren öffnen
+:::
+
+Zudem benötigt die Erstellung des Schwanzes einen Abgleich der Vertex-Position aus verschiedenen Ansichten heraus. Hierfür können mehrere weitere 3D-Viewport-Editoren aus den Ecken des 3D-Viewport-Editors herausgezogen und in den jeweiligen Editoren eine andere Kameraansicht ausgewählt werden. Dadurch kann in jedem Editor betrachtet werden, was die Veränderungen aus einer anderen Perspektive bewirken. Dafür sollte die Ansicht von oben und von der Seite verwendet werden. Bei Bedarf können zusätzliche 3D-Viewport-Editore für die Ansicht von hinten und von der anderen Seite verwendet werden.
+
+::: column-margin
+Schwanz extrudieren
+:::
+
+Für den Schwanz der Katze können 4x4 Faces ausgewählt werden. Diese können zunächst einmal extrudiert und anschliessend nach demselben Schema wie bei den Beinen kreisförmig angeordnet werden. Anschliessend können die Faces schrittweise entlang des Schwanzes extrudiert werden. Auch hier sollte darauf geachtet werden, dass die Position, Rotation und Skalierung der extrudierten Faces bei jedem Zwischenschritt angepasst werden.
+
+![Die Faces, aus denen der Schwanz extrudiert wird, werden ausgewählt.](Images/Chapter_42/16_Schwanz_Vertices.png){#fig-1_15 fig-align="left"}
+
+::: column-margin
+Shade-Smooth
+:::
+
+Nach diesem Schritt ist die Mesh-Bearbeitung beendet. Damit das Mesh etwas glatter aussieht, kann der Wert für die Subdivisions im Subdivision-Surface-Modifier erhöht werden. Zusätzlich kann im Object-Mode unter «*Object \| Shade Smooth*» eine glatte Darstellung der Faces aktiviert werden.
+
+## Textur-Vorbereitung
+
+::: column-margin
+UVs der Katze
+:::
+
+Durch die Bearbeitung der Katze sind die UVs des Meshes stark verzerrt worden. Zudem überlappen sich einige UVs, da das Mesh ursprünglich aus zwei UV-Spheres erstellt wurde. Deshalb sollte das UV-Mapping der Katze verbessert werden.
+
+![Die Faces, aus denen der Schwanz extrudiert wird, werden ausgewählt.](Images/Chapter_42/17_UVs.png){#fig-1_16 fig-align="left"}
+
+::: column-margin
+UVs sollten dem Detailgrad der Textur angepasst werden
+:::
+
+Im Verlaufe der Texturierung wird sich allerdings herausstellen, dass das UV-Mapping in diesem Projekt besonders relevant ist. Einige Bereiche des Meshes weisen in der Textur einen grösseren Detailgrad auf als andere Bereiche. Damit diese Details auch auf der Textur dargestellt werden können, benötigen diese mehr Fläche auf der Textur. Deshalb ist es sinnvoll darauf zu achten, dass die entsprechenden Faces, welche mehr Details aufweisen, auch grössere UVs einnehmen.
+
+::: column-margin
+Seams
+:::
+
+Um die UVs gezielt vergrössern oder verkleinern zu können, muss definiert werden, welche Bereiche grössere UVs benötigen. Damit diese Flächen angesteuert werden können, kann im Edit-Mode definiert werden, an welchen Edges entlang UVs auseinandergeschnitten werden sollen. Dabei handelt es sich um die Seams der Edges. Um Seams zu definieren, müssen zunächst die entsprechenden Edges, welche mit einem Seam versehen werden sollen, ausgewählt werden. Anschliessend kann das Edge-Menü mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd E >}} geöffnet werden. Mit der Option «*Mark Seam*» wird diesen Edges anschliessend ein Seam zugewiesen. Wenn ein Seam entfernt werden soll, kann das entsprechende Edge ausgewählt und die Option «*Clear Seam*» im Edge-Menü verwendet werden. Die Seams werden mit einer roten Markierung im Edit-Mode dargestellt.
+
+![Durch die Seams wird vorgegeben, welche Faces in der UV-Map als gemeinsame Insel dargestellt werden sollen.](Images/Chapter_42/18_Seams.png){#fig-1_17 fig-align="left"}
+
+::: column-margin
+Seams dem Mesh hinzufügen
+:::
+
+Die wichtigen Konturen der Katze, welche mehr Details erfordern, stellen die Ohren, die Arme, die Beine, den Schwanz und den Gesichtsbereich dar. Dementsprechend müssen diese Bereiche durch die Zuweisung von Seams in verschiedene Areale unterteilt werden. Bei den Ohren sollte zudem darauf geachtet werden, dass ein Seam entlang des Ohres verläuft, sodass die Vorderseite des Ohres eine separate Fläche bildet, die mit Seams abgegrenzt wird.
+
+::: column-margin
+UV-Unwrapping
+:::
+
+Nachdem die Seams definiert wurden, sollten die UVs erneut erstellt werden. Hierfür werden zunächst alle Vertices mit der Taste {{< kbd A >}} ausgewälht. Mit der {{< kbd U >}}-Taste kann das Menü «*UV Mapping*» geöffnet und darin die Option «*Unwrap*» ausgewählt werden. Dadurch werden die UVs neu berechnet und dabei die Seams berücksichtigt. Im Kontext-Menü kann zudem unter «*Margin*» angegeben werden, dass ein gewisser Abstand zwischen den einzelnen UVs im Mapping berücksichtig werden soll. Dieser Wert kann beispielsweise auf 0.01 gesetzt werden.
+
+::: column-margin
+Zugehörigkeit der UVs ermitteln
+:::
+
+Im UV-Editor können anschliessend die erstellten UVs betrachtet werden. Dort sollte darauf geachtet werden, dass die UVs der Ohren etwas vergrössert werden, sodass sie einen grösseren Bereich innerhalb der Textur einnehmen. Durch die Auswahl der Faces, welche die Vorderseite der Ohren abbilden, werden deren UVs im UV-Editor sichtbar. Wenn mittels der Taste {{< kbd A >}} anschliessend alle Faces des Meshes ausgewählt werden, erscheinen die anderen UVs ebenfalls wieder im UV-Editor. Anschliessend kann der Mauszeiger über die UV-Insel der Ohren gelegt werden und die Taste {{< kbd L >}} gedrückt werden, um alle Vertices der Ohren auszuwählen.
+
+::: column-margin
+UVs anpassen
+:::
+
+Die ausgewählten UVs der Ohren können anschliessend, so wie auch Elemente im 3D-Viewport-Editor, mit der Taste {{< kbd G >}} bewegt, der Taste {{< kbd S >}} skaliert und der Taste {{< kbd R >}} rotiert werden. So können die UVs der vorderen Ohrenseite vergrössert werden. Dabei sollte dann darauf geachtet werden, dass sich die vergrösserten Ohren nicht über anderen UVs befinden. Bei Bedarf können auch die UV-Inseln der anderen Körperteile, welche mehr Details benötigen vergrössert werden. Um sich mehr Platz im UV-Raum zu verschaffen müssen hierfür möglicherweise andere Inseln, welche weniger Details beinhalten, verkleinert werden.
+
+## Textur-Erstellung
+
+::: column-margin
+Material hinzufügen
+:::
+
+Im nächsten Schritt wird die Katze texturiert. Hierfür wird dem Mesh ein neues Material hinzugefügt und im Shader-Editor wird dem Principled-BSDF-Shader eine Textur hinzugefügt. Hierfür sollte der Principled-BSDF-Shader ausgewählt und die Tastenkombination {{< kbd Ctrl >}} + {{< kbd T >}} gedrückt werden. Dadurch wird ein Image-Texture-Node mitsamt einem Mapping- und einem Texture-Coordinate-Node hinzugefügt.
+
+::: column-margin
+Neue Textur erstellen
+:::
+
+Im Image-Texture-Node wird nun eine neue Textur erstellt, indem auf die Schaltfläche «*New*» geklickt wird. Dadurch öffnet sich ein Dialogfeld, in dem der Name definiert werden kann. Unter «*Width*» und «*Height*» können die Grössenverhältnisse und die Auflösung der Textur definiert werden. Hierfür kann die standardmässige Auflösung von 1024 x 1024 Pixel verwendet werden. Zudem kann unter «*Color*» eine Farbe ausgewählt werden, mit der die Textur erstellt wird. In diesem Falle kann eine graue Farbe ausgewählt werden. Diese wird anschliessend die Grundfarbe der Katze darstellen.
+
+::: column-margin
+Image-Editor
+:::
+
+Anschliessend kann der Image-Editor statt des Shader-Editors geöffnet werden. Dort kann anschliessend im Dropdown-Menü links neben der Schaltfläche «*New*» die soeben erstellte Textur ausgewählt werden. Diese sollte anschliessend innerhalb des Image-Editors angezeigt werden.
+
+::: column-margin
+Texturen müssen separat abgespeichert werden
+:::
+
+Diese Textur stellt nun allerdings lediglich ein Bild dar, welches innerhalb von Blender erzeugt wird. Beim Schliessen des Programmes wird diese Textur nicht abgespeichert. Es ist deshalb jeweils notwendig, diese Textur im Image-Editor unter «*Image \| Save*» als externe Bilddatei abzuspeichern.
+
+Hierfür kann beispielsweise ein Bild im PNG-Format abgespeichert werden. Auch zusätzliche Änderungen auf der Textur müssen unter diesem Menüpunkt nochmals abgespeichert werden. Sobald eine Textur bearbeitet wurde und es nicht abgespeicherte Änderungen gibt, wird dies mit einem Sternchen in der Menüleiste signalisiert. Die Menüleiste «*Image*» wird dann als «*Image\**» gekennzeichnet.
+
+::: column-margin
+Wo wird die Textur bemalt?
+:::
+
+Als Nächstes geht es darum, die Textur zu bemalen. Dabei gibt es zwei Möglichkeiten. Entweder wird im Image-Editor direkt die Textur bemalt. Hierfür muss allerdings die Einstellung des «*View*» Modes in der linken oberen Ecke des Image-Editors auf den «*Paint*»-Mode umgestellt werden. Die zweite Methode besteht darin, dass die Textur auf dem Mesh im 3D-Viewport-Editor bemalt wird. Hierfür muss der Texture-Paint-Mode anstelle des Object- oder Edit-Modes ausgewählt werden. Diese Methode ist in der Regel praktischer. Unabhängig davon, welche der beiden Methoden verwendet wird, sind die Tools identisch.
+
+::: column-margin
+Toolbar des Texture-Paint-Modes
+:::
+
+In der Toolbar des Texture-Paint-Modes finden sich ein paar Werkzeuge, um die Textur zu bemalen. Mittels der Option «*Draw*» kann etwa gemalt werden und mittels der Option «*Fill*» kann eine Farbfläche mit einer Farbe gefüllt werden. Zudem besteht auch die Möglichkeit, Farbübergänge zu verwischen mittels «*Smear*» oder weicher zu gestalten mittels «*Soften*».
+
+![Icons in der Tool-Bar des Texture-Paint-Modes.](Images/Chapter_42/19_Toolbar_Texture_Paint.png){#fig-1_18 fig-align="left"}
+
+::: column-margin
+Brush-Settings
+:::
+
+In der Sidebar auf der rechten Seite des 3D-Viewport-Editors finden sich zudem weitere Einstellungen zu dem ausgewählten Werkzeug unter dem Reiter «*Brush Settings*». So können an dieser Stelle die anzuwendende Farbe und die Stärke, mit der die Farbe auf die Textur angewendet wird, definiert werden. Im Bereich «*Radius*» kann zudem der Radius des Pinsels definiert werden. Dies kann allerdings, wie im Sculpt-Mode, auch mit der Taste {{< kbd F >}} und einer Mausbewegung geschehen. Dabei führt eine Mausbewegung nach links zu einer Verkleinerung des Radius und eine Mausbewegung nach rechts zu einer Vergrösserung des Radius.
+
+::: column-margin
+Farbpaletten
+:::
+
+Wenn eine Farbe häufiger verwendet wird, kann eine Farbpalette erstellt werden und diese Farbe der Farbpalette hinzugefügt werden. Unter dem Reiter «*Color Palette*» kann mit der Schaltfläche «*New*» eine neue Farbpalette hinzugefügt werden, und mittels der «+»-Schaltfläche die aktuell ausgewählte Farbe der Farbpalette hinzugefügt werden. Durch einen Klick auf eine Farbe innerhalb der Farbpalette wird diese automatisch ausgewählt.
+
+::: column-margin
+Texture-Slots
+:::
+
+Eine wichtige Einstellung findet sich im Reiter «*Texture Slots*». Dort wird die aktuell bearbeitete Textur angezeigt. Wenn sich keine Veränderungen in der Textur des Meshes bei der Bearbeitung ergeben, sollte überprüft werden, ob die korrekte Textur in diesem Slot ausgewählt ist.
+
+::: column-margin
+Linien stabilisieren
+:::
+
+Innerhalb des Reiters «*Stroke*» der «*Brush Settings*» findet sich eine nützliche Einstellung zur Erstellung von Linien. Die Option «*Stabilize Stroke*» hilft bei der Stabilisierung der Maus beim Zeichnen. Dabei wird eine Linie jeweils mit einer Verzögerung gezeichnet. Während dieser Verzögerung wird die derweil zurückgelegte Bewegung der Maus berechnet und geglättet. Dadurch ergeben sich klarere Linien.
+
+::: column-margin
+Katze bemalen
+:::
+
+Nun kann die Katze bemalt werden. Hierfür müssen jeweils die korrekten Farben ausgewählt werden und die entsprechenden Bereiche auf dem Objekt mit dem Draw-Tool bemalt werden. Die bemalten Bereiche werden anschliessend direkt auf die Textur übertragen, anhand der UVs. Sollten sich mehrere UVs übereinander befinden, werden automatisch auch die anderen UVs mit bemalt.
+
+::: column-margin
+Symmetrisches bemalen
+:::
+
+Viele Aspekte der Katze, welche bemalt wird, erfolgen symmetrisch. Die weissen Füsse, die weissen Arme, die Augen, die Nase und die Ohren sollten auf beiden Seiten symmetrisch bemalt werden. Im Reiter «*Symmetry*» der Sidebar kann eine Achse aktiviert werden, damit eine symmetrische Bearbeitung erfolgt. In diesem Fall kann die X-Achse ausgewählt werden, damit gleichzeitig beide Seiten des Meshes bearbeitet werden. Um die Schwanzspitze weiss einzufärben, sollte jeweils darauf geachtet werden, dass die Symmetrie wieder ausgeschaltet wird.
+
+::: column-margin
+Maximaler Detailgrad
+:::
+
+Der Detailgrad, mit dem auf die Textur gemalt werden kann, hängt nebst der Anordnung der UVs auch von der Auflösung der Textur ab. Je höher die erstellte Textur aufgelöst ist, desto detaillierter kann gezeichnet werden. Wenn die Zeichnungsfläche auf der Textur zu klein ist und somit mehrere Pixel überproportional auf das Mesh angewendet werden, kann dies dazu führen, dass verformte Zeichnungen entstehen. Eine höher aufgelöste Textur bringt allerdings auch den Nachteil, dass es abhängig von der Rechenleistung des Computers zu längeren Wartezeiten während des Bemalens der Textur kommt.
+
+::: column-margin
+Textur abspeichern
+:::
+
+Sobald die Katze fertig bemalt wurde, sollte unbedingt daran gedacht werden, die Textur im Image-Editor nochmals zu speichern. Ansonsten geht die erstellte Textur beim Beenden von Blender verloren.
+
+:::::: exercisebox
+:::: exercisebox-header
+::: exercisebox-icon
+:::
+
+Übung 18: Katze bemalen
+::::
+
+::: exercisebox-body
+**Übung 18.1**
+
+Fügen Sie einen zweiten Image-Texture-Node im Material der Katze ein und verbinden Sie diesen mit dem Color-Input des Principled-BSDF-Shaders. Erstellen Sie eine neue Textur und bemalen Sie die Katze nach eigenen Vorstellungen.
+:::
+::::::
+
+## Die Katze geht zum Friseur
+
+::: column-margin
+Zweites Material der Katze hinzufügen
+:::
+
+Zu guter Letzt wird noch aufgezeigt, wie der Katze Haare hinzugefügt werden können. Hierfür wird der Katze ein zusätzliches Material hinzugefügt. Diesem Material kann ebenfalls die Textur der Katze als Grundfarbe zugewiesen werden. Dieses Material wird anschliessend das Material der Katzenhaare darstellen.
+
+::: column-margin
+Haare hinzufügen
+:::
+
+Im Particle-Properties-Reiter des Properties-Editors kann anschliessend ein neues Partikelsystem auf die Katze angewendet werden und dafür die Einstellung «*Hair*» verwendet werden. Die Anzahl der Haare kann dabei deutlich reduziert werden, da anschliessend manuell weitere Haare hinzugefügt werden. Zudem kann die Länge der Haare ebenfalls reduziert werden, beispielsweise auf 0.1 Meter. Ebenso können die Anzahl Segmente der Haare reduziert werden, etwa auf den Wert 3. Unter dem Reiter «*Render*» kann im Dropdown-Menü «*Material*» das neu erstellte Material für die Haare ausgewählt werden. Dieses wird anschliessend auf die erstellen Haare angewendet.
+
+::: column-margin
+Particle-Edit-Mode
+:::
+
+Durch das neu hinzugefügte Haar-Partikelsystem ist im 3D-Viewport-Editor nun ein neuer Bearbeitungsmodus verfügbar. Statt des Object-Modes wird deshalb nun der Particle-Edit-Mode verwendet. Mit dieser Option können die Haare eines Objektes innerhalb des 3D-Viewport-Editors bearbeitet werden. Durch diese Bearbeitung gehen allerdings einige Einstellungsmöglichkeiten im Particle-Properties-Editor verloren.
+
+![Icons in der Toolbar des Particle-Edit-Modes](Images/Chapter_42/20_Toolbar_Particles_Editor.png){#fig-1_19 fig-align="left"}
+
+::: column-margin
+Speichern nicht vergessen
+:::
+
+An dieser Stelle ist es allerdings je nach Rechenleistung empfehlenswert das aktuelle Blender-Projekt nochmals abzuspeichern, falls die Hardware nicht mehr mit den Partikeln mithalten kann. Zudem sollte auch in den nächsten Bearbeitungsschritten jeweils zwischengespeichert werden.
+
+::: column-margin
+Haare hinzufügen
+:::
+
+In der Toolbar des Particle-Properties-Editors findet sich die Option «*Add*». Wenn diese Option ausgewählt ist, können neue Haare mit der Maus auf dem Mesh platziert werden. In der Sidebar lassen sich zudem der Radius und die Anzahl Haare, die gemeinsam platziert werden, einstellen. Mittels der Option «*Keys*» kann definiert werden, wie viele Segmente die hinzugefügten Haare aufweisen sollen. Hierfür sollten bereits 3 Segmente ausreichen.
+
+::: column-margin
+Haarlänge bearbeiten
+:::
+
+Mittels der Funktion «*Length*» kann die Länge der Haare variiert werden. In der Sidebar kann dabei ausgewählt werden, ob man gerade Haare verlängern oder kürzen möchte. Ist die Funktion «*Length Mode*» auf «*Grow*» gestellt, werden die Haare verlängert, und wenn sie auf «*Shrink*» gestellt ist, werden die Haare verkürzt. Um Haare ganz zu entfernen, kann zudem in der Toolbar die Funktion «*Cut*» ausgewählt werden.
+
+::: column-margin
+Haare kämmen
+:::
+
+Mit der Funktion «*Comb*» können diese Haare in verschiedene Richtungen gekämmt werden. Je mehr Segmente dem Haar hinzugefügt wurden, desto mehr Winkelveränderungen können durch das Kämmen erzielt werden und umso glatter können die Haare verformt werden.
+
+:::::: exercisebox
+:::: exercisebox-header
+::: exercisebox-icon
+:::
+
+Übung 19: Particle-Edit-Mode
+::::
+
+::: exercisebox-body
+**Übung 19.1**
+
+Frisieren Sie die Katze im Particle-Edit-Mode.
+:::
+::::::

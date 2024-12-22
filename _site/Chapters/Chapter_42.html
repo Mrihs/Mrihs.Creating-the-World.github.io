@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>42. Tutorial: Eine Cartoon-Katze als Charakter erstellen – Creating the World</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Creating the World</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Suchen"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navigation umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../Sites/Overview.html"> <i class="bi bi-calendar-range" role="img">
+</i> 
+<span class="menu-text">Kursübersicht</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-cheatsheets" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-lightbulb" role="img">
+</i> 
+ <span class="menu-text">Cheatsheets</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-cheatsheets">    
+        <li>
+    <a class="dropdown-item" href="../Cheatsheets/cheatsheet_keys.pdf">
+ <span class="dropdown-text">Tastenkombinationen</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Cheatsheets/cheatsheet_shading.pdf">
+ <span class="dropdown-text">Shading</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <span class="nav-link">
+    <i class="bi bi-folder" role="img">
+</i> 
+<span class="menu-text">Ressourcen</span>
+    </span>
+  </li>  
+  <li class="nav-item">
+    <span class="nav-link">
+    <i class="bi bi-images" role="img">
+</i> 
+<span class="menu-text">Folien</span>
+    </span>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-skript" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-eyeglasses" role="img">
+</i> 
+ <span class="menu-text">Skript</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-skript">    
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_1.html">
+ <span class="dropdown-text">Kapitel 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_2.html">
+ <span class="dropdown-text">Kapitel 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_3.html">
+ <span class="dropdown-text">Kapitel 3</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_4.html">
+ <span class="dropdown-text">Kapitel 4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_5.html">
+ <span class="dropdown-text">Kapitel 5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_6.html">
+ <span class="dropdown-text">Kapitel 6</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_7.html">
+ <span class="dropdown-text">Kapitel 7</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_8.html">
+ <span class="dropdown-text">Kapitel 8</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_9.html">
+ <span class="dropdown-text">Kapitel 9</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_10.html">
+ <span class="dropdown-text">Kapitel 10</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_11.html">
+ <span class="dropdown-text">Kapitel 11</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_12.html">
+ <span class="dropdown-text">Kapitel 12</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_13.html">
+ <span class="dropdown-text">Kapitel 13</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_14.html">
+ <span class="dropdown-text">Kapitel 14</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_15.html">
+ <span class="dropdown-text">Kapitel 15</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_16.html">
+ <span class="dropdown-text">Kapitel 16</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_17.html">
+ <span class="dropdown-text">Kapitel 17</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_18.html">
+ <span class="dropdown-text">Kapitel 18</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_19.html">
+ <span class="dropdown-text">Kapitel 19</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_20.html">
+ <span class="dropdown-text">Kapitel 20</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_21.html">
+ <span class="dropdown-text">Kapitel 21</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_22.html">
+ <span class="dropdown-text">Kapitel 22</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_23.html">
+ <span class="dropdown-text">Kapitel 23</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_24.html">
+ <span class="dropdown-text">Kapitel 24</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_25.html">
+ <span class="dropdown-text">Kapitel 25</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_25.html">
+ <span class="dropdown-text">Kapitel 25</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_26.html">
+ <span class="dropdown-text">Kapitel 26</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_27.html">
+ <span class="dropdown-text">Kapitel 27</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_28.html">
+ <span class="dropdown-text">Kapitel 28</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_29.html">
+ <span class="dropdown-text">Kapitel 29</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_30.html">
+ <span class="dropdown-text">Kapitel 30</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_31.html">
+ <span class="dropdown-text">Kapitel 31</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_32.html">
+ <span class="dropdown-text">Kapitel 32</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_33.html">
+ <span class="dropdown-text">Kapitel 33</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_34.html">
+ <span class="dropdown-text">Kapitel 34</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_35.html">
+ <span class="dropdown-text">Kapitel 35</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_36.html">
+ <span class="dropdown-text">Kapitel 36</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_37.html">
+ <span class="dropdown-text">Kapitel 37</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_38.html">
+ <span class="dropdown-text">Kapitel 38</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_39.html">
+ <span class="dropdown-text">Kapitel 39</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_40.html">
+ <span class="dropdown-text">Kapitel 40</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_41.html">
+ <span class="dropdown-text">Kapitel 41</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_42.html">
+ <span class="dropdown-text">Kapitel 42</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> <i class="bi bi-info-circle" role="img">
+</i> 
+<span class="menu-text">Über</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#mesh-erstellung" id="toc-mesh-erstellung" class="nav-link active" data-scroll-target="#mesh-erstellung">Mesh-Erstellung</a>
+  <ul class="collapse">
+  <li><a href="#grundformen-hinzufügen" id="toc-grundformen-hinzufügen" class="nav-link" data-scroll-target="#grundformen-hinzufügen">Grundformen hinzufügen</a></li>
+  <li><a href="#körper-und-kopf-verbinden" id="toc-körper-und-kopf-verbinden" class="nav-link" data-scroll-target="#körper-und-kopf-verbinden">Körper und Kopf verbinden</a></li>
+  <li><a href="#extremitäten-hinzufügen" id="toc-extremitäten-hinzufügen" class="nav-link" data-scroll-target="#extremitäten-hinzufügen">Extremitäten hinzufügen</a></li>
+  <li><a href="#schwanz-hinzufügen" id="toc-schwanz-hinzufügen" class="nav-link" data-scroll-target="#schwanz-hinzufügen">Schwanz hinzufügen</a></li>
+  </ul></li>
+  <li><a href="#textur-vorbereitung" id="toc-textur-vorbereitung" class="nav-link" data-scroll-target="#textur-vorbereitung">Textur-Vorbereitung</a></li>
+  <li><a href="#textur-erstellung" id="toc-textur-erstellung" class="nav-link" data-scroll-target="#textur-erstellung">Textur-Erstellung</a></li>
+  <li><a href="#die-katze-geht-zum-friseur" id="toc-die-katze-geht-zum-friseur" class="nav-link" data-scroll-target="#die-katze-geht-zum-friseur">Die Katze geht zum Friseur</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">42. Tutorial: Eine Cartoon-Katze als Charakter erstellen</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Ziel dieses Tutorials</p>
+</div></div><p>Das Ziel dieses Tutorials besteht darin, einen simplen Charakter in der Form einer Cartoon-Katze zu erstellen. Hierfür wird zunächst das Mesh der Cartoon-Katze erstellt. Anschliessend wird dieses Mesh texturiert, wobei das Bemalen von eigenen Texturen innerhalb von Blender erläutert wird. Zudem wird der Katze anschliessend ein Fell hinzugefügt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Charaktererstellung mit Referenzbildern</p>
+</div></div><p>Bei der Entwicklung von Figuren für Filme oder Videospiele werden in den frühen Planungsphasen Skizzen der Charaktere erstellt. Solche Skizzen und Vorlagen können für die Erstellung der 3D-Modelle im Entwicklungsprozess verwendet werden. Für das Beispiel in diesem Tutorial wurde ebenfalls eine Vorlage erstellt. In der Referenzvorlage ist die Cartoon-Katze aus allen Perspektiven abgebildet. Idealerweise werden in solchen Fällen sechs Versionen des Referenzbildes erstellt und in der Welt bewegt und rotiert, sodass pro Ansicht auf das Objekt ein Referenzbild verfügbar ist.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Referenzbilder sind in Datei eingebunden</p>
+</div></div><p>In der Datei «<em>Cat_Character</em>» wurden bereits sechs Versionen des Referenzbildes erstellt und ausgerichtet und platziert. Um die Referenzbilder zu sehen, muss jeweils eine entsprechende Perspektive (beispielsweise die Vogelperspektive mit der Taste <kbd aria-hidden="true">7</kbd><span class="visually-hidden">7</span>) angesteuert werden. Die Referenzbilder sind in der Collection «<em>Referenzbilder</em>» zusammengefasst. Durch ein Deaktivieren dieser Collection im Outliner-Editor werden die Referenzbilder nicht mehr angezeigt.</p>
+<section id="mesh-erstellung" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="mesh-erstellung">Mesh-Erstellung</h2>
+<section id="grundformen-hinzufügen" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="grundformen-hinzufügen">Grundformen hinzufügen</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Mesh-Primitive hinzufügen</p>
+</div></div><p>Die Katze hat einen runden Torso und einen runden Kopf. Aus diesem Grund ist eine Kugel das beste Primitiv, um mit der Erstellung der Katze zu beginnen. Allerdings wird die Verwendung einer UV-Sphere im Verlaufe des Tutorials zu Schwierigkeiten führen, da sich am oberen und unteren Ende der UV-Sphere Tris befinden. Aus diesem Grund werden zunächst die Tris aus einer neu erstellten UV-Sphere entfernt. Dies wird allerdings lediglich auf einer Seite der UV-Sphere durchgeführt, da die Tris auf der anderen Seite der UV-Sphere noch von Nutzen sein werden.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/2_Edges_To_Delete.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Die Edges zwischen den Tris, welche nicht entlang der Achsen verlaufen, können aufgelöst werden, damit Quads entstehen.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Tris aus UV-Sphere entfernen</p>
+</div></div><p>Um die Tris aus einer UV-Sphere zu entfernen, kann zunächst im «<em>Add</em>»-Menü unter «<em>Mesh | UV Sphere</em>» eine neue UV-Sphere hinzugefügt werden. Anschliessend sollte das Kontext-Menü zur zuletzt durchgeführten Aktion in der linken unteren Ecke des 3D-Viewport-Editors ausgeklappt werden und die Anzahl Vertices und Segmente angepasst werden. Die UV-Sphere soll viermal weniger Subdivisions aufweisen als in den Standardeinstellungen. Hierfür wird die Anzahl «<em>Segments</em>» auf 8 gesetzt und die Anzahl «<em>Rings</em>» auf 4. Anschliessend kann die UV-Sphere von unten aus mit der Tastenkombination <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">7</kbd><span class="visually-hidden">7</span> betrachtet werden. Aus dieser Ansicht sollten nun die untersten zwei Reihen von Faces sichtbar sein. Die unterste Reihe besteht aus acht Tris und die untere Reihe aus acht Quads. Je zwei der Tris in der oberen Reihe könnten zu einem Quad zusammengefügt werden. Hierfür muss lediglich jedes zweite Edge zwischen den aneinandergereihten Tris ausgewählt und aufgelöst werden. Dabei ist wichtig, dass jene Edges aufgelöst werden, die nicht direkt auf den Achsen liegen. Zum Auflösen der Edges kann die Taste <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> zum Öffnen des Lösch-Menüs gedrückt werden, und anschliessend die Option «<em>Dissolve Edges</em>» ausgewählt werden. Dadurch werden die Edges entfernt und die jeweiligen Tris zu Quads umgewandelt.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/3_Subdivisions.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Eine UV-Sphere, deren unteren Ende lediglich aus Quads besteht und mit einem Subdivision-Surface-Modifier ausgestattet wurde.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Subdivision-Surface-Modifier hinzufügen</p>
+</div></div><p>Der bearbeiteten UV-Sphere, welche nur noch an einem Ende der Kugel Tris aufweist, kann nun ein Subdivision-Surface-Modifier hinzugefügt werden und dessen Anzahl Subdivisions auf 2 erhöht werden. Die Struktur der Faces wird durch den Subdivision-Surface-Modifier nun unterschiedlich an den beiden Enden verformt. An der Seite mit den Tris werden lediglich die Edges, welche auf den Tris basieren, verformt und die darüberliegenden Edges werden gleichmässig als Ringe dargestellt. Die Seite mit den Quads wird ebenfalls verformt, sodass sich weniger gleichmässige Ringe bilden. Dafür sind allerdings alle Faces ähnlich strukturiert.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Körper ausrichten</p>
+</div></div><p>Die UV-Sphere kann nun als Körper der Katze verwendet werden. Hierfür wird die UV-Sphere mittig in der Höhe des Torsos der Katze platziert. Dabei sollte darauf geachtet werden, dass das Ende der UV-Sphere mit den Tris nach oben gerichtet ist.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kopf erstellen und ausrichten</p>
+</div></div><p>Anschliessend wird die UV-Sphere im Object-Mode mit der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">D</kbd><span class="visually-hidden">D</span> dupliziert. Das Duplikat wird als Kopf verwendet und wird deshalb mittig des Kopfes ausgerichtet. Das Duplikat der UV-Sphere sollte zudem um 180° entlang der X- oder Y-Achse rotiert werden, damit die Seite mit den Tris bei dieser Kugel nach unten ausgerichtet ist. Zudem kann der Kopf um den Faktor 1.2 skaliert werden, damit er dieselbe Grösse wie auf dem Bild der Katze aufweist.</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/4_Kopf_ausrichten.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Die UV-Sphere wird zur Form des Kopfes ausgerichtet. Dabei befindet sich die Siete mit den Tris unten.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="körper-und-kopf-verbinden" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="körper-und-kopf-verbinden">Körper und Kopf verbinden</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Subdivision-Surface-Modifier anwenden</p>
+</div></div><p>Als Nächstes soll der Kopf mit dem Körper der Katze verbunden werden. Dies erfordert zunächst allerdings noch Vorbereitungen. Zuerst wird der Subdivision Surface-Modifier bei beiden UV-Spheres angewendet. Hierfür muss jeweils bei dem entsprechenden Modifier das Dropdown-Menü geöffnet und auf «<em>Apply</em>» geklickt werden.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/5_Kopf_Koerper_verbinden.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Die überlappenden Vertices werden von beiden UV-Spheres entfernt und die beiden UV-Spheres miteinander verbunden.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Überschüssige Vertices löschen und UV-Spheres verbinden</p>
+</div></div><p>Bei der UV-Sphere, welche den Körper der Katze bildet, können nun alle Vertices, welche sich über dem Hals befinden, ausgewählt und gelöscht werden. Bei der UV-Sphere, welche den Kopf der Katze darstellt, können zudem alle Vertices, welche sich unterhalb des Halses der Katze befinden gelöscht werden. Anschliessend können die beiden UV-Spheres im Object-Mode ausgewählt und mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">J</kbd><span class="visually-hidden">J</span> verbunden werden. Dadurch werden die beiden UV-Spheres zu einem einzigen Objekt verbunden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kopf mit Körper verbinden</p>
+</div></div><p>Als Nächstes können die Vertices der beiden Kugelöffnungen ausgewählt werden. Diese Vertices sollten nun miteinander verbunden werden. Im Edge-Menü, welches mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span> geöffnet werden kann, ist dies direkt mit der Option «<em>Bridge Edge Loops</em>» möglich. Dadurch werden die Edges der unteren Kugel passend mit den Edges der oberen Kugel verbunden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Hals der Katze anpassen</p>
+</div></div><p>Um den Hals der Katze etwas anzupassen, wird ihm eine zusätzliche Reihe an Edges hinzugefügt. Mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span> wird ein Loop-Cut gestartet und damit eine neue Reihe von Edges in der Mitte des Halses hinzugefügt. Diese Edges können anschliessend um den Faktor 0.85 skaliert werden.</p>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/6_Kopf_Koerper_Modifiers.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5: Die Hälfte des Meshes wird entfernt, damit es mit einem Mirror-Modifier für die weitere Bearbeitung gespiegelt werden kann.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="extremitäten-hinzufügen" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="extremitäten-hinzufügen">Extremitäten hinzufügen</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Extremitäten hinzufügen</p>
+</div></div><p>Der nächste Schritt besteht darin, der Katze Extremitäten – also Arme, Beine und Ohren – hinzuzufügen. Diese Extremitäten sind auf der linken und der rechten Seite des Katzenkörpers identisch. Deshalb macht es Sinn, eine symmetrische Bearbeitung der Katze vorzunehmen.</p>
+<div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/7_Arm_Vertices.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6: Die Faces, aus denen der Arm extrudiert werden soll, werden ausgewählt.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Mirror-Modifier hinzufügen</p>
+</div></div><p>Um die Katze symmetrisch bearbeiten zu können, wird ein Mirror-Modifier verwendet. Dieser macht allerdings nur Sinn, wenn vorher alle Vertices der einen Körper hälfte der Katze entfernt wurden. Deshalb werden alle Vertices der einen Körperhälfte – aber nicht diejenigen in der Körpermitte – ausgewählt und mit der Taste <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> gelöscht. Anschliessend kann der Mirror-Modifier hinzugefügt werden. Im Mirror-Modifier sollte zudem die Option «<em>Clipping</em>» aktiviert werden, damit die Vertices nicht über die Köpermitte hinaus verschoben werden, und es sollte überprüft werden, dass die Option «<em>Merge</em>» aktiviert ist. Zudem kann ein Subdivision-Surface-Modifier hinzugefügt werden, um die Kanten des Meshes etwas zu glätten.</p>
+<div id="fig-1_7" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/8_Armansatz.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;7: Ein Ansatz für den Arm wird extrudiert.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Armansatz erstellen</p>
+</div></div><p>Um die Arme der Katze zu erstellen, können vier Faces auf der rechten Seite des Torsos ausgewählt werden, an denen sich nachfolgend die Arme befinden werden. Diese Faces können anschliessend mittels der Taste <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span> extrudiert und entlang der Arme der Katze platziert werden, sodass sich ein Armansatz bildet. Hierbei wird idealerweise die Frontalansicht verwendet, damit die Arme nicht schräg nach hinter oder vorne extrudiert werden.</p>
+<div id="fig-1_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/9_arm_rund.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;8: Die Vertices, des extrudierten Armes werden kreisförmig angeordnet.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Arme abrunden</p>
+</div></div><p>Die extrudierten Arme sind aufgrund der Quads viereckig und würden blockartige Arme mit abgerundeten Kanten ergeben. Deshalb werden die Vertices in den Ecken der vier extrudierten Faces ausgewählt. Diese können anschliessend um den Faktor 0.75 skaliert werden. Dadurch werden die Ecken jeweils näher zueinandergezogen, während die Vertices in der Mitte der extrudierten Faces an ihrer Position bleiben. Dies führt zu einer runden Form des Armes.</p>
+<div id="fig-1_9" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/10_arm_extrudiert.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;9: Die Arme werden entsprechend dem Referenzbild schrittweise extrudiert.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Arme extrudieren</p>
+</div></div><p>Die Faces, welche das Ende des Armansatzes bilden, können nun wieder ausgewählt und schrittweise entlang des Armes extrudiert werden. Dabei sollten bei jedem Schritt nebst der Position auch die Rotation und die Skalierung etwas angepasst werden, sodass die Form der Arme aus dem Referenzbild dargestellt wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Faces subdividen</p>
+</div></div><p>Für die Beine werden mehr Faces benötigt. Deshalb wird das gesamte Mesh ausgewählt und im Edge-Menü die Option «<em>Subdivide</em>» ausgewählt. Dadurch werden alle Faces in kleinere Faces unterteilt, was mehr Faces zum Erstellen der weiteren Extremitäten bietet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Beinansatz erstellen</p>
+</div></div><p>Am Unterkörper der Katze können nun 4x4 Faces ausgewählt werden, welche gemeinsam die Beine der Katze bilden werden. Diese Faces können anschliessend entlang der Beine extrudiert werden, sodass sie einen Ansatz der Beine bilden.</p>
+<div id="fig-1_10" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/11_Vertices_Beine.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;10: Die Faces, aus denen die Beine extrudiert werden, werden ausgewählt.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Beinansatz rund verformen</p>
+</div></div><p>Auch bei den Beinen macht es Sinn, die Vertices des Ansatzes kreisförmig anzuordnen. Hierfür können zunächst alle Vertices, welche diagonal zwischen den Ecken und in den Ecken liegen, ausgewählt und um den Faktor 0.7 skaliert werden. Anschliessend können die Vertices, welche an den Kanten zwischen den Ecken und den Kantenmitten liegen, ausgewählt und um den Faktor 0.9 skaliert werden.</p>
+<div id="fig-1_11" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;11: Die Vertices des Beinansatzes werden kreisförmig angeordnet.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Beine extrudieren</p>
+</div></div><p>Die Faces, welche den Beinansatz bilden, können nun ausgewählt und schrittweise entlang der Beine extrudiert werden. Dabei sollte, wie bereits bei den Armen, die Position, Rotation und Skalierung der Faces bei jedem Zwischenschritt überprüft werden. Damit sind die Beine bereits erstellt.</p>
+<div id="fig-1_12" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/13_Beine_extrudiert.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;12: Die Beine werden schrittweise entlang der Referenzvorlage extrudiert.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Ohren extrudieren</p>
+</div></div><p>Um die Ohren der Katze zu erstellen, können 3x2 Faces ausgewählt werden, aus denen die Ohren anschlies send schrittweise extrudiert werden. Dabei sollten bei jeder Extrusion die Faces kleiner skaliert werden. Es könnte etwa folgendermassen vorgegangen werden:</p>
+<ul>
+<li>Die Faces werden um 0.1 Meter extrudiert.</li>
+<li>Die Faces werden um den Faktor 0.9 skaliert.</li>
+<li>Die Faces werden um 0.1 Meter extrudiert.</li>
+<li>Die Faces werden um den Faktor 0.7 skaliert.</li>
+<li>Die Faces werden um 0.1 Meter extrudiert.</li>
+<li>Die Faces werden um den Faktor 0.6 skaliert.</li>
+<li>Die Faces werden um 0.05 Meter extrudiert.</li>
+<li>Die Faces werden um den Faktor 0.4 skaliert.</li>
+</ul>
+<div id="fig-1_13" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/14_Ohren_Vertices.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;13: Die Faces, aus denen die Ohren extrudiert werden, werden ausgewählt.
+</figcaption>
+</figure>
+</div>
+<div id="fig-1_14" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/15_Ohren_extrudiert.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;14: Die Ohren werden schrittweise entlang der Referenzvorlage extrudiert.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="schwanz-hinzufügen" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="schwanz-hinzufügen">Schwanz hinzufügen</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Mirror-Modifier anwenden</p>
+</div></div><p>Der Schwanz der Katze stellt die letzte Extremität dar, welche noch erstellt werden muss. Dieser verläuft allerdings nicht symmetrisch und gerade. Deshalb muss von nun an eine nicht-symmetrische Bearbeitung erfolgen. Aus diesem Grund wird der Mirror-Modifier auf das Mesh angewendet. Dadurch können im Edit-Mode weitere Änderungen durchgeführt werden, welche keine Symmetrie benötigen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Mehrere 3D-Viewport-Editoren öffnen</p>
+</div></div><p>Zudem benötigt die Erstellung des Schwanzes einen Abgleich der Vertex-Position aus verschiedenen Ansichten heraus. Hierfür können mehrere weitere 3D-Viewport-Editoren aus den Ecken des 3D-Viewport-Editors herausgezogen und in den jeweiligen Editoren eine andere Kameraansicht ausgewählt werden. Dadurch kann in jedem Editor betrachtet werden, was die Veränderungen aus einer anderen Perspektive bewirken. Dafür sollte die Ansicht von oben und von der Seite ver wendet werden. Bei Bedarf können zusätzliche 3D-Viewport-Editore für die Ansicht von hinten und von der anderen Seite verwendet werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Schwanz extrudieren</p>
+</div></div><p>Für den Schwanz der Katze können 4x4 Faces ausgewählt werden. Diese können zunächst einmal extrudiert und anschliessend nach demselben Schema wie bei den Beinen kreisförmig angeordnet werden. Anschliessend können die Faces schrittweise entlang des Schwanzes extrudiert werden. Auch hier sollte darauf geachtet werden, dass die Position, Rotation und Skalierung der extrudierten Faces bei jedem Zwischenschritt angepasst werden.</p>
+<div id="fig-1_15" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/16_Schwanz_Vertices.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_15-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;15: Die Faces, aus denen der Schwanz extrudiert wird, werden ausgewählt.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Shade-Smooth</p>
+</div></div><p>Nach diesem Schritt ist die Mesh-Bearbeitung beendet. Damit das Mesh etwas glatter aussieht, kann der Wert für die Subdivisions im Subdivision-Surface-Modifier erhöht werden. Zusätzlich kann im Object-Mode unter «<em>Object | Shade Smooth</em>» eine glatte Darstellung der Faces aktiviert werden.</p>
+</section>
+</section>
+<section id="textur-vorbereitung" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="textur-vorbereitung">Textur-Vorbereitung</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>UVs der Katze</p>
+</div></div><p>Durch die Bearbeitung der Katze sind die UVs des Meshes stark verzerrt worden. Zudem überlappen sich einige UVs, da das Mesh ursprünglich aus zwei UV-Spheres erstellt wurde. Deshalb sollte das UV-Mapping der Katze verbessert werden.</p>
+<div id="fig-1_16" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/17_UVs.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;16: Die Faces, aus denen der Schwanz extrudiert wird, werden ausgewählt.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>UVs sollten dem Detailgrad der Textur angepasst werden</p>
+</div></div><p>Im Verlaufe der Texturierung wird sich allerdings herausstellen, dass das UV-Mapping in diesem Projekt besonders relevant ist. Einige Bereiche des Meshes weisen in der Textur einen grösseren Detailgrad auf als andere Bereiche. Damit diese Details auch auf der Textur dargestellt werden können, benötigen diese mehr Fläche auf der Textur. Deshalb ist es sinnvoll darauf zu achten, dass die entsprechenden Faces, welche mehr Details aufweisen, auch grössere UVs einnehmen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Seams</p>
+</div></div><p>Um die UVs gezielt vergrössern oder verkleinern zu können, muss definiert werden, welche Bereiche grössere UVs benötigen. Damit diese Flächen angesteuert werden können, kann im Edit-Mode definiert werden, an welchen Edges entlang UVs auseinandergeschnitten werden sollen. Dabei handelt es sich um die Seams der Edges. Um Seams zu definieren, müssen zunächst die entsprechenden Edges, welche mit einem Seam versehen werden sollen, ausgewählt werden. Anschliessend kann das Edge-Menü mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span> geöffnet werden. Mit der Option «<em>Mark Seam</em>» wird diesen Edges anschliessend ein Seam zugewiesen. Wenn ein Seam entfernt werden soll, kann das entsprechende Edge ausgewählt und die Option «<em>Clear Seam</em>» im Edge-Menü verwendet werden. Die Seams werden mit einer roten Markierung im Edit-Mode dargestellt.</p>
+<div id="fig-1_17" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_17-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/18_Seams.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_17-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;17: Durch die Seams wird vorgegeben, welche Faces in der UV-Map als gemeinsame Insel dargestellt werden sollen.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Seams dem Mesh hinzufügen</p>
+</div></div><p>Die wichtigen Konturen der Katze, welche mehr Details erfordern, stellen die Ohren, die Arme, die Beine, den Schwanz und den Gesichtsbereich dar. Dementsprechend müssen diese Bereiche durch die Zuweisung von Seams in verschiedene Areale unterteilt werden. Bei den Ohren sollte zudem darauf geachtet werden, dass ein Seam entlang des Ohres verläuft, sodass die Vorderseite des Ohres eine separate Fläche bildet, die mit Seams abgegrenzt wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>UV-Unwrapping</p>
+</div></div><p>Nachdem die Seams definiert wurden, sollten die UVs erneut erstellt werden. Hierfür werden zunächst alle Vertices mit der Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> ausgewälht. Mit der <kbd aria-hidden="true">U</kbd><span class="visually-hidden">U</span>-Taste kann das Menü «<em>UV Mapping</em>» geöffnet und darin die Option «<em>Unwrap</em>» ausgewählt werden. Dadurch werden die UVs neu berechnet und dabei die Seams berücksichtigt. Im Kontext-Menü kann zudem unter «<em>Margin</em>» angegeben werden, dass ein gewisser Abstand zwischen den einzelnen UVs im Mapping berücksichtig werden soll. Dieser Wert kann beispielsweise auf 0.01 gesetzt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Zugehörigkeit der UVs ermitteln</p>
+</div></div><p>Im UV-Editor können anschliessend die erstellten UVs betrachtet werden. Dort sollte darauf geachtet werden, dass die UVs der Ohren etwas vergrössert werden, sodass sie einen grösseren Bereich innerhalb der Textur einnehmen. Durch die Auswahl der Faces, welche die Vorderseite der Ohren abbilden, werden deren UVs im UV-Editor sichtbar. Wenn mittels der Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> anschliessend alle Faces des Meshes ausgewählt werden, erscheinen die anderen UVs ebenfalls wieder im UV-Editor. Anschliessend kann der Mauszeiger über die UV-Insel der Ohren gelegt werden und die Taste <kbd aria-hidden="true">L</kbd><span class="visually-hidden">L</span> gedrückt werden, um alle Vertices der Ohren auszuwählen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>UVs anpassen</p>
+</div></div><p>Die ausgewählten UVs der Ohren können anschliessend, so wie auch Elemente im 3D-Viewport-Editor, mit der Taste <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> bewegt, der Taste skaliert und der Taste rotiert werden. So können die UVs der vorderen Ohrenseite vergrössert werden. Dabei sollte dann darauf geachtet werden, dass sich die vergrösserten Ohren nicht über anderen UVs befinden. Bei Bedarf können auch die UV-Inseln der anderen Körperteile, welche mehr Details benötigen vergrössert werden. Um sich mehr Platz im UV-Raum zu verschaffen müssen hierfür möglicherweise andere Inseln, welche weniger Details beinhalten, verkleinert werden.</p>
+</section>
+<section id="textur-erstellung" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="textur-erstellung">Textur-Erstellung</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Material hinzufügen</p>
+</div></div><p>Im nächsten Schritt wird die Katze texturiert. Hierfür wird dem Mesh ein neues Material hinzugefügt und im Shader-Editor wird dem Principled-BSDF-Shader eine Textur hinzugefügt. Hierfür sollte der Principled-BSDF-Shader ausgewählt und die Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> gedrückt werden. Dadurch wird ein Image-Texture-Node mitsamt einem Mapping- und einem Texture-Coordinate-Node hinzugefügt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Neue Textur erstellen</p>
+</div></div><p>Im Image-Texture-Node wird nun eine neue Textur erstellt, indem auf die Schaltfläche «<em>New</em>» geklickt wird. Dadurch öffnet sich ein Dialogfeld, in dem der Name definiert werden kann. Unter «<em>Width</em>» und «<em>Height</em>» können die Grössenverhältnisse und die Auflösung der Textur definiert werden. Hierfür kann die standardmässige Auflösung von 1024 x 1024 Pixel verwendet werden. Zudem kann unter «<em>Color</em>» eine Farbe ausgewählt werden, mit der die Textur erstellt wird. In diesem Falle kann eine graue Farbe ausgewählt werden. Diese wird anschliessend die Grundfarbe der Katze darstellen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Image-Editor</p>
+</div></div><p>Anschliessend kann der Image-Editor statt des Shader-Editors geöffnet werden. Dort kann anschliessend im Dropdown-Menü links neben der Schaltfläche «<em>New</em>» die soeben erstellte Textur ausgewählt werden. Diese sollte anschliessend innerhalb des Image-Editors angezeigt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Texturen müssen separat abgespeichert werden</p>
+</div></div><p>Diese Textur stellt nun allerdings lediglich ein Bild dar, welches innerhalb von Blender erzeugt wird. Beim Schliessen des Programmes wird diese Textur nicht abgespeichert. Es ist deshalb jeweils notwendig, diese Textur im Image-Editor unter «<em>Image | Save</em>» als externe Bilddatei abzuspeichern.</p>
+<p>Hierfür kann beispielsweise ein Bild im PNG-Format abgespeichert werden. Auch zusätzliche Änderungen auf der Textur müssen unter diesem Menüpunkt nochmals abgespeichert werden. Sobald eine Textur bearbeitet wurde und es nicht abgespeicherte Änderungen gibt, wird dies mit einem Sternchen in der Menüleiste signalisiert. Die Menüleiste «<em>Image</em>» wird dann als «<em>Image</em>» gekennzeichnet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Wo wird die Textur bemalt?</p>
+</div></div><p>Als Nächstes geht es darum, die Textur zu bemalen. Dabei gibt es zwei Möglichkeiten. Entweder wird im Image-Editor direkt die Textur bemalt. Hierfür muss allerdings die Einstellung des «<em>View</em>» Modes in der linken oberen Ecke des Image-Editors auf den «Paint»-Mode umgestellt werden. Die zweite Methode besteht darin, dass die Textur auf dem Mesh im 3D-Viewport-Editor bemalt wird. Hierfür muss der Texture-Paint-Mode anstelle des Object- oder Edit-Modes ausgewählt werden. Diese Methode ist in der Regel praktischer. Unabhängig davon, welche der beiden Methoden verwendet wird, sind die Tools identisch.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Toolbar des Texture-Paint-Modes</p>
+</div></div><p>In der Toolbar des Texture-Paint-Modes finden sich ein paar Werkzeuge, um die Textur zu bemalen. Mittels der Option «<em>Draw</em>» kann etwa gemalt werden und mittels der Option «<em>Fill</em>» kann eine Farbfläche mit einer Farbe gefüllt werden. Zudem besteht auch die Möglichkeit, Farbübergänge zu verwischen mittels «<em>Smear</em>» oder weicher zu gestalten mittels «<em>Soften</em>».</p>
+<div id="fig-1_18" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_18-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/19_Toolbar_Texture_Paint.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_18-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;18: Icons in der Tool-Bar des Texture-Paint-Modes.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Brush-Settings</p>
+</div></div><p>In der Sidebar auf der rechten Seite des 3D-Viewport-Editors finden sich zudem wei tere Einstellungen zu dem ausgewählten Werkzeug unter dem Reiter «<em>Brush Settings</em>». So können an dieser Stelle die anzuwendende Farbe und die Stärke, mit der die Farbe auf die Textur angewendet wird, definiert werden. Im Bereich «<em>Radius</em>» kann zudem der Radius des Pinsels definiert werden. Dies kann allerdings, wie im Sculpt-Mode, auch mit der Taste <kbd aria-hidden="true">F</kbd><span class="visually-hidden">F</span> und einer Mausbewegung geschehen. Dabei führt eine Mausbewegung nach links zu einer Verkleinerung des Radius und eine Mausbewegung nach rechts zu einer Vergrösserung des Radius.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Farbpaletten</p>
+</div></div><p>Wenn eine Farbe häufiger verwendet wird, kann eine Farbpalette erstellt werden und diese Farbe der Farbpalette hinzugefügt werden. Unter dem Reiter «<em>Color Palette</em>» kann mit der Schaltfläche «<em>New</em>» eine neue Farbpalette hinzugefügt werden, und mittels der «+»-Schaltfläche die aktuell ausgewählte Farbe der Farbpalette hinzugefügt werden. Durch einen Klick auf eine Farbe innerhalb der Farbpalette wird diese automatisch ausgewählt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Texture-Slots</p>
+</div></div><p>Eine wichtige Einstellung findet sich im Reiter «<em>Texture Slots</em>». Dort wird die aktuell bearbeitete Textur angezeigt. Wenn sich keine Veränderungen in der Textur des Meshes bei der Bearbeitung ergeben, sollte überprüft werden, ob die korrekte Textur in diesem Slot ausgewählt ist.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Linien stabilisieren</p>
+</div></div><p>Innerhalb des Reiters «<em>Stroke</em>» der «<em>Brush Settings</em>» findet sich eine nützliche Einstellung zur Erstellung von Linien. Die Option «<em>Stabilize Stroke</em>» hilft bei der Stabilisierung der Maus beim Zeichnen. Dabei wird eine Linie jeweils mit einer Verzögerung gezeichnet. Während dieser Verzögerung wird die derweil zurückgelegte Bewegung der Maus berechnet und geglättet. Dadurch ergeben sich klarere Linien.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Katze bemalen</p>
+</div></div><p>Nun kann die Katze bemalt werden. Hierfür müssen jeweils die korrekten Farben ausgewählt werden und die entsprechenden Bereiche auf dem Objekt mit dem Draw-Tool bemalt werden. Die bemalten Bereiche werden anschliessend direkt auf die Textur übertragen, anhand der UVs. Sollten sich mehrere UVs übereinander befinden, werden automatisch auch die anderen UVs mit bemalt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Symmetrisches bemalen</p>
+</div></div><p>Viele Aspekte der Katze, welche bemalt wird, erfolgen symmetrisch. Die weissen Füsse, die weissen Arme, die Augen, die Nase und die Ohren sollten auf beiden Seiten symmetrisch bemalt werden. Im Reiter «<em>Symmetry</em>» der Sidebar kann eine Achse aktiviert werden, damit eine symmetrische Bearbeitung erfolgt. In diesem Fall kann die X-Achse ausgewählt werden, damit gleichzeitig beide Seiten des Meshes bearbeitet werden. Um die Schwanzspitze weiss einzufärben, sollte jeweils darauf geachtet werden, dass die Symmetrie wieder ausgeschaltet wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Maximaler Detailgrad</p>
+</div></div><p>Der Detailgrad, mit dem auf die Textur gemalt werden kann, hängt nebst der Anordnung der UVs auch von der Auflösung der Textur ab. Je höher die erstellte Textur aufgelöst ist, desto detaillierter kann gezeichnet werden. Wenn die Zeichnungsfläche auf der Textur zu klein ist und somit mehrere Pixel überproportional auf das Mesh angewendet werden, kann dies dazu führen, dass verformte Zeichnungen entstehen. Eine höher aufgelöste Textur bringt allerdings auch den Nachteil, dass es abhängig von der Rechenleistung des Computers zu längeren Wartezeiten während des Bemalens der Textur kommt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Textur abspeichern</p>
+</div></div><p>Sobald die Katze fertig bemalt wurde, sollte unbedingt daran gedacht werden, die Textur im Image-Editor nochmals zu speichern. Ansonsten geht die erstellte Textur beim Beenden von Blender verloren.</p>
+<div class="exercisebox">
+<div class="exercisebox-header">
+<div class="exercisebox-icon">
+
+</div>
+<p>Übung 18: Katze bemalen</p>
+</div>
+<div class="exercisebox-body">
+<p><strong>Übung 18.1</strong></p>
+<p>Fügen Sie einen zweiten Image-Texture-Node im Material der Katze ein und verbinden Sie diesen mit dem Color-Input des Principled-BSDF-Shaders. Erstellen Sie eine neue Textur und bemalen Sie die Katze nach eigenen Vorstellungen.</p>
+</div>
+</div>
+</section>
+<section id="die-katze-geht-zum-friseur" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="die-katze-geht-zum-friseur">Die Katze geht zum Friseur</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Zweites Material der Katze hinzufügen</p>
+</div></div><p>Zu guter Letzt wird noch aufgezeigt, wie der Katze Haare hinzugefügt werden können. Hierfür wird der Katze ein zusätzliches Material hinzugefügt. Diesem Material kann ebenfalls die Textur der Katze als Grundfarbe zugewiesen werden. Dieses Material wird anschliessend das Material der Katzenhaare darstellen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Haare hinzufügen</p>
+</div></div><p>Im Particle-Properties-Reiter des Properties-Editors kann anschliessend ein neues Partikelsystem auf die Katze angewendet werden und dafür die Einstellung «<em>Hair</em>» verwendet werden. Die Anzahl der Haare kann dabei deutlich reduziert werden, da anschliessend manuell weitere Haare hinzugefügt werden. Zudem kann die Länge der Haare ebenfalls reduziert werden, beispielsweise auf 0.1 Meter. Ebenso können die Anzahl Segmente der Haare reduziert werden, etwa auf den Wert 3. Unter dem Reiter «<em>Render</em>» kann im Dropdown-Menü «<em>Material</em>» das neu erstellte Material für die Haare ausgewählt werden. Dieses wird anschliessend auf die erstellen Haare angewendet.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Particle-Edit-Mode</p>
+</div></div><p>Durch das neu hinzugefügte Haar-Partikelsystem ist im 3D-Viewport-Editor nun ein neuer Bearbeitungsmodus verfügbar. Statt des Object-Modes wird deshalb nun der Particle-Edit-Mode verwendet. Mit dieser Option können die Haare eines Objektes innerhalb des 3D-Viewport-Editors bearbeitet werden. Durch diese Bearbeitung gehen allerdings einige Einstellungsmöglichkeiten im Particle-Properties-Editor verloren.</p>
+<div id="fig-1_19" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_19-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_42/20_Toolbar_Particles_Editor.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_19-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;19: Icons in der Toolbar des Particle-Edit-Modes
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Speichern nicht vergessen</p>
+</div></div><p>An dieser Stelle ist es allerdings je nach Rechenleistung empfehlenswert das aktuelle Blender-Projekt nochmals abzuspeichern, falls die Hardware nicht mehr mit den Partikeln mithalten kann. Zudem sollte auch in den nächsten Bearbeitungsschritten jeweils zwischengespeichert werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Haare hinzufügen</p>
+</div></div><p>In der Toolbar des Particle-Properties-Editors findet sich die Option «<em>Add</em>». Wenn diese Option ausgewählt ist, können neue Haare mit der Maus auf dem Mesh platziert werden. In der Sidebar lassen sich zudem der Radius und die Anzahl Haare, die gemeinsam platziert werden, einstellen. Mittels der Option «<em>Keys</em>» kann definiert werden, wie viele Segmente die hinzugefügten Haare aufweisen sollen. Hierfür sollten bereits 3 Segmente ausreichen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Haarlänge bearbeiten</p>
+</div></div><p>Mittels der Funktion «<em>Length</em>» kann die Länge der Haare variiert werden. In der Sidebar kann dabei ausgewählt werden, ob man gerade Haare verlängern oder kürzen möchte. Ist die Funktion «<em>Length Mode</em>» auf «<em>Grow</em>» gestellt, werden die Haare verlängert, und wenn sie auf «<em>Shrink</em>» gestellt ist, werden die Haare verkürzt. Um Haare ganz zu entfernen, kann zudem in der Toolbar die Funktion «Cut» ausgewählt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Haare kämmen</p>
+</div></div><p>Mit der Funktion «<em>Comb</em>» können diese Haare in verschiedene Richtungen gekämmt werden. Je mehr Segmente dem Haar hinzugefügt wurden, desto mehr Winkelveränderungen können durch das Kämmen erzielt werden und umso glatter können die Haare verformt werden.</p>
+<div class="exercisebox">
+<div class="exercisebox-header">
+<div class="exercisebox-icon">
+
+</div>
+<p>Übung 19: Particle-Edit-Mode</p>
+</div>
+<div class="exercisebox-body">
+<p><strong>Übung 19.1</strong></p>
+<p>Frisieren Sie die Katze im Particle-Edit-Mode.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -300,6 +300,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../Chapters/Chapter_41.html">
  <span class="dropdown-text">Kapitel 41</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_42.html">
+ <span class="dropdown-text">Kapitel 42</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -416,7 +420,7 @@ Abbildung&nbsp;1: Eine Plane zur Vorbereitung des Retopology-Prozesses.
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Mesh für Retopology vorbereiten</p>
-</div></div><p>Das skulpturierte Mesh stellt beim Retopology jeweils das Base-Mesh dar. Anschliessend wird ein neues Mesh, welches lediglich aus einer Fläche besteht, hinzugefügt. Hierfür kann etwa im «<em>Add</em>»-Menü die Option «<em>Mesh | Plane</em>» ausgewählt werden. Diese Fläche wird anschliessend im Edit-Mode vor dem Base-Mesh platziert und um einen Meter entlang der X-Achse verschoben, sodass die beiden linken Vertices der Fläche genau auf dem Nullpunkt der X-Achse liegen. Hierfür muss die Plane zudem um 90 Grad rotiert werden. Anschliessend wird ein Mirror-Modifier hinzugefügt, um das Mesh entlang der XAchse zu spiegeln. Das Hinzufügen des Mirror-Modifiers erübrigt sich bei einem nicht-symmetrischen Mesh. In diesem Falle müssen beide Seiten individuell erstellt werden. Zusätzlich kann ein Subidivision-Surface-Modifier hinzugefügt werden um die Flächen zu unterteilen.</p>
+</div></div><p>Das skulpturierte Mesh stellt beim Retopology jeweils das Base-Mesh dar. Anschliessend wird ein neues Mesh, welches lediglich aus einer Fläche besteht, hinzugefügt. Hierfür kann etwa im «<em>Add</em>»-Menü die Option «<em>Mesh | Plane</em>» ausgewählt werden. Diese Fläche wird anschliessend im Edit-Mode vor dem Base-Mesh platziert und um einen Meter entlang der X-Achse verschoben, sodass die beiden linken Vertices der Fläche genau auf dem Nullpunkt der X-Achse liegen. Hierfür muss die Plane zudem um 90 Grad rotiert werden. Anschliessend wird ein Mirror-Modifier hinzugefügt, um das Mesh entlang der X-Achse zu spiegeln. Das Hinzufügen des Mirror-Modifiers erübrigt sich bei einem nicht-symmetrischen Mesh. In diesem Falle müssen beide Seiten individuell erstellt werden. Zusätzlich kann ein Subidivision-Surface-Modifier hinzugefügt werden um die Flächen zu unterteilen.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Shrinkwrap-Modifier</p>
@@ -427,7 +431,7 @@ Abbildung&nbsp;1: Eine Plane zur Vorbereitung des Retopology-Prozesses.
 <img src="Images/Chapter_41/2_Plane_Modified.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Eine Plane zur Vorbereitung des Retopology-Prozesses.
+Abbildung&nbsp;2: Eine Plane mit Mirror-, Shrinkwrap- und Subidivision-Surface-Modifier.
 </figcaption>
 </figure>
 </div>
@@ -445,7 +449,7 @@ Abbildung&nbsp;2: Eine Plane zur Vorbereitung des Retopology-Prozesses.
 <img src="Images/Chapter_41/3_Mesh_Extrusion.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Eine Plane zur Vorbereitung des Retopology-Prozesses.
+Abbildung&nbsp;3: Die Edges werden schrittweise extrudiert.
 </figcaption>
 </figure>
 </div>
@@ -455,7 +459,7 @@ Abbildung&nbsp;3: Eine Plane zur Vorbereitung des Retopology-Prozesses.
 <img src="Images/Chapter_41/4_Mesh_Head.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4: Eine Plane zur Vorbereitung des Retopology-Prozesses.
+Abbildung&nbsp;4: Besondere körperliche Merkmale, wie etwa die Augen, werden mit einer Schlaufe von Faces umreandet.
 </figcaption>
 </figure>
 </div>
@@ -469,7 +473,7 @@ Abbildung&nbsp;4: Eine Plane zur Vorbereitung des Retopology-Prozesses.
 <img src="Images/Chapter_41/6_Object_Head.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5: Eine Plane zur Vorbereitung des Retopology-Prozesses.
+Abbildung&nbsp;5: Der Kopf nach dem Retopology-Prozess.
 </figcaption>
 </figure>
 </div>
@@ -504,11 +508,11 @@ Abbildung&nbsp;5: Eine Plane zur Vorbereitung des Retopology-Prozesses.
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Erstellung von Charakteren mittels Skin-Modifier</p>
-</div></div><p>Eine etwas einfachere Option zur Erstellung von Charakteren ergibt sich zudem durch die Verwendung des Skin-Modifiers. Hierfür wird ein neues Objekt erstellt und alle dessen Vertices in deren Mittelpunkt verbunden, indem im Edit-Mode mit der Taste alle Vertices ausgewählt werden und mit der Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> das Merge-Menü geöffnet wird. Darin kann anschliessend die Option «<em>Merge | At Center</em>» ausgewählt werden. Anschliessend kann dem Objekt ein Mirror-Modifier, gefolgt von einem Skin-Modifier, hinzugefügt werden.</p>
+</div></div><p>Eine etwas einfachere Option zur Erstellung von Charakteren ergibt sich zudem durch die Verwendung des Skin-Modifiers. Hierfür wird ein neues Objekt erstellt und alle dessen Vertices in deren Mittelpunkt verbunden, indem im Edit-Mode mit der Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> alle Vertices ausgewählt werden und mit der Taste <kbd aria-hidden="true">M</kbd><span class="visually-hidden">M</span> das Merge-Menü geöffnet wird. Darin kann anschliessend die Option «<em>Merge | At Center</em>» ausgewählt werden. Anschliessend kann dem Objekt ein Mirror-Modifier, gefolgt von einem Skin-Modifier, hinzugefügt werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Modifier vorbereiten</p>
-</div></div><p>Der Mirror-Modifier spiegelt nun die Vertices entlang der X-Achse und der Skin-Modifier erstellt eine Oberfläche um den einzelnen Vertex herum. Wichtig ist dabei, dass die Funktion «<em>Clipping</em>» im Mirror-Modifier aktiviert ist, damit die Vertices nicht über den Nullpunkt der X-Achse verschoben werden können. Dadurch ist es allerdings nicht mehr möglich, Vertices vom Nullpunkt der X-Achse zu entfernen. Dementsprechend muss die Einstellung «<em>Clipping</em>» kurzzeitig deaktiviert werden, um einen Vertex vom Nullpunkt der X-Achse zu entfernen. Zudem sollte die Option «Merge» aktiviert sein, damit die Vertices am Nullpunkt der X-Achse miteinander verbunden werden.</p>
+</div></div><p>Der Mirror-Modifier spiegelt nun die Vertices entlang der X-Achse und der Skin-Modifier erstellt eine Oberfläche um den einzelnen Vertex herum. Wichtig ist dabei, dass die Funktion «<em>Clipping</em>» im Mirror-Modifier aktiviert ist, damit die Vertices nicht über den Nullpunkt der X-Achse verschoben werden können. Dadurch ist es allerdings nicht mehr möglich, Vertices vom Nullpunkt der X-Achse zu entfernen. Dementsprechend muss die Einstellung «<em>Clipping</em>» kurzzeitig deaktiviert werden, um einen Vertex vom Nullpunkt der X-Achse zu entfernen. Zudem sollte die Option «<em>Merge</em>» aktiviert sein, damit die Vertices am Nullpunkt der X-Achse miteinander verbunden werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Charakter anhand eines Vertex erstellen</p>

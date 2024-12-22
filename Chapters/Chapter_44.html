@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Kursübersicht – Creating the World</title>
+<title>44. Objekte mit Armaturen verformen – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap-05798b36db35dfecaedaec0bbed5404c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -88,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../Sites/Overview.html" aria-current="page"> <i class="bi bi-calendar-range" role="img">
+    <a class="nav-link" href="../Sites/Overview.html"> <i class="bi bi-calendar-range" role="img">
 </i> 
 <span class="menu-text">Kursübersicht</span></a>
   </li>  
@@ -333,18 +335,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#semesterplan" id="toc-semesterplan" class="nav-link active" data-scroll-target="#semesterplan">Semesterplan</a></li>
-  <li><a href="#skript-kapitel" id="toc-skript-kapitel" class="nav-link" data-scroll-target="#skript-kapitel">Skript-Kapitel:</a></li>
-  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
+  <li><a href="#skelet-erstellen" id="toc-skelet-erstellen" class="nav-link active" data-scroll-target="#skelet-erstellen">Skelet erstellen</a></li>
+  <li><a href="#mesh-dem-skelet-zuweisen" id="toc-mesh-dem-skelet-zuweisen" class="nav-link" data-scroll-target="#mesh-dem-skelet-zuweisen">Mesh dem Skelet zuweisen</a></li>
+  <li><a href="#skelet-verformen" id="toc-skelet-verformen" class="nav-link" data-scroll-target="#skelet-verformen">Skelet verformen</a></li>
+  <li><a href="#posen-abspeichern" id="toc-posen-abspeichern" class="nav-link" data-scroll-target="#posen-abspeichern">Posen abspeichern</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Kursübersicht</h1>
+<h1 class="title">44. Objekte mit Armaturen verformen</h1>
 </div>
 
 
@@ -361,216 +364,142 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><img src="../icons/Logo.png" class="img-fluid"></p>
-<section id="semesterplan" class="level2">
-<h2 class="anchored" data-anchor-id="semesterplan">Semesterplan</h2>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Woche</th>
-<th>Praxis</th>
-<th>Kapitel</th>
-<th>Theorie</th>
-<th>Literatur</th>
-<th>Folien</th>
-<th>Abgabe</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td><p>Die Arbeitsoberfläche von Blender</p>
-<p>Eigenschaften von 3D-Objekten</p></td>
-<td><a href="../Chapters/Chapter_1.html">1</a>, <a href="../Chapters/Chapter_2.html">2</a>, 3, 4, 5, 6, 7, 8, 9</td>
-<td><p>Organisatorisches</p>
-<p>Bedeutung von 3D-Objekten</p></td>
-<td>Tarr et al.&nbsp;(1998)</td>
-<td>Sitzung 1</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>Grundmechanismen der Objektbearbeitung I</td>
-<td>10, 11, 12</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>Grundmechanismen der Objektbearbeitung II</td>
-<td>13, 14</td>
-<td>Referenzbilder oder Fantasie?</td>
-<td>Brainbridge et al.&nbsp;(2021)</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>Objektbearbeitung mit Modifiers</td>
-<td>15, 16</td>
-<td></td>
-<td></td>
-<td></td>
-<td>1</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>Materialien</td>
-<td>17, 18, 19, 20, 21</td>
-<td>Visuelle Wahrnehmung von Materialien</td>
-<td>Flemming (2014)</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>6</td>
-<td>Texturen</td>
-<td>22, 23, 24, 25, 26, 27, 28</td>
-<td>Lizenzen &amp; Lizenzarten</td>
-<td></td>
-<td></td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>7</td>
-<td>Physical based Rendering</td>
-<td>29, 30, 31, 32, 33</td>
-<td>Cartoon oder Realismus?</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>8</td>
-<td>Beleuchtung und Welten</td>
-<td>34, 35</td>
-<td>Farbwahrnehmung unter Beleuchtung</td>
-<td>Brainard &amp; Hurlbert (2015)</td>
-<td></td>
-<td>3</td>
-</tr>
-<tr class="odd">
-<td>9</td>
-<td>Partikel/Haare, Kamera &amp; Rendering</td>
-<td>36, 37, 38</td>
-<td>Dateiformate &amp; Hardware</td>
-<td>Joon (2010)</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>10</td>
-<td>Workflow der Charaktererstellung</td>
-<td>39, 40, 41, 42</td>
-<td>Uncanny Valley Effect</td>
-<td>Kätsyri et al.&nbsp;(2015)</td>
-<td></td>
-<td>4</td>
-</tr>
-<tr class="odd">
-<td>11</td>
-<td>Character Rigging</td>
-<td>43, 44, 45</td>
-<td>Fotorealismus</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>12</td>
-<td>Animationen</td>
-<td>46, 47</td>
-<td>Wahrnehmung von Animationen</td>
-<td>Scholl &amp; Tremoulet (2000)</td>
-<td></td>
-<td>5</td>
-</tr>
-<tr class="odd">
-<td>13</td>
-<td>Blender in VR</td>
-<td></td>
-<td>Virtual Reality</td>
-<td></td>
-<td></td>
-<td>6</td>
-</tr>
-<tr class="even">
-<td>14</td>
-<td>Abschluss</td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Datei «Schwimmnudel»</p>
+</div></div><p>In der Datei «Schwimmnudel» ist ein langgezogener Zylinder vorzufinden – ähnlich einer Schwimmnudel. Dieser kann mittels eines Skelets mit Knochen wie eine Schwimmnudel dynamisch verformt werden. So kann die Schwimmnudel etwa verbogen werden.</p>
+<section id="skelet-erstellen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="skelet-erstellen">Skelet erstellen</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Skelet hinzufügen</p>
+</div></div><p>Um ein neues Skelet zu erstellen, kann im «<em>Add</em>»-Menü die Option «<em>Armature | Single Bone</em>» ausgewählt werden. Dadurch wird ein Armature-Objekt erstellt mit einem einzelnen Knochen erstellt. Dieses Objekt kann danach im Edit-Mode bearbeitet werden. Dabei ist es ratsam, den Röntgenblick mittels «<em>Toggle X Ray</em>» zu aktivieren.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_44/1.Schwimmnudel.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Die Schwimmnudel und ein hinzugefügter Knochen.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Auswahl von Knochenelementen</p>
+</div></div><p>Im Edit-Mode können nun drei Elemente des Knochens ausgewählt werden:</p>
+<ul>
+<li>«<strong><em>Head</em></strong>»: Dabei handelt es sich um den Kopf des Knochens, welcher sich jeweils am Ende des kürzeren Teiles des Knochens befindet. Seine Position ist in der Sidebar unter dem Reiter «<em>Head</em>» aufgelistet</li>
+<li>«<strong><em>Tail</em></strong>»: Dabei handelt es sich um den Schwanz des Knochens, welcher sich jeweils am Ende des langgezogenen Teiles des Knochens befindet. Seine Position ist in der Sidebar unter dem Reiter «<em>Tail</em>» aufgelistet.</li>
+<li>Oktaeder: Durch die Auswahl des Oktaeders werden der dazugehörige Kopf und der dazugehörige Schwanz ebenfalls mit ausgewählt. Der Oktaeder kann nicht unabhängig von diesen beiden Gelenken ausgewählt werden.</li>
+</ul>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Knochen extrudieren mittels <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span></p>
+</div></div><p>Der Schwanz des hinzugefügten Knochens kann nun entlang der X-Achse platziert werden. Dabei sollte darauf geachtet werden, dass er sich innerhalb des Meshes der Schwimmnudel befindet (beispielsweise an der Position X = 0, Y = 0, Z = 0.5). Um einen neuen Knochen hinzuzufügen, wird nun der Schwanz ausgewählt werden und ein neuer Knochen mittels der Taste <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span> extrudiert. Der neue Knochen kann anschliessend entlang der X-Achse weiter entlang dem Mesh platziert werden (beispielsweise X = 0, Y = 0, Z = 1).</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kopf/Schwanz zwischen Knochen</p>
+</div></div><p>Der neu extrudierte Knochen ist direkt mit dem alten Knochen über das dazwischen liegende Gelenk verbunden. Der Kopf des neuen Knochens stellt dabei den Schwanz des alten Knochens dar. Dementsprechend wird die Ausrichtung der Knochen durch eine Verschiebung des Kopfes/Schwanzes zwischen den Knochen verändert. Um einen Knochen von den mit ihm verbundenen Knochen zu lösen, kann der Befehl «<em>Split</em>» mittels der Taste <kbd aria-hidden="true">Y</kbd><span class="visually-hidden">Y</span> ausgeführt werden.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_44/2.Knochen_Platzierung.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Der Knochen wird entlang der Schwimmnudel platziert.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Vollständiges Skelett extrudieren</p>
+</div></div><p>Um ein vollständiges Skelett zu erhalten, können nun weitere Knochen entlang der X-Achse extrudiert werden. Dies sollte anschliessend ebenfalls entlang der anderen Seite der Schwimmnudel erfolgen. Am Schluss sollte das Skelet ähnlich der Abbildung 3 aussehen.</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_44/3.Knochen_Platzierungen.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Der Knochen wird entlang der Schwimmnudel platziert.
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="skript-kapitel" class="level2">
-<h2 class="anchored" data-anchor-id="skript-kapitel">Skript-Kapitel:</h2>
-<ol type="1">
-<li><a href="../Chapters/Chapter_1.html">Vorbereitung von Blender</a></li>
-<li><a href="../Chapters/Chapter_2.html">Die Arbeitsoberfläche des 3D-Viewports</a></li>
-<li>Navigation der Ansicht im 3D-Viewport</li>
-<li>Erste Schritte</li>
-<li>Objektarten</li>
-<li>Primitive Meshes</li>
-<li>Methoden der Objekt-Transformation</li>
-<li>Objekte im Viewport-Display transformieren</li>
-<li>Object- und Edit-Mode</li>
-<li>Einstieg in den Edit-Mode</li>
-<li>Methoden der Objektbearbeitung im Edit-Mode</li>
-<li>Hilfestellungen für die Objektbearbeitung</li>
-<li>Tutorial: Erstellen eines Glases</li>
-<li>Objekterstellung mittels Modifiern</li>
-<li>Eigenschaften innerhalb eines Meshes definieren</li>
-<li>Materialien, Texturen und Shader</li>
-<li>Materialien</li>
-<li>Der Shader-Editor</li>
-<li>Grundlegende Eigenschaften von Materialien</li>
-<li>Tutorial: Strandball</li>
-<li>Texturen</li>
-<li>UVs</li>
-<li>Texturen zu einem Material hinzufügen</li>
-<li>Texturen für Parameter verwenden</li>
-<li>Welche Bilder eignen sich als Texturen?</li>
-<li>Arten von Texturen</li>
-<li>Tutorial: Einen Hammer texturieren</li>
-<li>Displacement mit dem Displacement-Modifier erstellen</li>
-<li>Erstellen von Landschaften</li>
-<li>Tutorial: Erstellen einer Düne</li>
-<li>Parameter im Principled-BSDF-Shader</li>
-<li>Der Wechsel von Eevee zu Cycles am Beispiel von Glas</li>
-<li>Lichtquellen in einer Szene</li>
-<li>Lichtobjekte</li>
-<li>Welten</li>
-<li>Kamera</li>
-<li>Rendern</li>
-<li>Tutorial: Ein Glas mit Wasser erstellen</li>
-<li>Bäume mittels Add-on erstellen</li>
-<li>Workflows der Charaktererstellung</li>
-<li>Character-Modeling</li>
-<li>Tutorial: Eine Cartoon-Katze als Charakter erstellen</li>
-<li>Was ist Rigging?</li>
-<li>Objekte mit Armaturen verformen</li>
-<li>Charakter-Rigging</li>
-<li>Vom Bild zur Animation</li>
-<li>Animationen erstellen</li>
-<li>Animationen verfeinern</li>
-<li>Animationen rendern</li>
-</ol>
+<section id="mesh-dem-skelet-zuweisen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="mesh-dem-skelet-zuweisen">Mesh dem Skelet zuweisen</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Verbindung von Mesh und Skelet</p>
+</div></div><p>Als Nächstes geht es darum, das Mesh der Schwimmnudel und das Skelet miteinander zu verbinden. Das Ziel ist es, dass das Mesh basierend auf den Veränderungen im Skelet verformt wird. Deshalb wird das Mesh als Kind des Skeletes definiert.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Parenting</p>
+</div></div><p>Um das Mesh als Kind des Skeletes zu definieren, müssen das Mesh und das Skelet nacheinander ausgewählt werden. Dabei ist die Reihenfolge zu beachten, sodass das Skelet als letztes Objekt ausgewählt wird. In diesem Falle ist das Skelet nun das aktive Objekt. Mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">P</kbd><span class="visually-hidden">P</span> kann beim Mauszeiger das Menü «<em>Set Parent to</em>» geöffnet werden, in dem nun die Option «<em>Armature Deform | with automatic Weights</em>» ausgewählt werden kann. Dadurch wird das Mesh nun hierarchisch als Kind des Skeletes definiert. Als Folge dessen, ist das Mesh der Schwimmnudel nun auch im Outliner-Editor im Dropdown-Bereich des Skelets aufgelistet.</p>
 </section>
-<section id="literatur" class="level2">
-<h2 class="anchored" data-anchor-id="literatur">Literatur</h2>
-<p>Brainard, D. H., &amp; Hurlbert, A. C. (2015). Colour vision: understanding# TheDress.&nbsp;<em>Current Biology</em>,&nbsp;<em>25</em>(13), R551-R554.</p>
-<p>Bainbridge, W. A., Pounder, Z., Eardley, A. F., &amp; Baker, C. I. (2021). Quantifying Aphantasia through drawing: Those without visual imagery show deficits in object but not spatial memory.&nbsp;<em>Cortex</em>,&nbsp;<em>135</em>, 159-172.</p>
-<p>Fleming, R. W. (2014). Visual perception of materials and their properties.&nbsp;<em>Vision research</em>,&nbsp;<em>94</em>, 62-75.</p>
-<p>Joon, J. S. (2010, August). Principles of photorealism to develop photorealistic visualisation for interface design: A review. In&nbsp;<em>2010 Seventh International Conference on Computer Graphics, Imaging and Visualization</em>&nbsp;(pp.&nbsp;17-25). IEEE.</p>
-<p>Kätsyri, J., Förger, K., Mäkäräinen, M., &amp; Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses: support for perceptual mismatch as one road to the valley of eeriness.&nbsp;<em>Frontiers in psychology</em>,&nbsp;<em>6</em>, 390.</p>
-<p>Scholl, B. J., &amp; Tremoulet, P. D. (2000). Perceptual causality and animacy. <em>Trends in cognitive sciences, 4</em>(8), 299-309.</p>
-<p>Tarr, M. J., Williams, P., Hayward, W. G., &amp; Gauthier, I. (1998). Three-dimensional object recognition is viewpoint dependent.&nbsp;<em>Nature neuroscience</em>,&nbsp;<em>1</em>(4), 275-277.</p>
+<section id="skelet-verformen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="skelet-verformen">Skelet verformen</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Pose-Mode</p>
+</div></div><p>Objekte des Typs «<em>Armature</em>» verfügen nebst dem Object- und dem Edit-Mode über einen weiteren Bearbeitungsmodus. Dabei handelt es sich um den Pose-Mode. Dieser kann im Dropdown-Menü zur Auswahl des Bearbeitungsmodus ausgewählt werden, sobald das Skelet ausgewählt wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Pose verformen</p>
+</div></div><p>Innerhalb des Pose-Mode sind nun ebenfalls alle Knochen auswählbar. Der Kopf und der Schwanz des Knochens werden jeweils automatisch mit ausgewählt. Anders als im Edit-Mode können allerdings nur die Knochen als Ganzes ausgewählt werden. Durch eine Veränderung der Knochen in ihrer Rotation wird anschliessend ebenfalls das Mesh entsprechend dieser Knochen verformt.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Schwimmnudel verbiegen</p>
+</div></div><p>Um die Schwimmnudel zu biegen, können alle Knochen auf der einen Seite des Skelets ausgewählt werden und um einen bestimmten Wert rotiert werden. Damit dieselbe Verformung auch auf der anderen Seite vollzogen wird, sollten auch diese Knochen ausgewählt werden und um den gleichen Betrag in die entgegengesetzte Richtung rotiert werden. Um dies zu erzielen, muss lediglich ein negativer Betrag eingegeben werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Vertices für Verformung benötigt</p>
+</div></div><p>Die Verformung des Meshes erfolgt anhand der Struktur des Meshes. Wenn sich entlang mehrerer Knochen keine Vertices befinden, können die Strukturen der Knochen entlang dieser Fläche nicht mitberücksichtigt werden. Deshalb ist darauf zu achten, dass im Mesh genug Vertices entlang der dazugehörigen Knochen aufzufinden sind.</p>
+<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_44/4.gebogene_Schwimmnudel.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4: Die gebogene Schwimmnudel.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Armature-Modifier</p>
+</div></div><p>Meshes, welche einer Armature zugewiesen wurde, erhalten jeweils einen neuen Modifier. Dabei handelt es sich um den «<em>Armature</em>»-Modifier, welcher jeweils in der dritten Spalte der Modifier-Auswahl aufzufinden ist. Sobald ein Mesh einem Armature-Objekt zugewiesen wurde, wird diesem automatisch der Armature-Modifier hinzugefügt. Dieser Modifier kann anschliessend innerhalb der Reihenfolge der Modifier platziert werden. So können beispielsweise mittels eines Subdivision Surface-Modifiers nach dem Armature-Modifier die Verformungen durch die Posen geglättet werden.</p>
+</section>
+<section id="posen-abspeichern" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="posen-abspeichern">Posen abspeichern</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Posen-Bibliothek</p>
+</div></div><p>Um eine erstellte Pose schnell aufrufen zu können, lassen sich verschiedene Posen in einer Posen-Bibliothek abspeichern. Diese sind im Reiter «<em>Object-Data-Properties</em>» von Armaturen aufzufinden. Unter dem Reiter «<em>Pose Library</em>» kann anschliessend eine neue Posen-Bibliothek erstellt werden.</p>
+<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_44/5.Icon_Object_Data_Properties_Armature.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;5: Icon des Reiters «<em>Object Data Properties</em>» bei Armaturen.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Posen abspeichern</p>
+</div></div><p>Um eine neue Pose abzuspeichern, müssen im Pose-Mode jeweils alle Knochen ausgewählt werden, deren Anordnung für eine Pose gespeichert werden sollen. Um die aktuelle Anordnung abzuspeichern, kann anschliessend auf die Schaltfläche «+» geklickt werden. Anschliessend wird eine neue Pose innerhalb der Posen-Bibliothek erstellt. Dabei ist zu beachten, dass lediglich die ausgewählten Knochen für diese Pose abgespeichert werden. Sind nicht alle relevanten Knochen ausgewählt, wird die entsprechende Pose nur unvollständig abgespeichert. Mittels der Schaltfläche «<em>Apply Pose Library Pose</em>» wird zudem eine bereits ausgewählte Pose aufgerufen.</p>
+<div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_44/6.Icon_Apply_Pose_Library_Pose.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6: Icon für die Schaltfläche “<em>Apply Pose Library Pose</em>”.
+</figcaption>
+</figure>
+</div>
 
 
 </section>

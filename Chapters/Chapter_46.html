@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>25. Welche Bilder eignen sich als Texturen? – Creating the World</title>
+<title>46. Vom Bild zur Animation – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -336,15 +336,23 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Auf dieser Seite</h2>
+   
+  <ul>
+  <li><a href="#was-sind-animationen" id="toc-was-sind-animationen" class="nav-link active" data-scroll-target="#was-sind-animationen">Was sind Animationen?</a></li>
+  <li><a href="#framerate" id="toc-framerate" class="nav-link" data-scroll-target="#framerate">Framerate</a></li>
+  <li><a href="#animationseinstellungen-in-blender-definieren" id="toc-animationseinstellungen-in-blender-definieren" class="nav-link" data-scroll-target="#animationseinstellungen-in-blender-definieren">Animationseinstellungen in Blender definieren</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">25. Welche Bilder eignen sich als Texturen?</h1>
+<h1 class="title">46. Vom Bild zur Animation</h1>
 </div>
 
 
@@ -361,46 +369,80 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="was-sind-animationen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="was-sind-animationen">Was sind Animationen?</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Jedes Bild kann eine Textur sein</p>
-</div></div><p>Damit einem Objekt Texturen hinzugefügt werden können, werden zunächst einmal Texturen benötigt. Rein theoretisch lässt sich jedes Bild als Textur verwenden. Es gibt dabei allerdings, gerade wenn eine Textur über grössere Bereiche erstreckt wird, ein häufig auftauchendes Problem, welches in Abbildung 1 dargestellt wird.</p>
+<p>Veränderungen können in Bildern lediglich angedeutet werden</p>
+</div></div><p>Bislang wurde lediglich die Erstellung von statischen Bildern betrachtet. Das Bild ist dann jeweils ein Abbild einer Szene. Das einzelne Bild als solches ermöglicht keine Veränderung der Objekte. So ist es etwa nicht möglich, in einem Bild zu sehen, wie sich jemand bewegt, da das Bild statisch aufgebaut ist. Anhand verschiedener Posen oder Annahmen in Bildern kann allerdings eine Bewegung angedeutet werden, welche vor oder nach dem Bild vollzogen wird. Die Bewegung selbst ist dabei allerdings nie im Bild sichtbar.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Schnitte durch Wiederholungsmuster</p>
-</div></div><p>Auf der linken Seite der Abbildung 1 ist ein Bild dargestellt, welches als Textur verwendet wird. Gerade bei grösseren Flächen wird die Skalierung der Textur so angepasst, dass die Textur jeweils wiederholt wird. Dadurch könnte ein Muster, wie es auf der rechten Seite der Abbildung 1 abgebildet ist, entstehen. Hierbei wurde die Textur entlang beider Achsen einmal wiederholt. Die Strukturen am oberen Ende des Bildes passen nicht zu den Strukturen am unteren Ende des Bildes. Ebenso verhält es sich mit den Strukturen am linken und am rechten Rand des Bildes. Dies führt dazu, dass ein Schnitt an der Wiederholungsstelle der Textur ersichtlich wird.</p>
-<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_25/Non_Seamless_Texture v2.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<p>Animationen beinhalten Veränderungen</p>
+</div></div><p>Anders als bei statischen Bildern weisen Animationen eine Veränderung von Elementen innerhalb einer Szene auf. Eine Bewegung wird dabei nicht angedeutet oder in einem Bild suggeriert, sondern ist direkt als solche sichtbar. Dies hat zur Folge, dass man sich keine Gedanken machen muss, wie man innerhalb eines einzigen Bildes einen Ablauf darstellen will.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Animationen als Anreihung von einzelnen Bildern</p>
+</div></div><p>Tatsächlich sind Animationen auch Bilder, respektive die Abfolge mehrerer Bilder. Indem diese Bilder schnell aneinandergereiht werden, entsteht der Eindruck, dass es sich um eine Animation handelt. Dieses Prinzip entspricht etwa demjenigen eines Daumenkinos.</p>
+</section>
+<section id="framerate" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="framerate">Framerate</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Framerate beschreibt die Anzahl Bilder pro Sekunde</p>
+</div></div><p>Die Anzahl Bilder, welche während einer Sekunde in einer Animation dargestellt werden, wird als Framerate bezeichnet. Wenn in einer Animation innerhalb von einer Sekunde 24 Bilder angezeigt werden, spricht man dementsprechend von einer Framerate von 24 «frames per second» (fps). Die Frames beschreiben dabei die einzelnen Bilder, welche während dieser Sekunde dargestellt werden. 24 fps werden in der Videobranche als Standard angesehen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Bildwiederholrate</p>
+</div></div><p>Unabhängig davon, wie viele Frames eine Animation beinhaltet, kann ein Bildschirm nur eine gewisse Anzahl Bilder pro Sekunde erzeugen. Die Anzahl dieser Bilder, die ein Bildschirm erzeugen kann, wird als Bildwiederholrate bezeichnet und mit der Einheit Hertz angegeben. Eine Bildwiederholrate von 120 Hertz bedeutet dabei, dass 120 Bilder pro Sekunde erzeugt werden können. Einige Geräte verfügen dabei über Funktionen, mit denen sie Zwischenbilder berechnen können. Dadurch werden zusätzliche Frames erzeugt, wenn beispielsweise eine Animation weniger Frames in einer Sekunde beinhaltet, als der Bildschirm darstellen könnte.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Links eine Textur und rechts eine 2x2-Anordnung dieser Textur.
-</figcaption>
-</figure>
+<p>Weiterführende Informationen</p>
+</div>
+<div class="tippbox-body">
+<p>Teilweise wird die Framerate bei Produkten zusammen mit der Bildauflösung angegeben. Dabei wird die Bildauflösung mit der vertikalen Anzahl Pixel angegeben (beispielsweise 2160 p), gefolgt von der Framerate (beispielsweise 30). Die Bezeichnung 2160p30 würde dementsprechend bedeuten, dass in der vertikalen Ausrichtung 2160 Pixel angezeigt werden und die Framerate 30 fps beträgt.</p>
+</div>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Nahtlose Texturen</p>
-</div></div><p>Bilder, die besonders gut als Textur geeignet sind, weisen am linken und am rechten Rand sowie am oberen und am unteren Rand des Bildes identische Strukturen auf, sodass bei einer Wiederholung ein fliessender Übergang entsteht. Abbildung 2 zeigt ein Beispiel einer solchen Textur (Bildquelle: <a href="https://ambientcg.com/view?id=Metal022" class="uri">https://ambientcg.com/view?id=Metal022</a>). Solche Texturen werden als nahtlose Texturen (seamless textures) bezeichnet. Gerade bei namhaften Datenbanken mit hochwertigen Texturen sind die Texturen in der Regel so bearbeitet, dass sie nahtlos sind.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="Images/Chapter_25/Seamless_Texture.png" class="img-fluid figure-img"></p>
-<figcaption>Links eine nahtlose Textur und rechts eine 2x2-Anordnung dieser Textur.</figcaption>
-</figure>
-</div>
+<p>Framerate-Einbrüche bei EchtzeitRendering</p>
+</div></div><p>In Videos sind die Animationen jeweils vorgegeben und der Betrachter kann keinen aktiven Einfluss auf das Geschehen nehmen. Dementsprechend betrachten alle Nutzer dieselbe Abfolge von Einzel bilder, welche vorproduziert werden können. Bei anderen Medien wie etwa Videospielen werden unterschiedliche Bilder erzeugt, abhängig von Entscheidungen des Nutzers. In diesen Fällen muss jedes Bild in Echtzeit gerendert werden. Je nach Komplexität der Szenen und Hardware der benutzten Geräte kann es dabei zu Einbrüchen in der Framerate kommen.</p>
+</section>
+<section id="animationseinstellungen-in-blender-definieren" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="animationseinstellungen-in-blender-definieren">Animationseinstellungen in Blender definieren</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Texturen-Datenbanken</p>
-</div></div><p>Es gibt eine Reihe verschiedener Datenbanken im Internet, die verschiedene Texturen anbieten. Zu diesen gehören beispielsweise:</p>
-<ul>
-<li><a href="https://polyhaven.com/" class="uri">https://polyhaven.com/</a>: Poly Haven verfügt sowohl über Texturen als auch über 3D-Modelle und HDRIs, welche von anderen Nutzern gratis zur Verfügung gestellt werden. Alle Inhalte auf dieser Plattform fallen unter die CC0-Lizenz und können problemlos für alle Projekte verwendet werden.</li>
-<li><a href="https://ambientcg.com/" class="uri">https://ambientcg.com/</a> : AmbientCG beinhaltet wie Poly Haven eine Reihe von Texturen, 3D-Modellen und HDRIs, welche problemlos für alle Projekte verwendet werden können.</li>
-<li><a href="https://3dtextures.me/" class="uri">https://3dtextures.me/</a> : Auf dieser Website sind eine Reihe verschiedener Texturen zu finden, welche alle unter der CC0-Lizenz stehen und somit für alle Projekte verwendet werden können. Nebst realistischen Texturen werden auch stilisierte Texturen angeboten.</li>
-<li><a href="https://www.textures.com" class="uri">https://www.textures.com</a> : Auf dieser Website werden verschiedene Texturen, Bilder, HDRIs und 3D Objekte angeboten. Eine Registrierung ist erforderlich und der Nutzer erhält ein tägliches Kontingent an kostenlosen Credits, um Texturen zu beziehen. Die Texturen können für verschiedene Projekte verwendet werden, aber mit Einschränkungen. So dürfen diese Texturen etwa nicht für ein Open-Source-Videogame verwendet werden. Es empfiehlt sich deshalb, einen Blick in die Lizenzbedingungen der Website zu werfen.</li>
-</ul>
+<p>Default-Einstellungen</p>
+</div></div><p>Per Default werden in Blender 250 Frames im Rahmen einer Animation mit einer Framerate von 24 fps abgespielt. Im Timeline-Editor wird ein Zeitstrahl dargestellt, welcher diese 250 Frames von links nach rechts anordnet. Mithilfe eines blauen Markers wird signalisiert, welcher Frame gerade ausgewählt ist und im 3D-Viewport-Editor dargestellt wird.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Start- und End-Frame</p>
+</div></div><p>In der oberen rechten Ecke des Timeline-Editors wird angegeben, ab welchem Frame eine Animation beginnt und bis zu welchem Frame die Animation andauert. Im Feld «<em>Start</em>» lässt sich dabei der Start-Frame für eine Animation definieren und im Feld «<em>End</em>» der End-Frame für eine Animation. Durch eine Veränderung der Start- und End-Frames kann die Animationsdauer angepasst werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Frames auswählen</p>
+</div></div><p>Links neben dem Feld «<em>Start</em>» wird in einem zusätzlichen Feld der aktuell dargestellte Frame angegeben. Durch eine Veränderung dieser Zahl kann ein anderer Frame ausgewählt werden. Alternativ lässt sich auch durch ein Verschieben des blauen Markers in der Zeitleiste ein anderer Frame auswählen. Im 3D-Viewport-Editor wird zudem ebenfalls angezeigt, welcher Frame gerade dargestellt wird. Sofern die Viewport-Overlays aktiviert sind, wird in der linken oberen Ecke anhand einer Textinformation angegeben, welche Ansicht auf die Szene gerade verwendet wird. Darunter wird der aktuelle Frame in einer Klammer angegeben.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Framerate ändern</p>
+</div></div><p>Die Einstellung der Framerate für ein Blender-File lässt sich in den Output-Properties des Properties-Editors einstellen. Unter dem Reiter «<em>Format</em>» kann die Framerate ausgewählt werden. Dadurch wird allerdings lediglich angepasst, wie viele Frames Blender innerhalb einer Sekunde darstellen soll. Dies hat zur Folge, dass bereits erstellte Animationen schneller ablaufen, weil die Frames nun zeitlich schneller getaktet werden. Wenn dies verhindert werden soll, kann unter «<em>Frame Range</em>» und «<em>Time Stretching</em>» die Animation angepasst werden. Hierfür wird im Bereich «<em>Old</em>» die alte Frame rate angegeben und im Bereich «<em>New</em>» die neue Framerate. Dadurch werden anschliessend die bereits gesetzten Animationen umgerechnet.</p>
+<div class="rememberbox">
+<div class="rememberbox-header">
+<div class="rememberbox-icon">
+
+</div>
+<p>Merke…</p>
+</div>
+<div class="rememberbox-body">
+<p>Eine Animation ergibt sich aus der schnellen Abfolge von einzelnen Bildern. Die Zeitspanne für ein Bild wird als Frame bezeichnet.</p>
+<p>Die Anzahl Bilder/Frames pro Sekunde wird als Framerate bezeichnet.</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

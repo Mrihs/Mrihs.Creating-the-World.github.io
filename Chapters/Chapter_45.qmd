@@ -1,0 +1,143 @@
+---
+title: "45. Charakter-Rigging"
+editor: visual
+---
+
+## Charakter-Rigging mittels Rigify
+
+### Skelet erstellen
+
+::: column-margin
+Skelet für Charakteren
+:::
+
+Das Prinzip der Knochenerstellung für Armaturen kann auch verwendet werden, um ein Skelet für Charakteren zu erstellen. Dabei handelt es sich allerdings um einen etwas aufwändigeren Prozess, da deutlich mehr Knochen benötigt werden. Nebst den Knochen für Arme, Hände, Beine und Füsse können auch Knochen verwendet werden, um das Gesicht zu verformen und so Charakteren mit unterschiedlicher Mimik darzustellen.
+
+::: column-margin
+Datei «Charakter»
+:::
+
+Die Datei «Charakter» beinhaltet einen Charakter, welcher mittels MakeHuman erstellt wurde. Um diesen Charakter zu posieren, wird nun ein entsprechendes Skelet benötigt.
+
+::: column-margin
+Add-on «Rigify»
+:::
+
+Mittels dem Add-on «Rigify» kann direkt eine Vorlage für ein Skelet geladen werden. Dies erspart bereits einige Schritte bei der Skelet Erstellung. Das entsprechende Add-on muss zunächst in den Einstellungen («*Edit \| Preferences*») unter «*Add-ons*» aktiviert werden. Durch das Aktivieren dieses Add-ons stehen im «*Add*»-Menü unter dem Reiter «*Armature*» nun weitere Optionen zur Verfügung. Statt eines einzelnen Knochens kann nun etwa direkt ein ganzes menschliches Skelett mittels «*Human (Meta-Rig)*» hinzugefügt werden. Zudem sind unter «*Animals*» auch Skeletefür verschiedene Tiere auffindbar.
+
+![Das Add-on "*Rigify*" muss zunächst in den Eistellungen aktiviert werden.](Images/Chapter_45/.png){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Basic Human Armature
+:::
+
+Unter der Option «*Basic \| Basic Human (Meta-Rig)*» ist eine vereinfachte Version eines menschlichen Skeletes vorzufinden, welches auf Knochen im Gesicht verzichtet. Dieses Skelet kann beispielsweise verwendet werden, wenn lediglich die Extremitäten eines Charakters posiert werden sollen. Für die ersten Schritte mit einem menschlichen Skelet ist dies wohl die einfachere Variante.
+
+::: column-margin
+Knochen anordnen
+:::
+
+Das hinzugefügte Skelet sollte genaue an derselben Position hinzugefügt werden, an der sich der Ursprung des Charakters befindet. Zudem sollte der Charakter keine Transformationen (beispielsweise Position, Skalierung oder Rotation) aufweisen. Anschliessend kann das Skelet im Edit-Mode bearbeitet werden, sodass die einzelnen Knochen das jeweilige Körperteil abbilden. Wenn die Viewport-Overlays aktiviert sind, wird in der oberen linken Ecke jeweils beschrieben, wofür der ausgewählte Knochen steht. Wichtig ist dabei, dass keine Knochen gelöscht oder entfernt werden.
+
+::: column-margin
+Symmetrische Bearbeitung
+:::
+
+Damit die Knochen jeweils nur auf einer Seite angeordnet werden müssen, kann die Option «*X-Axis Mirror*» in der Sidebar unter dem Reiter «*Tool*» aktiviert werden. Dadurch werden automatisch die Knochen auf der gegenüberliegenden Seite entsprechend mit bearbeitet. Dies ermöglicht eine symmetrische Bearbeitung des Skelets und halbiert den Aufwand bei der Ausrichtung der Knochen.
+
+::: column-margin
+Knochen anordnen
+:::
+
+Am Schluss sollten alle Knochen dem Mesh angepasst worden sein. Dabei sollten sich diese Knochen jeweils innerhalb des Meshes auffinden. Abbildung 2 zeigt eine mögliche Anordnung der Knochen.
+
+![Der Charakter mit einem Skelet.](Images/Chapter_45/.png){#fig-1_2 fig-align="left"}
+
+### Rig generieren
+
+::: column-margin
+Automatisierung durch Rigify
+:::
+
+Durch das Rigify-Add-on werden nicht nur Vorlagen für Armaturen zur Verfügung gestellt, sondern auch Automatisierungsprozesse für das Character-Rigging. Nebst der Zuweisung des Meshes zum Skelett lassen sich noch eine Reihe weiterer Verfeinerungen vornehmen, die jedoch deutlich komplexer sind. Durch das Rigify-Add-on lassen sich einige dieser Prozesse im Hintergrund automatisch durchführen.
+
+::: column-margin
+Rig erstellen
+:::
+
+In den Object-Data-Properties des Skelets, welches sich im Properties-Editor befinden, sind durch das Aktivieren des Rigify-Add-ons einige weitere Reiter erstellt werden. Im Reiter «*Rigify Buttons*» kann über die Schaltfläche «*Generate Rig*» aus dem Skelett ein Rig erstellt werden. Damit diese Schaltfläche ersichtlich ist, muss das Skelet im Object-Mode ausgewählt sein.
+
+::: column-margin
+Neue Objekte nach Rig-Erstellung
+:::
+
+Nach der Erstellung des Rigs erscheint ein neues Skelet im 3D-Viewport-Editor. Dieses besteht nicht aus Knochen, sondern aus verschiedenen Formen. Bei diesem Skelet handelt es sich nun um den erstellten Rig. Dieser Rig verfügt über zusätzliche Funktionen und angepasste Steuerungen im Vergleich zu den normalen Knochen. Im Outliner ist zudem eine neue Collection entstanden («*WGTS_rig*»). Dabei handelt es sich um Datenstrukturen, welche für den Rig benötigt werden. Daher sollten die entsprechenden Objekte nicht gelöscht werden. Allerdings kann die Collection weiterhin deaktiviert bleiben. Der Meta-Rig als solches wird von nun an nicht mehr benötigt und kann ebenfalls in einer deaktivierten Collection versteckt werden.
+
+::: column-margin
+Charakter dem Rig zuweisen
+:::
+
+Nun kann der Charakter als Kind dem Rig hinzugefügt werden. Hierfür wird nacheinander das Mesh des Charakters und der Rig ausgewählt. Dabei sollte der Rig anschliessend das aktive Objekt sein. Sollte ein Charakter aus mehreren Teilen bestehen, so müssen alle Mesh-Teile des Charakters ausgewählt werden und zuletzt der Rig, damit dieser das aktive Objekt darstellt. Mittels der Tastenkombination {{< kbd Ctrl >}} + {{< kbd P >}} kann anschliessend das Menü «*Set Parent to*» geöffnet und die Option «*Armature Deform \| with automatic Weights*» ausgewählt werden.
+
+::: column-margin
+Rig-Objekte
+:::
+
+Wenn nun der Rig ausgewählt und in den Pose-Mode gewechselt wird, kann der Charakter nun anhand der verschiedenen Formen innerhalb des Rigs posiert werden. In der Sidebar sind durch das Rigify-Add-on zwei neue Reiter unter «*Item*» erstellt worden: «*Rig Main Properties*» und «*Rig Layers*». Die verschiedenen Körperteile des Rigs werden unter dem Reiter «Rig Layers» aufgelistet. Dabei können einzelne Symbole ausgeblendet werden, damit nur die relevanten Formen des Rigs angezeigt werden.
+
+![Der Charakter mit dem dazugehörigen Rig.](Images/Chapter_45/.png){#fig-1_3 fig-align="left"}
+
+::: column-margin
+Arten von Rig-Strukturen
+:::
+
+Für einzelne Körperteile werden mehrere Elemente in den Rig-Layers aufgelistet, beispielsweise für die Arme. In Klammern werden die Unterschiede dieser Formen beschrieben.
+
+-   «***IK***»: Die Abkürzung IK steht für Inverse Kinematics. Dies stellt eine alternative Form zur bisher verwendeten Forward Kinematics dar. Strukturen im Rig, welche sich der Inverse Kinematics bedienen, werden jeweils in roter Farbe darge stellt.
+-   «***FK***»: Die Abkürzung FK steht für Forward Kinematics. Dies stellt eine alternative Form zur Inverse Kinematics dar. Strukturen im Rig, welche sich der Forward Kinematics bedienen, werden jeweils in grüner Farbe dargestellt.
+-   «***Tweak***»: Die Strukturen aus der Kategorie Tweak werden für genauere Anpassungen verwendet. Die entsprechenden Elemente werden in blauer Farbe dargestellt.
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Weiterführende Informationen
+::::
+
+::: tippbox-body
+Bei der Forward Kinematics müssen alle Knochen und Gelenke einzeln posiert werden. Soll die Hand eines Charakters etwa eine bestimmte Position einnehmen, müssen die Schulter, der Oberarm, der Ellbogen und der Unterarm so angepasst und verschoben werden, damit die Hand am Schluss an der korrekten Position liegt. Mittels Inverse Kinematics kann lediglich die Hand verschoben werden und die anderen Knochen und Gelenke werden automatisch ausgerichtet. Dies erleichtert den Prozess des Posierens deutlich.
+:::
+::::::
+
+::: column-margin
+Inverse Kinematics
+:::
+
+Der grosse Vorteil des Rigs, welcher mit Rigify erstellt wurde, besteht darin, dass Inverse Kinematics zur Verfügung steht. Per Default ist dementsprechend auch das gesamte Skelet auf Inverse Kinematics ausgerichtet. Daher können alle Elemente der Forward Kinematics deaktiviert werden.
+
+::: column-margin
+Zwischen Forward und Inverse Kinematics wechseln
+:::
+
+Möchte man trotzdem Forward Kinematics für ein Körperteil verwenden, können stattdessen die Strukturen in grüner Farbe verwendet werden. Im Bereich «*Rig Main Properties*» muss allerdings der Wert für «*IK-FK*» auf 1 gesetzt werden. Mittels dieses Wertes wird definiert, ob das aktuell ausgewählte Körperteil mittels Inverse Kinematics oder Forwards Kinematics bearbeitet werden soll. Für eine Bearbeitung mit Inverse Kinematics wird der Wert 0 angegeben, für eine Bearbeitung mit Forward Kinematics wird der Wert 1 angegeben.
+
+## Charakter-Rigs und Charakter-Animation mit Mixamo
+
+::: column-margin
+Mixamo
+:::
+
+Eine weitere Option, um den Rig für einen Charakter zu erstellen, stellt die Online-Plattform <https://www.mixamo.com/#/>. Dabei handelt es sich um ein Tool von Adobe – dementsprechend muss ein Adobe-Account erstellt oder verwendet werden. In Mixamo müssen lediglich ein paar Markierungen für verschiedene Körperteile auf dem Objekt hinzugefügt werden, anschliessend generiert Mixamo automatisch einen Rig für den Charakter.
+
+::: column-margin
+Charakter herunterladen
+:::
+
+Der Charakter mit dem dazugehörigen Rig kann anschliessend als 3D-Datei heruntergeladen werden. Zusätzlich kann dem Charakter eine Animation hinzugefügt werden, welche Mixamo aus einer Animations-Bibliothek zur Verfügung stellt.
+
+::: column-margin
+Import/Export
+:::
+
+Um einen Charakter aus Blender in Mixamo verwenden zu können, muss dieser als 3D-Datei exportiert werden - entweder als .fbx- oder .obj.-Datei. Hierfür muss der Charakter ausgewählt werden und unter «*File \| Export*» die Option «*FBX (.fbx)*» oder «*Wavefront (.obj)*» gewählt werden. Anschliessend kann ein Speicherort für die entsprechende 3D-Datei ausgewählt werden. Über die Einstellung «*File \| Import*» kann anschliessend der Charakter, welcher mit Mixamo geriggt und allenfalls auch animiert wurde, wieder importiert werden.

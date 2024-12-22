@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>41. Character-Modeling – Creating the World</title>
+<title>45. Charakter-Rigging – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,8 +39,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
-<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -335,15 +333,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#sculpting-von-charakteren" id="toc-sculpting-von-charakteren" class="nav-link active" data-scroll-target="#sculpting-von-charakteren">Sculpting von Charakteren</a>
+  <li><a href="#charakter-rigging-mittels-rigify" id="toc-charakter-rigging-mittels-rigify" class="nav-link active" data-scroll-target="#charakter-rigging-mittels-rigify">Charakter-Rigging mittels Rigify</a>
   <ul class="collapse">
-  <li><a href="#der-sculpt-mode" id="toc-der-sculpt-mode" class="nav-link" data-scroll-target="#der-sculpt-mode">Der Sculpt-Mode</a></li>
-  <li><a href="#retopology" id="toc-retopology" class="nav-link" data-scroll-target="#retopology">Retopology</a></li>
-  <li><a href="#sculpt-mesh-neu-berechnen-lassen" id="toc-sculpt-mesh-neu-berechnen-lassen" class="nav-link" data-scroll-target="#sculpt-mesh-neu-berechnen-lassen">Sculpt-Mesh neu berechnen lassen</a></li>
+  <li><a href="#skelet-erstellen" id="toc-skelet-erstellen" class="nav-link" data-scroll-target="#skelet-erstellen">Skelet erstellen</a></li>
+  <li><a href="#rig-generieren" id="toc-rig-generieren" class="nav-link" data-scroll-target="#rig-generieren">Rig generieren</a></li>
   </ul></li>
-  <li><a href="#direktes-modellieren-eines-charakters" id="toc-direktes-modellieren-eines-charakters" class="nav-link" data-scroll-target="#direktes-modellieren-eines-charakters">Direktes Modellieren eines Charakters</a></li>
-  <li><a href="#alternative-tools-zur-erstellung-von-charakteren" id="toc-alternative-tools-zur-erstellung-von-charakteren" class="nav-link" data-scroll-target="#alternative-tools-zur-erstellung-von-charakteren">Alternative Tools zur Erstellung von Charakteren</a></li>
-  <li><a href="#die-rolle-der-kleider" id="toc-die-rolle-der-kleider" class="nav-link" data-scroll-target="#die-rolle-der-kleider">Die Rolle der Kleider</a></li>
+  <li><a href="#charakter-rigs-und-charakter-animation-mit-mixamo" id="toc-charakter-rigs-und-charakter-animation-mit-mixamo" class="nav-link" data-scroll-target="#charakter-rigs-und-charakter-animation-mit-mixamo">Charakter-Rigs und Charakter-Animation mit Mixamo</a></li>
   </ul>
 </nav>
     </div>
@@ -352,7 +347,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">41. Character-Modeling</h1>
+<h1 class="title">45. Charakter-Rigging</h1>
 </div>
 
 
@@ -369,34 +364,100 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="charakter-rigging-mittels-rigify" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="charakter-rigging-mittels-rigify">Charakter-Rigging mittels Rigify</h2>
+<section id="skelet-erstellen" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="skelet-erstellen">Skelet erstellen</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Vorgehensweisen zur Erstellung eines Charakters</p>
-</div></div><p>Um ein Mesh eines Charakters zu erzielen, gibt es verschiedene Vorgehensweisen. Nachfolgend werden einige dieser Vorgehensweisen erläutert. Diese Liste ist allerdings nicht abschliessend.</p>
-<section id="sculpting-von-charakteren" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="sculpting-von-charakteren">Sculpting von Charakteren</h2>
-<section id="der-sculpt-mode" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="der-sculpt-mode">Der Sculpt-Mode</h3>
+<p>Skelet für Charakteren</p>
+</div></div><p>Das Prinzip der Knochenerstellung für Armaturen kann auch verwendet werden, um ein Skelet für Charakteren zu erstellen. Dabei handelt es sich allerdings um einen etwas aufwändigeren Prozess, da deutlich mehr Knochen benötigt werden. Nebst den Knochen für Arme, Hände, Beine und Füsse können auch Knochen verwendet werden, um das Gesicht zu verformen und so Charakteren mit unterschiedlicher Mimik darzustellen.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Sculpt-Mode</p>
-</div></div><p>Eine Möglichkeit besteht darin, dass ein Charakter mittels Sculpting modelliert wird. Da der Sculpting-Prozess ziemlich aufwendig ist, wird er an dieser Stelle nur grob umschrieben. Ein ausgewähltes Objekt kann jeweils im Sculpt-Mode skulpturiert werden. Der Sculpt-Mode ist ein alternativer Modus zum Object- und Edit-Mode und kann mit dem Dropdown-Menü in der linken oberen Ecke des 3D-Viewport-Editors ausgewählt werden.</p>
+<p>Datei «Charakter»</p>
+</div></div><p>Die Datei «Charakter» beinhaltet einen Charakter, welcher mittels MakeHuman erstellt wurde. Um diesen Charakter zu posieren, wird nun ein entsprechendes Skelet benötigt.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Pinsel anwenden</p>
-</div></div><p>In der Toolbar auf der linken Seite des Sculpt-Modes befinden sich unterschiedliche Pinsel, mit denen das Mesh bearbeitet werden kann. Für die Bearbeitung muss jeweils mit der Maus auf die Stelle des Objektes geklickt werden, welche bearbeitet werden soll. Anschliessend wird der Effekt dieses Pinsels auf das Objekt angewendet. Wenn der Mauszeiger bei gedrückter Maustaste bewegt wird, wird der Effekt entlang der Bewegung des Mauszeigers auf das Objekt angewendet.</p>
+<p>Add-on «Rigify»</p>
+</div></div><p>Mittels dem Add-on «Rigify» kann direkt eine Vorlage für ein Skelet geladen werden. Dies erspart bereits einige Schritte bei der Skelet Erstellung. Das entsprechende Add-on muss zunächst in den Einstellungen («<em>Edit | Preferences</em>») unter «<em>Add-ons</em>» aktiviert werden. Durch das Aktivieren dieses Add-ons stehen im «<em>Add</em>»-Menü unter dem Reiter «<em>Armature</em>» nun weitere Optionen zur Verfügung. Statt eines einzelnen Knochens kann nun etwa direkt ein ganzes menschliches Skelett mittels «<em>Human (Meta-Rig)</em>» hinzugefügt werden. Zudem sind unter «<em>Animals</em>» auch Skeletefür verschiedene Tiere auffindbar.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_45/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Das Add-on “<em>Rigify</em>” muss zunächst in den Eistellungen aktiviert werden.
+</figcaption>
+</figure>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Pinsel vergrössern</p>
-</div></div><p>Um den Mauszeiger herum wird dabei ein Kreis angezeigt. Dieser Kreis gibt an, wie gross die Fläche ist, auf welche der Effekt des ausgewählten Pinsels angewendet werden soll. Durch einen Klick mit der Taste <kbd aria-hidden="true">F</kbd><span class="visually-hidden">F</span> kann die Grösse dieses Kreises verändert werden. Durch eine Bewegung der Maus nach links oder rechts wird dabei das der Kreis vergrössert oder verkleinert. Um die Grösse des Kreises zu akzeptieren, kann die linke Maustaste oder die <kbd aria-hidden="true">Enter</kbd><span class="visually-hidden">Enter</span>-Taste gedrückt werden. Mittels der <kbd aria-hidden="true">esc</kbd><span class="visually-hidden">esc</span>-Taste kann der Vorgang abgebrochen werden.</p>
+<p>Basic Human Armature</p>
+</div></div><p>Unter der Option «<em>Basic | Basic Human (Meta-Rig)</em>» ist eine vereinfachte Version eines menschlichen Skeletes vorzufinden, welches auf Knochen im Gesicht verzichtet. Dieses Skelet kann beispielsweise verwendet werden, wenn lediglich die Extremitäten eines Charakters posiert werden sollen. Für die ersten Schritte mit einem menschlichen Skelet ist dies wohl die einfachere Variante.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Einstellung des Pinsels</p>
-</div></div><p>In der Sidebar auf der rechten Seite des Sculpt-Modes kann unter dem Reiter «<em>Tool</em>» der ausgewählte Pinsel unter «<em>Brush Settings</em>» genauer definiert werden. Mit dem Wert «<em>Radius</em>» kann der Kreis für die Bearbeitung des Meshes mittels einer Zahl vergrössert oder verkleinert werden. Mittels des Wertes «<em>Strength</em>» kann definiert werden, wie stark der Effekt des jeweiligen Pinsels auf das Mesh angewendet werden soll. Mittels der «<em>Direction</em>» lässt sich zudem bei vielen Pinseln auswählen, ob mit dem Pinsel der jeweilige Effekt aus dem Mesh herausgezogen werden soll (bei der Option «<em>Add</em>») oder in das Mesh hineingedrückt werden soll (bei der Option «<em>Subtract</em>»). Dabei erfolgt eine Bearbeitung stets entlang der Seite der Faces, auf der die jeweilige Normale liegt.</p>
+<p>Knochen anordnen</p>
+</div></div><p>Das hinzugefügte Skelet sollte genaue an derselben Position hinzugefügt werden, an der sich der Ursprung des Charakters befindet. Zudem sollte der Charakter keine Transformationen (beispielsweise Position, Skalierung oder Rotation) aufweisen. Anschliessend kann das Skelet im Edit-Mode bearbeitet werden, sodass die einzelnen Knochen das jeweilige Körperteil abbilden. Wenn die Viewport-Overlays aktiviert sind, wird in der oberen linken Ecke jeweils beschrieben, wofür der ausgewählte Knochen steht. Wichtig ist dabei, dass keine Knochen gelöscht oder entfernt werden.</p>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_45/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Der Charakter mit einem Skelet.
+</figcaption>
+</figure>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Dyntopo ermöglicht ein dynamisches Skulpturieren von Meshes</p>
-</div></div><p>Beim Skulpturieren werden jeweils die Vertices innerhalb des Meshes entsprechend des Effektes verschoben. Dies bedeutet allerdings auch, dass die Topografie des Meshes genug Vertices beinhalten muss, damit diese bearbeitet werden können. Wird etwa einfach der Standardwürfel verwendet, können lediglich dessen acht Ecken bearbeitet werden. Es ist allerdings auch möglich, in der Sidebar unter dem Reiter «<em>Tools</em>» die Option «<em>Dyntopo</em>» auszuwählen. Diese Option ermöglicht es, dass beim Anwenden der Pinsel auf das Mesh direkt neue Vertices erstellt werden, sodass eine dynamische Bearbeitung der Topografie des Meshes möglich ist. Dies hat allerdings zur Folge, dass Mesh-Daten, wie beispielsweise die UVs, verformt werden.</p>
+<p>Symmetrische Bearbeitung</p>
+</div></div><p>Damit die Knochen jeweils nur auf einer Seite angeordnet werden müssen, kann die Option «<em>X-Axis Mirror</em>» in der Sidebar unter dem Reiter «<em>Tool</em>» aktiviert werden. Dadurch werden automatisch die Knochen auf der gegenüberliegenden Seite entsprechend mit bearbeitet. Dies ermöglicht eine symmetrische Bearbeitung des Skelets und halbiert den Aufwand bei der Ausrichtung der Knochen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Knochen anordnen</p>
+</div></div><p>Am Schluss sollten alle Knochen dem Mesh angepasst worden sein. Dabei sollten sich diese Knochen jeweils innerhalb des Meshes auffinden. Abbildung 2 zeigt eine mögliche Anordnung der Knochen.</p>
+</section>
+<section id="rig-generieren" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="rig-generieren">Rig generieren</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Automatisierung durch Rigify</p>
+</div></div><p>Durch das Rigify-Add-on werden nicht nur Vorlagen für Armaturen zur Verfügung gestellt, sondern auch Automatisierungsprozesse für das Character-Rigging. Nebst der Zuweisung des Meshes zum Skelett lassen sich noch eine Reihe weiterer Verfeinerungen vornehmen, die jedoch deutlich komplexer sind. Durch das Rigify-Add-on lassen sich einige dieser Prozesse im Hintergrund automatisch durchführen.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Rig erstellen</p>
+</div></div><p>In den Object-Data-Properties des Skelets, welches sich im Properties-Editor befinden, sind durch das Aktivieren des Rigify-Add-ons einige weitere Reiter erstellt werden. Im Reiter «<em>Rigify Buttons</em>» kann über die Schaltfläche «<em>Generate Rig</em>» aus dem Skelett ein Rig erstellt werden. Damit diese Schaltfläche ersichtlich ist, muss das Skelet im Object-Mode ausgewählt sein.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Neue Objekte nach Rig-Erstellung</p>
+</div></div><p>Nach der Erstellung des Rigs erscheint ein neues Skelet im 3D-Viewport-Editor. Dieses besteht nicht aus Knochen, sondern aus verschiedenen Formen. Bei diesem Skelet handelt es sich nun um den erstellten Rig. Dieser Rig verfügt über zusätzliche Funktionen und angepasste Steuerungen im Vergleich zu den normalen Knochen. Im Outliner ist zudem eine neue Collection entstanden («<em>WGTS_rig</em>»). Dabei handelt es sich um Datenstrukturen, welche für den Rig benötigt werden. Daher sollten die entsprechenden Objekte nicht gelöscht werden. Allerdings kann die Collection weiterhin deaktiviert bleiben. Der Meta-Rig als solches wird von nun an nicht mehr benötigt und kann ebenfalls in einer deaktivierten Collection versteckt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Charakter dem Rig zuweisen</p>
+</div></div><p>Nun kann der Charakter als Kind dem Rig hinzugefügt werden. Hierfür wird nacheinander das Mesh des Charakters und der Rig ausgewählt. Dabei sollte der Rig anschliessend das aktive Objekt sein. Sollte ein Charakter aus mehreren Teilen bestehen, so müssen alle Mesh-Teile des Charakters ausgewählt werden und zuletzt der Rig, damit dieser das aktive Objekt darstellt. Mittels der Tastenkombination {{ &lt; kdb Ctrl &gt;}} + {{ &lt; kdb P &gt;}} kann anschliessend das Menü «<em>Set Parent to</em>» geöffnet und die Option «<em>Armature Deform | with automatic Weights</em>» ausgewählt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Rig-Objekte</p>
+</div></div><p>Wenn nun der Rig ausgewählt und in den Pose-Mode gewechselt wird, kann der Charakter nun anhand der verschiedenen Formen innerhalb des Rigs posiert werden. In der Sidebar sind durch das Rigify-Add-on zwei neue Reiter unter «<em>Item</em>» erstellt worden: «<em>Rig Main Properties</em>» und «<em>Rig Layers</em>». Die verschiedenen Körperteile des Rigs werden unter dem Reiter «Rig Layers» aufgelistet. Dabei können einzelne Symbole ausgeblendet werden, damit nur die relevanten Formen des Rigs angezeigt werden.</p>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_45/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Der Charakter mit dem dazugehörigen Rig.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Arten von Rig-Strukturen</p>
+</div></div><p>Für einzelne Körperteile werden mehrere Elemente in den Rig-Layers aufgelistet, beispielsweise für die Arme. In Klammern werden die Unterschiede dieser Formen beschrieben.</p>
+<ul>
+<li><p>«<strong><em>IK</em></strong>»: Die Abkürzung IK steht für Inverse Kinematics. Dies stellt eine alternative Form zur bisher verwendeten Forward Kinematics dar. Strukturen im Rig, welche sich der Inverse Kinematics bedienen, werden jeweils in roter Farbe darge stellt.</p></li>
+<li><p>«<strong><em>FK</em></strong>»: Die Abkürzung FK steht für Forward Kinematics. Dies stellt eine alternative Form zur Inverse Kinematics dar. Strukturen im Rig, welche sich der Forward Kinematics be dienen, werden jeweils in grüner Farbe dargestellt.</p></li>
+<li><p>«<strong><em>Tweak</em></strong>»: Die Strukturen aus der Kategorie Tweak werden für genauere Anpassungen verwendet. Die entsprechen den Elemente werden in blauer Farbe dargestellt.</p></li>
+</ul>
 <div class="tippbox">
 <div class="tippbox-header">
 <div class="tippbox-icon">
@@ -405,174 +466,33 @@ ul.task-list li input[type="checkbox"] {
 <p>Weiterführende Informationen</p>
 </div>
 <div class="tippbox-body">
-<p>Wenn beim Öffnen eines neuen Blender-Projektes die Auswahl «<em>Sculpting</em>» verwendet wird, erstellt Blender ein neues File mit einer Kugel als Startobjekt, welche im Sculpt-Mode bearbeitet werden kann. Bei dieser Kugel handelt es sich um eine «<em>Quad Sphere</em>», welche die beste Grundlage für das Erstellen von Objekten mittels Sculpting darstellt.</p>
+<p>Bei der Forward Kinematics müssen alle Knochen und Gelenke einzeln posiert werden. Soll die Hand eines Charakters etwa eine bestimmte Position einnehmen, müssen die Schulter, der Oberarm, der Ellbogen und der Unterarm so angepasst und verschoben werden, damit die Hand am Schluss an der korrekten Position liegt. Mittels Inverse Kinematics kann lediglich die Hand verschoben werden und die anderen Knochen und Gelenke werden automatisch ausgerichtet. Dies erleichtert den Prozess des Posierens deutlich.</p>
 </div>
-</div>
-</section>
-<section id="retopology" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="retopology">Retopology</h3>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Sculpting-Modelle sind nicht für weitere Bearbeitungen geeignet</p>
-</div></div><p>Wenn Charaktere im Sculpt-Mode erstellt werden, weisen diese in der Regel eine sehr hohe Anzahl Vertices auf, die durch die Bearbeitung mittels Sculpting entstehen. Ein solches Mesh ist nicht geeignet zum Animieren. Aus diesem Grund wird das gesculptete Mesh als Vorlage verwendet, um ein neues Mesh zu verwenden, das eine praktischere Gitterstruktur als Topologie aufweist. Dieser Prozess wird als Retopology bezeichnet.</p>
-<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_41/1_Plane.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Eine Plane zur Vorbereitung des Retopology-Prozesses.
-</figcaption>
-</figure>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Mesh für Retopology vorbereiten</p>
-</div></div><p>Das skulpturierte Mesh stellt beim Retopology jeweils das Base-Mesh dar. Anschliessend wird ein neues Mesh, welches lediglich aus einer Fläche besteht, hinzugefügt. Hierfür kann etwa im «<em>Add</em>»-Menü die Option «<em>Mesh | Plane</em>» ausgewählt werden. Diese Fläche wird anschliessend im Edit-Mode vor dem Base-Mesh platziert und um einen Meter entlang der X-Achse verschoben, sodass die beiden linken Vertices der Fläche genau auf dem Nullpunkt der X-Achse liegen. Hierfür muss die Plane zudem um 90 Grad rotiert werden. Anschliessend wird ein Mirror-Modifier hinzugefügt, um das Mesh entlang der X-Achse zu spiegeln. Das Hinzufügen des Mirror-Modifiers erübrigt sich bei einem nicht-symmetrischen Mesh. In diesem Falle müssen beide Seiten individuell erstellt werden. Zusätzlich kann ein Subidivision-Surface-Modifier hinzugefügt werden um die Flächen zu unterteilen.</p>
+<p>Inverse Kinematics</p>
+</div></div><p>Der grosse Vorteil des Rigs, welcher mit Rigify erstellt wurde, besteht darin, dass Inverse Kinematics zur Verfügung steht. Per Default ist dementsprechend auch das gesamte Skelet auf Inverse Kinematics ausgerichtet. Daher können alle Elemente der Forward Kinematics deaktiviert werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Shrinkwrap-Modifier</p>
-</div></div><p>Anschliessend kann dem Mesh ein «<em>Shrinkwrap</em>»-Modifier hinzugefügt werden. Dieser ist in der Modifier-Auswahl in der dritten Spalte unter «<em>Deform</em>» zu finden. Mittels dieses Modifiers werden die Vertices eines Objektes direkt auf ein anderes Objekt projiziert. Hierfür muss unter «<em>Target</em>» das entsprechende Objekt eingestellt werden.</p>
-<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_41/2_Plane_Modified.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Eine Plane mit Mirror-, Shrinkwrap- und Subidivision-Surface-Modifier.
-</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Einstellung der Modifier</p>
-</div></div><p>Um die neu erstellte Fläche auf das Base-Mesh zu übertragen, sollte das Base-Mesh als Target im Shrinkwrap-Modifier ausgewählt werden. Dadurch wird die Fläche des neuen Meshes direkt auf die Fläche des Base-Meshes projiziert. Damit die jeweiligen Veränderungen der Modifier im Edit-Mode betrachtet werden können, empfiehlt es sich, bei den drei Modifiern die Einstellung «<em>On Cage</em>» und «<em>Edit Mode</em>» zu aktivieren.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Objekt immer im Vordergrund darstellen lassen</p>
-</div></div><p>Teilweise entsteht das Problem, dass das Retopology-Mesh nicht klar sichtbar ist, weil das Base-Mesh darüber dargestellt wird. Im Properties-Editor kann innerhalb des Reiters «<em>Object Properties</em>» der Reiter «<em>Viewport Display</em>» ausgewählt werden. Dort können verschiedene Darstellungsoptionen des Objektes im 3D-Viewport-Editor ausgewählt werden. Durch das Aktivieren der Option «<em>In Front</em>» wird das aktuell ausgewählte Objekt immer vor anderen Objekten dargestellt, selbst wenn sich die anderen Objekte eigentlich zwischen der eigenen Ansicht und dem ausgewählten Objekt befinden. Diese Option sollte aktiviert werden, während das Retopology-Mesh ausgewählt ist.</p>
-<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_41/3_Mesh_Extrusion.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;3: Die Edges werden schrittweise extrudiert.
-</figcaption>
-</figure>
-</div>
-<div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_41/4_Mesh_Head.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4: Besondere körperliche Merkmale, wie etwa die Augen, werden mit einer Schlaufe von Faces umreandet.
-</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Snap-Funktion aktivieren</p>
-</div></div><p>Anschliessend kann das Retopology-Mesh im Edit-Mode bearbeitet werden. Hierfür wird Schritt für Schritt eine neue Fläche aus dem Retopology-Mesh erstellt, indem die einzelnen Edges der bestehenden Faces extrudiert werden, und so das Base-Mesh mit einer klaren Struktur nachgebildet. Damit die extrudierten Faces einfacher platziert werden können, sollte hierfür die Snap-Funktion im Header des 3D-Viewport-Editors aktiviert und beispielsweise auf die Einstellung «<em>Faces</em>» gesetzt werden.</p>
-<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_41/6_Object_Head.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5: Der Kopf nach dem Retopology-Prozess.
-</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Was bewirken die Modifier?</p>
-</div></div><p>Durch den Mirror-Modifier werden Bearbeitungen des Charakters auf der einen Seite der X-Achse direkt auch auf die andere Seite der X-Achse angewendet. Durch den Shrinkwrap-Modifier werden diese Faces direkt an die Form des Base-Meshes angepasst. Da zuvor noch der Subdivision-Surface-Modifier platziert wurde, kann der Shrinkwrap-Modifier mehr Vertices an das Base-Mesh anpassen und so dessen Verformungen etwas besser berücksichtigen.</p>
-<p>Mit diesem Vorgang kann anschliessend der ganze Charakter mit einer sinnvollen Gitterstruktur extrudiert werden. Idealerweise werden die Vertices im Retopology-Mesh so angepasst, dass sie jeweils gewollte Einkerbungen (beispielsweise bei Augenringen) mit abdecken. Zudem sollten Aspekte wie Mund, Nase, Ohren und Augen idealerweise kreisförmig geschlossen sein. Ausserdem sollte beim Retopology darauf geachtet werden, dass Körperbereiche, welche sich stärker verformen (beispielweise, Ellbogen, Knie, Füsse, Hände, Schultern, Gesicht), etwas mehr Vertices aufweisen als Körperteile, welche weniger stark verformbar sein sollten.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Probleme beim Retopology-Prozess</p>
-</div></div><p>Der Retopology-Prozess ist dabei sehr aufwändig. Zudem kann es manchmal zu Schwierigkeiten kommen, wenn etwa mehrere Reihen von Faces miteinander verknüpft werden müssen, diese aber unterschiedliche Anzahl Faces aufweisen. Zudem sollte auch hier darauf geachtet werden, wenn möglich nur Quads zu verwenden.</p>
-</section>
-<section id="sculpt-mesh-neu-berechnen-lassen" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="sculpt-mesh-neu-berechnen-lassen">Sculpt-Mesh neu berechnen lassen</h3>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Remesh-Funktionen</p>
-</div></div><p>Blender beinhaltet zwei Möglichkeiten, wie ein Sculpt-Mesh in seinem Aufbau neu berechnet werden kann. Zum einen kann dem skulpturierten Mesh ein Remesh-Modifier hinzugefügt werden, zum anderen kann ein Mesh im Object-Data-Properties-Reiter des Properties-Editors unter «<em>Remesh</em>» neu berechnet werden. Im Remesh-Menü stehen dabei verschiedene Berechnungsmethoden zur Verfügung. So kann entweder Voxel-basiert das Mesh neu erstellt werden oder basierend auf den Quads der Faces («<em>QuadriFlow Remesh</em>»).</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Nachteile von Remesh</p>
-</div></div><p>Der Nachteil dieser Methode ist allerdings die geringe Kontrolle. Details im Mesh können nur automatisch ausgearbeitet werden und die resultierende Mesh-Struktur entspricht nicht immer den eigenen Vorstellungen. Zudem werden Symmetrien beim Remesh nicht berücksichtigt.</p>
+<p>Zwischen Forward und Inverse Kinematics wechseln</p>
+</div></div><p>Möchte man trotzdem Forward Kinematics für ein Körperteil verwenden, können stattdessen die Strukturen in grüner Farbe verwendet werden. Im Bereich «<em>Rig Main Properties</em>» muss allerdings der Wert für «IK-FK» auf 1 gesetzt werden. Mittels dieses Wertes wird definiert, ob das aktuell ausgewählte Körperteil mittels Inverse Kinematics oder Forwards Kinematics bearbeitet werden soll. Für eine Bearbeitung mit Inverse Kinematics wird der Wert 0 angegeben, für eine Bearbeitung mit Forward Kinematics wird der Wert 1 angegeben.</p>
 </section>
 </section>
-<section id="direktes-modellieren-eines-charakters" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="direktes-modellieren-eines-charakters">Direktes Modellieren eines Charakters</h2>
+<section id="charakter-rigs-und-charakter-animation-mit-mixamo" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="charakter-rigs-und-charakter-animation-mit-mixamo">Charakter-Rigs und Charakter-Animation mit Mixamo</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Charaktere im Edit-Mode erstellen</p>
-</div></div><p>Eine weitere Möglichkeit, um Charaktere zu erstellen, besteht darin, dass das Mesh direkt im Edit-Mode zu einer Figur verformt wird. Dies ist allerdings ebenfalls mit einem gewissen Aufwand verbunden. Dabei ist zu empfehlen, dass mehrere Fenster des 3D-Viewport-Editors geöffnet werden und diese jeweils dasselbe Objekt aus unterschiedlichen Perspektiven darstellen. Dadurch können Veränderungen schnell aus unterschiedlichen Perspektiven betrachtet werden. Auch die Verwendung von Vorlagen kann helfen, um ein Mesh nachzubilden.</p>
+<p>Mixamo</p>
+</div></div><p>Eine weitere Option, um den Rig für einen Charakter zu erstellen, stellt die Online-Plattform <a href="https://www.mixamo.com/#/" class="uri">https://www.mixamo.com/#/</a>. Dabei handelt es sich um ein Tool von Adobe – dementsprechend muss ein Adobe-Account erstellt oder verwendet werden. In Mixamo müssen lediglich ein paar Markierungen für verschiedene Körperteile auf dem Objekt hinzugefügt werden, anschliessend generiert Mixamo automatisch einen Rig für den Charakter.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Erstellung von Charakteren mittels Skin-Modifier</p>
-</div></div><p>Eine etwas einfachere Option zur Erstellung von Charakteren ergibt sich zudem durch die Verwendung des Skin-Modifiers. Hierfür wird ein neues Objekt erstellt und alle dessen Vertices in deren Mittelpunkt verbunden, indem im Edit-Mode mit der Taste <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> alle Vertices ausgewählt werden und mit der Taste <kbd aria-hidden="true">M</kbd><span class="visually-hidden">M</span> das Merge-Menü geöffnet wird. Darin kann anschliessend die Option «<em>Merge | At Center</em>» ausgewählt werden. Anschliessend kann dem Objekt ein Mirror-Modifier, gefolgt von einem Skin-Modifier, hinzugefügt werden.</p>
+<p>Charakter herunterladen</p>
+</div></div><p>Der Charakter mit dem dazugehörigen Rig kann anschliessend als 3D-Datei heruntergeladen werden. Zusätzlich kann dem Charakter eine Animation hinzugefügt werden, welche Mixamo aus einer Animations-Bibliothek zur Verfügung stellt.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Modifier vorbereiten</p>
-</div></div><p>Der Mirror-Modifier spiegelt nun die Vertices entlang der X-Achse und der Skin-Modifier erstellt eine Oberfläche um den einzelnen Vertex herum. Wichtig ist dabei, dass die Funktion «<em>Clipping</em>» im Mirror-Modifier aktiviert ist, damit die Vertices nicht über den Nullpunkt der X-Achse verschoben werden können. Dadurch ist es allerdings nicht mehr möglich, Vertices vom Nullpunkt der X-Achse zu entfernen. Dementsprechend muss die Einstellung «<em>Clipping</em>» kurzzeitig deaktiviert werden, um einen Vertex vom Nullpunkt der X-Achse zu entfernen. Zudem sollte die Option «<em>Merge</em>» aktiviert sein, damit die Vertices am Nullpunkt der X-Achse miteinander verbunden werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Charakter anhand eines Vertex erstellen</p>
-</div></div><p>Mit diesen Einstellungen kann nun mittels Vertices und Edges ein Gerüst für einen Charakter erstellt werden. Indem die Skalierung der Vertices erhöht oder reduziert wird, kann die Breite verschiedener Körpersegmente, welche durch den Skin-Modifier erzeugt werden, bearbeitet werden. Diese Skalierung der Vertices kann mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> vorgenommen werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Kanten aus Charakter entfernen</p>
-</div></div><p>Der Charakter wird dabei kantig erstellt. Durch das Hinzufügen eines Subdivision-Surface-Modifiers werden diese Kanten geglättet, wobei die Anzahl Subdivisions in den meisten Fällen noch auf den Wert 2, wenn nicht sogar 3, erhöht werden sollte. Zudem kann im Skin-Modifier die Option «<em>Smooth Shading</em>» aktiviert werden. Dadurch werden noch vorhandene Kanten abgerundet dargestellt. Die Aktivierung des Smooth-Shadings unter «<em>Object | Shade Smooth</em>» führt zu keiner Veränderung, wenn die Option «<em>Smooth Shading</em>» im Skin-Modifier nicht aktiviert wurde.</p>
-<div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_41/7_Vergleich_Remesh.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6: Ein Mesh, sowie deren Vertcies im Vergleich zwischen dem gesculpteten original, einer Bearbeitung mit Quadriflow-Remesh und einer Bearbeitung mit dem Remesh-Modifier.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="alternative-tools-zur-erstellung-von-charakteren" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="alternative-tools-zur-erstellung-von-charakteren">Alternative Tools zur Erstellung von Charakteren</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>MakeHuman</p>
-</div></div><p>Die Erstellung von realistischen menschlichen Charakteren ist komplex aufgrund der vielen Details des menschlichen Körpers. Es gibt allerdings einige praktische alternative Programme, welche eine schnelle Erstellung von menschlichen Charakteren ermöglichen. Das Programm «<em>MakeHuman</em>» stellt eine solche Applikation dar, welche ursprünglich als Add-on für Blender erstellt wurde, mittlerweile aber als eigenständiges Programm zur Verfügung gestellt wird.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Download von MakeHuman</p>
-</div></div><p>Bei MakeHuman handelt es sich ebenfalls um ein kostenfreies Programm. Auf der Website <a href="http://www.makehumancommunity.org/" class="uri">http://www.makehumancommunity.org/</a> kann das Programm heruntergeladen werden. Zudem gibt es auch Plug-ins für MakeHuman und Add-ons für Blender. Durch diese kann unter anderem ein schneller Transfer der in MakeHuman erstellten Avatare in Blender ermöglicht werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Funktionsweise von MakeHuman</p>
-</div></div><p>Der Vorteil von MakeHuman besteht darin, dass sich leicht sehr unterschiedliche Charaktere erstellen lassen. Diese werden anhand verschiedener Parameter erstellt, welche unterschiedliche Körpereigenschaften der dreidimensionalen Charaktere verändern. Zudem werden Charaktere mit Texturen und Materialien versehen und können auch als 3D-Objekte aus dem Programm exportiert werden.</p>
-</section>
-<section id="die-rolle-der-kleider" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="die-rolle-der-kleider">Die Rolle der Kleider</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Kleider als Duplikat des Körpers</p>
-</div></div><p>Charaktere tragen oftmals Kleidung. Simplere Kleidungsstücke können erstellt werden, indem ein Duplikat des Charakters erstellt wird und von diesem Objekt die Flächen ausgewählt werden, welche ein Kleidungsstück abdecken. Für einen Pullover würden demnach die Vertices des Torsos und der Arme ausgewählt. Die restlichen Vertices werden gelöscht. Dieser Pullover kann anschliessend etwas grösser skaliert werden und mit einer Dicke versehen werden. Dadurch erhält man bereits eine simple Form eines Kleidungsstückes.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Kleider ohne darunterliegendes Charakter-Mesh</p>
-</div></div><p>In dem soeben beschriebenen Fall würden die Kleidungsstücke als Duplikat des Körpers erstellt, welches anschliessend einen Teil des Charakter-Meshes überdeckt. In manchen Fällen werden anschliessend die Vertices des Körpers, welche unterhalb der Kleidung liegen und somit nicht sichtbar sind, gelöscht. Dadurch entsteht ein Charakter-Mesh, welches nur die sichtbaren Teile des Körpers beinhaltet, und ein Mesh für die Kleidung, welches die fehlenden Teile des Körpers überdeckt.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Vorteile durch das Entfernen abgedeckter Vertices</p>
-</div></div><p>Der Verzicht auf die fehlenden Körperteile hat mehrere Vorteile. Zum einen wird damit die Anzahl Vertices, welche der Charakter benötigt, reduziert. Zum anderen kann es beim Posieren oder bei der Animation von Charakteren vorkommen, dass durch Kleidung abgedeckte Körperteile sich so verformen, dass sie teilweise durch die Kleidung hindurchschauen. Wenn diese Körperteile jedoch fehlen, kann das Problem verhindert werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Kleider und Charakter als verbundene Objekte</p>
-</div></div><p>Die letzte Option zum Umgang mit Kleidern besteht darin, dass das Mesh so gestaltet wird, dass sich ein fliessender Übergang zwischen den Kleidern und den sichtbaren Körperteilen ergibt und die unsichtbaren Körperteile entfernt werden. Dabei sind die Körperteile und die Kleider direkt mit Vertices verbunden und bilden somit ein verbundenes Objekt.</p>
+<p>Import/Export</p>
+</div></div><p>Um einen Charakter aus Blender in Mixamo verwenden zu können, muss dieser als 3D-Datei exportiert werden - entweder als .fbx- oder .obj.-Datei. Hierfür muss der Charakter ausgewählt werden und unter «<em>File | Export</em>» die Option «<em>FBX (.fbx)</em>» oder «<em>Wavefront (.obj)</em>» gewählt werden. Anschliessend kann ein Speicherort für die entsprechende 3D-Datei ausgewählt werden. Über die Einstellung «<em>File | Import</em>» kann anschliessend der Charakter, welcher mit Mixamo geriggt und allenfalls auch animiert wurde, wieder importiert werden.</p>
 
 
 </section>

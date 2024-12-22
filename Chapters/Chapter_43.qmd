@@ -1,0 +1,39 @@
+---
+title: "43. Was ist Rigging?"
+editor: visual
+---
+
+::: column-margin
+Posen als verschiedene Mesh-Zustände
+:::
+
+Ein 3D-Charakter kann im Unterschied zu anderen Objekten – beispielsweise einem Stuhl – verschiedene Posen einnehmen. Dadurch können Informationen, beispielsweise über die aktuelle Handlung des Charakters oder dessen scheinbare Stimmung vermittelt werden. Jede dieser Posen stellt dabei einen spezifischen Zustand des Charakter-Meshes dar. Es wäre möglich, das Mesh für eine Pose abzuändern und verschiedene Meshes für verschieden Posen zu erstellen (z.B. ein Mesh für eine winkende Pose eines Charakters, ein Mesh für eine nachdenkliche Pose eines Charakters, usw.). Dies führt allerdings dazu, dass es für jede Pose ein einzelnes Mesh braucht. Zudem sind dadurch auch keine Animationen des Meshes möglich.
+
+::: column-margin
+Rigging
+:::
+
+Um diese Probleme zu lösen, können den Charakteren – aber auch generell Meshes, welche verschiedene Posen einnehmen können – mit einem Rigging versehen werden. Dabei wird ein Gerüst erstellt, anhand dessen sich das Mesh verformen lässt. Dieses Gerüst stellt ein Skelet dar, mit verschiedenen Knochen, anhand deren sich das Mesh verformen lässt.
+
+::: column-margin
+Skelet
+:::
+
+Abbildung 1 zeigt einen Charakter mit einem dazugehörigen Skelet. Indem der Charakter anschliessend diesem Skelet zugewiesen wird, kann er anhand der einzelnen Knochen bewegt und posiert werden.
+
+![Das Mesh eines Charakters, mit einem dazugehörigen Skelet für das Rigging.](Images/Chapter_43/Mesh eines Charakters.png){#fig-1_1 fig-align="left"}
+
+::: column-margin
+Knochen
+:::
+
+Die einzelnen Knochen des Skelets werden als Oktaeder – ein Objekt mit vier Flächen – dargestellt. Am Anfang und am Ende des Oktaeders befinden sich je eine Kugel, welche den Kopf oder den Schwanz des Oktaeders darstellen. Diese Kugeln werden jeweils verwendet, um Gelenke darzustellen.
+
+![Ein Knochen.](Images/Chapter_43/Knochen.png){#fig-1_2 fig-align="left"}
+
+
+::: column-margin
+Knochen als Grundlage für Verformungen
+:::
+
+Die Knochen ermöglichen eine Verformung des Meshes entlang der Länge der jeweiligen Knochen. Der Knochen selbst, kann allerdings nicht verbogen werden. Dies entspricht auch den Bewegungsmustern von realen Menschen. Menschliche Verbiegungen ergeben sich jeweils an den Gelenken zwischen mehreren Knochen und werden dann entlang der Knochen ausgerichtet. Ein Knochen selbst wird allerdings (zumindest bei gesunden Bewegungen) nicht verformt.

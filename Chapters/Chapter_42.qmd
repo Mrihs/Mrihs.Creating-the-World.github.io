@@ -381,7 +381,7 @@ Particle-Edit-Mode
 
 Durch das neu hinzugefügte Haar-Partikelsystem ist im 3D-Viewport-Editor nun ein neuer Bearbeitungsmodus verfügbar. Statt des Object-Modes wird deshalb nun der Particle-Edit-Mode verwendet. Mit dieser Option können die Haare eines Objektes innerhalb des 3D-Viewport-Editors bearbeitet werden. Durch diese Bearbeitung gehen allerdings einige Einstellungsmöglichkeiten im Particle-Properties-Editor verloren.
 
-![Icons in der Toolbar des Particle-Edit-Modes](Images/Chapter_42/20_Toolbar_Particles_Editor.png){#fig-1_19 fig-align="left"}
+![Icons in der Toolbar des Particle-Edit-Modes.](Images/Chapter_42/20_Toolbar_Particles_Editor.png){#fig-1_19 fig-align="left"}
 
 ::: column-margin
 Speichern nicht vergessen

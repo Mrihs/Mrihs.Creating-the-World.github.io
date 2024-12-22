@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>46. Vom Bild zur Animation – Creating the World</title>
+<title>47. Animationen erstellen – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -39,6 +39,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -345,9 +347,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#was-sind-animationen" id="toc-was-sind-animationen" class="nav-link active" data-scroll-target="#was-sind-animationen">Was sind Animationen?</a></li>
-  <li><a href="#framerate" id="toc-framerate" class="nav-link" data-scroll-target="#framerate">Framerate</a></li>
-  <li><a href="#animationseinstellungen-in-blender-definieren" id="toc-animationseinstellungen-in-blender-definieren" class="nav-link" data-scroll-target="#animationseinstellungen-in-blender-definieren">Animationseinstellungen in Blender definieren</a></li>
+  <li><a href="#keyframes-erstellen" id="toc-keyframes-erstellen" class="nav-link active" data-scroll-target="#keyframes-erstellen">Keyframes erstellen</a></li>
   </ul>
 </nav>
     </div>
@@ -356,7 +356,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">46. Vom Bild zur Animation</h1>
+<h1 class="title">47. Animationen erstellen</h1>
 </div>
 
 
@@ -373,31 +373,46 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="was-sind-animationen" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="was-sind-animationen">Was sind Animationen?</h2>
+<section id="keyframes-erstellen" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="keyframes-erstellen">Keyframes erstellen</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Veränderungen können in Bildern lediglich angedeutet werden</p>
-</div></div><p>Bislang wurde lediglich die Erstellung von statischen Bildern betrachtet. Das Bild ist dann jeweils ein Abbild einer Szene. Das einzelne Bild als solches ermöglicht keine Veränderung der Objekte. So ist es etwa nicht möglich, in einem Bild zu sehen, wie sich jemand bewegt, da das Bild statisch aufgebaut ist. Anhand verschiedener Posen oder Annahmen in Bildern kann allerdings eine Bewegung angedeutet werden, welche vor oder nach dem Bild vollzogen wird. Die Bewegung selbst ist dabei allerdings nie im Bild sichtbar.</p>
+<p>Animation verläuft von Situation zu Situation</p>
+</div></div><p>Eine Animation stellt jeweils eine Veränderung von einer Situation zu einer anderen Situation dar. Beispielsweise befindet sich ein Objekt zunächst an einer bestimmten Position A und bei einem späteren Frame an einer anderen Position B. Dementsprechend stellt die erste Position A die Ausgangssituation dar und im Verlaufe der Animation wird das Objekt zur Position B verschoben. Die Animation verläuft also von der Position A beim Beginn der Animation zu Position B beim Ende der Animation.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Animationen beinhalten Veränderungen</p>
-</div></div><p>Anders als bei statischen Bildern weisen Animationen eine Veränderung von Elementen innerhalb einer Szene auf. Eine Bewegung wird dabei nicht angedeutet oder in einem Bild suggeriert, sondern ist direkt als solche sichtbar. Dies hat zur Folge, dass man sich keine Gedanken machen muss, wie man innerhalb eines einzigen Bildes einen Ablauf darstellen will.</p>
+<p>Keyframes geben Situationen vor</p>
+</div></div><p>Ein solcher Gedankengang ist jeweils zentral bei der Erstellung von Animationen. Es wird jeweils eine Ausgangslage zum Beginn der Animation definiert und eine Endsituation zum Ende der Animation. Hierfür werden die Frames, bei denen sich die Objekte an der Ausgangs- und Endlage befinden, mit sogenannten Keyframes versehen. Keyframes stellen Frames dar, welche eine bestimmte Vorgabe für eine Animation aufweisen – beispielsweise, dass sich ein Objekt an einer Stelle befindet oder dass es eine bestimmte Rotation aufweist. Die Animation verläuft anschliessend automatisch von einem Keyframe zum nächsten Keyframe ab, wobei die Frames die dazwischenliegenden Animationsschritte automatisch darstellen.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Animationen als Anreihung von einzelnen Bildern</p>
-</div></div><p>Tatsächlich sind Animationen auch Bilder, respektive die Abfolge mehrerer Bilder. Indem diese Bilder schnell aneinandergereiht werden, entsteht der Eindruck, dass es sich um eine Animation handelt. Dieses Prinzip entspricht etwa demjenigen eines Daumenkinos.</p>
-</section>
-<section id="framerate" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="framerate">Framerate</h2>
+<p>Keyframe hinzufügen</p>
+</div></div><p>Um dies zu veranschaulichen, kann eine neue Szene in Blender erstellt werden. Per Default sollte der Standardwürfel im Mittelpunkt der Welt festgelegt und der erste Frame ausgewählt worden sein. Um nun einen Keyframe für die Position des Standardwürfels festzulegen, kann die Sidebar mit der Taste <kbd aria-hidden="true">N</kbd><span class="visually-hidden">N</span> geöffnet werden. Sobald der Standardwürfel ausgewählt wurde, wird nun im Reiter «<em>Location</em>» dessen Position angezeigt. Wenn der Mauszeiger nun auf den Positionswerten in diesem Reiter platziert wurde, kann die Taste <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> gedrückt werden. Dadurch wird beim aktuell ausgewählten Frame ein Keyframe mit der Position des Objektes erstellt.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Framerate beschreibt die Anzahl Bilder pro Sekunde</p>
-</div></div><p>Die Anzahl Bilder, welche während einer Sekunde in einer Animation dargestellt werden, wird als Framerate bezeichnet. Wenn in einer Animation innerhalb von einer Sekunde 24 Bilder angezeigt werden, spricht man dementsprechend von einer Framerate von 24 «frames per second» (fps). Die Frames beschreiben dabei die einzelnen Bilder, welche während dieser Sekunde dargestellt werden. 24 fps werden in der Videobranche als Standard angesehen.</p>
+<p>Gelbe Markierung signalisiert Keyframes beim aktuellen Frame</p>
+</div></div><p>Wenn ein Wert in Blender mit einem Keyframe versehen wurde, wird dies jeweils dadurch angezeigt, dass das entsprechende Feld für einen Wert mit einer Hintergrundfarbe dargestellt wird. In diesem Beispiel sollten die Werte für die Position mit einer gelben Hintergrundfarbe dargestellt werden. Damit wird signalisiert, dass während des aktuellen Frames ein Keyframe gesetzt wurde. Zusätzlich erscheint im Timeline-Editor beim aktuellen Frame ein gelbes Viereck. Dadurch wird signalisiert, dass das aktuell ausgewählte Objekt bei diesem Frame auf der Zeitachse einen Keyframe beinhaltet.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_47/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Die Markierung der Positionswerte, welche beim aktuellen Frame mit einem Keyframe versehen wurden.
+</figcaption>
+</figure>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Bildwiederholrate</p>
-</div></div><p>Unabhängig davon, wie viele Frames eine Animation beinhaltet, kann ein Bildschirm nur eine gewisse Anzahl Bilder pro Sekunde erzeugen. Die Anzahl dieser Bilder, die ein Bildschirm erzeugen kann, wird als Bildwiederholrate bezeichnet und mit der Einheit Hertz angegeben. Eine Bildwiederholrate von 120 Hertz bedeutet dabei, dass 120 Bilder pro Sekunde erzeugt werden können. Einige Geräte verfügen dabei über Funktionen, mit denen sie Zwischenbilder berechnen können. Dadurch werden zusätzliche Frames erzeugt, wenn beispielsweise eine Animation weniger Frames in einer Sekunde beinhaltet, als der Bildschirm darstellen könnte.</p>
+<p>Grüne Markierung von Werten</p>
+</div></div><p>Wenn nun im Timeline-Editor ein anderer Frame ausgewählt wird (beispielsweise der Frame 50), führt dies dazu, dass sich die farbliche Markierung der Positionswerte des Würfels in der Sidebar verändert. Statt mit einer gelben Farbe werden die Werte nun in einer grünen Farbe markiert. Dadurch wird signalisiert, dass dieser Wert im Rahmen eines Keyframes definiert wurde.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Organe Markierung von Werten</p>
+</div></div><p>Sollte nun die Position des Würfels verändert werden – entweder, indem er im 3D-Viewport-Editor verschoben wird, oder, indem die Werte für die Position in der Sidebar verändert werden – werden die Werte für die Position in einer orangen Farbe dargestellt. Damit soll signalisiert werden, dass die Positionswerte einen Keyframe auf der Zeitachse beinhalten, aber beim aktuellen Frame ein anderer Wert eingestellt wurde. Wenn nun der Mauszeiger wieder über die Werte für die Position in der Sidebar gelegt und erneut die Taste <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> gedrückt wird, erscheint eine gelbe statt einer orangen Markierung bei diesen Werten. Damit wird signalisiert, dass die nun eingestellte Position ebenfalls als Keyframe beim aktuell ausgewählten Frame abgespeichert wurde.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Animation wird automatisch zwischen Keyframes erstellt</p>
+</div></div><p>Nun sollte es zwei Keyframes für die Position geben, welche im Timeline Editor angezeigt werden. Wenn nun Frames zwischen den beiden Keyframes ausgewählt werden, wird der Würfel im 3D-Viewport-Editor an einer Position zwischen der Aus gangsposition und der Endposition liegen. Blender verschiebt den Wür fel automatisch über die Dauer der Frames zwischen den beiden Keyframes von einer Position zur anderen. Wenn die Animation nun abgespielt wird (entweder mit der -Taste oder der Tatenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">Space</kbd><span class="visually-hidden">Space</span>), läuft die Animation im 3D-Viewport-Editor ab und die Bewegung des Würfels sollte angezeigt werden. Indem der Wert des Ende-Frames in der Timeline auf den zweiten Keyframe gesetzt wird, kann zudem eingestellt werden, dass lediglich die erstellte Bewegungsanimation wiederholt wird.</p>
 <div class="tippbox">
 <div class="tippbox-header">
 <div class="tippbox-icon">
@@ -406,32 +421,13 @@ ul.task-list li input[type="checkbox"] {
 <p>Weiterführende Informationen</p>
 </div>
 <div class="tippbox-body">
-<p>Teilweise wird die Framerate bei Produkten zusammen mit der Bildauflösung angegeben. Dabei wird die Bildauflösung mit der vertikalen Anzahl Pixel angegeben (beispielsweise 2160 p), gefolgt von der Framerate (beispielsweise 30). Die Bezeichnung 2160p30 würde dementsprechend bedeuten, dass in der vertikalen Ausrichtung 2160 Pixel angezeigt werden und die Framerate 30 fps beträgt.</p>
+<p>In der Timeline werden jeweils die Keyframes der ausgewählten Objekte angezeigt. Wenn kein Objekt ausgewählt ist, werden auch keine Keyframes angezeigt. Sollten also bereits gesetzte Keyframes plötzlich verschwunden sein, sollte überprüft werden, ob das richtige Objekt ausgewählt wurde.</p>
 </div>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Framerate-Einbrüche bei EchtzeitRendering</p>
-</div></div><p>In Videos sind die Animationen jeweils vorgegeben und der Betrachter kann keinen aktiven Einfluss auf das Geschehen nehmen. Dementsprechend betrachten alle Nutzer dieselbe Abfolge von Einzel bilder, welche vorproduziert werden können. Bei anderen Medien wie etwa Videospielen werden unterschiedliche Bilder erzeugt, abhängig von Entscheidungen des Nutzers. In diesen Fällen muss jedes Bild in Echtzeit gerendert werden. Je nach Komplexität der Szenen und Hardware der benutzten Geräte kann es dabei zu Einbrüchen in der Framerate kommen.</p>
-</section>
-<section id="animationseinstellungen-in-blender-definieren" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="animationseinstellungen-in-blender-definieren">Animationseinstellungen in Blender definieren</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Default-Einstellungen</p>
-</div></div><p>Per Default werden in Blender 250 Frames im Rahmen einer Animation mit einer Framerate von 24 fps abgespielt. Im Timeline-Editor wird ein Zeitstrahl dargestellt, welcher diese 250 Frames von links nach rechts anordnet. Mithilfe eines blauen Markers wird signalisiert, welcher Frame gerade ausgewählt ist und im 3D-Viewport-Editor dargestellt wird.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Start- und End-Frame</p>
-</div></div><p>In der oberen rechten Ecke des Timeline-Editors wird angegeben, ab welchem Frame eine Animation beginnt und bis zu welchem Frame die Animation andauert. Im Feld «<em>Start</em>» lässt sich dabei der Start-Frame für eine Animation definieren und im Feld «<em>End</em>» der End-Frame für eine Animation. Durch eine Veränderung der Start- und End-Frames kann die Animationsdauer angepasst werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Frames auswählen</p>
-</div></div><p>Links neben dem Feld «<em>Start</em>» wird in einem zusätzlichen Feld der aktuell dargestellte Frame angegeben. Durch eine Veränderung dieser Zahl kann ein anderer Frame ausgewählt werden. Alternativ lässt sich auch durch ein Verschieben des blauen Markers in der Zeitleiste ein anderer Frame auswählen. Im 3D-Viewport-Editor wird zudem ebenfalls angezeigt, welcher Frame gerade dargestellt wird. Sofern die Viewport-Overlays aktiviert sind, wird in der linken oberen Ecke anhand einer Textinformation angegeben, welche Ansicht auf die Szene gerade verwendet wird. Darunter wird der aktuelle Frame in einer Klammer angegeben.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Framerate ändern</p>
-</div></div><p>Die Einstellung der Framerate für ein Blender-File lässt sich in den Output-Properties des Properties-Editors einstellen. Unter dem Reiter «<em>Format</em>» kann die Framerate ausgewählt werden. Dadurch wird allerdings lediglich angepasst, wie viele Frames Blender innerhalb einer Sekunde darstellen soll. Dies hat zur Folge, dass bereits erstellte Animationen schneller ablaufen, weil die Frames nun zeitlich schneller getaktet werden. Wenn dies verhindert werden soll, kann unter «<em>Frame Range</em>» und «<em>Time Stretching</em>» die Animation angepasst werden. Hierfür wird im Bereich «<em>Old</em>» die alte Frame rate angegeben und im Bereich «<em>New</em>» die neue Framerate. Dadurch werden anschliessend die bereits gesetzten Animationen umgerechnet.</p>
+<p>Keyframes im Timeline-Editor verschieben</p>
+</div></div><p>Die Keyframes, welche in der Timeline gesetzt werden, können jeweils mit dem Mauszeiger ausgewählt und verschoben werden. Ebenso können ausgewählte Keyframes mittels der Taste <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span> verschoben werden und mit einer Zahleneingabe um eine bestimmte Anzahl Frames versetzt werden. Zudem können die Abstände zwischen den Keyframes zum aktuellen Frame vergrössert oder verkleinert werden, indem die Taste <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> gedrückt wird.</p>
 <div class="rememberbox">
 <div class="rememberbox-header">
 <div class="rememberbox-icon">
@@ -440,8 +436,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Merke…</p>
 </div>
 <div class="rememberbox-body">
-<p>Eine Animation ergibt sich aus der schnellen Abfolge von einzelnen Bildern. Die Zeitspanne für ein Bild wird als Frame bezeichnet.</p>
-<p>Die Anzahl Bilder/Frames pro Sekunde wird als Framerate bezeichnet.</p>
+<p>Keyframes stellen Frames dar, bei denen bestimmte Vorgaben für Werte in einer Animation definiert werden.</p>
+<p>Bei Animationen werden automatisch die Zwischenschritte zwischen zwei Keyframes animiert.</p>
+<p>Keyframes können mit der Taste hinzugefügt werden.</p>
+<p>Keyframes für die ausgewählten Objekte werden im Timeline-Editor dargestellt und können dort verschoben werden.</p>
 </div>
 </div>
 

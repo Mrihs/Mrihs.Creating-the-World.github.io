@@ -108,6 +108,10 @@ website:
             text: Kapitel 41
           - href: Chapters/Chapter_42.qmd
             text: Kapitel 42
+          - href: Chapters/Chapter_43.qmd
+            text: Kapitel 43
+          - href: Chapters/Chapter_44.qmd
+            text: Kapitel 44
       - href: about.qmd
         icon: info-circle
         text: Über

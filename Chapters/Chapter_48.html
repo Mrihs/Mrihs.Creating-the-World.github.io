@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>30. Tutorial: Erstellen einer Düne – Creating the World</title>
+<title>48. Animationen verfeinern – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -355,12 +355,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#landschaft-erstellen" id="toc-landschaft-erstellen" class="nav-link active" data-scroll-target="#landschaft-erstellen">Landschaft erstellen</a></li>
-  <li><a href="#prozedurales-texturieren" id="toc-prozedurales-texturieren" class="nav-link" data-scroll-target="#prozedurales-texturieren">Prozedurales Texturieren</a></li>
-  <li><a href="#arbeiten-mit-der-color-ramp" id="toc-arbeiten-mit-der-color-ramp" class="nav-link" data-scroll-target="#arbeiten-mit-der-color-ramp">Arbeiten mit der Color-Ramp</a></li>
-  <li><a href="#wave-texture" id="toc-wave-texture" class="nav-link" data-scroll-target="#wave-texture">Wave-Texture</a></li>
-  <li><a href="#mix-rgb" id="toc-mix-rgb" class="nav-link" data-scroll-target="#mix-rgb">Mix RGB</a></li>
-  <li><a href="#prozedurales-texturieren-1" id="toc-prozedurales-texturieren-1" class="nav-link" data-scroll-target="#prozedurales-texturieren-1">Prozedurales Texturieren</a></li>
+  <li><a href="#beispiel-pendel" id="toc-beispiel-pendel" class="nav-link active" data-scroll-target="#beispiel-pendel">Beispiel Pendel</a></li>
+  <li><a href="#animationen-im-graph-editor-nachbearbeiten" id="toc-animationen-im-graph-editor-nachbearbeiten" class="nav-link" data-scroll-target="#animationen-im-graph-editor-nachbearbeiten">Animationen im Graph-Editor nachbearbeiten</a></li>
   </ul>
 </nav>
     </div>
@@ -369,7 +365,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">30. Tutorial: Erstellen einer Düne</h1>
+<h1 class="title">48. Animationen verfeinern</h1>
 </div>
 
 
@@ -386,171 +382,114 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="beispiel-pendel" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="beispiel-pendel">Beispiel Pendel</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Ziel dieses Tutorials</p>
-</div></div><p>Ziel dieses Tutorials ist die Erstellung einer Sanddüne. Hierfür wird zunächst mittels des A.N.T.Land-scape-Add-ons eine Landschaft erstellt und diese anschliessend im Shader-Editor mit einem Material versehen. Diesmal wird allerdings auf die Verwendung von Bilddateien zur Texturierung verzichtet.</p>
-<section id="landschaft-erstellen" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="landschaft-erstellen">Landschaft erstellen</h2>
+<p>Pendel-Datei</p>
+</div></div><p>In der Datei «<em>Pendel</em>» ist ein 3D-Modell eines Pendels vorzufinden. Das Ziel ist es, eine Animation zu erstellen, in der dieses Pendel von links nach rechts schwingt und wieder zurück. Diese Animation soll anschliessend unendlich oft wiederholt werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Mesh hinzufügen</p>
-</div></div><p>Als Erstes wird eine neue Landschaft hinzugefügt. Hierfür wird mit der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> das «<em>Add</em>»-Menü geöffnet und «<em>Mesh | Landscape</em>» ausgewählt. Dadurch erscheint ein neues Landschaftsobjekt in der Szene.</p>
+<p>Frame 0 auswählen</p>
+</div></div><p>Zunächst wird eine Position des Pendels zum Frame 0 definiert. Hierfür wird der Marker im Timeline-Editor auf den Frame 0 platziert. Anschliessend kann die Schwingung des Pendels zu diesem Frame erstellt werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Düne erstellen</p>
-</div></div><p>Bei dem Objekt soll es sich um eine Düne handeln. Praktischerweise gibt es hierfür bereits eine Voreinstellung. Im Dropdown-Menü «<em>Operator Presets</em>» kann die Option «<em>Dunes</em>» ausgewählt werden. Dadurch wird das Mesh zu einer Düne angepasst. Für dieses Tutorial wird zudem der «<em>Random Seed</em>» 64 ausgewählt und der Wert für den «<em>Falloff X</em>» und den «<em>Falloff Y</em>» auf 5 gesetzt. Die restlichen Einstellungen können in den Standardeinstellungen belassen werden. Damit ist das Mesh der Landschaft bereits erstellt.</p>
+<p>Pendel schwingen</p>
+</div></div><p>Der Ursprung des Pendel-Objektes befindet sich am Ende von dessen Schnur. Wenn die Rotation dieses Pendels im Object-Mode verändert wird, wird das Pendel dementsprechend um das Ende der Schnur gedreht. Dadurch kann zunächst eine Rotation des Pendels entlang der Y-Achse um 60 Grad definiert werden. Anschliessend kann der Mauszeiger über das Eingabefeld für die Rotation in der Sidebar platziert und die Taste <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> gedrückt werden, um den ersten Keyframe für die Rotation zu setzen.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Weiterführende Informationen</p>
+</div>
+<div class="tippbox-body">
+<p>Im Timeline-Editor kann unter «<em>View | Show Seconds</em>» eingestellt werden, dass statt der Anzahl Frames oberhalb der Timeline die Anzahl Sekunden angezeigt wird. Dadurch werden in der Timeline jeweils ganze Sekunden plus die Anzahl Frames der laufenden Sekunde angezeigt.</p>
+</div>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Material hinzufügen</p>
-</div></div><p>Als Nächstes geht es darum, dem Mesh ein Material zuzuweisen. Hierfür wird im Properties-Editor unter dem Material-Reiter auf die Schaltfläche «<em>New</em>» geklickt. Dies fügt ein neues Material hinzu und erstellt ebenso den benötigten Material-Slot für das Material. Damit die Änderungen am Material sichtbar sind, wird im 3D-Viewport-Editor auf den Material-Preview-Shading-Modus gewechselt.</p>
+<p>Zweiten Keyframe platzieren</p>
+</div></div><p>Das Pendel soll rund 1.5 Sekunden benötigen, um von der einen Seite zur anderen Seite zu schwingen. Die Animation beträgt 24 fps. Dementsprechend werden 1.5 x 24 Frames benötigt, bis das Pendel auf der anderen Seite angekommen ist. Deshalb wird der blaue Marker im Timeline-Editor nun auf Frame 36 platziert. In der Sidebar kann nun der Wert für die Rotation des Pendels entlang der Y-Achse auf -60 Grad gesetzt werden und dieser Wert mit der Taste <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> als Keyframe für Frame 36 hinzugefügt werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Shader-Editor öffnen</p>
-</div></div><p>Der nächste Schritt benötigt den Shader-Editor. Hierfür muss aus den Ecken des 3D-Viewport-Editors ein neuer Editor herausgezogen werden und der neue Editor zum Shader-Editor umgewandelt werden. Nun könnte im Internet nach Sand-Texturen gesucht werden und diese anhand der bereits bekannten Methoden dem Material hinzugefügt werden. Dieses Tutorial verzichtet allerdings auf die Verwendung von Bildmaterialen zur Erstellung von Texturen. Stattdessen werden sämtliche Texturen in Blender selbst generiert.</p>
+<p>Dritten Keyframe setzen</p>
+</div></div><p>Mit diesen Schritten wurde nun bereits die Schwingung des Pendels von links nach rechts animiert. Um die Schwingung von rechts nach links zu animieren, muss nun lediglich beim Keyframe 72 die Rotation der Y-Achse wieder auf 60 Grad gesetzt werden und dies als Keyframe eingespeichert werden. Alternativ kann allerdings auch im Timeline-Editor der erste Keyframe ausgewählt und mit der Tasten kombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">D</kbd><span class="visually-hidden">D</span> dupliziert und beim Frame 72 platziert werden.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Weiterführende Informationen</p>
+</div>
+<div class="tippbox-body">
+<p>Wenn die Aufnahme-Schaltfläche «Auto Keying» im Timeline-Editor aktiviert ist, werden alle Änderungen zum aktuellen Frame automatisch als Keyframe hinzugefügt. Dadurch müssen diese Änderungen nicht manuell als Keyframes definiert werden.</p>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Animation kopieren für Wiederholungen</p>
+</div></div><p>Die Animation des Pendels ist nun bereits mithilfe dieser drei Keyframes vollzogen worden. Allerdings wird diese Animation nun nicht wiederholt. Um eine Wiederholung zu erzielen, könnten nun immer mit einem Abstand von 72 Frames die Animationspunkte wiederholt werden. Es gibt allerdings eine elegantere Methode, um eine Wiederholung der Animation zu erzielen.</p>
 </section>
-<section id="prozedurales-texturieren" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="prozedurales-texturieren">Prozedurales Texturieren</h2>
+<section id="animationen-im-graph-editor-nachbearbeiten" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="animationen-im-graph-editor-nachbearbeiten">Animationen im Graph-Editor nachbearbeiten</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Noise als Grundlage</p>
-</div></div><p>Eine Düne besteht aus einer immensen Anzahl kleiner Sandpartikel. Diese wären in einer Textur als Ansammlung minimaler Punkte sichtbar – ähnlich einem rauschenden Bild. Innerhalb von Blender gibt es zwei Möglichkeiten, um einen solchen Effekt zu erzielen.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Noise-Textur</p>
-</div></div><p>Die erste Möglichkeit besteht darin, dass eine Noise-Textur hinzugefügt wird. Diese erstellt prozedural eine verrauschte Textur, die skaliert und verzogen werden kann. Sie hat allerdings den Nachteil, dass sie bei besonders kleinem Noise sehr viel Rechenleistung benötigt. Deshalb wird in diesem Tutorial auf diese Option verzichtet.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>White-Noise-Textur</p>
-</div></div><p>Die zweite Möglichkeit besteht aus der Verwendung einer White-Noise-Textur. Diese kann nicht verzogen oder skaliert werden, sondern bildet automatisch möglichst kleine Rauschpunkte. Diese Art der Textur kann besser für besonders kleine Rausch-Elemente verwendet werden, weshalb in diesem Tutorial diese Textur verwendet wird.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>White-Noise-Textur hinzufügen</p>
-</div></div><p>Mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> wird innerhalb des Shader-Editors das «<em>Add</em>»-Menü geöffnet und unter «<em>Texture | White Noise</em>» eine White-Noise-Textur hinzugefügt. Diese wird anschliessend links vom Principled-BSDF-Shader platziert. Wird der neu hinzugefügte White-Noise-Texture-Node bei gedrückter <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span>- + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span>-Taste angeklickt, wird über den Viewer-Node eine Vorschau des White-Noise-Texture-Nodes ermöglicht. Sollte dieser Node im Shader-Editor nicht erscheinen, sollte überprüft werden, ob das Node-Wrangler-Add-on aktiviert wurde.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Texture-Coordinate-und Mapping-Node hinzufügen</p>
-</div></div><p>Im 3D-Viewport-Editor wird allerdings keine Veränderung durch die Vorschau des White-Noise-Texture-Nodes sichtbar. Dies liegt daran, dass der White-Noise-Texture-Node noch einen Bezugspunkt zum Mesh benötigt. Deshalb wird der White-Noise-Texture-Node ausgewählt und die Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> gedrückt. Dadurch werden ein Texture-Coordinate-Node und ein Mapping-Node dem White-Noise-Texture-Node vorangestellt. Somit kann der White-Noise-Texture-Node nun einen Bezugspunkt zum Mesh generieren und eine Vorschau auf das Mesh sollte möglich sein.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Farbvariation fehlt in White-Noise-Textur</p>
-</div></div><p>Würde nun der Color-Output des White-Noise-Texture-Nodes mit dem Base-Color-Input des Principled-BSFD-Shaders verbunden werden, würde lediglich schwarz-weisser Noise resultieren. Sand besteht jedoch aus einer Farbe und nicht nur aus Schwarz-Weiss-Abstufungen. Deshalb muss diese Schwarz-Weiss-Abstufung in eine farbige Abstufung umgewandelt werden. Dies kann mittels eines Color-Ramp-Nodes erzielt werden.</p>
-</section>
-<section id="arbeiten-mit-der-color-ramp" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="arbeiten-mit-der-color-ramp">Arbeiten mit der Color-Ramp</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Color-Ramp hinzufügen und verbinden</p>
-</div></div><p>Mittels der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">A</kbd><span class="visually-hidden">A</span> kann das «<em>Add</em>»-Menü aufgerufen und unter «<em>Converter | ColorRamp</em>» eine Color-Ramp hinzugefügt werden. Diese wird anschliessend zwischen dem White-Noise-Texture-Node und dem Principled-BSDF-Shader platziert. Zusätzlich wird der Color-Output des White-Noise-Texture-Nodes mit dem Faktor-Input des Color-Ramp-Nodes verbunden. Der Color-Output des Color-Ramp-Nodes wird anschliessend mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Was macht die Color-Ramp genau?</p>
-</div></div><p>Die Color-Ramp nimmt die jeweiligen Inputs, seien es nun Faktoren oder Farben, auf und erstreckt sie entlang einer Farbachse. Diese wird in der Mitte des Color-Ramp-Nodes ersichtlich. Anhand dieser Achse werden anschliessend neue Farbmarker definiert, welche an den jeweiligen Punkten der Input-Achse stehen. Per Default befindet sich ganz links am Ende dieser Achse ein Farbmarker mit der Farbe Schwarz (RGB 0-0-0) und rechts ein Farbmarker mit der Farbe Weiss (RGB 1-1-1). Alle Faktorwerte oder Farbwerte, welche die Color-Ramp als Input bekommt, werden somit entlang dieser Achse ausgestreckt und graduell zwischen den beiden Farbwerten abgestuft.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Was bewirkt eine Verschiebung der Farbmarker in der Color-Ramp?</p>
-</div></div><p>Wenn nun einer der beiden Farbmarker verschoben wird, beispielsweise der linke Farbmarker, so vergrössert sich sein Anteil am Spektrum der Color-Ramp. Die gesamte Fläche, welche sich links von diesem Farbmarker befindet, wird zu einer schwarzen Farbe umgewandelt. Gleichzeitig wird der Bereich, in dem eine graduelle Abstufung von Schwarz auf Weiss geschieht, zunehmend kleiner. Dieser Effekt lässt sich am besten betrachten, indem die Color-Ramp ausgewählt und mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> über den Viewer-Node betrachtet wird. Je weiter der schwarze Farbmarker nach rechts gezogen wird, desto mehr Anteile an der White-Noise-Textur, welche den Input der Color-Ramp darstellt, werden schwarz. Analog dazu werden mehr Anteile der White-Noise-Textur weiss, wenn der weisse Farbmarker nach links verschoben wird.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Rangfolge der Farbmarker</p>
-</div></div><p>Jeder Farbmarker innerhalb der Color-Ramp hat dabei eine Rangliste von links nach rechts inne. Der schwarze Farbmarker auf der linken Seite ist der erste Marker und wird deshalb mit der Nummer «0» beschrieben. Dies liegt daran, dass Blender auf Python beruht und Python seine Nummerierungen jeweils bei 0 beginnt. Der zweite Farbmarker hat deshalb die Nummer 1 und ein dritter Farbmarker hätte die Nummer 2, und so weiter. Diese Nummerierung ist jeweils links neben dem Eingabefeld «<em>Pos</em>» ersichtlich. Dadurch können die jeweiligen Marker alternativ zu einer Auswahl mittels eines Mausklicks angesteuert werden. Mittels der Schaltfläche «+» kann jeweils ein zusätzlicher Farbmarker hinzugefügt und mittels der Schaltfläche «-» der ausgewählte Farbmarker entfernt werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Position des Markers entlang der Color-Ramp</p>
-</div></div><p>Die Position des aktuell ausgewählten Markers wird zudem Anhand des Eingabefeldes «<em>Pos</em>» dargestellt. Dieses Feld kann Werte von 0 bis 1 annehmen. Der Wert 0 befindet sich dabei am linken Ende und der Wert 1 am rechten Ende der Color-Ramp.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Farben von Farbmarkern einstellen</p>
-</div></div><p>Unterhalb der Rangfolge und der Position des ausgewählten Farbmarkers befindet sich eine Farbbox, welche die Farbe des ausgewählten Farbmarkers darstellt. So kann für jeden Farbmarker eine eigene Farbe ausgewählt werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Color-Ramp für Düne anpassen</p>
-</div></div><p>Um nun die White-Noise-Textur etwas mehr nach Sand aussehen zu lassen, sollten zunächst die Farben der beiden Farbmarker ausgewechselt werden. Der schwarze Farbmarker wird deshalb auf den RGB-Wert von 0.2-0.1-0 gesetzt und der weisse Farbmarker auf den RGB-Wert 0.5-0.45-0.35 gestellt. Dadurch werden die schwarz-weissen Abstufungen der White-Noise-Textur nun in Abstufungen dieser beiden Farbmarker umgewandelt. Der Color-Output des Color-Ramp-Nodes kann deshalb nun mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden. Zudem sollte bei gedrückter Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> auf den Principled-BSDF-Shader geklickt werden, um den Viewer-Node wieder zu deaktivieren.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Roughness variieren lassen</p>
-</div></div><p>Als Nächstes benötigt der Principled-BSDF-Shader Informationen für den Roughness-Input. Diese Information sollte idealerweise auch gerade auf dem White-Noise-Texture-Node beruhen. Mittels dessen Value-Outputs könnte etwa diese Information übertragen werden. Dies würde allerdings dazu führen, dass das Material ziemlich glatt erscheint und Licht gebündelt reflektiert, was bei einer Düne nicht erwartet wird. Deshalb müsste der Anteil der geringen Roughness-Werte reduziert werden. Um dies zu erreichen, kann erneut eine Color-Ramp hinzugefügt werden, welche Ebenfalls den Color-Output des White-Noise-Texture-Nodes erhält, deren Color-Output allerdings mit dem Roughness-Input des Principled-BSDF-Shaders verbunden wird.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Roughness mit Farbmarkern variieren</p>
-</div></div><p>Der linke, schwarze Farbmarker deckt nun die tiefstmöglichen Bereiche der Roughness ab, nämlich den Wert 0. Dieser Wert ist allerdings nicht im Sand zu erwarten. Deshalb kann seine Farbbox geöffnet und ihm eine hellere Farbe zugeordnet werden (z.B. RGB = 0.6-0.6-0.6). Dadurch gibt es immer noch eine graduelle Variation der Roughness, allerding in einem geringeren Ausmass.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Bright/Contrast-Node für alternative Vorgehensweise</p>
-</div></div><p>Es gibt noch eine weitere Option, welche verwendet werden könnte, um die Roughness zu erhöhen. So könnte statt eines Color-Ramp-Nodes ein Bright/Contrast-Node verwendet werden. Dieser ist im «<em>Add</em>»-Menü unter «<em>Color | Bright Contrast</em>» zu finden. Hierbei würde anschliessend der Color-Output des White-Noise-Texture-Nodes mit dem Color-Input des Bright/Contrast-Nodes verbunden werden und dessen Color-Output mit dem Roughness-Input des Principled-BSDF-Shaders.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>White-Noise aufhellen mittels Bright/Contrast-Node</p>
-</div></div><p>Durch eine Erhöhung der Zeile «<em>Bright</em>» wird anschliessend die Noise-Textur farblich erhellt. Dies führt dazu, dass die dunkleren Anteile, welche zu einer tieferen Roughness führen, aufgehellt werden und dadurch eine höhere Roughness aufweisen. Hier könnte beispielweise ein Wert von 0.3 verwendet werden.</p>
+<p>Graph-Editor</p>
+</div></div><p>Im sogenannten Graph-Editor werden die gesetzten Keyframes jeweils anhand von Kurven dargestellt. Jeder Wert des ausgewählten Objektes, der mit einem Keyframe ausgestattet wurde, wird dabei mit einer Kurve dargestellt. Zudem werden individuelle Kurven für die X-, Y- und Z-Achse erstellt.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_30/Nodes_System.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_48/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Nodes-System für prozedurale Sand-Texturen.
+Abbildung&nbsp;1: Icon für den Graph-Editor.
 </figcaption>
 </figure>
 </div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>White-Noise-Textur als Normal-Textur verwenden</p>
-</div></div><p>Zusätzlich kann der White-Noise-Texture-Node auch verwendet werden, um die Normal-Textur zu ersetzen. Hierfür wird ein Bump-Node im «<em>Add</em>»-Menü unter «<em>Vector | Bump</em>» hinzugefügt und links vom Principled-BSDF-Shader platziert. Der Normal-Output des Bump-Nodes kann anschliessend mit dem Normal-Input des Principled-BSDF-Shaders verbunden werden. Dadurch generiert der Bump-Node nun minimale Abweichungen, welche das Material jeweils simuliert. Um die Höhe dieser Abweichungen einstellen zu können, wird der Color-Output des White-Noise-Texture-Nodes mit dem Height-Input des Bump-Nodes verbunden.</p>
-</section>
-<section id="wave-texture" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="wave-texture">Wave-Texture</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Abstufungen in den Dünen hinzufügen</p>
-</div></div><p>Teilweise beinhalten Dünen auch leichte Abstufungen, welche der Wind durch seine Verwehungen mit sich bringt. Diese können mittels einer zusätzlichen Textur ebenfalls simuliert werden. Das Ziel hierfür besteht darin, dass sich kreisförmig um alle Hügel innerhalb der Landschaft Abstufungen ergeben.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Wave-Textur hinzufügen</p>
-</div></div><p>Eine ideale Grundlage für dieses Unterfangen bildet die Wave-Textur. Diese ist im «<em>Add</em>»-Menü unter «<em>Texture | Wave Texture</em>» zu finden. Der Vector-Input kann dabei mit dem Vector-Output des bereits erstellten Mapping-Nodes verbunden werden. Die Wave-Textur erstellt nun wellenartige Muster über das Mesh hinweg. Dabei orientiert sich die Wave-Textur entlang der X-Achse. Dies ist im zweiten Dropdown-Menü des Wave-Texture-Nodes definiert. Indem in diesem Menü stattdessen die Z-Achse ausgewählt wird, werden die Wellen entlang der Z-Achse gebildet. Dies führt dazu, dass sie sich kreisförmig entlang der Hügel des Meshes erstrecken. Mittels der Zeile «*Scale» kann zudem die Skalierung dieser Wellen erhöht werden, sodass mehr Wellen ersichtlich sind. Hierfür kann beispielsweise der Wert 10 verwendet werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Anpassungen der Wave-Textur</p>
-</div></div><p>Mittels der Zeile «<em>Distortion</em>» kann ein Wert festgelegt werden, welcher zu einer Verzerrung der Wellentextur führt. Je grösser dieser Wert, desto mehr wird die originale Wellentextur zufällig verzerrt. Hier könnte beispielsweise der Wert 9 verwendet werden, um auf die Zufälligkeit von natürlichen Verwehungen Rücksicht zu nehmen. Zusätzlich könnte das Ausmass an ersichtlichen Details in den Wellen mittels der Reiter «<em>Detail</em>», «<em>Detail Scale</em>» und «<em>Detail Roughness</em>» bei Bedarf noch variiert werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Displacement hinzufügen</p>
-</div></div><p>Nun kann ein Displacement-Node über das «<em>Add</em>»-Menü unter «<em>Vector | Displacement</em>» hinzugefügt und unterhalb des Bump-Nodes eingefügt werden. Der Displacement-Node soll nun grössere Oberflächenveränderungen im Mesh simulieren und die Werte für die Höhe anhand des Wave-Texture-Nodes übernehmen. Deshalb wird der Color-Output des Wave-Texture-Nodes mit dem Height-Input des Displacement-Nodes verbunden. Der Wert für die Skalierung sollte innerhalb des Displacement-Nodes zudem noch minimiert werden, da der Effekt sonst zu stark ausfällt. Ein Wert von 0.01 für die Zeile «<em>Scale</em>» sollte daher ausreichen. Zu guter Letzt kann der Discplacement-Output des Displacement-Nodes mit dem Displacement-Input des Material-Output-Nodes verbunden werden. Dadurch sollte das Displacement auf dem Mesh ersichtlich werden.</p>
-</section>
-<section id="mix-rgb" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="mix-rgb">Mix RGB</h2>
-<div class="colum-margin">
-<p>Mix-RGB-Node hinzufügen</p>
-</div>
-<p>Die Abstufungen, welche der Wave-Texture-Node erzielt, sind nun lediglich als Displacement ersichtlich, haben allerdings keinen Einfluss auf die Farbe, die Roughness oder die Normalen des Materials. Wenn diese Abstufungen hierfür auch berücksichtigt werden sollen, müssten die Farbwerte der Wave-Textur mit den Farbwerten der White-Noise-Textur kombiniert werden. Für die Kombination von verschiedenen Farben oder Texturen kann der Mix-RGB-Node verwendet werden. Dieser kann unter dem «<em>Add</em>»-Menü unter «<em>Color | MixRGB</em>» hinzugefügt und neben dem White-Noise-Texture-Node platziert werden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Graduelle Abstufung von Farbinputs</p>
-</div></div><p>Der Color1-Input des Mix-RGB-Nodes sollte seine Informationen aus dem Color-Output des White-Noise-Texture-Nodes beziehen. Der Color2-Input sollte seine Informationen aus dem Color-Output des Wave-Texture-Nodes beziehen. Dadurch wird anschliessend mittels des Reiters «<em>Fac</em>» eine graduelle Abstufung zwischen den beiden Texturen möglich.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Multiplizieren von Farben</p>
-</div></div><p>Das Ziel ist allerdings keine graduelle Abstufung zwischen den beiden Texture-Nodes. Stattdessen sollten die Wellen der Wave-Textur über die White-Noise-Textur gelegt werden. Um dies zu erzielen, kann im Dropdown-Menü, welches mit «<em>Mix</em>» angeschrieben ist, die Option «<em>Multiply</em>» ausgewählt werden. Dadurch werden die beiden Texturen nun nicht mehr miteinander gemischt, sondern multipliziert. Mittel des Reiters «<em>Fac</em>» kann nun ein Grad für diese Multiplikation ausgewählt werden, beispielsweise 0.675. Anschliessend kann der Color-Output des Mix-RGB-Nodes verwendet werden, um die Inputs, welche bisher vom White-Noise-Texture-Node anvisiert wurden, zu ersetzen.</p>
 <div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_30/finalDunes.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_48/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;2: Kombination der Wave-Textur mit der White-Noise-Textur.
+Abbildung&nbsp;2: Der Graf für die Rotationen des Pendels. Die X- und die Z-Achsen-Rotation liegen beide konstant auf dem Wert 0, während die Y-Achsen-Rotation entlang der Werte bei den entsprechenden Keyframes verläuft.
 </figcaption>
 </figure>
 </div>
-</section>
-<section id="prozedurales-texturieren-1" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="prozedurales-texturieren-1">Prozedurales Texturieren</h2>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Prozedurales Texturieren</p>
-</div></div><p>In diesem Tutorial wurde nun auf Bilddateien zum Texturieren verzichtet. Stattdessen wurden Blenders interne, vorberechnete Texturen verwendet, um eine Texturierung der Oberfläche zu erstellen. Eine solche Herangehensweise wird als prozedurales Texturieren bezeichnet. Dies hat den Vorteil, dass man sich keine Gedanken machen muss, wie hochauflösend die Texturen sein sollten. Durch die Berechnung können jeweils höhere Auflösungen erzielt werden.</p>
+<p>Kurven im Graph-Editor</p>
+</div></div><p>In diesem Beispiel wurde das Pendel in den verschiedenen Keyframes entlang der Y-Achse rotiert. Deshalb wurden drei Kurven für die Rotation des Objektes entlang der drei Achsen erstellt. Eine rote Kurve für die Rotation entlang der X-Achse, eine grüne Kurve für die Rotation entlang der Y-Achse und eine blaue Kurve für die Rotation entlang der Z-Achse. Die einzelnen Kurven verlaufen entlang der X-Achse des Graph-Editors den einzelnen Frames entlang und entlang der Y-Achse werden die tatsächlichen Werte für die jeweiligen Keyframes angezeigt. Da die Rotationen des Pendels entlang der X- und Z-Achse konstant bei 0 belassen wurden, sind deren Kurven konstant auf dem Wert 0 platziert und lediglich die Kurve für die Y-Rotation weist eine Veränderung auf.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Nachteile des prozeduralen Texturierens</p>
-</div></div><p>Ein Nachteil des prozeduralen Texturierens besteht allerdings darin, dass die Texturen eben gerade nicht als Bild vorhanden sind. Dies führt etwa dazu, dass die erstellten prozeduralen Texturen nicht in anderen Programmen (z.B. Unity oder Unreal Engine) dargestellt werden können. Es ist zwar möglich, die prozeduralen Texturen zu extrahieren, indem man sie sozusagen in eine Bilddatei hineinspeichert (ein Prozess, der als Baking bezeichnet wird), allerdings gehen dabei oft Details der prozeduralen Texturen verloren.</p>
+<p>Cycles-Modifier</p>
+</div></div><p>Damit die erstellte Animation nun unendlich verläuft, müsste die erstellte Kurve wiederholt werden. Um dies zu erzielen, kann entweder ein Keyframe der Y-Achsen-Rotations-Kurve ausgewählt werden oder in der Toolbar auf der linken Seite des Graph-Editors die «<em>Y Euler Rotation</em>» ausgewählt werden. Anschliessend kann in der Sidebar auf der rechten Seite des Graph-Editors auf den Reiter «<em>Modifiers</em>» geklickt werden. Dadurch kann nun ein Modifier auf diese Animationskurve angewendet werden. Durch das Hinzufügen des Modifiers «<em>Cycles</em>» im Dropdown-Menü «<em>Add Modifier</em>» wird die Kurve der Y-Achsen-Rotation nun zyklisch wiederholt. Diese Wiederholung erfolgt unendlich oft. Es ist allerdings möglich zu definieren, dass die Kurve lediglich einmal vor der erstellten Animation wiederholt wird, indem der Wert «<em>Count</em>» unterhalb des «<em>Before Mode</em>» von 0 auf 1 gesetzt wird. Ebenso kann mit dem Wert «<em>Count</em>» unterhalb des «<em>After Mode</em>» die Anzahl Wiederholungen nach der erstellten Animation eingestellt werden.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Weiterführende Informationen</p>
+</div>
+<div class="tippbox-body">
+<p>Nebst dem Cycles-Modifier gibt es noch weitere nützliche Modifier, um Animationskurven zu erstellen. Mithilfe des ausgewählt Generator-Modifiers können etwa lineare Regressionskurven für Animationen erstellt werden oder mittels des Noise-Modifiers können dir Kurven zufällig verzerrt werden.</p>
+</div>
+</div>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_48/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Der Graf für die Y-Achsen-Rotation mit einem Cycles-Modifier. Dadurch wird die Animation unendlich oft wiederholt.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kurven-Interpolation anpassen</p>
+</div></div><p>Die erstellten Graphen werden an den Keyframes jeweils mittels einer Bézierkurve ausgestattet. Dadurch können die Ausrichtungen der Kurven etwas nachbearbeitet werden. Es ist allerdings auch möglich, Interpolationen für die Transformation zwischen den Keyframes auszuwählen. Hierfür müssen alle Keyframes der entsprechenden Kurve ausgewählt werden. Indem die Maus über einen dieser Keyframes platziert wird und anschliessend die Taste <kbd aria-hidden="true">L</kbd><span class="visually-hidden">L</span> gedrückt wird, werden alle Keyframes dieser Kurve ausgewählt. Mit einem Rechtsklick mit der Maus kann anschliessend das «<em>F-Curve Context Menu</em>» geöffnet werden und darunter der Reiter «<em>Interpolation Mode</em>» anvisiert werden. Dieses Kontext-Menü zum Interpolationsmodus kann auch mittels der Taste <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> geöffnet werden. In diesem Menü können anschliessende verschiedene Modi zur Interpolation der Kurven ausgewählt werden. Standardmässig ist die Option «<em>Bezier</em>» ausgewählt, aber je nach Situation können andere Interpolationen ebenfalls sinnvoll sein.</p>
 
 
 </section>

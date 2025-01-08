@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>47. Animationen erstellen – Creating the World</title>
+<title>48. Animationen verfeinern – Creating the World</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -355,7 +355,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Auf dieser Seite</h2>
    
   <ul>
-  <li><a href="#keyframes-erstellen" id="toc-keyframes-erstellen" class="nav-link active" data-scroll-target="#keyframes-erstellen">Keyframes erstellen</a></li>
+  <li><a href="#beispiel-pendel" id="toc-beispiel-pendel" class="nav-link active" data-scroll-target="#beispiel-pendel">Beispiel Pendel</a></li>
+  <li><a href="#animationen-im-graph-editor-nachbearbeiten" id="toc-animationen-im-graph-editor-nachbearbeiten" class="nav-link" data-scroll-target="#animationen-im-graph-editor-nachbearbeiten">Animationen im Graph-Editor nachbearbeiten</a></li>
   </ul>
 </nav>
     </div>
@@ -364,7 +365,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">47. Animationen erstellen</h1>
+<h1 class="title">48. Animationen verfeinern</h1>
 </div>
 
 
@@ -381,46 +382,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="keyframes-erstellen" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="keyframes-erstellen">Keyframes erstellen</h2>
+<section id="beispiel-pendel" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="beispiel-pendel">Beispiel Pendel</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Animation verläuft von Situation zu Situation</p>
-</div></div><p>Eine Animation stellt jeweils eine Veränderung von einer Situation zu einer anderen Situation dar. Beispielsweise befindet sich ein Objekt zunächst an einer bestimmten Position A und bei einem späteren Frame an einer anderen Position B. Dementsprechend stellt die erste Position A die Ausgangssituation dar und im Verlaufe der Animation wird das Objekt zur Position B verschoben. Die Animation verläuft also von der Position A beim Beginn der Animation zu Position B beim Ende der Animation.</p>
+<p>Pendel-Datei</p>
+</div></div><p>In der Datei «<em>Pendel</em>» ist ein 3D-Modell eines Pendels vorzufinden. Das Ziel ist es, eine Animation zu erstellen, in der dieses Pendel von links nach rechts schwingt und wieder zurück. Diese Animation soll anschliessend unendlich oft wiederholt werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Keyframes geben Situationen vor</p>
-</div></div><p>Ein solcher Gedankengang ist jeweils zentral bei der Erstellung von Animationen. Es wird jeweils eine Ausgangslage zum Beginn der Animation definiert und eine Endsituation zum Ende der Animation. Hierfür werden die Frames, bei denen sich die Objekte an der Ausgangs- und Endlage befinden, mit sogenannten Keyframes versehen. Keyframes stellen Frames dar, welche eine bestimmte Vorgabe für eine Animation aufweisen – beispielsweise, dass sich ein Objekt an einer Stelle befindet oder dass es eine bestimmte Rotation aufweist. Die Animation verläuft anschliessend automatisch von einem Keyframe zum nächsten Keyframe ab, wobei die Frames die dazwischenliegenden Animationsschritte automatisch darstellen.</p>
+<p>Frame 0 auswählen</p>
+</div></div><p>Zunächst wird eine Position des Pendels zum Frame 0 definiert. Hierfür wird der Marker im Timeline-Editor auf den Frame 0 platziert. Anschliessend kann die Schwingung des Pendels zu diesem Frame erstellt werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Keyframe hinzufügen</p>
-</div></div><p>Um dies zu veranschaulichen, kann eine neue Szene in Blender erstellt werden. Per Default sollte der Standardwürfel im Mittelpunkt der Welt festgelegt und der erste Frame ausgewählt worden sein. Um nun einen Keyframe für die Position des Standardwürfels festzulegen, kann die Sidebar mit der Taste <kbd aria-hidden="true">N</kbd><span class="visually-hidden">N</span> geöffnet werden. Sobald der Standardwürfel ausgewählt wurde, wird nun im Reiter «<em>Location</em>» dessen Position angezeigt. Wenn der Mauszeiger nun auf den Positionswerten in diesem Reiter platziert wurde, kann die Taste <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> gedrückt werden. Dadurch wird beim aktuell ausgewählten Frame ein Keyframe mit der Position des Objektes erstellt.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Gelbe Markierung signalisiert Keyframes beim aktuellen Frame</p>
-</div></div><p>Wenn ein Wert in Blender mit einem Keyframe versehen wurde, wird dies jeweils dadurch angezeigt, dass das entsprechende Feld für einen Wert mit einer Hintergrundfarbe dargestellt wird. In diesem Beispiel sollten die Werte für die Position mit einer gelben Hintergrundfarbe dargestellt werden. Damit wird signalisiert, dass während des aktuellen Frames ein Keyframe gesetzt wurde. Zusätzlich erscheint im Timeline-Editor beim aktuellen Frame ein gelbes Viereck. Dadurch wird signalisiert, dass das aktuell ausgewählte Objekt bei diesem Frame auf der Zeitachse einen Keyframe beinhaltet.</p>
-<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_47/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1: Die Markierung der Positionswerte, welche beim aktuellen Frame mit einem Keyframe versehen wurden.
-</figcaption>
-</figure>
-</div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Grüne Markierung von Werten</p>
-</div></div><p>Wenn nun im Timeline-Editor ein anderer Frame ausgewählt wird (beispielsweise der Frame 50), führt dies dazu, dass sich die farbliche Markierung der Positionswerte des Würfels in der Sidebar verändert. Statt mit einer gelben Farbe werden die Werte nun in einer grünen Farbe markiert. Dadurch wird signalisiert, dass dieser Wert im Rahmen eines Keyframes definiert wurde.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Organe Markierung von Werten</p>
-</div></div><p>Sollte nun die Position des Würfels verändert werden – entweder, indem er im 3D-Viewport-Editor verschoben wird, oder, indem die Werte für die Position in der Sidebar verändert werden – werden die Werte für die Position in einer orangen Farbe dargestellt. Damit soll signalisiert werden, dass die Positionswerte einen Keyframe auf der Zeitachse beinhalten, aber beim aktuellen Frame ein anderer Wert eingestellt wurde. Wenn nun der Mauszeiger wieder über die Werte für die Position in der Sidebar gelegt und erneut die Taste <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> gedrückt wird, erscheint eine gelbe statt einer orangen Markierung bei diesen Werten. Damit wird signalisiert, dass die nun eingestellte Position ebenfalls als Keyframe beim aktuell ausgewählten Frame abgespeichert wurde.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Animation wird automatisch zwischen Keyframes erstellt</p>
-</div></div><p>Nun sollte es zwei Keyframes für die Position geben, welche im Timeline Editor angezeigt werden. Wenn nun Frames zwischen den beiden Keyframes ausgewählt werden, wird der Würfel im 3D-Viewport-Editor an einer Position zwischen der Ausgangsposition und der Endposition liegen. Blender verschiebt den Würfel automatisch über die Dauer der Frames zwischen den beiden Keyframes von einer Position zur anderen. Wenn die Animation nun abgespielt wird (entweder mit der <kbd aria-hidden="true">Space</kbd><span class="visually-hidden">Space</span>-Taste oder der Tatenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">Space</kbd><span class="visually-hidden">Space</span>), läuft die Animation im 3D-Viewport-Editor ab und die Bewegung des Würfels sollte angezeigt werden. Indem der Wert des Ende-Frames in der Timeline auf den zweiten Keyframe gesetzt wird, kann zudem eingestellt werden, dass lediglich die erstellte Bewegungsanimation wiederholt wird.</p>
+<p>Pendel schwingen</p>
+</div></div><p>Der Ursprung des Pendel-Objektes befindet sich am Ende von dessen Schnur. Wenn die Rotation dieses Pendels im Object-Mode verändert wird, wird das Pendel dementsprechend um das Ende der Schnur gedreht. Dadurch kann zunächst eine Rotation des Pendels entlang der Y-Achse um 60 Grad definiert werden. Anschliessend kann der Mauszeiger über das Eingabefeld für die Rotation in der Sidebar platziert und die Taste <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> gedrückt werden, um den ersten Keyframe für die Rotation zu setzen.</p>
 <div class="tippbox">
 <div class="tippbox-header">
 <div class="tippbox-icon">
@@ -429,27 +404,92 @@ Abbildung&nbsp;1: Die Markierung der Positionswerte, welche beim aktuellen Frame
 <p>Weiterführende Informationen</p>
 </div>
 <div class="tippbox-body">
-<p>In der Timeline werden jeweils die Keyframes der ausgewählten Objekte angezeigt. Wenn kein Objekt ausgewählt ist, werden auch keine Keyframes angezeigt. Sollten also bereits gesetzte Keyframes plötzlich verschwunden sein, sollte überprüft werden, ob das richtige Objekt ausgewählt wurde.</p>
+<p>Im Timeline-Editor kann unter «<em>View | Show Seconds</em>» eingestellt werden, dass statt der Anzahl Frames oberhalb der Timeline die Anzahl Sekunden angezeigt wird. Dadurch werden in der Timeline jeweils ganze Sekunden plus die Anzahl Frames der laufenden Sekunde angezeigt.</p>
 </div>
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Keyframes im Timeline-Editor verschieben</p>
-</div></div><p>Die Keyframes, welche in der Timeline gesetzt werden, können jeweils mit dem Mauszeiger ausgewählt und verschoben werden. Ebenso können ausgewählte Keyframes mittels der Taste <kbd aria-hidden="true">G</kbd><span class="visually-hidden">G</span> verschoben werden und mit einer Zahleneingabe um eine bestimmte Anzahl Frames versetzt werden. Zudem können die Abstände zwischen den Keyframes zum aktuellen Frame vergrössert oder verkleinert werden, indem die Taste <kbd aria-hidden="true">S</kbd><span class="visually-hidden">S</span> gedrückt wird.</p>
-<div class="rememberbox">
-<div class="rememberbox-header">
-<div class="rememberbox-icon">
+<p>Zweiten Keyframe platzieren</p>
+</div></div><p>Das Pendel soll rund 1.5 Sekunden benötigen, um von der einen Seite zur anderen Seite zu schwingen. Die Animation beträgt 24 fps. Dementsprechend werden 1.5 x 24 Frames benötigt, bis das Pendel auf der anderen Seite angekommen ist. Deshalb wird der blaue Marker im Timeline-Editor nun auf Frame 36 platziert. In der Sidebar kann nun der Wert für die Rotation des Pendels entlang der Y-Achse auf -60 Grad gesetzt werden und dieser Wert mit der Taste <kbd aria-hidden="true">I</kbd><span class="visually-hidden">I</span> als Keyframe für Frame 36 hinzugefügt werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Dritten Keyframe setzen</p>
+</div></div><p>Mit diesen Schritten wurde nun bereits die Schwingung des Pendels von links nach rechts animiert. Um die Schwingung von rechts nach links zu animieren, muss nun lediglich beim Keyframe 72 die Rotation der Y-Achse wieder auf 60 Grad gesetzt werden und dies als Keyframe eingespeichert werden. Alternativ kann allerdings auch im Timeline-Editor der erste Keyframe ausgewählt und mit der Tasten kombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">D</kbd><span class="visually-hidden">D</span> dupliziert und beim Frame 72 platziert werden.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
 
 </div>
-<p>Merke…</p>
+<p>Weiterführende Informationen</p>
 </div>
-<div class="rememberbox-body">
-<p>Keyframes stellen Frames dar, bei denen bestimmte Vorgaben für Werte in einer Animation definiert werden.</p>
-<p>Bei Animationen werden automatisch die Zwischenschritte zwischen zwei Keyframes animiert.</p>
-<p>Keyframes können mit der Taste hinzugefügt werden.</p>
-<p>Keyframes für die ausgewählten Objekte werden im Timeline-Editor dargestellt und können dort verschoben werden.</p>
+<div class="tippbox-body">
+<p>Wenn die Aufnahme-Schaltfläche «Auto Keying» im Timeline-Editor aktiviert ist, werden alle Änderungen zum aktuellen Frame automatisch als Keyframe hinzugefügt. Dadurch müssen diese Änderungen nicht manuell als Keyframes definiert werden.</p>
 </div>
 </div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Animation kopieren für Wiederholungen</p>
+</div></div><p>Die Animation des Pendels ist nun bereits mithilfe dieser drei Keyframes vollzogen worden. Allerdings wird diese Animation nun nicht wiederholt. Um eine Wiederholung zu erzielen, könnten nun immer mit einem Abstand von 72 Frames die Animationspunkte wiederholt werden. Es gibt allerdings eine elegantere Methode, um eine Wiederholung der Animation zu erzielen.</p>
+</section>
+<section id="animationen-im-graph-editor-nachbearbeiten" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="animationen-im-graph-editor-nachbearbeiten">Animationen im Graph-Editor nachbearbeiten</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Graph-Editor</p>
+</div></div><p>Im sogenannten Graph-Editor werden die gesetzten Keyframes jeweils anhand von Kurven dargestellt. Jeder Wert des ausgewählten Objektes, der mit einem Keyframe ausgestattet wurde, wird dabei mit einer Kurve dargestellt. Zudem werden individuelle Kurven für die X-, Y- und Z-Achse erstellt.</p>
+<div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_48/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1: Icon für den Graph-Editor.
+</figcaption>
+</figure>
+</div>
+<div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_48/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;2: Der Graf für die Rotationen des Pendels. Die X- und die Z-Achsen-Rotation liegen beide konstant auf dem Wert 0, während die Y-Achsen-Rotation entlang der Werte bei den entsprechenden Keyframes verläuft.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kurven im Graph-Editor</p>
+</div></div><p>In diesem Beispiel wurde das Pendel in den verschiedenen Keyframes entlang der Y-Achse rotiert. Deshalb wurden drei Kurven für die Rotation des Objektes entlang der drei Achsen erstellt. Eine rote Kurve für die Rotation entlang der X-Achse, eine grüne Kurve für die Rotation entlang der Y-Achse und eine blaue Kurve für die Rotation entlang der Z-Achse. Die einzelnen Kurven verlaufen entlang der X-Achse des Graph-Editors den einzelnen Frames entlang und entlang der Y-Achse werden die tatsächlichen Werte für die jeweiligen Keyframes angezeigt. Da die Rotationen des Pendels entlang der X- und Z-Achse konstant bei 0 belassen wurden, sind deren Kurven konstant auf dem Wert 0 platziert und lediglich die Kurve für die Y-Rotation weist eine Veränderung auf.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Cycles-Modifier</p>
+</div></div><p>Damit die erstellte Animation nun unendlich verläuft, müsste die erstellte Kurve wiederholt werden. Um dies zu erzielen, kann entweder ein Keyframe der Y-Achsen-Rotations-Kurve ausgewählt werden oder in der Toolbar auf der linken Seite des Graph-Editors die «<em>Y Euler Rotation</em>» ausgewählt werden. Anschliessend kann in der Sidebar auf der rechten Seite des Graph-Editors auf den Reiter «<em>Modifiers</em>» geklickt werden. Dadurch kann nun ein Modifier auf diese Animationskurve angewendet werden. Durch das Hinzufügen des Modifiers «<em>Cycles</em>» im Dropdown-Menü «<em>Add Modifier</em>» wird die Kurve der Y-Achsen-Rotation nun zyklisch wiederholt. Diese Wiederholung erfolgt unendlich oft. Es ist allerdings möglich zu definieren, dass die Kurve lediglich einmal vor der erstellten Animation wiederholt wird, indem der Wert «<em>Count</em>» unterhalb des «<em>Before Mode</em>» von 0 auf 1 gesetzt wird. Ebenso kann mit dem Wert «<em>Count</em>» unterhalb des «<em>After Mode</em>» die Anzahl Wiederholungen nach der erstellten Animation eingestellt werden.</p>
+<div class="tippbox">
+<div class="tippbox-header">
+<div class="tippbox-icon">
+
+</div>
+<p>Weiterführende Informationen</p>
+</div>
+<div class="tippbox-body">
+<p>Nebst dem Cycles-Modifier gibt es noch weitere nützliche Modifier, um Animationskurven zu erstellen. Mithilfe des ausgewählt Generator-Modifiers können etwa lineare Regressionskurven für Animationen erstellt werden oder mittels des Noise-Modifiers können dir Kurven zufällig verzerrt werden.</p>
+</div>
+</div>
+<div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Images/Chapter_48/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;3: Der Graf für die Y-Achsen-Rotation mit einem Cycles-Modifier. Dadurch wird die Animation unendlich oft wiederholt.
+</figcaption>
+</figure>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Kurven-Interpolation anpassen</p>
+</div></div><p>Die erstellten Graphen werden an den Keyframes jeweils mittels einer Bézierkurve ausgestattet. Dadurch können die Ausrichtungen der Kurven etwas nachbearbeitet werden. Es ist allerdings auch möglich, Interpolationen für die Transformation zwischen den Keyframes auszuwählen. Hierfür müssen alle Keyframes der entsprechenden Kurve ausgewählt werden. Indem die Maus über einen dieser Keyframes platziert wird und anschliessend die Taste <kbd aria-hidden="true">L</kbd><span class="visually-hidden">L</span> gedrückt wird, werden alle Keyframes dieser Kurve ausgewählt. Mit einem Rechtsklick mit der Maus kann anschliessend das «<em>F-Curve Context Menu</em>» geöffnet werden und darunter der Reiter «<em>Interpolation Mode</em>» anvisiert werden. Dieses Kontext-Menü zum Interpolationsmodus kann auch mittels der Taste <kbd aria-hidden="true">T</kbd><span class="visually-hidden">T</span> geöffnet werden. In diesem Menü können anschliessende verschiedene Modi zur Interpolation der Kurven ausgewählt werden. Standardmässig ist die Option «<em>Bezier</em>» ausgewählt, aber je nach Situation können andere Interpolationen ebenfalls sinnvoll sein.</p>
 
 
 </section>

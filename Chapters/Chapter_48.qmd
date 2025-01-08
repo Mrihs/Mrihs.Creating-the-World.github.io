@@ -1,0 +1,133 @@
+---
+title: "48. Animationen verfeinern"
+editor: visual
+---
+
+### Beispiel Pendel
+
+::: column-margin
+Pendel-Datei
+:::
+
+In der Datei «*Pendel*» ist ein 3D-Modell eines Pendels vorzufinden. Das Ziel ist es, eine Animation zu erstellen, in der dieses Pendel von links nach rechts schwingt und wieder zurück. Diese Animation soll anschliessend unendlich oft wiederholt werden. 
+
+::: column-margin
+Frame 0 auswählen
+:::
+
+Zunächst wird eine Position des Pendels zum Frame 0 definiert. Hierfür wird der Marker im Timeline-Editor auf den Frame 0 platziert. Anschliessend kann die Schwingung des Pendels zu diesem Frame erstellt werden. 
+
+::: column-margin
+Pendel schwingen
+:::
+
+Der Ursprung des Pendel-Objektes befindet sich am Ende von dessen Schnur. Wenn die Rotation dieses Pendels im Object-Mode verändert wird, wird das Pendel dementsprechend um das Ende der Schnur gedreht. Dadurch kann zunächst eine Rotation des Pendels entlang der Y-Achse um 60 Grad definiert werden. Anschliessend kann der Mauszeiger über das 
+Eingabefeld für die Rotation in der Sidebar platziert und die Taste {{< kbd I >}} gedrückt werden, um den ersten Keyframe für die Rotation zu setzen.
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Weiterführende Informationen
+::::
+
+::: tippbox-body
+Im Timeline-Editor kann unter «*View | Show Seconds*» eingestellt werden, dass statt der Anzahl Frames oberhalb der Timeline die Anzahl Sekunden angezeigt wird. Dadurch werden in der Timeline jeweils ganze 
+Sekunden plus die Anzahl Frames der laufenden Sekunde angezeigt.
+:::
+::::::
+
+::: column-margin
+Zweiten Keyframe platzieren
+:::
+
+Das Pendel soll rund 1.5 Sekunden benötigen, um von der einen Seite zur anderen Seite zu schwingen. 
+Die Animation beträgt 24 fps. Dementsprechend werden 1.5 x 24 Frames benötigt, bis das Pendel auf der anderen Seite angekommen ist. Deshalb wird der blaue Marker im Timeline-Editor nun auf Frame 36 platziert. In der Sidebar kann nun der Wert für die Rotation des Pendels entlang der Y-Achse auf -60 Grad gesetzt werden und dieser Wert mit der Taste {{< kbd I >}} als Keyframe für Frame 36 hinzugefügt werden.
+
+::: column-margin
+Dritten Keyframe setzen
+:::
+
+Mit diesen Schritten wurde nun bereits die Schwingung des Pendels von links nach rechts animiert. Um die Schwingung von rechts nach links zu animieren, muss nun lediglich beim Keyframe 72 die Rotation der Y-Achse wieder auf 60 Grad gesetzt werden und dies als Keyframe eingespeichert werden. Alternativ kann allerdings auch im Timeline-Editor der erste Keyframe 
+ausgewählt und mit der Tasten kombination {{< kbd Shift >}} + {{< kbd D >}} dupliziert und beim Frame 72 platziert werden. 
+
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Weiterführende Informationen
+::::
+
+::: tippbox-body
+Wenn die Aufnahme-Schaltfläche «Auto Keying» im Timeline-Editor aktiviert ist, werden alle Änderungen 
+zum aktuellen Frame automatisch als Keyframe hinzugefügt. Dadurch müssen diese Änderungen nicht 
+manuell als Keyframes definiert werden. 
+:::
+::::::
+
+::: column-margin
+Animation kopieren für Wiederholungen
+:::
+
+Die Animation des Pendels ist nun bereits mithilfe dieser drei Keyframes vollzogen worden. Allerdings wird diese Animation nun nicht wiederholt. Um eine Wiederholung zu erzielen, könnten nun immer mit einem Abstand von 72 Frames die Animationspunkte wiederholt werden. Es gibt allerdings eine elegantere Methode, um eine Wiederholung der Animation zu erzielen.
+
+### Animationen im Graph-Editor nachbearbeiten
+
+::: column-margin
+Graph-Editor
+:::
+
+Im sogenannten Graph-Editor werden die gesetzten Keyframes jeweils anhand von Kurven dargestellt. Jeder Wert des ausgewählten Objektes, der mit einem Keyframe ausgestattet wurde, wird dabei mit einer Kurve dargestellt. Zudem werden individuelle Kurven für die X-, Y- und Z-Achse erstellt. 
+
+![Icon für den Graph-Editor.](Images/Chapter_48/.png){#fig-1_1 fig-align="left"}
+
+![ Der Graf für die Rotationen des Pendels. Die X- und die Z-Achsen-Rotation liegen beide konstant auf dem Wert 0, während die Y-Achsen-Rotation entlang der Werte bei den entsprechenden Keyframes verläuft.](Images/Chapter_48/.png){#fig-1_2 fig-align="left"}
+
+::: column-margin
+Kurven im Graph-Editor 
+:::
+
+In diesem Beispiel wurde das Pendel in den verschiedenen Keyframes entlang der Y-Achse rotiert. 
+Deshalb wurden drei Kurven für die Rotation des Objektes entlang der drei Achsen erstellt. Eine rote 
+Kurve für die Rotation entlang der X-Achse, eine grüne Kurve für die Rotation entlang der Y-Achse 
+und eine blaue Kurve für die Rotation entlang der Z-Achse. Die einzelnen Kurven verlaufen entlang 
+der X-Achse des Graph-Editors den einzelnen Frames entlang und entlang der Y-Achse werden die tatsächlichen Werte für die jeweiligen Keyframes angezeigt. Da die Rotationen des Pendels entlang 
+der X- und Z-Achse konstant bei 0 belassen wurden, sind deren Kurven konstant auf dem Wert 0 platziert und lediglich die Kurve für die Y-Rotation weist eine Veränderung auf. 
+
+::: column-margin
+Cycles-Modifier
+:::
+
+Damit die erstellte Animation nun unendlich verläuft, müsste die erstellte Kurve wiederholt werden. Um 
+dies zu erzielen, kann entweder ein Keyframe der Y-Achsen-Rotations-Kurve ausgewählt werden oder in 
+der Toolbar auf der linken Seite des Graph-Editors die «*Y Euler Rotation*» ausgewählt werden. Anschliessend kann in der Sidebar auf der rechten Seite des Graph-Editors auf den Reiter «*Modifiers*» geklickt werden. Dadurch kann nun ein Modifier auf diese Animationskurve angewendet werden. Durch das Hinzufügen des Modifiers «*Cycles*» im Dropdown-Menü 
+«*Add Modifier*» wird die Kurve der Y-Achsen-Rotation nun zyklisch wiederholt. Diese Wiederholung erfolgt unendlich oft. Es ist allerdings möglich zu definieren, dass die Kurve lediglich einmal vor der 
+erstellten Animation wiederholt wird, indem der Wert «*Count*» unterhalb des «*Before Mode*» von 0 auf 1 gesetzt wird. Ebenso kann mit dem Wert «*Count*» unterhalb des «*After Mode*» die Anzahl Wiederholungen nach der erstellten Animation eingestellt werden. 
+
+
+:::::: tippbox
+:::: tippbox-header
+::: tippbox-icon
+:::
+
+Weiterführende Informationen
+::::
+
+::: tippbox-body
+Nebst dem Cycles-Modifier gibt es noch weitere nützliche Modifier, um Animationskurven zu erstellen. Mithilfe des ausgewählt Generator-Modifiers können etwa lineare Regressionskurven für Animationen erstellt werden oder mittels des Noise-Modifiers können dir Kurven zufällig verzerrt werden.  
+:::
+::::::
+
+![Der Graf für die Y-Achsen-Rotation mit einem Cycles-Modifier. Dadurch wird die Animation unendlich oft wiederholt. ](Images/Chapter_48/.png){#fig-1_3 fig-align="left"}
+
+::: column-margin
+Kurven-Interpolation anpassen
+:::
+
+Die erstellten Graphen werden an den Keyframes jeweils mittels einer Bézierkurve ausgestattet. 
+Dadurch können die Ausrichtungen der Kurven etwas nachbearbeitet werden. Es ist allerdings auch 
+möglich, Interpolationen für die Transformation zwischen den Keyframes auszuwählen. Hierfür müssen alle Keyframes der entsprechenden Kurve ausgewählt werden. Indem die Maus über einen dieser Keyframes platziert wird und anschliessend die Taste {{< kbd L >}} gedrückt wird, werden alle Keyframes dieser Kurve ausgewählt. Mit einem Rechtsklick mit der Maus kann anschliessend das «*F-Curve Context Menu*» geöffnet werden und darunter der Reiter «*Interpolation Mode*» anvisiert werden. Dieses Kontext-Menü zum Interpolationsmodus kann auch mittels der Taste {{< kbd T >}} geöffnet werden. In diesem Menü können anschliessende verschiedene Modi zur Interpolation der Kurven ausgewählt werden. Standardmässig ist die Option «*Bezier*» ausgewählt, aber je nach Situation können andere Interpolationen ebenfalls sinnvoll sein. 
+

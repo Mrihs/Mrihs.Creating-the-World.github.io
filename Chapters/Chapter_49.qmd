@@ -1,0 +1,62 @@
+---
+title: "49. Animationen rendern"
+editor: visual
+---
+
+### Animationen direkt rendern
+
+::: column-margin
+Animationen rendern
+:::
+
+Erstellte Animationen lassen sich, so wie auch Bilder, rendern. Dabei ist allerdings zu berücksichtigen, dass eine Animation aus einer Aneinanderreihung von mehreren Bildern besteht. Um eine gesamte Animation zu Rendern, kann im Menüband unter «*Render*» die Option «*Render Animation*» ausgewählt werden. Anschliessend werden alle Frames vom Start-Frame bis zum End-Frame nacheinander gerendert. Das bedeutet allerdings auch, dass sich die übliche Renderzeit erhöht, da nun so viele Bilder gerendert werden müssen, wie auch Frames vorhanden sind.
+
+::: column-margin
+Video-Output einstellen
+:::
+
+Per Default werden Animationen als einzelne Bilder gerendert, welche noch kein Video darstellen. Um ein Video zu erstellen, muss das entsprechende Videoformat als Output des Render-Prozesses angegeben werden. Dies kann im Output-Properties-Reiter des Properties-Editors unter «*Output*» 
+definiert werden. Besonders wichtig ist dabei, dass unter diesem Reiter ein Speicherort für das Output-Video definiert wird. Anders als bei Bildern, können Videos nicht nachträglich in Blender 
+abgespeichert werden. Aus diesem Grund ist es wichtig sich zu vergegenwärtigen, wo das Video abgespeichert wird. 
+
+::: column-margin
+Videoformat definieren
+:::
+
+Zudem sollte das Dropdown-Menü «*File Format*» von «*PNG*» auf «*FFmpeg Video*» umgestellt werden. Dadurch erscheint zuunterst im Reiter «*Output*» ein neuer Unterreiter «*Encoding*». Unter diesem Reiter müssen weitere Einstellungen definiert werden, wie das Video jeweils enkodiert werden soll. Auf dem Listen-Symbol rechts des «*Encoding*»-Reiters können verschiedene Voreinstellungen ausgewählt werden. Um ein MP4-Video zu erstellen, kann etwa die Voreinstellung «*H264 in MP4*» ausgewählt werden. Dadurch werden alle anderen Einstellungen automatisch für dieses Dateiformat angepasst. 
+
+::: column-margin
+Animations-Rendering darf nicht unterbrochen werden
+:::
+
+Beim Rendern der Animation werden anschliessend die Bilder aller Frames innerhalb der Animation 
+nacheinander gerendert. Sobald alle einzelnen Bilder gerendert wurden, erfolgt ein weiterer Render-Schritt, bei dem die einzelnen Bilder zu einem Video zusammengeführt werden. Dieser gesamte Prozess sollte nicht unterbrochen werden, ansonsten sind alle bereits gerenderten Inhalte verloren. 
+
+### Bilder rendern und anschliessend Animationen rendern 
+
+::: column-margin
+Arbeitsschritte für das Rendern aufteilen
+:::
+
+Eine alternative Vorgehensweise beim Rendern von Animationen besteht darin, dass der Renderprozess in zwei Schritte aufgeteilt wird: das Rendern der einzelnen Bilder und das Rendern der Animation. Es handelt sich dabei um den identischen Ablauf wie bereits beschrieben, allerdings werden dabei die einzelnen Frames als einzelne Bilder auf dem Rechner abgespeichert, welche anschliessend wieder in Blender hineingeladen werden, um die finale Animation zu rendern. Dies hat den Vorteil, dass dadurch der Renderprozess jederzeit abgebrochen werden kann und später lediglich die Bilder der noch fehlenden Frames gerendert werden können. Hierfür muss lediglich der 
+Start-Frame in der Timeline zu demjenigen Frame abgeändert werden, welcher als Erster noch nicht 
+gerendert wurde.
+
+::: column-margin
+Einzelne PNG-Bilder pro Frames rendern
+:::
+
+Um statt einer gesamten Animation lediglich die einzelnen Bilder zu rendern, kann in den Output
+Properties des Properties-Editors die Option «*File Format*» auf «*PNG*» belassen werden. Allerdings 
+ist es auch hier unerlässlich, einen sinnvollen Speicherort für die einzelnen Bilder auszuwählen. 
+Wenn anschliessend die Animation gerendert wird, werden alle einzelnen Frame-Bilder in diesem Ordner als separates Bild abgespeichert. 
+
+![ Icon für den Video-Sequencer-Editor.](Images/Chapter_49/.png){#fig-1_1 fig-align="left"}
+
+
+::: column-margin
+Bildsequenz im Video-Sequencer-Editor hinzufügen
+:::
+
+Um nach dem Rendern die Bilder zu einem Video zu verknüpfen, kann der VideoSequencer-Editor in Blender verwendet werden. In diesem können unter «*Add | Image/Sequence*» die ausgewählten Bilder eingelesen werden. Anschliessend kann die Output-Einstellung im Properties-Editor auf das Videoformat angepasst 
+werden und durch das Rendern der Animation werden nun lediglich die bereits vorproduzierten einzelnen Bilder noch zu einem Video verknüpft.

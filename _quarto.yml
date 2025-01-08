@@ -118,6 +118,10 @@ website:
             text: Kapitel 46
           - href: Chapters/Chapter_47.qmd
             text: Kapitel 47
+          - href: Chapters/Chapter_48.qmd
+            text: Kapitel 48
+          - href: Chapters/Chapter_49.qmd
+            text: Kapitel 49
       - href: about.qmd
         icon: info-circle
         text: Über

@@ -31,14 +31,12 @@ Texturen
 Shader
 :::
 
-Shader stellen Verarbeitungseinheiten der Parameter/Texturen dar. Sie bekommen Informationen aus den Parametern oder Texturen und verarbeiten diese weiter. Ein Emission-Shader nimmt beispielsweise jeweils die Parameter für die Farbe und strahlt diese um den Wert eines weiteren Parameters aus. Andere Shader berücksichtigen zusätzlich das Licht aus der Umgebung und verarbeiten die Parameter und Texturen
-in Abhängigkeit dieser Lichtquellen oder unter Berücksichtigung weiterer Parameter.
+Shader stellen Verarbeitungseinheiten der Parameter/Texturen dar. Sie bekommen Informationen aus den Parametern oder Texturen und verarbeiten diese weiter. Ein Emission-Shader nimmt beispielsweise jeweils die Parameter für die Farbe und strahlt diese um den Wert eines weiteren Parameters aus. Andere Shader berücksichtigen zusätzlich das Licht aus der Umgebung und verarbeiten die Parameter und Texturen in Abhängigkeit dieser Lichtquellen oder unter Berücksichtigung weiterer Parameter.
 
 ::: column-margin
 Materialien, Texturen und Shader
 :::
 
-Ein Material beinhaltet somit sowohl Parameter oder Texturen, welche Informationen beinhalten, als auch die Shader, welche die Informationen verarbeiten. Blender ist mit einer Reihe von eigenen Shadern ausgestattet, mit denen man arbeiten kann. Es ist allerdings auch möglich, eigene Shader zu erstellen oder die Verarbeitung 
-der Informationen zu verändern. 
+Ein Material beinhaltet somit sowohl Parameter oder Texturen, welche Informationen beinhalten, als auch die Shader, welche die Informationen verarbeiten. Blender ist mit einer Reihe von eigenen Shadern ausgestattet, mit denen man arbeiten kann. Es ist allerdings auch möglich, eigene Shader zu erstellen oder die Verarbeitung der Informationen zu verändern.
 
-![Zusammenhang zwischen Materialien, Texturen und Shadern.](Images/Chapter_16/Materialien, Texturen Shader.png){#fig-1_1 fig-align="left"}
+![Zusammenhang zwischen Materialien, Texturen und Shadern.](Images/Chapter_16/Materialien,%20Texturen%20Shader.png){#fig-1_1 fig-align="left"}

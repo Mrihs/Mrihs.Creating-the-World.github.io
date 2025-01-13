@@ -33,7 +33,7 @@ Bei dieser Darstellung handelt es sich um eine Anordnung im Rahmen einer visuell
 Nodes verbinden
 :::
 
-Wenn mit der linken Maustaste auf einen Input oder Output gedrückt wird und der Mauszeiger anschliessend bei gedrückt gehaltener linken Maustaste wegbewegt wird, folgt ein Faden vom Input/Output zum Mauszeiger. Wenn nun ein Input/Output eines anderen Nodes angesteuert wird und die linke Maustaste über diesem Input/Output losgelassen wird, können zwei Nodes verbunden werden. Dabei ist allerdings zu beachten, dass Inputs den Output eines anderen Nodes erhalten müssen. Ein Output kann nicht mit einem Output verbunden werden und ein Input nicht mit einem Input.
+Wenn mit der linken Maustaste auf einen Input oder Output gedrückt wird und der Mauszeiger anschliessend bei gedrückt gehaltener linker Maustaste wegbewegt wird, folgt ein Faden vom Input/Output zum Mauszeiger. Wenn nun ein Input/Output eines anderen Nodes angesteuert wird und die linke Maustaste über diesem Input/Output losgelassen wird, können zwei Nodes verbunden werden. Dabei ist allerdings zu beachten, dass Inputs den Output eines anderen Nodes erhalten müssen. Ein Output kann nicht mit einem Output verbunden werden und ein Input nicht mit einem Input.
 
 ::: column-margin
 Verbindung zwischen Principled-BSDF-Shader und Material-Output

@@ -19,7 +19,7 @@ Zunächst wird ein neues Blender-Projekt geöffnet. Da das Glas eine runde Form 
 Referenzbild einfügen
 :::
 
-Generell ist es empfehlenswert, bei der Erstellung von Objekten mit Referenzbildern zu arbeiten. Aus diesem Grund wird eine Bildvorlage für das Glas benötigt. Hier für kann eine Bilddatei direkt aus einem Ordner oder vom Desktop in den 3D-Viewport hineingezogen werden, sodass das Bild anschliessend direkt in der Szene sichtbar wird. Das Bild wird allerdings so eingefügt, dass es senkrecht zur Benutzeransicht sichtbar ist. Das bedeutet, dass das Bild entsprechend der eigenen Benutzeransicht positioniert und rotiert wird. Aus diesem Grund empfiehlt es sich, vor dem Hineinziehen des Bildes mit der Taste {{< kbd 1 >}} in die Frontansicht zu wechseln. Dadurch wird das Bild lediglich entlang der X-Achse um 90° rotiert eingefügt. Alternativ kann das Bild über das «*Add*»-Menü ({{< kbd Shift >}} + {{< kbd A >}}) unter «*Image \| Reference*» hinzugefügt werden. Zudem ist das Bild jeweils nur sichtbar, wenn die Viewport-Overlays aktiviert sind.
+Generell ist es empfehlenswert, bei der Erstellung von Objekten mit Referenzbildern zu arbeiten. Aus diesem Grund wird eine Bildvorlage für das Glas benötigt. Hierfür kann eine Bilddatei direkt aus einem Ordner oder vom Desktop in den 3D-Viewport hineingezogen werden, sodass das Bild anschliessend direkt in der Szene sichtbar wird. Das Bild wird allerdings so eingefügt, dass es senkrecht zur Benutzeransicht sichtbar ist. Das bedeutet, dass das Bild entsprechend der eigenen Benutzeransicht positioniert und rotiert wird. Aus diesem Grund empfiehlt es sich, vor dem Hineinziehen des Bildes mit der Taste {{< kbd 1 >}} in die Frontansicht zu wechseln. Dadurch wird das Bild lediglich entlang der X-Achse um 90° rotiert eingefügt. Alternativ kann das Bild über das «*Add*»-Menü ({{< kbd Shift >}} + {{< kbd A >}}) unter «*Image \| Reference*» hinzugefügt werden. Zudem ist das Bild jeweils nur sichtbar, wenn die Viewport-Overlays aktiviert sind.
 
 ![Bildvorlage zur Erstellung eines Glases.](Images/Chapter_13/1.%20Bildvorlage.png){#fig-1_1 fig-align="left"}
 
@@ -53,7 +53,7 @@ Der Zylinder ist nun an der Position des Glases, allerdings weist er die falsche
 Breite des Zylinders anpassen
 :::
 
-Als Nächstes wird der Mantel des Zylinders angepasst, sodass er der maximalen Breite des Glases entspricht. Hierfür werden alle Vertices ausgewählt und entlang der X- und Z-Achse kleiner skaliert. Mittels der Taste {{< kbd A >}} werden alle Vertices ausgewählt. Anschliessend wird mittels der Taste {{< kbd S >}} der Skalierungsvorgang gestartet, und mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd Z >}} die Z-Achse ignoriert. Durch die Eingabe von {{< kbd 0 >}}{{< kbd . >}}{{< kbd 6 >}} und der Bestätigung mittels {{< kbd Enter >}} wird anschliessend das Objekt entlang der X- und Y-Achse um den Faktor 0.6 skaliert.
+Als Nächstes wird der Mantel des Zylinders angepasst, sodass er der maximalen Breite des Glases entspricht. Hierfür werden alle Vertices ausgewählt und entlang der X- und Z-Achse kleiner skaliert. Mittels der Taste {{< kbd A >}} werden alle Vertices ausgewählt. Anschliessend wird mittels der Taste {{< kbd S >}} der Skalierungsvorgang gestartet, und mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd Z >}} die Z-Achse ignoriert. Durch die Eingabe von {{< kbd 0 >}}{{< kbd .>}}{{< kbd 6 >}} und der Bestätigung mittels {{< kbd Enter >}} wird anschliessend das Objekt entlang der X- und Y-Achse um den Faktor 0.6 skaliert.
 
 ::: column-margin
 Zylindermantel in Edges unterteilen
@@ -91,9 +91,7 @@ Um die Dicke des Glases zu erstellen, sollen alle Faces gegen den Mittelpunkt de
 Fläche nach innen extrudieren
 :::
 
-Anschliessend wird der Bezugspunkt für Transformationen auf den 3D-Cursor gewechselt (unter der Schaltfläche «*Transform Pivot Point*» im Header). Nachdem alle Elemente des Zylinders mittels {{< kbd A >}} ausgewählt wurden, können nun alle Flächen mit der Taste {{< kbd E >}} extrudiert werden. Mittels der Taste {{< kbd S >}} wird skalierend extrudiert und mit den Tasten {{< kbd 0 >}}{{< kbd . >}}{{< kbd 9 >}}{{< kbd 5 >}} der Faktor 0.95 festgelegt. Dies kann schliessend
-mittels der linken Maustaste oder {{< kbd Enter >}} bestätigt werden. Mit diesem Schritt ist
-das Glas bereits fertiggestellt. Es sieht noch etwas eckig und kantig aus, aber in den nächsten Kapiteln wird behandelt, wie das Glas noch glatter erscheint.
+Anschliessend wird der Bezugspunkt für Transformationen auf den 3D-Cursor gewechselt (unter der Schaltfläche «*Transform Pivot Point*» im Header). Nachdem alle Elemente des Zylinders mittels {{< kbd A >}} ausgewählt wurden, können nun alle Flächen mit der Taste {{< kbd E >}} extrudiert werden. Mittels der Taste {{< kbd S >}} wird skalierend extrudiert und mit den Tasten {{< kbd 0 >}}{{< kbd . >}}{{< kbd 9 >}}{{< kbd 5 >}} der Faktor 0.95 festgelegt. Dies kann schliessend mittels der linken Maustaste oder {{< kbd Enter >}} bestätigt werden. Mit diesem Schritt ist das Glas bereits fertiggestellt. Es sieht noch etwas eckig und kantig aus, aber in den nächsten Kapiteln wird behandelt, wie das Glas noch glatter erscheint.
 
 ![Alle Faces des Glases werden zum 3D-Cursor hin extrudiert, damit das Glas eine Dicke erhält.](Images/Chapter_13/4.%20Extrusion_Thickness.png){#fig-1_4 fig-align="left"}
 
@@ -117,7 +115,7 @@ Kreisförmiges Herausziehen mittels des Spin-Tools
 
 Anhand eines solchen Querschnittes eines Glases kann nun mittels des Spin-Tools kreisförmig die Form des Glases extrudiert werden. Hierfür wird zunächst in der Toolbar das Spin-Tool aktiviert. Anschliessend werden alle Vertices mit der Taste {{< kbd A >}} ausgewählt. Durch das Ziehen entlang einer der beiden «+»-Symbole des Spin-Gizmos kann anschliessend das Glas kreisförmig aus dem Querschnitt herausgezogen werden. Im Kontext-Menü zur letzten Aktion kann anschliessend der Radius noch auf 360° festgelegt werden und darunter «*Auto Merge*» aktiviert werden. Dadurch werden die beiden Enden des extrudierten Bereichs zusammen verbunden. Zusätzlich kann unter «*Steps*» noch die Anzahl extrudierter Faces erhöht werden, um einen glatteren Kreis zu erhalten.
 
-![ Querschnitt des Glases. Die in der Abbildung ausgewählten Vertices müssen entlang der X- und Y-Achse noch zum Ursprung des Objektes extrudiert werden.](Images/Chapter_13/5.%20Querschnitt.png){#fig-1_5 fig-align="left"}
+![Querschnitt des Glases. Die in der Abbildung ausgewählten Vertices müssen entlang der X- und Y-Achse noch zum Ursprung des Objektes extrudiert werden.](Images/Chapter_13/5.%20Querschnitt.png){#fig-1_5 fig-align="left"}
 
 :::::: exercisebox
 :::: exercisebox-header

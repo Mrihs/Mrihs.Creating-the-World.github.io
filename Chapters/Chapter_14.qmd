@@ -102,7 +102,7 @@ Solidify-Modifier, um Dicke zu erstellen
 
 Das Glas benötigt noch eine Dicke. Auch diese kann mittels eines Modifiers hinzugefügt werden. Hierfür wird mittels des Dropdown-Menüs «*Add Modifier*» ein «*Solidify*»-Modifier hinzugefügt. Dieser extrudiert alle Faces entlang ihrer Normalen und verbindet sie gemeinsam, sodass das Objekt eine Dicke erhält. Somit hat das Glas nun bereits seine eigentliche Form erhalten.
 
-### Subdivision-Surface-Modifier
+### Der Subdivision-Surface-Modifier
 
 ::: column-margin
 Subdivision Surface zum Glätten
@@ -136,13 +136,13 @@ Fehlende Dicke
 
 Nun sollten dem Glas drei Modifier in der folgenden Reihenfolge zugeordnet sein: ein Screw-Modifier, welcher die drei Vertices kreisförmig extrudiert, ein Solidify-Modifier, welcher den Faces eine Dicke hinzufügt, und ein Subdivision-Surface-Modifier, welcher das Objekt durch zusätzliche Vertices glättet. Das Objekt erscheint nun glatt, aber nicht mehr besonders dick. Dies liegt daran, dass der Solidify-Modifier dem Glas eine Dicke zuweist, der Subdivision-Surface-Modifier allerdings die Vertices dieser Dicke so stark glättet, dass die Dicke wieder verschwindet. Zudem fällt auch auf, dass der runde Boden des Glases stark verformt wird und unverhältnismässig kantig erscheint.
 
-![Verzerrung von Tris am Glasboden durch den Subdivision-Surface-Modifier.](Images/Chapter_14/4.%20Tris%20am%20Boden.png){#fig-1_4 fig-align="left"}
-
 ::: column-margin
 Verwendung von Tris bei Modifiern
 :::
 
 Die seltsame Form am Boden ist auf die Form der Faces zurückzuführen, welche durch die Modifier entstehen. Durch die kreisförmige Extrusion der Vertices im Screw-Modifier entstehen am Boden eine Reihe Tris, die sich kreisförmig um den Mittelpunkt bilden. Die meisten Modifier können mit Tris umgehen, allerdings nicht alle gleich gut. In diesem Fall liegt die Ursache beim Subdivision-Surface-Modifier, welcher die kreisförmigen Vertices unterschiedlich stark zum Mittelpunkt hin glättet.
+
+![Verzerrung von Tris am Glasboden durch den Subdivision-Surface-Modifier.](Images/Chapter_14/4.%20Tris%20am%20Boden.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Bevel-Modifier
@@ -165,7 +165,7 @@ Nebst der Schaltfläche zum Verschieben beinhaltet der Header eines Modifiers no
 -   Innerhalb eines Textfeldes wird der Name des Modifiers angezeigt. Dieser kann auch abgeändert werden, damit etwa die Funktion des Modifiers klarer wird.
 -   Daneben sind drei weitere Schaltflächen anzutreffen, die wahlweise aktiviert oder deaktiviert werden können:
     -   **On Cage**: Wenn diese Schaltfläche aktiviert ist, wird im Edit-Mode angezeigt, wie sich die Bearbeitung von Vertices auswirkt. Dieses Feld ist allerdings nicht bei allen Modifiern verfügbar. Da es beim Screw-Modifier nicht verfügbar ist, wird es im Beispiel mit dem Glas auch bei den nachfolgenden Modifiern nicht angezeigt. Durch das Deaktivieren der Schaltfläche «*Edit Mode*» (siehe nächsten Aufzählungspunkt) beim Screw-Modifier wird die Schaltfläche «*On Cage*» bei den darauffolgenden Modifiern jedoch wieder sichtbar.
-    -   **Edit Mode**: Wenn diese Schaltfläche aktiviert ist, wird während der Bearbeitung im Edit Mode der Effekt des Modifiers auf das gesamte Objekt gezeigt. Ansonsten bleibt dieser Modifier im Edit-Mode unberücksichtigt.
+    -   **Edit Mode**: Wenn diese Schaltfläche aktiviert ist, wird während der Bearbeitung im Edit-Mode der Effekt des Modifiers auf das gesamte Objekt gezeigt. Ansonsten bleibt dieser Modifier im Edit-Mode unberücksichtigt.
     -   **Realtime**: Der Modifier wird im 3D-Viewport angezeigt.
     -   **Render**: Der Modifier wird beim Rendern berücksichtigt.
 -   Innerhalb des Dropdown-Menüs sind folgende Optionen anzutreffen:
@@ -205,7 +205,7 @@ Blender bietet eine Möglichkeit, um Objekte noch über den Subdivision-Surface-
 Häufige Fehler beim Smooth-Shading
 :::
 
-Bei dieser Art der Glättung wird nichts an der Struktur des Objektes geändert, sondern dessen Darstellung geglättet. Diese Darstellung wirkt allerdings bei sehr kantigen Objekten und daher auch beispielsweise bei Objekten im Low-Poly-Stil befremdlich. In diesem Fall ist eher «*Shade Flat*» zu empfehlen. Zudem ist für die Berechnung dieser geglätteten Fläche wichtig, dass die Normalen in die richtige Richtung orientiert sind. Nebst zu kantigen Flächen sind falsch orientierte Normalen eine häufige Ursache, wenn ein Objekt unter «Shade Smooth» schlecht dargestellt wird.
+Bei dieser Art der Glättung wird nichts an der Struktur des Objektes geändert, sondern dessen Darstellung geglättet. Diese Darstellung wirkt allerdings bei sehr kantigen Objekten und daher auch beispielsweise bei Objekten im Low-Poly-Stil befremdlich. In diesem Fall ist eher «Shade Flat» zu empfehlen. Zudem ist für die Berechnung dieser geglätteten Fläche wichtig, dass die Normalen in die richtige Richtung orientiert sind. Nebst zu kantigen Flächen sind falsch orientierte Normalen eine häufige Ursache, wenn ein Objekt unter «Shade Smooth» schlecht dargestellt wird.
 
 ## Die Vielzahl von Modifiern
 
@@ -276,13 +276,15 @@ Der Build-Modifier ermöglicht es, dass ein Objekt im Rahmen einer Animation suk
 
 #### Decimate
 
-::: column-margin¨
+::: column-margin
 Vertice in einem Objekt reduzieren mittels Decimat-Modifier
 :::
 
 Der Decimate-Modifier reduziert die Anzahl Vertices in einem Objekt. Dabei wird das Objekt entweder um einen Faktor runtergebrochen («*Collapse*»), «*un-subdivided*» oder abgeflacht («*Planar*»). Der Un-Subdivide-Modus stellt das Gegenteil des Subdivision-Surface-Modifiers dar. In diesem Modus muss allerdings beachtet werden, dass die Anordnung der Edges zwischen den Faces bei jedem ungeraden Schritt der Un-Subdivision verändert wird, während sie bei geraden Anzahlen Un-Subdivisions erhalten bleibt, wie in Abbildung 12 dargestellt.
 
 ![Icon für den Decimate-Modifier.](Images/Chapter_14/11.%20Icon_Decimate_Modifier.png){#fig-1_11 fig-align="left"}
+
+![Veränderung der Edge-Anordnung durch Un-Subdivide.](Images/Chapter_14/12.%20Example_Unsubdivide.png){#fig-1_12 fig-align="left"}
 
 #### Edge Split
 
@@ -292,7 +294,7 @@ Edges zwischen Faces aufteilen mittels Edge-Split-Modifier
 
 Der Edge-Split-Modifier kann dazu verwendet werden, um Edges von zwei aneinanderliegenden Faces aufzuteilen. Dadurch scheinen die Faces zwar aneinanderzuliegen, allerdings handelt es sich dabei um zwei Faces, die nicht miteinander verbunden sind. Dies hat den Vorteil, dass Kanten, welche durch den Subdivision-Surface-Modifier abgerundet werden, nun als einzelne Kanten betrachtet und nicht abgerundet werden. Hierfür muss der Edge-Split-Modifier jedoch vor dem Subdivision-Surface-Modifier platziert werden. Im Edge-Split-Modifier kann unter «*Edge Angle*» definiert werden, bis zu welchem Winkel die Edges jeweils separiert werden sollen. Bei der Einstellung 30° werden alle Edges separiert, deren Faces in einem grösseren Winkel als 30° zueinander stehen.
 
-![Veränderung der Edge-Anordnung durch Un-Subdivide.](Images/Chapter_14/12.%20Example_Unsubdivide.png){#fig-1_12 fig-align="left"}
+
 
 ![Icon für den Edge-Split-Modifier.](Images/Chapter_14/13.%20Icon_Edge_Split_Modifier.png){#fig-1_13 fig-align="left"}
 
@@ -344,10 +346,10 @@ Mesh neu generieren mittels Remesh-Modifier
 
 Mithilfe des Remesh-Modifiers können die Vertices, Edges und Faces eines Objektes neu generiert werden. Hierbei stehen verschiedene Möglichkeiten zur Auswahl, wie Blender bei dieser Neugenerierung vorgehen soll:
 
--   «***Blocks***»: Die Form des Objektes wird blockartig erstellt.
--   «***Smooth***»: Die Form des Objektes wird mit einer geglätteten Oberfläche er stellt.
--   «***Sharp***»: Die Form des Objektes wird mit einer geglätteten Oberfläche erstellt, allerdings werden spitze Ecken und Kanten beibehalten.
--   «***Voxel***»: Das Objekt wird basierend auf seinem Volumen neu erstellt.
+-   ***«Blocks»***: Die Form des Objektes wird blockartig erstellt.
+-   ***«Smooth»***: Die Form des Objektes wird mit einer geglätteten Oberfläche er stellt.
+-   ***«Sharp»***: Die Form des Objektes wird mit einer geglätteten Oberfläche erstellt, allerdings werden spitze Ecken und Kanten beibehalten.
+-   ***«Voxel»***: Das Objekt wird basierend auf seinem Volumen neu erstellt.
 
 ![Icon für den Remesh-Modifier.](Images/Chapter_14/18.%20Icon_Remesh_Modifier.png){#fig-1_18 fig-align="left"}
 
@@ -476,29 +478,37 @@ Grenzen von Modifiern
 
 Wie beim Beispiel mit dem Glas zu erkennen ist, funktionieren Modifier unter bestimmten Umständen nicht immer perfekt. Die Anwendung des Subdivision-Surface-Modifiers auf einen Zylinder führt beispielsweise dazu, dass nicht nur der Mantel des Zylinders abgerundet wird, sondern auch die Kanten zum Boden beziehungsweise Deckel des Zylinders. Dies führt dazu, dass der Zylinder seine Form verliert und eher einer Kugel ähnelt. Der Boden und der Deckel des Zylinders stellen ein einzelnes N-Gon dar. Durch die fehlenden Quads werden der Boden und der Deckel somit in einer fehlerhaften Form abgerundet. In solchen Fällen macht die Anwendung des Subdivision-Surface-Modifiers in dieser Form keinen Sinn.
 
+![ Ein Zylinder mit einem Subdivision-Surface-Modifier im Edit-Mode.](Images/Chapter_14/.png){#fig-1_30 fig-align="left"}
+
 ::: column-margin
 Abrundung verhindern
 :::
 
-Es gibt einige destruktive Lösungsansätze, um die unerwünschten Effekte des Subdivision-Surface-Modifiers zu reduzieren. So können beispielsweise zusätzliche Loop Cuts ({{< kbd Ctrl >}} + {{< kbd R >}} ) an den Kanten hinzugefügt werden, welche zu stark abgerundet werden. Dies führt dazu, dass Blender eine geringere Länge zur Verfügung hat, um Kanten abzurunden.
+Es gibt einige destruktive Lösungsansätze, um die unerwünschten Effekte des Subdivision-Surface-Modifiers zu reduzieren. So können beispielsweise zusätzliche Loop Cuts ({{< kbd Ctrl >}} + {{< kbd R >}}) an den Kanten hinzugefügt werden, welche zu stark abgerundet werden. Dies führt dazu, dass Blender eine geringere Länge zur Verfügung hat, um Kanten abzurunden.
+
+![ Reduzierte Glättung durch Loop Cuts.](Images/Chapter_14/.png){#fig-1_31 fig-align="left"}
 
 ::: column-margin
 Abrundung von Tris/N-Gons verhindern
 :::
 
-Allerdings bleibt der Effekt einer ungenauen Abrundung entlang des Deckels/Bodens bestehen. Um diesen Effekt zu reduzieren, kann das Face des Deckels/Bodens ausgewählt und im Rahmen einer Extrusion kleiner skaliert werden (Taste {{< kbd E >}}, danach Taste {{< kbd S >}} ). Dadurch wird der äusserste Rand des Deckels/Bodens mit Quads dargestellt, die gemeinsam einen Kreis um ein paralleles N-Gon bilden (wie in Abbildung 76 dargestellt).
+Allerdings bleibt der Effekt einer ungenauen Abrundung entlang des Deckels/Bodens bestehen. Um diesen Effekt zu reduzieren, kann das Face des Deckels/Bodens ausgewählt und im Rahmen einer Extrusion kleiner skaliert werden (Taste {{< kbd E >}}, danach Taste {{< kbd S >}}). Dadurch wird der äusserste Rand des Deckels/Bodens mit Quads dargestellt, die gemeinsam einen Kreis um ein paralleles N-Gon bilden (wie in Abbildung 32 dargestellt).
+
+![Durch Quads am Rand wird das Glätten des N-Gons verhindert.](Images/Chapter_14/.png){#fig-1_32 fig-align="left"}
 
 ::: column-margin
 Parallelität, um Abrundung zu verhindern
 :::
 
-Die kreisförmig angeordneten Quads liegen in diesem Beispiel nun parallel zu dem N-Gon in der Mitte. Dadurch erübrigt sich eine Glättung des N-Gons entlang seiner Edges. Würde das N-Gon allerdings nicht parallel verlaufen (z.B. wenn es weiter nach aussen gezogen würde, wie in Abbildung 77), so würde das N-Gon wieder geglättet und eine ungewollte Schraffierung entstünde erneut.
+Die kreisförmig angeordneten Quads liegen in diesem Beispiel nun parallel zu dem N-Gon in der Mitte. Dadurch erübrigt sich eine Glättung des N-Gons entlang seiner Edges. Würde das N-Gon allerdings nicht parallel verlaufen (z.B. wenn es weiter nach aussen gezogen würde, wie in Abbildung 33), so würde das N-Gon wieder geglättet und eine ungewollte Schraffierung entstünde erneut.
 
 ::: column-margin
 Bearbeitung von Meshes trotz Modifiern notwendig
 :::
 
 Dieses Beispiel zeigt, dass die nicht-destruktive Bearbeitung mittels Modifiern teilweise auch Anpassungen im Mesh erfordern. Zudem ist es teilweise nötig, dass Modifier auf ein Objekt angewendet werden, sodass die Vertices, welche durch den Modifier entstehen, destruktiv weiterbearbeitet werden können.
+
+![Glättung des N-Gons entsteht wieder, wenn das N-Gon nicht mehr parallel zu den umgebenden Quads liegt.](Images/Chapter_14/.png){#fig-1_33 fig-align="left"}
 
 ::: column-margin
 Modifier auf Teilmengen des Meshes beschränken

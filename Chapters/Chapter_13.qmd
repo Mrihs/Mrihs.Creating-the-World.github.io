@@ -53,7 +53,7 @@ Der Zylinder ist nun an der Position des Glases, allerdings weist er die falsche
 Breite des Zylinders anpassen
 :::
 
-Als Nächstes wird der Mantel des Zylinders angepasst, sodass er der maximalen Breite des Glases entspricht. Hierfür werden alle Vertices ausgewählt und entlang der X- und Z-Achse kleiner skaliert. Mittels der Taste {{< kbd A >}} werden alle Vertices ausgewählt. Anschliessend wird mittels der Taste {{< kbd S >}} der Skalierungsvorgang gestartet, und mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd Z >}} die Z-Achse ignoriert. Durch die Eingabe von {{< kbd 0 >}}{{< kbd .>}}{{< kbd 6 >}} und der Bestätigung mittels {{< kbd Enter >}} wird anschliessend das Objekt entlang der X- und Y-Achse um den Faktor 0.6 skaliert.
+Als Nächstes wird der Mantel des Zylinders angepasst, sodass er der maximalen Breite des Glases entspricht. Hierfür werden alle Vertices ausgewählt und entlang der X- und Z-Achse kleiner skaliert. Mittels der Taste {{< kbd A >}} werden alle Vertices ausgewählt. Anschliessend wird mittels der Taste {{< kbd S >}} der Skalierungsvorgang gestartet, und mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd Z >}} die Z-Achse ignoriert. Durch die Eingabe von {{< kbd 0 >}}{{< kbd . >}}{{< kbd 6 >}} und der Bestätigung mittels {{< kbd Enter >}} wird anschliessend das Objekt entlang der X- und Y-Achse um den Faktor 0.6 skaliert.
 
 ::: column-margin
 Zylindermantel in Edges unterteilen

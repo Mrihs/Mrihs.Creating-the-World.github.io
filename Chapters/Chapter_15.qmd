@@ -21,21 +21,19 @@ Der Edge Crease stellt ein Merkmal dar, welches einem Edge hinzugefügt werden k
 Edge Crease hinzufügen
 :::
 
-Um Edges einen Edge Crease hinzuzufügen, müssen sie zunächst ausgewählt werden. Anschliessend kann mittels der Tastenkombination  {{< kbd Ctrl >}} + {{< kbd E >}} das «*Edge*»-Menü beim Mauszeiger geöffnet werden und «*Edge Crease*» ausgewählt werden. Mittels der Bewegung des Mauszeigers oder durch die Eingabe einer Zahl kann anschliessend der Faktor für den Edge Crease festgelegt werden. Im
-Edit-Mode wird die Stärke eines Creases für ein Edge jeweils mit einer violetten Markierung angegeben. Eine besonders starke violette Markierung des Edges weist auf einen Edge Crease von 1 hin, eine fehlende Markierung auf einen Edge Crease von 0. Alternativ kann der Edge-Crease auch direkt über die Tastenkombination {{< kbd Shift >}} + {{< kbd E >}} bei ausgewählten Edges verändert werden.
+Um Edges einen Edge Crease hinzuzufügen, müssen sie zunächst ausgewählt werden. Anschliessend kann mittels der Tastenkombination {{< kbd Ctrl >}} + {{< kbd E >}} das «*Edge*»-Menü beim Mauszeiger geöffnet werden und «*Edge Crease*» ausgewählt werden. Mittels der Bewegung des Mauszeigers oder durch die Eingabe einer Zahl kann anschliessend der Faktor für den Edge Crease festgelegt werden. Im Edit-Mode wird die Stärke eines Creases für ein Edge jeweils mit einer violetten Markierung angegeben. Eine besonders starke violette Markierung des Edges weist auf einen Edge Crease von 1 hin, eine fehlende Markierung auf einen Edge Crease von 0. Alternativ kann der Edge-Crease auch direkt über die Tastenkombination {{< kbd Shift >}} + {{< kbd E >}} bei ausgewählten Edges verändert werden.
 
 ::: column-margin
 Edge Creases über die Sidebar einstellen
 :::
 
-Nebst der Einstellung über das Edge-Menü kann der Edge Crease auch über die Sidebar eingestellt werden. Unterhalb des Einstellungsfeldes für die Position eines Vertex oder den Median der Auswahl befinden sich zwei Felder für die Eingabe von «*Edge Data*». Dort ist ein Feld für den Crease des ausgewählten Edges zu finden. Wenn mehrere Edges ausgewählt sind, wird der Mittelwert der Crease-Werte berechnet und an dieser Stelle angezeigt. Durch das Ersetzen des Mittelwerts durch 
-eine Zahl wird der Crease proportional über die ausgewählten Elemente verändert, sodass der Mittelwert diesem Wert entspricht. Durch die Eingabe von 0 werden generell alle Edge Creases bei der Auswahl entfernt und durch die Eingabe von 1 werden generell alle Edge Creases bei der Auswahl maximiert.
+Nebst der Einstellung über das Edge-Menü kann der Edge Crease auch über die Sidebar eingestellt werden. Unterhalb des Einstellungsfeldes für die Position eines Vertex oder den Median der Auswahl befinden sich zwei Felder für die Eingabe von «*Edge Data*». Dort ist ein Feld für den Crease des ausgewählten Edges zu finden. Wenn mehrere Edges ausgewählt sind, wird der Mittelwert der Crease-Werte berechnet und an dieser Stelle angezeigt. Durch das Ersetzen des Mittelwerts durch eine Zahl wird der Crease proportional über die ausgewählten Elemente verändert, sodass der Mittelwert diesem Wert entspricht. Durch die Eingabe von 0 werden generell alle Edge Creases bei der Auswahl entfernt und durch die Eingabe von 1 werden generell alle Edge Creases bei der Auswahl maximiert.
 
 ::: column-margin
 Edge Crease deaktivieren
 :::
 
-Per Default ist beim Subdivision-Surface-Modifier eingestellt, dass er Edge Creases im Mesh berücksichtigt. Dies kann allerdings in den Einstellungen zum Modifier unter dem Menü «*Advanced*» unter «*Use Creases*» deaktiviert werden. 
+Per Default ist beim Subdivision-Surface-Modifier eingestellt, dass er Edge Creases im Mesh berücksichtigt. Dies kann allerdings in den Einstellungen zum Modifier unter dem Menü «*Advanced*» unter «*Use Creases*» deaktiviert werden.
 
 ## Bevel Weight
 
@@ -43,22 +41,19 @@ Per Default ist beim Subdivision-Surface-Modifier eingestellt, dass er Edge Crea
 Edge Bevel Weight
 :::
 
-Nebst den Edge Creases, welche den Subdivision-Surface-Modifier steuern, können die sogenannten Edge Bevel Weights verwendet werden, 
-um den Bevel-Modifier zu steuern. Bevel Weights können ebenfalls einen Wert von 0 bis 1 annehmen. Ein Wert von 0 steht allerdings für keine Anwendung des Bevel-Modifiers und ein Wert von 1 für eine maximale Anwendung des Bevel-Modifiers. Auch Abstufungen dazwischen sind möglich.
+Nebst den Edge Creases, welche den Subdivision-Surface-Modifier steuern, können die sogenannten Edge Bevel Weights verwendet werden, um den Bevel-Modifier zu steuern. Bevel Weights können ebenfalls einen Wert von 0 bis 1 annehmen. Ein Wert von 0 steht allerdings für keine Anwendung des Bevel-Modifiers und ein Wert von 1 für eine maximale Anwendung des Bevel-Modifiers. Auch Abstufungen dazwischen sind möglich.
 
 ::: column-margin
 Edge Bevel Weight hinzufügen
 :::
 
-Um einem Edge einen Bevel Weight hinzuzufügen, muss das jeweilige 
-Edge ausgewählt werden. Anschliessend kann mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd E >}} das «*Edge*»-Menü beim Mauszeiger geöffnet werden und «*Edge Bevel Weight*» ausgewählt werden. Anschliessend kann entweder mit einer Bewegung der Maus oder durch die Eingabe einer Zahl der Edge Bevel Weight der Auswahl verändert werden. Im Edit-Mode sind Edge Bevel Weights durch eine blaue farbliche Markierung entlang der Edges ersichtlich. Je stärker die blaue Einfärbung, desto mehr nähert sich der Edge Bevel Weight dem Faktor 1 an. Bei keiner farblichen Markierung beträgt der Bevel Weight 0. 
+Um einem Edge einen Bevel Weight hinzuzufügen, muss das jeweilige Edge ausgewählt werden. Anschliessend kann mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd E >}} das «*Edge*»-Menü beim Mauszeiger geöffnet werden und «*Edge Bevel Weight*» ausgewählt werden. Anschliessend kann entweder mit einer Bewegung der Maus oder durch die Eingabe einer Zahl der Edge Bevel Weight der Auswahl verändert werden. Im Edit-Mode sind Edge Bevel Weights durch eine blaue farbliche Markierung entlang der Edges ersichtlich. Je stärker die blaue Einfärbung, desto mehr nähert sich der Edge Bevel Weight dem Faktor 1 an. Bei keiner farblichen Markierung beträgt der Bevel Weight 0.
 
 ::: column-margin
 Edge Bevel Weight im Viewport
 :::
 
-Wie auch der Edge Crease kann der Edge Bevel Weight in der Sidebar 
-eingestellt werden. Hierfür wird die Zeile «*Bevel Weight*» verwendet. Wie auch beim Crease lässt sich hier der Mittelwert der Auswahl proportional anpassen, respektive der Wert 0 oder 1 für die gesamte Auswahl fixieren.
+Wie auch der Edge Crease kann der Edge Bevel Weight in der Sidebar eingestellt werden. Hierfür wird die Zeile «*Bevel Weight*» verwendet. Wie auch beim Crease lässt sich hier der Mittelwert der Auswahl proportional anpassen, respektive der Wert 0 oder 1 für die gesamte Auswahl fixieren.
 
 ::: column-margin
 Modifier auf Bevel Weights einstellen
@@ -77,7 +72,6 @@ Modifier auf Vertex Bevel Weight einstellen
 :::
 
 Der Bevel-Modifier berücksichtigt die Vertex Bevel Weights lediglich, wenn er auf «*Vertices*» eingestellt wurde. Auch in diesem Fall muss die «*Limit Method*» auf «*Weight*» eingestellt werden. Wenn sowohl die Edge Bevel Weights als auch die Vertex Bevel Weights berücksichtigt werden sollen, werden zwei Bevel-Modifier benötigt: ein Modifier für die Vertex Bevel Weights und ein Modifier für die Edge Bevel Weights.
-
 
 ## Vertex Groups
 
@@ -99,14 +93,13 @@ Im Edit-Mode können einzelne Vertices zu Gruppen zusammengefasst werden. Solche
 Vertex-Gruppe erstellen
 :::
 
-Durch einen Klick auf die «+»-Schaltfläche unter dem Reiter «*Vertex Groups*» in den Object Data Properties wird anschliessend eine neue Vertex-Gruppe hinzugefügt, welche den Namen «Group» trägt. Dieser Name kann beliebig angepasst werden und sollte – gerade wenn viele Vertex-Gruppen erstellt werden – klar ausdrücken, welche Inhalte diese Gruppe abdeckt. 
+Durch einen Klick auf die «+»-Schaltfläche unter dem Reiter «*Vertex Groups*» in den Object Data Properties wird anschliessend eine neue Vertex-Gruppe hinzugefügt, welche den Namen «Group» trägt. Dieser Name kann beliebig angepasst werden und sollte – gerade wenn viele Vertex-Gruppen erstellt werden – klar ausdrücken, welche Inhalte diese Gruppe abdeckt.
 
 ::: column-margin
 Vertices zu Gruppen hinzufügen
 :::
 
 Wenn eine neue Vertex-Gruppe hinzugefügt wird, beinhaltet diese zunächst keine Vertices. Diese müssen der neu erstellten Gruppe hinzugefügt werden. Hierfür werden im Edit-Mode die entsprechenden Vertices ausgewählt und anschliessend die Schaltfläche «*Assign*» unterhalb der Auflistung der Vertex-Gruppen betätigt. Dadurch werden der Vertex-Gruppe die ausgewählten Vertices hinzugefügt. Analog können mittels der Schaltfläche «*Remove*» Vertices von bestehenden Vertex-Gruppen entfernt werden.
-
 
 ::: column-margin
 Vertices mittels Vertex-Gruppen an- und abwählen
@@ -124,7 +117,7 @@ Es ist ausserdem möglich, bestehende Vertex-Gruppen zu sperren, sodass keine we
 Vertex-Gruppen zu Modifiern hinzufügen
 :::
 
-Bei vielen Modifiern lassen sich innerhalb der Einstellungen Vertex-Gruppen in einer Zeile mit der Beschriftung «*Vertex Group*» auswählen. Wenn eine  Vertex-Gruppe für ein Objekt definiert wurde, wird diese anschliessend auswählbar für dieses Feld. Dadurch können die entsprechenden Modifier auf diese Vertex-Gruppen beschränkt werden. Beispielsweise kann der Bevel-Modifier statt mit Bevel Weights auch mit Vertex-Gruppen auf einzelne Edges oder Vertices reduziert werden.
+Bei vielen Modifiern lassen sich innerhalb der Einstellungen Vertex-Gruppen in einer Zeile mit der Beschriftung «*Vertex Group*» auswählen. Wenn eine Vertex-Gruppe für ein Objekt definiert wurde, wird diese anschliessend auswählbar für dieses Feld. Dadurch können die entsprechenden Modifier auf diese Vertex-Gruppen beschränkt werden. Beispielsweise kann der Bevel-Modifier statt mit Bevel Weights auch mit Vertex-Gruppen auf einzelne Edges oder Vertices reduziert werden.
 
 :::::: exercisebox
 :::: exercisebox-header
@@ -137,13 +130,13 @@ Bei vielen Modifiern lassen sich innerhalb der Einstellungen Vertex-Gruppen in e
 ::: exercisebox-body
 **Übung 11.1**
 
-Verändern Sie den Standardwürfel mittels Modifiern und Mesh-Daten so, dass das rechts abgebildete Objekt dargestellt wird.
+Verändern Sie den Standardwürfel mittels Modifiern und Mesh-Daten so, dass das unten abgebildete Objekt dargestellt wird.
 
 ![](Images/Chapter_15/Übung_11.1.png){fig-align="right"}
 
 **Übung 11.2**
 
-Erstellen Sie mittels Modifiern das rechts abgebildete Objekt.
+Erstellen Sie mittels Modifiern das unten abgebildete Objekt.
 
 ![](Images/Chapter_15/üBUNG_11.2.png){fig-align="right"}
 :::

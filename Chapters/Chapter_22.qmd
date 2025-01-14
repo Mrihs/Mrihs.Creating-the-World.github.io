@@ -17,9 +17,15 @@ Stellen Sie sich vor, sie möchten den Standardwürfel aus Blender als reales Ob
 Würfel aus einer Fotografie abbilden
 :::
 
-Statt eines einfarbigen Papiers könnte auch eine Foto grafie verwendet werden – wie in diesem Fall das Bild einer Steintextur in Abbildung 2 (Bildquelle: <https://ambientcg.com/view?id=Rocks024S>). Diese Abbildung würde anschliessend mitsamt den farblichen Strukturen des Bildes auch auf der Oberfläche des Würfels dargestellt. Der Würfel aus Abbildung 2 weist auf seiner Vorderseite dieselbe Struktur auf, wie sie in dem Kasten der Vorlage auf der linken Seite zuoberst dargestellt ist. Analog stellen die anderen Seiten des Würfels ebenfalls einen Kasten aus der Vorlage auf der linken Seite dar. In diesem Fall wird die die Fotografie als Textur verwendet, welche verschiedene Farbvariationen beinhaltet und als Base-Color fungieren kann.
+Statt eines einfarbigen Papiers könnte auch eine Fotografie verwendet werden – wie in diesem Fall das Bild einer Steintextur in Abbildung 2 (Bildquelle: <https://ambientcg.com/view?id=Rocks024S>). Diese Abbildung würde anschliessend mitsamt den farblichen Strukturen des Bildes auch auf der Oberfläche des Würfels dargestellt. Der Würfel aus Abbildung 2 weist auf seiner Vorderseite dieselbe Struktur auf, wie sie in dem Kasten der Vorlage auf der linken Seite zuoberst dargestellt ist. Analog stellen die anderen Seiten des Würfels ebenfalls einen Kasten aus der Vorlage auf der linken Seite dar. In diesem Fall wird die die Fotografie als Textur verwendet, welche verschiedene Farbvariationen beinhaltet und als Base-Color fungieren kann.
 
 ![Eine Form auf einem Foto sowie ein Würfel, der aus dieser Form zusammengefaltet wurde.](Images/Chapter_22/Bigstones%20texture%20and%20cube.png){#fig-1_2 fig-align="left"}
+
+::: column-margin
+Veränderung des Bildes
+:::
+
+Würde man nun eine kleinere Fläche dieses Fotos verwenden, um die Vorlage zu erstellen, oder das Foto vergrössern, kann dieselbe Vorlage zum Zusammenfalten des Würfels verwendet werden. Die einzelnen Seiten entsprechen räumlich immer noch denselben Kästen aus der linken Abbildung – allerdings weichen die gewählten Bildausschnitte ab, wie in Abbildung 3 dargestellt.
 
 ![Dasselbe Foto aus Abbildung 2, allerdings mit einer kleineren Fläche, aus welcher der Würfel erstellt wird.](Images/Chapter_22/smallstones%20texture%20and%20cube.png){#fig-1_3 fig-align="left"}
 
@@ -61,6 +67,8 @@ UVs werden mit neuem Objekt erstellt
 
 Jedes neu hinzugefügte Objekt in Blender wird bereits mit einem UV-Mapping erstellt. Das heisst, ein neu hinzugefügter Würfel beinhaltet bereits das standardmässige UV-Mapping, welches bislang dargestellt wurde. Auch andere Mesh-Formen werden standardmässig mit ihren UV-Mappings erstellt. Abbildung 7 zeigt die Mesh-Primitives in ihren Default-Einstellungen inklusive einer auf sie angewendeten Textur und darunter das entsprechende Mapping dieser Texturen.
 
+![Die Mesh-Primitives und die standardmässig dazu erstellten UV-Mappings.](Images/Chapter_22/.png){#fig-1_7 fig-align="left"}
+
 ::: column-margin
 UV-Unwrapping
 :::
@@ -71,7 +79,7 @@ Wenn Objekte im Edit-Mode bearbeitet werden und komplexere Formen annehmen, kann
 {{< kbd U >}}, um Objekte zu unwrappen
 :::
 
-Das UV-Unwrapping erfolgt im Edit-Mode. Dabei werden die Faces, bei denen das UV-Unwrapping erfolgen soll, ausgewählt und anschliessend die Taste gedrückt. Beim Mauszeiger erscheint anschliessend das «*UV Mapping*»-Menü, bei dem aus verschiedenen Optionen zum Unwrapping ausgewählt werden kann. Diese Optionen sind:
+Das UV-Unwrapping erfolgt im Edit-Mode. Dabei werden die Faces, bei denen das UV-Unwrapping erfolgen soll, ausgewählt und anschliessend die Taste {{< kbd U >}} gedrückt. Beim Mauszeiger erscheint anschliessend das «*UV Mapping*»-Menü, bei dem aus verschiedenen Optionen zum Unwrapping ausgewählt werden kann. Diese Optionen sind:
 
 -   «***Unwrap***»: Dabei wird das Mesh auf eine zweidimensionale Fläche projiziert. Hierfür werden auch manuell gesetzte Grenzen in Texturen berücksichtigt.
 -   «***Smart UV Project***»: Die UVs werden basierend auf den Winkeln zwischen Faces erstellt und separiert.

@@ -19,7 +19,7 @@ Viele Materialien bestehen in ihren wichtigsten Grundkomponenten aus drei Merkma
 Möglichkeiten zur Farbauswahl
 :::
 
-Im Principled-BSDF-Shader wird die Farbe mittels der Einstel lung «*Base Color*» eingestellt. Durch einen Klick auf die Farbfläche nebst der Anschrift «*Base Color*» erscheint ein Menü, mit dem sich die Farbe auswählen lässt. Es gibt insgesamt sechs Möglichkeiten, um eine Farbe auszuwählen:
+Im Principled-BSDF-Shader wird die Farbe mittels der Einstellung «*Base Color*» eingestellt. Durch einen Klick auf die Farbfläche nebst der Anschrift «*Base Color*» erscheint ein Menü, mit dem sich die Farbe auswählen lässt. Es gibt insgesamt sechs Möglichkeiten, um eine Farbe auszuwählen:
 
 -   Von Hand
 -   Übertragen von Farben mittels Eyedropper (Pipette)
@@ -46,7 +46,7 @@ Eyedropper
 
 Im rechten unteren Bereich der Farbauswahl ist eine Schaltfläche für den Eyedropper zu finden. Dadurch können Farben innerhalb der Blender-Szene oder Benutzeroberfläche anvisiert werden und als Farbe für die Base-Color verwendet werden. Durch einen Klick auf die Schaltfläche nimmt der Mauszeiger die Form des Eyedropper-Icons an. Anschliessend kann an eine beliebige Position innerhalb von Blender geklickt werden und die an dieser Stelle angezeigte Farbe wird verwendet.
 
-![Darstellung der Inputs und Outputs sowie der verschiedenen Informationsarten anhand des Principled-BSDF-Shaders.](Images/Chapter_19/2.%20Icon_Eyedropper.png){#fig-1_2 fig-align="left"}
+![Eyedropper-Icon. ](Images/Chapter_19/2.%20Icon_Eyedropper.png){#fig-1_2 fig-align="left"}
 
 :::::: tippbox
 :::: tippbox-header
@@ -127,7 +127,7 @@ Hexadezimale Farbdefinition
 
 Das Spektrum der möglichen Farben als solches ist limitiert und es ist nicht möglich, eine neue Farbe zu erfinden. Dies hat allerdings den Vorteil, dass jedem Farbwert ein individueller Code zugeordnet werden kann. Die hexadezimale Farbdefinition stellt einen solchen Code dar. Unter dem Reiter «*Hex*» innerhalb der Farbauswahl kann jeweils dieser Code für die ausgewählte Farbe betrachtet werden. Ebenso kann an dieser Stelle auch ein hexadezimaler Code eingefügt werden, um eine entsprechende Farbe auszuwählen. Anders als bei den RGB- oder HSV-Werten muss hier also lediglich ein Wert übertragen werden und damit wird anschliessend die Farbe ermittelt.
 
-| Farbe | Farbe         | **RGB**         | Blenders RGB  | HSV           | Hexadezimal |
+| Farbe | Farbe         | RGB             | Blenders RGB  | HSV           | Hexadezimal |
 |------------|------------|------------|------------|------------|------------|
 |       | Weiss         | 255 - 255 – 255 | 1- 1 -1       | 0 - 0 - 1     | FFFFFF      |
 |       | Schwarz       | 0 - 0 - 0       | 0 - 0 - 0     | 0 - 0 - 0     | 000000      |
@@ -258,7 +258,7 @@ Im Principled-BSDF-Shader kann der Metallgehalt eines Materials durch die Zeile 
 Parameter kombinieren
 :::
 
-Durch die Kombination der bislang erläuterten Parameter lassen sich bereits viele Arten von Materialien erstellen. Ein metallisches Objekt unterschiedet sich ebenfalls hinsichtlich der Roughness und kann auch unterschiedliche Farbwerte annehmen. Dadurch lassen sich bereits viele Materialien nachbilden.
+Durch die Kombination der bislang erläuterten Parameter lassen sich bereits viele Arten von Materialien erstellen. Ein metallisches Objekt unterscheidet sich ebenfalls hinsichtlich der Roughness und kann auch unterschiedliche Farbwerte annehmen. Dadurch lassen sich bereits viele Materialien nachbilden.
 
 ![Darstellung desselben Objektes unter denselben Lichtverhältnissen bei unterschiedlichen Werten für Metallic und Roughness.](Images/Chapter_19/9.%20Material_Comparison.png){#fig-1_9 fig-align="left"}
 

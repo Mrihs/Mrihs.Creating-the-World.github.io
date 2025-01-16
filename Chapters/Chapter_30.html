@@ -506,7 +506,7 @@ Abbildung&nbsp;1: Nodes-System für prozedurale Sand-Texturen.
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Wave-Textur hinzufügen</p>
-</div></div><p>Eine ideale Grundlage für dieses Unterfangen bildet die Wave-Textur. Diese ist im «<em>Add</em>»-Menü unter «<em>Texture | Wave Texture</em>» zu finden. Der Vector-Input kann dabei mit dem Vector-Output des bereits erstellten Mapping-Nodes verbunden werden. Die Wave-Textur erstellt nun wellenartige Muster über das Mesh hinweg. Dabei orientiert sich die Wave-Textur entlang der X-Achse. Dies ist im zweiten Dropdown-Menü des Wave-Texture-Nodes definiert. Indem in diesem Menü stattdessen die Z-Achse ausgewählt wird, werden die Wellen entlang der Z-Achse gebildet. Dies führt dazu, dass sie sich kreisförmig entlang der Hügel des Meshes erstrecken. Mittels der Zeile «*Scale» kann zudem die Skalierung dieser Wellen erhöht werden, sodass mehr Wellen ersichtlich sind. Hierfür kann beispielsweise der Wert 10 verwendet werden.</p>
+</div></div><p>Eine ideale Grundlage für dieses Unterfangen bildet die Wave-Textur. Diese ist im «<em>Add</em>»-Menü unter «<em>Texture | Wave Texture</em>» zu finden. Der Vector-Input kann dabei mit dem Vector-Output des bereits erstellten Mapping-Nodes verbunden werden. Die Wave-Textur erstellt nun wellenartige Muster über das Mesh hinweg. Dabei orientiert sich die Wave-Textur entlang der X-Achse. Dies ist im zweiten Dropdown-Menü des Wave-Texture-Nodes definiert. Indem in diesem Menü stattdessen die Z-Achse ausgewählt wird, werden die Wellen entlang der Z-Achse gebildet. Dies führt dazu, dass sie sich kreisförmig entlang der Hügel des Meshes erstrecken. Mittels der Zeile «<em>Scale</em>» kann zudem die Skalierung dieser Wellen erhöht werden, sodass mehr Wellen ersichtlich sind. Hierfür kann beispielsweise der Wert 10 verwendet werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Anpassungen der Wave-Textur</p>
@@ -514,14 +514,14 @@ Abbildung&nbsp;1: Nodes-System für prozedurale Sand-Texturen.
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Displacement hinzufügen</p>
-</div></div><p>Nun kann ein Displacement-Node über das «<em>Add</em>»-Menü unter «<em>Vector | Displacement</em>» hinzugefügt und unterhalb des Bump-Nodes eingefügt werden. Der Displacement-Node soll nun grössere Oberflächenveränderungen im Mesh simulieren und die Werte für die Höhe anhand des Wave-Texture-Nodes übernehmen. Deshalb wird der Color-Output des Wave-Texture-Nodes mit dem Height-Input des Displacement-Nodes verbunden. Der Wert für die Skalierung sollte innerhalb des Displacement-Nodes zudem noch minimiert werden, da der Effekt sonst zu stark ausfällt. Ein Wert von 0.01 für die Zeile «<em>Scale</em>» sollte daher ausreichen. Zu guter Letzt kann der Discplacement-Output des Displacement-Nodes mit dem Displacement-Input des Material-Output-Nodes verbunden werden. Dadurch sollte das Displacement auf dem Mesh ersichtlich werden.</p>
+</div></div><p>Nun kann ein Displacement-Node über das «<em>Add</em>»-Menü unter «<em>Vector | Displacement</em>» hinzugefügt und unterhalb des Bump-Nodes eingefügt werden. Der Displacement-Node soll nun grössere Oberflächenveränderungen im Mesh simulieren und die Werte für die Höhe anhand des Wave-Texture-Nodes übernehmen. Deshalb wird der Color-Output des Wave-Texture-Nodes mit dem Height-Input des Displacement-Nodes verbunden. Der Wert für die Skalierung sollte innerhalb des Displacement-Nodes zudem noch minimiert werden, da der Effekt sonst zu stark ausfällt. Ein Wert von 0.01 für die Zeile «<em>Scale</em>» sollte daher ausreichen. Zu guter Letzt kann der Displacement-Output des Displacement-Nodes mit dem Displacement-Input des Material-Output-Nodes verbunden werden. Dadurch sollte das Displacement auf dem Mesh ersichtlich werden.</p>
 </section>
 <section id="mix-rgb" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="mix-rgb">Mix RGB</h2>
-<div class="colum-margin">
+
+<div class="no-row-height column-margin column-container"><div class="">
 <p>Mix-RGB-Node hinzufügen</p>
-</div>
-<p>Die Abstufungen, welche der Wave-Texture-Node erzielt, sind nun lediglich als Displacement ersichtlich, haben allerdings keinen Einfluss auf die Farbe, die Roughness oder die Normalen des Materials. Wenn diese Abstufungen hierfür auch berücksichtigt werden sollen, müssten die Farbwerte der Wave-Textur mit den Farbwerten der White-Noise-Textur kombiniert werden. Für die Kombination von verschiedenen Farben oder Texturen kann der Mix-RGB-Node verwendet werden. Dieser kann unter dem «<em>Add</em>»-Menü unter «<em>Color | MixRGB</em>» hinzugefügt und neben dem White-Noise-Texture-Node platziert werden.</p>
+</div></div><p>Die Abstufungen, welche der Wave-Texture-Node erzielt, sind nun lediglich als Displacement ersichtlich, haben allerdings keinen Einfluss auf die Farbe, die Roughness oder die Normalen des Materials. Wenn diese Abstufungen hierfür auch berücksichtigt werden sollen, müssten die Farbwerte der Wave-Textur mit den Farbwerten der White-Noise-Textur kombiniert werden. Für die Kombination von verschiedenen Farben oder Texturen kann der Mix-RGB-Node verwendet werden. Dieser kann unter dem «<em>Add</em>»-Menü unter «<em>Color | MixRGB</em>» hinzugefügt und neben dem White-Noise-Texture-Node platziert werden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Graduelle Abstufung von Farbinputs</p>

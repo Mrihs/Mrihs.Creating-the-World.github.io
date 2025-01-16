@@ -73,7 +73,7 @@ Kamera auf die Ansicht ausrichten
 
 Um die Kamera im Raum auszurichten, kann ihre Position und ihre Rotation wie bei anderen Objekten bearbeitet werden. Eine alternative Bearbeitungsform besteht darin, die Kamera an die Ansicht im 3D-Viewport anzupassen. Hierfür muss zunächst die Kameraansicht mit der Taste {{< kbd 0 >}} ausgewählt werden. In der Sidebar kann unter dem Reiter «*View*» unter «*View Lock*» die Option «*Camera to View*» aktiviert werden. Durch diese Einstellung wird die Kamera nun an die eigene Ansicht gekoppelt. Bei einer Veränderung der Ansicht wird dementsprechend automatisch die Kamera verschoben und rotiert. Anhand der roten Umrandung des Kamerafelds ist jeweils ersichtlich, dass die Option «*Camera to View*» aktiviert ist. Um die Ansicht verändern zu können, ohne die Kamera zu verschieben, muss die Option «*Camera to View*» wieder deaktiviert werden.
 
-:::: column-margin
+::: column-margin
 Kamera auf aktuelle Ansicht umsetzen
 :::
 

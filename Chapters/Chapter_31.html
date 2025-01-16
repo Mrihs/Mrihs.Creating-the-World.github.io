@@ -395,7 +395,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Parameter im Principled-BSDF-Shader</p>
-</div></div><p>Mittlerweile wurde bereits sehr viel mit dem Principled-BSDF-Shader gearbeitet. Dadurch sollten die wichtigsten Parameter, welche bei dessen Verwendung berücksichtigt werden, bekannt geworden sein. So wurden die Base-Color, die Roughness und der Metallic-Wert bereits erläutert und durch die Verwendung von Texturen wurden auch bereits die Normal-Werte verwendet. Es gibt allerdings noch eine Vielzahl weiterer Parameter im Principled-BSDF-Shader, welche variiert werden können. Einige davon werden, allerdings sehr selten</p>
+</div></div><p>Mittlerweile wurde bereits sehr viel mit dem Principled-BSDF-Shader gearbeitet. Dadurch sollten die wichtigsten Parameter, welche bei dessen Verwendung berücksichtigt werden, bekannt geworden sein. So wurden die Base-Color, die Roughness und der Metallic-Wert bereits erläutert und durch die Verwendung von Texturen wurden auch bereits die Normal-Werte verwendet. Es gibt allerdings noch eine Vielzahl weiterer Parameter im Principled-BSDF-Shader, welche variiert werden können. Einige davon werden, allerdings sehr selten verwendet.</p>
 <section id="subsurface-scattering" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="subsurface-scattering">Subsurface-Scattering</h2>
 
@@ -512,14 +512,9 @@ Abbildung&nbsp;4: Lichtstrahlen mit einem hohen Einfallswinkel. In solchen Fäll
 <div class="no-row-height column-margin column-container"><div class="">
 <p>IOR berechnen</p>
 </div></div><p>Durch eine kurze Internetrecherche lässt sich schnell der IOR für ein Material ausfindig machen. So hat Gold einen IOR von 0.479, Eis einen IOR von 1.309, Milch einen IOR von 1.350 und Asphalt weist einen IOR von 1.635 auf (Quelle: <a href="https://pixelandpoly.com/ior.html" class="uri">https://pixelandpoly.com/ior.html</a>). Diese Werte könnten nun direkt in die Zeile «<em>Specular</em>» eingegeben werden. Das Problem ist jedoch, dass diese Zeile nicht für physikalisch korrekte IOR-Werte angepasst ist und mit Inputs von 0 bis 1 arbeitet. Aus diesem Grund muss der IOR von Hand in den Specular-Input umgewandelt werden. Die Formel hierfür lautet:</p>
-<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_31/Formel.png" id="fig-1_5" class="img-fluid quarto-figure quarto-figure-left anchored figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5
-</figcaption>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Images/Chapter_31/Formel.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
 </figure>
 </div>
 
@@ -552,7 +547,7 @@ Abbildung&nbsp;5
 <img src="Images/Chapter_31/Specularity calc..png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6: Node-Anordnung, um die Specularity anhand des IORs zu berechnen.
+Abbildung&nbsp;5: Node-Anordnung, um die Specularity anhand des IORs zu berechnen.
 </figcaption>
 </figure>
 </div>
@@ -590,7 +585,7 @@ Abbildung&nbsp;6: Node-Anordnung, um die Specularity anhand des IORs zu berechne
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Tangente</p>
-</div></div><p>Die Reflexion durch die Anisotropie erfolgt entlang der sogenannten Tangente. Diese Tangente kann angesteuert und verändert werden, indem ein entsprechender «Tangent»-Node, welcher im «<em>Add</em>»-Menü unter «<em>Input | Tangent</em>» zu finden ist, mit dem Tangent-Input des Principled-BSDF-Shaders verbunden wird.</p>
+</div></div><p>Die Reflexion durch die Anisotropie erfolgt entlang der sogenannten Tangente. Diese Tangente kann angesteuert und verändert werden, indem ein entsprechender «<em>Tangent</em>»-Node, welcher im «<em>Add</em>»-Menü unter «<em>Input | Tangent</em>» zu finden ist, mit dem Tangent-Input des Principled-BSDF-Shaders verbunden wird.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Anisotropic</p>
@@ -605,7 +600,7 @@ Abbildung&nbsp;6: Node-Anordnung, um die Specularity anhand des IORs zu berechne
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Sheen</p>
-</div></div><p>Die Einstellung «<em>Sheen</em>» wird lediglich in sehr seltenen Fällen verwendet. Dadurch wird die Reflexion von Oberflächen an deren Kanten abgedämpft. Dieser Effekt ist vor allem bei Textilien relevant, da diese an den Kanten etwas weniger stark reflektieren. Mithilfe des Reiters «Sheen» wird angegeben, wie stark dieser Abdämpfungseffekt vollzogen werden soll. Für Textilien wäre ein Wert von 1 zu empfehlen, während für andere Materialien die Standardeinstellung von 0 verwendet werden kann.</p>
+</div></div><p>Die Einstellung «<em>Sheen</em>» wird lediglich in sehr seltenen Fällen verwendet. Dadurch wird die Reflexion von Oberflächen an deren Kanten abgedämpft. Dieser Effekt ist vor allem bei Textilien relevant, da diese an den Kanten etwas weniger stark reflektieren. Mithilfe des Reiters «<em>Sheen</em>» wird angegeben, wie stark dieser Abdämpfungseffekt vollzogen werden soll. Für Textilien wäre ein Wert von 1 zu empfehlen, während für andere Materialien die Standardeinstellung von 0 verwendet werden kann.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Sheen Tint</p>
@@ -622,9 +617,9 @@ Abbildung&nbsp;6: Node-Anordnung, um die Specularity anhand des IORs zu berechne
 <p>Einstellungen für den Clearcoat</p>
 </div></div><p>Für den Clearcoat gibt es folgende Einstellungsmöglichkeiten im Principled-BSDF-Shader:</p>
 <ul>
-<li>«<strong><em>Clearcoat</em></strong>»: Mittels des Reiters «Clearcoat» kann das Ausmass der Reflexion der Clearcoat Schicht, welche über dem Material simuliert wird, eingestellt werden. Ein Wert von 0 bedeutet dabei, dass der Clearcoat nicht berücksichtigt wird, während ein Wert von 1 für einen stark reflektierenden Clearcoat verwendet wird.</li>
-<li>«<strong><em>Clearcoat Roughness</em></strong>»: Mittels des Reiters «Clearcoat Roughness» kann für die Clearcoat Schicht ein individuelles Ausmass der Roughness definiert werden.</li>
-<li>«<strong><em>Clearcoat Normal</em></strong>»: Mittels des Inputs «Clearcoat Normal» kann für die Clearcoat-Schicht ein eigener Normalen-Input verwendet werden. Dies ermöglicht es etwa, dass ein Bump-Node mit der Clearcoat-Normal verbunden wird. Dadurch können Unebenheiten auf der Clearcoat-Schicht individuell erstellt werden.</li>
+<li>«<strong><em>Clearcoat</em></strong>»: Mittels des Reiters «<em>Clearcoat</em>» kann das Ausmass der Reflexion der Clearcoat Schicht, welche über dem Material simuliert wird, eingestellt werden. Ein Wert von 0 bedeutet dabei, dass der Clearcoat nicht berücksichtigt wird, während ein Wert von 1 für einen stark reflektierenden Clearcoat verwendet wird.</li>
+<li>«<strong><em>Clearcoat Roughness</em></strong>»: Mittels des Reiters «<em>Clearcoat Roughness</em>» kann für die Clearcoat Schicht ein individuelles Ausmass der Roughness definiert werden.</li>
+<li>«<strong><em>Clearcoat Normal</em></strong>»: Mittels des Inputs «<em>Clearcoat Normal</em>» kann für die Clearcoat-Schicht ein eigener Normalen-Input verwendet werden. Dies ermöglicht es etwa, dass ein Bump-Node mit der Clearcoat-Normal verbunden wird. Dadurch können Unebenheiten auf der Clearcoat-Schicht individuell erstellt werden.</li>
 </ul>
 </section>
 <section id="transmission" class="level2 page-columns page-full">

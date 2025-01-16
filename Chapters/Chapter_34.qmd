@@ -42,7 +42,7 @@ Stärke des Lichts
 
 Während in der Farbbox «*Color*» eine Farbe für das Licht ausgewählt werden kann, kann im Feld «*Power*» die Stärke des ausgestrahlten Lichts eingestellt werden. Je höher dieser Wert ist, desto stärker wird die Szene durch das Lichtobjekt beleuchtet. Die Stärke des Lichts wird in Watt angegeben. Dabei handelt es sich allerdings nicht um dieselben Watt-Angaben, wie sie beispielsweise auf Glühbirnen angegeben werden. Eine LED-Birne mit 60 Watt (oder etwa 800 Lumen) würde mittels der Power von etwa 2.1 W angegeben werden. Um die jeweiligen Werte, welche in Blender verwendet werden sollten, zu erzielen, müssten komplexe Umrechnungen erfolgen. Im Handbuch zu Blender sind allerdings einige Beispielwerte aufgelistet sowie die dazu verwendeten Arten von Lichtobjekten (Quelle: <https://docs.blender.org/manual/en/latest/render/lights/light_object.html>).
 
-| Objekt                     | Power/Strength | Lichtobjekt_Art        |
+| Objekt                     | Power/Strength | Lichtobjekt-Art        |
 |----------------------------|----------------|------------------------|
 | Kerze                      | 0.05 W         | Point                  |
 | LED-Birne (800 lm)         | 2.1 W          | Point                  |
@@ -91,7 +91,7 @@ Navigation zwischen Szenen
 
 In der Datei «*Gameboard_Lights*» sind verschiedene Beispielszenen für unterschiedliche Belichtungen aufzufinden. Die verschiedenen Beispiele sind in unterschiedliche Szenen aufgeteilt. Um zwischen den Szenen wechseln zu können, muss im Dropdown-Menü «*Browse Scene to be linked*», welches in der Ecke oben rechts zu finden ist, die entsprechende Szene ausgewählt werden. Auch die Beispiele aus dem vorangehenden Kapitel sind in dieser Datei aufzufinden.
 
-![Eine Szene, welche mit einer Point-Lichtquelle beleuchtet wird.](Images/Chapter_34/.png){fig-align="left"}
+![Eine Szene, welche mit einer Point-Lichtquelle beleuchtet wird.](Images/Chapter_34/.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Beispiel eines Point-Lichtobjektes
@@ -113,7 +113,7 @@ Beispiel eines Sun-Lichtobjektes
 
 Die Abbildung 3 zeigt ein Beispiel, in dem eine Szene mit einem Sun-Lichtobjekt beleuchtet wird. Die Sonne ist dabei auf derselben Höhe wie die Köpfe der anderen Spielfiguren auf dem Feld J1 platziert und gegen die blaue Spielfigur rotiert.
 
-![Eine Szene, welche mit einer Sun-Lichtquelle beleuchtet wird.](Images/Chapter_34/.png){#fig-1_3 fig-align="left"}
+![Eine Szene, welche mit einer Sun-Lichtquelle beleuchtet wird.](Images/Chapter_34/.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Sonnen können rotiert werden, allerdings hat ihre Position keine Auswirkung
@@ -141,13 +141,13 @@ Spot als Beleuchtungsoption
 
 In Abbildung 4 wird eine Szene mittels eines Spot-Lichtobjektes beleuchtet. Der Spot agiert wie ein Scheinwerfer, mit dem gezielt ein Objekt beleuchtet werden kann. Hierfür sind sowohl die Position als auch die Rotation des Spot-Lichtobjektes bedeutsam. Anhand dieser beiden Merkmale kann der Spot entsprechend auf ein Objekt ausgerichtet werden. Die Beleuchtung erfolgt anschliessend ausgehend von der Form eines Cones, der von der Position des Lichtobjektes ausgeht.
 
-![Eine Szene, welche mit einer Spot-Lichtquelle beleuchtet wird.](Images/Chapter_34/.png){#fig-1_4 fig-align="left"}
+![Eine Szene, welche mit einer Spot-Lichtquelle beleuchtet wird.](Images/Chapter_34/.png){#fig-1_5 fig-align="left"}
 
 ::: column-margin
 Grösse des Spots einstellen
 :::
 
-In den Einstellungen zum Lichtobjekt findet sich unter dem Reiter «*Spot*» zusätzlich ein Reiter «*Spot Shape*». Innerhalb dieses Reiters können weitere Verfeinerungen an der Art der Beleuchtung vor genommen werden. Mittels der Option «*Size*» kann definiert werden, wie gross der Bereich ist, welcher der Spot erfassen kann. Dieser Bereich kann von 0° bis 180° variieren. Bei einer Grösse von 180° wird der gesamte Bereich, welcher sich vor dem Spot befindet, beleuchtet. Je kleiner die Grösse ist, desto mehr fokussiert sich die Beleuchtung auf einen entsprechenden Bereich.
+In den Einstellungen zum Lichtobjekt findet sich unter dem Reiter «*Spot*» zusätzlich ein Reiter «*Spot Shape*». Innerhalb dieses Reiters können weitere Verfeinerungen an der Art der Beleuchtung vorgenommen werden. Mittels der Option «*Size*» kann definiert werden, wie gross der Bereich ist, welcher der Spot erfassen kann. Dieser Bereich kann von 0° bis 180° variieren. Bei einer Grösse von 180° wird der gesamte Bereich, welcher sich vor dem Spot befindet, beleuchtet. Je kleiner die Grösse ist, desto mehr fokussiert sich die Beleuchtung auf einen entsprechenden Bereich.
 
 ::: column-margin
 Blend-Einstellung
@@ -161,7 +161,7 @@ Mittels des Feldes «*Blend*» kann der Übergang vom Bereich, welcher durch den
 Areale als Beleuchtungsobjekt
 :::
 
-Die Abbildung 5 zeigt eine Szene, welche mit einem Area-Lichtobjekt beleuchtet wird. Diese Art der Beleuchtung hängt wie auch der Spot von der Position und der Rotation des Lichtobjektes ab. Mithilfe des Area-Lichtobjektes kann ein Bereich erstellt werden, welcher Licht aussendet. Dabei kann ein viereckiges Areal definiert werden, indem im Dropdown-Menü «*Shape*» die Option «*Square*» für ein Quadrat oder die Option «Rectangle» für ein Rechteck ausgewählt wird. Mittels der Optionen «*Disk*» für einen Kreis und «*Ellipse*» für eine Ellipse können auch runde Areale gewählt werden.
+Die Abbildung 5 zeigt eine Szene, welche mit einem Area-Lichtobjekt beleuchtet wird. Diese Art der Beleuchtung hängt wie auch der Spot von der Position und der Rotation des Lichtobjektes ab. Mithilfe des Area-Lichtobjektes kann ein Bereich erstellt werden, welcher Licht aussendet. Dabei kann ein viereckiges Areal definiert werden, indem im Dropdown-Menü «*Shape*» die Option «*Square*» für ein Quadrat oder die Option «*Rectangle*» für ein Rechteck ausgewählt wird. Mittels der Optionen «*Disk*» für einen Kreis und «*Ellipse*» für eine Ellipse können auch runde Areale gewählt werden.
 
 ::: column-margin
 Grösse der Areale variieren
@@ -169,7 +169,7 @@ Grösse der Areale variieren
 
 Mittels des Reiters «*Size*» kann die Grösse des Areals definiert werden. Bei aktivierten Viewport-Overlays kann diese Veränderung direkt visuell nachverfolgt werden. Das Quadrat und der Kreis als Option verfügen leidglich über einen Reiter für die Grösse. Bei den Formen Rechteck und Ellipse können zwei Achsen für die Grösse unabhängig voneinander definiert werden.
 
-![Eine Szene, welche mit einer Area-Lichtquelle beleuchtet wird.](Images/Chapter_34/.png){#fig-1_5 fig-align="left"}
+![Eine Szene, welche mit einer Area-Lichtquelle beleuchtet wird.](Images/Chapter_34/.png){#fig-1_6 fig-align="left"}
 
 :::::: exercisebox
 :::: exercisebox-header
@@ -184,8 +184,8 @@ Mittels des Reiters «*Size*» kann die Grösse des Areals definiert werden. Bei
 
 Öffnen Sie in der Datei «*Gameboard_Lights*» die Szene «*Exercise_Lights*» und versuchen Sie, die abgebildete Beleuchtungssituation nachzustellen.
 
-![](Images/Chapter_34/.png){#fig-1_6 fig-align="left"}
+![](Images/Chapter_34/.png){fig-align="left"}
 
-Die Lösung finden Sie in der Szene «*Exercise_Lights_Solution*»
+Die Lösung finden Sie in der Szene «Exercise_Lights_Solution»
 :::
 ::::::

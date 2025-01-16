@@ -28,7 +28,7 @@ Hinzufügen von neuen Landschaften
 
 Durch das Aktivieren dieses Add-ons wird im «*Add*»-Menü unter dem Menü punkt «*Mesh*» die Option «*Landscape*» verfügbar. Wird eine solche Landschaft hinzugefügt, erstellt Blender eine Fläche in der Welt und bearbeitet diese zu einer Landschaft um. Die Einstellungen dieser Landschaft sind im Kontext-Menü zum Hinzufügen von Objekten in der unteren linken Ecke aufzufinden.
 
-![Aktivieren des Add-ons «A.N.T.Landscape».](Images/Chapter_29/Aktivieren_Landscape.png){#fig-1_1 fig-align="left"}
+![Aktivieren des Add-ons «*A.N.T.Landscape*».](Images/Chapter_29/Aktivieren_Landscape.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Problem der Bearbeitung im Kontext-Menü
@@ -159,4 +159,4 @@ Water Plane
 
 Mittels der Option «*Water Plane*» wird eine weitere Fläche hinzugefügt, die als Wasserfläche dienen kann. Es handelt sich dabei um eine Plane, welche als separates Objekt hinzugefügt wird. Dieser Fläche kann ebenfalls bereits ein Material zugewiesen werden. Mittels der Zeile «*Level*» wird bestimmt, wie hoch der Wasserspiegel sein soll.
 
-![Links ein mit A.N.T.Landscape erstellter Berg. Daneben ein Berg, dessen Displacement als Minimum 0.1 und als Maximum 0.5 hat. Durch die Anhebung des Wertes «Minimum» auf 0.1 werden alle Vertices im Objekt auf diese Höhe hinaufgesetzt. Danaben zwei Versionen desselben Berges mit unterschiedlichen Falloff-Werten.](Images/Chapter_29/Landscape_comparison.png){#fig-1_3 fig-align="left"}
+![Links ein mit A.N.T.Landscape erstellter Berg. Daneben ein Berg, dessen Displacement als Minimum 0.1 und als Maximum 0.5 hat. Durch die Anhebung des Wertes «*Minimum*» auf 0.1 werden alle Vertices im Objekt auf diese Höhe hinaufgesetzt. Danaben zwei Versionen desselben Berges mit unterschiedlichen Falloff-Werten.](Images/Chapter_29/Landscape_comparison.png){#fig-1_3 fig-align="left"}

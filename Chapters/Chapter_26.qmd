@@ -139,7 +139,7 @@ Die Displacement-Textur kann auch verwendet werden, um das Mesh tatsächlich anh
 Ambient-Occlusion-Textur für Schatten
 :::
 
-Die Ambient-Occlusion-Textur stellt gewissermassen das Gegenteil der Albedo-Textur dar. Während die Albedo-Textur die Grundfarben einer Textur ohne Schattenanteile beinhaltet, besteht die Ambient-Occlusion-Textur lediglich aus Schattenanteilen. In OnlineDatenbanken werden diese Texturen teilweise mit der Endung «ambientocclusion», «ao», «occlusion» oder «occ» versehen.
+Die Ambient-Occlusion-Textur stellt gewissermassen das Gegenteil der Albedo-Textur dar. Während die Albedo-Textur die Grundfarben einer Textur ohne Schattenanteile beinhaltet, besteht die Ambient-Occlusion-Textur lediglich aus Schattenanteilen. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «ambientocclusion», «ao», «occlusion» oder «occ» versehen.
 
 ::: column-margin
 Ambient-Occlusion-Textur verwenden

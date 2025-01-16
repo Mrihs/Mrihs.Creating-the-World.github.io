@@ -51,15 +51,13 @@ Mithilfe dieser Vorbereitungen kann nun anhand dieses Beispiels betrachtet werde
 Eevee vs. Cycles
 :::
 
-Wie bereits erwähnt, ist Eevee als Render-Engine darauf ausgerichtet, dass Bilder möglichst in Echtzeit erzeugt werden. Dies geschieht auf Kosten von realitätsgetreuen Darstellungen. Blender verfügt nebst Eevee noch über eine zweite Render-Engine namens Cycles. Diese Engine benötigt deutlich mehr Leistung und braucht dadurch auch länger, um die Darstellung von Inhalten zu berechnen. Dabei hängt es stark von den Kapazitäten des jeweiligen Rechners ab, wie lange diese Berechnung 
-dauert. Zusätzlich gibt es noch die Render-Engine «Workbench». Diese ist sehr rudimentär aufgebaut und ist nicht für realistische Darstellungen geeignet.
+Wie bereits erwähnt, ist Eevee als Render-Engine darauf ausgerichtet, dass Bilder möglichst in Echtzeit erzeugt werden. Dies geschieht auf Kosten von realitätsgetreuen Darstellungen. Blender verfügt nebst Eevee noch über eine zweite Render-Engine namens Cycles. Diese Engine benötigt deutlich mehr Leistung und braucht dadurch auch länger, um die Darstellung von Inhalten zu berechnen. Dabei hängt es stark von den Kapazitäten des jeweiligen Rechners ab, wie lange diese Berechnung dauert. Zusätzlich gibt es noch die Render-Engine «Workbench». Diese ist sehr rudimentär aufgebaut und ist nicht für realistische Darstellungen geeignet.
 
 ::: column-margin
 Render-Engine wechseln
 :::
 
-Die Render-Engine lässt sich im Properties-Editor unter dem Reiter für die Render-Properties einstellen. Zuoberst wird dabei unter «*Render Engine*» ein Dropdown-Menü dargestellt, in dem zwischen den verschiedenen Engines gewechselt werden kann. Durch die Auswahl von Cycles wird 
-das Bild anschliessend mittels dieser Engine berechnet.
+Die Render-Engine lässt sich im Properties-Editor unter dem Reiter für die Render-Properties einstellen. Zuoberst wird dabei unter «*Render Engine*» ein Dropdown-Menü dargestellt, in dem zwischen den verschiedenen Engines gewechselt werden kann. Durch die Auswahl von Cycles wird das Bild anschliessend mittels dieser Engine berechnet.
 
 ::: column-margin
 Arbeitsweise von Cycles
@@ -79,7 +77,7 @@ Pausieren des Renderns
 
 Durch den Wechsel der Render-Engine erscheint im 3D-Viewport-Editor in der rechten oberen Ecke eine zusätzliche Schaltfläche. Diese gibt jeweils an, ob gerade gerendert wird oder nicht. Sollte das Bild einmal einfrieren und nicht neu gerendert werden, sollte anhand dieser Schaltfläche überprüft werden, ob das Rendern gerade pausiert wurde.
 
-## Rendern mit der GPU in Cycles 
+## Rendern mit der GPU in Cycles
 
 ::: column-margin
 Prozessorleistung benötigt für Cycles
@@ -97,17 +95,13 @@ Auf einigen Computern ist es möglich, dass die Grafikkarte verwendet wird, um d
 Cycles-Render-Devices
 :::
 
-Windows-Nutzer können unter «*Edit | Preferences*» im Reiter «*System*» nachverfolgen, ob das Ansteuern der Grafikkarte möglich ist. Unter dem Bereich «*Cycles Render Devices*» sind jeweils vier Tabs aufzufinden. Für Mac-Nutzer wird dieser Reiter gar nicht angezeigt. In den Reitern «*CUDA*», «*OptiX*» und «*OpenCL*» wird jeweils die Grafikkarte nebst dem Prozessor aufgeführt, insofern diese durch die entsprechenden Optionen anwählbar sind. Sollte die Grafikkarte dort auffindbar sein, kann diese angewählt werden. Von nun an kann die Grafikkarte (GPU) statt des Prozessors (CPU) für das Rendern in Cycles verwendet werden.
+Windows-Nutzer können unter «*Edit \| Preferences*» im Reiter «*System*» nachverfolgen, ob das Ansteuern der Grafikkarte möglich ist. Unter dem Bereich «*Cycles Render Devices*» sind jeweils vier Tabs aufzufinden. Für Mac-Nutzer wird dieser Reiter gar nicht angezeigt. In den Reitern «*CUDA*», «*OptiX*» und «*OpenCL*» wird jeweils die Grafikkarte nebst dem Prozessor aufgeführt, insofern diese durch die entsprechenden Optionen anwählbar sind. Sollte die Grafikkarte dort auffindbar sein, kann diese angewählt werden. Von nun an kann die Grafikkarte (GPU) statt des Prozessors (CPU) für das Rendern in Cycles verwendet werden.
 
 ::: column-margin
 GPU zum Rendern aktivieren
 :::
 
-Damit die GPU auch wirklich beim Rendern verwendet wird, muss im Render-Properties-Reiter des Properties-Editors die Einstellung «*Device*» von der Auswahl «*CPU*» auf «*GPU Compute*» umgestellt werden. Die erste gerenderte Darstellung mittels der GPU wird allerdings eine Weile benötigen. Blender nimmt 
-im Hintergrund einige Anpassungen vor, um mit der GPU zu arbeiten. Dadurch erscheint es, als ob das Unterfangen nicht funktioniert. Sollten die Viewport
-Overlays aktiviert sein, wird allerdings mittels eines Textes in der linken oberen Hälfte erläutert, dass aktuell die Render-Kerne geladen werden und dies einige 
-Minuten in Anspruch nehmen wird.
-
+Damit die GPU auch wirklich beim Rendern verwendet wird, muss im Render-Properties-Reiter des Properties-Editors die Einstellung «*Device*» von der Auswahl «*CPU*» auf «*GPU Compute*» umgestellt werden. Die erste gerenderte Darstellung mittels der GPU wird allerdings eine Weile benötigen. Blender nimmt im Hintergrund einige Anpassungen vor, um mit der GPU zu arbeiten. Dadurch erscheint es, als ob das Unterfangen nicht funktioniert. Sollten die Viewport Overlays aktiviert sein, wird allerdings mittels eines Textes in der linken oberen Hälfte erläutert, dass aktuell die Render-Kerne geladen werden und dies einige Minuten in Anspruch nehmen wird.
 
 :::::: tippbox
 :::: tippbox-header

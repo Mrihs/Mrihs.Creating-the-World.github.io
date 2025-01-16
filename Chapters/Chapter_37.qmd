@@ -62,7 +62,7 @@ Bezeichnung der Auflösung anhand der vertikalen Anzahl Pixel
 Nebst den bisher erwähnten Bezeichnungen wird die Auflösung von Bildern teilweise auch anhand der vertikalen Anzahl Pixel angegeben. Beispielsweise kann auf YouTube die Bildschirmauflösung von Videos anhand dieser Bezeichnung eingestellt werden. Diese Angabe wird jeweils mit dem Kürzel «p» angegeben. Eine Ultra-HD-Auflösung mit 3840 x 2160 Pixeln würde dementsprechend als 2160 p bezeichnet. Ebenso wird die 4K-Auflösung mit 4096 x 2160 Pixeln mit 2160 p bezeichnet.
 
 | Auflösung | Format | Anzahl Pixel | Vertikale Anzahl Pixel |
-|--------------------|-----------------|-----------------|-----------------|
+|----|----|----|----|
 | **Standard-Definition (SD)** | 16:9 | 720 x 576 | 576 p |
 | **HD-Ready/Half-HD** | 16:9 | 1280 x 720 | 720 p |
 | **High Definition (HD)** | 16:9 | 1920 x 1080 | 1080 p |

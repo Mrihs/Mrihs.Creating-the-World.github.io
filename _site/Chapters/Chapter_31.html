@@ -272,6 +272,66 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="../Chapters/Chapter_34.html">
  <span class="dropdown-text">Kapitel 34</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_35.html">
+ <span class="dropdown-text">Kapitel 35</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_36.html">
+ <span class="dropdown-text">Kapitel 36</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_37.html">
+ <span class="dropdown-text">Kapitel 37</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_38.html">
+ <span class="dropdown-text">Kapitel 38</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_39.html">
+ <span class="dropdown-text">Kapitel 39</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_40.html">
+ <span class="dropdown-text">Kapitel 40</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_41.html">
+ <span class="dropdown-text">Kapitel 41</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_42.html">
+ <span class="dropdown-text">Kapitel 42</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_43.html">
+ <span class="dropdown-text">Kapitel 43</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_44.html">
+ <span class="dropdown-text">Kapitel 44</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_45.html">
+ <span class="dropdown-text">Kapitel 45</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_46.html">
+ <span class="dropdown-text">Kapitel 46</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_47.html">
+ <span class="dropdown-text">Kapitel 47</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_48.html">
+ <span class="dropdown-text">Kapitel 48</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../Chapters/Chapter_49.html">
+ <span class="dropdown-text">Kapitel 49</span></a>
+  </li>  
     </ul>
   </li>
   <li class="nav-item">
@@ -335,7 +395,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Parameter im Principled-BSDF-Shader</p>
-</div></div><p>Mittlerweile wurde bereits sehr viel mit dem Principled-BSDF-Shader gearbeitet. Dadurch sollten die wichtigsten Parameter, welche bei dessen Verwendung berücksichtigt werden, bekannt geworden sein. So wurden die Base-Color, die Roughness und der Metallic-Wert bereits erläutert und durch die Verwendung von Texturen wurden auch bereits die Normal-Werte verwendet. Es gibt allerdings noch eine Vielzahl weiterer Parameter im Principled-BSDF-Shader, welche variiert werden können. Einige davon werden, allerdings sehr selten</p>
+</div></div><p>Mittlerweile wurde bereits sehr viel mit dem Principled-BSDF-Shader gearbeitet. Dadurch sollten die wichtigsten Parameter, welche bei dessen Verwendung berücksichtigt werden, bekannt geworden sein. So wurden die Base-Color, die Roughness und der Metallic-Wert bereits erläutert und durch die Verwendung von Texturen wurden auch bereits die Normal-Werte verwendet. Es gibt allerdings noch eine Vielzahl weiterer Parameter im Principled-BSDF-Shader, welche variiert werden können. Einige davon werden, allerdings sehr selten verwendet.</p>
 <section id="subsurface-scattering" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="subsurface-scattering">Subsurface-Scattering</h2>
 
@@ -452,14 +512,9 @@ Abbildung&nbsp;4: Lichtstrahlen mit einem hohen Einfallswinkel. In solchen Fäll
 <div class="no-row-height column-margin column-container"><div class="">
 <p>IOR berechnen</p>
 </div></div><p>Durch eine kurze Internetrecherche lässt sich schnell der IOR für ein Material ausfindig machen. So hat Gold einen IOR von 0.479, Eis einen IOR von 1.309, Milch einen IOR von 1.350 und Asphalt weist einen IOR von 1.635 auf (Quelle: <a href="https://pixelandpoly.com/ior.html" class="uri">https://pixelandpoly.com/ior.html</a>). Diese Werte könnten nun direkt in die Zeile «<em>Specular</em>» eingegeben werden. Das Problem ist jedoch, dass diese Zeile nicht für physikalisch korrekte IOR-Werte angepasst ist und mit Inputs von 0 bis 1 arbeitet. Aus diesem Grund muss der IOR von Hand in den Specular-Input umgewandelt werden. Die Formel hierfür lautet:</p>
-<div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_31/Formel.png" id="fig-1_5" class="img-fluid quarto-figure quarto-figure-left anchored figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;5
-</figcaption>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="Images/Chapter_31/Formel.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></p>
 </figure>
 </div>
 
@@ -492,7 +547,7 @@ Abbildung&nbsp;5
 <img src="Images/Chapter_31/Specularity calc..png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6: Node-Anordnung, um die Specularity anhand des IORs zu berechnen.
+Abbildung&nbsp;5: Node-Anordnung, um die Specularity anhand des IORs zu berechnen.
 </figcaption>
 </figure>
 </div>

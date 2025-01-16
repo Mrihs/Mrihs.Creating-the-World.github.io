@@ -9,7 +9,6 @@ Ziel dieser Aufgabe
 
 Als Nächstes wird anhand eines Modelles aufgezeigt, wie das Texturieren erfolgt. Im Zip-Ordner «*Hammer*» ist ein .blend-File aufzufinden, in dem sich ein Mesh in der Form eines Hammers befindet. Nebst diesem File sind im Ordner «*Metal022_4K-JPG*» verschiedene Texturarten für ein metallisches Material aufzufinden. Dieses Material wird anhand der Texturen in diesem Ordner erstellt und dem Hammerkopf zugewiesen. Anschliessend wird eine weitere Textur gesucht und dem Holzstiel des Hammers zugewiesen.
 
-
 ![Der texturierte Hammer als Ziel dieses Tutorials.](Images/Chapter_27/1_Finaler_Hammer.png){#fig-1_1 fig-align="left"}
 
 ## UV-Mapping
@@ -26,9 +25,7 @@ Faces auswählen, um UVs zu betrachten
 
 Um im UV-Editor die UVs des Hammers betrachten zu können, müssen die jeweils anzuzeigenden Faces ausgewählt werden. Hierfür muss zunächst der Edit-Mode mit dem ausgewählten Hammer aktiviert werden. Damit alle UVs betrachtet werden können, müssen alle Faces des Hammers mittels der Taste {{< kbd A >}} ausgewählt werden. Danach werden im UV-Editor die UVs angezeigt.
 
-
 ![UVs des Hammers.](Images/Chapter_27/2_Originale_UVs.png){#fig-1_2 fig-align="left"}
-
 
 ::: column-margin
 UVs mit Cube Projection neu berechnen
@@ -44,8 +41,7 @@ Die angezeigten UVs müssen noch angepasst werden, da diese durch die Erstellung
 Material-Slots hinzufügen
 :::
 
-Im nächsten Schritt geht es darum, dem Objekt die Materialien zuzuweisen. Hierfür werden zwei Material-Slots benötigt. Um diese zu erstellen, wird im Properties-Editor der Material-Reiter geöffnet und darin zwei neue Slots für Materialien hinzugefügt. Hierfür kann zweimal auf die Schaltfläche «+»
-geklickt werden.
+Im nächsten Schritt geht es darum, dem Objekt die Materialien zuzuweisen. Hierfür werden zwei Material-Slots benötigt. Um diese zu erstellen, wird im Properties-Editor der Material-Reiter geöffnet und darin zwei neue Slots für Materialien hinzugefügt. Hierfür kann zweimal auf die Schaltfläche «+» geklickt werden.
 
 ::: column-margin
 Reihenfolge der Materialien
@@ -57,15 +53,13 @@ Manchmal ist es sinnvoll, sich über die Reihenfolge der zu erstellenden Materia
 Materialien hinzufügen
 :::
 
-Zunächst wird auf den ersten Material-Slot geklickt, um diesen auszuwählen und mit der Schaltfläche «*New*» ein neues Material hinzugefügt. Dieses Material kann zu «Metall» umbenannt werden. Danach wird der zweite Material-Slot ausgewählt und diesem ebenfalls ein neues Material hinzugefügt, welches als «Holz» benannt werden kann. 
+Zunächst wird auf den ersten Material-Slot geklickt, um diesen auszuwählen und mit der Schaltfläche «*New*» ein neues Material hinzugefügt. Dieses Material kann zu «Metall» umbenannt werden. Danach wird der zweite Material-Slot ausgewählt und diesem ebenfalls ein neues Material hinzugefügt, welches als «Holz» benannt werden kann.
 
 ::: column-margin
 Faces für Holz-Material auswählen
 :::
 
-Im Edit-Mode können anschliessend alle Faces, welche zum Holzstiel gehören, ausgewählt werden. Dazu kann ein Loop-Select verwendet werden. Hierfür wird der Face-Selection-Modus verwendet und bei gedrückter {{< kbd Ctrl >}}-Taste auf ein Edge geklickt, welches entlang dem Stiel des Hammers verläuft. Dadurch sollten 
-alle Faces des Stiels, ausser dasjenige am Boden des Hammerstiels, ausgewählt worden sein. Das noch nicht ausgewählte Face des Hammerstiels kann bei gedrückter {{< kbd Shift >}}-Taste durch einen Mausklick zur Auswahl hinzugefügt werden.
-
+Im Edit-Mode können anschliessend alle Faces, welche zum Holzstiel gehören, ausgewählt werden. Dazu kann ein Loop-Select verwendet werden. Hierfür wird der Face-Selection-Modus verwendet und bei gedrückter {{< kbd Ctrl >}}-Taste auf ein Edge geklickt, welches entlang dem Stiel des Hammers verläuft. Dadurch sollten alle Faces des Stiels, ausser dasjenige am Boden des Hammerstiels, ausgewählt worden sein. Das noch nicht ausgewählte Face des Hammerstiels kann bei gedrückter {{< kbd Shift >}}-Taste durch einen Mausklick zur Auswahl hinzugefügt werden.
 
 ![Faces für das Holz-Material.](Images/Chapter_27/4_Faces_Holz.png){#fig-1_4 fig-align="left"}
 
@@ -73,7 +67,7 @@ alle Faces des Stiels, ausser dasjenige am Boden des Hammerstiels, ausgewählt w
 Materialien anwenden
 :::
 
-Die ausgewählten Faces können als Nächstes dem Holz-Material hinzugefügt werden. Hierfür wird im Properties-Editor der zweite Material-Slot mit dem Holz-Material ausgewählt und auf die Schaltfläche «*Assign*» geklickt. Wenn nun die Auswahl von Faces aufgelöst wird, indem in den leeren Raum im 3D-Viewport-Editor geklickt wird, kann die Taste «*Select*» im Properties-Editor verwendet werden, um die zum Holz-Material hinzugefügten Faces auszuwählen. Dadurch kann überprüft werden, ob die Faces korrekt zugewiesen wurden. 
+Die ausgewählten Faces können als Nächstes dem Holz-Material hinzugefügt werden. Hierfür wird im Properties-Editor der zweite Material-Slot mit dem Holz-Material ausgewählt und auf die Schaltfläche «*Assign*» geklickt. Wenn nun die Auswahl von Faces aufgelöst wird, indem in den leeren Raum im 3D-Viewport-Editor geklickt wird, kann die Taste «*Select*» im Properties-Editor verwendet werden, um die zum Holz-Material hinzugefügten Faces auszuwählen. Dadurch kann überprüft werden, ob die Faces korrekt zugewiesen wurden.
 
 ## Metall texturieren
 
@@ -87,20 +81,19 @@ Im Properties-Editor kann nun das Metall-Material ausgewählt werden. Dieses Mat
 Image-Texture-Node hinzufügen
 :::
 
-Als erstes wird dem Principled-BSDF-Shader im Shader-Editor eine Image-Textur hinzugefügt. Hierfür kann der Principled-BSDF-Shader ausgewählt und die Tastenkombination {{< kbd Ctrl >}} + {{< kbd T >}}  gedrückt werden. Durch das Node-Wrangler-Add-on entsteht links vom Principled-BSDF-Shader eine Image-Textur, welche durch einen Mapping-Node und einen Textur-Coordinate-Node ihre Inputs bekommt. Der Image-Textur-Node sollte automatisch mit der Base-Color des Principled-BSDF-Shaders verbunden worden sein. Für den Fall, dass diese Tastenkombination nicht funktionieren, sollte überprüft werden, ob das Node-Wrangler-Add-on aktiviert ist. 
+Als erstes wird dem Principled-BSDF-Shader im Shader-Editor eine Image-Textur hinzugefügt. Hierfür kann der Principled-BSDF-Shader ausgewählt und die Tastenkombination {{< kbd Ctrl >}} + {{< kbd T >}} gedrückt werden. Durch das Node-Wrangler-Add-on entsteht links vom Principled-BSDF-Shader eine Image-Textur, welche durch einen Mapping-Node und einen Textur-Coordinate-Node ihre Inputs bekommt. Der Image-Textur-Node sollte automatisch mit der Base-Color des Principled-BSDF-Shaders verbunden worden sein. Für den Fall, dass diese Tastenkombination nicht funktionieren, sollte überprüft werden, ob das Node-Wrangler-Add-on aktiviert ist.
 
 ::: column-margin
 Color-Textur öffnen
 :::
 
-Anschliessend kann im Image-Texture-Node auf die Schaltfläche «*Open*» geklickt werden. Im anschliessend geöffneten Browser kann zum Speicherort des Hammers navigiert werden und dort im Ordner «*Metal022_4K-JPG*» die Datei «*Metal022_4K_Color.jpg*» ausgewählt werden. Dabei handelt es sich um die Color-Textur, welche jeweils mit der Base-Color des Principled-BSDF-Shaders verbunden wird. 
+Anschliessend kann im Image-Texture-Node auf die Schaltfläche «*Open*» geklickt werden. Im anschliessend geöffneten Browser kann zum Speicherort des Hammers navigiert werden und dort im Ordner «*Metal022_4K-JPG*» die Datei «*Metal022_4K_Color.jpg*» ausgewählt werden. Dabei handelt es sich um die Color-Textur, welche jeweils mit der Base-Color des Principled-BSDF-Shaders verbunden wird.
 
 ::: column-margin
 Image-Texture-Node für Metallic hinzufügen
 :::
 
-Als Nächstes wird die Metallic-Textur zum Material hinzugefügt. Hierfür kann der Image-Textur-Node ausgewählt und mit der Tastenkombination {{< kbd Shift >}} + {{< kbd D >}}  dupliziert werden. Das Duplikat kann unterhalb des originalen Image-Textur-Nodes platziert werden. Anschliessend sollte der Vector-Output des 
-Mapping-Nodes mit dem Vector-Input des duplizierten Image-Textur-Nodes verbunden werden. Der Color-Output des Image-Textur-Nodes kann mit dem Metallic-Input des Principled-BSDF-Shaders verbunden werden.
+Als Nächstes wird die Metallic-Textur zum Material hinzugefügt. Hierfür kann der Image-Textur-Node ausgewählt und mit der Tastenkombination {{< kbd Shift >}} + {{< kbd D >}} dupliziert werden. Das Duplikat kann unterhalb des originalen Image-Textur-Nodes platziert werden. Anschliessend sollte der Vector-Output des Mapping-Nodes mit dem Vector-Input des duplizierten Image-Textur-Nodes verbunden werden. Der Color-Output des Image-Textur-Nodes kann mit dem Metallic-Input des Principled-BSDF-Shaders verbunden werden.
 
 ::: column-margin
 Bilddatei auswechseln
@@ -112,13 +105,13 @@ Der Image-Textur-Node beinhaltet als Bild immer noch die Datei «*Metal022_4K_Co
 Roughness-Textur hinzufügen
 :::
 
-Die Schritte zum Einfügen der Metallic-Textur können nun wiederholt werden, um die Roughness-Textur einzufügen. Das heisst, der Image-Texture-Node kann dupliziert werden, mit dem Mapping-Node und mit dem Roughness-Input des Principled-BSDF-Shaders verbunden werden. Anschliessend muss die Textur mit der Datei «*Metal022_4K_Roughness.jpg*» ausgewechselt werden. 
+Die Schritte zum Einfügen der Metallic-Textur können nun wiederholt werden, um die Roughness-Textur einzufügen. Das heisst, der Image-Texture-Node kann dupliziert werden, mit dem Mapping-Node und mit dem Roughness-Input des Principled-BSDF-Shaders verbunden werden. Anschliessend muss die Textur mit der Datei «*Metal022_4K_Roughness.jpg*» ausgewechselt werden.
 
 ::: column-margin
 Normal-Textur hinzufügen
 :::
 
-Für die Normal-Textur wird ebenfalls ein Duplikat des Image-Texture-Nodes erstellt, dessen Input mit dem Vector-Output des Mapping Nodes verbunden und die Datei «*Metal022_4K_NormalGL.jpg*» geöffnet. Zusätzlich wird nun ein neuer Node benötigt, welcher minimale visuelle Unebenheiten basierend auf der Normal-Textur simuliert. Hierfür wird mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd A >}}  das «*Add*»-Menü geöffnet und unter «*Vector | Bump*» ein Bump-Node hinzugefügt. Dieser wird zwischen dem Image-Textur-Node und dem  Principled-BSDF-Shader platziert. Der Normal-Output des Bump-Nodes wird anschliessend mit dem Normal-Input des Principled-BSDF-Shaders verbunden.
+Für die Normal-Textur wird ebenfalls ein Duplikat des Image-Texture-Nodes erstellt, dessen Input mit dem Vector-Output des Mapping Nodes verbunden und die Datei «*Metal022_4K_NormalGL.jpg*» geöffnet. Zusätzlich wird nun ein neuer Node benötigt, welcher minimale visuelle Unebenheiten basierend auf der Normal-Textur simuliert. Hierfür wird mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd A >}} das «*Add*»-Menü geöffnet und unter «*Vector \| Bump*» ein Bump-Node hinzugefügt. Dieser wird zwischen dem Image-Textur-Node und dem Principled-BSDF-Shader platziert. Der Normal-Output des Bump-Nodes wird anschliessend mit dem Normal-Input des Principled-BSDF-Shaders verbunden.
 
 ::: column-margin
 Bump einstellen
@@ -136,7 +129,7 @@ Zu guter Letzt wird erneut eine Kopie des Image-Texture-Nodes erstellt, mit dem 
 Displacement verbinden
 :::
 
-Zur Verwendung der Displacement-Textur wird ein weiterer Node benötigt, welcher im «*Add*»-Menü unter «*Vector | Displacement*» zu finden ist Dieser wird anschliessend neben dem Image-Texture-Node verbunden. Der Displacement-Output des Displacement-Nodes wird, anders als bei den anderen Texturen, nicht mit einem Shader verbunden, sondern direkt mit dem Displacement-Output des Material-Output-Nodes.
+Zur Verwendung der Displacement-Textur wird ein weiterer Node benötigt, welcher im «*Add*»-Menü unter «*Vector \| Displacement*» zu finden ist. Dieser wird anschliessend neben dem Image-Texture-Node verbunden. Der Displacement-Output des Displacement-Nodes wird, anders als bei den anderen Texturen, nicht mit einem Shader verbunden, sondern direkt mit dem Displacement-Output des Material-Output-Nodes.
 
 ::: column-margin
 Displacement einstellen
@@ -158,20 +151,19 @@ Nachdem alle Texturen eingefügt wurden, kann im Mapping Node die Grösse der Te
 Quelle der Metall-Textur
 :::
 
-Die Metall-Texturen stammen von der Website <https://ambientcg.com/>. Diese Website bietet weitere Texturen an, die etwa für die Texturierung des Holz-Stiels verwendet werden können. So könnte für das Holzmaterial die Textur «Wood 057» verwendet werden. Hierfür muss die entsprechende Textur heruntergeladen werden.
+Die Metall-Texturen stammen von der Website <https://ambientcg.com/view?id=Metal022>. Diese Website bietet weitere Texturen an, die etwa für die Texturierung des Holz-Stiels verwendet werden können. So könnte für das Holzmaterial die Textur «Wood 057» verwendet werden. Hierfür muss die entsprechende Textur heruntergeladen werden (Bildquelle: <https://ambientcg.com/view?id=Wood057>).
 
 ::: column-margin
 Node-System kopieren
 :::
 
-Nun müsste für das Holz-Material dieselbe Node-Struktur erneut aufgebaut werden. Dies kann etwas übersprungen werden, indem alle Nodes aus dem Metall-Material mittels der Taste {{< kbd A >}} ausgewählt und mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd C >}}  kopiert werden. Anschliessend kann im Properties-Editor der Slot für das zweite Material –das Holz – ausgewählt werden. Dadurch erscheint im Shader-Editor nun die Node-Struktur des Holz-Materials. Hier kann mit der Taste {{< kbd A >}} alles ausgewählt und die bestehenden Nodes mit der Taste {{< kbd X >}} gelöscht werden. Anschliessend kann mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd V >}}die Node-Struktur aus dem Metall-Material eingefügt werden.
+Nun müsste für das Holz-Material dieselbe Node-Struktur erneut aufgebaut werden. Dies kann etwas übersprungen werden, indem alle Nodes aus dem Metall-Material mittels der Taste {{< kbd A >}} ausgewählt und mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd C >}} kopiert werden. Anschliessend kann im Properties-Editor der Slot für das zweite Material –das Holz – ausgewählt werden. Dadurch erscheint im Shader-Editor nun die Node-Struktur des Holz-Materials. Hier kann mit der Taste {{< kbd A >}} alles ausgewählt und die bestehenden Nodes mit der Taste {{< kbd X >}} gelöscht werden. Anschliessend kann mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd V >}}die Node-Struktur aus dem Metall-Material eingefügt werden.
 
 ::: column-margin
 Node-System kopieren
 :::
 
-Das neu eingefügt Node-System beinhaltet noch die Texturen, welche im Metall-Material verwendet wurden. Deshalb müssen bei allen Image-Texture-Nodes die entsprechenden Texturen mit der äquivalenten Texturart der Holztexturen ersetz werden. Bei dieser Textur wurde allerdings keine Metall-Textur angeboten, weshalb der Image-Texture-Node, welcher mit dem Metallic-Input des Principled-BSDF-Shaders verbunden ist, entfernt werden kann. Zudem können bei Bedarf die Einstellungen im 
-Bump-Node für die Normal-Textur und die Einstellungen im Displacement-Node für die Displacement-Textur angepasst werden. Im Mapping-Node könnte zudem noch die Einstellung für die Skalierung der Textur angepasst werden, beispielsweise auf einen Wert von 1.5 pro Achse. Anschliessend ist der Hammer fertig texturiert. 
+Das neu eingefügt Node-System beinhaltet noch die Texturen, welche im Metall-Material verwendet wurden. Deshalb müssen bei allen Image-Texture-Nodes die entsprechenden Texturen mit der äquivalenten Texturart der Holztexturen ersetz werden. Bei dieser Textur wurde allerdings keine Metall-Textur angeboten, weshalb der Image-Texture-Node, welcher mit dem Metallic-Input des Principled-BSDF-Shaders verbunden ist, entfernt werden kann. Zudem können bei Bedarf die Einstellungen im Bump-Node für die Normal-Textur und die Einstellungen im Displacement-Node für die Displacement-Textur angepasst werden. Im Mapping-Node könnte zudem noch die Einstellung für die Skalierung der Textur angepasst werden, beispielsweise auf einen Wert von 1.5 pro Achse. Anschliessend ist der Hammer fertig texturiert.
 
 :::::: exercisebox
 :::: exercisebox-header
@@ -184,6 +176,6 @@ Bump-Node für die Normal-Textur und die Einstellungen im Displacement-Node für
 ::: exercisebox-body
 **Übung 15.1**
 
-Suchen Sie nach einer anderen Holz-Textur und fügen Sie diese dem Material «Holz» des Hammers zu. Suchen Sie hierfür nach Texturen, die verschiedene Texturarten beinhalten. 
+Suchen Sie nach einer anderen Holz-Textur und fügen Sie diese dem Material «Holz» des Hammers zu. Suchen Sie hierfür nach Texturen, die verschiedene Texturarten beinhalten.
 :::
 ::::::

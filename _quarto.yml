@@ -21,107 +21,108 @@ website:
         icon: images
       - text: "Skript"
         icon: eyeglasses
-        menu:
-          - href: Chapters/Chapter_1.qmd
-            text: Kapitel 1
-          - href: Chapters/Chapter_2.qmd
-            text: Kapitel 2
-          - href: Chapters/Chapter_3.qmd
-            text: Kapitel 3
-          - href: Chapters/Chapter_4.qmd
-            text: Kapitel 4
-          - href: Chapters/Chapter_5.qmd
-            text: Kapitel 5
-          - href: Chapters/Chapter_6.qmd
-            text: Kapitel 6
-          - href: Chapters/Chapter_7.qmd
-            text: Kapitel 7
-          - href: Chapters/Chapter_8.qmd
-            text: Kapitel 8
-          - href: Chapters/Chapter_9.qmd
-            text: Kapitel 9
-          - href: Chapters/Chapter_10.qmd
-            text: Kapitel 10
-          - href: Chapters/Chapter_11.qmd
-            text: Kapitel 11
-          - href: Chapters/Chapter_12.qmd
-            text: Kapitel 12
-          - href: Chapters/Chapter_13.qmd
-            text: Kapitel 13
-          - href: Chapters/Chapter_14.qmd
-            text: Kapitel 14
-          - href: Chapters/Chapter_15.qmd
-            text: Kapitel 15
-          - href: Chapters/Chapter_16.qmd
-            text: Kapitel 16
-          - href: Chapters/Chapter_17.qmd
-            text: Kapitel 17
-          - href: Chapters/Chapter_18.qmd
-            text: Kapitel 18 
-          - href: Chapters/Chapter_19.qmd
-            text: Kapitel 19
-          - href: Chapters/Chapter_20.qmd
-            text: Kapitel 20
-          - href: Chapters/Chapter_21.qmd
-            text: Kapitel 21
-          - href: Chapters/Chapter_22.qmd
-            text: Kapitel 22
-          - href: Chapters/Chapter_23.qmd
-            text: Kapitel 23
-          - href: Chapters/Chapter_24.qmd
-            text: Kapitel 24
-          - href: Chapters/Chapter_25.qmd
-            text: Kapitel 25
-          - href: Chapters/Chapter_25.qmd
-            text: Kapitel 25
-          - href: Chapters/Chapter_26.qmd
-            text: Kapitel 26
-          - href: Chapters/Chapter_27.qmd
-            text: Kapitel 27
-          - href: Chapters/Chapter_28.qmd
-            text: Kapitel 28
-          - href: Chapters/Chapter_29.qmd
-            text: Kapitel 29
-          - href: Chapters/Chapter_30.qmd
-            text: Kapitel 30
-          - href: Chapters/Chapter_31.qmd
-            text: Kapitel 31
-          - href: Chapters/Chapter_32.qmd
-            text: Kapitel 32
-          - href: Chapters/Chapter_33.qmd
-            text: Kapitel 33
-          - href: Chapters/Chapter_34.qmd
-            text: Kapitel 34
-          - href: Chapters/Chapter_35.qmd
-            text: Kapitel 35
-          - href: Chapters/Chapter_36.qmd
-            text: Kapitel 36
-          - href: Chapters/Chapter_37.qmd
-            text: Kapitel 37
-          - href: Chapters/Chapter_38.qmd
-            text: Kapitel 38 
-          - href: Chapters/Chapter_39.qmd
-            text: Kapitel 39
-          - href: Chapters/Chapter_40.qmd
-            text: Kapitel 40
-          - href: Chapters/Chapter_41.qmd
-            text: Kapitel 41
-          - href: Chapters/Chapter_42.qmd
-            text: Kapitel 42
-          - href: Chapters/Chapter_43.qmd
-            text: Kapitel 43
-          - href: Chapters/Chapter_44.qmd
-            text: Kapitel 44
-          - href: Chapters/Chapter_45.qmd
-            text: Kapitel 45
-          - href: Chapters/Chapter_46.qmd
-            text: Kapitel 46
-          - href: Chapters/Chapter_47.qmd
-            text: Kapitel 47
-          - href: Chapters/Chapter_48.qmd
-            text: Kapitel 48
-          - href: Chapters/Chapter_49.qmd
-            text: Kapitel 49
+        href: Sites/chapter_overview.qmd
+        # menu:
+        #   - href: Chapters/Chapter_1.qmd
+        #     text: Kapitel 1
+        #   - href: Chapters/Chapter_2.qmd
+        #     text: Kapitel 2
+        #   - href: Chapters/Chapter_3.qmd
+        #     text: Kapitel 3
+        #   - href: Chapters/Chapter_4.qmd
+        #     text: Kapitel 4
+        #   - href: Chapters/Chapter_5.qmd
+        #     text: Kapitel 5
+        #   - href: Chapters/Chapter_6.qmd
+        #     text: Kapitel 6
+        #   - href: Chapters/Chapter_7.qmd
+        #     text: Kapitel 7
+        #   - href: Chapters/Chapter_8.qmd
+        #     text: Kapitel 8
+        #   - href: Chapters/Chapter_9.qmd
+        #     text: Kapitel 9
+        #   - href: Chapters/Chapter_10.qmd
+        #     text: Kapitel 10
+        #   - href: Chapters/Chapter_11.qmd
+        #     text: Kapitel 11
+        #   - href: Chapters/Chapter_12.qmd
+        #     text: Kapitel 12
+        #   - href: Chapters/Chapter_13.qmd
+        #     text: Kapitel 13
+        #   - href: Chapters/Chapter_14.qmd
+        #     text: Kapitel 14
+        #   - href: Chapters/Chapter_15.qmd
+        #     text: Kapitel 15
+        #   - href: Chapters/Chapter_16.qmd
+        #     text: Kapitel 16
+        #   - href: Chapters/Chapter_17.qmd
+        #     text: Kapitel 17
+        #   - href: Chapters/Chapter_18.qmd
+        #     text: Kapitel 18 
+        #   - href: Chapters/Chapter_19.qmd
+        #     text: Kapitel 19
+        #   - href: Chapters/Chapter_20.qmd
+        #     text: Kapitel 20
+        #   - href: Chapters/Chapter_21.qmd
+        #     text: Kapitel 21
+        #   - href: Chapters/Chapter_22.qmd
+        #     text: Kapitel 22
+        #   - href: Chapters/Chapter_23.qmd
+        #     text: Kapitel 23
+        #   - href: Chapters/Chapter_24.qmd
+        #     text: Kapitel 24
+        #   - href: Chapters/Chapter_25.qmd
+        #     text: Kapitel 25
+        #   - href: Chapters/Chapter_25.qmd
+        #     text: Kapitel 25
+        #   - href: Chapters/Chapter_26.qmd
+        #     text: Kapitel 26
+        #   - href: Chapters/Chapter_27.qmd
+        #     text: Kapitel 27
+        #   - href: Chapters/Chapter_28.qmd
+        #     text: Kapitel 28
+        #   - href: Chapters/Chapter_29.qmd
+        #     text: Kapitel 29
+        #   - href: Chapters/Chapter_30.qmd
+        #     text: Kapitel 30
+        #   - href: Chapters/Chapter_31.qmd
+        #     text: Kapitel 31
+        #   - href: Chapters/Chapter_32.qmd
+        #     text: Kapitel 32
+        #   - href: Chapters/Chapter_33.qmd
+        #     text: Kapitel 33
+        #   - href: Chapters/Chapter_34.qmd
+        #     text: Kapitel 34
+        #   - href: Chapters/Chapter_35.qmd
+        #     text: Kapitel 35
+        #   - href: Chapters/Chapter_36.qmd
+        #     text: Kapitel 36
+        #   - href: Chapters/Chapter_37.qmd
+        #     text: Kapitel 37
+        #   - href: Chapters/Chapter_38.qmd
+        #     text: Kapitel 38 
+        #   - href: Chapters/Chapter_39.qmd
+        #     text: Kapitel 39
+        #   - href: Chapters/Chapter_40.qmd
+        #     text: Kapitel 40
+        #   - href: Chapters/Chapter_41.qmd
+        #     text: Kapitel 41
+        #   - href: Chapters/Chapter_42.qmd
+        #     text: Kapitel 42
+        #   - href: Chapters/Chapter_43.qmd
+        #     text: Kapitel 43
+        #   - href: Chapters/Chapter_44.qmd
+        #     text: Kapitel 44
+        #   - href: Chapters/Chapter_45.qmd
+        #     text: Kapitel 45
+        #   - href: Chapters/Chapter_46.qmd
+        #     text: Kapitel 46
+        #   - href: Chapters/Chapter_47.qmd
+        #     text: Kapitel 47
+        #   - href: Chapters/Chapter_48.qmd
+        #     text: Kapitel 48
+        #   - href: Chapters/Chapter_49.qmd
+        #     text: Kapitel 49
       - href: about.qmd
         icon: info-circle
         text: Über

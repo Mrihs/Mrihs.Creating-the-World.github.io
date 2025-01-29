@@ -1,11 +1,7 @@
 ---
-title: "Kursübersicht"
+title: "Skript: Kapitelübersicht"
 editor: visual
 ---
-
-![](/icons/Logo.png)
-
-## Skript-Kapitel:
 
 1.  [Vorbereitung von Blender](../Chapters/Chapter_1.qmd)
 2.  [Die Arbeitsoberfläche des 3D-Viewports](../Chapters/Chapter_2.qmd)

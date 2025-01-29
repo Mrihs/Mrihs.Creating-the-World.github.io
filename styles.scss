@@ -27,11 +27,82 @@ $navbar-bg: #FF8E00;
 
 
 
-
 /*Tipp-Box*/
 $box-icon-height: 5rem;
 $box-icon-widtht: 4.5rem;
 $box-header-text-size: 1.5rem;
+
+
+
+
+.downloadbox {
+  margin-top: 1em;
+  margin-bottom: 1em;  
+  border-radius: .4rem;
+  border-left: solid black 0.5rem;
+  border-right: solid 1px black;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+  border-left-color: #FFA600 !important;
+}
+
+
+.downloadbox-body {
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: #ffdb99;
+  color: black;
+}
+
+
+.downloadbox-header p {
+  padding-top: 0.2em;
+  font-size: $box-header-text-size;
+  margin: 0; /* Entfernt zusätzliche Ränder */
+
+}
+
+.downloadbox-header {
+  display: flex;
+  align-items: center; /* Vertikale Zentrierung */
+  justify-content: center; /* Horizontale Zentrierung des gesamten Inhalts */
+  //border-bottom: 0.5rem;
+  //margin-top: 0.5em;
+  margin-bottom: 0.0em;
+  font-weight: 800;
+  font-size: 0.9rem;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  background-color: #FFA600 !important;
+  height: calc(#{$box-icon-height}/2) ;
+  overflow: hidden;
+  border-bottom-color: black !important;
+  border-bottom: solid black 0.1rem;
+  align-items: center; /* Vertikale Zentrierung */
+  justify-content: center; /* Horizontale Zentrierung */
+  position: relative; /* Für das absolute Positionieren des Icons */
+
+}
+
+.downloadbox-body > :last-child {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .tippbox {
   margin-top: 1em;
@@ -349,3 +420,18 @@ body.fullcontent:not(.floating):not(.docked) .page-columns {
     display: inline !important;;
 }
 
+
+
+#download-btn {
+     font-size: xx-small;
+     padding: 0.2rem 0.3rem !important;
+   }
+
+#down-btn {
+ margin-right: 2px;
+ margin-left: 2px;
+}
+
+a:has(#download-btn) {
+ text-decoration: none !important;
+}

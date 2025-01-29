@@ -3,6 +3,26 @@ title: "27. Tutorial: Einen Hammer texturieren"
 editor: visual
 ---
 
+
+
+
+
+
+
+
+:::::: downloadbox
+:::: downloadbox-header
+Unterlagen für dieses Kapitel
+::::
+
+::: downloadbox-body
+::: {.button}
+[<i class="bi bi-file-earmark-arrow-down-fill"></i>  Download Hammer.zip](assets/Hammer/){.btn .btn-light download="Hammer.zip"}
+:::
+
+:::
+::::::
+
 ::: column-margin
 Ziel dieser Aufgabe
 :::

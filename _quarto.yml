@@ -5,6 +5,7 @@ website:
   title: "Creating the World"
   page-navigation: true
   reader-mode: true
+  bread-crumbs: false
   navbar:
     right:
       - href: Sites/Overview.qmd

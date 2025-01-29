@@ -331,3 +331,21 @@ body.fullcontent:not(.floating):not(.docked) .page-columns {
     gap:0;
     grid-template-columns:[screen-start] 1.5em [screen-start-inset] 5fr [page-start page-start-inset] 35px [body-start-outset] 35px [body-start] 1.5em [body-content-start] minmax(500px, calc(1850px - 3em)) [body-content-end] 1.5em [body-end] 35px [body-end-outset] 35px [page-end-inset page-end] 5fr [screen-end-inset] 1.5em [screen-end]
    }
+   
+   
+/* Hide Sidebar */
+.sidebar {
+    display: none !important;
+}
+
+
+.nav-page.nav-page-previous .nav-page-text::before {
+    content: "Zurück zu: " !important;;
+    display: inline !important;;
+}
+
+.nav-page.nav-page-next .nav-page-text::before {
+    content: "Weiter zu: " !important;;
+    display: inline !important;;
+}
+

@@ -83,7 +83,7 @@ Nun kann der Charakter als Kind dem Rig hinzugefügt werden. Hierfür wird nache
 Rig-Objekte
 :::
 
-Wenn nun der Rig ausgewählt und in den Pose-Mode gewechselt wird, kann der Charakter nun anhand der verschiedenen Formen innerhalb des Rigs posiert werden. In der Sidebar sind durch das Rigify-Add-on zwei neue Reiter unter «*Item*» erstellt worden: «*Rig Main Properties*» und «*Rig Layers*». Die verschiedenen Körperteile des Rigs werden unter dem Reiter «Rig Layers» aufgelistet. Dabei können einzelne Symbole ausgeblendet werden, damit nur die relevanten Formen des Rigs angezeigt werden.
+Wenn nun der Rig ausgewählt und in den Pose-Mode gewechselt wird, kann der Charakter nun anhand der verschiedenen Formen innerhalb des Rigs posiert werden. In der Sidebar sind durch das Rigify-Add-on zwei neue Reiter unter «*Item*» erstellt worden: «*Rig Main Properties*» und «*Rig Layers*». Die verschiedenen Körperteile des Rigs werden unter dem Reiter «*Rig Layers*» aufgelistet. Dabei können einzelne Symbole ausgeblendet werden, damit nur die relevanten Formen des Rigs angezeigt werden.
 
 ![Der Charakter mit dem dazugehörigen Rig.](Images/Chapter_45/.png){#fig-1_3 fig-align="left"}
 
@@ -93,7 +93,7 @@ Arten von Rig-Strukturen
 
 Für einzelne Körperteile werden mehrere Elemente in den Rig-Layers aufgelistet, beispielsweise für die Arme. In Klammern werden die Unterschiede dieser Formen beschrieben.
 
--   «***IK***»: Die Abkürzung IK steht für Inverse Kinematics. Dies stellt eine alternative Form zur bisher verwendeten Forward Kinematics dar. Strukturen im Rig, welche sich der Inverse Kinematics bedienen, werden jeweils in roter Farbe darge stellt.
+-   «***IK***»: Die Abkürzung IK steht für Inverse Kinematics. Dies stellt eine alternative Form zur bisher verwendeten Forward Kinematics dar. Strukturen im Rig, welche sich der Inverse Kinematics bedienen, werden jeweils in roter Farbe dargestellt.
 -   «***FK***»: Die Abkürzung FK steht für Forward Kinematics. Dies stellt eine alternative Form zur Inverse Kinematics dar. Strukturen im Rig, welche sich der Forward Kinematics bedienen, werden jeweils in grüner Farbe dargestellt.
 -   «***Tweak***»: Die Strukturen aus der Kategorie Tweak werden für genauere Anpassungen verwendet. Die entsprechenden Elemente werden in blauer Farbe dargestellt.
 

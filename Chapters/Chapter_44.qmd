@@ -33,14 +33,13 @@ Im Edit-Mode können nun drei Elemente des Knochens ausgewählt werden:
 Knochen extrudieren mittels {{< kbd E >}}
 :::
 
-Der Schwanz des hinzugefügten Knochens kann nun entlang der X-Achse platziert werden. Dabei sollte darauf geachtet werden, dass er sich innerhalb des Meshes der Schwimmnudel befindet (beispielsweise an der Position X = 0, Y = 0, Z = 0.5). Um einen neuen Knochen hinzuzufügen, wird nun der Schwanz ausgewählt werden und ein neuer Knochen mittels der Taste {{< kbd E >}} extrudiert. Der neue Knochen kann anschliessend entlang der X-Achse weiter entlang dem Mesh platziert werden (beispielsweise X = 0, Y = 0, Z = 1). 
+Der Schwanz des hinzugefügten Knochens kann nun entlang der X-Achse platziert werden. Dabei sollte darauf geachtet werden, dass er sich innerhalb des Meshes der Schwimmnudel befindet (beispielsweise an der Position X = 0, Y = 0, Z = 0.5). Um einen neuen Knochen hinzuzufügen, wird nun der Schwanz ausgewählt werden und ein neuer Knochen mittels der Taste {{< kbd E >}} extrudiert. Der neue Knochen kann anschliessend entlang der X-Achse weiter entlang dem Mesh platziert werden (beispielsweise X = 0, Y = 0, Z = 1).
 
 ::: column-margin
 Kopf/Schwanz zwischen Knochen
 :::
 
-Der neu extrudierte Knochen ist direkt mit dem alten Knochen über das dazwischen
-liegende Gelenk verbunden. Der Kopf des neuen Knochens stellt dabei den Schwanz des alten Knochens dar. Dementsprechend wird die Ausrichtung der Knochen durch eine Verschiebung des Kopfes/Schwanzes zwischen den Knochen verändert. Um einen Knochen von den mit ihm verbundenen Knochen zu lösen, kann der Befehl «*Split*» mittels der Taste {{< kbd Y >}} ausgeführt werden.
+Der neu extrudierte Knochen ist direkt mit dem alten Knochen über das dazwischen liegende Gelenk verbunden. Der Kopf des neuen Knochens stellt dabei den Schwanz des alten Knochens dar. Dementsprechend wird die Ausrichtung der Knochen durch eine Verschiebung des Kopfes/Schwanzes zwischen den Knochen verändert. Um einen Knochen von den mit ihm verbundenen Knochen zu lösen, kann der Befehl «*Split*» mittels der Taste {{< kbd Y >}} ausgeführt werden.
 
 ![Der Knochen wird entlang der Schwimmnudel platziert.](Images/Chapter_44/2.Knochen_Platzierung.png){#fig-1_2 fig-align="left"}
 
@@ -48,11 +47,11 @@ liegende Gelenk verbunden. Der Kopf des neuen Knochens stellt dabei den Schwanz 
 Vollständiges Skelett extrudieren
 :::
 
-Um ein vollständiges Skelett zu erhalten, können nun weitere Knochen entlang der X-Achse extrudiert werden. Dies sollte anschliessend ebenfalls entlang der anderen Seite der Schwimmnudel erfolgen. Am Schluss sollte das Skelet ähnlich der Abbildung 3 aussehen. 
+Um ein vollständiges Skelett zu erhalten, können nun weitere Knochen entlang der X-Achse extrudiert werden. Dies sollte anschliessend ebenfalls entlang der anderen Seite der Schwimmnudel erfolgen. Am Schluss sollte das Skelet ähnlich der Abbildung 3 aussehen.
 
 ![Der Knochen wird entlang der Schwimmnudel platziert.](Images/Chapter_44/3.Knochen_Platzierungen.png){#fig-1_3 fig-align="left"}
 
-## Mesh dem Skelet zuweisen 
+## Mesh dem Skelet zuweisen
 
 ::: column-margin
 Verbindung von Mesh und Skelet
@@ -64,10 +63,9 @@ Als Nächstes geht es darum, das Mesh der Schwimmnudel und das Skelet miteinande
 Parenting
 :::
 
-Um das Mesh als Kind des Skeletes zu definieren, müssen das Mesh und das Skelet nacheinander ausgewählt werden. Dabei ist die Reihenfolge zu beachten, sodass das Skelet als letztes Objekt ausgewählt wird. In diesem Falle ist das Skelet nun das aktive Objekt. Mittels der Tastenkombination {{< kbd Ctrl >}} + {{< kbd P >}} kann beim Mauszeiger das Menü «*Set Parent to*» geöffnet werden, in dem nun die Option 
-«*Armature Deform | with automatic Weights*» ausgewählt werden kann. Dadurch wird das Mesh nun hierarchisch als Kind des Skeletes definiert. Als Folge dessen, ist das Mesh der Schwimmnudel nun auch im Outliner-Editor im Dropdown-Bereich des Skelets aufgelistet.
+Um das Mesh als Kind des Skeletes zu definieren, müssen das Mesh und das Skelet nacheinander ausgewählt werden. Dabei ist die Reihenfolge zu beachten, sodass das Skelet als letztes Objekt ausgewählt wird. In diesem Falle ist das Skelet nun das aktive Objekt. Mittels der Tastenkombination {{< kbd Ctrl >}} + {{< kbd P >}} kann beim Mauszeiger das Menü «*Set Parent to*» geöffnet werden, in dem nun die Option «*Armature Deform \| with automatic Weights*» ausgewählt werden kann. Dadurch wird das Mesh nun hierarchisch als Kind des Skeletes definiert. Als Folge dessen, ist das Mesh der Schwimmnudel nun auch im Outliner-Editor im Dropdown-Bereich des Skelets aufgelistet.
 
-## Skelet verformen 
+## Skelet verformen
 
 ::: column-margin
 Pose-Mode
@@ -79,7 +77,7 @@ Objekte des Typs «*Armature*» verfügen nebst dem Object- und dem Edit-Mode ü
 Pose verformen
 :::
 
-Innerhalb des Pose-Mode sind nun ebenfalls alle Knochen auswählbar. Der Kopf und der Schwanz des Knochens werden jeweils automatisch mit ausgewählt. Anders als im Edit-Mode können allerdings nur die Knochen als Ganzes ausgewählt werden. Durch eine Veränderung der Knochen in ihrer Rotation wird anschliessend ebenfalls das Mesh entsprechend dieser Knochen verformt. 
+Innerhalb des Pose-Mode sind nun ebenfalls alle Knochen auswählbar. Der Kopf und der Schwanz des Knochens werden jeweils automatisch mit ausgewählt. Anders als im Edit-Mode können allerdings nur die Knochen als Ganzes ausgewählt werden. Durch eine Veränderung der Knochen in ihrer Rotation wird anschliessend ebenfalls das Mesh entsprechend dieser Knochen verformt.
 
 ::: column-margin
 Schwimmnudel verbiegen
@@ -91,8 +89,7 @@ Um die Schwimmnudel zu biegen, können alle Knochen auf der einen Seite des Skel
 Vertices für Verformung benötigt
 :::
 
-Die Verformung des Meshes erfolgt anhand der Struktur des Meshes. Wenn sich entlang mehrerer Knochen keine Vertices befinden, können die Strukturen der Knochen entlang dieser Fläche nicht mitberücksichtigt werden. Deshalb ist darauf zu achten, dass im Mesh genug Vertices entlang der dazugehörigen Knochen aufzufinden sind. 
-
+Die Verformung des Meshes erfolgt anhand der Struktur des Meshes. Wenn sich entlang mehrerer Knochen keine Vertices befinden, können die Strukturen der Knochen entlang dieser Fläche nicht mitberücksichtigt werden. Deshalb ist darauf zu achten, dass im Mesh genug Vertices entlang der dazugehörigen Knochen aufzufinden sind.
 
 ![Die gebogene Schwimmnudel.](Images/Chapter_44/4.gebogene_Schwimmnudel.png){#fig-1_4 fig-align="left"}
 
@@ -100,17 +97,15 @@ Die Verformung des Meshes erfolgt anhand der Struktur des Meshes. Wenn sich entl
 Armature-Modifier
 :::
 
-Meshes, welche einer Armature zugewiesen wurde, erhalten jeweils einen neuen Modifier. Dabei handelt es sich um den «*Armature*»-Modifier, welcher jeweils in der dritten Spalte der Modifier-Auswahl aufzufinden ist. Sobald ein Mesh einem Armature-Objekt zugewiesen wurde, wird diesem automatisch der Armature-Modifier hinzugefügt. Dieser Modifier kann anschliessend innerhalb der Reihenfolge der Modifier platziert werden. So können beispielsweise mittels eines Subdivision
-Surface-Modifiers nach dem Armature-Modifier die Verformungen durch die Posen geglättet werden. 
+Meshes, welche einer Armature zugewiesen wurde, erhalten jeweils einen neuen Modifier. Dabei handelt es sich um den «*Armature*»-Modifier, welcher jeweils in der dritten Spalte der Modifier-Auswahl aufzufinden ist. Sobald ein Mesh einem Armature-Objekt zugewiesen wurde, wird diesem automatisch der Armature-Modifier hinzugefügt. Dieser Modifier kann anschliessend innerhalb der Reihenfolge der Modifier platziert werden. So können beispielsweise mittels eines Subdivision Surface-Modifiers nach dem Armature-Modifier die Verformungen durch die Posen geglättet werden.
 
-## Posen abspeichern 
+## Posen abspeichern
 
 ::: column-margin
 Posen-Bibliothek
 :::
 
-Um eine erstellte Pose schnell aufrufen zu können, lassen sich verschiedene 
-Posen in einer Posen-Bibliothek abspeichern. Diese sind im Reiter «*Object-Data-Properties*» von Armaturen aufzufinden. Unter dem Reiter «*Pose Library*» kann anschliessend eine neue Posen-Bibliothek erstellt werden. 
+Um eine erstellte Pose schnell aufrufen zu können, lassen sich verschiedene Posen in einer Posen-Bibliothek abspeichern. Diese sind im Reiter «*Object-Data-Properties*» von Armaturen aufzufinden. Unter dem Reiter «*Pose Library*» kann anschliessend eine neue Posen-Bibliothek erstellt werden.
 
 ![Icon des Reiters «*Object Data Properties*» bei Armaturen.](Images/Chapter_44/5.Icon_Object_Data_Properties_Armature.png){#fig-1_5 fig-align="left"}
 
@@ -118,10 +113,6 @@ Posen in einer Posen-Bibliothek abspeichern. Diese sind im Reiter «*Object-Data
 Posen abspeichern
 :::
 
-Um eine neue Pose abzuspeichern, müssen im Pose-Mode jeweils alle Knochen 
-ausgewählt werden, deren Anordnung für eine Pose gespeichert werden sollen. 
-Um die aktuelle Anordnung abzuspeichern, kann anschliessend auf die Schaltfläche «+» geklickt werden. Anschliessend wird eine neue Pose innerhalb der Posen-Bibliothek erstellt. Dabei ist zu beachten, dass lediglich die ausgewählten 
-Knochen für diese Pose abgespeichert werden. Sind nicht alle relevanten Knochen ausgewählt, wird die entsprechende Pose nur unvollständig abgespeichert. 
-Mittels der Schaltfläche «*Apply Pose Library Pose*» wird zudem eine bereits ausgewählte Pose aufgerufen.
+Um eine neue Pose abzuspeichern, müssen im Pose-Mode jeweils alle Knochen ausgewählt werden, deren Anordnung für eine Pose gespeichert werden sollen. Um die aktuelle Anordnung abzuspeichern, kann anschliessend auf die Schaltfläche «+» geklickt werden. Anschliessend wird eine neue Pose innerhalb der Posen-Bibliothek erstellt. Dabei ist zu beachten, dass lediglich die ausgewählten Knochen für diese Pose abgespeichert werden. Sind nicht alle relevanten Knochen ausgewählt, wird die entsprechende Pose nur unvollständig abgespeichert. Mittels der Schaltfläche «*Apply Pose Library Pose*» wird zudem eine bereits ausgewählte Pose aufgerufen.
 
-![ Icon für die Schaltfläche "*Apply Pose Library Pose*". ](Images/Chapter_44/6.Icon_Apply_Pose_Library_Pose.png){#fig-1_6 fig-align="left"}
+![Icon für die Schaltfläche "*Apply Pose Library Pose*".](Images/Chapter_44/6.Icon_Apply_Pose_Library_Pose.png){#fig-1_6 fig-align="left"}

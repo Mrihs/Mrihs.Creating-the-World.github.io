@@ -21,7 +21,7 @@ Skelet
 
 Abbildung 1 zeigt einen Charakter mit einem dazugehörigen Skelet. Indem der Charakter anschliessend diesem Skelet zugewiesen wird, kann er anhand der einzelnen Knochen bewegt und posiert werden.
 
-![Das Mesh eines Charakters, mit einem dazugehörigen Skelet für das Rigging.](Images/Chapter_43/Mesh eines Charakters.png){#fig-1_1 fig-align="left"}
+![Das Mesh eines Charakters, mit einem dazugehörigen Skelet für das Rigging.](Images/Chapter_43/Mesh%20eines%20Charakters.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Knochen
@@ -30,7 +30,6 @@ Knochen
 Die einzelnen Knochen des Skelets werden als Oktaeder – ein Objekt mit vier Flächen – dargestellt. Am Anfang und am Ende des Oktaeders befinden sich je eine Kugel, welche den Kopf oder den Schwanz des Oktaeders darstellen. Diese Kugeln werden jeweils verwendet, um Gelenke darzustellen.
 
 ![Ein Knochen.](Images/Chapter_43/Knochen.png){#fig-1_2 fig-align="left"}
-
 
 ::: column-margin
 Knochen als Grundlage für Verformungen

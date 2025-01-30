@@ -92,9 +92,10 @@ Objekt immer im Vordergrund darstellen lassen
 
 Teilweise entsteht das Problem, dass das Retopology-Mesh nicht klar sichtbar ist, weil das Base-Mesh darüber dargestellt wird. Im Properties-Editor kann innerhalb des Reiters «*Object Properties*» der Reiter «*Viewport Display*» ausgewählt werden. Dort können verschiedene Darstellungsoptionen des Objektes im 3D-Viewport-Editor ausgewählt werden. Durch das Aktivieren der Option «*In Front*» wird das aktuell ausgewählte Objekt immer vor anderen Objekten dargestellt, selbst wenn sich die anderen Objekte eigentlich zwischen der eigenen Ansicht und dem ausgewählten Objekt befinden. Diese Option sollte aktiviert werden, während das Retopology-Mesh ausgewählt ist.
 
-![Die Edges werden schrittweise extrudiert.](Images/Chapter_41/3_Mesh_Extrusion.png){#fig-1_3 fig-align="left"}
 
-![Besondere körperliche Merkmale, wie etwa die Augen, werden mit einer Schlaufe von Faces umreandet.](Images/Chapter_41/4_Mesh_Head.png){#fig-1_4 fig-align="left"}
+![Besondere körperliche Merkmale, wie etwa die Augen, werden mit einer Schlaufe von Faces umreandet.](Images/Chapter_41/4_Mesh_Head.png){#fig-1_3 fig-align="left"}
+
+![Die Edges werden schrittweise extrudiert.](Images/Chapter_41/3_Mesh_Extrusion.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Snap-Funktion aktivieren

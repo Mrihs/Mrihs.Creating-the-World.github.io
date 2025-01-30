@@ -547,6 +547,10 @@ ul.task-list li input[type="checkbox"] {
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Mesh-Primitive hinzufügen</p>
 </div></div><p>Die Katze hat einen runden Torso und einen runden Kopf. Aus diesem Grund ist eine Kugel das beste Primitiv, um mit der Erstellung der Katze zu beginnen. Allerdings wird die Verwendung einer UV-Sphere im Verlaufe des Tutorials zu Schwierigkeiten führen, da sich am oberen und unteren Ende der UV-Sphere Tris befinden. Aus diesem Grund werden zunächst die Tris aus einer neu erstellten UV-Sphere entfernt. Dies wird allerdings lediglich auf einer Seite der UV-Sphere durchgeführt, da die Tris auf der anderen Seite der UV-Sphere noch von Nutzen sein werden.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Tris aus UV-Sphere entfernen</p>
+</div></div><p>Um die Tris aus einer UV-Sphere zu entfernen, kann zunächst im «<em>Add</em>»-Menü unter «<em>Mesh | UV Sphere</em>» eine neue UV-Sphere hinzugefügt werden. Anschliessend sollte das Kontext-Menü zur zuletzt durchgeführten Aktion in der linken unteren Ecke des 3D-Viewport-Editors ausgeklappt werden und die Anzahl Vertices und Segmente angepasst werden. Die UV-Sphere soll viermal weniger Subdivisions aufweisen als in den Standardeinstellungen. Hierfür wird die Anzahl «<em>Segments</em>» auf 8 gesetzt und die Anzahl «<em>Rings</em>» auf 4. Anschliessend kann die UV-Sphere von unten aus mit der Tastenkombination <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">7</kbd><span class="visually-hidden">7</span> betrachtet werden. Aus dieser Ansicht sollten nun die untersten zwei Reihen von Faces sichtbar sein. Die unterste Reihe besteht aus acht Tris und die untere Reihe aus acht Quads. Je zwei der Tris in der oberen Reihe könnten zu einem Quad zusammengefügt werden. Hierfür muss lediglich jedes zweite Edge zwischen den aneinandergereihten Tris ausgewählt und aufgelöst werden. Dabei ist wichtig, dass jene Edges aufgelöst werden, die nicht direkt auf den Achsen liegen. Zum Auflösen der Edges kann die Taste <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> zum Öffnen des Lösch-Menüs gedrückt werden, und anschliessend die Option «<em>Dissolve Edges</em>» ausgewählt werden. Dadurch werden die Edges entfernt und die jeweiligen Tris zu Quads umgewandelt.</p>
 <div id="fig-1_1" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -559,8 +563,8 @@ Abbildung&nbsp;1: Die Edges zwischen den Tris, welche nicht entlang der Achsen v
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Tris aus UV-Sphere entfernen</p>
-</div></div><p>Um die Tris aus einer UV-Sphere zu entfernen, kann zunächst im «<em>Add</em>»-Menü unter «<em>Mesh | UV Sphere</em>» eine neue UV-Sphere hinzugefügt werden. Anschliessend sollte das Kontext-Menü zur zuletzt durchgeführten Aktion in der linken unteren Ecke des 3D-Viewport-Editors ausgeklappt werden und die Anzahl Vertices und Segmente angepasst werden. Die UV-Sphere soll viermal weniger Subdivisions aufweisen als in den Standardeinstellungen. Hierfür wird die Anzahl «<em>Segments</em>» auf 8 gesetzt und die Anzahl «<em>Rings</em>» auf 4. Anschliessend kann die UV-Sphere von unten aus mit der Tastenkombination <kbd aria-hidden="true">Alt</kbd><span class="visually-hidden">Alt</span> + <kbd aria-hidden="true">7</kbd><span class="visually-hidden">7</span> betrachtet werden. Aus dieser Ansicht sollten nun die untersten zwei Reihen von Faces sichtbar sein. Die unterste Reihe besteht aus acht Tris und die untere Reihe aus acht Quads. Je zwei der Tris in der oberen Reihe könnten zu einem Quad zusammengefügt werden. Hierfür muss lediglich jedes zweite Edge zwischen den aneinandergereihten Tris ausgewählt und aufgelöst werden. Dabei ist wichtig, dass jene Edges aufgelöst werden, die nicht direkt auf den Achsen liegen. Zum Auflösen der Edges kann die Taste <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> zum Öffnen des Lösch-Menüs gedrückt werden, und anschliessend die Option «<em>Dissolve Edges</em>» ausgewählt werden. Dadurch werden die Edges entfernt und die jeweiligen Tris zu Quads umgewandelt.</p>
+<p>Subdivision-Surface-Modifier hinzufügen</p>
+</div></div><p>Der bearbeiteten UV-Sphere, welche nur noch an einem Ende der Kugel Tris aufweist, kann nun ein Subdivision-Surface-Modifier hinzugefügt werden und dessen Anzahl Subdivisions auf 2 erhöht werden. Die Struktur der Faces wird durch den Subdivision-Surface-Modifier nun unterschiedlich an den beiden Enden verformt. An der Seite mit den Tris werden lediglich die Edges, welche auf den Tris basieren, verformt und die darüberliegenden Edges werden gleichmässig als Ringe dargestellt. Die Seite mit den Quads wird ebenfalls verformt, sodass sich weniger gleichmässige Ringe bilden. Dafür sind allerdings alle Faces ähnlich strukturiert.</p>
 <div id="fig-1_2" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -573,16 +577,19 @@ Abbildung&nbsp;2: Eine UV-Sphere, deren unteren Ende lediglich aus Quads besteht
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Subdivision-Surface-Modifier hinzufügen</p>
-</div></div><p>Der bearbeiteten UV-Sphere, welche nur noch an einem Ende der Kugel Tris aufweist, kann nun ein Subdivision-Surface-Modifier hinzugefügt werden und dessen Anzahl Subdivisions auf 2 erhöht werden. Die Struktur der Faces wird durch den Subdivision-Surface-Modifier nun unterschiedlich an den beiden Enden verformt. An der Seite mit den Tris werden lediglich die Edges, welche auf den Tris basieren, verformt und die darüberliegenden Edges werden gleichmässig als Ringe dargestellt. Die Seite mit den Quads wird ebenfalls verformt, sodass sich weniger gleichmässige Ringe bilden. Dafür sind allerdings alle Faces ähnlich strukturiert.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
 <p>Körper ausrichten</p>
 </div></div><p>Die UV-Sphere kann nun als Körper der Katze verwendet werden. Hierfür wird die UV-Sphere mittig in der Höhe des Torsos der Katze platziert. Dabei sollte darauf geachtet werden, dass das Ende der UV-Sphere mit den Tris nach oben gerichtet ist.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Kopf erstellen und ausrichten</p>
 </div></div><p>Anschliessend wird die UV-Sphere im Object-Mode mit der Tastenkombination <kbd aria-hidden="true">Shift</kbd><span class="visually-hidden">Shift</span> + <kbd aria-hidden="true">D</kbd><span class="visually-hidden">D</span> dupliziert. Das Duplikat wird als Kopf verwendet und wird deshalb mittig des Kopfes ausgerichtet. Das Duplikat der UV-Sphere sollte zudem um 180° entlang der X- oder Y-Achse rotiert werden, damit die Seite mit den Tris bei dieser Kugel nach unten ausgerichtet ist. Zudem kann der Kopf um den Faktor 1.2 skaliert werden, damit er dieselbe Grösse wie auf dem Bild der Katze aufweist.</p>
+</section>
+<section id="körper-und-kopf-verbinden" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="körper-und-kopf-verbinden">Körper und Kopf verbinden</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Subdivision-Surface-Modifier anwenden</p>
+</div></div><p>Als Nächstes soll der Kopf mit dem Körper der Katze verbunden werden. Dies erfordert zunächst allerdings noch Vorbereitungen. Zuerst wird der Subdivision Surface-Modifier bei beiden UV-Spheres angewendet. Hierfür muss jeweils bei dem entsprechenden Modifier das Dropdown-Menü geöffnet und auf «<em>Apply</em>» geklickt werden.</p>
 <div id="fig-1_3" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -593,13 +600,10 @@ Abbildung&nbsp;3: Die UV-Sphere wird zur Form des Kopfes ausgerichtet. Dabei bef
 </figcaption>
 </figure>
 </div>
-</section>
-<section id="körper-und-kopf-verbinden" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="körper-und-kopf-verbinden">Körper und Kopf verbinden</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Subdivision-Surface-Modifier anwenden</p>
-</div></div><p>Als Nächstes soll der Kopf mit dem Körper der Katze verbunden werden. Dies erfordert zunächst allerdings noch Vorbereitungen. Zuerst wird der Subdivision Surface-Modifier bei beiden UV-Spheres angewendet. Hierfür muss jeweils bei dem entsprechenden Modifier das Dropdown-Menü geöffnet und auf «<em>Apply</em>» geklickt werden.</p>
+<p>Überschüssige Vertices löschen und UV-Spheres verbinden</p>
+</div></div><p>Bei der UV-Sphere, welche den Körper der Katze bildet, können nun alle Vertices, welche sich über dem Hals befinden, ausgewählt und gelöscht werden. Bei der UV-Sphere, welche den Kopf der Katze darstellt, können zudem alle Vertices, welche sich unterhalb des Halses der Katze befinden gelöscht werden. Anschliessend können die beiden UV-Spheres im Object-Mode ausgewählt und mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">J</kbd><span class="visually-hidden">J</span> verbunden werden. Dadurch werden die beiden UV-Spheres zu einem einzigen Objekt verbunden.</p>
 <div id="fig-1_4" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -612,16 +616,19 @@ Abbildung&nbsp;4: Die überlappenden Vertices werden von beiden UV-Spheres entfe
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Überschüssige Vertices löschen und UV-Spheres verbinden</p>
-</div></div><p>Bei der UV-Sphere, welche den Körper der Katze bildet, können nun alle Vertices, welche sich über dem Hals befinden, ausgewählt und gelöscht werden. Bei der UV-Sphere, welche den Kopf der Katze darstellt, können zudem alle Vertices, welche sich unterhalb des Halses der Katze befinden gelöscht werden. Anschliessend können die beiden UV-Spheres im Object-Mode ausgewählt und mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">J</kbd><span class="visually-hidden">J</span> verbunden werden. Dadurch werden die beiden UV-Spheres zu einem einzigen Objekt verbunden.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
 <p>Kopf mit Körper verbinden</p>
 </div></div><p>Als Nächstes können die Vertices der beiden Kugelöffnungen ausgewählt werden. Diese Vertices sollten nun miteinander verbunden werden. Im Edge-Menü, welches mit der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span> geöffnet werden kann, ist dies direkt mit der Option «<em>Bridge Edge Loops</em>» möglich. Dadurch werden die Edges der unteren Kugel passend mit den Edges der oberen Kugel verbunden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Hals der Katze anpassen</p>
 </div></div><p>Um den Hals der Katze etwas anzupassen, wird ihm eine zusätzliche Reihe an Edges hinzugefügt. Mittels der Tastenkombination <kbd aria-hidden="true">Ctrl</kbd><span class="visually-hidden">Ctrl</span> + <kbd aria-hidden="true">R</kbd><span class="visually-hidden">R</span> wird ein Loop-Cut gestartet und damit eine neue Reihe von Edges in der Mitte des Halses hinzugefügt. Diese Edges können anschliessend um den Faktor 0.85 skaliert werden.</p>
+</section>
+<section id="extremitäten-hinzufügen" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="extremitäten-hinzufügen">Extremitäten hinzufügen</h3>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Extremitäten hinzufügen</p>
+</div></div><p>Der nächste Schritt besteht darin, der Katze Extremitäten – also Arme, Beine und Ohren – hinzuzufügen. Diese Extremitäten sind auf der linken und der rechten Seite des Katzenkörpers identisch. Deshalb macht es Sinn, eine symmetrische Bearbeitung der Katze vorzunehmen.</p>
 <div id="fig-1_5" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -632,13 +639,10 @@ Abbildung&nbsp;5: Die Hälfte des Meshes wird entfernt, damit es mit einem Mirro
 </figcaption>
 </figure>
 </div>
-</section>
-<section id="extremitäten-hinzufügen" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="extremitäten-hinzufügen">Extremitäten hinzufügen</h3>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Extremitäten hinzufügen</p>
-</div></div><p>Der nächste Schritt besteht darin, der Katze Extremitäten – also Arme, Beine und Ohren – hinzuzufügen. Diese Extremitäten sind auf der linken und der rechten Seite des Katzenkörpers identisch. Deshalb macht es Sinn, eine symmetrische Bearbeitung der Katze vorzunehmen.</p>
+<p>Mirror-Modifier hinzufügen</p>
+</div></div><p>Um die Katze symmetrisch bearbeiten zu können, wird ein Mirror-Modifier verwendet. Dieser macht allerdings nur Sinn, wenn vorher alle Vertices der einen Körper hälfte der Katze entfernt wurden. Deshalb werden alle Vertices der einen Körperhälfte – aber nicht diejenigen in der Körpermitte – ausgewählt und mit der Taste <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> gelöscht. Anschliessend kann der Mirror-Modifier hinzugefügt werden. Im Mirror-Modifier sollte zudem die Option «<em>Clipping</em>» aktiviert werden, damit die Vertices nicht über die Köpermitte hinaus verschoben werden, und es sollte überprüft werden, dass die Option «<em>Merge</em>» aktiviert ist. Zudem kann ein Subdivision-Surface-Modifier hinzugefügt werden, um die Kanten des Meshes etwas zu glätten.</p>
 <div id="fig-1_6" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -651,8 +655,8 @@ Abbildung&nbsp;6: Die Faces, aus denen der Arm extrudiert werden soll, werden au
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Mirror-Modifier hinzufügen</p>
-</div></div><p>Um die Katze symmetrisch bearbeiten zu können, wird ein Mirror-Modifier verwendet. Dieser macht allerdings nur Sinn, wenn vorher alle Vertices der einen Körper hälfte der Katze entfernt wurden. Deshalb werden alle Vertices der einen Körperhälfte – aber nicht diejenigen in der Körpermitte – ausgewählt und mit der Taste <kbd aria-hidden="true">X</kbd><span class="visually-hidden">X</span> gelöscht. Anschliessend kann der Mirror-Modifier hinzugefügt werden. Im Mirror-Modifier sollte zudem die Option «<em>Clipping</em>» aktiviert werden, damit die Vertices nicht über die Köpermitte hinaus verschoben werden, und es sollte überprüft werden, dass die Option «<em>Merge</em>» aktiviert ist. Zudem kann ein Subdivision-Surface-Modifier hinzugefügt werden, um die Kanten des Meshes etwas zu glätten.</p>
+<p>Armansatz erstellen</p>
+</div></div><p>Um die Arme der Katze zu erstellen, können vier Faces auf der rechten Seite des Torsos ausgewählt werden, an denen sich nachfolgend die Arme befinden werden. Diese Faces können anschliessend mittels der Taste <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span> extrudiert und entlang der Arme der Katze platziert werden, sodass sich ein Armansatz bildet. Hierbei wird idealerweise die Frontalansicht verwendet, damit die Arme nicht schräg nach hinter oder vorne extrudiert werden.</p>
 <div id="fig-1_7" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -665,8 +669,8 @@ Abbildung&nbsp;7: Ein Ansatz für den Arm wird extrudiert.
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Armansatz erstellen</p>
-</div></div><p>Um die Arme der Katze zu erstellen, können vier Faces auf der rechten Seite des Torsos ausgewählt werden, an denen sich nachfolgend die Arme befinden werden. Diese Faces können anschliessend mittels der Taste <kbd aria-hidden="true">E</kbd><span class="visually-hidden">E</span> extrudiert und entlang der Arme der Katze platziert werden, sodass sich ein Armansatz bildet. Hierbei wird idealerweise die Frontalansicht verwendet, damit die Arme nicht schräg nach hinter oder vorne extrudiert werden.</p>
+<p>Arme abrunden</p>
+</div></div><p>Die extrudierten Arme sind aufgrund der Quads viereckig und würden blockartige Arme mit abgerundeten Kanten ergeben. Deshalb werden die Vertices in den Ecken der vier extrudierten Faces ausgewählt. Diese können anschliessend um den Faktor 0.75 skaliert werden. Dadurch werden die Ecken jeweils näher zueinandergezogen, während die Vertices in der Mitte der extrudierten Faces an ihrer Position bleiben. Dies führt zu einer runden Form des Armes.</p>
 <div id="fig-1_8" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -679,8 +683,8 @@ Abbildung&nbsp;8: Die Vertices, des extrudierten Armes werden kreisförmig angeo
 </div>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>Arme abrunden</p>
-</div></div><p>Die extrudierten Arme sind aufgrund der Quads viereckig und würden blockartige Arme mit abgerundeten Kanten ergeben. Deshalb werden die Vertices in den Ecken der vier extrudierten Faces ausgewählt. Diese können anschliessend um den Faktor 0.75 skaliert werden. Dadurch werden die Ecken jeweils näher zueinandergezogen, während die Vertices in der Mitte der extrudierten Faces an ihrer Position bleiben. Dies führt zu einer runden Form des Armes.</p>
+<p>Arme extrudieren</p>
+</div></div><p>Die Faces, welche das Ende des Armansatzes bilden, können nun wieder ausgewählt und schrittweise entlang des Armes extrudiert werden. Dabei sollten bei jedem Schritt nebst der Position auch die Rotation und die Skalierung etwas angepasst werden, sodass die Form der Arme aus dem Referenzbild dargestellt wird.</p>
 <div id="fig-1_9" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -691,10 +695,6 @@ Abbildung&nbsp;9: Die Arme werden entsprechend dem Referenzbild schrittweise ext
 </figcaption>
 </figure>
 </div>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p>Arme extrudieren</p>
-</div></div><p>Die Faces, welche das Ende des Armansatzes bilden, können nun wieder ausgewählt und schrittweise entlang des Armes extrudiert werden. Dabei sollten bei jedem Schritt nebst der Position auch die Rotation und die Skalierung etwas angepasst werden, sodass die Form der Arme aus dem Referenzbild dargestellt wird.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>Faces subdividen</p>
@@ -720,7 +720,7 @@ Abbildung&nbsp;10: Die Faces, aus denen die Beine extrudiert werden, werden ausg
 <div id="fig-1_11" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Images/Chapter_42/.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="Images/Chapter_42/11_1_Bein_kreisformig.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;11: Die Vertices des Beinansatzes werden kreisförmig angeordnet.
@@ -818,7 +818,7 @@ Abbildung&nbsp;15: Die Faces, aus denen der Schwanz extrudiert wird, werden ausg
 <img src="Images/Chapter_42/17_UVs.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1_16-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;16: Die Faces, aus denen der Schwanz extrudiert wird, werden ausgewählt.
+Abbildung&nbsp;16: Die UV-Map der erstellten Katze ist aufgrund der Mesh-Bearbeitung durcheinander geraten.
 </figcaption>
 </figure>
 </div>

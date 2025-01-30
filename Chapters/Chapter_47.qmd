@@ -3,28 +3,28 @@ title: "47. Animationen erstellen"
 editor: visual
 ---
 
-## Keyframes erstellen 
+## Keyframes erstellen
 
 ::: column-margin
-Animation verläuft von Situation zu Situation 
+Animation verläuft von Situation zu Situation
 :::
 
-Eine Animation stellt jeweils eine Veränderung von einer Situation zu einer anderen Situation dar. Beispielsweise befindet sich ein Objekt zunächst an einer bestimmten Position A und bei einem späteren Frame an einer anderen Position B. Dementsprechend stellt die erste Position A die Ausgangssituation dar und im Verlaufe der Animation wird das Objekt zur Position B verschoben. Die Animation verläuft also von der Position A beim Beginn der Animation zu Position B beim Ende der Animation. 
+Eine Animation stellt jeweils eine Veränderung von einer Situation zu einer anderen Situation dar. Beispielsweise befindet sich ein Objekt zunächst an einer bestimmten Position A und bei einem späteren Frame an einer anderen Position B. Dementsprechend stellt die erste Position A die Ausgangssituation dar und im Verlaufe der Animation wird das Objekt zur Position B verschoben. Die Animation verläuft also von der Position A beim Beginn der Animation zu Position B beim Ende der Animation.
 
 ::: column-margin
-Keyframes geben Situationen vor 
+Keyframes geben Situationen vor
 :::
 
 Ein solcher Gedankengang ist jeweils zentral bei der Erstellung von Animationen. Es wird jeweils eine Ausgangslage zum Beginn der Animation definiert und eine Endsituation zum Ende der Animation. Hierfür werden die Frames, bei denen sich die Objekte an der Ausgangs- und Endlage befinden, mit sogenannten Keyframes versehen. Keyframes stellen Frames dar, welche eine bestimmte Vorgabe für eine Animation aufweisen – beispielsweise, dass sich ein Objekt an einer Stelle befindet oder dass es eine bestimmte Rotation aufweist. Die Animation verläuft anschliessend automatisch von einem Keyframe zum nächsten Keyframe ab, wobei die Frames die dazwischenliegenden Animationsschritte automatisch darstellen.
 
 ::: column-margin
-Keyframe hinzufügen 
+Keyframe hinzufügen
 :::
 
-Um dies zu veranschaulichen, kann eine neue Szene in Blender erstellt werden. Per Default sollte der Standardwürfel im Mittelpunkt der Welt festgelegt und der erste Frame ausgewählt worden sein. Um nun einen Keyframe für die Position des Standardwürfels festzulegen, kann die Sidebar mit der Taste {{< kbd N >}} geöffnet werden. Sobald der Standardwürfel ausgewählt wurde, wird nun im Reiter «*Location*» dessen Position angezeigt. Wenn der Mauszeiger nun auf den Positionswerten in diesem Reiter platziert wurde, kann die Taste {{< kbd I >}} gedrückt werden. Dadurch wird beim aktuell ausgewählten Frame ein Keyframe mit der Position des Objektes erstellt. 
+Um dies zu veranschaulichen, kann eine neue Szene in Blender erstellt werden. Per Default sollte der Standardwürfel im Mittelpunkt der Welt festgelegt und der erste Frame ausgewählt worden sein. Um nun einen Keyframe für die Position des Standardwürfels festzulegen, kann die Sidebar mit der Taste {{< kbd N >}} geöffnet werden. Sobald der Standardwürfel ausgewählt wurde, wird nun im Reiter «*Location*» dessen Position angezeigt. Wenn der Mauszeiger nun auf den Positionswerten in diesem Reiter platziert wurde, kann die Taste {{< kbd I >}} gedrückt werden. Dadurch wird beim aktuell ausgewählten Frame ein Keyframe mit der Position des Objektes erstellt.
 
 ::: column-margin
-Gelbe Markierung signalisiert Keyframes beim aktuellen Frame 
+Gelbe Markierung signalisiert Keyframes beim aktuellen Frame
 :::
 
 Wenn ein Wert in Blender mit einem Keyframe versehen wurde, wird dies jeweils dadurch angezeigt, dass das entsprechende Feld für einen Wert mit einer Hintergrundfarbe dargestellt wird. In diesem Beispiel sollten die Werte für die Position mit einer gelben Hintergrundfarbe dargestellt werden. Damit wird signalisiert, dass während des aktuellen Frames ein Keyframe gesetzt wurde. Zusätzlich erscheint im Timeline-Editor beim aktuellen Frame ein gelbes Viereck. Dadurch wird signalisiert, dass das aktuell ausgewählte Objekt bei diesem Frame auf der Zeitachse einen Keyframe beinhaltet.
@@ -32,23 +32,22 @@ Wenn ein Wert in Blender mit einem Keyframe versehen wurde, wird dies jeweils da
 ![Die Markierung der Positionswerte, welche beim aktuellen Frame mit einem Keyframe versehen wurden.](Images/Chapter_47/.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
-Grüne Markierung von Werten 
+Grüne Markierung von Werten
 :::
 
-Wenn nun im Timeline-Editor ein anderer Frame ausgewählt wird (beispielsweise der Frame 50), führt dies dazu, dass sich die farbliche Markierung der Positionswerte des Würfels in der Sidebar verändert. Statt mit einer gelben Farbe werden die Werte nun in einer grünen Farbe markiert. Dadurch wird signalisiert, dass dieser Wert im Rahmen eines Keyframes definiert wurde. 
+Wenn nun im Timeline-Editor ein anderer Frame ausgewählt wird (beispielsweise der Frame 50), führt dies dazu, dass sich die farbliche Markierung der Positionswerte des Würfels in der Sidebar verändert. Statt mit einer gelben Farbe werden die Werte nun in einer grünen Farbe markiert. Dadurch wird signalisiert, dass dieser Wert im Rahmen eines Keyframes definiert wurde.
 
 ::: column-margin
-Organe Markierung von Werten 
+Organe Markierung von Werten
 :::
 
-Sollte nun die Position des Würfels verändert werden – entweder, indem er im 3D-Viewport-Editor verschoben wird, oder, indem die Werte für die Position in der Sidebar verändert werden – werden die Werte für die Position in einer orangen Farbe dargestellt. Damit soll signalisiert werden, dass die Positionswerte einen Keyframe auf der Zeitachse beinhalten, aber beim aktuellen Frame ein anderer Wert eingestellt wurde. Wenn nun der Mauszeiger wieder über die Werte für die Position in der Sidebar gelegt und erneut die Taste {{< kbd I >}} gedrückt wird, erscheint eine gelbe statt einer orangen Markierung bei diesen Werten. Damit wird signalisiert, dass die nun eingestellte Position ebenfalls als Keyframe beim aktuell ausgewählten Frame abgespeichert wurde. 
+Sollte nun die Position des Würfels verändert werden – entweder, indem er im 3D-Viewport-Editor verschoben wird, oder, indem die Werte für die Position in der Sidebar verändert werden – werden die Werte für die Position in einer orangen Farbe dargestellt. Damit soll signalisiert werden, dass die Positionswerte einen Keyframe auf der Zeitachse beinhalten, aber beim aktuellen Frame ein anderer Wert eingestellt wurde. Wenn nun der Mauszeiger wieder über die Werte für die Position in der Sidebar gelegt und erneut die Taste {{< kbd I >}} gedrückt wird, erscheint eine gelbe statt einer orangen Markierung bei diesen Werten. Damit wird signalisiert, dass die nun eingestellte Position ebenfalls als Keyframe beim aktuell ausgewählten Frame abgespeichert wurde.
 
 ::: column-margin
-Animation wird automatisch zwischen Keyframes erstellt 
+Animation wird automatisch zwischen Keyframes erstellt
 :::
 
-Nun sollte es zwei Keyframes für die Position geben, welche im Timeline
-Editor angezeigt werden. Wenn nun Frames zwischen den beiden Keyframes ausgewählt werden, wird der Würfel im 3D-Viewport-Editor an einer Position zwischen der Ausgangsposition und der Endposition liegen. Blender verschiebt den Würfel automatisch über die Dauer der Frames zwischen den beiden Keyframes von einer Position zur anderen. Wenn die Animation nun abgespielt wird (entweder mit der {{< kbd Space >}}-Taste oder der Tatenkombination {{< kbd Shift >}} + {{< kbd Space >}}), läuft die Animation im 3D-Viewport-Editor ab und die Bewegung des Würfels sollte angezeigt werden. Indem der Wert des Ende-Frames in der Timeline auf den zweiten Keyframe gesetzt wird, kann zudem eingestellt werden, dass lediglich die erstellte Bewegungsanimation wiederholt wird.
+Nun sollte es zwei Keyframes für die Position geben, welche im Timeline Editor angezeigt werden. Wenn nun Frames zwischen den beiden Keyframes ausgewählt werden, wird der Würfel im 3D-Viewport-Editor an einer Position zwischen der Ausgangsposition und der Endposition liegen. Blender verschiebt den Würfel automatisch über die Dauer der Frames zwischen den beiden Keyframes von einer Position zur anderen. Wenn die Animation nun abgespielt wird (entweder mit der {{< kbd Space >}}-Taste oder der Tatenkombination {{< kbd Shift >}} + {{< kbd Space >}}), läuft die Animation im 3D-Viewport-Editor ab und die Bewegung des Würfels sollte angezeigt werden. Indem der Wert des Ende-Frames in der Timeline auf den zweiten Keyframe gesetzt wird, kann zudem eingestellt werden, dass lediglich die erstellte Bewegungsanimation wiederholt wird.
 
 :::::: tippbox
 :::: tippbox-header
@@ -59,17 +58,15 @@ Weiterführende Informationen
 ::::
 
 ::: tippbox-body
-In der Timeline werden jeweils die Keyframes der ausgewählten Objekte angezeigt. Wenn kein Objekt ausgewählt ist, werden auch keine Keyframes angezeigt. 
-Sollten also bereits gesetzte Keyframes plötzlich verschwunden sein, sollte überprüft werden, ob das richtige Objekt ausgewählt wurde.  
+In der Timeline werden jeweils die Keyframes der ausgewählten Objekte angezeigt. Wenn kein Objekt ausgewählt ist, werden auch keine Keyframes angezeigt. Sollten also bereits gesetzte Keyframes plötzlich verschwunden sein, sollte überprüft werden, ob das richtige Objekt ausgewählt wurde.
 :::
 ::::::
 
-
 ::: column-margin
-Keyframes im Timeline-Editor verschieben 
+Keyframes im Timeline-Editor verschieben
 :::
 
-Die Keyframes, welche in der Timeline gesetzt werden, können jeweils mit dem Mauszeiger ausgewählt und verschoben werden. Ebenso können ausgewählte Keyframes mittels der Taste {{< kbd G >}} verschoben werden und mit einer Zahleneingabe um eine bestimmte Anzahl Frames versetzt werden. Zudem können die Abstände zwischen den Keyframes zum aktuellen Frame vergrössert oder verkleinert werden, indem die Taste {{< kbd S >}} gedrückt wird. 
+Die Keyframes, welche in der Timeline gesetzt werden, können jeweils mit dem Mauszeiger ausgewählt und verschoben werden. Ebenso können ausgewählte Keyframes mittels der Taste {{< kbd G >}} verschoben werden und mit einer Zahleneingabe um eine bestimmte Anzahl Frames versetzt werden. Zudem können die Abstände zwischen den Keyframes zum aktuellen Frame vergrössert oder verkleinert werden, indem die Taste {{< kbd S >}} gedrückt wird.
 
 :::::: rememberbox
 :::: rememberbox-header
@@ -80,13 +77,12 @@ Merke...
 ::::
 
 ::: rememberbox-body
-Keyframes stellen Frames dar, bei denen bestimmte Vorgaben für Werte in einer Animation definiert werden. 
+Keyframes stellen Frames dar, bei denen bestimmte Vorgaben für Werte in einer Animation definiert werden.
 
-Bei Animationen werden automatisch die Zwischenschritte zwischen zwei Keyframes animiert. 
+Bei Animationen werden automatisch die Zwischenschritte zwischen zwei Keyframes animiert.
 
-Keyframes können mit der Taste hinzugefügt werden. 
+Keyframes können mit der Taste hinzugefügt werden.
 
-Keyframes für die ausgewählten Objekte werden im Timeline-Editor dargestellt und 
-können dort verschoben werden. 
+Keyframes für die ausgewählten Objekte werden im Timeline-Editor dargestellt und können dort verschoben werden.
 :::
 ::::::

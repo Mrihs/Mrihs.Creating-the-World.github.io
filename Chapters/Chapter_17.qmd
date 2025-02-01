@@ -17,7 +17,7 @@ Was stellt das Objekt dar?
 
 Zur Veranschaulichung: Das Bild in Abbildung 1 stellt dar, wie Objekte bislang in diesem Kurs betrachtet wurden. Die Oberfläche war für alle Objekte identisch, sodass zumindest erkennbar war, dass eine Oberfläche vorhanden ist. Für eine aussenstehende Person muss nicht zwingen klar sein, dass es sich bei diesem Objekt um ein Glas handelt. Es könnte sich auch um einen Becher handeln, der aus Plastik besteht, oder allenfalls um einen Pappbecher. Abbildung 2 zeigt mögliche Interpretationsbeispiele für dieses Objekt auf. Alle diese Beispiele zeigen dasselbe Mesh mit denselben Vertices, Edges und Faces. Sie unterscheiden sich allerdings hinsichtlich der ihnen hinzugefügten Materialien.
 
-![ Ein Objekt im Solid-Shading-Modus.](Images/Chapter_17/Glas%20oder%20Becher.png){#fig-1_1 fig-align="left"}
+![Ein Objekt im Solid-Shading-Modus.](Images/Chapter_17/Glas%20oder%20Becher.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Objekt-Benennung durch Materialien
@@ -53,7 +53,7 @@ Durch einen Klick auf die Schaltfläche für den Material-Preview-Modus verände
 Default-Material
 :::
 
-Jedes Objekt wird im Material-Preview-Modus und im Render-Modus mit einem Material dargestellt. In einer neuen Szene verfügt der Standardwürfel bereits über ein vorgegebenes Material, welches abgeändert werden kann. Ein neu der Szene hinzugefügtes Objekt wird ebenfalls mit einem Material dargestellt. Im Gegensatz zum Standardwürfel ist dieses Objekt aber eigentlich noch nicht mit einem Material ausgestattet.
+Jedes Objekt wird im Material-Preview-Modus und im Render-Modus mit einem Material dargestellt. In einer neuen Szene verfügt der Standardwürfel bereits über ein vorgegebenes Material, welches abgeändert werden kann. Ein neu in die Szene hinzugefügtes Objekt wird ebenfalls mit einem Material dargestellt. Im Gegensatz zum Standardwürfel ist dieses Objekt aber eigentlich noch nicht mit einem Material ausgestattet.
 
 ::: column-margin
 Material-Reiter

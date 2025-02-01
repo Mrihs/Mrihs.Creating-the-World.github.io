@@ -67,7 +67,6 @@ Subdivision-Surface-Modifier anwenden
 
 Als Nächstes soll der Kopf mit dem Körper der Katze verbunden werden. Dies erfordert zunächst allerdings noch Vorbereitungen. Zuerst wird der Subdivision Surface-Modifier bei beiden UV-Spheres angewendet. Hierfür muss jeweils bei dem entsprechenden Modifier das Dropdown-Menü geöffnet und auf «*Apply*» geklickt werden.
 
-
 ![Die UV-Sphere wird zur Form des Kopfes ausgerichtet. Dabei befindet sich die Siete mit den Tris unten.](Images/Chapter_42/4_Kopf_ausrichten.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
@@ -217,7 +216,7 @@ UVs der Katze
 
 Durch die Bearbeitung der Katze sind die UVs des Meshes stark verzerrt worden. Zudem überlappen sich einige UVs, da das Mesh ursprünglich aus zwei UV-Spheres erstellt wurde. Deshalb sollte das UV-Mapping der Katze verbessert werden.
 
-![Die UV-Map der erstellten Katze ist aufgrund der Mesh-Bearbeitung durcheinander geraten. ](Images/Chapter_42/17_UVs.png){#fig-1_16 fig-align="left"}
+![Die UV-Map der erstellten Katze ist aufgrund der Mesh-Bearbeitung durcheinander geraten.](Images/Chapter_42/17_UVs.png){#fig-1_16 fig-align="left"}
 
 ::: column-margin
 UVs sollten dem Detailgrad der Textur angepasst werden

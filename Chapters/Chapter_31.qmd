@@ -23,7 +23,7 @@ Bei der Refraktion von Lichtstrahlen dringen diese Lichtstrahlen in ein Objekt e
 Beispiel Subsurface-Scattering
 :::
 
-Abbildung 2 zeigt ein Beispiel für Subsurface-Scattering. Die Katze wird von hinten beleuchtet und die Lichtstrahlen berühren die Rückseite ihrer Ohren. Aus der Perspektive der Fotografie werden anschliessen die Strahlen, die durch das Objekt hindurchdringen, ersichtlich, und führen dadurch zum Effekt des Subsurface-Scattering.
+Abbildung 2 zeigt ein Beispiel für Subsurface-Scattering. Die Katze wird von hinten beleuchtet und die Lichtstrahlen berühren die Rückseite ihrer Ohren. Aus der Perspektive der Fotografie werden anschliessend die Strahlen, die durch das Objekt hindurchdringen, ersichtlich, und führen dadurch zum Effekt des Subsurface-Scattering.
 
 ![Ein Beispiel für Subsurface-Scattering.](Images/Chapter_31/.png){#fig-1_2 fig-align="left"}
 

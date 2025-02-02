@@ -159,9 +159,9 @@ Verschiedene Objektarten
 
 Die verschiedenen Objektarten dienen also entweder der Darstellung von Objekten, der Darstellung von externen Dateien, der Darstellung der Szene oder haben vor allem unterstützende Funktionen:
 
-| Gitter-basiert | Kurven-basiert | **Metas** | Linien | Szenen-Tools | Externe Daten | Hilfs-Werkzeuge |
+| Gitter-basiert\* | Kurven-basiert\* | **Metas**\* | Linien\* | Szenen-Tools | Externe Daten | Hilfs-Werkzeuge |
 |-----------|-----------|-----------|-----------|-----------|-----------|-----------|
-| **Mesh** | Curve | Metaball | Grease Pencil | Camera | Volume | Armature |
+| Mesh | Curve | Metaball | Grease Pencil | Camera | Volume | Armature |
 |  | Surface |  |  | Light | Image | Lattice |
 |  | Text |  |  | Speaker |  | Empty |
 |  |  |  |  |  |  | Force Field |
@@ -169,4 +169,4 @@ Die verschiedenen Objektarten dienen also entweder der Darstellung von Objekten,
 |  |  |  |  |  |  | Light Probe |
 |  |  |  |  |  |  | Collection Instance |
 
-: Renderbare Objekte
+: Übersicht über die verschiedenen Objektarten. Mit einem Stern markierten Objektarten sind renderbare Objekte.

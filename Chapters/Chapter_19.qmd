@@ -46,7 +46,7 @@ Eyedropper
 
 Im rechten unteren Bereich der Farbauswahl ist eine Schaltfläche für den Eyedropper zu finden. Dadurch können Farben innerhalb der Blender-Szene oder Benutzeroberfläche anvisiert werden und als Farbe für die Base-Color verwendet werden. Durch einen Klick auf die Schaltfläche nimmt der Mauszeiger die Form des Eyedropper-Icons an. Anschliessend kann an eine beliebige Position innerhalb von Blender geklickt werden und die an dieser Stelle angezeigte Farbe wird verwendet.
 
-![Eyedropper-Icon. ](Images/Chapter_19/2.%20Icon_Eyedropper.png){#fig-1_2 fig-align="left"}
+![Eyedropper-Icon.](Images/Chapter_19/2.%20Icon_Eyedropper.png){#fig-1_2 fig-align="left"}
 
 :::::: tippbox
 :::: tippbox-header
@@ -127,17 +127,17 @@ Hexadezimale Farbdefinition
 
 Das Spektrum der möglichen Farben als solches ist limitiert und es ist nicht möglich, eine neue Farbe zu erfinden. Dies hat allerdings den Vorteil, dass jedem Farbwert ein individueller Code zugeordnet werden kann. Die hexadezimale Farbdefinition stellt einen solchen Code dar. Unter dem Reiter «*Hex*» innerhalb der Farbauswahl kann jeweils dieser Code für die ausgewählte Farbe betrachtet werden. Ebenso kann an dieser Stelle auch ein hexadezimaler Code eingefügt werden, um eine entsprechende Farbe auszuwählen. Anders als bei den RGB- oder HSV-Werten muss hier also lediglich ein Wert übertragen werden und damit wird anschliessend die Farbe ermittelt.
 
-| Farbe | Farbe         | RGB             | Blenders RGB  | HSV           | Hexadezimal |
+| Farbe | Farbe | RGB | Blenders RGB | HSV | Hexadezimal |
 |------------|------------|------------|------------|------------|------------|
-|       | Weiss         | 255 - 255 – 255 | 1- 1 -1       | 0 - 0 - 1     | FFFFFF      |
-|       | Schwarz       | 0 - 0 - 0       | 0 - 0 - 0     | 0 - 0 - 0     | 000000      |
-|       | Rot           | 255 - 0 - 0     | 1 - 0- 0      | 0 - 1 - 1     | FF0000      |
-|       | Grün          | 0 - 255 - 0     | 0 - 1 - 0     | 0.333 - 1 - 1 | 00FF00      |
-|       | Blau          | 0 - 0 - 255     | 0 - 0 - 1     | 0.666 - 1 - 1 | 0000FF      |
-|       | Gelb          | 255 - 255 - 0   | 1 - 1 - 0     | 0.167 - 1 - 1 | FFFF00      |
-|       | Aquamarinblau | 0 - 255 - 255   | 0 - 1 - 1     | 0.5 - 1 - 1   | 00FFFF      |
-|       | Magenta       | 255 - 0 - 255   | 1 - 0 - 1     | 0.833 - 1 - 1 | FF00FF      |
-|       | Orange        | 255 - 165 - 0   | 1 - 0.376 - 0 | 0.063 - 1 - 1 | FFA500      |
+| [_ _ _ _ _ _ _ _]{style="background-color:#FFFFFF;color:#FFFFFF"}  | Weiss | 255 - 255 – 255 | 1- 1 -1 | 0 - 0 - 1 | FFFFFF |
+| [_ _ _ _ _ _ _ _]{style="background-color:#000000;color:#000000"} | Schwarz | 0 - 0 - 0 | 0 - 0 - 0 | 0 - 0 - 0 | 000000 |
+| [_ _ _ _ _ _ _ _]{style="background-color:#FF0000;color:#FF0000"} | Rot | 255 - 0 - 0 | 1 - 0- 0 | 0 - 1 - 1 | FF0000 |
+| [_ _ _ _ _ _ _ _]{style="background-color:#00FF00;color:#00FF00"}  | Grün | 0 - 255 - 0 | 0 - 1 - 0 | 0.333 - 1 - 1 | 00FF00 |
+| [_ _ _ _ _ _ _ _]{style="background-color:#0000FF;color:#0000FF"}  | Blau | 0 - 0 - 255 | 0 - 0 - 1 | 0.666 - 1 - 1 | 0000FF |
+| [_ _ _ _ _ _ _ _]{style="background-color:#FFFF00;color:#FFFF00"}  | Gelb | 255 - 255 - 0 | 1 - 1 - 0 | 0.167 - 1 - 1 | FFFF00 |
+| [_ _ _ _ _ _ _ _]{style="background-color:#00FFFF;color:#00FFFF"}  | Aquamarinblau | 0 - 255 - 255 | 0 - 1 - 1 | 0.5 - 1 - 1 | 00FFFF |
+| [_ _ _ _ _ _ _ _]{style="background-color:#FF00FF;color:#FF00FF"}  | Magenta | 255 - 0 - 255 | 1 - 0 - 1 | 0.833 - 1 - 1 | FF00FF |
+| [_ _ _ _ _ _ _ _]{style="background-color:#FFA500;color:#FFA500"}  | Orange | 255 - 165 - 0 | 1 - 0.376 - 0 | 0.063 - 1 - 1 | FFA500 |
 
 ### Farben aus anderen Farbboxen hineinziehen
 

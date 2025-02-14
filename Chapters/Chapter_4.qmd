@@ -19,6 +19,7 @@ Beim Start eins neuen Projekts erscheint eine Default-Szene. Diese Szene beinhal
 :::: tippbox-header
 ::: tippbox-icon
 :::
+
 Weiterführende Informationen
 ::::
 
@@ -202,6 +203,7 @@ Gerade bei sehr komplexen Szenen kann es vorkommen, dass sich die Objekte gegens
 :::: tippbox-header
 ::: tippbox-icon
 :::
+
 Weiterführende Informationen
 ::::
 

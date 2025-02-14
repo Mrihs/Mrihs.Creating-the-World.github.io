@@ -80,9 +80,11 @@ Ein- und Ausblen-den von Objektarten
 
 Hier lassen sich verschiedene Arten von Objekten alle gemeinsam innerhalb einer Szene verstecken, indem das Auge zu der entsprechenden Objektart abgewählt wird. Durch das Abwählen des Auges neben dem Objekttyp «*Camera*» werde etwa alle Kameras aus der Szene unsichtbar gemacht. Die Objekte sind allerdings noch vorhanden und weisen immer noch dieselbe Funktion auf -- sie werden lediglich nicht mehr im 3D-Viewport angezeigt. Neben dem Auge lässt sich zudem anhand der Schaltfläche mit einem abgebildeten Cursor einstellen, dass die entsprechenden Objektarten nicht mehr auswählbar sind.
 
-::: {style="background-color: #d3d3d3; padding: 10px; display: inline-block;"}
+<div>
+
 ![View Object Types.](Images/Chapter_2/2_4_1_viewobjecttypes.png){#fig-2_4 fig-align="left"}
-:::
+
+</div>
 
 #### Show Gizmo
 
@@ -104,9 +106,11 @@ Orientierungsobjekte im Viewport ein- und ausblenden
 
 Durch die Deaktivierung der Viewport-Overlays wird im 3D-Viewport die Ansicht bestimmter Hilfsmittel (beispielsweise die Achsen oder die Markierung der aktuellen Auswahl) ausgeschal-tet. Im Dropdown-Menü lässt sich zudem die Darstellung von einzelnen Hilfsmitteln individuell an- und abwählen.
 
-::: {style="background-color: #d3d3d3; padding: 10px; display: inline-block;"}
+<div>
+
 ![Show Overlays.](Images/Chapter_2/2_6_1showoverlays.png){#fig-2_6 fig-align="left"}
-:::
+
+</div>
 
 #### Toggle X-Ray
 

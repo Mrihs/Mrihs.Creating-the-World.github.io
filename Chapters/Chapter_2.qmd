@@ -94,9 +94,11 @@ Navigations-Tools ein- und ausblen-den
 
 Innerhalb dieser Option lassen sich in der oberen rechten Ecke Tools zur Navigation mittels der Kamera ein- und ausblenden. Zudem kann hier die Darstellung eines Gizmos bei der aktuellen Auswahl aktiviert werden. Dieses Gizmo kann verwendet werden, um Objekte mittels der Maus zu rotieren, zu skalieren oder zu bewegen.
 
-::: {style="background-color: #d3d3d3; padding: 10px; display: inline-block;"}
+<div>
+
 ![Show Gizmo.](Images/Chapter_2/2_5_1_Show_Gizmos.png){#fig-2_5 fig-align="left"}
-:::
+
+</div>
 
 #### Show Overlays
 
@@ -120,9 +122,11 @@ Röntgenblick ein- und ausschalten
 
 Wenn die Schaltfläche «Toggle X-Ray» ausgewählt ist, erweitert sich die Ansicht von Objekten, sodass durch sie hindurchgesehen werden kann. Dies ermöglicht es etwa, dass auch ein Objekt, welches hinter einem anderen Objekt verborgen liegt, betrachtet werden kann. Wenn diese Option aktiviert ist, können zudem die verborgenen Objekte mittels eines Mausklicks angewählt werden. Die Schaltfläche kann auch mit den Tasten {{< kbd Alt >}} + {{< kbd Z >}} ein- und ausgeschaltet werden.
 
-::: {style="background-color: #d3d3d3; padding: 10px; display: inline-block;"}
+<div>
+
 ![Toggle X-Ray.](Images/Chapter_2/2_7_1xray.png){#fig-2_7 fig-align="left"}
-:::
+
+</div>
 
 #### Viewport Shading
 
@@ -139,9 +143,11 @@ In der rechten oberen Ecke befinden sich vier Schaltflächen, um einzustellen, w
 
 Alternativ kann die Taste {{< kbd Z >}} gedrückt werden. Dadurch erscheint beim Mauszeiger ein Menü mit allen vier Optionen zum Viewport Shading zur Auswahl.
 
-::: {style="background-color: #d3d3d3; padding: 10px; display: inline-block;"}
+<div>
+
 ![Schaltflächen für die Shading-Optionen im Viewport.](Images/Chapter_2/2_8_1_shaderbuttons.png){#fig-2_8 fig-align="left"}
-:::
+
+</div>
 
 ## Letzte Aktion verfeinern
 

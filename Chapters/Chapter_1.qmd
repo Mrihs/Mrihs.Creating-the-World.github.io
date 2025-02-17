@@ -116,7 +116,7 @@ Die verschiedenen Werkzeuge, welche Blender anbietet, sind innerhalb verschieden
 
 Gerade der 3D-Viewport, der Outliner und die Properties sind für das Erstellen von 3D-Objekten mit Blender von hoher Bedeutung. Die Timeline wird bei Animationen verwendet.
 
-![Default-Aufteilung der Arbeitsbereiche.](Images/Chapter_1/1_2_Default-Arealaufteilung.jpg){#fig-1_2 fig-align="left"}
+![Default-Aufteilung der Arbeitsbereiche.](Images/Chapter_1/1_2_Default_Areal.jpg){#fig-1_2 fig-align="left"}
 
 ## Übersicht über die Editor-Fenster von Blender
 
@@ -273,8 +273,14 @@ Um ein Editor-Fenster zu schliessen, wird jeweils ein anderes Editor-Fenster üb
 
 Ordnen Sie die Arbeitsoberfläche entsprechend der nachfolgenden Abbildung an.
 
+![](Images/Chapter_1/Exercise_1_1.png){ fig-align="left"}
+
 **Übung 1.2**
 
 Ordnen Sie die Arbeitsoberfläche entsprechend der nachfolgenden Abbildung an.
+
+
+![](Images/Chapter_1/Exercise_1_2.png){ fig-align="left"}
+
 :::
 ::::::

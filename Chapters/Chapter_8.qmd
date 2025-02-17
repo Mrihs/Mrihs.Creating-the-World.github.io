@@ -88,7 +88,9 @@ Skalieren Sie einen Würfel entlang der X-Achse auf seine halbe Grösse.
 
 **Übung 4.2**
 
-Bilden Sie das rechts abgebildete Objekt nach.
+Bilden Sie das unten abgebildete Objekt nach.
+
+![](Images/Chapter_8/Exercise_4_2.png)
 :::
 ::::::
 

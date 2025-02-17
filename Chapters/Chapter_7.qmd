@@ -109,6 +109,8 @@ Die Werte links neben dem Schloss lassen sich allerdings immer noch verändern, 
 
 Versuchen Sie den Standardwürfel so zu skalieren, dass er entsprechend der Abbildung einen in die Höhe ragenden Quader darstellt.
 
+![](Images/Chapter_7/Exercise_3_1.png)
+
 **Übung 3.2**
 
 Versuchen Sie den Standardwürfel so zu verändern, dass er aus der orthogonalen (Taste {{< kbd 5 >}} ) Vorder/Rück-Ansicht (Taste {{< kbd 1 >}} ) nicht mehr sichtbar ist.

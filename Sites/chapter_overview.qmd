@@ -5,50 +5,50 @@ editor: visual
 
 1.  [Vorbereitung von Blender](../Chapters/Chapter_1.qmd)
 2.  [Die Arbeitsoberfläche des 3D-Viewports](../Chapters/Chapter_2.qmd)
-3.  Navigation der Ansicht im 3D-Viewport
-4.  Erste Schritte
-5.  Objektarten
-6.  Primitive Meshes
-7.  Methoden der Objekt-Transformation
-8.  Objekte im Viewport-Display transformieren
-9.  Object- und Edit-Mode
-10. Einstieg in den Edit-Mode
-11. Methoden der Objektbearbeitung im Edit-Mode
-12. Hilfestellungen für die Objektbearbeitung
-13. Tutorial: Erstellen eines Glases
-14. Objekterstellung mittels Modifiern
-15. Eigenschaften innerhalb eines Meshes definieren
-16. Materialien, Texturen und Shader
-17. Materialien
-18. Der Shader-Editor
-19. Grundlegende Eigenschaften von Materialien
-20. Tutorial: Strandball
-21. Texturen
-22. UVs
-23. Texturen zu einem Material hinzufügen
-24. Texturen für Parameter verwenden
-25. Welche Bilder eignen sich als Texturen?
-26. Arten von Texturen
-27. Tutorial: Einen Hammer texturieren
-28. Displacement mit dem Displacement-Modifier erstellen
-29. Erstellen von Landschaften
-30. Tutorial: Erstellen einer Düne
-31. Parameter im Principled-BSDF-Shader
-32. Der Wechsel von Eevee zu Cycles am Beispiel von Glas
-33. Lichtquellen in einer Szene
-34. Lichtobjekte
-35. Welten
-36. Kamera
-37. Rendern
-38. Tutorial: Ein Glas mit Wasser erstellen
-39. Bäume mittels Add-on erstellen
-40. Workflows der Charaktererstellung
-41. Character-Modeling
-42. Tutorial: Eine Cartoon-Katze als Charakter erstellen
-43. Was ist Rigging?
-44. Objekte mit Armaturen verformen
-45. Charakter-Rigging
-46. Vom Bild zur Animation
-47. Animationen erstellen
-48. Animationen verfeinern
-49. Animationen rendern
+3.  [Navigation der Ansicht im 3D-Viewport](../Chapters/Chapter_3.qmd)
+4.  [Erste Schritte](../Chapters/Chapter_4.qmd)
+5.  [Objektarten](../Chapters/Chapter_5.qmd)
+6.  [Primitive Meshes](../Chapters/Chapter_6.qmd)
+7.  [Methoden der Objekt-Transformation](../Chapters/Chapter_7.qmd)
+8.  [Objekte im Viewport-Display transformieren](../Chapters/Chapter_8.qmd)
+9.  [Object- und Edit-Mode](../Chapters/Chapter_9.qmd)
+10. [Einstieg in den Edit-Mode](../Chapters/Chapter_10.qmd)
+11. [Methoden der Objektbearbeitung im Edit-Mode](../Chapters/Chapter_11.qmd)
+12. [Hilfestellungen für die Objektbearbeitung](../Chapters/Chapter_12.qmd)
+13. [Tutorial: Erstellen eines Glases](../Chapters/Chapter_13.qmd)
+14. [Objekterstellung mittels Modifiern](../Chapters/Chapter_14.qmd)
+15. [Eigenschaften innerhalb eines Meshes definieren](../Chapters/Chapter_15.qmd)
+16. [Materialien, Texturen und Shader](../Chapters/Chapter_16.qmd)
+17. [Materialien](../Chapters/Chapter_17.qmd)
+18. [Der Shader-Editor](../Chapters/Chapter_18.qmd)
+19. [Grundlegende Eigenschaften von Materialien](../Chapters/Chapter_19.qmd)
+20. [Tutorial: Strandball](../Chapters/Chapter_20.qmd)
+21. [Texturen](../Chapters/Chapter_21.qmd)
+22. [UVs](../Chapters/Chapter_22.qmd)
+23. [Texturen zu einem Material hinzufügen](../Chapters/Chapter_23.qmd)
+24. [Texturen für Parameter verwenden](../Chapters/Chapter_24.qmd)
+25. [Welche Bilder eignen sich als Texturen?](../Chapters/Chapter_25.qmd)
+26. [Arten von Texturen](../Chapters/Chapter_26.qmd)
+27. [Tutorial: Einen Hammer texturieren](../Chapters/Chapter_27.qmd)
+28. [Displacement mit dem Displacement-Modifier erstellen](../Chapters/Chapter_28.qmd)
+29. [Erstellen von Landschaften](../Chapters/Chapter_29.qmd)
+30. [Tutorial: Erstellen einer Düne](../Chapters/Chapter_30.qmd)
+31. [Parameter im Principled-BSDF-Shader](../Chapters/Chapter_31.qmd)
+32. [Der Wechsel von Eevee zu Cycles am Beispiel von Glas](../Chapters/Chapter_32.qmd)
+33. [Lichtquellen in einer Szene](../Chapters/Chapter_33.qmd)
+34. [Lichtobjekte](../Chapters/Chapter_34.qmd)
+35. [Welten](../Chapters/Chapter_35.qmd)
+36. [Kamera](../Chapters/Chapter_36.qmd)
+37. [Rendern](../Chapters/Chapter_37.qmd)
+38. [Tutorial: Ein Glas mit Wasser erstellen](../Chapters/Chapter_38.qmd)
+39. [Bäume mittels Add-on erstellen](../Chapters/Chapter_39.qmd)
+40. [Workflows der Charaktererstellung](../Chapters/Chapter_40.qmd)
+41. [Character-Modeling](../Chapters/Chapter_41.qmd)
+42. [Tutorial: Eine Cartoon-Katze als Charakter erstellen](../Chapters/Chapter_42.qmd)
+43. [Was ist Rigging?](../Chapters/Chapter_43.qmd)
+44. [Objekte mit Armaturen verformen](../Chapters/Chapter_44.qmd)
+45. [Charakter-Rigging](../Chapters/Chapter_45.qmd)
+46. [Vom Bild zur Animation](../Chapters/Chapter_46.qmd)
+47. [Animationen erstellen](../Chapters/Chapter_47.qmd)
+48. [Animationen verfeinern](../Chapters/Chapter_48.qmd)
+49. [Animationen rendern](../Chapters/Chapter_49.qmd)

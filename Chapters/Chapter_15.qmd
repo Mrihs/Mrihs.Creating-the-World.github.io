@@ -11,6 +11,8 @@ Subdivision-Surface-Modifier nicht auf alle Edges anwenden
 
 Im letzten Kapitel wurde gezeigt, wie der Effekt des Subdivision-Surface-Modifiers reduziert werden kann. Hierfür wurde erneut auf eine destruktive Bearbeitungsmethode zurückgegriffen. Es gibt allerdings auch Möglichkeiten, um ohne eine destruktive Bearbeitung dem Subdivision-Surface-Modifier mitzuteilen, dass er auf eine Anwendung an bestimmten Stellen im Mesh verzichten soll. Hierfür wird der Edge Crease verwendet.
 
+![Anwendung des Edge Creases auf ein N-Gon des Zylinders.](Images/Chapter_15/15_1_Use_Edge_Creases_N_Gons.png){#fig-1_1 fig-align="left"}
+
 ::: column-margin
 Edge Crease
 :::
@@ -43,11 +45,15 @@ Edge Bevel Weight
 
 Nebst den Edge Creases, welche den Subdivision-Surface-Modifier steuern, können die sogenannten Edge Bevel Weights verwendet werden, um den Bevel-Modifier zu steuern. Bevel Weights können ebenfalls einen Wert von 0 bis 1 annehmen. Ein Wert von 0 steht allerdings für keine Anwendung des Bevel-Modifiers und ein Wert von 1 für eine maximale Anwendung des Bevel-Modifiers. Auch Abstufungen dazwischen sind möglich.
 
+![Eine Treppe mit einem Bevel-Modifier.](Images/Chapter_15/15_2_Stair_Bevel_Modifier.png){#fig-1_2 fig-align="left"}
+
 ::: column-margin
 Edge Bevel Weight hinzufügen
 :::
 
 Um einem Edge einen Bevel Weight hinzuzufügen, muss das jeweilige Edge ausgewählt werden. Anschliessend kann mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd E >}} das «*Edge*»-Menü beim Mauszeiger geöffnet werden und «*Edge Bevel Weight*» ausgewählt werden. Anschliessend kann entweder mit einer Bewegung der Maus oder durch die Eingabe einer Zahl der Edge Bevel Weight der Auswahl verändert werden. Im Edit-Mode sind Edge Bevel Weights durch eine blaue farbliche Markierung entlang der Edges ersichtlich. Je stärker die blaue Einfärbung, desto mehr nähert sich der Edge Bevel Weight dem Faktor 1 an. Bei keiner farblichen Markierung beträgt der Bevel Weight 0.
+
+![Eine Treppe mit Edge Bevel Weights auf und zwischen den Stufen und einem Bevel-Modifier, der auf «Weight» limitiert ist.](Images/Chapter_15/15_3_Stair_Edge_Bevel_Weights.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Edge Bevel Weight im Viewport
@@ -87,7 +93,7 @@ Vertex-Gruppen
 
 Im Edit-Mode können einzelne Vertices zu Gruppen zusammengefasst werden. Solche Gruppen werden als Vertex Groups bezeichnet. Die Vertex-Gruppen können über den Properties-Editor unter dem Reiter «*Object Data Properties*» anvisiert werden.
 
-![Icon des «*Object Data Properties*»-Reiters im Properties-Editor.](Images/Chapter_15/Icon_Vertex_Group.png){#fig-1_4 fig-align="left"}
+![Icon des «*Object Data Properties*»-Reiters im Properties-Editor.](Images/Chapter_15/15_4_Icon_Vertex_Group.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Vertex-Gruppe erstellen
@@ -132,12 +138,12 @@ Bei vielen Modifiern lassen sich innerhalb der Einstellungen Vertex-Gruppen in e
 
 Verändern Sie den Standardwürfel mittels Modifiern und Mesh-Daten so, dass das unten abgebildete Objekt dargestellt wird.
 
-![](Images/Chapter_15/Übung_11.1.png){fig-align="right"}
+![](Images/Chapter_15/Exercise_11_1.png){fig-align="right"}
 
 **Übung 11.2**
 
 Erstellen Sie mittels Modifiern das unten abgebildete Objekt.
 
-![](Images/Chapter_15/üBUNG_11.2.png){fig-align="right"}
+![](Images/Chapter_15/Exercise_11_2.png){fig-align="right"}
 :::
 ::::::

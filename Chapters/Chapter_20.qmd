@@ -9,7 +9,7 @@ Ziel dieses Tutorials
 
 Das Ziel dieses Tutorials ist es, einen Strandball ähnlich der Abbildung 1 zu erstellen. Hierfür werden verschiedene Materialien zu einem Objekt hinzugefügt und variiert. Der erste Schritt dazu besteht aus dem Erstellen eines Objektes für den Strandball. Hierfür kann im 3D-Viewport-Editor mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd A >}} das «*Add*»-Menü geöffnet werden und unter «*Mesh \| UV Sphere*» eine Kugel hinzugefügt werden. Diese kann in ihren Standardeinstellungen so belassen werden, wie sie ist. Damit ist bereits die Grundstruktur des Strandballs vorhanden.
 
-![In diesem Tutorial soll dieser Strandball erstellt werden.](Images/Chapter_20/1.%20Standball_Rendered.png){#fig-1_1 fig-align="left"}
+![In diesem Tutorial soll dieser Strandball erstellt werden.](Images/Chapter_20/20_1_Beach_Ballon_Rendered.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Vorbereitung
@@ -17,7 +17,7 @@ Vorbereitung
 
 Im nächsten Schritt geht es um die Erstellung von Materialien. Hierfür sollte der 3D-Viewport-Editor zunächst in zwei Editoren aufgeteilt werden, indem ein zweiter Editor aus einer der Ecken des 3D-Viewport-Editors herausgezogen wird. Anschliessend kann einer der beiden 3D-Viewport-Editoren zum Shader-Editor umgewandelt werden, indem auf die Schaltfläche in der linken oberen Ecke des 3D-Viewport-Editors geklickt wird und der «*Shader Editor*» ausgewählt wird. Im anderen 3D-Viewport-Editor sollte das Viewport-Shading auf «*Material Preview Mode*» umgestellt werden, damit die Materialien sichtbar sind. Zudem ist es sinnvoll, im Properties-Editor auf den Reiter für die Materialien zu wechseln. Anschliessend sollte der Bildschirm etwa so wie in Abbildung 2 angeordnet sein.
 
-![Anordnung der Editoren für die Erstellung des Strandballs.](Images/Chapter_20/2.%20Bildschirmanordnung.png){#fig-1_2 fig-align="left"}
+![Anordnung der Editoren für die Erstellung des Strandballs.](Images/Chapter_20/20_2_Screen_Organisation.png){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Neues Material erstellen
@@ -73,7 +73,8 @@ Faces für zweiten Material-Slot auswählen
 
 Als Nächstes wird im Edit-Mode definiert, welche Faces zu welchem Material gehören. Hierfür wird mittels der Taste {{< kbd Tab >}} in den Edit-Mode gewechselt. Alle Faces haben nun noch standardmässig das Material des ersten Material-Slots inne. Deshalb werden nun alle Faces ausgewählt, denen das Material aus dem zweiten Material-Slot zugewiesen werden soll. Jeweils vier aufeinanderfolgende Streifen werden mit demselben Material ausgestattet. Indem im Face-Select-Modus bei gedrückter Tastenkombination {{< kbd Shift >}} + {{< kbd A >}} mit der linken Maustaste auf die Streifen der UV-Sphere geklickt wird, können diese gleich als Ganzes ausgewählt werden. Anschliessend müssen der Auswahl noch von Hand die dazugehörigen Tris an den beiden Polen der Kugel hinzugefügt werden.
 
-![Auswahl der Faces zur Zuweisung des zweiten Material-Slots.](Images/Chapter_20/3.%20Auswahl_Material2.png){#fig-1_3 fig-align="left"}
+
+![Auswahl der Faces zur Zuweisung des zweiten Material-Slots.](Images/Chapter_20/20_3_Material_Choice_2.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Zweites Material den Faces hinzufügen
@@ -99,7 +100,8 @@ Subdivision-Surface-Modifier hinzufügen
 
 An dieser Stelle könnte der Ball bereits fertig sein. Bei genauerer Betrachtung sind allerdings noch einige Kanten von Vertices zu erkennen. Deshalb wird dem Ball noch ein Subdivision-Surface-Modifier hinzugefügt, um auch die Struktur des Objektes etwas abzuglätten. Hierfür wird im Properties-Editor auf den Reiter für die Modifiers geklickt und unter «*Add Modifier*» der «*Subdivision Surface*»-Modifier hinzugefügt. Unter «*Levels Viewport*» kann anschliessend noch die Anzahl Subdivisions auf den Wert 2 erhöht werden. Dadurch erscheint der Ball weniger kantig.
 
-![Auswahl der Faces für den dritten Material-Slot.](Images/Chapter_20/4.%20Auswahl_Material_3.png){#fig-1_4 fig-align="left"}
+
+![Auswahl der Faces für den dritten Material-Slot.](Images/Chapter_20/20_4_ Material_Choice_3.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Creases hinzufügen
@@ -107,7 +109,7 @@ Creases hinzufügen
 
 Durch den Subdivision-Surface-Modifier ergibt sich nun jedoch ein neues Problem. Die Faces an den Polen der Kugel stellen jeweils Tris dar, welche unregelmässig geglättet werden. Um dieses Problem zu lösen, wird der jeweils erste Edge-Ring an den Polen ausgewählt, indem im Edge-Select-Modus bei gedrückter {{< kbd Alt >}}-Taste ein Edge dieses Rings angeklickt wird. Anschliessend kann in der Sidebar (öffnen mittels {{< kbd N >}}) der Edge-Crease für diese Edges auf 0.5 eingestellt werden, wodurch diese Kante etwas weniger stark verzogen wird. Dadurch sollte nun der Strandball fertiggestellt sein.
 
-![Creases an der Abgrenzung der Tris.](Images/Chapter_20/5.%20Creases.png){#fig-1_5 fig-align="left"}
+![Creases an der Abgrenzung der Tris.](Images/Chapter_20/20_5_Creases.png){#fig-1_5 fig-align="left"}
 
 :::::: exercisebox
 :::: exercisebox-header

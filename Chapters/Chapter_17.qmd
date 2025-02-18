@@ -17,7 +17,7 @@ Was stellt das Objekt dar?
 
 Zur Veranschaulichung: Das Bild in Abbildung 1 stellt dar, wie Objekte bislang in diesem Kurs betrachtet wurden. Die Oberfläche war für alle Objekte identisch, sodass zumindest erkennbar war, dass eine Oberfläche vorhanden ist. Für eine aussenstehende Person muss nicht zwingen klar sein, dass es sich bei diesem Objekt um ein Glas handelt. Es könnte sich auch um einen Becher handeln, der aus Plastik besteht, oder allenfalls um einen Pappbecher. Abbildung 2 zeigt mögliche Interpretationsbeispiele für dieses Objekt auf. Alle diese Beispiele zeigen dasselbe Mesh mit denselben Vertices, Edges und Faces. Sie unterscheiden sich allerdings hinsichtlich der ihnen hinzugefügten Materialien.
 
-![Ein Objekt im Solid-Shading-Modus.](Images/Chapter_17/Glas%20oder%20Becher.png){#fig-1_1 fig-align="left"}
+![Ein Objekt im Solid-Shading-Modus.](Images/Chapter_17/17_1_Glass_without_Materials.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Objekt-Benennung durch Materialien
@@ -25,7 +25,7 @@ Objekt-Benennung durch Materialien
 
 Durch die Anwendung von Materialien kann also die Wahrnehmung der Objekte verändert werden. Ein Glas erscheint als Glas, weil es eine gewisse Transparenz aufweist. Andere Materialien verfügen über unterschiedliche Farben und können so voneinander abgegrenzt werden. Hierfür gibt es verschiedene Merkmale der Materialien, welche noch ausführlich beschrieben werden.
 
-![Ein Objekt mit unterschiedlichen Materialien.](Images/Chapter_17/Glas%20oder%20Becher.png){#fig-1_2 fig-align="left"}
+![Ein Objekt mit unterschiedlichen Materialien.](Images/Chapter_17/17_2_Glass_or_Mug.png){#fig-1_2 fig-align="left"}
 
 ## Materialien betrachten
 
@@ -61,7 +61,7 @@ Material-Reiter
 
 Um das Material eines Objektes aufzurufen, kann der Material-Reiter im Properties-Editor aufgerufen werden. Unter diesem Reiter werden die Materialien des aktiven Objektes aufgelistet. Wenn mehrere Objekte ausgewählt sind, werden nur die Materialien des aktiven Objekts dargestellt. Die Materialien sind unabhängig davon ersichtlich, ob aktuell der Object- oder der Edit-Mode ausgewählt ist.
 
-![Das Properties-Panel mit dem ausgewählten Material-Reiter.](Images/Chapter_17/Material%20Properties%20pannel.png){#fig-1_3 fig-align="left"}
+![Das Properties-Panel mit dem ausgewählten Material-Reiter.](Images/Chapter_17/17_3_Material_Properties_Pannel.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Fehlendes Material

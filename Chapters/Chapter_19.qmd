@@ -36,7 +36,7 @@ Farbauswahl von Hand
 
 Die Farbauswahl von Hand erfolgt, indem eine Farbe innerhalb des Farbkreises mittels eines Klicks ausgewählt wird. Dadurch können alle Farbtöne ausgewählt werden. Mittels des Schiebereglers auf der rechten Seite lässt sich zudem die Helligkeit der Farbe anpassen.
 
-![Farbauswahlmenüs in Blender. Hier am Beispiel der Base-Color im Principled-BSDF-Shader.](Images/Chapter_19/1.%20Farbauswahl.png){#fig-1_1 fig-align="left"}
+![Farbauswahlmenüs in Blender. Hier am Beispiel der Base-Color im Principled-BSDF-Shader.](Images/Chapter_19/19_1_Color_Choice.png){#fig-1_1 fig-align="left"}
 
 ### Übertragen von Farben mittels Eyedropper
 
@@ -46,7 +46,7 @@ Eyedropper
 
 Im rechten unteren Bereich der Farbauswahl ist eine Schaltfläche für den Eyedropper zu finden. Dadurch können Farben innerhalb der Blender-Szene oder Benutzeroberfläche anvisiert werden und als Farbe für die Base-Color verwendet werden. Durch einen Klick auf die Schaltfläche nimmt der Mauszeiger die Form des Eyedropper-Icons an. Anschliessend kann an eine beliebige Position innerhalb von Blender geklickt werden und die an dieser Stelle angezeigte Farbe wird verwendet.
 
-![Eyedropper-Icon.](Images/Chapter_19/2.%20Icon_Eyedropper.png){#fig-1_2 fig-align="left"}
+![Eyedropper-Icon.](Images/Chapter_19/19_2_Icon_Eyedropper.png){#fig-1_2 fig-align="left"}
 
 :::::: tippbox
 :::: tippbox-header
@@ -129,15 +129,15 @@ Das Spektrum der möglichen Farben als solches ist limitiert und es ist nicht m�
 
 | Farbe | Farbe | RGB | Blenders RGB | HSV | Hexadezimal |
 |------------|------------|------------|------------|------------|------------|
-| [_ _ _ _ _ _ _ _]{style="background-color:#FFFFFF;color:#FFFFFF"}  | Weiss | 255 - 255 – 255 | 1- 1 -1 | 0 - 0 - 1 | FFFFFF |
-| [_ _ _ _ _ _ _ _]{style="background-color:#000000;color:#000000"} | Schwarz | 0 - 0 - 0 | 0 - 0 - 0 | 0 - 0 - 0 | 000000 |
-| [_ _ _ _ _ _ _ _]{style="background-color:#FF0000;color:#FF0000"} | Rot | 255 - 0 - 0 | 1 - 0- 0 | 0 - 1 - 1 | FF0000 |
-| [_ _ _ _ _ _ _ _]{style="background-color:#00FF00;color:#00FF00"}  | Grün | 0 - 255 - 0 | 0 - 1 - 0 | 0.333 - 1 - 1 | 00FF00 |
-| [_ _ _ _ _ _ _ _]{style="background-color:#0000FF;color:#0000FF"}  | Blau | 0 - 0 - 255 | 0 - 0 - 1 | 0.666 - 1 - 1 | 0000FF |
-| [_ _ _ _ _ _ _ _]{style="background-color:#FFFF00;color:#FFFF00"}  | Gelb | 255 - 255 - 0 | 1 - 1 - 0 | 0.167 - 1 - 1 | FFFF00 |
-| [_ _ _ _ _ _ _ _]{style="background-color:#00FFFF;color:#00FFFF"}  | Aquamarinblau | 0 - 255 - 255 | 0 - 1 - 1 | 0.5 - 1 - 1 | 00FFFF |
-| [_ _ _ _ _ _ _ _]{style="background-color:#FF00FF;color:#FF00FF"}  | Magenta | 255 - 0 - 255 | 1 - 0 - 1 | 0.833 - 1 - 1 | FF00FF |
-| [_ _ _ _ _ _ _ _]{style="background-color:#FFA500;color:#FFA500"}  | Orange | 255 - 165 - 0 | 1 - 0.376 - 0 | 0.063 - 1 - 1 | FFA500 |
+| [\_ \_ \_ \_ \_ \_ \_ \_]{style="background-color:#FFFFFF;color:#FFFFFF"} | Weiss | 255 - 255 – 255 | 1- 1 -1 | 0 - 0 - 1 | FFFFFF |
+| [\_ \_ \_ \_ \_ \_ \_ \_]{style="background-color:#000000;color:#000000"} | Schwarz | 0 - 0 - 0 | 0 - 0 - 0 | 0 - 0 - 0 | 000000 |
+| [\_ \_ \_ \_ \_ \_ \_ \_]{style="background-color:#FF0000;color:#FF0000"} | Rot | 255 - 0 - 0 | 1 - 0- 0 | 0 - 1 - 1 | FF0000 |
+| [\_ \_ \_ \_ \_ \_ \_ \_]{style="background-color:#00FF00;color:#00FF00"} | Grün | 0 - 255 - 0 | 0 - 1 - 0 | 0.333 - 1 - 1 | 00FF00 |
+| [\_ \_ \_ \_ \_ \_ \_ \_]{style="background-color:#0000FF;color:#0000FF"} | Blau | 0 - 0 - 255 | 0 - 0 - 1 | 0.666 - 1 - 1 | 0000FF |
+| [\_ \_ \_ \_ \_ \_ \_ \_]{style="background-color:#FFFF00;color:#FFFF00"} | Gelb | 255 - 255 - 0 | 1 - 1 - 0 | 0.167 - 1 - 1 | FFFF00 |
+| [\_ \_ \_ \_ \_ \_ \_ \_]{style="background-color:#00FFFF;color:#00FFFF"} | Aquamarinblau | 0 - 255 - 255 | 0 - 1 - 1 | 0.5 - 1 - 1 | 00FFFF |
+| [\_ \_ \_ \_ \_ \_ \_ \_]{style="background-color:#FF00FF;color:#FF00FF"} | Magenta | 255 - 0 - 255 | 1 - 0 - 1 | 0.833 - 1 - 1 | FF00FF |
+| [\_ \_ \_ \_ \_ \_ \_ \_]{style="background-color:#FFA500;color:#FFA500"} | Orange | 255 - 165 - 0 | 1 - 0.376 - 0 | 0.063 - 1 - 1 | FFA500 |
 
 ### Farben aus anderen Farbboxen hineinziehen
 
@@ -155,7 +155,7 @@ Worin unterscheiden sich die Abbildungen?
 
 In Abbildung 3 wird dreimal dasselbe Objekt mit derselben Base-Color im Material dargestellt. Worin unterscheiden sich die drei Objekte visuell?
 
-![Dreimal dasselbe Objekt mit derselben Farbe, allerdings unterschiedlichen Roughness-Werten: Links eine Roughness von 0, in der Mitte eine Roughness von 0.5, rechts eine Roughness von 1.](Images/Chapter_19/3.%20Roughness_Comparison.png){#fig-1_3 fig-align="left"}
+![Dreimal dasselbe Objekt mit derselben Farbe, allerdings unterschiedlichen Roughness-Werten: Links eine Roughness von 0, in der Mitte eine Roughness von 0.5, rechts eine Roughness von 1.](Images/Chapter_19/19_3_Roughness_Comparison.png){#fig-1_3 fig-align="left"}
 
 Das erste Objekt auf der linken Seite scheint das Licht in der Umgebung zu spiegeln und ebenso den Fussboden zu reflektieren. Bei den anderen beiden Objekten ist dies nicht der Fall. Zwischen dem mittleren und dem rechten Objekt lässt sich kaum ein Unterschied erkennen.
 
@@ -177,7 +177,7 @@ Einfluss der Roughness auf die Lichtreflexion
 
 Von grösserer Bedeutung in diesem Beispiel ist die Frage, wie das Licht reflektiert wird. Bei einer glatten Oberfläche treffen die Lichtstrahlen parallel zueinander auf eine Oberfläche auf, die über die ganze Fläche hinweg aufgrund der Glätte keine Krümmungen enthält. Dadurch werden alle Lichtstrahlen in demselben Winkel reflektiert. Wenn die Oberfläche allerdings nicht glatt ist und dadurch minimale Buckel auf der Oberfläche entstehen, wie etwa auf der rechten Seite der Abbildung 4 dargestellt, wird das Licht jeweils in unterschiedlichen Winkeln reflektiert. Dadurch scheint das Material durch eine erhöhte Roughness die Umgebung weniger zu reflektieren.
 
-![Schematische Darstellung der Lichtreflexion bei unterschiedlicher Beschaffenheit der Oberfläche. Links, bei fehlender Roughness, reflektiert die Oberfläche das Licht parallel weiter. Rechts, bei einer variablen Oberflächenstruktur durch erhöhte Roughness, entsteht eine diffuse Lichtreflexion.](Images/Chapter_19/4.%20Roughness_Darstellung.png){#fig-1_4 fig-align="left"}
+![Schematische Darstellung der Lichtreflexion bei unterschiedlicher Beschaffenheit der Oberfläche. Links, bei fehlender Roughness, reflektiert die Oberfläche das Licht parallel weiter. Rechts, bei einer variablen Oberflächenstruktur durch erhöhte Roughness, entsteht eine diffuse Lichtreflexion.](Images/Chapter_19/19_4_Roughness_Representation.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Roughness einstellen
@@ -198,7 +198,7 @@ Die Blender-Version 2.93 leidet unter einem Bug, sodass teilweise bei der Einste
 :::
 ::::::
 
-![Dasselbe Objekt mit unterschiedlichen Roughness-Werten. Die Werte betragen von links nach rechts: 0, 0.1, 0.2, 0.3 und 0.4.](Images/Chapter_19/5.%20Roughness_Spectrum_comparisson.png){#fig-1_5 fig-align="left"}
+![Dasselbe Objekt mit unterschiedlichen Roughness-Werten. Die Werte betragen von links nach rechts: 0, 0.1, 0.2, 0.3 und 0.4.](Images/Chapter_19/19_5_Roughness_Spectrum_Comparison.png){#fig-1_5 fig-align="left"}
 
 ## Metallic
 
@@ -208,7 +208,7 @@ Worin unterscheiden sich die Abbildungen?
 
 In Abbildung 6 wird zweimal dasselbe Objekt mit derselben Grundfarbe und derselben Roughness dargestellt. Worin unterscheiden sich die Objekte?
 
-![Dasselbe Objekt mit unterschiedlichen Einstellungen für Metallic. Links ein dielektrisches Objekt (Metallic von 0), rechts ein metallisches Objekt (Metallic von 1).](Images/Chapter_19/6.%20Metall_Comparrison.png){#fig-1_6 fig-align="left"}
+![Dasselbe Objekt mit unterschiedlichen Einstellungen für Metallic. Links ein dielektrisches Objekt (Metallic von 0), rechts ein metallisches Objekt (Metallic von 1).](Images/Chapter_19/19_6_Metall_Comparison.png){#fig-1_6 fig-align="left"}
 
 Beide Objekte scheinen ihre Umgebung zu reflektieren. Das linke Objekt scheint die Umgebung allerdings deutlich schwächer zu reflektieren, während beim rechten Objekt die Umgebung sehr klar ersichtlich ist. Beim rechten Objekt scheint zudem kaum erkennbar, woraus die Grundfarbe des Materials besteht.
 
@@ -224,7 +224,7 @@ Reflexion
 
 Bei der Erklärung der Roughness wurde bereits auf die Reflexion verwiesen. Dabei prallen die Lichtstrahlen an der Oberfläche eines Objektes ab und entfernen sich wieder vom Objekt. Diese Lichtstrahlen sind anschliessend mit dem menschlichen Auge sichtbar. Die Lichtstrahlen dringen dabei nicht in das Objekt ein, sondern werden lediglich reflektiert.
 
-![Schematische Darstellung der Lichtstrahlen bei einer Reflexion.](Images/Chapter_19/7.%20Reflexion.png){#fig-1_7 fig-align="left"}
+![Schematische Darstellung der Lichtstrahlen bei einer Reflexion.](Images/Chapter_19/19_7_Reflexion.png){#fig-1_7 fig-align="left"}
 
 ::: column-margin
 Refraktion
@@ -232,7 +232,7 @@ Refraktion
 
 Bei der Refraktion werden die Lichtstrahlen, so wie auch bei der Reflexion, vom Objekt aus zurückgesendet. Im Unterschied zur Reflexion dringen die Lichtstrahlen bei der Refraktion allerdings in das Objekt ein, bevor sie sich wieder vom Objekt entfernen. Beim Eindringen in das Objekt werden die Lichtstrahlen zudem gebrochen und verlassen das Objekt dadurch in einem anderen Winkel.
 
-![Schematische Darstellung der Lichtstrahlen bei einer Refraktion.](Images/Chapter_19/8.%20Refraktion.png){#fig-1_8 fig-align="left"}
+![Schematische Darstellung der Lichtstrahlen bei einer Refraktion.](Images/Chapter_19/19_8_Refraction.png){#fig-1_8 fig-align="left"}
 
 ::: column-margin
 Dielektrische Materialien
@@ -260,7 +260,7 @@ Parameter kombinieren
 
 Durch die Kombination der bislang erläuterten Parameter lassen sich bereits viele Arten von Materialien erstellen. Ein metallisches Objekt unterscheidet sich ebenfalls hinsichtlich der Roughness und kann auch unterschiedliche Farbwerte annehmen. Dadurch lassen sich bereits viele Materialien nachbilden.
 
-![Darstellung desselben Objektes unter denselben Lichtverhältnissen bei unterschiedlichen Werten für Metallic und Roughness.](Images/Chapter_19/9.%20Material_Comparison.png){#fig-1_9 fig-align="left"}
+![Darstellung desselben Objektes unter denselben Lichtverhältnissen bei unterschiedlichen Werten für Metallic und Roughness.](Images/Chapter_19/19_9_Material_Comparison.png){#fig-1_9 fig-align="left"}
 
 ::: column-margin
 Verwendung von Bildvorlagen, um Materialien nachzubilden

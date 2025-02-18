@@ -76,7 +76,7 @@ Select-Modus wechseln
 
 Im Edit-Mode können wahlweise Vertices, Edges oder Faces ausgewählt werden, je nachdem in welchem Select-Modus man sich befindet. Die drei Select-Modi sind in der linken oberen Ecke direkt neben dem Auswahlfeld für den Bearbeitungs-Modus (in dem Fall der Edit-Mode) aufzufinden.
 
-![Schaltfläche für den Vertex-, Edge- und Face-Select-Modus in der linken oberen Ecke des Edit-Modes.](Images/Chapter_9/9_2_ Select_Mode_Choice.png){#fig-1_2 fig-align="left"}
+![Schaltfläche für den Vertex-, Edge- und Face-Select-Modus in der linken oberen Ecke des Edit-Modes.](Images/Chapter_9/9_2_%20Select_Mode_Choice.png){#fig-1_2 fig-align="left"}
 
 ### Vertices
 
@@ -145,7 +145,7 @@ Bezeichnung von Faces aufgrund Anzahl Vertices
 -   **Quadrangles** (**Quads**): Faces, die aus vier Vertices bestehen
 -   **N-Gons**: Faces, die aus n Vertices bestehen
 
-![Der Standardwürfel bestehend aus Tris statt aus Quads.](Images/Chapter_9/9_3_Cube_ Tris.png){#fig-1_3 fig-align="left"}
+![Der Standardwürfel bestehend aus Tris statt aus Quads.](Images/Chapter_9/9_3_Cube_%20Tris.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Tris aus Quads ableiten

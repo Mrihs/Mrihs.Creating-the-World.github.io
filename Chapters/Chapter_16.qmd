@@ -39,4 +39,4 @@ Materialien, Texturen und Shader
 
 Ein Material beinhaltet somit sowohl Parameter oder Texturen, welche Informationen beinhalten, als auch die Shader, welche die Informationen verarbeiten. Blender ist mit einer Reihe von eigenen Shadern ausgestattet, mit denen man arbeiten kann. Es ist allerdings auch möglich, eigene Shader zu erstellen oder die Verarbeitung der Informationen zu verändern.
 
-![Zusammenhang zwischen Materialien, Texturen und Shadern.](Images/Chapter_16/Materialien,%20Texturen%20Shader.png){#fig-1_1 fig-align="left"}
+![Zusammenhang zwischen Materialien, Texturen und Shadern.](Images/Chapter_16/16_1_Materials_Textures_Shader.png){#fig-1_1 fig-align="left"}

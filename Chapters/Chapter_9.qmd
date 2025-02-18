@@ -15,6 +15,7 @@ Die bisherigen Transformationen, die an Objekten gemacht wurden, haben sich imme
 :::: tippbox-header
 ::: tippbox-icon
 :::
+
 Weiterführende Informationen
 ::::
 
@@ -67,13 +68,15 @@ Beim Wechseln in den Edit-Mode erscheint das Mesh in seiner Struktur, bestehend 
 
 ![Vertices, Edges und Faces.](Images/Chapter_9/1.%20Vertices,%20Edges%20and%20Faces.png){#fig-1_1 fig-align="left"}
 
+![Vertices, Edges und Faces.](Images/Chapter_9/9_1_Vertices_Edges_Faces.png){fig-align="left"}
+
 ::: column-margin
 Select-Modus wechseln
 :::
 
 Im Edit-Mode können wahlweise Vertices, Edges oder Faces ausgewählt werden, je nachdem in welchem Select-Modus man sich befindet. Die drei Select-Modi sind in der linken oberen Ecke direkt neben dem Auswahlfeld für den Bearbeitungs-Modus (in dem Fall der Edit-Mode) aufzufinden.
 
-![Schaltfläche für den Vertex-, Edge- und Face-Select-Modus in der linken oberen Ecke des Edit-Modes.](Images/Chapter_9/2.%20Select_Mode_Auswahl.png){#fig-1_2 fig-align="left"}
+![Schaltfläche für den Vertex-, Edge- und Face-Select-Modus in der linken oberen Ecke des Edit-Modes.](Images/Chapter_9/9_2_ Select_Mode_Choice.png){#fig-1_2 fig-align="left"}
 
 ### Vertices
 
@@ -119,6 +122,7 @@ Mittels des Face-Select-Modus können Faces direkt angewählt werden. Alternativ
 :::: tippbox-header
 ::: tippbox-icon
 :::
+
 Weiterführende Informationen
 ::::
 
@@ -141,7 +145,7 @@ Bezeichnung von Faces aufgrund Anzahl Vertices
 -   **Quadrangles** (**Quads**): Faces, die aus vier Vertices bestehen
 -   **N-Gons**: Faces, die aus n Vertices bestehen
 
-![Der Standardwürfel bestehend aus Tris statt aus Quads.](Images/Chapter_9/3.%20Cube%20by%20Tris.png){#fig-1_3 fig-align="left"}
+![Der Standardwürfel bestehend aus Tris statt aus Quads.](Images/Chapter_9/9_3_Cube_ Tris.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Tris aus Quads ableiten
@@ -155,7 +159,7 @@ Bevorzugung von Quads
 
 Trotzdem ist es sinnvoll, sich beim Modellieren von 3D-Objekten eher an die Verwendung von Quads zu gewöhnen. Viele Tricks und Kniffe der Objektbearbeitung lassen sich einfacher oder teilweise sogar nur auf Quads anwenden. Somit erleichtert die Arbeit mit Quads den Arbeitsprozess erheblich. Weiterhin sind Quads auch in vielen Animationsstudios der Standard.
 
-![Links eine gerenderte 3D-Figur und rechts die Figur in ihrer Gitterstruktur.](Images/Chapter_9/4.%20Prof%20Figures.png){#fig-1_4 fig-align="left"}
+![Links eine gerenderte 3D-Figur und rechts die Figur in ihrer Gitterstruktur.](Images/Chapter_9/9_4_Prof_Figures.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Anwendung von Tris
@@ -230,6 +234,7 @@ Da 3D-Meshes keinen inneren Hohlraum haben, bilden die Faces die Oberfläche, we
 :::: tippbox-header
 ::: tippbox-icon
 :::
+
 Weiterführende Informationen
 ::::
 
@@ -239,7 +244,6 @@ Bei bestimmten Einstellungen werden die Rückseiten der Oberflächen von Objekte
 In manchen Game-Engines werden die Rückseiten von Objekten in den Grundeinstellungen gar nicht angezeigt. Dadurch blickt man bei den Oberflächen mit der falschen Ausrichtung durch das Objekt hindurch. Dies vermittelt den Eindruck, dass ein Teil des Objekts fehlen würde. Dieser Teil ist noch da – allerdings der falschen Richtung zugewendet.
 :::
 ::::::
-
 
 ::: column-margin
 Die zu betrachtende Seite eines Würfels
@@ -259,7 +263,7 @@ Normalen darstellen
 
 Die Normalen eines 3D-Objektes lassen sich im Edit-Mode betrachten, indem die entsprechende Ansicht aktiviert wird. Diese wird im Dropdown-Menü zu den Viewport-Overlays in der rechten oberen Ecke des 3D-Viewports unter dem Abschnitt «*Normals*» mit der Schaltfläche «*Display Normals*» aktiviert. Anschliessend erscheinen in den Faces kleine blaue Striche, welche in diejenige Richtung zeigen, gegen die das Face dargestellt ist.
 
-![Icon zur Darstellung der Normalen in den Viewport-Overlays.](Images/Chapter_9/5.1.Icon_Normals.png){#fig-1_5 fig-align="left"}
+![Icon zur Darstellung der Normalen in den Viewport-Overlays.](Images/Chapter_9/9_5_Icon_Normals.png){#fig-1_5 fig-align="left"}
 
 ::: column-margin
 Face-Orientation darstellen

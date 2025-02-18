@@ -273,14 +273,12 @@ Um ein Editor-Fenster zu schliessen, wird jeweils ein anderes Editor-Fenster üb
 
 Ordnen Sie die Arbeitsoberfläche entsprechend der nachfolgenden Abbildung an.
 
-![](Images/Chapter_1/Exercise_1_1.png){ fig-align="left"}
+![](Images/Chapter_1/Exercise_1_1.png){fig-align="left"}
 
 **Übung 1.2**
 
 Ordnen Sie die Arbeitsoberfläche entsprechend der nachfolgenden Abbildung an.
 
-
-![](Images/Chapter_1/Exercise_1_2.png){ fig-align="left"}
-
+![](Images/Chapter_1/Exercise_1_2.png){fig-align="left"}
 :::
 ::::::

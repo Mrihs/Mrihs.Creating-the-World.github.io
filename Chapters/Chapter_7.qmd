@@ -38,7 +38,7 @@ Position
 
 Die Location beschreibt die Position eines 3D-Meshes in der dreidimensionalen Welt. Die Position wird mittels drei Werten angegeben: einem Wert für die X-Achse, einem für die Y-Achse und einem für die Z-Achse. Jeder dieser drei Werte lässt sich individuell verändern. Durch das Verschieben des X Wertes verschiebt sich das Objekt beispielsweise der X-Achse entlang.
 
-![Der orangene Punkt markiert den Ursprung (Origin) eines Objektes.](Images/Chapter_7/1.%20Origin.png){#fig-1_1 fig-align="left"}
+![Der orangene Punkt markiert den Ursprung (Origin) eines Objektes.](Images/Chapter_7/7_1_Origin.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Position befindet sich am Ursprung des Objekts

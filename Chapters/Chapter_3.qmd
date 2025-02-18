@@ -58,7 +58,7 @@ Merke...
 ::::
 
 ::: rememberbox-body
-![](Images/Chapter_2/Tastatur.png){fig-align="left"}
+![](Images/Chapter_3/3_1_Number_Tabel.png){fig-align="left"}
 :::
 ::::::
 

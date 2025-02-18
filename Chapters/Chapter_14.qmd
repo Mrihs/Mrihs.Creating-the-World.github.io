@@ -47,9 +47,9 @@ Um ein neues Glas zu erstellen, wird in diesem Fall ein beliebiges primitives Me
 Neue Vertices extrudieren
 :::
 
-Als Nächstes wird die Form des Glases im Querschnitt erstellt. Am besten wird das Objekt in der Vorderansicht betrachtet. Zunächst wird der Radius des Glasbodens festgelegt. Hierfür wird ein Edge entlang der X-Achse beispielsweise um 0.1 Meter extrudiert ( {{< kbd E >}}, {{< kbd X >}},{{< kbd 0 >}}{{< kbd . >}}{{< kbd 1 >}}, danach bestätigen mittels der Taste {{< kbd Enter >}}). Anschliessend wird von diesem Vertex ebenfalls ein Vertex herausgezogen, welches entlang der Z-Achse (und bei Bedarf auch entlang der Y-Achse) verschoben wird. Dadurch sollte nun ein Querschnitt eines halben Glases erstellt worden sein, wie in Abbildung 1 dargestellt.
+Als Nächstes wird die Form des Glases im Querschnitt erstellt. Am besten wird das Objekt in der Vorderansicht betrachtet. Zunächst wird der Radius des Glasbodens festgelegt. Hierfür wird ein Edge entlang der X-Achse beispielsweise um 0.1 Meter extrudiert ( {{< kbd E >}}, {{< kbd X >}},{{< kbd 0 >}}{{\< kbd . \>}}{{< kbd 1 >}}, danach bestätigen mittels der Taste {{< kbd Enter >}}). Anschliessend wird von diesem Vertex ebenfalls ein Vertex herausgezogen, welches entlang der Z-Achse (und bei Bedarf auch entlang der Y-Achse) verschoben wird. Dadurch sollte nun ein Querschnitt eines halben Glases erstellt worden sein, wie in Abbildung 1 dargestellt.
 
-![Der Querschnitt eines halben Glases.](){#fig-1_1 fig-align="left"}
+![Der Querschnitt eines halben Glases.](Images/Chapter_14/14_1_Cross_Section.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Vertices mit der Maus erstellen
@@ -74,7 +74,7 @@ Modifier-Panel im Properties-Editor
 
 Modifier sind jeweils im Properties-Editor aufzufinden, welcher das Areal in der rechten unteren Ecke von Blender darstellt. Auf der linken Seite dieses Editors befindet sich ein Reiter mit verschiedenen Symbolen. Die Modifier werden dort als Schraubenschlüssel symbolisiert. Durch einen Klick auf den Schraubenschlüssel wird der Modifier-Reiter geöffnet. Darin werden alle Modifier aufgelistet, die dem aktiven Objekt oder dem gerade bearbeiteten Objekt zugewiesen sind.
 
-![Modifier-Icon, welches im Reiter des Properties-Editors aufzufinden ist.](Images/Chapter_14/2.%20Icon_modifiers.png){#fig-1_2 fig-align="left"}
+![Modifier-Icon, welches im Reiter des Properties-Editors aufzufinden ist.](Images/Chapter_14/14_2_Icon_Modifiers.png){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Modifier hinzufügen
@@ -94,7 +94,7 @@ Veränderbarkeit von Modifiern
 
 Bei der destruktiven Methode mit dem Spin-Tool war es unerlässlich, dass direkt bei der Durchführung der Transformation bestimmt wird, um wie viele Grad die Operation durchgeführt werden soll, wie viele Faces gebildet werden sollen und ob die Elemente automatisch verbunden werden sollen. Bei der Bearbeitung mittels des Screw-Modifiers können diese Einstellungen jederzeit in den Einstellungen des Modifiers verändert werden. Für das aktuelle Glas-Objekt ist es sinnvoll, hier die Einstellung «*Merge*» zu aktivieren, sodass die Vertices am Start und am Ende der Umdrehung zu je einem Vertex verbunden werden.
 
-![Glas, erstellt mittels eines Screw- und eines Solidify-Modifiers.](Images/Chapter_14/){#fig-1_3 fig-align="left"}
+![Glas, erstellt mittels eines Screw- und eines Solidify-Modifiers.](Images/Chapter_14/14_3_Glass_Screw_Solidify_Modifiers.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Solidify-Modifier, um Dicke zu erstellen
@@ -142,7 +142,7 @@ Verwendung von Tris bei Modifiern
 
 Die seltsame Form am Boden ist auf die Form der Faces zurückzuführen, welche durch die Modifier entstehen. Durch die kreisförmige Extrusion der Vertices im Screw-Modifier entstehen am Boden eine Reihe Tris, die sich kreisförmig um den Mittelpunkt bilden. Die meisten Modifier können mit Tris umgehen, allerdings nicht alle gleich gut. In diesem Fall liegt die Ursache beim Subdivision-Surface-Modifier, welcher die kreisförmigen Vertices unterschiedlich stark zum Mittelpunkt hin glättet.
 
-![Verzerrung von Tris am Glasboden durch den Subdivision-Surface-Modifier.](Images/Chapter_14/4.%20Tris%20am%20Boden.png){#fig-1_4 fig-align="left"}
+![Verzerrung von Tris am Glasboden durch den Subdivision-Surface-Modifier.](Images/Chapter_14/14_4_Tris_Bottom.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Bevel-Modifier
@@ -238,9 +238,9 @@ Objekte wiederholen mittels Array-Modifier
 
 Der Array-Modifier erstellt beliebig viele Duplikate eines Objektes. Diese Duplikate werden in einer Reihe aufgestellt. Dadurch können sich wiederholende Muster mittels dieses Modifiers erstellt werden. Hierfür lässt sich die Anzahl Wiederholungen des Objektes unter «*Count*» einstellen. Anschliessend kann entlang der drei Achsen eingestellt werden, in welchem Abstand die Wiederholungen jeweils zueinander stehen sollen. Dieser Abstand kann relativ zur Grösse des Objektes eingestellt werden, indem «*Relative Offset*» aktiviert wird. In diesem Fall wird der Abstand um einen Faktor relativ zur Objektgrösse definiert. Ein Wert von 1 würde bedeuten, dass das Objekt direkt an der Stelle wiederholt wird, an der das Original seine äusserste Grenze hat. Wenn hingegen «*Constant Offset*» aktiviert wird, werden die Wiederholungen ausgehend vom Ursprung des Objektes um den angegebenen Wert verschoben wiederholt. Beide Abstandsoptionen lassen sich zudem miteinander kombinieren. Mittels der Einstellung «*Merge*» lassen sich zudem die wiederholten Objekte an den Vertices zwischen den Wiederholungen verbinden – vorausgesetzt diese befinden sich an derselben Position.
 
-![Icon für den Array-Modifier.](Images/Chapter_14/5.%20Icon_Array_modifier.png){#fig-1_5 fig-align="left"}
+![Icon für den Array-Modifier.](Images/Chapter_14/14_5_Icon_Array_Modifier.png){#fig-1_5 fig-align="left"}
 
-![Ein Objekt sowie eine Anwendung mittels eines Array-Modifiers.](Images/Chapter_14/6.%20Example_Array_modifier.png.png){#fig-1_6 fig-align="left"}
+![Ein Objekt sowie eine Anwendung mittels eines Array-Modifiers.](Images/Chapter_14/14_6_Example_Array_Modifier.png){#fig-1_6 fig-align="left"}
 
 #### Bevel
 
@@ -250,7 +250,7 @@ Kanten abrunden mittels Bevel-Modifier
 
 Der Bevel-Modifier rundet die Kanten eines Objektes ab. Dabei kann eingestellt werden, wie stark die Abrundung erfolgen soll und wie viele Segmente für die Abrundung gebildet werden sollen. Zusätzlich kann eine Abrundung auch auf Edges mit bestimmten Merkmalen fixiert werden (beispielsweise nur Edges mit bestimmten Winkeln oder einer bestimmten Datenstruktur). Zudem können auch Vertices abgerundet werden. Hierfür muss im oberen Bereich des Modifiers «*Vertices*» statt «*Edges*» ausgewählt werden.
 
-![Icon für den Bevel-Modifier.](Images/Chapter_14/7.%20Icon_Bevel_modifier.png){#fig-1_7 fig-align="left"}
+![Icon für den Bevel-Modifier.](Images/Chapter_14/14_7_Icon_Bevel_Modifier.png){#fig-1_7 fig-align="left"}
 
 #### Boolean
 
@@ -260,9 +260,9 @@ Schnittmenge zwischen Objekten verwenden mittels Boolean-Modifier
 
 Der Boolean-Modifier wird verwendet, um die Teilmengen von zwei Objekten zu bearbeiten. Hierfür wird im Modifier ein zweites Objekt ausgewählt. Wahlweise kann anschliessend die gemeinsame Schnittmenge der beiden Objekte ausgewählt («*Intersect*»), verbunden («*Union*») oder entfernt werden («*Difference*»). Zu beachten ist jedoch, dass beim Verbinden (Union) beide Objekte lediglich zu einem Objekt miteinander verbunden werden. Die Vertice-Strukturen der originalen Objekte bleiben erhalten und werden nicht miteinander kombiniert. Bei den beiden anderen Optionen werden die Vertices der beiden Objekte verbunden.
 
-![Icon für den Boolean-Modifier.](Images/Chapter_14/8.%20Icon_Boolean_Modifier.png){#fig-1_8 fig-align="left"}
+![Icon für den Boolean-Modifier.](Images/Chapter_14/14_8_Icon_Boolean_Modifier.png){#fig-1_8 fig-align="left"}
 
-![Der Boolean-Modifier eines Würfels in Kombination mit einem Zylinder. Die drei verschiedenen Boolean-Einstellungen führen zu unterschiedlichen Ergebnissen.](Images/Chapter_14/9.%20Example_Boolean_Modifier.png){#fig-1_9 fig-align="left"}
+![Der Boolean-Modifier eines Würfels in Kombination mit einem Zylinder. Die drei verschiedenen Boolean-Einstellungen führen zu unterschiedlichen Ergebnissen.](Images/Chapter_14/14_9_Example_Boolean_Modifier.png){#fig-1_9 fig-align="left"}
 
 #### Build
 
@@ -272,7 +272,7 @@ Objekt-Aufbau animieren mittels Build-Modifier
 
 Der Build-Modifier ermöglicht es, dass ein Objekt im Rahmen einer Animation sukzessive aufgebaut wird. Dabei lassen sich der Zeitpunkt des Startes («*Start Frame*») und die Dauer der Animation festlegen («*Length*»).
 
-![Icon für den Build-Modifier.](Images/Chapter_14/10.%20Icon_Build_Modifier.png){#fig-1_10 fig-align="left"}
+![Icon für den Build-Modifier.](Images/Chapter_14/14_10_Icon_Build_Modifier.png){#fig-1_10 fig-align="left"}
 
 #### Decimate
 
@@ -282,9 +282,9 @@ Vertice in einem Objekt reduzieren mittels Decimat-Modifier
 
 Der Decimate-Modifier reduziert die Anzahl Vertices in einem Objekt. Dabei wird das Objekt entweder um einen Faktor runtergebrochen («*Collapse*»), «*un-subdivided*» oder abgeflacht («*Planar*»). Der Un-Subdivide-Modus stellt das Gegenteil des Subdivision-Surface-Modifiers dar. In diesem Modus muss allerdings beachtet werden, dass die Anordnung der Edges zwischen den Faces bei jedem ungeraden Schritt der Un-Subdivision verändert wird, während sie bei geraden Anzahlen Un-Subdivisions erhalten bleibt, wie in Abbildung 12 dargestellt.
 
-![Icon für den Decimate-Modifier.](Images/Chapter_14/11.%20Icon_Decimate_Modifier.png){#fig-1_11 fig-align="left"}
+![Icon für den Decimate-Modifier.](Images/Chapter_14/14_11_Icon_Decimate_Modifier.png){#fig-1_11 fig-align="left"}
 
-![Veränderung der Edge-Anordnung durch Un-Subdivide.](Images/Chapter_14/12.%20Example_Unsubdivide.png){#fig-1_12 fig-align="left"}
+![Veränderung der Edge-Anordnung durch Un-Subdivide.](Images/Chapter_14/14_12_Example_Unsubdivide.png){#fig-1_12 fig-align="left"}
 
 #### Edge Split
 
@@ -294,9 +294,7 @@ Edges zwischen Faces aufteilen mittels Edge-Split-Modifier
 
 Der Edge-Split-Modifier kann dazu verwendet werden, um Edges von zwei aneinanderliegenden Faces aufzuteilen. Dadurch scheinen die Faces zwar aneinanderzuliegen, allerdings handelt es sich dabei um zwei Faces, die nicht miteinander verbunden sind. Dies hat den Vorteil, dass Kanten, welche durch den Subdivision-Surface-Modifier abgerundet werden, nun als einzelne Kanten betrachtet und nicht abgerundet werden. Hierfür muss der Edge-Split-Modifier jedoch vor dem Subdivision-Surface-Modifier platziert werden. Im Edge-Split-Modifier kann unter «*Edge Angle*» definiert werden, bis zu welchem Winkel die Edges jeweils separiert werden sollen. Bei der Einstellung 30° werden alle Edges separiert, deren Faces in einem grösseren Winkel als 30° zueinander stehen.
 
-
-
-![Icon für den Edge-Split-Modifier.](Images/Chapter_14/13.%20Icon_Edge_Split_Modifier.png){#fig-1_13 fig-align="left"}
+![Icon für den Edge-Split-Modifier.](Images/Chapter_14/14_13_Icon_Edge_Split_Modifier.png){#fig-1_13 fig-align="left"}
 
 #### Geometry Nodes
 
@@ -306,7 +304,7 @@ Objekte bearbeiten mittels Geometry-Nodes-Modifier
 
 Der Geometry-Nodes-Modifier ist ein relativ neuer Modifier in Blender. Er wird benötigt, um ein Objekt mittels sogenannter Geometry Nodes zu bearbeiten. Die entsprechende Einstellung des Geometry Nodes wird jeweils im Geometry-Nodes-Editor vorgenommen.
 
-![Icon für den Geometry-Nodes-Modifier.](Images/Chapter_14/14.%20Icon_Geometry_Nodes_Modifier.png){#fig-1_14 fig-align="left"}
+![Icon für den Geometry-Nodes-Modifier.](Images/Chapter_14/14_14_Icon_Geometry_Nodes_Modifier.png){#fig-1_14 fig-align="left"}
 
 #### Mask
 
@@ -316,7 +314,7 @@ Objekt-Teile maskieren mittels Mask-Modifier
 
 Mittels des Mask-Modifiers können Bestandteile eines Meshes versteckt werden. Hierfür muss eine Gruppe aus Vertices definiert werden, welche versteckt werdensoll, und diese Gruppe muss anschliessend im Mask-Modifier angegeben werden. Wie Vertices zu Gruppen zusammengeführt werden, wird im nächsten Kapitel behandelt.
 
-![Icon für den Mask-Modifier.](Images/Chapter_14/15.%20Icon_Mask_Modifier.png){#fig-1_15 fig-align="left"}
+![Icon für den Mask-Modifier.](Images/Chapter_14/14_15_Icon_Mask_Modifier.png){#fig-1_15 fig-align="left"}
 
 #### Mirror
 
@@ -326,7 +324,7 @@ Objekte spiegeln mittels Mirror-Modifier
 
 Der Mirror-Modifier spiegelt ein Objekt entlang ausgewählter Achsen vom Ursprung des Objektes aus. Dadurch muss lediglich die Hälfte eines symmetrischen Objektes erstellt oder bearbeitet werden, weil die zweite Hälfte direkt mittels des Mirror-Modifiers erstellt wird. Mittels der Funktion «*Clipping*» kann zudem eingestellt werden, dass die Punkte, welche direkt auf der Spiegelungsachse liegen, miteinander verbunden werden und nicht mehr voneinander losgelöst werden können.
 
-![Icon für den Mirror-Modifier.](Images/Chapter_14/16.%20Icon_Mirror_Modifier.png){#fig-1_16 fig-align="left"}
+![Icon für den Mirror-Modifier.](Images/Chapter_14/14_16_Icon_Mirror_Modifier.png){#fig-1_16 fig-align="left"}
 
 #### Multiresolution
 
@@ -336,7 +334,7 @@ Mesh für Sculpting subdividen mittels Multiresolution-Modifier
 
 Der Multiresolution-Modifier führt bei einem Mesh eine Subdivision durch, so wie auch der Subdivision-Surface-Modifier. Anders als beim Subdivision-Surface-Modifier können diese Subdivisions jedoch beim Sculpting von Objekten verwendet werden, ohne dass der Modifier vorgängig auf das Objekt angewendet werden muss.
 
-![Icon für den Multiresolution-Modifier.](Images/Chapter_14/17.%20Icon_Multiresolution_Modifier.png){#fig-1_17 fig-align="left"}
+![Icon für den Multiresolution-Modifier.](Images/Chapter_14/14_17_Icon_Multiresolution_Modifier.png){#fig-1_17 fig-align="left"}
 
 #### Remesh
 
@@ -351,7 +349,7 @@ Mithilfe des Remesh-Modifiers können die Vertices, Edges und Faces eines Objekt
 -   ***«Sharp»***: Die Form des Objektes wird mit einer geglätteten Oberfläche erstellt, allerdings werden spitze Ecken und Kanten beibehalten.
 -   ***«Voxel»***: Das Objekt wird basierend auf seinem Volumen neu erstellt.
 
-![Icon für den Remesh-Modifier.](Images/Chapter_14/18.%20Icon_Remesh_Modifier.png){#fig-1_18 fig-align="left"}
+![Icon für den Remesh-Modifier.](Images/Chapter_14/14_18_Icon_Remesh_Modifier.png){#fig-1_18 fig-align="left"}
 
 #### Screw
 
@@ -361,7 +359,7 @@ Objekte kreisförmig extrudieren mittels Screw-Modifier
 
 Der Screw-Modifier wird verwendet, um Strukturen kreisförmig entlang einer Achse um ihren Ursprung zu extrudieren. Zusätzlich kann ein «*Screw*»-Faktor definiert werden. Dieser verschiebt die Umdrehung um den Screw-Faktor entlang der ausgewählten Achse, sodass eine Schraubenform entsteht.
 
-![Icon für den Screw-Modifier.](Images/Chapter_14/19.%20Icon_Screw_Modifier.png){#fig-1_19 fig-align="left"}
+![Icon für den Screw-Modifier.](Images/Chapter_14/14_19_Icon_Screw_Modifier.png){#fig-1_19 fig-align="left"}
 
 #### Skin
 
@@ -371,11 +369,11 @@ Vertices zu Mesh extrudieren mittels Skin-Modifier
 
 Der Skin-Modifier versieht den Vertices in einem Objekt eine zusätzliche Haut in Form eines Würfels, der um den Vertex oder entlang der Edges gebildet wird. So kann eine Form aus Vertices und Edges gebildet werden und mittels des Skin-Modifiers mit einem Körper entlang der Edges versehen werden. Dieser Modifier ist ähnlich zum Solidify-Modifier, wobei der Skin-Modifier vor allem für Objekte ohne Faces verwendet wird. Die Verwendung bei Objekten mit Faces in Kombination mit dem Skin-Modifier kann sehr viel Rechenleistung erfordern.
 
-![Icon für den Skin-Modifier.](Images/Chapter_14/20.%20Icon_Skin_modifier.png){#fig-1_20 fig-align="left"}
+![Icon für den Skin-Modifier.](Images/Chapter_14/14_20_Icon_Skin_modifier.png){#fig-1_20 fig-align="left"}
 
 Durch das Hinzufügen des Skin-Modifiers ist es möglich, jeden Vertex mittels einer Skalierung zu bearbeiten. Hierfür muss ein Vertex im Edit-Mode ausgewählt werden. Mittels der Tastenkombination {{< kbd Ctrl >}} + {{< kbd A >}} kann der Radius des Körpers bei diesem Vertex eingestellt werden. Ohne das Hinzufügen des Skin-Modifiers steht diese Funktion allerdings nicht zur Verfügung.
 
-![Ein Objekt aus Vertices und Edges sowie seine Form mit dem Skin-Modifier.](Images/Chapter_14/21.%20Example_Skin_modifier.png){#fig-1_21 fig-align="left"}
+![Ein Objekt aus Vertices und Edges sowie seine Form mit dem Skin-Modifier.](Images/Chapter_14/14_21_Example_Skin_modifier.png){#fig-1_21 fig-align="left"}
 
 #### Solidify
 
@@ -385,9 +383,9 @@ Faces extrudieren mittels Solidify-Modifier
 
 Der Solidify-Modifier wird verwendet, um Objekten eine Dicke hinzuzufügen. Dabei werden alle Faces um den Wert der Dicke extrudiert. Die Extrusion erfolgt entlang der Normalen eines Faces um einen Offset-Wert. Wenn dieser Wert 1 oder -1 beträgt, werden die originalen Vertices genau an derselben Stelle belassen und je nach Vorzeichen verändert sich die Richtung der Extrusion. Bei einem negativen Wert erfolgt die Extrusion entlang der Seite ohne Normalen, bei einem positiven Wert entlang der Seite mit Normalen. Bei einem Wert von 0 werden die Flächen so gebildet, dass sich die originalen Faces genau in der Mitte der neuen Faces befinden.
 
-![Icon für den Solidify-Modifier.](Images/Chapter_14/22.%20Icon_Solidify_Modifier.png){#fig-1_22 fig-align="left"}
+![Icon für den Solidify-Modifier.](Images/Chapter_14/14_22_Icon_Solidify_Modifier.png){#fig-1_22 fig-align="left"}
 
-![Ein Würfel ohne Deckel mit den Normalen nach aussen gerichtet. Daneben Anwendungen des Solidify-Modifiers mit unterschiedlichen Offset-Werten.](Images/Chapter_14/23.%20Example_Solidify_modifier.png){#fig-1_23 fig-align="left"}
+![Ein Würfel ohne Deckel mit den Normalen nach aussen gerichtet. Daneben Anwendungen des Solidify-Modifiers mit unterschiedlichen Offset-Werten.](Images/Chapter_14/14_23_Example_Solidify_Modifier.png){#fig-1_23 fig-align="left"}
 
 #### Subdivision Surface
 
@@ -397,7 +395,7 @@ Faces subdividen mittels Subdivision-Surface-Modifier
 
 Der Subdivision-Surface-Modifier wird verwendet, um die Struktur des Objektes zu glätten, indem die Struktur des Objektes unterteilt wird. Dieser Modifier wurde vorgängig ausführlich behandelt.
 
-![Icon für den Subdivision-Surface-Modifier.](Images/Chapter_14/24.%20Icon_Subdivision_Surface_Modifier.png){#fig-1_24 fig-align="left"}
+![Icon für den Subdivision-Surface-Modifier.](Images/Chapter_14/14_24_Icon_Subdivision_Surface_Modifier.png){#fig-1_24 fig-align="left"}
 
 #### Triangulate
 
@@ -407,7 +405,7 @@ Quads zu Tris umwandeln mittels Triangulate-Modifier
 
 Der Triangulate-Modifier ermöglicht es, dass die Edges von Faces neu berechnet werden, sodass die Faces lediglich aus Tris bestehen. Es stehen dabei verschiedene Methoden zur Auswahl, welche individuell auf Quads und N-Gons angewendet werden können. Durch eine Erhöhung der Zahl unter «*Minimum Vertices*» lässt sich einstellen, dass nur Faces mit mindestens der entsprechenden Zahl von Vertices zu Tris umgewandelt werden.
 
-![Icon für den Triangulate-Modifier.](Images/Chapter_14/25.%20Icon_Triangulate_Modifier.png){#fig-1_25 fig-align="left"}
+![Icon für den Triangulate-Modifier.](Images/Chapter_14/14_25_Icon_Triangulate_Modifier.png){#fig-1_25 fig-align="left"}
 
 #### Volume to Mesh
 
@@ -417,7 +415,7 @@ Volumen zu Mesh umwandeln mittels Volume-to-Mesh-Modifier
 
 Mithilfe des Volume-to-Mesh-Modifiers können Volumen-Daten in ein Mesh umgewandelt werden. Da dieser Kurs nicht auf Volumen-Objekte eingeht, wird dieser Modifier nicht weiter behandelt.
 
-![Icon für den Volume-to-Mesh-Modifier.](Images/Chapter_14/26.%20Icon_Volume_to_Mesh-Modifier.png){#fig-1_26 fig-align="left"}
+![Icon für den Volume-to-Mesh-Modifier.](Images/Chapter_14/14_26_Icon_Volume_to_Mesh-Modifier.png){#fig-1_26 fig-align="left"}
 
 #### Weld
 
@@ -427,7 +425,7 @@ Merge by Distance mittels Weld-Modifier
 
 Der Weld-Modifier stellt die Funktion «*Merge by Distance*» als Modifier dar. Dabei werden alle Vertices, die nahe beieinanderliegen, zu einem Vertex zusammen gefasst. In den Einstellungen zum Weld-Modifier kann unter «*Distance*» festgelegt werden, bis zu welcher Distanz die Vertices zusammengefasst werden sollen. Zudem kann unter «*Mode*» festgelegt werden, ob berücksichtigt werden soll, ob dies nur auf miteinander verbundene Vertices («*Connected*») oder alle Vertices («*All*») angewendet werden soll.
 
-![Icon für den Weld-Modifier.](Images/Chapter_14/27.%20Icon_Weld_Modifier.png){#fig-1_27 fig-align="left"}
+![Icon für den Weld-Modifier.](Images/Chapter_14/14_27_Icon_Weld_Modifier.png){#fig-1_27 fig-align="left"}
 
 #### Wireframe
 
@@ -437,7 +435,7 @@ Gerüst um Mesh mittels Wireframe-Modifier
 
 Mithilfe des Wireframe-Modifiers werden die Flächen anhand eines Gerüstes dargestellt. Die Edges der Faces werden hierfür aufgehoben und mit vier Faces ersetzt, die entlang der Edges miteinander verbunden werden. Die ursprünglichen Faces werden zusätzlich ebenfalls aufgehoben. Der Wireframe-Modifier bezieht sich dabei lediglich auf die Faces: Einzelne Edges, die nicht Teil eines Faces sind, werden dadurch entfernt und nicht im Gerüst mit aufgenommen.
 
-![Icon für den Wireframe-Modifier.](Images/Chapter_14/28.%20Icon_Wireframe_Modifier.png){#fig-1_28 fig-align="left"}
+![Icon für den Wireframe-Modifier.](Images/Chapter_14/14_28_Icon_Wireframe_Modifier.png){#fig-1_28 fig-align="left"}
 
 ::: column-margin
 Gerüst anpassen
@@ -445,7 +443,7 @@ Gerüst anpassen
 
 Unter dem Reiter «*Thickness*» in den Einstellungen zum Wireframe-Modifier lässt sich einstellen, wie gross das Gerüst, welches um die Edges herum gebildet wird, sein soll. Durch den Wireframe-Modifier wird das originale Objekt per Default durch das Gittergerüst ersetzt. Dies kann jedoch in den Einstellungen zum Wireframe-Modifier unter «*Replace Original*» deaktiviert werden, sodass das originale Objekt nebst dem Gerüst bestehen bleibt.
 
-![Würfel mit Triangulate- und Wireframe-Modifier.](Images/Chapter_14/29.%20Example_Triangulated%20Wireframe.png){#fig-1_29 fig-align="left"}
+![Würfel mit Triangulate- und Wireframe-Modifier.](Images/Chapter_14/14_29_Example_Triangulated%20Wireframe.png){#fig-1_29 fig-align="left"}
 
 :::::: exercisebox
 :::: exercisebox-header
@@ -460,13 +458,13 @@ Unter dem Reiter «*Thickness*» in den Einstellungen zum Wireframe-Modifier lä
 
 Erstellen Sie eine Wasserflasche mittels Modifiern. Verwenden Sie dabei so wenige Vertices wie möglich.
 
-![](Images/Chapter_14/Übung%2010_1%20Wasserflasche.png){fig-align="left"}
+![](Images/Chapter_14/Exercise_10_1.png){fig-align="left"}
 
 **Übung 10.2**
 
 Erstellen Sie einen Gartenzaun mittels Modifiern. Verwenden Sie dabei so wenige Vertices wie möglich.
 
-![](Images/Chapter_14/Übung_10.2%20Fence.png){fig-align="left"}
+![](Images/Chapter_14/Exercise_10_2.png){fig-align="left"}
 :::
 ::::::
 
@@ -478,7 +476,7 @@ Grenzen von Modifiern
 
 Wie beim Beispiel mit dem Glas zu erkennen ist, funktionieren Modifier unter bestimmten Umständen nicht immer perfekt. Die Anwendung des Subdivision-Surface-Modifiers auf einen Zylinder führt beispielsweise dazu, dass nicht nur der Mantel des Zylinders abgerundet wird, sondern auch die Kanten zum Boden beziehungsweise Deckel des Zylinders. Dies führt dazu, dass der Zylinder seine Form verliert und eher einer Kugel ähnelt. Der Boden und der Deckel des Zylinders stellen ein einzelnes N-Gon dar. Durch die fehlenden Quads werden der Boden und der Deckel somit in einer fehlerhaften Form abgerundet. In solchen Fällen macht die Anwendung des Subdivision-Surface-Modifiers in dieser Form keinen Sinn.
 
-![ Ein Zylinder mit einem Subdivision-Surface-Modifier im Edit-Mode.](Images/Chapter_14/.png){#fig-1_30 fig-align="left"}
+![Ein Zylinder mit einem Subdivision-Surface-Modifier im Edit-Mode.](Images/Chapter_14/14_30_Cylinder_Subdivison_Surface_Modifier.png){#fig-1_30 fig-align="left"}
 
 ::: column-margin
 Abrundung verhindern
@@ -486,7 +484,7 @@ Abrundung verhindern
 
 Es gibt einige destruktive Lösungsansätze, um die unerwünschten Effekte des Subdivision-Surface-Modifiers zu reduzieren. So können beispielsweise zusätzliche Loop Cuts ({{< kbd Ctrl >}} + {{< kbd R >}}) an den Kanten hinzugefügt werden, welche zu stark abgerundet werden. Dies führt dazu, dass Blender eine geringere Länge zur Verfügung hat, um Kanten abzurunden.
 
-![ Reduzierte Glättung durch Loop Cuts.](Images/Chapter_14/.png){#fig-1_31 fig-align="left"}
+![Reduzierte Glättung durch Loop Cuts.](Images/Chapter_14/14_31_Reduced_Smoothing_Loop_Cuts.png){#fig-1_31 fig-align="left"}
 
 ::: column-margin
 Abrundung von Tris/N-Gons verhindern
@@ -494,7 +492,7 @@ Abrundung von Tris/N-Gons verhindern
 
 Allerdings bleibt der Effekt einer ungenauen Abrundung entlang des Deckels/Bodens bestehen. Um diesen Effekt zu reduzieren, kann das Face des Deckels/Bodens ausgewählt und im Rahmen einer Extrusion kleiner skaliert werden (Taste {{< kbd E >}}, danach Taste {{< kbd S >}}). Dadurch wird der äusserste Rand des Deckels/Bodens mit Quads dargestellt, die gemeinsam einen Kreis um ein paralleles N-Gon bilden (wie in Abbildung 32 dargestellt).
 
-![Durch Quads am Rand wird das Glätten des N-Gons verhindert.](Images/Chapter_14/.png){#fig-1_32 fig-align="left"}
+![Durch Quads am Rand wird das Glätten des N-Gons verhindert.](Images/Chapter_14/14_32_Quads_Smoothing_N_Gons.png){#fig-1_32 fig-align="left"}
 
 ::: column-margin
 Parallelität, um Abrundung zu verhindern
@@ -508,7 +506,7 @@ Bearbeitung von Meshes trotz Modifiern notwendig
 
 Dieses Beispiel zeigt, dass die nicht-destruktive Bearbeitung mittels Modifiern teilweise auch Anpassungen im Mesh erfordern. Zudem ist es teilweise nötig, dass Modifier auf ein Objekt angewendet werden, sodass die Vertices, welche durch den Modifier entstehen, destruktiv weiterbearbeitet werden können.
 
-![Glättung des N-Gons entsteht wieder, wenn das N-Gon nicht mehr parallel zu den umgebenden Quads liegt.](Images/Chapter_14/.png){#fig-1_33 fig-align="left"}
+![Glättung des N-Gons entsteht wieder, wenn das N-Gon nicht mehr parallel zu den umgebenden Quads liegt.](Images/Chapter_14/14_33_Smoothing_N_Gons.png){#fig-1_33 fig-align="left"}
 
 ::: column-margin
 Modifier auf Teilmengen des Meshes beschränken

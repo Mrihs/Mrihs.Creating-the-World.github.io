@@ -23,6 +23,8 @@ Generell ist es empfehlenswert, bei der Erstellung von Objekten mit Referenzbild
 
 ![Bildvorlage zur Erstellung eines Glases.](Images/Chapter_13/1.%20Bildvorlage.png){#fig-1_1 fig-align="left"}
 
+![Bildvorlage zur Erstellung eines Glases.](Images/Chapter_13/13_1_Image_Example.png){fig-align="left"}
+
 ::: column-margin
 Bild platzieren
 :::
@@ -41,7 +43,7 @@ Zylinder positionieren
 
 Mittels der Taste {{< kbd Tab >}} wird in den Edit-Mode gewechselt, um die Bearbeitung des Zylinders zu starten. Die Höhe des Zylinders erstreckt sich nun von Z = -1m bis Z = 1m. Somit lieg ein Teil des Zylinders unterhalb des Ursprungs des Objektes. Deshalb wird der Zylinder nun um einen Meter entlang der Z-Achse nach oben verschoben. Mittels der Taste {{< kbd A >}} werden alle Elemente des Zylinders ausgewählt. Um eine Verschiebung entlang der Z-Achse um einen Meter zu bewirken, wird die Taste {{< kbd G >}} zum Starten der Bewegung, die Taste {{< kbd Z >}} zum Einrasten entlang der Z-Achse, die Zahl {{< kbd 1 >}} zur Angabe der Bewegung um einen Meter und die Taste {{< kbd Enter >}} zum Bestätigen gedrückt. Nun sollte der Boden des Zylinders am Nullpunkt liegen, so wie in Abbildung 2.
 
-![Zylinder, nachdem seine Vertices um einen Meter entlang der Z-Achse nach oben verschoben wurden.](Images/Chapter_13/2.%20glas_cilinder.png){#fig-1_2 fig-align="left"}
+![Zylinder, nachdem seine Vertices um einen Meter entlang der Z-Achse nach oben verschoben wurden.](Images/Chapter_13/13_2_Glass_Cylinder.png){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Höhe des Zylinderdeckels anpassen
@@ -53,13 +55,13 @@ Der Zylinder ist nun an der Position des Glases, allerdings weist er die falsche
 Breite des Zylinders anpassen
 :::
 
-Als Nächstes wird der Mantel des Zylinders angepasst, sodass er der maximalen Breite des Glases entspricht. Hierfür werden alle Vertices ausgewählt und entlang der X- und Z-Achse kleiner skaliert. Mittels der Taste {{< kbd A >}} werden alle Vertices ausgewählt. Anschliessend wird mittels der Taste {{< kbd S >}} der Skalierungsvorgang gestartet, und mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd Z >}} die Z-Achse ignoriert. Durch die Eingabe von {{< kbd 0 >}}{{< kbd . >}}{{< kbd 6 >}} und der Bestätigung mittels {{< kbd Enter >}} wird anschliessend das Objekt entlang der X- und Y-Achse um den Faktor 0.6 skaliert.
+Als Nächstes wird der Mantel des Zylinders angepasst, sodass er der maximalen Breite des Glases entspricht. Hierfür werden alle Vertices ausgewählt und entlang der X- und Z-Achse kleiner skaliert. Mittels der Taste {{< kbd A >}} werden alle Vertices ausgewählt. Anschliessend wird mittels der Taste {{< kbd S >}} der Skalierungsvorgang gestartet, und mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd Z >}} die Z-Achse ignoriert. Durch die Eingabe von {{< kbd 0 >}}{{\< kbd . \>}}{{< kbd 6 >}} und der Bestätigung mittels {{< kbd Enter >}} wird anschliessend das Objekt entlang der X- und Y-Achse um den Faktor 0.6 skaliert.
 
 ::: column-margin
 Zylindermantel in Edges unterteilen
 :::
 
-In den nächsten Bearbeitungsschritten muss der Mantel des Zylinders entsprechend der Form angepasst werden. Hierfür werden weitere Vertices Innerhalb des Zylindermantels benötigt. Um diese hinzuzufügen, werden mit einem Loop Cut zehn Edges entlang des Zylindermantels eingefügt. Hier für wird mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd R >}} zunächst der Loop-Cut-Modus gestartet. Anschliessend wird der Mauszeiger über die Edges, welche vertikal dem Zylindermantel entlang verlaufen, bewegt. Dadurch sollte Blender nun einen Schnitt entlang des Zylindermantels in der Mitte der Höhe vor schlagen. Um statt eines Schnittes gleich zehn Schnitte zu erhalten, wird die Zahl {{< kbd 1 >}}{{< kbd 0 >}} eingegeben und der Schnitt anschliessen mittels der linken Maustaste oder {{< kbd Enter >}} bestätigt. Danach muss nochmals mittels der linken Maustaste oder {{< kbd Enter >}} bestätigt werden, dass der Loop Cut mittig der Flächen verlaufen soll. Wenn die Maus bereits bewegt wurde, erfolgt der Schnitt nicht mehr mittig. In diesem Fall sollte die Platzierung mittels {{< kbd esc >}} der Taste beendet werden.
+In den nächsten Bearbeitungsschritten muss der Mantel des Zylinders entsprechend der Form angepasst werden. Hierfür werden weitere Vertices Innerhalb des Zylindermantels benötigt. Um diese hinzuzufügen, werden mit einem Loop Cut zehn Edges entlang des Zylindermantels eingefügt. Hier für wird mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd R >}} zunächst der Loop-Cut-Modus gestartet. Anschliessend wird der Mauszeiger über die Edges, welche vertikal dem Zylindermantel entlang verlaufen, bewegt. Dadurch sollte Blender nun einen Schnitt entlang des Zylindermantels in der Mitte der Höhe vor schlagen. Um statt eines Schnittes gleich zehn Schnitte zu erhalten, wird die Zahl {{< kbd 1 >}}{{\< kbd 0 \>}} eingegeben und der Schnitt anschliessen mittels der linken Maustaste oder {{< kbd Enter >}} bestätigt. Danach muss nochmals mittels der linken Maustaste oder {{< kbd Enter >}} bestätigt werden, dass der Loop Cut mittig der Flächen verlaufen soll. Wenn die Maus bereits bewegt wurde, erfolgt der Schnitt nicht mehr mittig. In diesem Fall sollte die Platzierung mittels {{< kbd esc >}} der Taste beendet werden.
 
 ::: column-margin
 Anpassen der Breite von Hand
@@ -87,13 +89,15 @@ Um die Dicke des Glases zu erstellen, sollen alle Faces gegen den Mittelpunkt de
 
 ![Proportionale Anpassung der Breite des Zylinders entsprechend der Bildvorlage.](Images/Chapter_13/3.%20Proportional_editing_Top.png){#fig-1_3 fig-align="left"}
 
+![Proportionale Anpassung der Breite des Zylinders entsprechend der Bildvorlage.](Images/Chapter_13/13_3_Proportional_Editing_Top.png){fig-align="left"}
+
 ::: column-margin
 Fläche nach innen extrudieren
 :::
 
-Anschliessend wird der Bezugspunkt für Transformationen auf den 3D-Cursor gewechselt (unter der Schaltfläche «*Transform Pivot Point*» im Header). Nachdem alle Elemente des Zylinders mittels {{< kbd A >}} ausgewählt wurden, können nun alle Flächen mit der Taste {{< kbd E >}} extrudiert werden. Mittels der Taste {{< kbd S >}} wird skalierend extrudiert und mit den Tasten {{< kbd 0 >}}{{< kbd . >}}{{< kbd 9 >}}{{< kbd 5 >}} der Faktor 0.95 festgelegt. Dies kann schliessend mittels der linken Maustaste oder {{< kbd Enter >}} bestätigt werden. Mit diesem Schritt ist das Glas bereits fertiggestellt. Es sieht noch etwas eckig und kantig aus, aber in den nächsten Kapiteln wird behandelt, wie das Glas noch glatter erscheint.
+Anschliessend wird der Bezugspunkt für Transformationen auf den 3D-Cursor gewechselt (unter der Schaltfläche «*Transform Pivot Point*» im Header). Nachdem alle Elemente des Zylinders mittels {{< kbd A >}} ausgewählt wurden, können nun alle Flächen mit der Taste {{< kbd E >}} extrudiert werden. Mittels der Taste {{< kbd S >}} wird skalierend extrudiert und mit den Tasten {{< kbd 0 >}}{{\< kbd . \>}}{{< kbd 9 >}}{{\< kbd 5 \>}} der Faktor 0.95 festgelegt. Dies kann schliessend mittels der linken Maustaste oder {{< kbd Enter >}} bestätigt werden. Mit diesem Schritt ist das Glas bereits fertiggestellt. Es sieht noch etwas eckig und kantig aus, aber in den nächsten Kapiteln wird behandelt, wie das Glas noch glatter erscheint.
 
-![Alle Faces des Glases werden zum 3D-Cursor hin extrudiert, damit das Glas eine Dicke erhält.](Images/Chapter_13/4.%20Extrusion_Thickness.png){#fig-1_4 fig-align="left"}
+![Alle Faces des Glases werden zum 3D-Cursor hin extrudiert, damit das Glas eine Dicke erhält.](Images/Chapter_13/13_4_Extrusion_Thickness.png){#fig-1_4 fig-align="left"}
 
 ## Alternative Methode zur Erstellung eines Glases
 
@@ -115,7 +119,7 @@ Kreisförmiges Herausziehen mittels des Spin-Tools
 
 Anhand eines solchen Querschnittes eines Glases kann nun mittels des Spin-Tools kreisförmig die Form des Glases extrudiert werden. Hierfür wird zunächst in der Toolbar das Spin-Tool aktiviert. Anschliessend werden alle Vertices mit der Taste {{< kbd A >}} ausgewählt. Durch das Ziehen entlang einer der beiden «+»-Symbole des Spin-Gizmos kann anschliessend das Glas kreisförmig aus dem Querschnitt herausgezogen werden. Im Kontext-Menü zur letzten Aktion kann anschliessend der Radius noch auf 360° festgelegt werden und darunter «*Auto Merge*» aktiviert werden. Dadurch werden die beiden Enden des extrudierten Bereichs zusammen verbunden. Zusätzlich kann unter «*Steps*» noch die Anzahl extrudierter Faces erhöht werden, um einen glatteren Kreis zu erhalten.
 
-![Querschnitt des Glases. Die in der Abbildung ausgewählten Vertices müssen entlang der X- und Y-Achse noch zum Ursprung des Objektes extrudiert werden.](Images/Chapter_13/5.%20Querschnitt.png){#fig-1_5 fig-align="left"}
+![Querschnitt des Glases. Die in der Abbildung ausgewählten Vertices müssen entlang der X- und Y-Achse noch zum Ursprung des Objektes extrudiert werden.](Images/Chapter_13/13_5_Cross_Section.png){#fig-1_5 fig-align="left"}
 
 :::::: exercisebox
 :::: exercisebox-header

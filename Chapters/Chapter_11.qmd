@@ -19,7 +19,7 @@ Extrudieren mittels {{< kbd E >}}
 
 Wenn Elemente dupliziert werden, wird jeweils die Fill-Funktion verwendet, um sie wieder mit ihren ursprünglichen Elementen zu verbinden. Dies ist beschwerlich. Zudem muss auch darauf geachtet werden, dass allfällige innere Faces wieder entfernt werden. Deshalb wird selten mit dem Duplizieren gearbeitet, sondern mit der Funktion «*Extrude*». Diese Funktion ist in der Toolbar verfügbar, kann aber auch direkt mit der Taste {{< kbd E >}} ausgewählt werden.
 
-![Extrude-Icon.](Images/Chapter_11/1.%20Icon_Extrude){#fig-1_1 fig-align="left"}
+![Extrude-Icon.](Images/Chapter_11/11_1_Icon_Extrude){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Extrusion verbindet Elemente direkt
@@ -58,7 +58,7 @@ Beim Extrudieren von Faces erfolgt die Bearbeitung per Default entlang der Norma
 
 Erstellen Sie folgende Objekte ausgehend von einem Würfel.
 
-![](Images/Chapter_11/Übung_6.1%20Extrude.png){fig-align="left"}
+![](Images/Chapter_11/Exercise_6_1.png){fig-align="left"}
 :::
 ::::::
 
@@ -70,7 +70,7 @@ Schneiden mittels {{< kbd K >}}
 
 Es ist möglich, Faces und Edges mittels des Befehls «Knife» zu zerschneiden. Dadurch resultieren neue Vertices und Edges innerhalb von Flächen und Kanten. Diese Operation lässt sich ebenfalls in der Toolbar auswählen. Allerdings ist es auch möglich, mittels der Taste {{< kbd K >}} diese Operation direkt auf der Tastatur anzuwählen.
 
-![Knife-Icon.](Images/Chapter_11/2.%20Icon_Knife){#fig-1_2 fig-align="left"}
+![Knife-Icon.](Images/Chapter_11/11_2_Icon_Knife){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Ansicht im Schnitt-Modus
@@ -98,7 +98,7 @@ Prinzip des Loop Cuts
 
 Das Messer-Werkzeug ist nützlich, um kreativ und flexibel Schnitte zu erzeugen. Oftmals werden allerdings gerade Schnitte entlang einer ganzen Fläche benötigt, idealerweise auch in der Mitte der Fläche. Hierfür ist das Loop-Cut-Werkzeug geeignet. Nebst der exakten Mitte können auch andere Schnitteinheiten exakt berücksichtig werden, beispielsweise dass ein Bereich exakt nach einem Zehntel der Länge geschnitten werden soll.
 
-![Loop-Cut-Icon.](Images/Chapter_11/3.%20Icon_LoopCut){#fig-1_3 fig-align="left"}
+![Loop-Cut-Icon.](Images/Chapter_11/11_3_Icon_LoopCut){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Loop Cut mittels {{< kbd Ctrl >}} + {{< kbd R >}}
@@ -145,7 +145,7 @@ Edge Slide
 
 Der Loop Cut beinhaltet somit zwei Schritte: Die Festlegung eines Schnittes innerhalb eines Loops und zusätzlich die Festlegung, in welchem Bereich des Face-Loops der Cut erfolgen soll. Letzterer Prozess kann bei der Auswahl eines Loops an bereits gesetzten Edges direkt erfolgen. Dieser Prozess wird als Edge Slide bezeichnet und ist in der Toolbar verfügbar. Dadurch lässt sich eine Reihe von Edges proportional entlang anderer Edges verschieben.
 
-![Edge-Slide-Icon.](Images/Chapter_11/4.%20Icon_EdgeSlide){#fig-1_4 fig-align="left"}
+![Edge-Slide-Icon.](Images/Chapter_11/11_4_Icon_EdgeSlide){#fig-1_4 fig-align="left"}
 
 ## Subdivide
 
@@ -169,7 +169,7 @@ Abrunden mittels {{< kbd Ctrl >}} + {{< kbd B >}}
 
 Mithilfe der Bevel-Transformation können Kanten abgerundet werden. Hierfür wird das entsprechende Edge durch mehrere Edges ersetzt, sodass eine Abrundung der Kante erfolgt. Der Befehl für das Abschrägen kann über die Toolbar erfolgen oder mittels der Tastenkombination {{< kbd Ctrl >}} + {{< kbd B >}}.
 
-![Bevel-Icon.](Images/Chapter_11/5.%20Icon_Bevel){#fig-1_5 fig-align="left"}
+![Bevel-Icon.](Images/Chapter_11/11_5_Icon_Bevel){#fig-1_5 fig-align="left"}
 
 ::: column-margin
 Abrundung durchführen
@@ -197,7 +197,7 @@ Intrusion mittels {{< kbd I >}}
 
 Die Transformation «Inset Faces» stellt einen Spezialfall der Extrusion dar. Dabei wird eine Fläche unterteilt in zusätzliche Flächen innerhalb dieser Fläche. Wie auch bei der Extrusion werden dabei neue Vertices erstellt, welche direkt an den originalen Vertices andocken. Unterschiedlich ist allerdings, dass die neuen Vertices einen Teil der originalen Faces darstellen und somit entlang der Ausrichtung der Fläche vergrössert oder verkleinert werden können. Die Bearbeitung mittels Inset Faces kann entweder über die Toolbar oder mittels der Taste {{< kbd I >}} erfolgen.
 
-![Inset-Faces-Icon.](Images/Chapter_11/6.%20Icon_Inset_Faces){#fig-1_6 fig-align="left"}
+![Inset-Faces-Icon.](Images/Chapter_11/11_6_Icon_Inset_Faces){#fig-1_6 fig-align="left"}
 
 ::: column-margin
 Intrusion durchführen
@@ -225,7 +225,7 @@ Spin
 
 Mittels «Spin» können einzelne oder mehrere Vertices in einer kreisförmigen Anordnung extrudiert werden. Wenn diese Transformation ausgewählt ist, erscheint in der Nähe des 3D-Cursors ein Gizmo, welches eine abgerundete Linie mit einem Plus-Symbol an beiden Enden darstellt. Falls dieses Gizmo nicht angezeigt wird, sollte überprüft werden, ob die Darstellung der Gizmos im 3D-Viewport aktiviert ist.
 
-![Spin-Icon.](Images/Chapter_11/7.%20Icon_Spin){#fig-1_7 fig-align="left"}
+![Spin-Icon.](Images/Chapter_11/11_7_Icon_Spin){#fig-1_7 fig-align="left"}
 
 ::: column-margin
 Spin durchführen
@@ -288,7 +288,7 @@ Würfel hinzufügen
 
 Mittels des Befehls «*Add Cube*» kann ein neuer Würfel erstellt werden. Um den Maus zeiger herum erscheint dadurch ein Gitternetz, um zu signalisieren, wo der Würfel erstellt wird. Anschliessend kann mittels gedrückter linken Maustaste der Grundriss des Würfels erstellt werden. Nachdem die linke Maustaste losgelassen wurde, lässt sich anschliessend noch die Höhe des Würfels einstellen, welche anschliessend mit bestätigt werden muss. Mit {{< kbd esc >}} oder die rechte Maustaste lässt sich der Vorgang abbrechen.
 
-![Add-Cube-Icon.](Images/Chapter_11/8.%20Icon_AddCube){#fig-1_8 fig-align="left"}
+![Add-Cube-Icon.](Images/Chapter_11/11_8_Icon_AddCube){#fig-1_8 fig-align="left"}
 
 Die neu erstellten Würfel werden im Edit-Mode zu Bestandteilen des Objekts, welches gerade bearbeitet wird. Der Befehl «*Add Cube*» steht allerdings auch im Object-Mode zur Verfügung. Werden dort neue Würfel erstellt, bilden diese jeweils eigenständige Objekte.
 
@@ -300,7 +300,7 @@ Poly-Build-Modus
 
 Beim Poly Build handelt es sich um einen interaktiven Modus, um Geometrien zu erweitern. Dabei schlägt Blender bei gedrückter {{< kbd Ctrl >}}-Taste vor, wie neue Elemente erstellt werden können, und durch einen Klick mittels der linken Maustaste wird die Erstellung bestätigt. Mittels gedrückter linken Maustaste können Vertices bewegt werden und mittels der Kombination {{< kbd Shift >}} + linke Maustaste.
 
-![Poly-Build-Icon.](Images/Chapter_11/9.%20Icon_PolyBuild){#fig-1_9 fig-align="left"}
+![Poly-Build-Icon.](Images/Chapter_11/11_9_Icon_PolyBuild){#fig-1_9 fig-align="left"}
 
 ### Smooth
 
@@ -310,7 +310,7 @@ Objekte glätten
 
 Mittels des Befehls «Smooth» können Objekte glatter gemacht werden. Dies geschieht, indem die Winkel der Edges gemittelt werden. Statt eines 90°-Winkels entsteht dann ein flacherer Winkel. Es ist allerdings auch möglich, den gegenteiligen Effekt zu erzielen und Winkel spitzer zu machen.
 
-![Smooth-Icon.](Images/Chapter_11/10.%20Icon_Smooth){#fig-1_10 fig-align="left"}
+![Smooth-Icon.](Images/Chapter_11/11_10_Icon_Smooth){#fig-1_10 fig-align="left"}
 
 ### Shrink/Fatten
 
@@ -320,7 +320,7 @@ Objekte zusammenziehen oder aufblähen
 
 Beim Befehl «Shrink/Fatten» werden die ausgewählten Vertices entlang ihrer eigenen Normalen bewegt. Dadurch kann das Objekt aufgebläht oder zusammengezogen werden. Dies ist beispielsweise nützlich, wenn der Mantel eines Zylinders ausgewählt und sein Radius vergrössert werden soll, ohne dessen Höhe zu verändern.
 
-![Shrink/Fatten-Icon.](Images/Chapter_11/11.%20Icon_ShrinkenFatten){#fig-1_11 fig-align="left"}
+![Shrink/Fatten-Icon.](Images/Chapter_11/11_11_Icon_ShrinkenFatten){#fig-1_11 fig-align="left"}
 
 ### Shear
 
@@ -330,7 +330,7 @@ Objekte auseinanderziehen
 
 Mittels der Shear-Transformation werden die ausgewählten Punkte in einer Achse aus einandergezogen. Die Transformation geschieht dabei so, dass parallel verlaufende Linien geschert und in entgegengesetzte Richtungen auf einer Achse verschoben werden.
 
-![Shear-Icon.](Images/Chapter_11/12.%20Icon_Shear){#fig-1_12 fig-align="left"}
+![Shear-Icon.](Images/Chapter_11/11_12_Icon_Shear){#fig-1_12 fig-align="left"}
 
 ### Rip Region
 
@@ -340,7 +340,7 @@ Regionen aufteilen
 
 Mittels des Befehls «Rip Region» können Vertices, welche an mehreren Faces andocken, aufgeteilt werden. Die Faces werden dabei an der Stelle der entsprechenden Vertices getrennt und durch Vertices, welche sozusagen von den originalen Vertices abgezogen werden, neu gebildet.
 
-![Rip-Region-Icon.](Images/Chapter_11/13.%20Icon_RipRegion){#fig-1_13 fig-align="left"}
+![Rip-Region-Icon.](Images/Chapter_11/11_13_Icon_RipRegion){#fig-1_13 fig-align="left"}
 
 :::::: exercisebox
 :::: exercisebox-header
@@ -359,6 +359,6 @@ Verändern Sie den Standardwürfel im Edit-Mode so, dass er die Form eines Hause
 
 Erstellen Sie eine Vase. Die Vase sollte rund sein und eine Öffnung haben – ansonsten sind Sie frei in Ihrer Gestaltung. Achten Sie zudem darauf, dass Sie unterschiedliche Faces für den Innenbereich und für den Aussenbereich der Vase verwenden, sodass die Vase ein gewisse Dicke besitzt.
 
-![](Images/Chapter_11/Übung_7.2%20vase.png){fig-align="left"}
+![](Images/Chapter_11/Exercise_7_2.png){fig-align="left"}
 :::
 ::::::

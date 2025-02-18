@@ -13,7 +13,7 @@ Blender bietet eine Reihe von Hilfestellungen, welche nützlich für die Erstell
 
 Der 3D-Cursor wird für einige der Hilfsmittel benötigt. Deshalb ist es sinnvoll, sich damit zu befassen, wie der 3D-Cursor bewegt werden kann. In der Sidebar, welche mit der Taste {{< kbd N >}} ein- und ausgeblendet werden kann, befindet sich unter dem Register «*View*» ein Abschnitt zum 3D-Cursor. An dieser Stelle kann die Position des Cursors im dreidimensionalen Raum anhand der X-, Y- und Z-Achse definiert werden. Nebst der Position verfügt der 3D-Cursor über eine Rotation, welche ebenfalls an dieser Stelle definiert werden kann. Durch eine Veränderung der Rotation des 3D-Cursors verändert sich auch die Rotation der Linien, welche den 3D-Cursor im 3D-Viewport kreuzen. Diese Linien stellen die Rotation des 3D-Cursors dar.
 
-![Snap-Menü.](Images/Chapter_12/1.%20Snap_Menue.png){#fig-1_1 fig-align="left"}
+![Snap-Menü.](Images/Chapter_12/12_1_Snap_Menu.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Snap-Menü
@@ -45,7 +45,7 @@ Bei Transformationen können die X-, Y- und Z-Achsen zu Hilfe genommen werden. D
 -   View
 -   Cursor
 
-![Auswahl der Transform-Orientation.](Images/Chapter_12/2.%20Transform_orientation.png){#fig-1_ fig-align="left"}
+![Auswahl der Transform-Orientation.](Images/Chapter_12/12_2_Transform_orientation.png){#fig-1_ fig-align="left"}
 
 ::: column-margin
 Gizmos helfen bei der Orientierung
@@ -137,7 +137,7 @@ Eine Reihe von Transformationen orientieren sich an einem bestimmten Drehpunkt i
 -   Median Point
 -   Active Element
 
-![Icon für den Pivot-Point in der Default-Auswahl (Median-Point).](Images/Chapter_12/3.1%20Icon_Pivot_Point.png){#fig-1_3 fig-align="left"}
+![Icon für den Pivot-Point in der Default-Auswahl (Median-Point).](Images/Chapter_12/12_3_Icon_Pivot_Point.png){#fig-1_3 fig-align="left"}
 
 ### Bounding Box Center
 
@@ -195,7 +195,7 @@ Die Option «*Snap*» ist bei der Verschiebung von Objekten nützlich. Dadurch k
 -   Edge Center
 -   Edge Perpendicular
 
-![Snap-Icon.](Images/Chapter_12/Icon_Snap.png){#fig-1_4 fig-align="left"}
+![Snap-Icon.](Images/Chapter_12/12_4_Icon_Snap.png){#fig-1_4 fig-align="left"}
 
 ### Increment
 
@@ -271,6 +271,8 @@ Die Option «*Proportional Editing*» ermöglicht es, dass nahe beieinanderliege
 
 ![Icon für Proportional Editing.](Images/Chapter_12/4.1%20Icon_Proportional_Editing.png){#fig-1_5 fig-align="left"}
 
+![Icon für Proportional Editing.](Images/Chapter_12/12_5_Icon_Proportional_Editing.png){fig-align="left"}
+
 ::: column-margin
 Proportionale Bearbeitung im Object-Mode
 :::
@@ -283,7 +285,7 @@ Form der proportionalen Bearbeitung
 
 Die Elemente, welche sich innerhalb des Erfassungskreises befinden, werden anschliessend alle proportional mittransformiert. Die Proportion erfolgt dabei einer vorgegebenen Kurve, welche sich anhand des Dropdown-Menüs genauer definieren lässt. Mithilfe der proportionalen Bearbeitung lassen sich durch die Bearbeitung eines einzigen Vertex komplexe Strukturen erstellen.
 
-![Die verschiedenen Formen zur proportionalen Bearbeitung im Vergleich. Beispiele zeigen eine Fläche von 2x2 Metern, bestehend aus 16x16 Faces. Diese Faces wurden mittig um 0.5 Meter entlang der Z-Achse bewegt.](Images/Chapter_12/5.%20Proportional%20Editing%20Examples.png){#fig-1_6 fig-align="left"}
+![Die verschiedenen Formen zur proportionalen Bearbeitung im Vergleich. Beispiele zeigen eine Fläche von 2x2 Metern, bestehend aus 16x16 Faces. Diese Faces wurden mittig um 0.5 Meter entlang der Z-Achse bewegt.](Images/Chapter_12/12_6_Proportional_Editing_Examples.png){#fig-1_6 fig-align="left"}
 
 ::: column-margin
 Anwendungsbereiche für proportionale Bearbeitung
@@ -326,4 +328,4 @@ Vertices automatisch verbinden
 
 Neben den Schaltflächen für die drei Achsen befindet sich zudem das Icon für die Option «*Auto Merge Vertices*». Durch das Aktivieren dieser Option werden Vertices, welche während der weiteren Bearbeitung auf derselben Position platziert werden, automatisch miteinander verbunden. Dadurch ist es nicht mehr nötig, von Hand Vertices zu einem Vertex zu verbinden.
 
-![Icon für Auto Merge Vertices.](Images/Chapter_12/6.1%20Icon_Automerge.png){#fig-1_7 fig-align="left"}
+![Icon für Auto Merge Vertices.](Images/Chapter_12/12_7_Icon_Automerge.png){#fig-1_7 fig-align="left"}

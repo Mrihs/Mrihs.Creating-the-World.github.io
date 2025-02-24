@@ -28,7 +28,7 @@ Hinzufügen von neuen Landschaften
 
 Durch das Aktivieren dieses Add-ons wird im «*Add*»-Menü unter dem Menü punkt «*Mesh*» die Option «*Landscape*» verfügbar. Wird eine solche Landschaft hinzugefügt, erstellt Blender eine Fläche in der Welt und bearbeitet diese zu einer Landschaft um. Die Einstellungen dieser Landschaft sind im Kontext-Menü zum Hinzufügen von Objekten in der unteren linken Ecke aufzufinden.
 
-![Aktivieren des Add-ons «*A.N.T.Landscape*».](Images/Chapter_29/Aktivieren_Landscape.png){#fig-1_1 fig-align="left"}
+![Aktivieren des Add-ons «*A.N.T.Landscape*».](Images/Chapter_29/29_1_Activating_Landscape.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Problem der Bearbeitung im Kontext-Menü
@@ -36,7 +36,7 @@ Problem der Bearbeitung im Kontext-Menü
 
 Die Einstellung der Landschaft im Kontext-Menü birgt das Problem, dass das Kontext-Menü jeweils wieder verschwindet, sobald ein Klick in den dreidimensionalen Raum des 3D-Viewport-Editors erfolgt. Auch das Durchführen anderer Operationen ausserhalb dieses Kontext-Menüs führt zum Verschwinden des Menüs. Die Bearbeitung der Landschaften erfolgt allerdings innerhalb des Kontext-Menüs. Durch einen Klick ausserhalb des Kontext-Menüs werden alle Einstellungen in diesem Menü unwiderruflich auf das Objekt angewendet. Sollte dies aus Versehen geschehen, obwohl man noch nicht mit der Einstellung der Landschaft fertig ist, muss man das Landschaftsobjekt löschen und erneut eine Landschaft hinzufügen. Glücklicherweise erinnert sich Blender an die zuletzt verwendeten Einstellungen, sodass die Einstellungen an derselben Stelle weitergeführt werden können.
 
-![Eine Landschaft, erstellt mit «*A.N.T.Landscape*».](Images/Chapter_29/Landscape_example.png){#fig-1_2 fig-align="left"}
+![Eine Landschaft, erstellt mit «*A.N.T.Landscape*».](Images/Chapter_29/29_2_Landscape_Example.png){#fig-1_2 fig-align="left"}
 
 ## Die Optionen im A.N.T. Landscape-Add-on
 
@@ -159,4 +159,4 @@ Water Plane
 
 Mittels der Option «*Water Plane*» wird eine weitere Fläche hinzugefügt, die als Wasserfläche dienen kann. Es handelt sich dabei um eine Plane, welche als separates Objekt hinzugefügt wird. Dieser Fläche kann ebenfalls bereits ein Material zugewiesen werden. Mittels der Zeile «*Level*» wird bestimmt, wie hoch der Wasserspiegel sein soll.
 
-![Links ein mit A.N.T.Landscape erstellter Berg. Daneben ein Berg, dessen Displacement als Minimum 0.1 und als Maximum 0.5 hat. Durch die Anhebung des Wertes «*Minimum*» auf 0.1 werden alle Vertices im Objekt auf diese Höhe hinaufgesetzt. Danaben zwei Versionen desselben Berges mit unterschiedlichen Falloff-Werten.](Images/Chapter_29/Landscape_comparison.png){#fig-1_3 fig-align="left"}
+![Links ein mit A.N.T.Landscape erstellter Berg. Daneben ein Berg, dessen Displacement als Minimum 0.1 und als Maximum 0.5 hat. Durch die Anhebung des Wertes «*Minimum*» auf 0.1 werden alle Vertices im Objekt auf diese Höhe hinaufgesetzt. Danaben zwei Versionen desselben Berges mit unterschiedlichen Falloff-Werten.](Images/Chapter_29/29_3_Landscape_Comparison.png){#fig-1_3 fig-align="left"}

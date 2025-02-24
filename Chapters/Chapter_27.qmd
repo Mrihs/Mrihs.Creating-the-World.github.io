@@ -3,24 +3,16 @@ title: "27. Tutorial: Einen Hammer texturieren"
 editor: visual
 ---
 
-
-
-
-
-
-
-
 :::::: downloadbox
-:::: downloadbox-header
+::: downloadbox-header
 Unterlagen für dieses Kapitel
+:::
+
+:::: downloadbox-body
+::: button
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Download Hammer.zip](assets/Hammer/){.btn .btn-light download="Hammer.zip"}
+:::
 ::::
-
-::: downloadbox-body
-::: {.button}
-[<i class="bi bi-file-earmark-arrow-down-fill"></i>  Download Hammer.zip](assets/Hammer/){.btn .btn-light download="Hammer.zip"}
-:::
-
-:::
 ::::::
 
 ::: column-margin
@@ -29,7 +21,7 @@ Ziel dieser Aufgabe
 
 Als Nächstes wird anhand eines Modelles aufgezeigt, wie das Texturieren erfolgt. Im Zip-Ordner «*Hammer*» ist ein .blend-File aufzufinden, in dem sich ein Mesh in der Form eines Hammers befindet. Nebst diesem File sind im Ordner «*Metal022_4K-JPG*» verschiedene Texturarten für ein metallisches Material aufzufinden. Dieses Material wird anhand der Texturen in diesem Ordner erstellt und dem Hammerkopf zugewiesen. Anschliessend wird eine weitere Textur gesucht und dem Holzstiel des Hammers zugewiesen.
 
-![Der texturierte Hammer als Ziel dieses Tutorials.](Images/Chapter_27/1_Finaler_Hammer.png){#fig-1_1 fig-align="left"}
+![Der texturierte Hammer als Ziel dieses Tutorials.](Images/Chapter_27/27_1_Final_Hammer.png){#fig-1_1 fig-align="left"}
 
 ## UV-Mapping
 
@@ -45,7 +37,7 @@ Faces auswählen, um UVs zu betrachten
 
 Um im UV-Editor die UVs des Hammers betrachten zu können, müssen die jeweils anzuzeigenden Faces ausgewählt werden. Hierfür muss zunächst der Edit-Mode mit dem ausgewählten Hammer aktiviert werden. Damit alle UVs betrachtet werden können, müssen alle Faces des Hammers mittels der Taste {{< kbd A >}} ausgewählt werden. Danach werden im UV-Editor die UVs angezeigt.
 
-![UVs des Hammers.](Images/Chapter_27/2_Originale_UVs.png){#fig-1_2 fig-align="left"}
+![UVs des Hammers.](Images/Chapter_27/27_2_Original_UVs.png){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 UVs mit Cube Projection neu berechnen
@@ -53,7 +45,7 @@ UVs mit Cube Projection neu berechnen
 
 Die angezeigten UVs müssen noch angepasst werden, da diese durch die Erstellung des Hammers aus einem 3D-Würfel entstanden sind. Deshalb wird Blender der Befehl gegeben, dass das Programm selbstständig neue UVs berechnen soll. Hierfür wird im Editor-Mode des 3D-Viewports-Editors die Taste {{< kbd U >}} gedrückt. Dadurch erscheint beim Mauszeiger das Menu «*UV Mapping*» in diesem Menü wird die Option «*Cube Projection*» ausgewählt. Im UV-Editor werden nun die neu berechneten UVs angezeigt.
 
-![UVs nach der Bearbeitung mittels Cube Projection.](Images/Chapter_27/3_UVS_Cube_Projection.png){#fig-1_3 fig-align="left"}
+![UVs nach der Bearbeitung mittels Cube Projection.](Images/Chapter_27/27_3_UVS_Cube_Projection.png){#fig-1_3 fig-align="left"}
 
 ## Materialen erstellen
 
@@ -81,7 +73,7 @@ Faces für Holz-Material auswählen
 
 Im Edit-Mode können anschliessend alle Faces, welche zum Holzstiel gehören, ausgewählt werden. Dazu kann ein Loop-Select verwendet werden. Hierfür wird der Face-Selection-Modus verwendet und bei gedrückter {{< kbd Ctrl >}}-Taste auf ein Edge geklickt, welches entlang dem Stiel des Hammers verläuft. Dadurch sollten alle Faces des Stiels, ausser dasjenige am Boden des Hammerstiels, ausgewählt worden sein. Das noch nicht ausgewählte Face des Hammerstiels kann bei gedrückter {{< kbd Shift >}}-Taste durch einen Mausklick zur Auswahl hinzugefügt werden.
 
-![Faces für das Holz-Material.](Images/Chapter_27/4_Faces_Holz.png){#fig-1_4 fig-align="left"}
+![Faces für das Holz-Material.](Images/Chapter_27/27_4_Faces_Wood.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Materialien anwenden
@@ -163,7 +155,7 @@ Grösse der Textur einstellen
 
 Nachdem alle Texturen eingefügt wurden, kann im Mapping Node die Grösse der Textur angepasst werden. Hierfür kann der Wert bei der Skalierung entlang der drei Achsen vergrössert oder verkleinert werden. Beispielsweise könnte die Textur dreimal so klein dargestellt werden, indem die Skalierung für alle drei Achsen auf den Wert 3 gesetzt wird.
 
-![Node-Struktur für das Metall-Material.](Images/Chapter_27/5_Nodes_Metall.png){#fig-1_5 fig-align="left"}
+![Node-Struktur für das Metall-Material.](Images/Chapter_27/27_5_Nodes_Metal.png){#fig-1_5 fig-align="left"}
 
 ## Holz texturieren
 

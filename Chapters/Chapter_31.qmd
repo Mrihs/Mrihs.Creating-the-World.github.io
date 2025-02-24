@@ -17,7 +17,7 @@ Was ist Subsurface-Scattering?
 
 Bei der Refraktion von Lichtstrahlen dringen diese Lichtstrahlen in ein Objekt ein. Anschliessend werden sie in der Oberfläche des Objektes gestreut und dringen anschliessend wieder aus dem Objekt aus. Diese Lichtstrahlen können dabei unterschiedlich weit innerhalb des Objektes eindringen. Dadurch kann es in manchen Situationen vorkommen, dass die Lichtstrahlen auch aus der anderen Seite des Objektes wieder austreten. Dieser Effekt wird als Subsurface-Scattering bezeichnet. Dabei dringen Lichtstrahlen durch das Objekt hindurch und scheinen auch das Innere des Objektes zu beleuchten.
 
-![Lichtstrahlen beim Subsurface-Scattering. Die Strahlen dringen deutlich weiter in das Objekt ein und erhellen dessen Inneres. Bei dünnen Objekten dringen die Strahlen durch das Objekt hindurch.](Images/Chapter_31/Subsurface%20Scattering.png){#fig-1_1 fig-align="left"}
+![Lichtstrahlen beim Subsurface-Scattering. Die Strahlen dringen deutlich weiter in das Objekt ein und erhellen dessen Inneres. Bei dünnen Objekten dringen die Strahlen durch das Objekt hindurch.](Images/Chapter_31/31_1_Subsurface_Scattering.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Beispiel Subsurface-Scattering
@@ -25,7 +25,7 @@ Beispiel Subsurface-Scattering
 
 Abbildung 2 zeigt ein Beispiel für Subsurface-Scattering. Die Katze wird von hinten beleuchtet und die Lichtstrahlen berühren die Rückseite ihrer Ohren. Aus der Perspektive der Fotografie werden anschliessend die Strahlen, die durch das Objekt hindurchdringen, ersichtlich, und führen dadurch zum Effekt des Subsurface-Scattering.
 
-![Ein Beispiel für Subsurface-Scattering.](Images/Chapter_31/.png){#fig-1_2 fig-align="left"}
+![Ein Beispiel für Subsurface-Scattering.](Images/Chapter_31/31_2__Cat_Example_Subsurface_Scattering.jpg){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Subsurface-Scattering tritt häufig bei Haut auf
@@ -88,7 +88,7 @@ Specularity für Bereich der Lichtreflexion
 
 Bislang wurden die Einstellungen «*Metallic*» und «*Roughness*» verwendet, um eine Reflexion zu erzielen. Der Metallic-Wert beschrieb dabei, wie hoch der Anteil der Refraktion ist, welcher zur Reflexion hinzukommt, während die Roughness durch eine unebenere Oberfläche zu einer diffuseren Lichtreflexion führt. Die Specularity wurde dabei jeweils konstant gelassen. Tatsächlich ist allerdings auch die Specularity für die Reflexion mitverantwortlich. Sie dient der Berechnung, an welchen Stellen eine Reflexion erfolgen soll.
 
-![Lichtstrahlen mit einem tiefen Einfallswinkel. In solchen Fällen kommt es eher zu einer Refraktion.](Images/Chapter_31/Tiefer%20Einfallswinkel.png){#fig-1_3 fig-align="left"}
+![Lichtstrahlen mit einem tiefen Einfallswinkel. In solchen Fällen kommt es eher zu einer Refraktion.](Images/Chapter_31/31_3_Low_Angle.png){#fig-1_3 fig-align="left"}
 
 ### Einfallswinkel und Index of Refraction
 
@@ -104,7 +104,7 @@ Einfallswinkel sorgt für Fresnel
 
 Ein Fresnel-Effekt ergibt sich durch den Einfallswinkel des Lichtes. Je höher der Einfallswinkel des Lichtes ist, desto eher kommt es zu einer Reflexion des Lichtes. Ist der Einfallswinkel des Lichtes geringer, kommt es eher zu einer Refraktion. An Kanten ergeben sich dadurch höhere Einfallswinkel je nach Ausrichtung zu einer Lichtquelle und dadurch wird dort ein höherer Anteil von Licht reflektiert.
 
-![Lichtstrahlen mit einem hohen Einfallswinkel. In solchen Fällen kommt es eher zu einer Reflexion.](Images/Chapter_31/Hoher%20Einfallswinkel.png){#fig-1_4 fig-align="left"}
+![Lichtstrahlen mit einem hohen Einfallswinkel. In solchen Fällen kommt es eher zu einer Reflexion.](Images/Chapter_31/31_4_High_Angle.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 IOR
@@ -120,7 +120,7 @@ IOR berechnen
 
 Durch eine kurze Internetrecherche lässt sich schnell der IOR für ein Material ausfindig machen. So hat Gold einen IOR von 0.479, Eis einen IOR von 1.309, Milch einen IOR von 1.350 und Asphalt weist einen IOR von 1.635 auf (Quelle: <https://pixelandpoly.com/ior.html>). Diese Werte könnten nun direkt in die Zeile «*Specular*» eingegeben werden. Das Problem ist jedoch, dass diese Zeile nicht für physikalisch korrekte IOR-Werte angepasst ist und mit Inputs von 0 bis 1 arbeitet. Aus diesem Grund muss der IOR von Hand in den Specular-Input umgewandelt werden. Die Formel hierfür lautet:
 
-![](Images/Chapter_31/Formel.png){fig-align="left"}
+![](Images/Chapter_31/Formula.png){fig-align="left"}
 
 ::: column-margin
 Value-Node hinzufügen und IOR eintragen
@@ -158,7 +158,7 @@ Math-Node zum erneuten Dividieren
 
 Nun wird noch ein letztes Mal ein Duplikat des dividierenden Math-Nodes erstellt und rechts neben den potenzierenden Math-Node platziert. Der erste Value-Input wird mit dem Value-Output des potenzierenden Math-Nodes verbunden und die zweite Value-Zeile wird auf 0.08 gesetzt. Dadurch wird der Output des potenzierenden Math-Nodes durch den Wert 0.08 dividiert. Wenn nun alle Nodes entsprechend der Abbildung 6 eingefügt wurden, sollte der Output des letzten Math-Nodes nun den Wert für den Specular-Input enthalten.
 
-![Node-Anordnung, um die Specularity anhand des IORs zu berechnen.](Images/Chapter_31/Specularity%20calc..png){#fig-1_6 fig-align="left"}
+![Node-Anordnung, um die Specularity anhand des IORs zu berechnen.](Images/Chapter_31/31_5_Specularity_Calc.png){#fig-1_6 fig-align="left"}
 
 ::: column-margin
 Was ist dabei passiert?

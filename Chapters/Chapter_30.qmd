@@ -141,7 +141,7 @@ White-Noise aufhellen mittels Bright/Contrast-Node
 
 Durch eine Erhöhung der Zeile «*Bright*» wird anschliessend die Noise-Textur farblich erhellt. Dies führt dazu, dass die dunkleren Anteile, welche zu einer tieferen Roughness führen, aufgehellt werden und dadurch eine höhere Roughness aufweisen. Hier könnte beispielweise ein Wert von 0.3 verwendet werden.
 
-![Nodes-System für prozedurale Sand-Texturen.](Images/Chapter_30/Nodes_System.png){#fig-1_1 fig-align="left"}
+![Nodes-System für prozedurale Sand-Texturen.](Images/Chapter_30/30_1_Nodes_System.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 White-Noise-Textur als Normal-Textur verwenden
@@ -195,7 +195,7 @@ Multiplizieren von Farben
 
 Das Ziel ist allerdings keine graduelle Abstufung zwischen den beiden Texture-Nodes. Stattdessen sollten die Wellen der Wave-Textur über die White-Noise-Textur gelegt werden. Um dies zu erzielen, kann im Dropdown-Menü, welches mit «*Mix*» angeschrieben ist, die Option «*Multiply*» ausgewählt werden. Dadurch werden die beiden Texturen nun nicht mehr miteinander gemischt, sondern multipliziert. Mittel des Reiters «*Fac*» kann nun ein Grad für diese Multiplikation ausgewählt werden, beispielsweise 0.675. Anschliessend kann der Color-Output des Mix-RGB-Nodes verwendet werden, um die Inputs, welche bisher vom White-Noise-Texture-Node anvisiert wurden, zu ersetzen.
 
-![Kombination der Wave-Textur mit der White-Noise-Textur.](Images/Chapter_30/finalDunes.png){#fig-1_2 fig-align="left"}
+![Kombination der Wave-Textur mit der White-Noise-Textur.](Images/Chapter_30/30_2_Final_Dunes_Node_System.png){#fig-1_2 fig-align="left"}
 
 ## Prozedurales Texturieren
 

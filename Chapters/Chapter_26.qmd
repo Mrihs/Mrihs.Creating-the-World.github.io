@@ -39,7 +39,7 @@ Metallic-Textur verfeinert die Color-Textur
 
 Die Metallic-Textur wird jeweils zusätzlich zur Color-Textur verwendet und mit dem Metallic-Input verbunden. Eine Textur, die sowohl aus Metall als auch aus Rost besteht, würde etwa an den Stellen, an denen Rost dargestellt wird, einen geringeren Metallic-Wert aufweisen. Abbildung 1 zeigt links ein Beispiel einer solchen Color-Textur und rechts die dazugehörige Metallic-Textur, bei der rostige Anteile durch schwarze Anteile dargestellt werden (Bildquelle: <https://ambientcg.com/view?id=Metal022>)
 
-![Links die Color-Textur eines verrosteten Metalls, rechts die dazugehörige Metallic-Textur.](Images/Chapter_26/Color_Metall_Comparisson.png){#fig-1_1 fig-align="left"}
+![Links die Color-Textur eines verrosteten Metalls, rechts die dazugehörige Metallic-Textur.](Images/Chapter_26/26_1_Color_Metall_Comparison.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Fehlende Metallic-Textur
@@ -63,7 +63,7 @@ Glossy-Textur als Gegenteil der Roughness-Textur
 
 Die Glossy-Textur beschreibt das Gegenteil der Roughness-Textur. Sie ist ebenfalls schwarz-weiss aufgebaut, allerdings stehen bei ihr hellere Stellen für Bereiche, die eine geringere Roughness aufweisen und dadurch gebündelter zu reflektieren scheinen. Dies stellt somit gerade die invertierte Einstellung der Roughness dar. Eine Glossy-Textur kann mit dem Roughness-Input eines Shaders verbunden werden. Dazwischen sollte allerdings ein «*Invert*»-Node eingefügt werden. Dadurch werden die Werte invertiert, sodass sie einer Roughness-Textur entsprechen.
 
-![Node-Anordnung, um mit einer Glossy-Textur umzugehen.](Images/Chapter_26/Gloosy-Nodes.png){#fig-1_2 fig-align="left"}
+![Node-Anordnung, um mit einer Glossy-Textur umzugehen.](Images/Chapter_26/26_2_Gloosy_Nodes.png){#fig-1_2 fig-align="left"}
 
 ## Normal-Textur
 
@@ -73,7 +73,7 @@ Normal-Textur, um Unebenheiten im Objekt zu simulieren
 
 Die Normal-Texturen fallen visuell auf, da sie eine bizarrerscheinende blaue Verfärbung aufweisen, wie die Normal-Textur auf der rechten Seite der Abbildung 3 (Bildquelle: <https://ambientcg.com/view?id=Rocks005>). Mittels dieser Textur können minimale Unebenheiten in einem Objekt simuliert werden. Dabei stellt jede Farbe, die in diesem Bild auftritt, eine Achse dar, anhand derer die simulierten Unebenheiten berechnet werden. In Online-Datenbanken werden diese Texturen teilweise mit der Endung «normal» oder «norm» versehen.
 
-![Links eine Color-Textur, rechts die dazugehörige Normal-Textur.](Images/Chapter_26/Vgl.%20color%20und%20normal%20für%20PPP.png){#fig-1_3 fig-align="left"}
+![Links eine Color-Textur, rechts die dazugehörige Normal-Textur.](Images/Chapter_26/26_3_Color_Normal_Comparison.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Zwei Arten von Normal-Texturen
@@ -109,7 +109,7 @@ Verwendung der Normal-Texturen
 
 Um die Normal-Texturen einem Material beizufügen, wird ein Node benötigt, welcher die Daten der Normal-Texturen extrahiert und daraus die Unebenheiten berechnet. Hierfür wird der Bump-Node verwendet. Dieser ist im «*Add*»-Menü des Shader-Editors unter «*Vector \| Bump*» zu finden. Anschliessend wird der Color-Output der Normal-Textur mit dem «*Height*»-Input des Bump-Nodes verbunden. Dadurch erhält der Bump-Node als Input die Höhe für die Unebenheiten basierend auf der Textur. Wie stark diese Unebenheiten anschliessend emuliert werden sollen, kann mittels des Reglers «*Strength*» im Bump-Node eingestellt werden. Der Normal-Output des Bump-Nodes wird anschliessend mit dem Normal-Input des Principled-BSDF-Shaders verbunden.
 
-![Anordnung der Normal-Textur mit einem Bump-Node zwischen dem Image-Texture-Node und dem Principled-BSDF-Node.](Images/Chapter_26/Normal_Textur.png){#fig-1_4 fig-align="left"}
+![Anordnung der Normal-Textur mit einem Bump-Node zwischen dem Image-Texture-Node und dem Principled-BSDF-Node.](Images/Chapter_26/26_4_Normal_Texture.png){#fig-1_4 fig-align="left"}
 
 ## Displacement-Textur
 
@@ -131,7 +131,7 @@ Mesh mittels Displacement-Textur verformen
 
 Die Displacement-Textur kann auch verwendet werden, um das Mesh tatsächlich anhand der Textur zu verformen. Dies ist zum einen mit dem Displacement-Modifier möglich. Dabei werden die einzelnen Vertices des Meshes basierend auf der Textur deformiert. Dies bedeutet allerdings auch, dass sehr viele Vertices benötigt werden, damit möglichst viele Details erfasst werden. In der Render-Engine Cycles kann zum anderen eingestellt werden, dass basierend auf dem Displacement-Material-Output das Mesh verformt wird. Allerdings wird auch dabei eine Vielzahl von Vertices benötigt. In der bislang verwendeten Render-Engine Eevee ist dies jedoch nicht möglich.
 
-![Anordnung der Displacement-Textur mit einem Displacement-Node zwischen dem Image-Texture-Node und dem Material-Output-Node.](Images/Chapter_26/Displacement_Nodes.png){#fig-1_5 fig-align="left"}
+![Anordnung der Displacement-Textur mit einem Displacement-Node zwischen dem Image-Texture-Node und dem Material-Output-Node.](Images/Chapter_26/26_5_Displacement_Nodes.png){#fig-1_5 fig-align="left"}
 
 ## Ambient-Occlusion-Textur
 
@@ -147,7 +147,7 @@ Ambient-Occlusion-Textur verwenden
 
 Die Ambient-Occlusion-Textur wird selten bei der Texturierung verwendet. Wenn sie allerdings berücksichtigt werden soll, empfiehlt es sich, diese mit der Color-Textur zu kombinieren. Hierfür wird ein «*MixRGB*»-Node verwendet, welcher zwei Farben miteinander mischen kann. Dieser ist im «*Add*»-Menü unter «*Color \| MixRGB*» zu finden. Anschliessend kann der Color-Output der Color-Textur mit dem ersten Color-Input («*Color1*») verbunden werden und der Color-Output der Ambient-Occlusion-Textur mit dem zweiten Color-Output («*Color2*»). Im Dropdown-Menü auf der Schaltfläche «*Mix*» sollte zudem die Option «*Multiply*» ausgewählt werden. Dadurch werden die Schattenanteile mit den Farbwerten multipliziert (unter der Einstellung «*Mix*» würden sich lediglich graduelle Abstufungen zwischen den beiden Texturen ergeben). Mithilfe des Reiters «*Fac*» kann anschliessend der Faktor definiert werden, mit dem die Schattenanteile auf die Grundfarbe multipliziert werden sollen. Der Color-Output des Mix-RGB-Nodes kann anschliessend mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden.
 
-![Node-Anordnung, um die Ambient-Occlusion-Textur mit der Color-Textur zu multiplizieren.](Images/Chapter_26/AOC_Nodes.png){#fig-1_6 fig-align="left"}
+![Node-Anordnung, um die Ambient-Occlusion-Textur mit der Color-Textur zu multiplizieren.](Images/Chapter_26/26_6_AOC_Nodes.png){#fig-1_6 fig-align="left"}
 
 ## Alpha-Textur
 
@@ -179,7 +179,7 @@ Lediglich ein Mapping-Node für mehrere Texturen mit identischem Mapping
 
 Zusätzlich benötigt jeder Image-Texture-Node einen Mapping-Node, der wiederum auf einen Texture-Coordinate-Node folgt. Dies ist allerdings sehr unübersichtlich und komplex. Da in der Regel alle Texturarten innerhalb eines Materials in gleicher Weise auf das Objekt übertragen werden, kann deshalb für alle Image-Texture-Nodes derselbe Mapping-Node verwendet werden. Dieser sendet anschliessend seine Mapping-Informationen an alle nach ihm folgenden Nodes aus. Dadurch muss lediglich dieser eine Node bearbeitet werden und das Mapping für alle Texturarten wird gleichzeitig bearbeitet, statt dass eine Bearbeitung für mehrere Mapping-Nodes erfolgen muss.
 
-![Anordnung von verschiedenen Texturarten zu einem Material.](Images/Chapter_26/Texture-Mapping-Vorlage.png){#fig-1_7 fig-align="left"}
+![Anordnung von verschiedenen Texturarten zu einem Material.](Images/Chapter_26/26_7_Texture_Mapping_Presentation.png){#fig-1_7 fig-align="left"}
 
 ## Texturen auf Material betrachten mithilfe des Node-Wrangler-Add-ons
 

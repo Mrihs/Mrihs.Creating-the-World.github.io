@@ -9,7 +9,7 @@ Was macht die Displacement-Textur genau?
 
 Bislang wurden Texturen innerhalb von Objekten als Bestandteil von Materialien verwendet. So wurde etwa mittels der Color-Textur die Farbe für ein Material über eine Fläche hinweg festgelegt oder mittels der Roughness-Textur bestimmt, welchen Wert die Roughness an einer bestimmten Stelle hat. Im nächsten Schritt wird aufgezeigt, welche Mechanismen hinter der Displacement-Textur stecken. Abbildung 1 zeigt eine Displacement Textur. Was könnte sich hinter dieser Textur verbergen?
 
-![Eine Displacement-Textur. Was könnte sich dahinter verbergen?](Images/Chapter_28/1_displacement_map.png){#fig-1_1 fig-align="left"}
+![Eine Displacement-Textur. Was könnte sich dahinter verbergen?](Images/Chapter_28/28_1_Displacement_Map.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Plane hinzufügen
@@ -29,7 +29,7 @@ Displace-Modifier hinzufügen
 
 Als Nächstes wird ein neuer Modifier hinzugefügt. Hierbei handelt es sich um einen Modifier, der bislang noch nicht eingeführt wurde – nämlich um den «*Displace*»-Modifier. Dieser ist in der dritten Spalte der Modifier-Auswahl unter «*Deform*» aufzufinden. Sobald dieser hinzugefügt wurde, empfiehlt es sich, die Einstellung «*Coordinates*» auf «*UV*» umzuschalten.
 
-![Icon für den Textur-Reiter im Properties-Editor.](Images/Chapter_28/Icon_Texture_Tab.png){#fig-1_2 fig-align="left"}
+![Icon für den Textur-Reiter im Properties-Editor.](Images/Chapter_28/28_2_Icon_Texture_Tab.png){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Textur zum Displace-Modifier hinzufügen
@@ -37,7 +37,7 @@ Textur zum Displace-Modifier hinzufügen
 
 Dem Displace-Modifier kann eine Textur hinzugefügt werden. Hierfür muss auf die Schaltfläche «*New*» geklickt werden. Anschliessend wird von Blender ein Slot für eine neue Textur erstellt, welche nun im Displace-Modifier verwendet wird. Um diese Textur bearbeiten zu können, muss der Textur-Reiter, welcher sich zuunterst im Properties-Editor befindet, geöffnet werden. Alternativ kann auch innerhalb des Displace-Modifiers auf die Schaltfläche «*Show texture in texture tab*» geklickt werden, welche sich ganz rechts innerhalb des neu erstellten Textur-Slots befindet.
 
-![Icon zur Einstellung der Texturen im Textur-Reiter.](Images/Chapter_28/Show_texture_in_Texture_Tab.png){#fig-1_3 fig-align="left"}
+![Icon zur Einstellung der Texturen im Textur-Reiter.](Images/Chapter_28/28_3_Icon_Show_texture_in_Texture_Tab.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Einstellungen im Textur-Reiter

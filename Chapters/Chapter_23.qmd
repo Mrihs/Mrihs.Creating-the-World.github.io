@@ -23,7 +23,7 @@ Node hinzufügen
 
 Um einen neuen Node hinzuzufügen, wird die Tastenkombination {{< kbd Shift >}} + {{< kbd A >}} verwendet. Dadurch öffnet sich beim Mauszeiger das «*Add*»-Menü für den Shader-Editor. Anschliessend kann über das Menü der entsprechende Node gesucht werden. Die Nodes sind in unterschiedliche Kategorien aufgeteilt, die zu einem späteren Zeitpunkt ausführlich beschrieben werden. Statt den entsprechenden Node durch die Kategorien auszuwählen, kann auch die Suchleiste zuoberst im Menü ausgewählt werden und nach dem entsprechenden Node gesucht werden.
 
-![Image-Texture-Node, der neben dem Principled-BSDF-Shader hinzugefügt wurde.](Images/Chapter_23/Anordnung%20Texture%20Node.png){#fig-1_1 fig-align="left"}
+![Image-Texture-Node, der neben dem Principled-BSDF-Shader hinzugefügt wurde.](Images/Chapter_23/23_1_Organisation_Texture_Node.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Texture-Node hinzufügen
@@ -53,7 +53,7 @@ Image-Texture-Node verbinden
 
 Der Image-Texture-Node beinhaltet nun die geladene Bilddatei als Information, die er mittels des Outputs «*Color*» weiterleiten kann. Diese Farbe stellt nun keine einheitliche Farbe mehr dar, sondern die Bilddatei. Der Color-Output des Image-Texture-Nodes kann nun mit dem Base-Color-Input des Principled-BSDF-Shaders verbunden werden, wie in Abbildung 2 dargestellt. Dadurch verschwindet das Auswahlfeld, mit der eine Farbe für die Base-Color des Principled-BSDF-Shaders ausgewählt werden kann. Dies liegt daran, dass dieser Informationsparameter für die Farbe bereits belegt ist, nämlich durch die Textur, welche mit dem Input der Base-Color verbunden wurde. Wird das Objekt, zu dem das Material gehört, nun im 3D-Viewport-Editor in der Material-Preview betrachtet, sollte die Textur des Objektes nun zu erkennen sein.
 
-![Verbindung zwischen einem Image-Texture-Node und der Base-Color des Principled-BSDF-Shaders.](Images/Chapter_23/Texture_Node_connecte.png){#fig-1_2 fig-align="left"}
+![Verbindung zwischen einem Image-Texture-Node und der Base-Color des Principled-BSDF-Shaders.](Images/Chapter_23/23_2_Texture_Node_Connected.png){#fig-1_2 fig-align="left"}
 
 :::::: rememberbox
 :::: rememberbox-header
@@ -96,7 +96,7 @@ Verbindung von Texture-Coordinate-und Mapping-Node
 
 Häufig werden die UVs verwendet, um das Mapping der Texturen auf das Objekt zu bestimmen. Dabei handelt es sich um die Standardoption, welche der Image-Texture-Node ohne den Mapping-Node durchführen würde. Somit wird in der Regel der UV-Output des Texture-Coordinate-Nodes mit dem Vector-Input des Mapping-Nodes verbunden und der Vector-Output des Mapping-Nodes mit dem Vector-Input des Image-Texture-Nodes, so wie in Abbildung 3. Durch diese Anordnung wird die Textur wieder auf dem Objekt sichtbar.
 
-![Ein Image-Texture-Node, der mit einem Texture-Coordinate- und einem Mapping-Node verbunden ist.](Images/Chapter_23/Texture_Node_Mapping.png){#fig-1_3 fig-align="left"}
+![Ein Image-Texture-Node, der mit einem Texture-Coordinate- und einem Mapping-Node verbunden ist.](Images/Chapter_23/23_3_Texture_Node_Mapping.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Zuordnungspunkte der Texturen bewegen
@@ -124,7 +124,7 @@ Node-Wrangler-Addon aktivieren
 
 Dank einem Add-on, welches direkt mit Blender mitgeliefert wird, ist dies sehr leicht möglich. Es handelt sich dabei um das Node-Wrangler-Add-on. Um dieses zu aktivieren, müssen die Einstellungen aufgerufen werden (*Edit \| Preferences*) und darin auf der linken Seite der Reiter «*Add-ons*» ausgewählt werden. Im Suchfeld kann anschliessend nach «*Node Wrangler*» gesucht werden. Anschliessend müsste die Zeile «*Node: Node Wrangler*» angezeigt werden. Durch das Aktivieren des Kontrollkastens am Zeilenanfang wird das Add-on aktiviert, sodass das Einstellungsfenster bereits wieder geschlossen werden kann.
 
-![Aktiviertes Node-Wrangler-Add-on.](Images/Chapter_23/.png){#fig-1_4 fig-align="left"}
+![Aktiviertes Node-Wrangler-Add-on.](Images/Chapter_23/23_4_Node_Wrangler_Activated.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Vorlage für Image-Textures hinzufügen

@@ -9,7 +9,7 @@ Checker-Textur innerhalb von Blender erstellen
 
 Es ist auch möglich, innerhalb von Blender eigene Texturen zu emulieren. Beispielsweise kann innerhalb des Shader-Editors eine Checker-Textur hinzugefügt werden. Diese ist im Add-Menü unter «*Texture \| Checker Texture*» zu finden. Diese kann anschliessend mit der Base-Color des Principled-BSDF-Shaders verbunden werden, wie in Abbildung 1 abgebildet. Dadurch wird ein schachbrettartiges Muster aus zwei Farben erstellt und als Grundfarbe verwendet. Die Farbe kann dabei beliebig verändert werden, beispielsweise in Schwarz und Weiss, sodass eine Textur entsteht, wie sie in Abbildung 2 auf den Standardwürfel angewendet wurde. Über die beiden Farbboxen zu den Parametern «*Color1*» und «*Color2*» können die Farben verändert werden.
 
-![Eine Checker-Textur, die mit der Base-Color des Principled-BSDF-Shaders verbunden ist.](Images/Chapter_24/Checker_Texture_Base_Color_connected.png){#fig-1_1 fig-align="left"}
+![Eine Checker-Textur, die mit der Base-Color des Principled-BSDF-Shaders verbunden ist.](Images/Chapter_24/24_1_Checker_Texture_Base_Color_Connected.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Checker-Textur mit Roughness verbinden
@@ -17,7 +17,7 @@ Checker-Textur mit Roughness verbinden
 
 Bislang wurden Texturen lediglich verwendet, um die Farbe der Oberflächen zu variieren. Es ist allerdings auch möglich, dass andere Parameter eines Shaders mittels Texturen variiert werden können. Beispielsweise könnte die Checker-Textur statt mit der Base-Color mit der Roughness verbunden werden. Abbildung 3 stellt denselben Standardwürfel wie in Abbildung 2 dar, jedoch wurde bei ihm die Checker-Textur mit dem Roughness-Input des Principled-BSDF-Shaders verbunden statt mit der Base-Color. Zusätzlich wurde die Base-Color auf blau gestellt, um die Veränderungen besser sichtbar zu machen.
 
-![Der Standardwürfel mit einer schwarz-weissen Checker-Textur als Input für die Base-Color.](Images/Chapter_24/Checker-Texture.png){#fig-1_2 fig-align="left"}
+![Der Standardwürfel mit einer schwarz-weissen Checker-Textur als Input für die Base-Color.](Images/Chapter_24/25_2_Checker_Texture.png){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Veränderung der Roughness über die Oberfläche hinweg
@@ -25,7 +25,7 @@ Veränderung der Roughness über die Oberfläche hinweg
 
 Was ist in Abbildung 3 mit dem Material geschehen? Die Farbe ist über die gesamte Oberfläche identisch – und trotzdem scheint die Textur einen Einfluss zu haben. In diesem Fall wurden die Farbwerte der Textur übernommen und mit diesen die Roughness angepasst. Bereiche, welche in der Abbildung 2 eine schwarze Farbe aufwiesen, sind in der Abbildung 3 nun deutlich glatter und reflektieren das Licht dadurch gebündelter. Bereiche, welche in der Abbildung 2 hingegen eine weisse Farbe aufwiesen, sind in der Abbildung 3 nun deutlich rauer und reflektieren das Licht gestreuter. Somit variiert die Roughness nun basierend auf der Textur.
 
-![Der Standardwürfel mit einer schwarz-weissen Checker-Textur als Input für die Roughness.](Images/Chapter_24/RoughnessChecker-Texture.png){#fig-1_3 fig-align="left"}
+![Der Standardwürfel mit einer schwarz-weissen Checker-Textur als Input für die Roughness.](Images/Chapter_24/25_3_Roughness_Checker-Texture.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Farbwerte können auch als Faktoren verwendet werden

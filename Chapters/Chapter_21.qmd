@@ -9,7 +9,7 @@ Parameter
 
 Bislang wurden für die verschiedenen Einstellungsoptionen von Materialien konstante Werte verwendet. Das heisst: Einem Material wurde stets eine gewisse Farbe zugewiesen (z.B. Rot) und diese Farbe wurde auf alle Oberflächen, die diesem Material zugewiesen wurden, aufgetragen – so wie in Abbildung 1. Ebenso verhielt es sich mit der Roughness: Für diese wurde ein fixer Wert definiert, welcher für das ganze Material angewendet wurde. Eine Variation innerhalb des Materials war dabei nicht möglich.
 
-![Der Standardwürfel mit einer roten Base-Color.](Images/Chapter_21/red_cube.png){#fig-1_1 fig-align="left"}
+![Der Standardwürfel mit einer roten Base-Color.](Images/Chapter_21/21_1_Red_Cube.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Texturen
@@ -17,7 +17,7 @@ Texturen
 
 Texturen stellen eine Möglichkeit dar, um verschiedene Werte für eine Einstellung zu definieren und diese auf ein Objekt zu übertragen. Dadurch können komplexere Farbverläufe oder Variationen von Farben über die Breite einer Oberfläche erstreckt werden – wie beispielsweise in Abbildung 2.
 
-![Der Standardwürfel mit einer Textur in der Base-Color.](Images/Chapter_21/Cube_Textured.png){#fig-1_2 fig-align="left"}
+![Der Standardwürfel mit einer Textur in der Base-Color.](Images/Chapter_21/21_2_Cube_Textured.png){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Beispiel mit zwei verschiedenen Texturen
@@ -25,7 +25,7 @@ Beispiel mit zwei verschiedenen Texturen
 
 Der Unterschied zwischen Abbildung 1 und Abbildung 2 ist in Abbildung 3 ersichtlich. Beide Bilder in der Abbildung 3 zeigen eine Textur. Die linke Textur, welche komplett aus einer roten Fläche besteht, beschreibt die Textur, welche auf den Würfel in Abbildung 1 aufgetragen wird. Die rechte Textur aus der Abbildung 3 zeigt eine Textur, welche auf den Würfel in der Abbildung 2 aufgetragen wird.
 
-![Links eine einfarbige rote Textur und rechts eine Textur mit einem Mauer-Muster.](Images/Chapter_21/Textures_Comparison.png){#fig-1_3 fig-align="left"}
+![Links eine einfarbige rote Textur und rechts eine Textur mit einem Mauer-Muster.](Images/Chapter_21/21_3_Textures_Comparison.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Texturen werden nicht für Parameter verwendet

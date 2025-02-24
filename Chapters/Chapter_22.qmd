@@ -11,7 +11,7 @@ Einen Würfel aus Papier erstellen
 
 Stellen Sie sich vor, sie möchten den Standardwürfel aus Blender als reales Objekt mit Papier oder Karton nachbauen. Wie würden Sie vorgehen? Eine Möglichkeit wäre, dass eine Form, ähnlich derjenigen aus Abbildung 1, ausgeschnitten wird und anschliessend an den Kanten zusammengefaltet und an den entsprechenden Stellen zusammengeklebt wird. Dadurch entsteht ein Würfel. Wenn dieser Würfel aus einem normalen einfarbigen Papier erstellt wird, besteht seine gesamte Oberfläche aus einem einzelnen Wert – der Farbe des Papiers. Man könnte sich also vorstellen, dass das Material dieses Würfels in Blender die Farbe des Papiers als Parameter in der Base-Color des Principled-BSDF-Shaders innehat.
 
-![Form, aus der ein Würfel gefaltet werden kann.](Images/Chapter_22/Texturvorlage.png){#fig-1_1 fig-align="left"}
+![Form, aus der ein Würfel gefaltet werden kann.](Images/Chapter_22/22_1_Texture_Presentation.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Würfel aus einer Fotografie abbilden
@@ -19,7 +19,7 @@ Würfel aus einer Fotografie abbilden
 
 Statt eines einfarbigen Papiers könnte auch eine Fotografie verwendet werden – wie in diesem Fall das Bild einer Steintextur in Abbildung 2 (Bildquelle: <https://ambientcg.com/view?id=Rocks024S>). Diese Abbildung würde anschliessend mitsamt den farblichen Strukturen des Bildes auch auf der Oberfläche des Würfels dargestellt. Der Würfel aus Abbildung 2 weist auf seiner Vorderseite dieselbe Struktur auf, wie sie in dem Kasten der Vorlage auf der linken Seite zuoberst dargestellt ist. Analog stellen die anderen Seiten des Würfels ebenfalls einen Kasten aus der Vorlage auf der linken Seite dar. In diesem Fall wird die Fotografie als Textur verwendet, welche verschiedene Farbvariationen beinhaltet und als Base-Color fungieren kann.
 
-![Eine Form auf einem Foto sowie ein Würfel, der aus dieser Form zusammengefaltet wurde.](Images/Chapter_22/Bigstones%20texture%20and%20cube.png){#fig-1_2 fig-align="left"}
+![Eine Form auf einem Foto sowie ein Würfel, der aus dieser Form zusammengefaltet wurde.](Images/Chapter_22/22_2_Smallstones_Texture_Cube.png){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Veränderung des Bildes
@@ -27,7 +27,7 @@ Veränderung des Bildes
 
 Würde man nun eine kleinere Fläche dieses Fotos verwenden, um die Vorlage zu erstellen, oder das Foto vergrössern, kann dieselbe Vorlage zum Zusammenfalten des Würfels verwendet werden. Die einzelnen Seiten entsprechen räumlich immer noch denselben Kästen aus der linken Abbildung – allerdings weichen die gewählten Bildausschnitte ab, wie in Abbildung 3 dargestellt.
 
-![Dasselbe Foto aus Abbildung 2, allerdings mit einer kleineren Fläche, aus welcher der Würfel erstellt wird.](Images/Chapter_22/smallstones%20texture%20and%20cube.png){#fig-1_3 fig-align="left"}
+![Dasselbe Foto aus Abbildung 2, allerdings mit einer kleineren Fläche, aus welcher der Würfel erstellt wird.](Images/Chapter_22/22_3_Bigstones_Texture_Cube.png){#fig-1_3 fig-align="left"}
 
 ## UV-Mapping
 
@@ -43,7 +43,7 @@ UV-Editor
 
 Um die UVs eines Objektes in Blender zu betrachten, wird ein neuer Editor benötigt, der neben dem 3D-Viewport-Editor geöffnet wird – der UV-Editor. Hierfür muss ein neuer Editor aus den Ecken des 3D-Viewport-Editors herausgezogen werden und dieser neue Editor auf den «*UV Editor*» umgestellt werden.
 
-![Icon für den UV-Editor.](Images/Chapter_22/Icon_UV_Editor.png){#fig-1_4 fig-align="left"}
+![Icon für den UV-Editor.](Images/Chapter_22/22_4_Icon_UV_Editor.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Alle UVs eines Objektes anzeigen lassen
@@ -51,7 +51,7 @@ Alle UVs eines Objektes anzeigen lassen
 
 Auf den ersten Blick scheint der UV-Editor leer zu sein. Dies liegt daran, dass in diesem Editor jeweils die UVs der gerade ausgewählten Faces dargestellt werden. Um die UVs zu betrachten, muss deshalb im 3D-Viewport-Editor in den Edit-Mode gewechselt werden und alle Faces ausgewählt werden. Anschliessend werden im UV-Editor die UVs dieser Auswahl angezeigt, wie in Abbildung 5 dargestellt.
 
-![Der Standardwürfel und seine UVs im UV-Editor.](Images/Chapter_22/UV-Editor.png){#fig-1_5 fig-align="left"}
+![Der Standardwürfel und seine UVs im UV-Editor.](Images/Chapter_22/22_5_UV_Editor.png){#fig-1_5 fig-align="left"}
 
 ::: column-margin
 Zugehörigkeit einer UV ermitteln
@@ -59,7 +59,7 @@ Zugehörigkeit einer UV ermitteln
 
 Auf den ersten Blick ist dabei nicht ganz klar, welche UV zu welchem Face gehört. Wenn man beispielsweise wissen möchte, welche UV ein bestimmtes Face darstellt, können alle Faces abgewählt werden und lediglich dieses eine Face ausgewählt werden, wie in Abbildung 6. Dadurch wird im UV-Editor lediglich die UV dieses einen Faces dargestellt.
 
-![Auswahl eines Faces des Standardwürfels, um seine dazugehörige UV zu ermitteln.](Images/Chapter_22/UV%20with%20Seam.png){#fig-1_6 fig-align="left"}
+![Auswahl eines Faces des Standardwürfels, um seine dazugehörige UV zu ermitteln.](Images/Chapter_22/22_6_UV_with_Seam.png){#fig-1_6 fig-align="left"}
 
 ::: column-margin
 UVs werden mit neuem Objekt erstellt
@@ -67,7 +67,7 @@ UVs werden mit neuem Objekt erstellt
 
 Jedes neu hinzugefügte Objekt in Blender wird bereits mit einem UV-Mapping erstellt. Das heisst, ein neu hinzugefügter Würfel beinhaltet bereits das standardmässige UV-Mapping, welches bislang dargestellt wurde. Auch andere Mesh-Formen werden standardmässig mit ihren UV-Mappings erstellt. Abbildung 7 zeigt die Mesh-Primitives in ihren Default-Einstellungen inklusive einer auf sie angewendeten Textur und darunter das entsprechende Mapping dieser Texturen.
 
-![Die Mesh-Primitives und die standardmässig dazu erstellten UV-Mappings.](Images/Chapter_22/.png){#fig-1_7 fig-align="left"}
+![Die Mesh-Primitives und die standardmässig dazu erstellten UV-Mappings.](Images/Chapter_22/22_7_UVs_per_Object.png){#fig-1_7 fig-align="left"}
 
 ::: column-margin
 UV-Unwrapping
@@ -94,7 +94,7 @@ Das UV-Unwrapping erfolgt im Edit-Mode. Dabei werden die Faces, bei denen das UV
 -   «***Clear Seam***»: Ein Seam wird entfernt.
 -   «***Reset***»: Das UV-Mapping wird zurückgesetzt, sodass alle Faces den gesamten UV-Raum ausfüllen und somit dieselbe Grösse innehaben.
 
-![UV-Mapping-Menü.](Images/Chapter_22/UV-Unwrapping%20Menü.png){#fig-1_8 fig-align="left"}
+![UV-Mapping-Menü.](Images/Chapter_22/22_8_UV_Unwrapping_Menu.png){#fig-1_8 fig-align="left"}
 
 ::: column-margin
 Texturen im UV-Editor anzeigen
@@ -126,7 +126,7 @@ Auswahl von UVs im UV-Editor
 
 Im UV-Editor können die einzelnen UVs, aber auch die Vertices und Edges ausgewählt werden. Wenn der Edit-Mode aktiviert ist, erscheinen in der linken oberen Ecke des UV-Editors verschiedene Schaltflächen, mit denen die Auswahl bestimmt werden kann. Nebst der Auswahl von Vertices, Edges und Faces können im UV-Editor zudem auch ganze Inseln ausgewählt werden. Dabei werden alle UVs, die zusammen eine UV-Insel bilden, gemeinsam ausgewählt.
 
-![Select-Modes für die Auwahl von UVs.](Images/Chapter_22/Icons_UV_Editor_Selections.png){fig-align="left"}
+![Select-Modes für die Auwahl von UVs.](Images/Chapter_22/22_9_Icons_UV_Editor_Selections.png){#fig-1_9 fig-align="left"}
 
 ::: column-margin
 UVs im UV-Editor anpassen

@@ -22,7 +22,7 @@ Object-Data-Properties für Licht
 
 Wird ein Lichtobjekt hinzugefügt und ausgewählt, wird das Icon des Reiters «*Object Data Properties*» im Properties-Editor mit dem Icon einer Glühbirne ausgewechselt. Dadurch wird visualisiert, dass das ausgewählte Objekt nun kein Mesh mehr darstellt, sondern ein Lichtobjekt.
 
-![Icon des «*Object Data Properties*»-Reiters im Properties-Editor, wenn ein Lichtobjekt ausgewählt wurde.](Images/Chapter_34/1.%20Icon_Object_Data.png){#fig-1_2 fig-align="left"}
+![Icon des «*Object Data Properties*»-Reiters im Properties-Editor, wenn ein Lichtobjekt ausgewählt wurde.](Images/Chapter_34/34_1_Icon_Object_Data.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Unterschiedliche Einstellungen in Eevee und Cycles
@@ -91,7 +91,7 @@ Navigation zwischen Szenen
 
 In der Datei «*Gameboard_Lights*» sind verschiedene Beispielszenen für unterschiedliche Belichtungen aufzufinden. Die verschiedenen Beispiele sind in unterschiedliche Szenen aufgeteilt. Um zwischen den Szenen wechseln zu können, muss im Dropdown-Menü «*Browse Scene to be linked*», welches in der Ecke oben rechts zu finden ist, die entsprechende Szene ausgewählt werden. Auch die Beispiele aus dem vorangehenden Kapitel sind in dieser Datei aufzufinden.
 
-![Eine Szene, welche mit einer Point-Lichtquelle beleuchtet wird.](Images/Chapter_34/.png){#fig-1_3 fig-align="left"}
+![Eine Szene, welche mit einer Point-Lichtquelle beleuchtet wird.](Images/Chapter_34/34_2_Pointlight.png){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Beispiel eines Point-Lichtobjektes
@@ -113,7 +113,7 @@ Beispiel eines Sun-Lichtobjektes
 
 Die Abbildung 3 zeigt ein Beispiel, in dem eine Szene mit einem Sun-Lichtobjekt beleuchtet wird. Die Sonne ist dabei auf derselben Höhe wie die Köpfe der anderen Spielfiguren auf dem Feld J1 platziert und gegen die blaue Spielfigur rotiert.
 
-![Eine Szene, welche mit einer Sun-Lichtquelle beleuchtet wird.](Images/Chapter_34/.png){#fig-1_4 fig-align="left"}
+![Eine Szene, welche mit einer Sun-Lichtquelle beleuchtet wird.](Images/Chapter_34/34_3_Sunlight.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Sonnen können rotiert werden, allerdings hat ihre Position keine Auswirkung
@@ -141,7 +141,7 @@ Spot als Beleuchtungsoption
 
 In Abbildung 4 wird eine Szene mittels eines Spot-Lichtobjektes beleuchtet. Der Spot agiert wie ein Scheinwerfer, mit dem gezielt ein Objekt beleuchtet werden kann. Hierfür sind sowohl die Position als auch die Rotation des Spot-Lichtobjektes bedeutsam. Anhand dieser beiden Merkmale kann der Spot entsprechend auf ein Objekt ausgerichtet werden. Die Beleuchtung erfolgt anschliessend ausgehend von der Form eines Cones, der von der Position des Lichtobjektes ausgeht.
 
-![Eine Szene, welche mit einer Spot-Lichtquelle beleuchtet wird.](Images/Chapter_34/.png){#fig-1_5 fig-align="left"}
+![Eine Szene, welche mit einer Spot-Lichtquelle beleuchtet wird.](Images/Chapter_34/34_4_Spotlight.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Grösse des Spots einstellen
@@ -169,7 +169,7 @@ Grösse der Areale variieren
 
 Mittels des Reiters «*Size*» kann die Grösse des Areals definiert werden. Bei aktivierten Viewport-Overlays kann diese Veränderung direkt visuell nachverfolgt werden. Das Quadrat und der Kreis als Option verfügen leidglich über einen Reiter für die Grösse. Bei den Formen Rechteck und Ellipse können zwei Achsen für die Grösse unabhängig voneinander definiert werden.
 
-![Eine Szene, welche mit einer Area-Lichtquelle beleuchtet wird.](Images/Chapter_34/.png){#fig-1_6 fig-align="left"}
+![Eine Szene, welche mit einer Area-Lichtquelle beleuchtet wird.](Images/Chapter_34/34_5_Arealight.png){#fig-1_5 fig-align="left"}
 
 :::::: exercisebox
 :::: exercisebox-header
@@ -184,7 +184,7 @@ Mittels des Reiters «*Size*» kann die Grösse des Areals definiert werden. Bei
 
 Öffnen Sie in der Datei «*Gameboard_Lights*» die Szene «*Exercise_Lights*» und versuchen Sie, die abgebildete Beleuchtungssituation nachzustellen.
 
-![](Images/Chapter_34/.png){fig-align="left"}
+![](Images/Chapter_34/Exercise_16_1.png){fig-align="left"}
 
 Die Lösung finden Sie in der Szene «Exercise_Lights_Solution»
 :::

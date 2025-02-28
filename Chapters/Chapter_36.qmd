@@ -15,7 +15,7 @@ Kamera-Objekttyp
 
 Falls eine neue Kamera innerhalb einer Szene benötigt wird, kann diese jederzeit im «*Add*»-Menü unter «*Camera*» hinzugefügt werden. Die Kamera stellt eine eigene Objektart dar. Um die Einstellungen der Kamera anzupassen, kann im Properties-Editor der Reiter «*Object Data Properties*» ausgewählt werden. Für die Kameras wird ein anderes Symbol als bei einem Mesh angezeigt, um zu verdeutlichen, dass es sich um eine andere Objektart handelt. Um den Einfluss der Kameraeinstellungen besser nachvollziehen zu können, empfiehlt es sich, die Kamera als Ansicht im 3D-Viewport mit der Taste {{< kbd 0 >}} auszuwählen.
 
-![Icon für den Reiter «*Object Data Properties*» bei einer Kamera.](Images/Chapter_36/Camera.png){#fig-1_1 fig-align="left"}
+![Icon für den Reiter «*Object Data Properties*» bei einer Kamera.](Images/Chapter_36/36_1_Camera.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Kameralinsen
@@ -33,7 +33,7 @@ Perspektivische Kameralinse
 
 Die perspektivische Linse entspricht der perspektivischen Ansicht, die im 3D-Viewport-Editor verwendet werden kann. Dabei werden tiefenperspektivische Inhalte berücksichtigt. Dies hat zur Folge, dass Objekte zunehmend kleiner dargestellt werden, je weiter weg sie sich von der Kamera befinden. Abbildung 2 zeigt den Standardwürfel aus der Kameraansicht mit einer perspektivischen Linse. Obwohl die Edges des oberen Faces gleich lang sind, werden sie durch die perspektivische Linse unterschiedlich lang dargestellt.
 
-![Die Default-Szene aus der Sicht der Kamera.](Images/Chapter_36/Default_Scene.png){#fig-1_2 fig-align="left"}
+![Die Default-Szene aus der Sicht der Kamera.](Images/Chapter_36/36_2_Default_Scene.png){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Orthografische Kameralinse
@@ -41,7 +41,7 @@ Orthografische Kameralinse
 
 Die orthografische Linse entspricht der orthografischen Ansicht, die im 3D-Viewport-Editor verwendet werden kann. Tiefenperspektivische Inhalte werden dabei nicht berücksichtigt. Dies hat zur Folge, dass Objekte mit derselben Grösse gleich gross dargestellt werden, unabhängig von der Distanz zur Kamera. Abbildung 3 zeigt den Standardwürfel mit einer orthografischen Kameralinse. Da die Tiefenperspektive nicht berücksichtigt wird, sind die Edges gleich lang dargestellt.
 
-![Die Default-Szene aus einer orthografischen Kameraperspektive.](Images/Chapter_36/Default_Scene_Otho.png){#fig-1_3 fig-align="left"}
+![Die Default-Szene aus einer orthografischen Kameraperspektive.](Images/Chapter_36/36_3_Default_Scene_Otho.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Panoramische Kameralinse
@@ -85,4 +85,4 @@ Aktive Kamera auswählen
 
 Sollten sich innerhalb einer Szene mehrere Kameras befinden, kann lediglich eine davon als aktive Kamera verwendet werden, um Szenen zu rendern. Im Properties-Editor innerhalb des Reiters «*Scene Properties*» kann jeweils nachverfolgt werden, welche Kamera die Szene rendern wird. Innerhalb des Reiters «*Scene*» wird in der Zeile «*Camera*» das entsprechende Kamera-Objekt aufgeführt, oder kann bei Bedarf gewechselt werden.
 
-![Icon für den Reiter «*Scene Properties*».](Images/Chapter_36/Scene%20Properties.png){#fig-1_4 fig-align="left"}
+![Icon für den Reiter «*Scene Properties*».](Images/Chapter_36/36_4_Scene_Properties.png){#fig-1_4 fig-align="left"}

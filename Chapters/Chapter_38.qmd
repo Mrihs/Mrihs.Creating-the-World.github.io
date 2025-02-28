@@ -9,7 +9,7 @@ Ziel dieses Tutorials
 
 Im Rahmen dieses Tutorials wird ein vorgefertigtes Glas mit Wasser, Kondenswasser und Kohlensäurebläschen ergänzt. Damit wird auch die Funktionsweise von Partikeln und Haaren erläutert. Als Vorlage kann die Datei «*Glas_Particles*» verwendet werden. Diese Vorlage beinhaltet ein Glas innerhalb einer Szene, welches mit Materialien ausgestattet ist.
 
-![Das Ziel dieses Tutorials: Ein Glas mit Wasser, Kondenswasser am Glas und Kohlensäurebläschen.](Images/Chapter_38/Water_Final.png){#fig-1_1 fig-align="left"}
+![Das Ziel dieses Tutorials: Ein Glas mit Wasser, Kondenswasser am Glas und Kohlensäurebläschen.](Images/Chapter_38/38_1_Water_Final.png){#fig-1_1 fig-align="left"}
 
 ## Wasser hinzufügen
 
@@ -25,7 +25,7 @@ Nicht benötigte Vertices aus Duplikat entfernen
 
 Das Duplikat kann anschliessend im Edit-Mode bearbeitet werden. Als Erstes wird die erste Reihe Vertices auf der Innenseite des Glases, welche sich oberhalb der gewünschten Wasserhöhe befindet, bei gedrückter {{< kbd Alt >}}-Taste mit einem Mausklick ausgewählt. Diese Reihe wird danach mit der Taste {{< kbd X >}} und dem Befehl «*Delete \| Vertices*» gelöscht. Nun kann der Mauszeiger über den äusseren Bereich des Glases bewegt werden und die Taste {{< kbd L >}} gedrückt werden. Dadurch werden alle verbundenen Vertices ausgewählt, sodass der gesamte Teil des Glases, welcher nicht für das Wasser verwendet wird, mit der Taste {{< kbd X >}} gelöscht werden kann.
 
-![Die Kopie des Glases, aus der eine Reihe von Vertices im Inneren entfernt wurde. Der äussere Rand kann nun mittels «*Select Linked*» einfach ausgewählt werden.](Images/Chapter_38/Water_Select_Linked.png){#fig-1_2 fig-align="left"}
+![Die Kopie des Glases, aus der eine Reihe von Vertices im Inneren entfernt wurde. Der äussere Rand kann nun mittels «*Select Linked*» einfach ausgewählt werden.](Images/Chapter_38/38_2_Water_Select_Linked.png){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Oberfläche des Wassers nach innen extrudieren
@@ -39,7 +39,7 @@ Normalen umkehren
 
 Das nun resultierende Mesh hat bereits die Form des Wassers, welches erstellt werden soll. Allerdings sind die Normalen des Wassers in die falsche Richtung ausgerichtet. Die Seite, welche zuvor im Glas nach aussen gerichtet war, ist nun beim Wasser nach innen ausgerichtet. Deshalb sollten alle Vertices ausgewählt werden, mittels der Tastenkombination {{< kbd Alt >}} + {{< kbd N >}} das «*Normals*»-Menü geöffnet werden und die Option «*Flip*» ausgewählt werden.
 
-![Die Form des Wasser-Objekts.](Images/Chapter_38/Water_Top_Fill.png){#fig-1_3 fig-align="left"}
+![Die Form des Wasser-Objekts.](Images/Chapter_38/38_3_Water_Top_Fill.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Auto-Smooth der Normalen
@@ -81,7 +81,7 @@ Behelfslösung: Wasser in das Glas hineinverschieben
 
 Eine Alternative zu diesem Prozess besteht darin, das Wasser so anzupassen, dass es sich ein wenig im Inneren des Glases befindet. Hierfür können alle Vertices im Wasser-Objekt ausgewählt und mittels der Taste {{< kbd S >}} vergrössert werden, sodass sich das Wasser etwas innerhalb des Glases befindet. Lediglich die Vertices am Rand der Wasseroberfläche sollten dabei an derselben Position wie das Glas bleiben.
 
-![Die Vertices an der Wasseroberfläche werden etwas nach unten verschoben, sodass die Vertices am Rand eine gewisse Wasserspannung simulieren.](Images/Chapter_38/Water_Top_MoveDown.png){#fig-1_4 fig-align="left"}
+![Die Vertices an der Wasseroberfläche werden etwas nach unten verschoben, sodass die Vertices am Rand eine gewisse Wasserspannung simulieren.](Images/Chapter_38/38_4_Water_Top_Move_Down.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Wasser anpassen
@@ -89,7 +89,7 @@ Wasser anpassen
 
 Zusätzlich sollte allerdings auch eine gewisse Oberflächenspannung erzeugt werden, sodass sich der Rand der Wasseroberfläche ein wenig oberhalb der Wasseroberfläche befindet. Da der Rand der Wasseroberfläche allerdings genau der Position des Glases entspricht, ist es sinnvoller, den Rest der Wasseroberfläche tiefer zu setzen. Hierfür wird die gesamte Oberfläche des Wassers ausgewählt und der Rand der Wasseroberfläche abgewählt. Anschliessend können die inneren Vertices der Wasseroberfläche etwas tiefer gesetzt werden.
 
-![Die Vertices unterhalb der Wasseroberfläche werden ausgewählt und vergrössert, damit sie sich etwas innerhalb des Glases befinden.](Images/Chapter_38/Water_Select_Space.png){#fig-1_5 fig-align="left"}
+![Die Vertices unterhalb der Wasseroberfläche werden ausgewählt und vergrössert, damit sie sich etwas innerhalb des Glases befinden.](Images/Chapter_38/38_8_5_Water_Select_Space.png){#fig-1_5 fig-align="left"}
 
 ## Kondenswasser am Glas hinzufügen
 
@@ -107,9 +107,9 @@ Tropfen des Kondenswassers erstellen
 
 Durch die Tastenkombination {{< kbd Shift >}} + {{< kbd A >}} kann das «*Add*»-Menü geöffnet werden und unter «*Mesh \| Cube*» ein Würfel hinzugefügt werden. Dabei ist allerdings wichtig, dass der Würfel anschliessend im Edit-Mode so verschoben wird, dass sich der Ursprung des Würfels am Rand des Würfels befindet. Aus diesem Grund muss der gesamte Würfel im Edit-Mode um den Faktor 1 entlang der Z-Achse verschoben werden (mittels den Tasten {{< kbd G >}}, {{< kbd Z >}} und {{< kbd 1 >}}).
 
-Anschliessend kann das obere Face des Würfels um den Faktor 0.5 skaliert werden (mittels den Tasten {{< kbd S >}}, {{< kbd Shift >}} + {{< kbd Z >}} und danach {{< kbd 0 >}}{{< kbd . >}}{{< kbd 5 >}} ) und um einen Meter entlang der Z-Achse nach unten verschoben werden (mittels den Tasten {{< kbd G >}}, {{< kbd Z >}} und {{< kbd - >}}{{< kbd 1 >}}). Dadurch sollte eine Form wie in Abbildung 6 entstehen.
+Anschliessend kann das obere Face des Würfels um den Faktor 0.5 skaliert werden (mittels den Tasten {{< kbd S >}}, {{< kbd Shift >}} + {{< kbd Z >}} und danach {{< kbd 0 >}}{{\< kbd . \>}}{{< kbd 5 >}} ) und um einen Meter entlang der Z-Achse nach unten verschoben werden (mittels den Tasten {{< kbd G >}}, {{< kbd Z >}} und {{< kbd - >}}{{\< kbd 1 \>}}). Dadurch sollte eine Form wie in Abbildung 6 entstehen.
 
-![Die Form eines sehr simplen Wassertropfens.](Images/Chapter_38/Drop_Obj..png){#fig-1_6 fig-align="left"}
+![Die Form eines sehr simplen Wassertropfens.](Images/Chapter_38/38_6_Drop.png){#fig-1_6 fig-align="left"}
 
 ::: column-margin
 Material des Wassertropfens
@@ -125,7 +125,7 @@ Dieser Wassertropfen sollte nun versteckt werden. Da der Wassertropfen auch im f
 
 Als Nächstes muss definiert werden, an welchen Stellen des Glases das Kondenswasser auftreten soll. Hierfür werden im Mesh des Glases alle Faces ausgewählt, welche die Wassertropfen aufweisen sollen. Hierfür kann die gesamte äussere Fläche des Glases ausgewählt werden. Anschliessend wird im Object-Data Properties-Reiter des Meshes eine neue Vertex-Gruppe hinzugefügt und mit einem Namen versehen (beispielsweise «Kondenswasser-Bereich»). Durch einen Klick auf die Taste «*Assign*» werden anschliessend die ausgewählten Vertices – und somit auch die damit verbundenen Faces – der neuen Vertex-Gruppe zugewiesen. Dadurch sind alle Vorbereitungen abgeschlossen.
 
-![Vertices, welche später das Kondenswasser abbilden und zu einer Vertex-Gruppe zusammegefasst werden.](Images/Chapter_38/Condense_Select_Group.png){#fig-1_7 fig-align="left"}
+![Vertices, welche später das Kondenswasser abbilden und zu einer Vertex-Gruppe zusammegefasst werden.](Images/Chapter_38/38_7_Condense_Select_Group.png){#fig-1_7 fig-align="left"}
 
 ### Haare
 
@@ -147,7 +147,7 @@ Haar-Einstellungen
 
 Innerhalb des «*Emission*»-Reiters können genauere Einstellungen zu den Haaren vorgenommen werden. So lässt sich unter «*Number*» die Anzahl der Haare definieren und unter «*Hair Length*» die Länge der Haare. Da doch etwas mehr Haare benötigt werden, kann die Anzahl Haare unter «*Number*» auf 5000 gesetzt werden. Da die Haare deutlich zu lang sind, kann die «*Hair Length*» auf 0.01 reduziert werden.
 
-![Das Glas mit Haaren.](Images/Chapter_38/Condense_Hair_All.png){#fig-1_8 fig-align="left"}
+![Das Glas mit Haaren.](Images/Chapter_38/38_8_Condense_Hair_All.png){#fig-1_8 fig-align="left"}
 
 ::: column-margin
 Haarquelle
@@ -179,13 +179,13 @@ Haare auf Vertex-Gruppe beschränken
 
 Die Wassertropfen werden allerdings über das gesamte Mesh erzeugt. Tatsächlich werden diese Wassertropfen allerdings lediglich an den Faces benötigt, welche vorhin einer Vertex-Gruppe zugewiesen wurden. Deshalb wird im Reiter «*Vertex Groups*» unter «*Density*» die vorher definierte Vertex-Gruppe ausgewählt. Dadurch wird definiert, dass die Haare lediglich an den Stellen dieser Vertex-Gruppe dargestellt werden.
 
-![Das Glas, dessen Haare nun aus Wassertropfen bestehen.](Images/Chapter_38/Condense_Hair_Object.png){#fig-1_9 fig-align="left"}
+![Das Glas, dessen Haare nun aus Wassertropfen bestehen.](Images/Chapter_38/38_9_Condense_Hair_Object.png){#fig-1_9 fig-align="left"}
 
 ::: column-margin
 Wassertropfen rotieren
 :::
 
-Bei einer genauen Betrachtung fällt nun auf, dass die Wassertropfen im falschen Winkel dargestellt werden. Dies liegt daran, dass Objekte im Partikelsystem jeweils um 90° gedreht werden. Um dies zu beheben, muss der Wassertropfen nochmals bearbeitet werden. Hierfür muss die Collection des Wassertropfens nochmals aktiviert werden, damit der Wassertropfen wieder angezeigt wird und bearbeitet werden kann. Idealerweise stellt man den 3D-Cursor mittels des Snap-Tools ({{< kbd Shift >}} + {{< kbd S >}}) auf den Ursprung des Wassertropfens. Hierfür muss der Wassertropfen im Object-Mode ausgewählt werden und im Snap-Tool «*Cursor to Selected*» ausgewählt werden. Nun kann der Pivot-Point auf den 3D-Cursor gesetzt werden und der Wassertropfen im Edit-Mode um -90° entlang der X-Achse rotiert werden ({{< kbd R >}}, {{< kbd X >}} und {{< kbd 9 >}}{{< kbd 0 >}}). Anschliessend kann die Collection des Wassertropfens wieder deaktiviert werden.
+Bei einer genauen Betrachtung fällt nun auf, dass die Wassertropfen im falschen Winkel dargestellt werden. Dies liegt daran, dass Objekte im Partikelsystem jeweils um 90° gedreht werden. Um dies zu beheben, muss der Wassertropfen nochmals bearbeitet werden. Hierfür muss die Collection des Wassertropfens nochmals aktiviert werden, damit der Wassertropfen wieder angezeigt wird und bearbeitet werden kann. Idealerweise stellt man den 3D-Cursor mittels des Snap-Tools ({{< kbd Shift >}} + {{< kbd S >}}) auf den Ursprung des Wassertropfens. Hierfür muss der Wassertropfen im Object-Mode ausgewählt werden und im Snap-Tool «*Cursor to Selected*» ausgewählt werden. Nun kann der Pivot-Point auf den 3D-Cursor gesetzt werden und der Wassertropfen im Edit-Mode um -90° entlang der X-Achse rotiert werden ({{< kbd R >}}, {{< kbd X >}} und {{< kbd 9 >}}{{\< kbd 0 \>}}). Anschliessend kann die Collection des Wassertropfens wieder deaktiviert werden.
 
 ## Partikel
 
@@ -207,7 +207,7 @@ Wasserbläschen erstellen
 
 Nun kann das Wassertropfen-Objekt für das Erzeugen der Kohlensäurebläschen verwendet werden. Hierfür muss in der Option «*Render As*» die Einstellung «*Object*» ausgewählt werden und anschliessend der Wassertropfen als «*Instance Object*» definiert werden. Die Grösse des Objekts sollte reduziert werden, indem der Wert «*Scale*» beispielsweise auf 0.0025 und der Wert «*Scale Randomness*» auf 1 erhöht wird.
 
-![Die Vertices am unteren Bereich des Wasser-Objekts werden zu einer Vertex-Gruppe zusammengefasst.](Images/Chapter_38/Bubbles_Select_Group.png){#fig-1_10 fig-align="left"}
+![Die Vertices am unteren Bereich des Wasser-Objekts werden zu einer Vertex-Gruppe zusammengefasst.](Images/Chapter_38/38_10_Bubbles_Select_Group.png){#fig-1_10 fig-align="left"}
 
 ::: column-margin
 Emitter fungieren als Animationen
@@ -221,7 +221,7 @@ Timeline-Editor
 
 Zum Starten der Animation kann die {{< kbd Space >}}-Taste verwendet werden. Je nach Grundeinstellungen in Blender ist dieser Taste möglicherweise eine andere Funktion zugewiesen. In diesen Fällen kann die Tastenkombination {{< kbd Shift >}} + {{< kbd Space >}} verwendet werden. Alternativ kann der Timeline-Editor geöffnet werden und darin auf den «*Play*»-Button gedrückt werden, um die Animation zu starten. Der Timeline-Editor ermöglicht zudem eine Übersicht der Animation.
 
-![Icon für den Timeline-Editor.](Images/Chapter_38/Timeline_Icon.png){#fig-1_11 fig-align="left"}
+![Icon für den Timeline-Editor.](Images/Chapter_38/38_11_Timeline_Icon.png){#fig-1_11 fig-align="left"}
 
 ::: column-margin
 Frames
@@ -235,7 +235,7 @@ Partikelsystem als Animation
 
 Die Grundeinstellungen zum Partikelsystem des Typs «*Emitter*» hängen von diesen Frames ab. So wird das ganze Partikelsystem über eine gewisse Dauer erzeugt, welche sich aus dem Startpunkt der Animation und dem Endpunkt der Animation ergibt. Im Reiter «*Emission*» kann unter «*Frame Start*» definiert werden, beim wievielten Frame das Partikelsystem starten soll, und unter «*End*», beim wievielten Frame dieses Partikelsystem enden soll. Die Anzahl Partikel, welche unter «*Number*» definiert sind, werden anschliessend gleichmässig über die ganze Animationsdauer aufgeteilt.
 
-![Das Wasser-Objekt schüttet Wassertropfen aus.](Images/Chapter_38/Bubles_Emit.png){#fig-1_12 fig-align="left"}
+![Das Wasser-Objekt schüttet Wassertropfen aus.](Images/Chapter_38/38_12_Bubles_Emit.png){#fig-1_12 fig-align="left"}
 
 ::: column-margin
 Tote Partikel
@@ -255,15 +255,13 @@ Ausschütten der Partikel erfolgt entgegen der neuen Schwerkraft
 
 Obwohl die Gravitationskräfte umgekehrt wurden, scheinen die einzelnen Partikel zunächst zu fallen, bevor sie entlang der Z-Achse aufsteigen. Dies liegt daran, dass die Partikel zunächst aus dem Mesh ausgeschüttet werden. Dies geschieht entlang der Normalen des Meshes. Die Partikel werden also entlang der Normalen ausgeschüttet und erhalten dadurch einen physikalischen Antrieb, bevor sie schliesslich der manuell erstellten Gravitationskraft folgen.
 
-![Trotz umgekehrter Schwerkraft werden die Wassertropfen entlang der Normalen des Objektes – also nach unten – ausgeschüttet, bevor sie aufsteigen.](Images/Chapter_38/Bubles_Emit_Gravity.png){#fig-1_13 fig-align="left"}
+![Trotz umgekehrter Schwerkraft werden die Wassertropfen entlang der Normalen des Objektes – also nach unten – ausgeschüttet, bevor sie aufsteigen.](Images/Chapter_38/38_13_Bubles_Emit_Gravity.png){#fig-1_13 fig-align="left"}
 
 ::: column-margin
 Partikel umgekehrt ausschütten
 :::
 
 Durch ein Umkehren der Normalen würden die Partikel nach oben ausgestossen und dadurch von Anfang an der Gravitationskraft folgen. Dies würde allerdings dazu führen, dass die Normalen des Wasser-Objekts für die Materialien falsch ausgerichtet wären. Stattdessen kann im Reiter «*Velocity*» der Wert für «*Normal*» von 1 auf -1 gesetzt werden. Dadurch werden die Partikel entgegengesetzt der Normalen ausgeschüttet.
-
-
 
 ::: column-margin
 Letzte Anpassungen

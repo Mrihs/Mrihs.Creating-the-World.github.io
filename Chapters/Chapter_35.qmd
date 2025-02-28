@@ -9,7 +9,7 @@ Verwendung von Licht beim Rendern
 
 Mithilfe der Lichtobjekte ist es nun möglich, die Szenen in Blender mit Licht auszustatten. Damit der Einfluss dieser Lichtobjekte sichtbar ist, muss allerdings der Rendered-Viewport-Shading-Modus im 3D-Viewport-Editor ausgewählt werden. Im Material-Preview-Viewport-Shading-Modus werden diese Lichtobjekte per Default nicht mit angezeigt.
 
-![Eine gerenderte Szene.](Images/Chapter_35/.png){#fig-1_1 fig-align="left"}
+![Eine gerenderte Szene.](Images/Chapter_35/35_1_Dunes_Standardworld.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Der gerenderte Hintergrund
@@ -29,7 +29,7 @@ World-Properties
 
 Für die Einstellung der Welt findet sich im Properties-Editor unter dem Reiter «*World Properties*» die Möglichkeit, Eigenschaften der Welt zu definieren. Allerdings kann diese Einstellung der Welt auch im Shader-Editor vorgenommen werden. Im Shader-Editor können nicht nur Materialien, sondern auch die Welt und Linien bearbeitet werden.
 
-![Icon des «*World Properties*»-Reiters im Properties-Editor.](Images/Chapter_35/1.%20Icon_World_Properties.png){#fig-1_2 fig-align="left"}
+![Icon des «*World Properties*»-Reiters im Properties-Editor.](Images/Chapter_35/35_2_Icon_World_Properties.png){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Weltbearbeitung im Shader-Editor öffnen
@@ -69,7 +69,7 @@ Welten rotieren und verschieben
 
 Abbildung 3 zeigt eine gerenderte Szene, deren Welt auf einem HDRI basiert. Hierfür wurde das HDRI «*Sky-Only HDRI 009*» von der Website <https://ambientcg.com/> verwendet. Mittels des Mapping-Nodes kann die Welt zusätzlich angepasst werden. Durch eine Rotation entlang der Z-Achse kann die Textur etwa innerhalb der Szene gedreht werden, oder mittels einer Veränderung der Position entlang der Z-Achse kann der Horizont in der Höhe etwas verschoben werden.
 
-![Eine gerenderte Szene mit einem HDRI-Bild als Welt.](Images/Chapter_35/.png){#fig-1_3 fig-align="left"}
+![Eine gerenderte Szene mit einem HDRI-Bild als Welt.](Images/Chapter_35/35_3_Scene_With_HDRI_Image.png){#fig-1_3 fig-align="left"}
 
 ## Einen prozeduralen Sternenhimmel erstellen
 
@@ -85,7 +85,7 @@ Noise-Textur hinzufügen
 
 Um einen solchen Effekt zu erzielen, kann eine Noise-Textur verwendet werden. Diese kann im «*Add*»-Menü des Shader-Editors unter «*Texture \| Noise Texture*» hinzugefügt werden. Diese Noise Textur kann anschliessend ausgewählt werden und mittels der Tastenkombination {{< kbd Ctrl >}} + {{< kbd T >}} ein Mapping- und ein Texture-Coordinate-Node hinzugefügt werden. Die Noise-Textur erzeugt ein zufälliges schwarz-weisses Bild, bestehend aus Noise.
 
-![Eine gerenderte Szene mit einem prozedural erstellten Sternenhimmel als Hintergrundwelt.](Images/Chapter_35/.png){#fig-1_4 fig-align="left"}
+![Eine gerenderte Szene mit einem prozedural erstellten Sternenhimmel als Hintergrundwelt.](Images/Chapter_35/35_4_Dunes_Starfield.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Parameter des Noise-Texture-Nodes
@@ -136,4 +136,4 @@ Weissanteil durch die Color-Ramp erhöhen
 
 Damit nun vereinzelt weisse Punkte in der Noise-Textur erscheinen, muss der zweite, weisse Farbmarker am rechten Ende etwas nach links verschoben werden. Wird dieser beispielsweise auf die Position 0.795 gesetzt, werden alle Faktor-Werte der Noise-Textur, welche über 0.795 liegen, weiss eingefärbt. Durch diese Einstellung sollte sich nun ein schwarzer Himmel mit vereinzelten weissen Punkten ergeben. Dieser kann nun als Sternenhimmel verwendet werden, indem der Color-Output der Color-Ramp mit dem Color-Input des Background-Nodes verbunden wird. Durch einen Klick auf den Background-Node bei gedrückter Tastenkombination {{< kbd Ctrl >}} + {{< kbd Shift >}} wird der Viewer-Node zudem wieder geschlossen.
 
-![Node-System, um einen prozeduralen Sternenhimmel als Welt zu erstellen.](Images/Chapter_35/.png){#fig-1_5 fig-align="left"}
+![Node-System, um einen prozeduralen Sternenhimmel als Welt zu erstellen.](Images/Chapter_35/35_5_Starfiel_Nodes.png){#fig-1_5 fig-align="left"}

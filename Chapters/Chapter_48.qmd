@@ -75,9 +75,11 @@ Graph-Editor
 
 Im sogenannten Graph-Editor werden die gesetzten Keyframes jeweils anhand von Kurven dargestellt. Jeder Wert des ausgewählten Objektes, der mit einem Keyframe ausgestattet wurde, wird dabei mit einer Kurve dargestellt. Zudem werden individuelle Kurven für die X-, Y- und Z-Achse erstellt.
 
-![Icon für den Graph-Editor.](Images/Chapter_48/.png){#fig-1_1 fig-align="left"}
+![Icon für den Graph-Editor.](Images/Chapter_48/48_1_Icon_Graph_Editor.png){#fig-1_1 fig-align="left"}
 
-![Der Graf für die Rotationen des Pendels. Die X- und die Z-Achsen-Rotation liegen beide konstant auf dem Wert 0, während die Y-Achsen-Rotation entlang der Werte bei den entsprechenden Keyframes verläuft.](Images/Chapter_48/.png){#fig-1_2 fig-align="left"}
+![Der Graf für die Rotationen des Pendels. Die X- und die Z-Achsen-Rotation liegen beide konstant auf dem Wert 0, während die Y-Achsen-Rotation entlang der Werte bei den entsprechenden Keyframes verläuft.](Images/Chapter_48/48_2_Pendel_Rotation.jpg){#fig-1_2 fig-align="left"}
+
+![Der Graf für die Rotationen des Pendels. Die X- und die Z-Achsen-Rotation liegen beide konstant auf dem Wert 0, während die Y-Achsen-Rotation entlang der Werte bei den entsprechenden Keyframes verläuft.](Images/Chapter_48/48_2_Pendel_Rotation.jpg){fig-align="left"}
 
 ::: column-margin
 Kurven im Graph-Editor
@@ -104,7 +106,7 @@ Nebst dem Cycles-Modifier gibt es noch weitere nützliche Modifier, um Animation
 :::
 ::::::
 
-![Der Graf für die Y-Achsen-Rotation mit einem Cycles-Modifier. Dadurch wird die Animation unendlich oft wiederholt.](Images/Chapter_48/.png){#fig-1_3 fig-align="left"}
+![Der Graf für die Y-Achsen-Rotation mit einem Cycles-Modifier. Dadurch wird die Animation unendlich oft wiederholt.](Images/Chapter_48/48_3_Y_Rotation.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Kurven-Interpolation anpassen

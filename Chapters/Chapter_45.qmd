@@ -25,7 +25,7 @@ Add-on «Rigify»
 
 Mittels dem Add-on «Rigify» kann direkt eine Vorlage für ein Skelet geladen werden. Dies erspart bereits einige Schritte bei der Skelet Erstellung. Das entsprechende Add-on muss zunächst in den Einstellungen («*Edit \| Preferences*») unter «*Add-ons*» aktiviert werden. Durch das Aktivieren dieses Add-ons stehen im «*Add*»-Menü unter dem Reiter «*Armature*» nun weitere Optionen zur Verfügung. Statt eines einzelnen Knochens kann nun etwa direkt ein ganzes menschliches Skelett mittels «*Human (Meta-Rig)*» hinzugefügt werden. Zudem sind unter «*Animals*» auch Skeletefür verschiedene Tiere auffindbar.
 
-![Das Add-on "*Rigify*" muss zunächst in den Eistellungen aktiviert werden.](Images/Chapter_45/.png){#fig-1_1 fig-align="left"}
+![Das Add-on "*Rigify*" muss zunächst in den Eistellungen aktiviert werden.](Images/Chapter_45/45_1_Add_on_Rigify.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Basic Human Armature
@@ -51,7 +51,7 @@ Knochen anordnen
 
 Am Schluss sollten alle Knochen dem Mesh angepasst worden sein. Dabei sollten sich diese Knochen jeweils innerhalb des Meshes auffinden. Abbildung 2 zeigt eine mögliche Anordnung der Knochen.
 
-![Der Charakter mit einem Skelet.](Images/Chapter_45/.png){#fig-1_2 fig-align="left"}
+![Der Charakter mit einem Skelet.](Images/Chapter_45/45_2_Character_Skeleton.png){#fig-1_2 fig-align="left"}
 
 ### Rig generieren
 
@@ -85,7 +85,7 @@ Rig-Objekte
 
 Wenn nun der Rig ausgewählt und in den Pose-Mode gewechselt wird, kann der Charakter nun anhand der verschiedenen Formen innerhalb des Rigs posiert werden. In der Sidebar sind durch das Rigify-Add-on zwei neue Reiter unter «*Item*» erstellt worden: «*Rig Main Properties*» und «*Rig Layers*». Die verschiedenen Körperteile des Rigs werden unter dem Reiter «*Rig Layers*» aufgelistet. Dabei können einzelne Symbole ausgeblendet werden, damit nur die relevanten Formen des Rigs angezeigt werden.
 
-![Der Charakter mit dem dazugehörigen Rig.](Images/Chapter_45/.png){#fig-1_3 fig-align="left"}
+![Der Charakter mit dem dazugehörigen Rig.](Images/Chapter_45/45_3_Character_Rig.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Arten von Rig-Strukturen

@@ -64,7 +64,7 @@ Sculpting-Modelle sind nicht für weitere Bearbeitungen geeignet
 
 Wenn Charaktere im Sculpt-Mode erstellt werden, weisen diese in der Regel eine sehr hohe Anzahl Vertices auf, die durch die Bearbeitung mittels Sculpting entstehen. Ein solches Mesh ist nicht geeignet zum Animieren. Aus diesem Grund wird das gesculptete Mesh als Vorlage verwendet, um ein neues Mesh zu verwenden, das eine praktischere Gitterstruktur als Topologie aufweist. Dieser Prozess wird als Retopology bezeichnet.
 
-![Eine Plane zur Vorbereitung des Retopology-Prozesses.](Images/Chapter_41/1_Plane.png){#fig-1_1 fig-align="left"}
+![Eine Plane zur Vorbereitung des Retopology-Prozesses.](Images/Chapter_41/41_1_Plane.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Mesh für Retopology vorbereiten
@@ -78,7 +78,7 @@ Shrinkwrap-Modifier
 
 Anschliessend kann dem Mesh ein «*Shrinkwrap*»-Modifier hinzugefügt werden. Dieser ist in der Modifier-Auswahl in der dritten Spalte unter «*Deform*» zu finden. Mittels dieses Modifiers werden die Vertices eines Objektes direkt auf ein anderes Objekt projiziert. Hierfür muss unter «*Target*» das entsprechende Objekt eingestellt werden.
 
-![Eine Plane mit Mirror-, Shrinkwrap- und Subidivision-Surface-Modifier.](Images/Chapter_41/2_Plane_Modified.png){#fig-1_2 fig-align="left"}
+![Eine Plane mit Mirror-, Shrinkwrap- und Subidivision-Surface-Modifier.](Images/Chapter_41/41_2_Plane_Modified.png){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Einstellung der Modifier
@@ -92,10 +92,9 @@ Objekt immer im Vordergrund darstellen lassen
 
 Teilweise entsteht das Problem, dass das Retopology-Mesh nicht klar sichtbar ist, weil das Base-Mesh darüber dargestellt wird. Im Properties-Editor kann innerhalb des Reiters «*Object Properties*» der Reiter «*Viewport Display*» ausgewählt werden. Dort können verschiedene Darstellungsoptionen des Objektes im 3D-Viewport-Editor ausgewählt werden. Durch das Aktivieren der Option «*In Front*» wird das aktuell ausgewählte Objekt immer vor anderen Objekten dargestellt, selbst wenn sich die anderen Objekte eigentlich zwischen der eigenen Ansicht und dem ausgewählten Objekt befinden. Diese Option sollte aktiviert werden, während das Retopology-Mesh ausgewählt ist.
 
+![Besondere körperliche Merkmale, wie etwa die Augen, werden mit einer Schlaufe von Faces umreandet.](Images/Chapter_41/41_3_Mesh_Extrusion.png){#fig-1_3 fig-align="left"}
 
-![Besondere körperliche Merkmale, wie etwa die Augen, werden mit einer Schlaufe von Faces umreandet.](Images/Chapter_41/4_Mesh_Head.png){#fig-1_3 fig-align="left"}
-
-![Die Edges werden schrittweise extrudiert.](Images/Chapter_41/3_Mesh_Extrusion.png){#fig-1_4 fig-align="left"}
+![Die Edges werden schrittweise extrudiert.](Images/Chapter_41/41_4_Mesh_Head.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Snap-Funktion aktivieren
@@ -103,7 +102,7 @@ Snap-Funktion aktivieren
 
 Anschliessend kann das Retopology-Mesh im Edit-Mode bearbeitet werden. Hierfür wird Schritt für Schritt eine neue Fläche aus dem Retopology-Mesh erstellt, indem die einzelnen Edges der bestehenden Faces extrudiert werden, und so das Base-Mesh mit einer klaren Struktur nachgebildet. Damit die extrudierten Faces einfacher platziert werden können, sollte hierfür die Snap-Funktion im Header des 3D-Viewport-Editors aktiviert und beispielsweise auf die Einstellung «*Faces*» gesetzt werden.
 
-![Der Kopf nach dem Retopology-Prozess.](Images/Chapter_41/6_Object_Head.png){#fig-1_5 fig-align="left"}
+![Der Kopf nach dem Retopology-Prozess.](Images/Chapter_41/41_5_Object_Head.png){#fig-1_5 fig-align="left"}
 
 ::: column-margin
 Was bewirken die Modifier?
@@ -165,7 +164,7 @@ Kanten aus Charakter entfernen
 
 Der Charakter wird dabei kantig erstellt. Durch das Hinzufügen eines Subdivision-Surface-Modifiers werden diese Kanten geglättet, wobei die Anzahl Subdivisions in den meisten Fällen noch auf den Wert 2, wenn nicht sogar 3, erhöht werden sollte. Zudem kann im Skin-Modifier die Option «*Smooth Shading*» aktiviert werden. Dadurch werden noch vorhandene Kanten abgerundet dargestellt. Die Aktivierung des Smooth-Shadings unter «*Object \| Shade Smooth*» führt zu keiner Veränderung, wenn die Option «*Smooth Shading*» im Skin-Modifier nicht aktiviert wurde.
 
-![Ein Mesh, sowie deren Vertcies im Vergleich zwischen dem gesculpteten original, einer Bearbeitung mit Quadriflow-Remesh und einer Bearbeitung mit dem Remesh-Modifier.](Images/Chapter_41/7_Vergleich_Remesh.png){#fig-1_6 fig-align="left"}
+![Ein Mesh, sowie deren Vertcies im Vergleich zwischen dem gesculpteten original, einer Bearbeitung mit Quadriflow-Remesh und einer Bearbeitung mit dem Remesh-Modifier.](Images/Chapter_41/41_6_Comparison_Remesh.png){#fig-1_6 fig-align="left"}
 
 ## Alternative Tools zur Erstellung von Charakteren
 

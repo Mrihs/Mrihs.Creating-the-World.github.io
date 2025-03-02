@@ -49,4 +49,4 @@ Bildsequenz im Video-Sequencer-Editor hinzufügen
 
 Um nach dem Rendern die Bilder zu einem Video zu verknüpfen, kann der VideoSequencer-Editor in Blender verwendet werden. In diesem können unter «*Add \| Image/Sequence*» die ausgewählten Bilder eingelesen werden. Anschliessend kann die Output-Einstellung im Properties-Editor auf das Videoformat angepasst werden und durch das Rendern der Animation werden nun lediglich die bereits vorproduzierten einzelnen Bilder noch zu einem Video verknüpft.
 
-![Icon für den Video-Sequencer-Editor.](Images/Chapter_49/.png){#fig-1_1 fig-align="left"}
+![Icon für den Video-Sequencer-Editor.](Images/Chapter_49/49_1_Icon_Video_Sequencer.png){#fig-1_1 fig-align="left"}

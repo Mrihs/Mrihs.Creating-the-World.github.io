@@ -17,7 +17,7 @@ Skelet hinzufügen
 
 Um ein neues Skelet zu erstellen, kann im «*Add*»-Menü die Option «*Armature \| Single Bone*» ausgewählt werden. Dadurch wird ein Armature-Objekt erstellt mit einem einzelnen Knochen erstellt. Dieses Objekt kann danach im Edit-Mode bearbeitet werden. Dabei ist es ratsam, den Röntgenblick mittels «*Toggle X Ray*» zu aktivieren.
 
-![Die Schwimmnudel und ein hinzugefügter Knochen.](Images/Chapter_44/1.Schwimmnudel.png){#fig-1_1 fig-align="left"}
+![Die Schwimmnudel und ein hinzugefügter Knochen.](Images/Chapter_44/44_1_Pool_Noodle.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Auswahl von Knochenelementen
@@ -41,7 +41,7 @@ Kopf/Schwanz zwischen Knochen
 
 Der neu extrudierte Knochen ist direkt mit dem alten Knochen über das dazwischen liegende Gelenk verbunden. Der Kopf des neuen Knochens stellt dabei den Schwanz des alten Knochens dar. Dementsprechend wird die Ausrichtung der Knochen durch eine Verschiebung des Kopfes/Schwanzes zwischen den Knochen verändert. Um einen Knochen von den mit ihm verbundenen Knochen zu lösen, kann der Befehl «*Split*» mittels der Taste {{< kbd Y >}} ausgeführt werden.
 
-![Der Knochen wird entlang der Schwimmnudel platziert.](Images/Chapter_44/2.Knochen_Platzierung.png){#fig-1_2 fig-align="left"}
+![Der Knochen wird entlang der Schwimmnudel platziert.](Images/Chapter_44/44_2_Bone_Placement.png){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Vollständiges Skelett extrudieren
@@ -49,7 +49,7 @@ Vollständiges Skelett extrudieren
 
 Um ein vollständiges Skelett zu erhalten, können nun weitere Knochen entlang der X-Achse extrudiert werden. Dies sollte anschliessend ebenfalls entlang der anderen Seite der Schwimmnudel erfolgen. Am Schluss sollte das Skelet ähnlich der Abbildung 3 aussehen.
 
-![Der Knochen wird entlang der Schwimmnudel platziert.](Images/Chapter_44/3.Knochen_Platzierungen.png){#fig-1_3 fig-align="left"}
+![Der Knochen wird entlang der Schwimmnudel platziert.](Images/Chapter_44/44_3_Bone_Placements.png){#fig-1_3 fig-align="left"}
 
 ## Mesh dem Skelet zuweisen
 
@@ -91,7 +91,7 @@ Vertices für Verformung benötigt
 
 Die Verformung des Meshes erfolgt anhand der Struktur des Meshes. Wenn sich entlang mehrerer Knochen keine Vertices befinden, können die Strukturen der Knochen entlang dieser Fläche nicht mitberücksichtigt werden. Deshalb ist darauf zu achten, dass im Mesh genug Vertices entlang der dazugehörigen Knochen aufzufinden sind.
 
-![Die gebogene Schwimmnudel.](Images/Chapter_44/4.gebogene_Schwimmnudel.png){#fig-1_4 fig-align="left"}
+![Die gebogene Schwimmnudel.](Images/Chapter_44/44_4_Arched_Pool_Noodle.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Armature-Modifier
@@ -107,7 +107,7 @@ Posen-Bibliothek
 
 Um eine erstellte Pose schnell aufrufen zu können, lassen sich verschiedene Posen in einer Posen-Bibliothek abspeichern. Diese sind im Reiter «*Object-Data-Properties*» von Armaturen aufzufinden. Unter dem Reiter «*Pose Library*» kann anschliessend eine neue Posen-Bibliothek erstellt werden.
 
-![Icon des Reiters «*Object Data Properties*» bei Armaturen.](Images/Chapter_44/5.Icon_Object_Data_Properties_Armature.png){#fig-1_5 fig-align="left"}
+![Icon des Reiters «*Object Data Properties*» bei Armaturen.](Images/Chapter_44/44_5_Icon_Object_Data_Properties_Armature.png){#fig-1_5 fig-align="left"}
 
 ::: column-margin
 Posen abspeichern
@@ -115,4 +115,4 @@ Posen abspeichern
 
 Um eine neue Pose abzuspeichern, müssen im Pose-Mode jeweils alle Knochen ausgewählt werden, deren Anordnung für eine Pose gespeichert werden sollen. Um die aktuelle Anordnung abzuspeichern, kann anschliessend auf die Schaltfläche «+» geklickt werden. Anschliessend wird eine neue Pose innerhalb der Posen-Bibliothek erstellt. Dabei ist zu beachten, dass lediglich die ausgewählten Knochen für diese Pose abgespeichert werden. Sind nicht alle relevanten Knochen ausgewählt, wird die entsprechende Pose nur unvollständig abgespeichert. Mittels der Schaltfläche «*Apply Pose Library Pose*» wird zudem eine bereits ausgewählte Pose aufgerufen.
 
-![Icon für die Schaltfläche "*Apply Pose Library Pose*".](Images/Chapter_44/6.Icon_Apply_Pose_Library_Pose.png){#fig-1_6 fig-align="left"}
+![Icon für die Schaltfläche "*Apply Pose Library Pose*".](Images/Chapter_44/44_6_Icon_Apply_Pose_Library_Pose.png){#fig-1_6 fig-align="left"}

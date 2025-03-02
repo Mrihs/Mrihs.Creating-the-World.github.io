@@ -55,7 +55,7 @@ Bevel-Option
 
 Im Bereich «*Geometry*» können grundlegende Einstellungen zu der Geometrie der Bäume vorgenommen werden. Dabei besteht die wichtigste Einstellung aus dem Kontrollkästchen «*Bevel*». Wenn dieses Kästchen aktiviert ist, wird der Baum nicht anhand einer Kurve dargestellt, sondern auch mit einer Oberfläche versehen. Zudem kann mit der «*Bevel Resolution*» und der «*Curve Resolution*» jeweils angegeben werden, wie detailliert die Kurve respektive das Bevel erfolgen soll. Höhere Werte sind dabei mit einer höheren Leistung des Computers verbunden.
 
-![Die verschiedenen Formen von Bäumen.](Images/Chapter_39/.png){#fig-1_1 fig-align="left"}
+![Die verschiedenen Formen von Bäumen.](Images/Chapter_39/39_1_Tree_Forms.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Shape
@@ -92,7 +92,7 @@ Voreinstellungen
 
 Zuunterst im Dropdown-Menü «*Load Preset*» können verschiedene Voreinstellungen von Bäumen geladen werden. Wenn die Option «*Limit Import*» aktiviert ist, werden lediglich basale Einstellungen dieser Voreinstellung übernommen. Durch eine Deaktivierung von «*Limit Import*» wird die gesamte Voreinstellung übernommen. Zudem können eigene Voreinstellungen abgespeichert werden. Hierfür muss im Feld «*Preset Name*» ein Name eingegeben werden und anschliessend auf «*Export Preset*» geklickt werden. Die abgespeicherte Voreinstellung sollte anschliessend unter den Voreinstellungen abrufbar sein.
 
-![Die verschiedenen Voreinstellungen von Baumarten.](Images/Chapter_39/.png){#fig-1_2 fig-align="left"}
+![Die verschiedenen Voreinstellungen von Baumarten.](Images/Chapter_39/39_2_Tree_Presentations.png){#fig-1_2 fig-align="left"}
 
 ### Branch Radius
 

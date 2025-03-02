@@ -37,7 +37,7 @@ Tris aus UV-Sphere entfernen
 
 Um die Tris aus einer UV-Sphere zu entfernen, kann zunächst im «*Add*»-Menü unter «*Mesh \| UV Sphere*» eine neue UV-Sphere hinzugefügt werden. Anschliessend sollte das Kontext-Menü zur zuletzt durchgeführten Aktion in der linken unteren Ecke des 3D-Viewport-Editors ausgeklappt werden und die Anzahl Vertices und Segmente angepasst werden. Die UV-Sphere soll viermal weniger Subdivisions aufweisen als in den Standardeinstellungen. Hierfür wird die Anzahl «*Segments*» auf 8 gesetzt und die Anzahl «*Rings*» auf 4. Anschliessend kann die UV-Sphere von unten aus mit der Tastenkombination {{< kbd Alt >}} + {{< kbd 7 >}} betrachtet werden. Aus dieser Ansicht sollten nun die untersten zwei Reihen von Faces sichtbar sein. Die unterste Reihe besteht aus acht Tris und die untere Reihe aus acht Quads. Je zwei der Tris in der oberen Reihe könnten zu einem Quad zusammengefügt werden. Hierfür muss lediglich jedes zweite Edge zwischen den aneinandergereihten Tris ausgewählt und aufgelöst werden. Dabei ist wichtig, dass jene Edges aufgelöst werden, die nicht direkt auf den Achsen liegen. Zum Auflösen der Edges kann die Taste {{< kbd X >}} zum Öffnen des Lösch-Menüs gedrückt werden, und anschliessend die Option «*Dissolve Edges*» ausgewählt werden. Dadurch werden die Edges entfernt und die jeweiligen Tris zu Quads umgewandelt.
 
-![Die Edges zwischen den Tris, welche nicht entlang der Achsen verlaufen, können aufgelöst werden, damit Quads entstehen.](Images/Chapter_42/2_Edges_To_Delete.png){#fig-1_1 fig-align="left"}
+![Die Edges zwischen den Tris, welche nicht entlang der Achsen verlaufen, können aufgelöst werden, damit Quads entstehen.](Images/Chapter_42/42_1_Edges_To_Delete.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Subdivision-Surface-Modifier hinzufügen
@@ -45,7 +45,7 @@ Subdivision-Surface-Modifier hinzufügen
 
 Der bearbeiteten UV-Sphere, welche nur noch an einem Ende der Kugel Tris aufweist, kann nun ein Subdivision-Surface-Modifier hinzugefügt werden und dessen Anzahl Subdivisions auf 2 erhöht werden. Die Struktur der Faces wird durch den Subdivision-Surface-Modifier nun unterschiedlich an den beiden Enden verformt. An der Seite mit den Tris werden lediglich die Edges, welche auf den Tris basieren, verformt und die darüberliegenden Edges werden gleichmässig als Ringe dargestellt. Die Seite mit den Quads wird ebenfalls verformt, sodass sich weniger gleichmässige Ringe bilden. Dafür sind allerdings alle Faces ähnlich strukturiert.
 
-![Eine UV-Sphere, deren unteren Ende lediglich aus Quads besteht und mit einem Subdivision-Surface-Modifier ausgestattet wurde.](Images/Chapter_42/3_Subdivisions.png){#fig-1_2 fig-align="left"}
+![Eine UV-Sphere, deren unteren Ende lediglich aus Quads besteht und mit einem Subdivision-Surface-Modifier ausgestattet wurde.](Images/Chapter_42/42_2_Subdivisions.png){#fig-1_2 fig-align="left"}
 
 ::: column-margin
 Körper ausrichten
@@ -67,7 +67,7 @@ Subdivision-Surface-Modifier anwenden
 
 Als Nächstes soll der Kopf mit dem Körper der Katze verbunden werden. Dies erfordert zunächst allerdings noch Vorbereitungen. Zuerst wird der Subdivision Surface-Modifier bei beiden UV-Spheres angewendet. Hierfür muss jeweils bei dem entsprechenden Modifier das Dropdown-Menü geöffnet und auf «*Apply*» geklickt werden.
 
-![Die UV-Sphere wird zur Form des Kopfes ausgerichtet. Dabei befindet sich die Siete mit den Tris unten.](Images/Chapter_42/4_Kopf_ausrichten.png){#fig-1_3 fig-align="left"}
+![Die UV-Sphere wird zur Form des Kopfes ausgerichtet. Dabei befindet sich die Seite mit den Tris unten.](Images/Chapter_42/42_3_Head.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Überschüssige Vertices löschen und UV-Spheres verbinden
@@ -75,7 +75,7 @@ Als Nächstes soll der Kopf mit dem Körper der Katze verbunden werden. Dies erf
 
 Bei der UV-Sphere, welche den Körper der Katze bildet, können nun alle Vertices, welche sich über dem Hals befinden, ausgewählt und gelöscht werden. Bei der UV-Sphere, welche den Kopf der Katze darstellt, können zudem alle Vertices, welche sich unterhalb des Halses der Katze befinden gelöscht werden. Anschliessend können die beiden UV-Spheres im Object-Mode ausgewählt und mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd J >}} verbunden werden. Dadurch werden die beiden UV-Spheres zu einem einzigen Objekt verbunden.
 
-![Die überlappenden Vertices werden von beiden UV-Spheres entfernt und die beiden UV-Spheres miteinander verbunden.](Images/Chapter_42/5_Kopf_Koerper_verbinden.png){#fig-1_4 fig-align="left"}
+![Die überlappenden Vertices werden von beiden UV-Spheres entfernt und die beiden UV-Spheres miteinander verbunden.](Images/Chapter_42/42_4_Connection_Head_Body.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Kopf mit Körper verbinden
@@ -97,7 +97,7 @@ Extremitäten hinzufügen
 
 Der nächste Schritt besteht darin, der Katze Extremitäten – also Arme, Beine und Ohren – hinzuzufügen. Diese Extremitäten sind auf der linken und der rechten Seite des Katzenkörpers identisch. Deshalb macht es Sinn, eine symmetrische Bearbeitung der Katze vorzunehmen.
 
-![Die Hälfte des Meshes wird entfernt, damit es mit einem Mirror-Modifier für die weitere Bearbeitung gespiegelt werden kann.](Images/Chapter_42/6_Kopf_Koerper_Modifiers.png){#fig-1_5 fig-align="left"}
+![Die Hälfte des Meshes wird entfernt, damit es mit einem Mirror-Modifier für die weitere Bearbeitung gespiegelt werden kann.](Images/Chapter_42/42_5_Head_Body_Modifiers.png){#fig-1_5 fig-align="left"}
 
 ::: column-margin
 Mirror-Modifier hinzufügen
@@ -105,7 +105,7 @@ Mirror-Modifier hinzufügen
 
 Um die Katze symmetrisch bearbeiten zu können, wird ein Mirror-Modifier verwendet. Dieser macht allerdings nur Sinn, wenn vorher alle Vertices der einen Körper hälfte der Katze entfernt wurden. Deshalb werden alle Vertices der einen Körperhälfte – aber nicht diejenigen in der Körpermitte – ausgewählt und mit der Taste {{< kbd X >}} gelöscht. Anschliessend kann der Mirror-Modifier hinzugefügt werden. Im Mirror-Modifier sollte zudem die Option «*Clipping*» aktiviert werden, damit die Vertices nicht über die Köpermitte hinaus verschoben werden, und es sollte überprüft werden, dass die Option «*Merge*» aktiviert ist. Zudem kann ein Subdivision-Surface-Modifier hinzugefügt werden, um die Kanten des Meshes etwas zu glätten.
 
-![Die Faces, aus denen der Arm extrudiert werden soll, werden ausgewählt.](Images/Chapter_42/7_Arm_Vertices.png){#fig-1_6 fig-align="left"}
+![Die Faces, aus denen der Arm extrudiert werden soll, werden ausgewählt.](Images/Chapter_42/42_6_Arm_Vertices.png){#fig-1_6 fig-align="left"}
 
 ::: column-margin
 Armansatz erstellen
@@ -113,7 +113,7 @@ Armansatz erstellen
 
 Um die Arme der Katze zu erstellen, können vier Faces auf der rechten Seite des Torsos ausgewählt werden, an denen sich nachfolgend die Arme befinden werden. Diese Faces können anschliessend mittels der Taste {{< kbd E >}} extrudiert und entlang der Arme der Katze platziert werden, sodass sich ein Armansatz bildet. Hierbei wird idealerweise die Frontalansicht verwendet, damit die Arme nicht schräg nach hinter oder vorne extrudiert werden.
 
-![Ein Ansatz für den Arm wird extrudiert.](Images/Chapter_42/8_Armansatz.png){#fig-1_7 fig-align="left"}
+![Ein Ansatz für den Arm wird extrudiert.](Images/Chapter_42/42_7_Arms.png){#fig-1_7 fig-align="left"}
 
 ::: column-margin
 Arme abrunden
@@ -121,7 +121,7 @@ Arme abrunden
 
 Die extrudierten Arme sind aufgrund der Quads viereckig und würden blockartige Arme mit abgerundeten Kanten ergeben. Deshalb werden die Vertices in den Ecken der vier extrudierten Faces ausgewählt. Diese können anschliessend um den Faktor 0.75 skaliert werden. Dadurch werden die Ecken jeweils näher zueinandergezogen, während die Vertices in der Mitte der extrudierten Faces an ihrer Position bleiben. Dies führt zu einer runden Form des Armes.
 
-![Die Vertices, des extrudierten Armes werden kreisförmig angeordnet.](Images/Chapter_42/9_arm_rund.png){#fig-1_8 fig-align="left"}
+![Die Vertices, des extrudierten Armes werden kreisförmig angeordnet.](Images/Chapter_42/42_8_Arms_Round.png){#fig-1_8 fig-align="left"}
 
 ::: column-margin
 Arme extrudieren
@@ -129,7 +129,7 @@ Arme extrudieren
 
 Die Faces, welche das Ende des Armansatzes bilden, können nun wieder ausgewählt und schrittweise entlang des Armes extrudiert werden. Dabei sollten bei jedem Schritt nebst der Position auch die Rotation und die Skalierung etwas angepasst werden, sodass die Form der Arme aus dem Referenzbild dargestellt wird.
 
-![Die Arme werden entsprechend dem Referenzbild schrittweise extrudiert.](Images/Chapter_42/10_arm_extrudiert.png){#fig-1_9 fig-align="left"}
+![Die Arme werden entsprechend dem Referenzbild schrittweise extrudiert.](Images/Chapter_42/42_9_Arms_Extrusion.png){#fig-1_9 fig-align="left"}
 
 ::: column-margin
 Faces subdividen
@@ -143,7 +143,7 @@ Beinansatz erstellen
 
 Am Unterkörper der Katze können nun 4x4 Faces ausgewählt werden, welche gemeinsam die Beine der Katze bilden werden. Diese Faces können anschliessend entlang der Beine extrudiert werden, sodass sie einen Ansatz der Beine bilden.
 
-![Die Faces, aus denen die Beine extrudiert werden, werden ausgewählt.](Images/Chapter_42/11_Vertices_Beine.png){#fig-1_10 fig-align="left"}
+![Die Faces, aus denen die Beine extrudiert werden, werden ausgewählt.](Images/Chapter_42/42_10_Vertices_Legs.png){#fig-1_10 fig-align="left"}
 
 ::: column-margin
 Beinansatz rund verformen
@@ -151,7 +151,7 @@ Beinansatz rund verformen
 
 Auch bei den Beinen macht es Sinn, die Vertices des Ansatzes kreisförmig anzuordnen. Hierfür können zunächst alle Vertices, welche diagonal zwischen den Ecken und in den Ecken liegen, ausgewählt und um den Faktor 0.7 skaliert werden. Anschliessend können die Vertices, welche an den Kanten zwischen den Ecken und den Kantenmitten liegen, ausgewählt und um den Faktor 0.9 skaliert werden.
 
-![Die Vertices des Beinansatzes werden kreisförmig angeordnet.](Images/Chapter_42/11_1_Bein_kreisformig.png){#fig-1_11 fig-align="left"}
+![Die Vertices des Beinansatzes werden kreisförmig angeordnet.](Images/Chapter_42/42_11_Legs_Circle.png){#fig-1_11 fig-align="left"}
 
 ::: column-margin
 Beine extrudieren
@@ -159,7 +159,7 @@ Beine extrudieren
 
 Die Faces, welche den Beinansatz bilden, können nun ausgewählt und schrittweise entlang der Beine extrudiert werden. Dabei sollte, wie bereits bei den Armen, die Position, Rotation und Skalierung der Faces bei jedem Zwischenschritt überprüft werden. Damit sind die Beine bereits erstellt.
 
-![Die Beine werden schrittweise entlang der Referenzvorlage extrudiert.](Images/Chapter_42/13_Beine_extrudiert.png){#fig-1_12 fig-align="left"}
+![Die Beine werden schrittweise entlang der Referenzvorlage extrudiert.](Images/Chapter_42/42_12_Legs_Extrusion.png){#fig-1_12 fig-align="left"}
 
 ::: column-margin
 Ohren extrudieren
@@ -176,9 +176,9 @@ Um die Ohren der Katze zu erstellen, können 3x2 Faces ausgewählt werden, aus d
 -   Die Faces werden um 0.05 Meter extrudiert.
 -   Die Faces werden um den Faktor 0.4 skaliert.
 
-![Die Faces, aus denen die Ohren extrudiert werden, werden ausgewählt.](Images/Chapter_42/14_Ohren_Vertices.png){#fig-1_13 fig-align="left"}
+![Die Faces, aus denen die Ohren extrudiert werden, werden ausgewählt.](Images/Chapter_42/42_13_Ears_Faces.png){#fig-1_13 fig-align="left"}
 
-![Die Ohren werden schrittweise entlang der Referenzvorlage extrudiert.](Images/Chapter_42/15_Ohren_extrudiert.png){#fig-1_14 fig-align="left"}
+![Die Ohren werden schrittweise entlang der Referenzvorlage extrudiert.](Images/Chapter_42/42_14_Ears_Extrusion.png){#fig-1_14 fig-align="left"}
 
 ### Schwanz hinzufügen
 
@@ -200,7 +200,7 @@ Schwanz extrudieren
 
 Für den Schwanz der Katze können 4x4 Faces ausgewählt werden. Diese können zunächst einmal extrudiert und anschliessend nach demselben Schema wie bei den Beinen kreisförmig angeordnet werden. Anschliessend können die Faces schrittweise entlang des Schwanzes extrudiert werden. Auch hier sollte darauf geachtet werden, dass die Position, Rotation und Skalierung der extrudierten Faces bei jedem Zwischenschritt angepasst werden.
 
-![Die Faces, aus denen der Schwanz extrudiert wird, werden ausgewählt.](Images/Chapter_42/16_Schwanz_Vertices.png){#fig-1_15 fig-align="left"}
+![Die Faces, aus denen der Schwanz extrudiert wird, werden ausgewählt.](Images/Chapter_42/42_15_Tail_Vertices.png){#fig-1_15 fig-align="left"}
 
 ::: column-margin
 Shade-Smooth
@@ -216,7 +216,7 @@ UVs der Katze
 
 Durch die Bearbeitung der Katze sind die UVs des Meshes stark verzerrt worden. Zudem überlappen sich einige UVs, da das Mesh ursprünglich aus zwei UV-Spheres erstellt wurde. Deshalb sollte das UV-Mapping der Katze verbessert werden.
 
-![Die UV-Map der erstellten Katze ist aufgrund der Mesh-Bearbeitung durcheinander geraten.](Images/Chapter_42/17_UVs.png){#fig-1_16 fig-align="left"}
+![Die UV-Map der erstellten Katze ist aufgrund der Mesh-Bearbeitung durcheinander geraten.](Images/Chapter_42/42_16_UVs.png){#fig-1_16 fig-align="left"}
 
 ::: column-margin
 UVs sollten dem Detailgrad der Textur angepasst werden
@@ -230,7 +230,7 @@ Seams
 
 Um die UVs gezielt vergrössern oder verkleinern zu können, muss definiert werden, welche Bereiche grössere UVs benötigen. Damit diese Flächen angesteuert werden können, kann im Edit-Mode definiert werden, an welchen Edges entlang UVs auseinandergeschnitten werden sollen. Dabei handelt es sich um die Seams der Edges. Um Seams zu definieren, müssen zunächst die entsprechenden Edges, welche mit einem Seam versehen werden sollen, ausgewählt werden. Anschliessend kann das Edge-Menü mit der Tastenkombination {{< kbd Ctrl >}} + {{< kbd E >}} geöffnet werden. Mit der Option «*Mark Seam*» wird diesen Edges anschliessend ein Seam zugewiesen. Wenn ein Seam entfernt werden soll, kann das entsprechende Edge ausgewählt und die Option «*Clear Seam*» im Edge-Menü verwendet werden. Die Seams werden mit einer roten Markierung im Edit-Mode dargestellt.
 
-![Durch die Seams wird vorgegeben, welche Faces in der UV-Map als gemeinsame Insel dargestellt werden sollen.](Images/Chapter_42/18_Seams.png){#fig-1_17 fig-align="left"}
+![Durch die Seams wird vorgegeben, welche Faces in der UV-Map als gemeinsame Insel dargestellt werden sollen.](Images/Chapter_42/42_17_Seams.png){#fig-1_17 fig-align="left"}
 
 ::: column-margin
 Seams dem Mesh hinzufügen
@@ -296,7 +296,7 @@ Toolbar des Texture-Paint-Modes
 
 In der Toolbar des Texture-Paint-Modes finden sich ein paar Werkzeuge, um die Textur zu bemalen. Mittels der Option «*Draw*» kann etwa gemalt werden und mittels der Option «*Fill*» kann eine Farbfläche mit einer Farbe gefüllt werden. Zudem besteht auch die Möglichkeit, Farbübergänge zu verwischen mittels «*Smear*» oder weicher zu gestalten mittels «*Soften*».
 
-![Icons in der Tool-Bar des Texture-Paint-Modes.](Images/Chapter_42/19_Toolbar_Texture_Paint.png){#fig-1_18 fig-align="left"}
+![Icons in der Tool-Bar des Texture-Paint-Modes.](Images/Chapter_42/42_18_Toolbar_Texture_Paint.png){#fig-1_18 fig-align="left"}
 
 ::: column-margin
 Brush-Settings
@@ -381,7 +381,7 @@ Particle-Edit-Mode
 
 Durch das neu hinzugefügte Haar-Partikelsystem ist im 3D-Viewport-Editor nun ein neuer Bearbeitungsmodus verfügbar. Statt des Object-Modes wird deshalb nun der Particle-Edit-Mode verwendet. Mit dieser Option können die Haare eines Objektes innerhalb des 3D-Viewport-Editors bearbeitet werden. Durch diese Bearbeitung gehen allerdings einige Einstellungsmöglichkeiten im Particle-Properties-Editor verloren.
 
-![Icons in der Toolbar des Particle-Edit-Modes.](Images/Chapter_42/20_Toolbar_Particles_Editor.png){#fig-1_19 fig-align="left"}
+![Icons in der Toolbar des Particle-Edit-Modes.](Images/Chapter_42/42_19_Toolbar_Particles_Editor.png){#fig-1_19 fig-align="left"}
 
 ::: column-margin
 Speichern nicht vergessen

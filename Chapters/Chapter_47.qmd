@@ -29,7 +29,7 @@ Gelbe Markierung signalisiert Keyframes beim aktuellen Frame
 
 Wenn ein Wert in Blender mit einem Keyframe versehen wurde, wird dies jeweils dadurch angezeigt, dass das entsprechende Feld für einen Wert mit einer Hintergrundfarbe dargestellt wird. In diesem Beispiel sollten die Werte für die Position mit einer gelben Hintergrundfarbe dargestellt werden. Damit wird signalisiert, dass während des aktuellen Frames ein Keyframe gesetzt wurde. Zusätzlich erscheint im Timeline-Editor beim aktuellen Frame ein gelbes Viereck. Dadurch wird signalisiert, dass das aktuell ausgewählte Objekt bei diesem Frame auf der Zeitachse einen Keyframe beinhaltet.
 
-![Die Markierung der Positionswerte, welche beim aktuellen Frame mit einem Keyframe versehen wurden.](Images/Chapter_47/.png){#fig-1_1 fig-align="left"}
+![Die Markierung der Positionswerte, welche beim aktuellen Frame mit einem Keyframe versehen wurden.](Images/Chapter_47/47_1_Postions_Marked.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Grüne Markierung von Werten

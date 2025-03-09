@@ -241,7 +241,7 @@ website:
               text: Kapitel 49
 format:
   html:
-    theme: [cosmos, assets/css/styles.scss]
+    theme: [cosmos, assets/css/style.scss]
     toc: true
     toc-title: Auf dieser Seite
     fontsize: 17px

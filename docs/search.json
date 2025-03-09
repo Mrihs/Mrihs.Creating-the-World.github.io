@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender)",
     "section": "",
-    "text": "Auf dieser Website werden die Lenrmaterialien der Lehrveranstaltung “Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender) als Open Education Ressource aufbereitet.\nWeitere Informationen hierzu folgen…\nHier\nDownload Haus-File"
+    "text": "Auf dieser Website werden die Lenrmaterialien der Lehrveranstaltung “Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender) als Open Education Ressource aufbereitet.\nWeitere Informationen hierzu folgen…\nÜbung 12.1"
   },
   {
     "objectID": "index.html#diese-website-befindet-sich-im-aufbau",
     "href": "index.html#diese-website-befindet-sich-im-aufbau",
     "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender)",
     "section": "",
-    "text": "Auf dieser Website werden die Lenrmaterialien der Lehrveranstaltung “Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender) als Open Education Ressource aufbereitet.\nWeitere Informationen hierzu folgen…\nHier\nDownload Haus-File"
+    "text": "Auf dieser Website werden die Lenrmaterialien der Lehrveranstaltung “Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender) als Open Education Ressource aufbereitet.\nWeitere Informationen hierzu folgen…\nÜbung 12.1"
   },
   {
     "objectID": "Sites/chapter_overview.html",
@@ -324,7 +324,7 @@
     "href": "Chapters/Chapter_27.html",
     "title": "27. Tutorial: Einen Hammer texturieren",
     "section": "",
-    "text": "Unterlagen für dieses Kapitel\n\n\n\n Download Hammer.zip\nAls Nächstes wird anhand eines Modelles aufgezeigt, wie das Texturieren erfolgt. Im Zip-Ordner «Hammer» ist ein .blend-File aufzufinden, in dem sich ein Mesh in der Form eines Hammers befindet. Nebst diesem File sind im Ordner «Metal022_4K-JPG» verschiedene Texturarten für ein metallisches Material aufzufinden. Dieses Material wird anhand der Texturen in diesem Ordner erstellt und dem Hammerkopf zugewiesen. Anschliessend wird eine weitere Textur gesucht und dem Holzstiel des Hammers zugewiesen.",
+    "text": "Ziel dieser Aufgabe\nAls Nächstes wird anhand eines Modelles aufgezeigt, wie das Texturieren erfolgt. Im Zip-Ordner «Hammer» ist ein .blend-File aufzufinden, in dem sich ein Mesh in der Form eines Hammers befindet. Nebst diesem File sind im Ordner «Metal022_4K-JPG» verschiedene Texturarten für ein metallisches Material aufzufinden. Dieses Material wird anhand der Texturen in diesem Ordner erstellt und dem Hammerkopf zugewiesen. Anschliessend wird eine weitere Textur gesucht und dem Holzstiel des Hammers zugewiesen.",
     "crumbs": [
       "Skript",
       "Kapitel",
@@ -2352,7 +2352,7 @@
     "href": "Chapters/Chapter_19.html",
     "title": "19. Grundlegende Eigenschaften von Materialen",
     "section": "",
-    "text": "Grundlegende Eigenschaften von Materialien\nViele Materialien bestehen in ihren wichtigsten Grundkomponenten aus drei Merkmalen, welche teilweise auch in den verschiedenen Shadern wiederzufinden sind. Bei diesen Eigenschaften handelt es sich um:",
+    "text": "Unterlagen für dieses Kapitel\n\n\n\n Übung 12.1\nViele Materialien bestehen in ihren wichtigsten Grundkomponenten aus drei Merkmalen, welche teilweise auch in den verschiedenen Shadern wiederzufinden sind. Bei diesen Eigenschaften handelt es sich um:",
     "crumbs": [
       "Skript",
       "Kapitel",
@@ -2748,7 +2748,7 @@
     "href": "Sites/Overview.html#semesterplan",
     "title": "Kursübersicht",
     "section": "Semesterplan",
-    "text": "Semesterplan\n\n\n\nWoche\nPraxis\nKapitel\nTheorie\nLiteratur\nFolien\nAbgabe\n\n\n\n\n1\nDie Arbeitsoberfläche von Blender\nEigenschaften von 3D-Objekten\n1, 2, 3, 4, 5, 6, 7, 8, 9\nOrganisatorisches\nBedeutung von 3D-Objekten\nTarr et al. (1998)\nOrganisation\nEinführung\n\n\n\n2\nGrundmechanismen der Objektbearbeitung I\n10, 11, 12\n\n\n\n\n\n\n3\nGrundmechanismen der Objektbearbeitung II\n13, 14\nReferenzbilder oder Fantasie?\nBrainbridge et al. (2021)\n\n\n\n\n4\nObjektbearbeitung mit Modifiers\n15, 16\n\n\nModifiers\n1\n\n\n5\nMaterialien\n17, 18, 19, 20, 21\nVisuelle Wahrnehmung von Materialien\nFlemming (2014)\nMaterialien\n\n\n\n6\nTexturen\n22, 23, 24, 25, 26, 27, 28\nLizenzen & Lizenzarten\n\nTexturen\n2\n\n\n7\nPhysical based Rendering\n29, 30, 31, 32, 33\nCartoon oder Realismus?\n\nPrincipled_BSDF_Shader\n\n\n\n8\nBeleuchtung und Welten\n34, 35\nFarbwahrnehmung unter Beleuchtung\nBrainard & Hurlbert (2015)\nLicht & Welten\n3\n\n\n9\nPartikel/Haare, Kamera & Rendering\n36, 37, 38\nDateiformate & Hardware\nJoon (2010)\n\n\n\n\n10\nWorkflow der Charaktererstellung\n39, 40, 41, 42\nUncanny Valley Effect\nKätsyri et al. (2015)\nWorkflow der Charaktererstellung\n4\n\n\n11\nCharacter Rigging\n43, 44, 45\nFotorealismus\n\n\n\n\n\n12\nAnimationen\n46, 47\nWahrnehmung von Animationen\nScholl & Tremoulet (2000)\n\n5\n\n\n13\nBlender in VR\n\nVirtual Reality\n\nVR\n6\n\n\n14\nAbschluss\n\n\n\nLinien"
+    "text": "Semesterplan\n\n\n\nWoche\nPraxis\nKapitel\nTheorie\nLiteratur\nFolien\nRessourcen\nAbgabe\n\n\n\n\n1\nDie Arbeitsoberfläche von Blender\nEigenschaften von 3D-Objekten\n1, 2, 3, 4, 5, 6, 7, 8, 9\nOrganisatorisches\nBedeutung von 3D-Objekten\nTarr et al. (1998)\nOrganisation\nEinführung\nDemofile\n\n\n\n2\nGrundmechanismen der Objektbearbeitung I\n10, 11, 12\n\n\n\n\n\n\n\n3\nGrundmechanismen der Objektbearbeitung II\n13, 14\nReferenzbilder oder Fantasie?\nBrainbridge et al. (2021)\n\nBildvorlage\n\n\n\n4\nObjektbearbeitung mit Modifiers\n15, 16\n\n\nModifiers\nHaus\nGlas\n1\n\n\n5\nMaterialien\n17, 18, 19, 20, 21\nVisuelle Wahrnehmung von Materialien\nFlemming (2014)\nMaterialien\nÜbung 12_1\nÜbung 13_1\n\n\n\n6\nTexturen\n22, 23, 24, 25, 26, 27, 28\nLizenzen & Lizenzarten\n\nTexturen\nHammer\n2\n\n\n7\nPhysical based Rendering\n29, 30, 31, 32, 33\nCartoon oder Realismus?\n\nPrincipled_BSDF_Shader\nDisplacement-Map\nGlasmaterial: Beispiel\n\n\n\n8\nBeleuchtung und Welten\n34, 35\nFarbwahrnehmung unter Beleuchtung\nBrainard & Hurlbert (2015)\nLicht & Welten\nDünen\nSpielbrett\n3\n\n\n9\nPartikel/Haare, Kamera & Rendering\n36, 37, 38\nDateiformate & Hardware\nJoon (2010)\n\nGlas-Partikel\n\n\n\n10\nWorkflow der Charaktererstellung\n39, 40, 41, 42\nUncanny Valley Effect\nKätsyri et al. (2015)\nWorkflow der Charaktererstellung\nBaum\nKatzen-Charakter\n4\n\n\n11\nCharacter Rigging\n43, 44, 45\nFotorealismus\n\n\nAlien\nCharakter\nSchwimmnudel\n\n\n\n12\nAnimationen\n46, 47\nWahrnehmung von Animationen\nScholl & Tremoulet (2000)\n\nPendel\nRaum für Abgabe 5\n5\n\n\n13\nBlender in VR\n\nVirtual Reality\n\nVR\nMensch\n6\n\n\n14\nAbschluss\n\n\n\nLinien\nFreestyle"
   },
   {
     "objectID": "Sites/Overview.html#skript-kapitel",

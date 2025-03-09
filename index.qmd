@@ -7,3 +7,5 @@ title: "Creating the World: Grafik, Design & Animation (inkl. Einführung in die
 Auf dieser Website werden die Lenrmaterialien der Lehrveranstaltung "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender) als Open Education Ressource aufbereitet.
 
 Weitere Informationen hierzu folgen...
+
+[Übung 12.1](assets/Blender_Files/05_Uebung_12_1.zip)

@@ -22,6 +22,41 @@ website:
       - text: Ressourcen
         icon: folder
       - text: "Folien"
+        menu: 
+          - href: Slides/Slides_00_Organisatorisches.pdf
+            text: "0. Organisatorisches"
+          - href: Slides/Slides_01_Einfuehrung.pdf
+            text: "1. Einführung"
+          - href: Slides/Slides_02_Objekterstellung.pdf
+            text: "2. Objekterstellung"
+          - href: Slides/Slides_04_Modifiers.pdf
+            text: "4. Modifiers"
+          - href: Slides/Slides_05_Materialien.pdf
+            text: "5. Materialien"
+          - href: Slides/Slides_06_Texturen.pdf
+            text: "6. Texturen"
+          - href: Slides/Slides_07_BSDF.pdf
+            text: "7. Principled-BSDF-Shader"
+          - href: Slides/Slides_08_Licht_Welten.pdf
+            text: "8. Licht & Welten"
+          - href: Slides/Slides_10_Charaktererstellung.pdf
+            text: "10. Charaktererstellung"
+          - href: Slides/Slides_13_Animation_VR.pdf
+            text: "13. Animation in Virtual-Realität"
+          - href: Slides/Slides_14_Linien.pdf
+            text: "14. Linien"
+          - href: Slides/Slides_Abgabe_1.pdf
+            text: "Abgabe 1"
+          - href: Slides/Slides_Abgabe_2.pdf
+            text: "Abgabe 2"            
+          - href: Slides/Slides_Abgabe_3.pdf
+            text: "Abgabe 3"
+          - href: Slides/Slides_Abgabe_4.pdf
+            text: "Abgabe 4"
+          - href: Slides/Slides_Abgabe_5.pdf
+            text: "Abgabe 5"
+          - href: Slides/Slides_Abgabe_6.pdf
+            text: "Abgabe 6"            
         icon: images
       - text: "Skript"
         icon: eyeglasses

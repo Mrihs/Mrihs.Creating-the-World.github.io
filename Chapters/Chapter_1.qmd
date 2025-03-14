@@ -6,6 +6,19 @@ categories: [Blender, Installation]
 draft: false
 ---
 
+:::::: downloadbox
+::: downloadbox-header
+Unterlagen für dieses Kapitel
+:::
+
+:::: downloadbox-body
+::: button
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Demofile](../assets/Blender_Files/01_Demofile.zip){.btn .btn-light download="Demofile"}
+:::
+::::
+::::::
+
+
 ## Installation von Blender
 
 ::: column-margin

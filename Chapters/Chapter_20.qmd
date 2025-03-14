@@ -2,6 +2,17 @@
 title: "20. Tutorial: Strandball"
 editor: visual
 ---
+:::::: downloadbox
+::: downloadbox-header
+Unterlagen für dieses Kapitel
+:::
+
+:::: downloadbox-body
+::: button
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Übung 13.1](../assets/Blender_Files/05_Uebung_13_1.zip){.btn .btn-light download="Uebung_13_1"}
+:::
+::::
+::::::
 
 ::: column-margin
 Ziel dieses Tutorials
@@ -73,7 +84,6 @@ Faces für zweiten Material-Slot auswählen
 
 Als Nächstes wird im Edit-Mode definiert, welche Faces zu welchem Material gehören. Hierfür wird mittels der Taste {{< kbd Tab >}} in den Edit-Mode gewechselt. Alle Faces haben nun noch standardmässig das Material des ersten Material-Slots inne. Deshalb werden nun alle Faces ausgewählt, denen das Material aus dem zweiten Material-Slot zugewiesen werden soll. Jeweils vier aufeinanderfolgende Streifen werden mit demselben Material ausgestattet. Indem im Face-Select-Modus bei gedrückter Tastenkombination {{< kbd Shift >}} + {{< kbd A >}} mit der linken Maustaste auf die Streifen der UV-Sphere geklickt wird, können diese gleich als Ganzes ausgewählt werden. Anschliessend müssen der Auswahl noch von Hand die dazugehörigen Tris an den beiden Polen der Kugel hinzugefügt werden.
 
-
 ![Auswahl der Faces zur Zuweisung des zweiten Material-Slots.](Images/Chapter_20/20_3_Material_Choice_2.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
@@ -100,8 +110,7 @@ Subdivision-Surface-Modifier hinzufügen
 
 An dieser Stelle könnte der Ball bereits fertig sein. Bei genauerer Betrachtung sind allerdings noch einige Kanten von Vertices zu erkennen. Deshalb wird dem Ball noch ein Subdivision-Surface-Modifier hinzugefügt, um auch die Struktur des Objektes etwas abzuglätten. Hierfür wird im Properties-Editor auf den Reiter für die Modifiers geklickt und unter «*Add Modifier*» der «*Subdivision Surface*»-Modifier hinzugefügt. Unter «*Levels Viewport*» kann anschliessend noch die Anzahl Subdivisions auf den Wert 2 erhöht werden. Dadurch erscheint der Ball weniger kantig.
 
-
-![Auswahl der Faces für den dritten Material-Slot.](Images/Chapter_20/20_4_ Material_Choice_3.png){#fig-1_4 fig-align="left"}
+![Auswahl der Faces für den dritten Material-Slot.](Images/Chapter_20/20_4_%20Material_Choice_3.png){#fig-1_4 fig-align="left"}
 
 ::: column-margin
 Creases hinzufügen

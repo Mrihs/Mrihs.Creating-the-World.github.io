@@ -2,6 +2,17 @@
 title: "13. Tutorial: Erstellen eines Glases"
 editor: visual
 ---
+:::::: downloadbox
+::: downloadbox-header
+Unterlagen für dieses Kapitel
+:::
+
+:::: downloadbox-body
+::: button
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Bildvorlage](../assets/Blender_Files/03_Bildvorlage.zip){.btn .btn-light download="Bildvorlage"}
+:::
+::::
+::::::
 
 ::: column-margin
 Ziel dieses Tutorials

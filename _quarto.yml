@@ -21,6 +21,29 @@ website:
             text: "Shading"
       - text: Ressourcen
         icon: folder
+        menu: 
+          - href: assets/Blender_Files/01_Demofile.zip
+            text: "Demofile" 
+          - href: assets/Blender_Files/03_Bildvorlage.zip
+            text: "Bildvorlage"             
+          - href: assets/Blender_Files/03_Haus.zip
+            text: "Haus" 
+          - href: assets/Blender_Files/04_Glas_Querschnitt.zip
+            text: "Glas-Querschnitt"
+          - href: assets/Blender_Files/05_Uebung_12_1.zip
+            text: "Übung 12.1" 
+          - href: assets/Blender_Files/05_Uebung_13_1.zip
+            text: "Übung 13.1" 
+          - href: assets/Blender_Files/06_Hammer.zip
+            text: "Hammer" 
+          - href: assets/Blender_Files/07_Beispiel_Glas_Material.zip
+            text: "Glasmaterial"
+          - href: assets/Blender_Files/07_Displacement_Map.zip
+            text: "Displacement Map" 
+          - href: assets/Blender_Files/08_Dunes.zip
+            text: "Dünen" 
+          - href: assets/Blender_Files/08_Gameboard_Lights.zip
+            text: "Spielbrett" 
       - text: "Folien"
         menu: 
           - href: Slides/Slides_00_Organisatorisches.pdf

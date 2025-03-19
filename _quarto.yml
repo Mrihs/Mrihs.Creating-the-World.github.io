@@ -44,6 +44,28 @@ website:
             text: "Dünen" 
           - href: assets/Blender_Files/08_Gameboard_Lights.zip
             text: "Spielbrett" 
+          - href: assets/Blender_Files/09_Glas_Particles.zip
+            text: "Glaspartikel"
+          - href: assets/Blender_Files/10_Baum.zip
+            text: "Baum"
+          - href: assets/Blender_Files/10_Cat_Character.zip
+            text: "Katze-Charakter"
+          - href: assets/Blender_Files/11_Alien.zip
+            text: "Alien"
+          - href: assets/Blender_Files/11_Character.zip
+            text: "Charakter"
+          - href: assets/Blender_Files/11_Schwimmnudel.zip
+            text: "Schwimmnudel"
+          - href: assets/Blender_Files/12_Pendel.zip
+            text: "Pendel"
+          - href: assets/Blender_Files/Leistungsnachweis_5_Raum.zip
+            text: "Leistungsnachweis"
+          - href: assets/Blender_Files/13_Erde.zip
+            text: "Erde"
+          - href: assets/Blender_Files/13_Human.zip
+            text: "Human"
+          - href: assets/Blender_Files/14_Freestyle.zip
+            text: "Freestyle"
       - text: "Folien"
         menu: 
           - href: Slides/Slides_00_Organisatorisches.pdf

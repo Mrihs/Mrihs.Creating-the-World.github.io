@@ -2,6 +2,17 @@
 title: "30. Tutorial: Erstellen einer Düne"
 editor: visual
 ---
+:::::: downloadbox
+::: downloadbox-header
+Unterlagen für dieses Kapitel
+:::
+
+:::: downloadbox-body
+::: button
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Dünen](../assets/Blender_Files/08_Dunes.zip){.btn .btn-light download="Dünen"}
+:::
+::::
+::::::
 
 ::: column-margin
 Ziel dieses Tutorials

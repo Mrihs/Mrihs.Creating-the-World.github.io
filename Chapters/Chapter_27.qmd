@@ -2,6 +2,7 @@
 title: "27. Tutorial: Einen Hammer texturieren"
 editor: visual
 ---
+
 :::::: downloadbox
 ::: downloadbox-header
 Unterlagen für dieses Kapitel

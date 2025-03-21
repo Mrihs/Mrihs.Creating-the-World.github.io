@@ -2,6 +2,17 @@
 title: "39. Bäume mittels Add-on erstellen"
 editor: visual
 ---
+:::::: downloadbox
+::: downloadbox-header
+Unterlagen für dieses Kapitel
+:::
+
+:::: downloadbox-body
+::: button
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Baum](../assets/Blender_Files/10_Baum.zip){.btn .btn-light download="Baum"}
+:::
+::::
+::::::
 
 ::: column-margin
 Partikel und Haare können für Vielzahl von Objekten verwendet werden

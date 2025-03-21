@@ -2,6 +2,7 @@
 title: "42. Tutorial: Eine Cartoon-Katze als Charakter erstellen"
 editor: visual
 ---
+
 :::::: downloadbox
 ::: downloadbox-header
 Unterlagen für dieses Kapitel

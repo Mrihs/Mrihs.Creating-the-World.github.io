@@ -2,6 +2,17 @@
 title: "38. Tutorial: Ein Glas mit Wasser erstellen"
 editor: visual
 ---
+:::::: downloadbox
+::: downloadbox-header
+Unterlagen für dieses Kapitel
+:::
+
+:::: downloadbox-body
+::: button
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Glas Particles](../assets/Blender_Files/09_Glas_Particles.zip){.btn .btn-light download="Glas Particles"}
+:::
+::::
+::::::
 
 ::: column-margin
 Ziel dieses Tutorials

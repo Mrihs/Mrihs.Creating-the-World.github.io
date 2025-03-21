@@ -18,7 +18,6 @@ Unterlagen für dieses Kapitel
 ::::
 ::::::
 
-
 ## Installation von Blender
 
 ::: column-margin

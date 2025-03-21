@@ -140,7 +140,7 @@ Hexadezimale Farbdefinition
 Das Spektrum der möglichen Farben als solches ist limitiert und es ist nicht möglich, eine neue Farbe zu erfinden. Dies hat allerdings den Vorteil, dass jedem Farbwert ein individueller Code zugeordnet werden kann. Die hexadezimale Farbdefinition stellt einen solchen Code dar. Unter dem Reiter «*Hex*» innerhalb der Farbauswahl kann jeweils dieser Code für die ausgewählte Farbe betrachtet werden. Ebenso kann an dieser Stelle auch ein hexadezimaler Code eingefügt werden, um eine entsprechende Farbe auszuwählen. Anders als bei den RGB- oder HSV-Werten muss hier also lediglich ein Wert übertragen werden und damit wird anschliessend die Farbe ermittelt.
 
 | Farbe | Farbe | RGB | Blenders RGB | HSV | Hexadezimal |
-|------------|------------|------------|------------|------------|------------|
+|----|----|----|----|----|----|
 | [\_ \_ \_ \_ \_ \_ \_ \_]{style="background-color:#FFFFFF;color:#FFFFFF"} | Weiss | 255 - 255 – 255 | 1- 1 -1 | 0 - 0 - 1 | FFFFFF |
 | [\_ \_ \_ \_ \_ \_ \_ \_]{style="background-color:#000000;color:#000000"} | Schwarz | 0 - 0 - 0 | 0 - 0 - 0 | 0 - 0 - 0 | 000000 |
 | [\_ \_ \_ \_ \_ \_ \_ \_]{style="background-color:#FF0000;color:#FF0000"} | Rot | 255 - 0 - 0 | 1 - 0- 0 | 0 - 1 - 1 | FF0000 |

@@ -2,6 +2,17 @@
 title: "45. Charakter-Rigging"
 editor: visual
 ---
+:::::: downloadbox
+::: downloadbox-header
+Unterlagen für dieses Kapitel
+:::
+
+:::: downloadbox-body
+::: button
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Human](../assets/Blender_Files/13_Human.zip){.btn .btn-light download="Human"}
+:::
+::::
+::::::
 
 ## Charakter-Rigging mittels Rigify
 

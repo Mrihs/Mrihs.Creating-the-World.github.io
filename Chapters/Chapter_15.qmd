@@ -2,6 +2,17 @@
 title: "15. Eigenschaften innerhalb eines Meshes definieren"
 editor: visual
 ---
+:::::: downloadbox
+::: downloadbox-header
+Unterlagen für dieses Kapitel
+:::
+
+:::: downloadbox-body
+::: button
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Haus](../assets/Blender_Files/03_Haus.zip){.btn .btn-light download="Haus"}
+:::
+::::
+::::::
 
 ## Edge Crease
 

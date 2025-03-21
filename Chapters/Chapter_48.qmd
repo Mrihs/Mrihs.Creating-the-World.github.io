@@ -2,6 +2,17 @@
 title: "48. Animationen verfeinern"
 editor: visual
 ---
+:::::: downloadbox
+::: downloadbox-header
+Unterlagen für dieses Kapitel
+:::
+
+:::: downloadbox-body
+::: button
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Pendel](../assets/Blender_Files/12_Pendel.zip){.btn .btn-light download="Pendel"}
+:::
+::::
+::::::
 
 ### Beispiel Pendel
 

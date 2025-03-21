@@ -2,7 +2,17 @@
 title: "44. Objekte mit Armaturen verformen"
 editor: visual
 ---
+:::::: downloadbox
+::: downloadbox-header
+Unterlagen für dieses Kapitel
+:::
 
+:::: downloadbox-body
+::: button
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Schwimmnudel](../assets/Blender_Files/11_Schwimmnudel.zip){.btn .btn-light download="Schwimmnudel"}
+:::
+::::
+::::::
 ::: column-margin
 Datei «Schwimmnudel»
 :::

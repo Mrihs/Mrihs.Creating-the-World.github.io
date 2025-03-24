@@ -3,6 +3,18 @@ title: "14. Objekterstellung mittels Modifiern"
 editor: visual
 ---
 
+:::::: downloadbox
+::: downloadbox-header
+Unterlagen für dieses Kapitel
+:::
+
+:::: downloadbox-body
+::: button
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Glasquerschnitt](../assets/Blender_Files/04_Glas_Querschnitt.zip){.btn .btn-light download="Glasquerschnitt"}
+:::
+::::
+::::::
+
 ::: column-margin
 Destruktive Objektbearbeitung
 :::

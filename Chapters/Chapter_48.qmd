@@ -2,6 +2,7 @@
 title: "48. Animationen verfeinern"
 editor: visual
 ---
+
 :::::: downloadbox
 ::: downloadbox-header
 Unterlagen für dieses Kapitel

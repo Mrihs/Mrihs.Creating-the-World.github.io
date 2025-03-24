@@ -3,6 +3,18 @@ title: "41. Character-Modeling"
 editor: visual
 ---
 
+:::::: downloadbox
+::: downloadbox-header
+Unterlagen für dieses Kapitel
+:::
+
+:::: downloadbox-body
+::: button
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Charakter](../assets/Blender_Files/11_Character.zip){.btn .btn-light download="Charakter"}
+:::
+::::
+::::::
+
 ::: column-margin
 Vorgehensweisen zur Erstellung eines Charakters
 :::

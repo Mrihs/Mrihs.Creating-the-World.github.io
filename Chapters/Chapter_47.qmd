@@ -3,6 +3,18 @@ title: "47. Animationen erstellen"
 editor: visual
 ---
 
+:::::: downloadbox
+::: downloadbox-header
+Unterlagen für dieses Kapitel
+:::
+
+:::: downloadbox-body
+::: button
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Leistungsnachweis](../assets/Blender_Files/Leistungsnachweis_5_Raum.zip){.btn .btn-light download="Leistungsnachweis"}
+:::
+::::
+::::::
+
 ## Keyframes erstellen
 
 ::: column-margin

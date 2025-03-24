@@ -2,6 +2,7 @@
 title: "28. Displacement mit dem Displacement-Modifier erstellen"
 editor: visual
 ---
+
 :::::: downloadbox
 ::: downloadbox-header
 Unterlagen für dieses Kapitel
@@ -9,10 +10,11 @@ Unterlagen für dieses Kapitel
 
 :::: downloadbox-body
 ::: button
-[<i class="bi bi-file-earmark-arrow-down-fill"></i> Displacement Map](../assets/Blender_Files/07_Displacement_Map.zip){.btn .btn-light download="Demofile"}
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Displacement Map](../assets/Blender_Files/07_Displacement_Map.zip){.btn .btn-light download="Displacement Map"}
 :::
 ::::
 ::::::
+
 ::: column-margin
 Was macht die Displacement-Textur genau?
 :::

@@ -2,6 +2,7 @@
 title: "38. Tutorial: Ein Glas mit Wasser erstellen"
 editor: visual
 ---
+
 :::::: downloadbox
 ::: downloadbox-header
 Unterlagen für dieses Kapitel
@@ -9,7 +10,7 @@ Unterlagen für dieses Kapitel
 
 :::: downloadbox-body
 ::: button
-[<i class="bi bi-file-earmark-arrow-down-fill"></i> Glas Particles](../assets/Blender_Files/09_Glas_Particles.zip){.btn .btn-light download="Glas Particles"}
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Glaspartikel](../assets/Blender_Files/09_Glas_Particles.zip){.btn .btn-light download="Glaspartikel"}
 :::
 ::::
 ::::::
@@ -100,7 +101,7 @@ Wasser anpassen
 
 Zusätzlich sollte allerdings auch eine gewisse Oberflächenspannung erzeugt werden, sodass sich der Rand der Wasseroberfläche ein wenig oberhalb der Wasseroberfläche befindet. Da der Rand der Wasseroberfläche allerdings genau der Position des Glases entspricht, ist es sinnvoller, den Rest der Wasseroberfläche tiefer zu setzen. Hierfür wird die gesamte Oberfläche des Wassers ausgewählt und der Rand der Wasseroberfläche abgewählt. Anschliessend können die inneren Vertices der Wasseroberfläche etwas tiefer gesetzt werden.
 
-![Die Vertices unterhalb der Wasseroberfläche werden ausgewählt und vergrössert, damit sie sich etwas innerhalb des Glases befinden.](Images/Chapter_38/38_8_5_Water_Select_Space.png){#fig-1_5 fig-align="left"}
+![Die Vertices unterhalb der Wasseroberfläche werden ausgewählt und vergrössert, damit sie sich etwas innerhalb des Glases befinden.](Images/Chapter_38/38_5_Surface_Vertrices.png){#fig-1_5 fig-align="left"}
 
 ## Kondenswasser am Glas hinzufügen
 

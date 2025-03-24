@@ -2,6 +2,7 @@
 title: "45. Charakter-Rigging"
 editor: visual
 ---
+
 :::::: downloadbox
 ::: downloadbox-header
 Unterlagen für dieses Kapitel

@@ -2,17 +2,6 @@
 title: "33. Lichtquellen in einer Szene"
 editor: visual
 ---
-:::::: downloadbox
-::: downloadbox-header
-Unterlagen für dieses Kapitel
-:::
-
-:::: downloadbox-body
-::: button
-[<i class="bi bi-file-earmark-arrow-down-fill"></i> Spielbrett](../assets/Blender_Files/08_Gameboard_Lights.zip){.btn .btn-light download="Spielbrett"}
-:::
-::::
-::::::
 
 ::: column-margin
 Lichtstrahlen werden benötigt

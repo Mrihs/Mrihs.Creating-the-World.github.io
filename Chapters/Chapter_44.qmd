@@ -2,6 +2,7 @@
 title: "44. Objekte mit Armaturen verformen"
 editor: visual
 ---
+
 :::::: downloadbox
 ::: downloadbox-header
 Unterlagen für dieses Kapitel
@@ -13,6 +14,7 @@ Unterlagen für dieses Kapitel
 :::
 ::::
 ::::::
+
 ::: column-margin
 Datei «Schwimmnudel»
 :::

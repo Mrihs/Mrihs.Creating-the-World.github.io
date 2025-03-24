@@ -33,9 +33,7 @@ Referenzbild einfügen
 
 Generell ist es empfehlenswert, bei der Erstellung von Objekten mit Referenzbildern zu arbeiten. Aus diesem Grund wird eine Bildvorlage für das Glas benötigt. Hierfür kann eine Bilddatei direkt aus einem Ordner oder vom Desktop in den 3D-Viewport hineingezogen werden, sodass das Bild anschliessend direkt in der Szene sichtbar wird. Das Bild wird allerdings so eingefügt, dass es senkrecht zur Benutzeransicht sichtbar ist. Das bedeutet, dass das Bild entsprechend der eigenen Benutzeransicht positioniert und rotiert wird. Aus diesem Grund empfiehlt es sich, vor dem Hineinziehen des Bildes mit der Taste {{< kbd 1 >}} in die Frontansicht zu wechseln. Dadurch wird das Bild lediglich entlang der X-Achse um 90° rotiert eingefügt. Alternativ kann das Bild über das «*Add*»-Menü ({{< kbd Shift >}} + {{< kbd A >}}) unter «*Image \| Reference*» hinzugefügt werden. Zudem ist das Bild jeweils nur sichtbar, wenn die Viewport-Overlays aktiviert sind.
 
-![Bildvorlage zur Erstellung eines Glases.](Images/Chapter_13/1.%20Bildvorlage.png){#fig-1_1 fig-align="left"}
-
-![Bildvorlage zur Erstellung eines Glases.](Images/Chapter_13/13_1_Image_Example.png){fig-align="left"}
+![Bildvorlage zur Erstellung eines Glases.](Images/Chapter_13/13_1_Image_Example.png){#fig-1_1 fig-align="left"}
 
 ::: column-margin
 Bild platzieren
@@ -99,9 +97,7 @@ Der Zylinder sollte nun bereits die Form des Glases aufweisen. Durch einen Wechs
 
 Um die Dicke des Glases zu erstellen, sollen alle Faces gegen den Mittelpunkt des oberen Randes des Zylinders hinausgezogen werden. Hierfür muss zunächst der 3D-Cursor mittig des oberen Randes platziert werden. Dies geschieht, indem alle Edges entlang des oberen Randes ausgewählt werden (hierfür muss wieder in den Edge- oder Vertex-Select-Modus gewechselt werden). Anschliessend wird mittels der Tastenkombination {{< kbd Shift >}} + {{< kbd S >}} das Snap-Menü geöffnet. Mit der Auswahl «*Cursor to Selected*» wird der 3D-Cursor mittig in der Auswahl zu platzieren.
 
-![Proportionale Anpassung der Breite des Zylinders entsprechend der Bildvorlage.](Images/Chapter_13/3.%20Proportional_editing_Top.png){#fig-1_3 fig-align="left"}
-
-![Proportionale Anpassung der Breite des Zylinders entsprechend der Bildvorlage.](Images/Chapter_13/13_3_Proportional_Editing_Top.png){fig-align="left"}
+![Proportionale Anpassung der Breite des Zylinders entsprechend der Bildvorlage.](Images/Chapter_13/13_3_Proportional_Editing_Top.png){#fig-1_3 fig-align="left"}
 
 ::: column-margin
 Fläche nach innen extrudieren

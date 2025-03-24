@@ -29,7 +29,7 @@ website:
           - href: assets/Blender_Files/03_Haus.zip
             text: "Haus" 
           - href: assets/Blender_Files/04_Glas_Querschnitt.zip
-            text: "Glas-Querschnitt"
+            text: "Glasquerschnitt"
           - href: assets/Blender_Files/05_Uebung_12_1.zip
             text: "Übung 12.1" 
           - href: assets/Blender_Files/05_Uebung_13_1.zip
@@ -43,13 +43,13 @@ website:
           - href: assets/Blender_Files/08_Dunes.zip
             text: "Dünen" 
           - href: assets/Blender_Files/08_Gameboard_Lights.zip
-            text: "Spielbrett" 
+            text: "Gameboard Lights" 
           - href: assets/Blender_Files/09_Glas_Particles.zip
             text: "Glaspartikel"
           - href: assets/Blender_Files/10_Baum.zip
             text: "Baum"
           - href: assets/Blender_Files/10_Cat_Character.zip
-            text: "Katze-Charakter"
+            text: "Katze"
           - href: assets/Blender_Files/11_Alien.zip
             text: "Alien"
           - href: assets/Blender_Files/11_Character.zip

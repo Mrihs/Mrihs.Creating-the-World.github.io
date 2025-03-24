@@ -10,7 +10,7 @@ Unterlagen für dieses Kapitel
 
 :::: downloadbox-body
 ::: button
-[<i class="bi bi-file-earmark-arrow-down-fill"></i> Katze-Charakter](../assets/Blender_Files/10_Cat_Character.zip){.btn .btn-light download="Katze-Charakter"}
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Katze](../assets/Blender_Files/10_Cat_Character.zip){.btn .btn-light download="Katze"}
 :::
 ::::
 ::::::

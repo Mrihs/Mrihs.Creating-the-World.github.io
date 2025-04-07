@@ -4,7 +4,42 @@
     "href": "about.html",
     "title": "Über",
     "section": "",
-    "text": "Die Inhalte dieser Website entstammen dem Master-Seminar “Creating the World - Grafik, Design und Animation in 3D”, welches an der Universität Bern durchgeführt wurde.\nKontakt:\nDr. Michael Rihs\nInstitut für Psychologie\nFabrikstrasse 8\n3012 Bern\nE-Mail: michael.rihs@unibe.ch"
+    "text": "Diese Website wurde mittels der Software R-Studio/Posit und Quarto entwickelt. Die Website, sowie die Unterrichts-Unterlagen sind im zur Website gehörigen Git-Hub Repository hinterlegt."
+  },
+  {
+    "objectID": "about.html#erstellung-der-website",
+    "href": "about.html#erstellung-der-website",
+    "title": "Über",
+    "section": "",
+    "text": "Diese Website wurde mittels der Software R-Studio/Posit und Quarto entwickelt. Die Website, sowie die Unterrichts-Unterlagen sind im zur Website gehörigen Git-Hub Repository hinterlegt."
+  },
+  {
+    "objectID": "about.html#lizenz",
+    "href": "about.html#lizenz",
+    "title": "Über",
+    "section": "Lizenz",
+    "text": "Lizenz\nDiese Website stellt eine offene Bildungsressource (Open Education Ressource) dar, welche frei verwendet, bearbeitet und weitergegeben werden kann und weitergegeben werden kann, sofern die Urheber dieser Website namentlich genannt werden und die CC BY-SA 4.0 creative-commons Lizenz verwendet wird. Abbildungen der Benutzeroberfläche von Blender wurden als Screenshots innerhalb der Software erstellt und unterliegen daher der Nutzungslizenz von Blender."
+  },
+  {
+    "objectID": "about.html#uhrheber",
+    "href": "about.html#uhrheber",
+    "title": "Über",
+    "section": "Uhrheber",
+    "text": "Uhrheber\n\nMichael Rihs1*\nFlurina L. Brodfwolf1\nRomina Schmid1\nFred W. Mast1\n\n1Abteilung für kognitive Psychologie, Institut für Psychologie, Universität Bern"
+  },
+  {
+    "objectID": "about.html#danksagung",
+    "href": "about.html#danksagung",
+    "title": "Über",
+    "section": "Danksagung",
+    "text": "Danksagung\nBesonderer Dank geht an Rahel Steuri und Rebekka Bohrer, welche bei der Adaption des Kurses im Jahre 2022 beteiligt waren. Weiterer Dank geht an Auregane Devaud, welche die Erstellung dieser Website unterstützt hat."
+  },
+  {
+    "objectID": "about.html#kontakt",
+    "href": "about.html#kontakt",
+    "title": "Über",
+    "section": "Kontakt:",
+    "text": "Kontakt:\n*Dr. Michael Rihs\nInstitut für Psychologie\nFabrikstrasse 8\n3012 Bern\nE-Mail: michael.rihs@unibe.ch"
   },
   {
     "objectID": "Chapters/Chapter_33.html",
@@ -1271,14 +1306,14 @@
     "href": "index.html",
     "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender)",
     "section": "",
-    "text": "Auf dieser Website werden die Lenrmaterialien der Lehrveranstaltung “Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender) als Open Education Ressource aufbereitet.\nWeitere Informationen hierzu folgen…\nÜbung 12.1"
+    "text": "Willkommen auf der Kurs-Website der Lehrveranstaltung “Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender). Auf dieser Seite werden die Unterrichts-Materialien des Kurses als Open-Education-Ressourcen zur Verfügung gestellt.\nDer Kurs wurde erstmals im Jahr 2021 als Methodenkurs für Masterstudierende der philosophisch-humanwissenschaftlichen Fakultät der Universität angeboten. Der Kurs wurde durch das Förderprogramm “Der Mensch in der digitalen Transformation” von der philosophisch-humanwissenschaftlichen Fakultät gefördert. In der Veranstaltung wurde der Prozess der Erstellung virtueller 3D-Objekte, -Welten und Animationen vor dem Hintergrund aktueller Forschung erläutert und durch praktische Beispiele veranschaulicht. Die Studierenden erlernten die Inhalte praxisnah mithilfe der frei zugänglichen Software Blender und erhielten dabei fundierte Einblicke in die grundlegenden Merkmale von 3D-Objekten, -Welten und Animationen.\nDas Skript zur Einführung in die 3D Modelierung mit Blender, sowie die dazugehörigen Übungsmaterialien und Foliensätze sind über die Menüreiter am oberen Rand der Website abrufbar. Die Kursübersicht informiert zudem über die wöchentliche Aufteilung der Lerninhalte. Der Kurs wurde mit der Version 2.93.4 von Blender durchgeführt. Dadurch können sich geringfügige Abweichungen von aktuelleren Versionen von Blender ergeben."
   },
   {
-    "objectID": "index.html#diese-website-befindet-sich-im-aufbau",
-    "href": "index.html#diese-website-befindet-sich-im-aufbau",
+    "objectID": "index.html#creating-the-world-grafik-design-animation-inkl.-einführung-in-die-3d-modelierung-mit-blender",
+    "href": "index.html#creating-the-world-grafik-design-animation-inkl.-einführung-in-die-3d-modelierung-mit-blender",
     "title": "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender)",
     "section": "",
-    "text": "Auf dieser Website werden die Lenrmaterialien der Lehrveranstaltung “Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender) als Open Education Ressource aufbereitet.\nWeitere Informationen hierzu folgen…\nÜbung 12.1"
+    "text": "Willkommen auf der Kurs-Website der Lehrveranstaltung “Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modelierung mit Blender). Auf dieser Seite werden die Unterrichts-Materialien des Kurses als Open-Education-Ressourcen zur Verfügung gestellt.\nDer Kurs wurde erstmals im Jahr 2021 als Methodenkurs für Masterstudierende der philosophisch-humanwissenschaftlichen Fakultät der Universität angeboten. Der Kurs wurde durch das Förderprogramm “Der Mensch in der digitalen Transformation” von der philosophisch-humanwissenschaftlichen Fakultät gefördert. In der Veranstaltung wurde der Prozess der Erstellung virtueller 3D-Objekte, -Welten und Animationen vor dem Hintergrund aktueller Forschung erläutert und durch praktische Beispiele veranschaulicht. Die Studierenden erlernten die Inhalte praxisnah mithilfe der frei zugänglichen Software Blender und erhielten dabei fundierte Einblicke in die grundlegenden Merkmale von 3D-Objekten, -Welten und Animationen.\nDas Skript zur Einführung in die 3D Modelierung mit Blender, sowie die dazugehörigen Übungsmaterialien und Foliensätze sind über die Menüreiter am oberen Rand der Website abrufbar. Die Kursübersicht informiert zudem über die wöchentliche Aufteilung der Lerninhalte. Der Kurs wurde mit der Version 2.93.4 von Blender durchgeführt. Dadurch können sich geringfügige Abweichungen von aktuelleren Versionen von Blender ergeben."
   },
   {
     "objectID": "Sites/Overview.html#semesterplan",

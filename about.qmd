@@ -2,11 +2,34 @@
 title: "Über"
 ---
 
-Die Inhalte dieser Website entstammen dem Master-Seminar "Creating the World - Grafik, Design und Animation in 3D", welches an der Universität Bern durchgeführt wurde.
+## Erstellung der Website
 
-| **Kontakt:** 
-| Dr. Michael Rihs 
+Diese Website wurde mittels der Software [R-Studio/Posit](https://posit.co/download/rstudio-desktop/) und [Quarto](https://quarto.org) entwickelt. Die Website, sowie die Unterrichts-Unterlagen sind im zur Website gehörigen [Git-Hub Repository](https://github.com/Mrihs/Mrihs.Creating-the-World.github.io) hinterlegt.
+
+## Lizenz
+
+Diese Website stellt eine offene Bildungsressource (Open Education Ressource) dar, welche frei verwendet, bearbeitet und weitergegeben werden kann und weitergegeben werden kann, sofern die Urheber dieser Website namentlich genannt werden und die [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de) creative-commons Lizenz verwendet wird. Abbildungen der Benutzeroberfläche von [Blender](https://www.blender.org) wurden als Screenshots innerhalb der Software erstellt und unterliegen daher der Nutzungslizenz von Blender.
+
+## Uhrheber
+
+-   Michael Rihs^1\*^
+
+-   Flurina L. Brodfwolf^1^
+
+-   Romina Schmid^1^
+
+-   Fred W. Mast^1^
+
+^1^Abteilung für kognitive Psychologie, Institut für Psychologie, Universität Bern
+
+## Danksagung
+
+Besonderer Dank geht an Rahel Steuri und Rebekka Bohrer, welche bei der Adaption des Kurses im Jahre 2022 beteiligt waren. Weiterer Dank geht an Auregane Devaud, welche die Erstellung dieser Website unterstützt hat.
+
+## Kontakt:
+
+| \*Dr. Michael Rihs
 | Institut für Psychologie
 | Fabrikstrasse 8
-| 3012 Bern 
+| 3012 Bern
 | E-Mail: michael.rihs\@unibe.ch

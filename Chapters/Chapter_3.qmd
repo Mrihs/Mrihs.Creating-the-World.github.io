@@ -29,7 +29,7 @@ Nebst der Maus kann auch die Tastatur verwendet werden, um die Ansicht zu verän
 Rotieren und Drehen der Ansicht
 :::
 
-Mittels der Tasten{{< kbd 2 >}}, {{< kbd 4 >}}, {{< kbd 6 >}} und {{< kbd 8 >}} kann die Ansicht entsprechend ihrer relativen Anordnung auf dem Nummernblock rotiert werden: Die Taste {{< kbd 2 >}} rotiert nach unten, die Taste {{< kbd 4 >}} nach links, die Taste {{< kbd 6 >}} nach rechts und die Taste {{< kbd 8 >}} nach oben. Werden dieselben Tasten bei gedrückter {{< kbd Ctrl >}}-Taste gedrückt, wird die Ansicht in die entsprechende Richtung bewegt, ohne eine Rotation durchzuführen. Mittels gedrückter {{< kbd Shift >}}-Taste kann die Ansicht durch die Taste {{< kbd 6 >}} zudem im Uhrzeigersinn und mittels der Taste {{< kbd 4 >}} gegen den Uhrzeigersinn gedreht werden. Um näher hineinzuzoomen wird die Taste {{< kbd + >}} und zum Hinauszoomen die Taste {{< kbd - >}} verwendet.
+Mittels der Tasten {{< kbd 2 >}}, {{< kbd 4 >}}, {{< kbd 6 >}} und {{< kbd 8 >}} kann die Ansicht entsprechend ihrer relativen Anordnung auf dem Nummernblock rotiert werden: Die Taste {{< kbd 2 >}} rotiert nach unten, die Taste {{< kbd 4 >}} nach links, die Taste {{< kbd 6 >}} nach rechts und die Taste {{< kbd 8 >}} nach oben. Werden dieselben Tasten bei gedrückter {{< kbd Ctrl >}}-Taste gedrückt, wird die Ansicht in die entsprechende Richtung bewegt, ohne eine Rotation durchzuführen. Mittels gedrückter {{< kbd Shift >}}-Taste kann die Ansicht durch die Taste {{< kbd 6 >}} zudem im Uhrzeigersinn und mittels der Taste {{< kbd 4 >}} gegen den Uhrzeigersinn gedreht werden. Um näher hineinzuzoomen wird die Taste {{< kbd + >}} und zum Hinauszoomen die Taste {{< kbd - >}} verwendet.
 
 ::: column-margin
 Präzise Ansichten ansteuern

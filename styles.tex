@@ -1,0 +1,177 @@
+%%% load packages
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+\usepackage{fancyhdr}
+\usepackage[explicit]{titlesec}
+\usepackage{marginnote}
+\usepackage{setspace}
+\usepackage{enumitem}
+
+
+
+
+%%% --- Define Colors ---
+% Define Colors
+\definecolor{my_orange}{HTML}{FF8E00}
+
+
+
+
+
+%%% --- Adjust Document Settings ---
+% Set page size
+\geometry{a4paper, left=30mm, top=25mm, bottom=25mm, right=30mm}
+
+% Activate fancy-Style
+\pagestyle{fancy}
+
+% Delete default-Styles
+\fancyhf{}
+
+
+
+
+
+
+%%% --- Adjust Font ---
+\renewcommand{\normalsize}{\fontsize{12pt}{14pt}\selectfont}
+\makeatletter
+\renewcommand\normalsize{%
+  \@setfontsize\normalsize{12pt}{15pt}% 12pt Schrift und 15pt Zeilenabstand
+  \abovedisplayskip 11pt plus 3pt minus 7pt%
+  \abovedisplayshortskip \z@ plus 3pt%
+  \belowdisplayshortskip 8pt plus 3pt minus 4pt%
+  \belowdisplayskip \abovedisplayskip
+  \let\@listi\@listI%
+}
+\makeatother
+\normalsize
+
+% Increase space between lines
+\setstretch{1.5}
+
+% Remove spacing after lists
+\setlist{nosep}
+
+% Remove spacing for new paragraphs
+\setlength{\parskip}{0pt}
+
+% Adjust spacing after titles (\Section, left, before, after)
+\titlespacing*{\chapter}{0pt}{0pt}{0pt}
+\titlespacing*{\section}{0pt}{10pt}{0pt}
+\titlespacing*{\subsection}{0pt}{10pt}{0pt}
+\titlespacing*{\subsubsection}{0pt}{10pt}{0pt}
+
+
+
+
+
+%%% --- Adjust Margins ---
+% Change marginnotes
+\let\oldmarginnote\marginnote
+
+% Define width off the marings
+\setlength{\marginparwidth}{2cm}
+
+
+\renewcommand{\marginnote}[1]{%
+  \oldmarginnote{{\footnotesize\selectfont #1}}%
+}
+
+
+
+
+
+%%% --- Adjust chapter titles ---
+% Remove "Chapter"-prefix from chapter-title
+%Adjust title format
+\titleformat{\chapter}[display]
+  % Font of the title
+  {\normalfont\huge\bfseries}
+  % Suppress Chapter-Number
+  {}
+  % Remove space after (removed) chapter number
+  {0pt}
+  % Execute Chapter-title
+  {#1}
+
+
+
+
+
+%%% --- Adjust Page Header ---
+% Remove default-Header
+\renewcommand{\headrulewidth}{0pt}
+
+% Increase space between header and text
+\setlength{\headsep}{30pt}
+
+% Set text for heading
+\makeatletter
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+% Remove "Chapter"-Prefix
+\renewcommand{\@chapapp}{}
+\makeatother
+
+
+%%% Odd pages (Recto)
+\newcommand{\headerRecto}{%
+  % Create orange box
+  \colorbox{my_orange}{%
+    \makebox[\textwidth][l]{%
+      \parbox[t]{\textwidth}{%
+        \vspace{5pt}%
+        % Create box with page number (20% of page width)
+        \makebox[0.20\textwidth][l]{\color{white}\bfseries\thepage}%
+        % Create box with chapter (75% of page width)
+        \makebox[0.75\textwidth][r]{\color{white}\bfseries\leftmark}%
+        \vspace{5pt}%
+      }%
+    }%
+  }%
+}
+
+%%% Even pages (Verso)
+\newcommand{\headerVerso}{%
+  \colorbox{my_orange}{%
+    \makebox[\textwidth][l]{%
+      \parbox[t]{\textwidth}{%
+        \vspace{5pt}%
+        % Create box with chapter (75% of page width)
+        \makebox[0.75\textwidth][l]{\color{white}\bfseries\leftmark}%
+        % Create box with page number (20% of page width)
+        \makebox[0.20\textwidth][r]{\color{white}\bfseries\thepage}%
+        \vspace{5pt}%
+      }%
+    }%
+  }%
+}
+
+
+%% Asign header to odd pages
+\fancyhead[LO,RO]{\headerRecto}
+
+%% Asign header to even pages
+\fancyhead[LE,RE]{\headerVerso}
+
+%% Asign header to even pages
+
+%% Overwrite plain-Style at beginning of chapter
+\fancypagestyle{plain}{%
+  % Remove headers
+  \fancyhf{}
+  % No additional lines
+  \renewcommand{\headrulewidth}{0pt}
+  %% Asign header to even pages
+  \fancyhead[LO,RO]{\headerRecto}
+  %% Asign header to odd pages
+  \fancyhead[LE,RE]{\headerVerso}
+}
+
+
+
+
+
+%%% --- Adjust Figure Caption ---
+

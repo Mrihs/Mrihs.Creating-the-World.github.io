@@ -14,11 +14,28 @@ format:
     header-includes:
     - \renewcommand{\familydefault}{\sfdefault}
     - \newcommand{\kbd}[1]{\fbox{\texttt{#1}}}
-
     include-in-header:
     - "styles.tex"
 editor: source
 ---
+
+
+\begin{tipp}{Blender unterstÃŒtzt nur noch die 64-Bit-Architektur}
+Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstÃŒtzt. Microsoft unterstÃŒtzt diese Systeme seit 2020 nicht mehr und auch an-dere Software-Entwickler haben den Support dieser Systeme eingestellt. 
+\end{tipp}
+
+
+
+
+\begin{exercise}{Blender unterstÃŒtzt nur noch die 64-Bit-Architektur}
+Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstÃŒtzt. Microsoft unterstÃŒtzt diese Systeme seit 2020 nicht mehr und auch an-dere Software-Entwickler haben den Support dieser Systeme eingestellt. 
+\end{exercise}
+
+
+\begin{remember}{Merke...}
+Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstÃŒtzt. Microsoft unterstÃŒtzt diese Systeme seit 2020 nicht mehr und auch an-dere Software-Entwickler haben den Support dieser Systeme eingestellt. 
+\end{remember}
+
 
 ```{r}
 #| echo: false
@@ -39,10 +56,19 @@ editor: source
 
 ## Images
 # Adjust Size
+# Adjust Placing
 
 ## Boxes
 # Adjust Boxes
 
+## Header
+# Booktitle in Header (always left)
+# Orange box across whole page (until page ende
+
+## Footer
+# Chaptertitle on the left
+# Page number on the right
+# Maybe add color-box around
 ```
 
 
@@ -154,6 +180,76 @@ process_qmd <- function(file, fpath_in = "", fpath_out = "") {
   }, USE.NAMES = FALSE)
   
   
+  ### Ersetze tippbox-Blöcke durch \begin{tipp}{...} ... \end{tipp}
+  # Finde die Zeilen, in denen tippbox-Blöcke starten
+  tipp_start <- grep("^::::::\\s*tippbox", out_doc)
+  
+  if (length(tipp_start) > 0) {
+    # Bearbeite die gefundenen Blöcke von unten nach oben, damit sich Indizes nicht verschieben
+    for (i in rev(seq_along(tipp_start))) {
+      start_idx <- tipp_start[i]
+      # Suche die dazugehörige Abschlusszeile ("::::::" ganz allein)
+      end_candidates <- grep("^::::::\\s*$", out_doc[start_idx:length(out_doc)])
+      if (length(end_candidates) > 0) {
+        end_idx <- start_idx + end_candidates[1] - 1
+      } else {
+        next  # Falls kein Schlusstag gefunden wird, überspringen
+      }
+      
+      # Extrahiere den kompletten Block inklusive der Begrenzungszeilen
+      block <- out_doc[start_idx:end_idx]
+      # Entferne die erste und die letzte Zeile (die reinen Block-Begrenzer)
+      block_inner <- block[-c(1, length(block))]
+      
+      # Initialisiere Header und Body als leere Zeichenketten
+      header <- ""
+      body <- ""
+      
+      ## Header-Block verarbeiten
+      header_start_idx <- grep("^::::\\s*tippbox-header", block_inner)
+      if (length(header_start_idx) > 0) {
+        # Die Header-Sektion endet mit einer Zeile, die nur "::::" (4 Doppelpunkte) enthält
+        header_end_candidates <- grep("^::::\\s*$", block_inner[(header_start_idx[1] + 1):length(block_inner)])
+        if (length(header_end_candidates) > 0) {
+          header_end_idx <- header_start_idx[1] + header_end_candidates[1]
+          header_block <- block_inner[(header_start_idx[1] + 1):(header_end_idx - 1)]
+          
+          # Entferne eventuell vorhandene Icon-Blöcke (beginnend mit "::: tippbox-icon" und endend mit ":::")
+          icon_start <- grep("^:::\\s*tippbox-icon", header_block)
+          if (length(icon_start) > 0) {
+            icon_end_candidates <- grep("^:::\\s*$", header_block[(icon_start[1] + 1):length(header_block)])
+            if (length(icon_end_candidates) > 0) {
+              icon_end <- icon_start[1] + icon_end_candidates[1]
+              header_block <- header_block[-(icon_start[1]:icon_end)]
+            }
+          }
+          # Fasse den restlichen Header-Text zusammen
+          header <- paste(header_block, collapse = " ")
+          header <- trimws(header)
+        }
+      }
+      
+      ## Body-Block verarbeiten
+      body_start_idx <- grep("^:::\\s*tippbox-body", block_inner)
+      if (length(body_start_idx) > 0) {
+        body_end_candidates <- grep("^:::\\s*$", block_inner[(body_start_idx[1] + 1):length(block_inner)])
+        if (length(body_end_candidates) > 0) {
+          body_end_idx <- body_start_idx[1] + body_end_candidates[1]
+          body_block <- block_inner[(body_start_idx[1] + 1):(body_end_idx - 1)]
+          body <- paste(body_block, collapse = " ")
+          body <- trimws(body)
+        }
+      }
+      
+      # Erstelle die Ersatzzeile mit LaTeX-Befehl.
+      # Falls der Header leer ist, können die geschweiften Klammern auch leer bleiben.
+      replacement <- paste0("\\begin{tipp}{", header, "}\n", body, "\n\\end{tipp}")
+      
+      # Ersetze im Dokument den gesamten tippbox-Block durch den LaTeX-Code
+      out_doc <- c(out_doc[1:(start_idx - 1)], replacement, out_doc[(end_idx + 1):length(out_doc)])
+    }
+  }
+  
   
   # If a title was found, add the title in combination with a markdown-header (#) at the beginning
   if (title != "") {
@@ -180,23 +276,23 @@ process_qmd <- function(file, fpath_in = "", fpath_out = "") {
 #| eval: true
 #| message: false
 # List all data in the Chapter-Folder which start with "Chapter_" and have a ".qmd" suffix
-files <- list.files("Chapters/", pattern = "^Chapter_.*\\.qmd$", full.names = TRUE)
-
-# Extract the number of chapters from the filenames as integers
-numbers <- as.integer(stringr::str_extract(basename(files), "(?<=Chapter_)[0-9]+"))
-
-# Sort the chapter-files based on the extracted numbers
-files <- files[order(numbers)]
-
-# For all chapter-files
-for (fileindex in 1:3){
-  # Get the current chapter-file
-  current_file <- files[fileindex]
-  
-  # Process the current chapter
-  C1 <- process_qmd(current_file)
-  
-  # Print the current chapter
-  cat(unlist(C1), sep = '\n')
-}
+ files <- list.files("Chapters/", pattern = "^Chapter_.*\\.qmd$", full.names = TRUE)
+ 
+# # Extract the number of chapters from the filenames as integers
+ numbers <- as.integer(stringr::str_extract(basename(files), "(?<=Chapter_)[0-9]+"))
+ 
+# # Sort the chapter-files based on the extracted numbers
+ files <- files[order(numbers)]
+# 
+# # For all chapter-files
+ for (fileindex in 1:3){
+#   # Get the current chapter-file
+   current_file <- files[fileindex]
+#   
+#   # Process the current chapter
+   C1 <- process_qmd(current_file)
+#   
+#   # Print the current chapter
+   cat(unlist(C1), sep = '\n')
+ }
 ```

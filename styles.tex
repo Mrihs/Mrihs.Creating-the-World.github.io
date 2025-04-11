@@ -7,6 +7,7 @@
 \usepackage{marginnote}
 \usepackage{setspace}
 \usepackage{enumitem}
+\usepackage[most]{tcolorbox}
 
 
 
@@ -14,7 +15,8 @@
 %%% --- Define Colors ---
 % Define Colors
 \definecolor{my_orange}{HTML}{FF8E00}
-
+\definecolor{blender_blue}{HTML}{236192}
+\definecolor{remember_gold}{HTML}{FFDE7E}
 
 
 
@@ -173,5 +175,179 @@
 
 
 
-%%% --- Adjust Figure Caption ---
+%%% --- Define Boxes ---
+%## Tipp-box
+% Define new colorbox
+\newtcolorbox{tipp}[1]{
+% Add space before box and cener box
+before=\bigskip\centering,
+% Add space after the box
+after=\bigskip,
+% Activate enhanced mode of colorbox
+enhanced,
+% Create round corners
+arc=10pt,
+% Create gold frame
+colframe=green!75!black,
+% Craete gold background color
+colback=green!5!white,
+% Define Font of title (black font, sans-serife and large
+fonttitle=\sffamily\bfseries\Large,
+% Set content 1 as title
+title=#1,
+% Add space before and after the title inside the box
+title={\vspace{2.5mm}#1\vspace{2.5mm}},
+% Set space in upper left corner 
+leftupper=2.5cm,
+% Set round corners
+rounded corners,
+% Fix title to top of box
+attach boxed title to top,
+frame hidden,
+% Define style of title
+boxed title style={
+    % Activate enhanced settings of title-field
+    enhanced,
+    % Set frame of title box
+    colframe=green!75!black,
+    % Set background of title box
+    colback=green!75!black,
+    % Set round-angle of title field
+    arc=10pt,
+    % Supress frame around title fileld
+    bottomrule=0pt,
+    rightrule=0pt,},
+  % Overlay image
+  overlay={
+    % Set anchor north-west
+    \node[anchor=north west] 
+      % Adjust position in relation to frame
+      at ([xshift=10pt,yshift=-1.75\baselineskip]frame.north west)
+        % Add image
+       {\includegraphics[width=1cm]{"icons/info.png"}};}}
 
+
+
+%%%%% Exercise
+% Define new colorbox
+\newtcolorbox[auto counter]{exercise}[2][]{
+% Add space before box and cener box
+before=\bigskip\centering,
+% Add space after the box
+after=\bigskip,
+% Activate enhanced mode of colorbox
+enhanced,
+% Create round corners
+arc=15pt,
+% Create blue frame
+colframe=blender_blue,
+% Craete blue background color
+colback=blender_blue!5!white,
+% Define Font of title (black font, sans-serife and large
+fonttitle=\sffamily\bfseries\Large,
+% Set title
+title=Übung~\thetcbcounter,
+% Define sharp corners
+sharp corners,
+% Set space in upper left corner 
+leftupper=2.5cm,
+% Overlay image
+overlay={
+  % Set anchor north-west
+  \node[anchor=north west] 
+    % Adjust position
+    at ([xshift=10pt,yshift=-.65\baselineskip]frame.north west)
+     % Add image
+     {\includegraphics[width=1cm,height=1cm]{"icons/exercise.png"}};},
+% Set round corners
+rounded corners=northeast,
+% Fix title to top of box
+attach boxed title to top left,
+% Define style of title
+boxed title style={
+    % Activate enhanced settings of title-field
+    enhanced,
+    % Set frame of title box
+    colframe=blender_blue,
+    % Set background of title box
+    colback=blender_blue,
+    % Set round-angle of title field
+    arc=5pt,
+    % Supress frame around title fileld
+    bottomrule=0pt,
+    rightrule=0pt,
+    % Set sharp corners
+    sharp corners,
+    % Set round corners norh-east
+    rounded corners=northeast,},
+% Define stly of (emtpy) interior block
+interior style={},
+% Define style of frame
+frame style={
+    % Set colors
+    color= cyan!5!white,
+    fill=none},
+% Align additional overlays
+overlay unbroken and first={
+    % Place text
+    \node[anchor=west,font=\sffamily\bfseries,color=blue] 
+    % Position text east of title and with large font
+    at (title.east) {{\Large #2}};
+    %
+    \node[anchor=north west] 
+    % Set position
+    at ([xshift=10pt, yshift=-1.75\baselineskip]frame.north west)
+      % Add image
+     {\includegraphics[width=1.5cm]{"icons/exercise.png"}};},#1}
+
+
+
+%%%%% Remember
+% Define new colorbox
+\newtcolorbox{remember}[1]{
+% Add space before box and cener box
+before=\bigskip\centering,
+% Add space after the box
+after=\bigskip,
+% Activate enhanced mode of colorbox
+enhanced,
+% Create round corners
+arc=10pt,
+% Create gold frame
+colframe=remember_gold,
+% Craete gold background color
+colback=remember_gold,
+% Define Font of title (black font, sans-serife and large
+fonttitle=\color{black}\sffamily\bfseries\Large,
+% Set content 1 as title
+title=#1,
+% Add space before and after the title inside the box
+title={\vspace{2.5mm}#1\vspace{2.5mm}},
+% Set space in upper left corner 
+leftupper=2.5cm,
+% Set round corners
+rounded corners,
+% Fix title to top of box
+attach boxed title to top,
+% Define style of title
+boxed title style={
+    % Activate enhanced settings of title-field
+    enhanced,
+    % Set frame of title box
+    colframe=remember_gold,
+    % Set background of title box
+    colback=remember_gold,
+    % Set round-angle of title field
+    arc=10pt,
+    % Supress frame around title fileld
+    bottomrule=0pt,
+    rightrule=0pt
+    },
+  % Overlay image
+  overlay={
+    % Set anchor north-west
+    \node[anchor=north west] 
+      % Adjust position in relation to frame
+      at ([xshift=10pt,yshift=-1.75\baselineskip]frame.north west)
+        % Add image
+       {\includegraphics[width=1cm]{"icons/remember.png"}};}}

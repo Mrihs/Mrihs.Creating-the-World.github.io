@@ -43,7 +43,7 @@ website:
           - href: assets/Blender_Files/08_Dunes.zip
             text: "Dünen" 
           - href: assets/Blender_Files/08_Gameboard_Lights.zip
-            text: "Gameboard Lights" 
+            text: "Spielbrett" 
           - href: assets/Blender_Files/09_Glas_Particles.zip
             text: "Glaspartikel"
           - href: assets/Blender_Files/10_Baum.zip
@@ -52,8 +52,6 @@ website:
             text: "Katze"
           - href: assets/Blender_Files/11_Alien.zip
             text: "Alien"
-          - href: assets/Blender_Files/11_Character.zip
-            text: "Charakter"
           - href: assets/Blender_Files/11_Schwimmnudel.zip
             text: "Schwimmnudel"
           - href: assets/Blender_Files/12_Pendel.zip

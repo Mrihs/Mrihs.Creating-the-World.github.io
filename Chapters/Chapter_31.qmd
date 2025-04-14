@@ -3,6 +3,18 @@ title: "31. Parameter im Principled-BSDF-Shader"
 editor: visual
 ---
 
+:::::: downloadbox
+::: downloadbox-header
+Unterlagen für dieses Kapitel
+:::
+
+:::: downloadbox-body
+::: button
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Glasmaterial](../assets/Blender_Files/07_Beispiel_Glas_Material.zip){.btn .btn-light download="Glasmaterial"}
+:::
+::::
+::::::
+
 ::: column-margin
 Parameter im Principled-BSDF-Shader
 :::

@@ -10,7 +10,7 @@ Unterlagen für dieses Kapitel
 
 :::: downloadbox-body
 ::: button
-[<i class="bi bi-file-earmark-arrow-down-fill"></i> Gameboard Lights](../assets/Blender_Files/08_Gameboard_Lights.zip){.btn .btn-light download="Gameboard Lights"}
+[<i class="bi bi-file-earmark-arrow-down-fill"></i> Spielbrett Lights](../assets/Blender_Files/08_Gameboard_Lights.zip){.btn .btn-light download="Gameboard Lights"}
 :::
 ::::
 ::::::

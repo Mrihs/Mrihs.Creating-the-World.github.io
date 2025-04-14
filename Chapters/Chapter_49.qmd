@@ -3,18 +3,6 @@ title: "49. Animationen rendern"
 editor: visual
 ---
 
-:::::: downloadbox
-::: downloadbox-header
-Unterlagen für dieses Kapitel
-:::
-
-:::: downloadbox-body
-::: button
-[<i class="bi bi-file-earmark-arrow-down-fill"></i> Freestyle](../assets/Blender_Files/14_Freestyle.zip){.btn .btn-light download="Freestyle"}
-:::
-::::
-::::::
-
 ### Animationen direkt rendern
 
 ::: column-margin

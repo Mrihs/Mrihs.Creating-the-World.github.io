@@ -66,8 +66,6 @@ Beim Wechseln in den Edit-Mode erscheint das Mesh in seiner Struktur, bestehend 
 -   **Edges**: Linien zwischen zwei Vertices in einem Mesh
 -   **Faces**: Flächen zwischen mehreren Edges/Vertices in einem Mesh
 
-![Vertices, Edges und Faces.](Images/Chapter_9/1.%20Vertices,%20Edges%20and%20Faces.png){#fig-1_1 fig-align="left"}
-
 ![Vertices, Edges und Faces.](Images/Chapter_9/9_1_Vertices_Edges_Faces.png){fig-align="left"}
 
 ::: column-margin

@@ -119,7 +119,7 @@ Tropfen des Kondenswassers erstellen
 
 Durch die Tastenkombination {{< kbd Shift >}} + {{< kbd A >}} kann das «*Add*»-Menü geöffnet werden und unter «*Mesh \| Cube*» ein Würfel hinzugefügt werden. Dabei ist allerdings wichtig, dass der Würfel anschliessend im Edit-Mode so verschoben wird, dass sich der Ursprung des Würfels am Rand des Würfels befindet. Aus diesem Grund muss der gesamte Würfel im Edit-Mode um den Faktor 1 entlang der Z-Achse verschoben werden (mittels den Tasten {{< kbd G >}}, {{< kbd Z >}} und {{< kbd 1 >}}).
 
-Anschliessend kann das obere Face des Würfels um den Faktor 0.5 skaliert werden (mittels den Tasten {{< kbd S >}}, {{< kbd Shift >}} + {{< kbd Z >}} und danach {{< kbd 0 >}}{{\< kbd . \>}}{{< kbd 5 >}} ) und um einen Meter entlang der Z-Achse nach unten verschoben werden (mittels den Tasten {{< kbd G >}}, {{< kbd Z >}} und {{< kbd - >}}{{\< kbd 1 \>}}). Dadurch sollte eine Form wie in Abbildung 6 entstehen.
+Anschliessend kann das obere Face des Würfels um den Faktor 0.5 skaliert werden (mittels den Tasten {{< kbd S >}} , {{< kbd Shift >}} + {{< kbd Z >}} und danach {{< kbd 0 >}} {{< kbd . >}} {{< kbd 5 >}} ) und um einen Meter entlang der Z-Achse nach unten verschoben werden (mittels den Tasten {{< kbd G >}}, {{< kbd Z >}} und {{< kbd - >}} {{< kbd 1 >}}). Dadurch sollte eine Form wie in Abbildung 6 entstehen.
 
 ![Die Form eines sehr simplen Wassertropfens.](Images/Chapter_38/38_6_Drop.png){#fig-1_6 fig-align="left"}
 
@@ -197,7 +197,7 @@ Die Wassertropfen werden allerdings über das gesamte Mesh erzeugt. Tatsächlich
 Wassertropfen rotieren
 :::
 
-Bei einer genauen Betrachtung fällt nun auf, dass die Wassertropfen im falschen Winkel dargestellt werden. Dies liegt daran, dass Objekte im Partikelsystem jeweils um 90° gedreht werden. Um dies zu beheben, muss der Wassertropfen nochmals bearbeitet werden. Hierfür muss die Collection des Wassertropfens nochmals aktiviert werden, damit der Wassertropfen wieder angezeigt wird und bearbeitet werden kann. Idealerweise stellt man den 3D-Cursor mittels des Snap-Tools ({{< kbd Shift >}} + {{< kbd S >}}) auf den Ursprung des Wassertropfens. Hierfür muss der Wassertropfen im Object-Mode ausgewählt werden und im Snap-Tool «*Cursor to Selected*» ausgewählt werden. Nun kann der Pivot-Point auf den 3D-Cursor gesetzt werden und der Wassertropfen im Edit-Mode um -90° entlang der X-Achse rotiert werden ({{< kbd R >}}, {{< kbd X >}} und {{< kbd 9 >}}{{\< kbd 0 \>}}). Anschliessend kann die Collection des Wassertropfens wieder deaktiviert werden.
+Bei einer genauen Betrachtung fällt nun auf, dass die Wassertropfen im falschen Winkel dargestellt werden. Dies liegt daran, dass Objekte im Partikelsystem jeweils um 90° gedreht werden. Um dies zu beheben, muss der Wassertropfen nochmals bearbeitet werden. Hierfür muss die Collection des Wassertropfens nochmals aktiviert werden, damit der Wassertropfen wieder angezeigt wird und bearbeitet werden kann. Idealerweise stellt man den 3D-Cursor mittels des Snap-Tools ({{< kbd Shift >}} + {{< kbd S >}}) auf den Ursprung des Wassertropfens. Hierfür muss der Wassertropfen im Object-Mode ausgewählt werden und im Snap-Tool «*Cursor to Selected*» ausgewählt werden. Nun kann der Pivot-Point auf den 3D-Cursor gesetzt werden und der Wassertropfen im Edit-Mode um -90° entlang der X-Achse rotiert werden ({{< kbd R >}}, {{< kbd X >}} und {{< kbd 9 >}} {{< kbd 0 >}}). Anschliessend kann die Collection des Wassertropfens wieder deaktiviert werden.
 
 ## Partikel
 

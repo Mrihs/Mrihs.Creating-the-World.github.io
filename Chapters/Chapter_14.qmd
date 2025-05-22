@@ -59,7 +59,7 @@ Um ein neues Glas zu erstellen, wird in diesem Fall ein beliebiges primitives Me
 Neue Vertices extrudieren
 :::
 
-Als Nächstes wird die Form des Glases im Querschnitt erstellt. Am besten wird das Objekt in der Vorderansicht betrachtet. Zunächst wird der Radius des Glasbodens festgelegt. Hierfür wird ein Edge entlang der X-Achse beispielsweise um 0.1 Meter extrudiert ( {{< kbd E >}}, {{< kbd X >}},{{< kbd 0 >}}{{\< kbd . \>}}{{< kbd 1 >}}, danach bestätigen mittels der Taste {{< kbd Enter >}}). Anschliessend wird von diesem Vertex ebenfalls ein Vertex herausgezogen, welches entlang der Z-Achse (und bei Bedarf auch entlang der Y-Achse) verschoben wird. Dadurch sollte nun ein Querschnitt eines halben Glases erstellt worden sein, wie in Abbildung 1 dargestellt.
+Als Nächstes wird die Form des Glases im Querschnitt erstellt. Am besten wird das Objekt in der Vorderansicht betrachtet. Zunächst wird der Radius des Glasbodens festgelegt. Hierfür wird ein Edge entlang der X-Achse beispielsweise um 0.1 Meter extrudiert ( {{< kbd E >}}, {{< kbd X >}}, {{< kbd 0 >}} {{< kbd . >}} {{< kbd 1 >}}, danach bestätigen mittels der Taste {{< kbd Enter >}}). Anschliessend wird von diesem Vertex ebenfalls ein Vertex herausgezogen, welches entlang der Z-Achse (und bei Bedarf auch entlang der Y-Achse) verschoben wird. Dadurch sollte nun ein Querschnitt eines halben Glases erstellt worden sein, wie in Abbildung 1 dargestellt.
 
 ![Der Querschnitt eines halben Glases.](Images/Chapter_14/14_1_Cross_Section.png){#fig-1_1 fig-align="left"}
 

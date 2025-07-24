@@ -4,13 +4,13 @@ title: "Über"
 
 ## Erstellung der Website
 
-Diese Website wurde mittels der Software [R-Studio/Posit](https://posit.co/download/rstudio-desktop/) und [Quarto](https://quarto.org) entwickelt. Die Website, sowie die Unterrichts-Unterlagen sind im zur Website gehörigen [Git-Hub Repository](https://github.com/Mrihs/Mrihs.Creating-the-World.github.io) hinterlegt.
+Diese Website wurde mittels der Software [R-Studio/Posit](https://posit.co/download/rstudio-desktop/) und [Quarto](https://quarto.org) entwickelt. Die Website, sowie die Unterrichts-Unterlagen sind im zur Website gehörigen [GitHub Repository](https://github.com/Mrihs/Mrihs.Creating-the-World.github.io) hinterlegt.
 
 ## Lizenz
 
 Diese Website stellt eine offene Bildungsressource (Open Education Ressource) dar, welche frei verwendet, bearbeitet und weitergegeben werden kann und weitergegeben werden kann, sofern die Urheber dieser Website namentlich genannt werden und die [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.de) creative-commons Lizenz verwendet wird. Abbildungen der Benutzeroberfläche von [Blender](https://www.blender.org) wurden als Screenshots innerhalb der Software erstellt und unterliegen daher der Nutzungslizenz von Blender.
 
-## Uhrheber
+## Urheber
 
 -   Michael Rihs^1\*^
 
@@ -24,7 +24,7 @@ Diese Website stellt eine offene Bildungsressource (Open Education Ressource) da
 
 ## Danksagung
 
-Besonderer Dank geht an Rahel Steuri und Rebekka Bohrer, welche bei der Adaption des Kurses im Jahre 2022 beteiligt waren. Weiterer Dank geht an Aurégane Dévaud, welche die Erstellung dieser Website unterstützt hat.
+Besonderer Dank geht an Rahel Steuri und Rebekka Borer, welche bei der Adaption des Kurses im Jahre 2022 beteiligt waren. Weiterer Dank geht an Aurégane Dévaud, welche die Erstellung dieser Website unterstützt hat.
 
 ## Kontakt:
 

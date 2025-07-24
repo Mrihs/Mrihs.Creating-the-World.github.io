@@ -111,16 +111,16 @@ editor: visual
 
 ## Literatur
 
-Brainard, D. H., & Hurlbert, A. C. (2015). Colour vision: understanding# TheDress. *Current Biology*, *25*(13), R551-R554.
+Brainard, D. H., & Hurlbert, A. C. (2015). Colour vision: understanding# TheDress. *Current Biology*, *25*(13), Article R551-R554. <https://doi.org/10.1016/j.cub.2015.05.020>
 
-Bainbridge, W. A., Pounder, Z., Eardley, A. F., & Baker, C. I. (2021). Quantifying Aphantasia through drawing: Those without visual imagery show deficits in object but not spatial memory. *Cortex*, *135*, 159-172.
+Bainbridge, W. A., Pounder, Z., Eardley, A. F., & Baker, C. I. (2021). Quantifying Aphantasia through drawing: Those without visual imagery show deficits in object but not spatial memory. *Cortex*, *135*, 159-172. <https://doi.org/10.1016/j.cortex.2020.11.014>
 
-Fleming, R. W. (2014). Visual perception of materials and their properties. *Vision research*, *94*, 62-75.
+Fleming, R. W. (2014). Visual perception of materials and their properties. *Vision Research*, *94*, 62-75. <https://doi.org/10.1016/j.visres.2013.11.004>
 
-Joon, J. S. (2010, August). Principles of photorealism to develop photorealistic visualisation for interface design: A review. In *2010 Seventh International Conference on Computer Graphics, Imaging and Visualization* (pp. 17-25). IEEE.
+Joon, J. S. (2010, August). Principles of photorealism to develop photorealistic visualisation for interface design: A review. In *2010 Seventh International Conference on Computer Graphics, Imaging and Visualization* (pp. 17-25). IEEE. <https://doi.org/10.1109/CGIV.2010.12>
 
-Kätsyri, J., Förger, K., Mäkäräinen, M., & Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses: support for perceptual mismatch as one road to the valley of eeriness. *Frontiers in psychology*, *6*, 390.
+Kätsyri, J., Förger, K., Mäkäräinen, M., & Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses: support for perceptual mismatch as one road to the valley of eeriness. *Frontiers in Psychology*, *6*, Article 390. <https://doi.org/10.3389/fpsyg.2015.00390>
 
-Scholl, B. J., & Tremoulet, P. D. (2000). Perceptual causality and animacy. *Trends in cognitive sciences, 4*(8), 299-309.
+Scholl, B. J., & Tremoulet, P. D. (2000). Perceptual causality and animacy. *Trends in Cognitive Sciences, 4*(8), 299-309. <https://doi.org/10.1016/S1364-6613(00)01506-0>
 
-Tarr, M. J., Williams, P., Hayward, W. G., & Gauthier, I. (1998). Three-dimensional object recognition is viewpoint dependent. *Nature neuroscience*, *1*(4), 275-277.
+Tarr, M. J., Williams, P., Hayward, W. G., & Gauthier, I. (1998). Three-dimensional object recognition is viewpoint dependent. *Nature Neuroscience*, *1*(4), 275-277. [https://doi.org/10.1038/1089](https://psycnet.apa.org/doi/10.1038/1089)

@@ -3,6 +3,8 @@ title: "Skript: Kapitelübersicht"
 editor: visual
 ---
 
+Nachfolgend werden alle Seiten zu den einzelnen Kapiteln des Skripts aufgelistet. Nebst den einzelnen Seiten ist das vollständige Skript auch als [PDF](../assets/creating_the_world_script.pdf) verfügbar.
+
 1.  [Vorbereitung von Blender](../Chapters/Chapter_1.qmd)
 2.  [Die Arbeitsoberfläche des 3D-Viewports](../Chapters/Chapter_2.qmd)
 3.  [Navigation der Ansicht im 3D-Viewport](../Chapters/Chapter_3.qmd)

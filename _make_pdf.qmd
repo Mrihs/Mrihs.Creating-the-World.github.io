@@ -1,12 +1,10 @@
 ---
-title: "Creating the World: Grafik, Design & Animation"
-subtitle: "(inkl. Einführung in die 3D Modellierung mit Blender)"
 format:
   pdf:
     documentclass: book
     lang: de
-    toc: true
-    toc-depth: 2
+    title-block: none
+    toc: false
     number-sections: true
     number-depth: 2
     output-file: "creating_the_world_script"
@@ -20,26 +18,93 @@ editor: source
 ---
 
 
-\begin{tipp}{Blender unterstÃŒtzt nur noch die 64-Bit-Architektur}
-Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstÃŒtzt. Microsoft unterstÃŒtzt diese Systeme seit 2020 nicht mehr und auch an-dere Software-Entwickler haben den Support dieser Systeme eingestellt. 
-\end{tipp}
+::: {=latex}
+\begin{titlepage}
+  \thispagestyle{empty}
+
+  % Background Image
+  \AddToShipoutPictureBG*{%
+    \put(0,0){%
+      \parbox[b][\paperheight][c]{\paperwidth}{%
+        \includegraphics[width=\paperwidth,height=\paperheight]{icons/Title_Image.png}%
+      }%
+    }%
+  }
+  
+  % Titlebox
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=north west] at ([xshift=2.3cm,yshift=-9.3cm] current page.north west) {
+      \begin{tikzpicture}
+        % Box
+        \shade[bottom color=orangeBottom, top color=orangeTop, opacity=0.45]
+          (0,0) rectangle (16.51cm,3.91cm);
+        % Text
+        \node[anchor=west, text=white, align=left, font=\sffamily\bfseries\fontsize{24}{24}\selectfont]
+          at (1.25cm,1.955cm) {
+            Creating the World:\\
+            Grafik, Design und Animation in 3D
+          };
+      \end{tikzpicture}
+    };
+
+  
+    % Author-Box
+    \node[anchor=north west] at ([xshift=2.3cm,yshift=-19.61cm] current page.north west) {
+      \begin{tikzpicture}
+        % Box
+        \filldraw[fill=blue!90!cyan, opacity=0.35, draw=none]
+          (0,0) rectangle (16.51cm,3.91cm);
+        % Text
+        \node[anchor=east, text=white, align=right, font=\sffamily\bfseries\fontsize{16}{18}\selectfont]
+          at (16.31cm,1.955cm) {
+            Prof.\ Dr.\ Fred Mast\\
+            Dr.\ Michael Rihs\\
+            M.\ Sc.\ Flurina Brodwolf\\
+            M.\ Sc.\ Romina Schmid
+          };
+      \end{tikzpicture}
+    };
+
+  \end{tikzpicture}
+
+  \newpage
+\end{titlepage}
+:::
 
 
 
 
-\begin{exercise}{Blender unterstÃŒtzt nur noch die 64-Bit-Architektur}
-Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstÃŒtzt. Microsoft unterstÃŒtzt diese Systeme seit 2020 nicht mehr und auch an-dere Software-Entwickler haben den Support dieser Systeme eingestellt. 
-\end{exercise}
 
+::: {=latex}
+\clearpage
+\tableofcontents
+\clearpage
+:::
 
-\begin{remember}{Merke...}
-Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstÃŒtzt. Microsoft unterstÃŒtzt diese Systeme seit 2020 nicht mehr und auch an-dere Software-Entwickler haben den Support dieser Systeme eingestellt. 
-\end{remember}
 
 
 ```{r}
 #| echo: false
-#| eval: true
+#| eval: false
+# \begin{tipp}{Blender unterstÃŒtzt nur noch die 64-Bit-Architektur}
+# Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstÃŒtzt. Microsoft unterstÃŒtzt diese Systeme seit 2020 nicht mehr und auch an-dere Software-Entwickler haben den Support dieser Systeme eingestellt. 
+# \end{tipp}
+# 
+# 
+# 
+# 
+# \begin{exercise}{Blender unterstÃŒtzt nur noch die 64-Bit-Architektur}
+# Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstÃŒtzt. Microsoft unterstÃŒtzt diese Systeme seit 2020 nicht mehr und auch an-dere Software-Entwickler haben den Support dieser Systeme eingestellt. 
+# \end{exercise}
+# 
+# 
+# \begin{remember}{Merke...}
+# Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstÃŒtzt. Microsoft unterstÃŒtzt diese Systeme seit 2020 nicht mehr und auch an-dere Software-Entwickler haben den Support dieser Systeme eingestellt. 
+# \end{remember}
+
+
+
+
 
 ##### To-Do
 ## Content at beginning
@@ -78,8 +143,13 @@ Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Arch
 
 # Define process_qmd function 
 process_qmd <- function(file, fpath_in = "", fpath_out = "") {
-  
-  # Read the file
+
+  # Sicherheitsprüfung – verhindere Absturz bei NA oder ungültigem Pfad
+  if (is.null(file) || is.na(file) || !nzchar(file) || !file.exists(file)) {
+    return("")
+  }
+
+  # Datei einlesen (jetzt sicher)
   doc <- readLines(file)
   
   # Find the line which ends the YAML-blcok (Second instance of "---")
@@ -283,16 +353,16 @@ process_qmd <- function(file, fpath_in = "", fpath_out = "") {
  
 # # Sort the chapter-files based on the extracted numbers
  files <- files[order(numbers)]
-# 
-# # For all chapter-files
- for (fileindex in 1:3){
+ 
+# For all chapter-files
+for (fileindex in 1:length(files)){
 #   # Get the current chapter-file
    current_file <- files[fileindex]
-#   
-#   # Process the current chapter
+#
+   # Process the current chapter
    C1 <- process_qmd(current_file)
-#   
-#   # Print the current chapter
+#
+   # Print the current chapter
    cat(unlist(C1), sep = '\n')
  }
 ```

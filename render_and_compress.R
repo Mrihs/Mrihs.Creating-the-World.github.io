@@ -1,8 +1,20 @@
+#### Rung Script only locally, not on GitHub ####
+if (Sys.getenv("GITHUB_ACTIONS") == "true") {
+  message("Running on GitHub – skipping render_and_compress.R")
+  quit(save = "no")
+}
+
+
+
+
+
 ##### Render Script #####
 quarto::quarto_render("_make_pdf.qmd")
 
 # Path to PDF file
 pdf_file <- "creating_the_world_script.pdf"
+# Set path for PDF-File
+compressed_target <- "docs/assets/creating_the_world_script.pdf"
 
 
 
@@ -11,9 +23,6 @@ pdf_file <- "creating_the_world_script.pdf"
 ##### Compress #####
 # Compress-Function
 compress_pdf <- function(pdf_in, pdf_out = pdf_in) {
-  if (!file.exists(pdf_in)) stop()
-  if (Sys.which("gs") == "") stop()
-  
   tmp_out <- tempfile(fileext = ".pdf")
   
   cmd <- sprintf(
@@ -32,7 +41,13 @@ compress_pdf <- function(pdf_in, pdf_out = pdf_in) {
 }
 
 # Run Compress-Function
-compress_pdf(pdf_file)
+compress_pdf(pdf_file, pdf_out = compressed_target)
+
+# Remove original PDF-File
+if (file.exists(pdf_file)) {
+  file.remove(pdf_file)
+  message("Removed uncompressed PDF")
+}
 
 
 

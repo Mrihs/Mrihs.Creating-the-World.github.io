@@ -15,7 +15,7 @@ format:
     - \renewcommand{\familydefault}{\sfdefault}
     - \newcommand{\kbd}[1]{\fbox{\texttt{#1}}}
     include-in-header:
-    - "styles.tex"
+    - "assets/styles/styles.tex"
 editor: source
 ---
 

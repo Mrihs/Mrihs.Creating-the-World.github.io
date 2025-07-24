@@ -2819,5 +2819,79 @@
     "title": "Über",
     "section": "Urheber",
     "text": "Urheber\n\nMichael Rihs1*\nFlurina L. Brodfwolf1\nRomina Schmid1\nFred W. Mast1\n\n1Abteilung für kognitive Psychologie, Institut für Psychologie, Universität Bern"
+  },
+  {
+    "objectID": "pages/chapter_overview.html",
+    "href": "pages/chapter_overview.html",
+    "title": "Skript: Kapitelübersicht",
+    "section": "",
+    "text": "Vorbereitung von Blender\nDie Arbeitsoberfläche des 3D-Viewports\nNavigation der Ansicht im 3D-Viewport\nErste Schritte\nObjektarten\nPrimitive Meshes\nMethoden der Objekt-Transformation\nObjekte im Viewport-Display transformieren\nObject- und Edit-Mode\nEinstieg in den Edit-Mode\nMethoden der Objektbearbeitung im Edit-Mode\nHilfestellungen für die Objektbearbeitung\nTutorial: Erstellen eines Glases\nObjekterstellung mittels Modifiern\nEigenschaften innerhalb eines Meshes definieren\nMaterialien, Texturen und Shader\nMaterialien\nDer Shader-Editor\nGrundlegende Eigenschaften von Materialien\nTutorial: Strandball\nTexturen\nUVs\nTexturen zu einem Material hinzufügen\nTexturen für Parameter verwenden\nWelche Bilder eignen sich als Texturen?\nArten von Texturen\nTutorial: Einen Hammer texturieren\nDisplacement mit dem Displacement-Modifier erstellen\nErstellen von Landschaften\nTutorial: Erstellen einer Düne\nParameter im Principled-BSDF-Shader\nDer Wechsel von Eevee zu Cycles am Beispiel von Glas\nLichtquellen in einer Szene\nLichtobjekte\nWelten\nKamera\nRendern\nTutorial: Ein Glas mit Wasser erstellen\nBäume mittels Add-on erstellen\nWorkflows der Charaktererstellung\nCharacter-Modeling\nTutorial: Eine Cartoon-Katze als Charakter erstellen\nWas ist Rigging?\nObjekte mit Armaturen verformen\nCharakter-Rigging\nVom Bild zur Animation\nAnimationen erstellen\nAnimationen verfeinern\nAnimationen rendern",
+    "crumbs": [
+      "Skript",
+      "Kapitelübersicht"
+    ]
+  },
+  {
+    "objectID": "pages/Overview.html#semesterplan",
+    "href": "pages/Overview.html#semesterplan",
+    "title": "Kursübersicht",
+    "section": "Semesterplan",
+    "text": "Semesterplan\n\n\n\nWoche\nPraxis\nKapitel\nTheorie\nLiteratur\nFolien\nRessourcen\nAbgabe\n\n\n\n\n1\nDie Arbeitsoberfläche von Blender\nEigenschaften von 3D-Objekten\n1, 2, 3, 4, 5, 6, 7, 8, 9\nOrganisatorisches\nBedeutung von 3D-Objekten\nTarr et al. (1998)\nOrganisation\nEinführung\nDemofile\n\n\n\n2\nGrundmechanismen der Objektbearbeitung I\n10, 11, 12\n\n\n\n\n\n\n\n3\nGrundmechanismen der Objektbearbeitung II\n13, 14\nReferenzbilder oder Fantasie?\nBrainbridge et al. (2021)\n\nBildvorlage\nGlas\n\n\n\n4\nObjektbearbeitung mit Modifiers\n15, 16\n\n\nModifiers\nHaus\n1\n\n\n5\nMaterialien\n17, 18, 19, 20, 21\nVisuelle Wahrnehmung von Materialien\nFlemming (2014)\nMaterialien\nÜbung 12_1\nÜbung 13_1\n\n\n\n6\nTexturen\n22, 23, 24, 25, 26, 27, 28\nLizenzen & Lizenzarten\n\nTexturen\nHammer\nDisplacement\n2\n\n\n7\nPhysical based Rendering\n29, 30, 31, 32, 33\nCartoon oder Realismus?\n\nPrincipled_BSDF_Shader\nGlasmaterial: Beispiel\n\n\n\n8\nBeleuchtung und Welten\n34, 35\nFarbwahrnehmung unter Beleuchtung\nBrainard & Hurlbert (2015)\nLicht & Welten\nSpielbrett\nDünen\n3\n\n\n9\nPartikel/Haare, Kamera & Rendering\n36, 37, 38\nDateiformate & Hardware\nJoon (2010)\n\nGlas-Partikel\n\n\n\n10\nWorkflow der Charaktererstellung\n39, 40, 41, 42\nUncanny Valley Effect\nKätsyri et al. (2015)\nWorkflow der Charaktererstellung\nBaum\nAlien\nKatzen-Charakter\n4\n\n\n11\nCharacter Rigging\n43, 44, 45\nFotorealismus\n\n\nSchwimmnudel\nMensch\n\n\n\n12\nAnimationen\n46, 47, 48, 49\nWahrnehmung von Animationen\nScholl & Tremoulet (2000)\n\nRaum für Abgabe 5\nPendel\n5\n\n\n13\nBlender in VR\n\nVirtual Reality\n\nVR\nErde\n6\n\n\n14\nAbschluss\n\n\n\nLinien\nFreestyle"
+  },
+  {
+    "objectID": "pages/Overview.html#skript-kapitel",
+    "href": "pages/Overview.html#skript-kapitel",
+    "title": "Kursübersicht",
+    "section": "Skript-Kapitel:",
+    "text": "Skript-Kapitel:\n\nVorbereitung von Blender\nDie Arbeitsoberfläche des 3D-Viewports\nNavigation der Ansicht im 3D-Viewport\nErste Schritte\nObjektarten\nPrimitive Meshes\nMethoden der Objekt-Transformation\nObjekte im Viewport-Display transformieren\nObject- und Edit-Mode\nEinstieg in den Edit-Mode\nMethoden der Objektbearbeitung im Edit-Mode\nHilfestellungen für die Objektbearbeitung\nTutorial: Erstellen eines Glases\nObjekterstellung mittels Modifiern\nEigenschaften innerhalb eines Meshes definieren\nMaterialien, Texturen und Shader\nMaterialien\nDer Shader-Editor\nGrundlegende Eigenschaften von Materialien\nTutorial: Strandball\nTexturen\nUVs\nTexturen zu einem Material hinzufügen\nTexturen für Parameter verwenden\nWelche Bilder eignen sich als Texturen?\nArten von Texturen\nTutorial: Einen Hammer texturieren\nDisplacement mit dem Displacement-Modifier erstellen\nErstellen von Landschaften\nTutorial: Erstellen einer Düne\nParameter im Principled-BSDF-Shader\nDer Wechsel von Eevee zu Cycles am Beispiel von Glas\nLichtquellen in einer Szene\nLichtobjekte\nWelten\nKamera\nRendern\nTutorial: Ein Glas mit Wasser erstellen\nBäume mittels Add-on erstellen\nWorkflows der Charaktererstellung\nCharacter-Modeling\nTutorial: Eine Cartoon-Katze als Charakter erstellen\nWas ist Rigging?\nObjekte mit Armaturen verformen\nCharakter-Rigging\nVom Bild zur Animation\nAnimationen erstellen\nAnimationen verfeinern\nAnimationen rendern"
+  },
+  {
+    "objectID": "pages/Overview.html#literatur",
+    "href": "pages/Overview.html#literatur",
+    "title": "Kursübersicht",
+    "section": "Literatur",
+    "text": "Literatur\nBrainard, D. H., & Hurlbert, A. C. (2015). Colour vision: understanding# TheDress. Current Biology, 25(13), Article R551-R554. https://doi.org/10.1016/j.cub.2015.05.020\nBainbridge, W. A., Pounder, Z., Eardley, A. F., & Baker, C. I. (2021). Quantifying Aphantasia through drawing: Those without visual imagery show deficits in object but not spatial memory. Cortex, 135, 159-172. https://doi.org/10.1016/j.cortex.2020.11.014\nFleming, R. W. (2014). Visual perception of materials and their properties. Vision Research, 94, 62-75. https://doi.org/10.1016/j.visres.2013.11.004\nJoon, J. S. (2010, August). Principles of photorealism to develop photorealistic visualisation for interface design: A review. In 2010 Seventh International Conference on Computer Graphics, Imaging and Visualization (pp. 17-25). IEEE. https://doi.org/10.1109/CGIV.2010.12\nKätsyri, J., Förger, K., Mäkäräinen, M., & Takala, T. (2015). A review of empirical evidence on different uncanny valley hypotheses: support for perceptual mismatch as one road to the valley of eeriness. Frontiers in Psychology, 6, Article 390. https://doi.org/10.3389/fpsyg.2015.00390\nScholl, B. J., & Tremoulet, P. D. (2000). Perceptual causality and animacy. Trends in Cognitive Sciences, 4(8), 299-309. https://doi.org/10.1016/S1364-6613(00)01506-0\nTarr, M. J., Williams, P., Hayward, W. G., & Gauthier, I. (1998). Three-dimensional object recognition is viewpoint dependent. Nature Neuroscience, 1(4), 275-277. https://doi.org/10.1038/1089"
+  },
+  {
+    "objectID": "pages/about.html",
+    "href": "pages/about.html",
+    "title": "Über",
+    "section": "",
+    "text": "Diese Website wurde mittels der Software R-Studio/Posit und Quarto entwickelt. Die Website, sowie die Unterrichts-Unterlagen sind im zur Website gehörigen GitHub Repository hinterlegt."
+  },
+  {
+    "objectID": "pages/about.html#erstellung-der-website",
+    "href": "pages/about.html#erstellung-der-website",
+    "title": "Über",
+    "section": "",
+    "text": "Diese Website wurde mittels der Software R-Studio/Posit und Quarto entwickelt. Die Website, sowie die Unterrichts-Unterlagen sind im zur Website gehörigen GitHub Repository hinterlegt."
+  },
+  {
+    "objectID": "pages/about.html#lizenz",
+    "href": "pages/about.html#lizenz",
+    "title": "Über",
+    "section": "Lizenz",
+    "text": "Lizenz\nDiese Website stellt eine offene Bildungsressource (Open Education Ressource) dar, welche frei verwendet, bearbeitet und weitergegeben werden kann und weitergegeben werden kann, sofern die Urheber dieser Website namentlich genannt werden und die CC BY-SA 4.0 creative-commons Lizenz verwendet wird. Abbildungen der Benutzeroberfläche von Blender wurden als Screenshots innerhalb der Software erstellt und unterliegen daher der Nutzungslizenz von Blender."
+  },
+  {
+    "objectID": "pages/about.html#urheber",
+    "href": "pages/about.html#urheber",
+    "title": "Über",
+    "section": "Urheber",
+    "text": "Urheber\n\nMichael Rihs1*\nFlurina L. Brodfwolf1\nRomina Schmid1\nFred W. Mast1\n\n1Abteilung für kognitive Psychologie, Institut für Psychologie, Universität Bern"
+  },
+  {
+    "objectID": "pages/about.html#danksagung",
+    "href": "pages/about.html#danksagung",
+    "title": "Über",
+    "section": "Danksagung",
+    "text": "Danksagung\nBesonderer Dank geht an Rahel Steuri und Rebekka Borer, welche bei der Adaption des Kurses im Jahre 2022 beteiligt waren. Weiterer Dank geht an Aurégane Dévaud, welche die Erstellung dieser Website unterstützt hat."
+  },
+  {
+    "objectID": "pages/about.html#kontakt",
+    "href": "pages/about.html#kontakt",
+    "title": "Über",
+    "section": "Kontakt:",
+    "text": "Kontakt:\n*Dr. Michael Rihs\nInstitut für Psychologie\nFabrikstrasse 8\n3012 Bern\nE-Mail: michael.rihs@unibe.ch"
   }
 ]

@@ -10,7 +10,7 @@ website:
   bread-crumbs: false
   navbar:
     right:
-      - href: Sites/Overview.qmd
+      - href: pages/Overview.qmd
         text: "Kursübersicht"
         icon: calendar-range
       - text: "Cheatsheets" 
@@ -104,7 +104,7 @@ website:
         icon: images
       - text: "Skript"
         icon: eyeglasses
-        href: Sites/chapter_overview.qmd
+        href: pages/chapter_overview.qmd
         # menu:
         #   - href: Chapters/Chapter_1.qmd
         #     text: Kapitel 1
@@ -206,7 +206,7 @@ website:
         #     text: Kapitel 48
         #   - href: Chapters/Chapter_49.qmd
         #     text: Kapitel 49
-      - href: about.qmd
+      - href: pages/about.qmd
         icon: info-circle
         text: Über
   sidebar:
@@ -215,7 +215,7 @@ website:
       style: docked
       collapse-level: 1
       contents:  
-        - href: Sites/chapter_overview.qmd
+        - href: pages/chapter_overview.qmd
           text: "Kapitelübersicht"
         - section: "Kapitel"
           contents:          
@@ -321,7 +321,7 @@ website:
               text: Kapitel 49
 format:
   html:
-    theme: [cosmos, assets/css/style.scss]
+    theme: [cosmos, assets/styles/style.scss]
     toc: true
     toc-title: Auf dieser Seite
     fontsize: 17px

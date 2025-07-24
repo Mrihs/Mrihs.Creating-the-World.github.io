@@ -174,33 +174,7 @@ Haben Sie Rückmeldungen, Anregungen oder Fehler entdeckt? Diese können gerne a
 ```{r}
 #| echo: false
 #| eval: false
-# \begin{tipp}{Blender unterstÃŒtzt nur noch die 64-Bit-Architektur}
-# Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstÃŒtzt. Microsoft unterstÃŒtzt diese Systeme seit 2020 nicht mehr und auch an-dere Software-Entwickler haben den Support dieser Systeme eingestellt. 
-# \end{tipp}
-# 
-# 
-# 
-# 
-# \begin{exercise}{Blender unterstÃŒtzt nur noch die 64-Bit-Architektur}
-# Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstÃŒtzt. Microsoft unterstÃŒtzt diese Systeme seit 2020 nicht mehr und auch an-dere Software-Entwickler haben den Support dieser Systeme eingestellt. 
-# \end{exercise}
-# 
-# 
-# \begin{remember}{Merke...}
-# Seit der Version 2.81 von Blender werden nur noch Computer mit einer 64-Bit-Architektur unterstÃŒtzt. Microsoft unterstÃŒtzt diese Systeme seit 2020 nicht mehr und auch an-dere Software-Entwickler haben den Support dieser Systeme eingestellt. 
-# \end{remember}
-
-
-
-
-
 ##### To-Do
-## Content at beginning
-# Title Page
-# Introduction
-# Aknowledgment
-# Link to Web-Page
-
 ## Layout
 # One sided layout
 
@@ -228,18 +202,21 @@ Haben Sie Rückmeldungen, Anregungen oder Fehler entdeckt? Diese können gerne a
 ```{r}
 #| echo: false
 #| eval: true
-
 # Define process_qmd function 
 process_qmd <- function(file, fpath_in = "", fpath_out = "") {
 
-  # Sicherheitsprüfung – verhindere Absturz bei NA oder ungültigem Pfad
+  # Prevent stop by invalid pathes or NA
   if (is.null(file) || is.na(file) || !nzchar(file) || !file.exists(file)) {
     return("")
   }
 
-  # Datei einlesen (jetzt sicher)
+  # Read file
   doc <- readLines(file)
+    
   
+  
+   
+  ### Get YAML-Blocks
   # Find the line which ends the YAML-blcok (Second instance of "---")
   end_yaml <- which(doc == "---")[2]
   
@@ -267,7 +244,11 @@ process_qmd <- function(file, fpath_in = "", fpath_out = "") {
   
   # Replace Instances of "Images/Chapter_" by "Chapters/Images/Chapter_" to get the correct path
   out_doc <- stringr::str_replace_all(out_doc, "Images/Chapter_", "Chapters/Images/Chapter_")
+    
   
+  
+   
+
   ### Remove custom "downloadbox" blocks
   # Lock for Lines which start a download-box
   start_db <- grep("^:::::: downloadbox", out_doc)
@@ -288,29 +269,31 @@ process_qmd <- function(file, fpath_in = "", fpath_out = "") {
     out_doc <- out_doc[keep]
   }
   
-  ### Ersetze "column-margin" Blöcke durch \marginnote{...}
-  # Finde Startindizes der Blöcke
+  
+  
+   
+  
+  ### Replace "column-margin" blocks by \marginnote{...}
+  # Lock for Lines which start a block
   cm_start <- grep("^:::\\s*column-margin", out_doc)
   
-  # Die Schleife arbeitet rückwärts, damit Indizes nach Ersetzungen nicht durcheinander kommen
+  # Loop through block
   if(length(cm_start) > 0){
     for(i in rev(seq_along(cm_start))) {
       s <- cm_start[i]
-      # Finde das Ende des Blocks: die nächste Zeile, die nur ":::" enthält
-      # (Dabei wird angenommen, dass zwischen dem Start und Ende der Blockinhalt liegt)
+      # Find end of the block (:::)
       e_candidates <- which(out_doc[(s+1):length(out_doc)] == ":::")
-      if(length(e_candidates) == 0) next  # Falls kein Ende gefunden, überspringen
+      # Skip if no end is found
+      if(length(e_candidates) == 0) next
       e <- s + e_candidates[1]
       
-      # Inhalt zwischen Start und Ende zusammenfassen
-      # (Hier wird angenommen, dass der Inhalt in den Zeilen s+1 bis e-1 steht)
+      # Get content of margin-block
       content <- paste(out_doc[(s+1):(e-1)], collapse = " ")
       
-      # Ersetze den ganzen Block mit \marginnote{...}
+      # Replace block with \marginnote{...}
       replacement <- paste0("\\marginnote{", content, "}")
       
-      # Ersetze die Zeilen im Dokument:
-      # Erhalte den Teil vor dem Block, füge die Ersetzung hinzu und dann den Rest des Dokuments.
+      # Replace block in document
       out_doc <- c(out_doc[1:(s-1)], replacement, out_doc[(e+1):length(out_doc)])
     }
   }
@@ -318,61 +301,66 @@ process_qmd <- function(file, fpath_in = "", fpath_out = "") {
   
   
    
-  ### Ersetze kbd-Tags in LaTeX kbd-Style
-  # Finde den regulären Ausdruck, der den kbd-Tag im Format "{{< kbd ... >}}" erfasst
-  # Er geht davon aus, dass sich nach "kbd" ein oder mehrere Wörter (Tasten) befinden, die durch Leerzeichen getrennt sind.
+  ### Replace kbd-Tags
+  # Find kbd-Tags ("{{< kbd ... >}}")
   kbd_pattern <- "\\{\\{<\\s*kbd\\s+([^>]+)\\s*>\\}\\}"
   
-  # Iteriere über alle Zeilen und ersetze alle Vorkommnisse
+  # For all kbd-Tags
   out_doc <- sapply(out_doc, function(line) {
     stringr::str_replace_all(line, kbd_pattern, function(match) {
-      # Extrahiere den Inhalt des kbd-Tags (alles zwischen "kbd" und der schließenden Markierung)
+      # Extract content of kbd-Tags
       key_text <- stringr::str_match(match, kbd_pattern)[,2]
-      # Entferne führende und folgende Leerzeichen und splitte in einzelne Tasten
+      # Remove spaces before and after Tags
       keys <- unlist(strsplit(trimws(key_text), "\\s+"))
-      # Verbinde ggf. mehrere Tasten mit einem "+"
+      # Combine multiple Tast with "+"
       joined_keys <- paste(keys, collapse = " + ")
-      # Erzeuge den LaTeX-Befehl \kbd{...}
+      # Create LaTex-Code("\kbd{...}")
       paste0("\\kbd{", joined_keys, "}")
     })
   }, USE.NAMES = FALSE)
+    
   
   
-  ### Ersetze tippbox-Blöcke durch \begin{tipp}{...} ... \end{tipp}
-  # Finde die Zeilen, in denen tippbox-Blöcke starten
+   
+  ### Replace tippboxes 
+  # Finde Tippobes
   tipp_start <- grep("^::::::\\s*tippbox", out_doc)
   
+  # If tippbox is long enough
   if (length(tipp_start) > 0) {
-    # Bearbeite die gefundenen Blöcke von unten nach oben, damit sich Indizes nicht verschieben
+    # For all tippboxes
     for (i in rev(seq_along(tipp_start))) {
       start_idx <- tipp_start[i]
-      # Suche die dazugehörige Abschlusszeile ("::::::" ganz allein)
+      # Find the last line ("::::::")
       end_candidates <- grep("^::::::\\s*$", out_doc[start_idx:length(out_doc)])
       if (length(end_candidates) > 0) {
         end_idx <- start_idx + end_candidates[1] - 1
       } else {
-        next  # Falls kein Schlusstag gefunden wird, überspringen
+        # Skip if no end is found
+        next
       }
       
-      # Extrahiere den kompletten Block inklusive der Begrenzungszeilen
+      # Extract block
       block <- out_doc[start_idx:end_idx]
-      # Entferne die erste und die letzte Zeile (die reinen Block-Begrenzer)
+      # Remove first and last line
       block_inner <- block[-c(1, length(block))]
       
-      # Initialisiere Header und Body als leere Zeichenketten
+      # Initialize Header and Body-Strings
       header <- ""
       body <- ""
       
-      ## Header-Block verarbeiten
+      ## Define Tippbox-Header
       header_start_idx <- grep("^::::\\s*tippbox-header", block_inner)
       if (length(header_start_idx) > 0) {
-        # Die Header-Sektion endet mit einer Zeile, die nur "::::" (4 Doppelpunkte) enthält
+        # Set end of header-Section ("::::")
         header_end_candidates <- grep("^::::\\s*$", block_inner[(header_start_idx[1] + 1):length(block_inner)])
+        # If header is long enough
         if (length(header_end_candidates) > 0) {
+          # Define line at which header ends
           header_end_idx <- header_start_idx[1] + header_end_candidates[1]
           header_block <- block_inner[(header_start_idx[1] + 1):(header_end_idx - 1)]
           
-          # Entferne eventuell vorhandene Icon-Blöcke (beginnend mit "::: tippbox-icon" und endend mit ":::")
+          # Remove cion-Blocks
           icon_start <- grep("^:::\\s*tippbox-icon", header_block)
           if (length(icon_start) > 0) {
             icon_end_candidates <- grep("^:::\\s*$", header_block[(icon_start[1] + 1):length(header_block)])
@@ -381,13 +369,13 @@ process_qmd <- function(file, fpath_in = "", fpath_out = "") {
               header_block <- header_block[-(icon_start[1]:icon_end)]
             }
           }
-          # Fasse den restlichen Header-Text zusammen
+          # paste header
           header <- paste(header_block, collapse = " ")
           header <- trimws(header)
         }
       }
       
-      ## Body-Block verarbeiten
+      ## Define Tippbox-body
       body_start_idx <- grep("^:::\\s*tippbox-body", block_inner)
       if (length(body_start_idx) > 0) {
         body_end_candidates <- grep("^:::\\s*$", block_inner[(body_start_idx[1] + 1):length(block_inner)])
@@ -399,16 +387,18 @@ process_qmd <- function(file, fpath_in = "", fpath_out = "") {
         }
       }
       
-      # Erstelle die Ersatzzeile mit LaTeX-Befehl.
-      # Falls der Header leer ist, können die geschweiften Klammern auch leer bleiben.
+      # Define replacement-Text
       replacement <- paste0("\\begin{tipp}{", header, "}\n", body, "\n\\end{tipp}")
       
-      # Ersetze im Dokument den gesamten tippbox-Block durch den LaTeX-Code
+      # Replace block in document
       out_doc <- c(out_doc[1:(start_idx - 1)], replacement, out_doc[(end_idx + 1):length(out_doc)])
     }
   }
+      
   
   
+   
+  ### Set title
   # If a title was found, add the title in combination with a markdown-header (#) at the beginning
   if (title != "") {
     out_doc <- c(paste0("# ", title), "", out_doc)
@@ -416,8 +406,11 @@ process_qmd <- function(file, fpath_in = "", fpath_out = "") {
   
   # Use the modified text as child-document
   res <- knitr::knit_child(text = out_doc, quiet = TRUE, options = list(eval = FALSE, echo = TRUE))
+      
   
-  #Return the text
+  
+   
+  ### Return the text
   return(res)
 }
 
@@ -441,7 +434,7 @@ numbers <- as.integer(stringr::str_extract(basename(files), "(?<=Chapter_)[0-9]+
   
 # Sort the chapter-files based on the extracted numbers
 files <- files[order(numbers)]
-  
+
 # For all chapter-files
 for (fileindex in 1:length(files)){
   # Get the current chapter-file

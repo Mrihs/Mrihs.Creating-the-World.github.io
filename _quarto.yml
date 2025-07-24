@@ -1,5 +1,6 @@
 project:
   type: website
+  post-render: "Rscript render_and_compress.R"
   output-dir: docs
 
 website:

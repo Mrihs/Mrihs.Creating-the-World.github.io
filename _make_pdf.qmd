@@ -1,6 +1,6 @@
 ---
 title: "Creating the World: Grafik, Design & Animation"
-subtitle: "(inkl. Einführung in die 3D Modelierung mit Blender)"
+subtitle: "(inkl. Einführung in die 3D Modellierung mit Blender)"
 format:
   pdf:
     documentclass: book

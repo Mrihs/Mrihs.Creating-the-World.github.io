@@ -179,11 +179,9 @@ Haben Sie Rückmeldungen, Anregungen oder Fehler entdeckt? Diese können gerne a
 #| echo: false
 #| eval: false
 ##### To-Do
-## Layout
-# One sided layout
-
 ## Margins
 # Adjust placing
+# Adjusts spacing
 
 ## Images
 # Adjust Size
@@ -194,12 +192,11 @@ Haben Sie Rückmeldungen, Anregungen oder Fehler entdeckt? Diese können gerne a
 
 ## Header
 # Booktitle in Header (always left)
-# Orange box across whole page (until page ende
 
 ## Footer
 # Chaptertitle on the left
-# Page number on the right
-# Maybe add color-box around
+
+## Check if Footer and Header also on emtpy pages
 ```
 
 
@@ -432,24 +429,24 @@ process_qmd <- function(file, fpath_in = "", fpath_out = "") {
 #| echo: false
 #| eval: true
 #| message: false
-# # List all data in the Chapter-Folder which start with "Chapter_" and have a ".qmd" suffix
-# files <- list.files("Chapters/", pattern = "^Chapter_.*\\.qmd$", full.names = TRUE)
-#   
-# # Extract the number of chapters from the filenames as integers
-# numbers <- as.integer(stringr::str_extract(basename(files), "(?<=Chapter_)[0-9]+"))
-#   
-# # Sort the chapter-files based on the extracted numbers
-# files <- files[order(numbers)]
-# 
-# # For all chapter-files
-# for (fileindex in 1:length(files)){
-#   # Get the current chapter-file
-#   current_file <- files[fileindex]
-#   
-#   # Process the current chapter
-#   C1 <- process_qmd(current_file)
-#   
-#   # Print the current chapter
-#   cat(unlist(C1), sep = '\n')
-# }
+# List all data in the Chapter-Folder which start with "Chapter_" and have a ".qmd" suffix
+files <- list.files("Chapters/", pattern = "^Chapter_.*\\.qmd$", full.names = TRUE)
+   
+# Extract the number of chapters from the filenames as integers
+numbers <- as.integer(stringr::str_extract(basename(files), "(?<=Chapter_)[0-9]+"))
+  
+# Sort the chapter-files based on the extracted numbers
+files <- files[order(numbers)]
+
+# For all chapter-files
+for (fileindex in 1:length(files)){
+  # Get the current chapter-file
+  current_file <- files[fileindex]
+  
+  # Process the current chapter
+  C1 <- process_qmd(current_file)
+  
+  # Print the current chapter
+  cat(unlist(C1), sep = '\n')
+}
 ```

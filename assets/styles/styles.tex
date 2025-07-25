@@ -15,7 +15,8 @@
 \usepackage{anyfontsize}
 \usepackage[table, dvipsnames]{xcolor} % KEIN 'html'!
 \usepackage{transparent}
-\usepackage{tikzpagenodes} % sicherstellen, dass das geladen ist
+\usepackage{tikzpagenodes}
+\usepackage{ifthen}
 
 
 
@@ -392,4 +393,10 @@ boxed title style={
 }
 
 
-\AtBeginShipout{\seitenzahlInFusszeile}
+\AtBeginShipout{%
+  \ifthenelse{%
+    \NOT\(\value{page}=1 \OR \value{page}=2\)%
+  }{%
+    \seitenzahlInFusszeile%
+  }{}%
+}

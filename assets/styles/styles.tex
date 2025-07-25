@@ -15,6 +15,8 @@
 \usepackage{anyfontsize}
 \usepackage[table, dvipsnames]{xcolor} % KEIN 'html'!
 \usepackage{transparent}
+\usepackage{tikzpagenodes} % sicherstellen, dass das geladen ist
+
 
 
 
@@ -128,35 +130,28 @@
 
 %%% Odd pages (Recto)
 \newcommand{\headerRecto}{%
-  % Create orange box
-  \colorbox{my_orange}{%
-    \makebox[\textwidth][l]{%
-      \parbox[t]{\textwidth}{%
-        \vspace{5pt}%
-        % Create box with page number (20% of page width)
-        \makebox[0.20\textwidth][l]{\color{white}\bfseries\thepage}%
-        % Create box with chapter (75% of page width)
-        \makebox[0.75\textwidth][r]{\color{white}\bfseries\leftmark}%
-        \vspace{5pt}%
-      }%
-    }%
-  }%
+  \AddToShipoutPictureFG*{%
+    \begin{tikzpicture}[remember picture, overlay]
+      \fill[my_orange] ([yshift=-30pt]current page.north west) rectangle ([yshift=-60pt]current page.north east);
+      \node[anchor=west, text=white, font=\bfseries, yshift=-45pt, xshift=90pt]
+        at (current page.north west) {\thepage};
+      \node[anchor=east, text=white, font=\bfseries, yshift=-45pt, xshift=-90pt]
+        at (current page.north east) {\leftmark};
+    \end{tikzpicture}%
+  }
 }
 
 %%% Even pages (Verso)
 \newcommand{\headerVerso}{%
-  \colorbox{my_orange}{%
-    \makebox[\textwidth][l]{%
-      \parbox[t]{\textwidth}{%
-        \vspace{5pt}%
-        % Create box with chapter (75% of page width)
-        \makebox[0.75\textwidth][l]{\color{white}\bfseries\leftmark}%
-        % Create box with page number (20% of page width)
-        \makebox[0.20\textwidth][r]{\color{white}\bfseries\thepage}%
-        \vspace{5pt}%
-      }%
-    }%
-  }%
+  \AddToShipoutPictureFG*{%
+    \begin{tikzpicture}[remember picture, overlay]
+      \fill[my_orange] ([yshift=-30pt]current page.north west) rectangle ([yshift=-60pt]current page.north east);
+      \node[anchor=west, text=white, font=\bfseries, yshift=-45pt, xshift=90pt]
+        at (current page.north west) {\leftmark};
+      \node[anchor=east, text=white, font=\bfseries, yshift=-45pt, xshift=-90pt]
+        at (current page.north east) {\thepage};
+    \end{tikzpicture}%
+  }
 }
 
 

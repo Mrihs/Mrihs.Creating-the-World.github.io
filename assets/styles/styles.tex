@@ -2,6 +2,7 @@
 \usepackage{geometry}
 \usepackage{xcolor}
 \usepackage{eso-pic}
+\usepackage{atbegshi}
 \usepackage{fancyhdr}
 \usepackage[explicit]{titlesec}
 \usepackage{marginnote}
@@ -24,6 +25,8 @@
 \definecolor{remember_gold}{HTML}{FFDE7E}
 \definecolor{orangeTop}{HTML}{FFA600}
 \definecolor{orangeBottom}{HTML}{FF8E00}
+\definecolor{blue_box}{HTML}{1E6AE2}
+
 
 
 
@@ -357,3 +360,41 @@ boxed title style={
       at ([xshift=10pt,yshift=-1.75\baselineskip]frame.north west)
         % Add image
        {\includegraphics[width=1cm]{"icons/remember.png"}};}}
+       
+
+
+%%%%% Footer
+\newcommand{\seitenzahlInFusszeile}{%
+  \AddToShipoutPictureFG*{%
+    \begin{tikzpicture}[remember picture, overlay]
+      \ifodd\value{page}
+        % Odd pages - box left
+        \node[anchor=south west] at ([xshift=2.0cm]current page.south west) {%
+          \raisebox{-0.15\baselineskip}{%
+            \colorbox{blue_box}{%
+              \parbox[c][1.25\baselineskip][t]{0.5cm}{%
+                \vspace{0.28\baselineskip}% ← etwa 3mm nach unten
+                \centering\color{white}\bfseries\small\thepage%
+              }%
+            }%
+          }%
+        };
+      \else
+        % even pages - box right
+        \node[anchor=south east] at ([xshift=-2.0cm]current page.south east) {%
+          \raisebox{-0.15\baselineskip}{%
+            \colorbox{blue_box}{%
+              \parbox[c][1.25\baselineskip][t]{0.5cm}{%
+                \vspace{0.28\baselineskip}% ← etwa 3mm nach unten
+                \centering\color{white}\bfseries\small\thepage%
+              }%
+            }%
+          }%
+        };
+      \fi
+    \end{tikzpicture}%
+  }
+}
+
+
+\AtBeginShipout{\seitenzahlInFusszeile}

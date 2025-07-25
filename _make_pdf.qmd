@@ -57,10 +57,10 @@ editor: source
         % Text
         \node[anchor=east, text=white, align=right, font=\sffamily\bfseries\fontsize{16}{18}\selectfont]
           at (16.31cm,1.955cm) {
-            Prof.\ Dr.\ Fred Mast\\
-            Dr.\ Michael Rihs\\
-            M.\ Sc.\ Flurina Brodwolf\\
-            M.\ Sc.\ Romina Schmid
+            Michael Rihs\\
+            Flurina Brodwolf\\
+            Romina Schmid\\
+            Fred Mast\\
           };
       \end{tikzpicture}
     };
@@ -229,8 +229,10 @@ process_qmd <- function(file, fpath_in = "", fpath_out = "") {
   # If the title has at least one character...
   if (length(title_line) > 0) {
     # remove the "title:" tag as well as special characters
-    title <- sub("^title:\\s*\"?(.*?)\"?\\s*$", "\\1", title_line)
-  } 
+    raw_title <- sub("^title:\\s*\"?(.*?)\"?\\s*$", "\\1", title_line)
+    
+    # remove leading number pattern (e.g. "1. ", "12. ", etc.)
+    title <- sub("^\\s*\\d+\\.\\s*", "", raw_title)  } 
   # Set an empty title if the title is missing
   else {title <- ""}
   

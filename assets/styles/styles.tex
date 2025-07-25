@@ -94,11 +94,11 @@
 %%% --- Adjust chapter titles ---
 % Remove "Chapter"-prefix from chapter-title
 %Adjust title format
-\titleformat{\chapter}[display]
+\titleformat{\chapter}[hang]
   % Font of the title
   {\normalfont\huge\bfseries}
   % Suppress Chapter-Number
-  {}
+  {\thechapter.\quad}
   % Remove space after (removed) chapter number
   {0pt}
   % Execute Chapter-title

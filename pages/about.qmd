@@ -12,15 +12,17 @@ Diese Website stellt eine offene Bildungsressource (Open Education Ressource) da
 
 ## Urheber
 
--   Michael Rihs^1\*^
+-   Michael Rihs*
 
--   Flurina L. Brodfwolf^1^
+-   Flurina L. Brodfwolf
 
--   Romina Schmid^1^
+-   Romina Schmid
 
--   Fred W. Mast^1^
+-   Fred W. Mast
 
-^1^Abteilung für kognitive Psychologie, Institut für Psychologie, Universität Bern
+Abteilung für kognitive Psychologie, Wahrnehmung und Methodenlehre
+Institut für Psychologie
+Universität Bern
 
 ## Danksagung
 

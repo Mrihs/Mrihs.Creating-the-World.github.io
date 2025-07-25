@@ -86,11 +86,15 @@ editor: source
 \textbf{Erstversion:} 2021\
 
 \textbf{Autoren:}\
-Michael Rihs\textsuperscript{1*}\
-Flurina L. Brodwolf\textsuperscript{1}\
-Romina Schmid\textsuperscript{1}\
-Fred W. Mast\textsuperscript{1}\
-\textsuperscript{1}Abteilung für kognitive Psychologie, Institut für Psychologie, Universität Bern
+Michael Rihs\textsuperscript{*}\
+Flurina L. Brodwolf\
+Romina Schmid\
+Fred W. Mast\
+\
+Abteilung für kognitive Psychologie, Wahrnehmung und Methodenlehre\
+Institut für Psychologie\
+Universität Bern\
+
 
 \vspace{1em}
 \section*{Kontakt}
@@ -104,7 +108,7 @@ Fabrikstrasse 8 \\
 \end{tabular}
 
 
-\vspace{1em}
+\newpage
 \section*{Erstellung der Website}
 
 Die Unterlagen zu diesem Buch sind auf der dazugehörigen Website ([https://mrihs.github.io/Mrihs.Creating-the-World.github.io/](https://mrihs.github.io/Mrihs.Creating-the-World.github.io/)) zu finden. Die Website wurde mit Hilfe von \href{https://posit.co/download/rstudio-desktop/}{RStudio/Posit} und \href{https://quarto.org}{Quarto} entwickelt. Die Website, sowie die Unterrichts-Unterlagen sind im zur Website gehörigen GitHub Repository ([https://github.com/Mrihs/Mrihs.Creating-the-World.github.io](https://github.com/Mrihs/Mrihs.Creating-the-World.github.io)) hinterlegt
@@ -428,24 +432,24 @@ process_qmd <- function(file, fpath_in = "", fpath_out = "") {
 #| echo: false
 #| eval: true
 #| message: false
-# List all data in the Chapter-Folder which start with "Chapter_" and have a ".qmd" suffix
-files <- list.files("Chapters/", pattern = "^Chapter_.*\\.qmd$", full.names = TRUE)
-  
-# Extract the number of chapters from the filenames as integers
-numbers <- as.integer(stringr::str_extract(basename(files), "(?<=Chapter_)[0-9]+"))
-  
-# Sort the chapter-files based on the extracted numbers
-files <- files[order(numbers)]
-
-# For all chapter-files
-for (fileindex in 1:length(files)){
-  # Get the current chapter-file
-  current_file <- files[fileindex]
-  
-  # Process the current chapter
-  C1 <- process_qmd(current_file)
-  
-  # Print the current chapter
-  cat(unlist(C1), sep = '\n')
-}
+# # List all data in the Chapter-Folder which start with "Chapter_" and have a ".qmd" suffix
+# files <- list.files("Chapters/", pattern = "^Chapter_.*\\.qmd$", full.names = TRUE)
+#   
+# # Extract the number of chapters from the filenames as integers
+# numbers <- as.integer(stringr::str_extract(basename(files), "(?<=Chapter_)[0-9]+"))
+#   
+# # Sort the chapter-files based on the extracted numbers
+# files <- files[order(numbers)]
+# 
+# # For all chapter-files
+# for (fileindex in 1:length(files)){
+#   # Get the current chapter-file
+#   current_file <- files[fileindex]
+#   
+#   # Process the current chapter
+#   C1 <- process_qmd(current_file)
+#   
+#   # Print the current chapter
+#   cat(unlist(C1), sep = '\n')
+# }
 ```

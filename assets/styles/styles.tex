@@ -49,21 +49,27 @@
 
 
 %%% --- Adjust Font ---
-\renewcommand{\normalsize}{\fontsize{12pt}{14pt}\selectfont}
+\renewcommand{\normalsize}{\fontsize{10pt}{13pt}\selectfont}
 \makeatletter
 \renewcommand\normalsize{%
   \@setfontsize\normalsize{12pt}{15pt}% 12pt Schrift und 15pt Zeilenabstand
-  \abovedisplayskip 11pt plus 3pt minus 7pt%
-  \abovedisplayshortskip \z@ plus 3pt%
-  \belowdisplayshortskip 8pt plus 3pt minus 4pt%
+  \abovedisplayskip 10pt plus 2pt minus 5pt%
+  \abovedisplayshortskip \z@ plus 2pt%
+  \belowdisplayshortskip 6pt plus 2pt minus 3pt%
   \belowdisplayskip \abovedisplayskip
   \let\@listi\@listI%
 }
 \makeatother
 \normalsize
 
+\makeatletter
+\renewcommand\small{\@setfontsize\small{9pt}{11pt}}
+\renewcommand\footnotesize{\@setfontsize\footnotesize{8pt}{10pt}}
+\makeatother
+
+
 % Increase space between lines
-\setstretch{1.5}
+\setstretch{1.2}
 
 % Remove spacing after lists
 \setlist{nosep}
@@ -196,8 +202,8 @@ arc=10pt,
 colframe=green!75!black,
 % Craete gold background color
 colback=green!5!white,
-% Define Font of title (black font, sans-serife and large
-fonttitle=\sffamily\bfseries\Large,
+% Define Font of title (black font, sans-serife and large)
+fonttitle=\sffamily\bfseries\normalsize,
 % Set content 1 as title
 title=#1,
 % Add space before and after the title inside the box

@@ -96,7 +96,16 @@
 
 
 \renewcommand{\marginnote}[1]{%
-  \oldmarginnote{{\footnotesize\selectfont #1}}%
+  \oldmarginnote{%
+    \begingroup
+    \footnotesize
+    \linespread{0.5}\selectfont
+    \begin{minipage}{\marginparwidth}
+      \raggedright\sloppy
+      #1
+    \end{minipage}
+    \endgroup
+  }%
 }
 
 

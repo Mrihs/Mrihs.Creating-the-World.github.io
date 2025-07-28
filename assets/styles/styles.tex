@@ -95,17 +95,21 @@
 \setlength{\marginparwidth}{2cm}
 
 
+\newsavebox{\margibox}
+\newcommand{\margicontent}{}
+
 \renewcommand{\marginnote}[1]{%
-  \oldmarginnote{%
-    \begingroup
-    \footnotesize
-    \linespread{0.5}\selectfont
-    \begin{minipage}{\marginparwidth}
-      \raggedright\sloppy
+  \sbox{\margibox}{%
+    \vtop{%
+      \hsize=\marginparwidth
+      \footnotesize
+      \linespread{0.8}\selectfont
+      \raggedright
       #1
-    \end{minipage}
-    \endgroup
+    }%
   }%
+  \edef\margicontent{\noexpand\usebox{\noexpand\margibox}}%
+  \oldmarginnote[\margicontent]{\margicontent}%
 }
 
 

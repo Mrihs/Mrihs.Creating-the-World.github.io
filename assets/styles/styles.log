@@ -1,11 +1,11 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.9)  9 APR 2025 18:51
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.7.25)  28 JUL 2025 12:37
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
 **styles.tex
 (./styles.tex
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-03-26>
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-07-19>
 
 ! LaTeX Error: \usepackage before \documentclass.
 
@@ -50,6 +50,18 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.5 \usepackage{
+                atbegshi}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 \usepackage{
                 fancyhdr}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -61,7 +73,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.6 \usepackage[explicit]{
+l.7 \usepackage[explicit]{
                           titlesec}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -73,7 +85,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.7 \usepackage{
+l.8 \usepackage{
                 marginnote}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -85,7 +97,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.8 \usepackage{
+l.9 \usepackage{
                 setspace}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -97,8 +109,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.9 \usepackage{
-                enumitem}
+l.10 \usepackage{
+                 enumitem}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -109,13 +121,109 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.10 \usepackage[ngerman]{
-                          babel}
+l.11 \usepackage[most]{
+                       tcolorbox}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \usepackage{
+                 graphicx}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \usepackage{
+                 tikz}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \usepackage{
+                 pagecolor}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 \usepackage{
+                 anyfontsize}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 \usepackage[table, dvipsnames]{
+                                    xcolor} % KEIN 'html'!
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \usepackage{
+                 transparent}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 \usepackage{
+                 tikzpagenodes}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \usepackage{
+                 ifthen}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 ! Undefined control sequence.
-l.16 \definecolor
+l.26 \definecolor
                  {my_orange}{HTML}{FF8E00}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -130,7 +238,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16 \definecolor{m
+l.26 \definecolor{m
                    y_orange}{HTML}{FF8E00}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -140,17 +248,17 @@ Missing character: There is no y ("79) in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.16 \definecolor{my_
+l.26 \definecolor{my_
                      orange}{HTML}{FF8E00}
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 16.
+(Font)              <7> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 16.
+(Font)              <5> on input line 26.
 ! Extra }, or forgotten $.
-l.16 \definecolor{my_orange}
+l.26 \definecolor{my_orange}
                             {HTML}{FF8E00}
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -158,21 +266,66 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
+! Undefined control sequence.
+l.27 \definecolor
+                 {blender_blue}{HTML}{236192}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.28 \definecolor
+                 {remember_gold}{HTML}{FFDE7E}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.29 \definecolor
+                 {orangeTop}{HTML}{FFA600}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.30 \definecolor
+                 {orangeBottom}{HTML}{FF8E00}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.31 \definecolor
+                 {blue_box}{HTML}{1E6AE2}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.17 
+l.32 
      
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (122.86168pt too wide) in paragraph at lines 16--17
-[]$[]\OML/cmm/m/it/10 range[][]$ 
+Overfull \hbox (740.73601pt too wide) in paragraph at lines 26--32
+[]$[]\OML/cmm/m/it/10 range[][][][][][][][][][][][][][][][][]$ 
  []
 
 ! Undefined control sequence.
-l.24 \geometry
+l.38 \geometry
               {a4paper, left=30mm, top=25mm, bottom=25mm, right=30mm}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -187,7 +340,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24 \geometry{a
+l.38 \geometry{a
                 4paper, left=30mm, top=25mm, bottom=25mm, right=30mm}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -242,14 +395,14 @@ Missing character: There is no 0 ("30) in font nullfont!
 Missing character: There is no m ("6D) in font nullfont!
 Missing character: There is no m ("6D) in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 24--25
+Overfull \hbox (20.0pt too wide) in paragraph at lines 38--39
 []
  []
 
 ! Undefined control sequence.
 <argument> \undefinedpagestyle 
                                
-l.27 \pagestyle{fancy}
+l.41 \pagestyle{fancy}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -258,7 +411,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.30 \fancyhf
+l.44 \fancyhf
              {}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -267,7 +420,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.52 \setstretch
+l.66 \setstretch
                 {1.5}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -282,18 +435,18 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.52 \setstretch{1
+l.66 \setstretch{1
                   .5}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (35.024pt too wide) in paragraph at lines 52--53
+Overfull \hbox (35.024pt too wide) in paragraph at lines 66--67
 []\TU/lmr/m/n/12 1.5 
  []
 
 ! Undefined control sequence.
-l.55 \setlist
+l.69 \setlist
              {nosep}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -308,18 +461,18 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.55 \setlist{n
+l.69 \setlist{n
                osep}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (48.788pt too wide) in paragraph at lines 55--56
+Overfull \hbox (48.788pt too wide) in paragraph at lines 69--70
 []\TU/lmr/m/n/12 nosep 
  []
 
 ! Undefined control sequence.
-l.61 \titlespacing
+l.75 \titlespacing
                   *{\chapter}{0pt}{0pt}{0pt}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -334,13 +487,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.61 \titlespacing*
+l.75 \titlespacing*
                    {\chapter}{0pt}{0pt}{0pt}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.61 \titlespacing*{\chapter
+l.75 \titlespacing*{\chapter
                             }{0pt}{0pt}{0pt}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -349,7 +502,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.62 \titlespacing
+l.76 \titlespacing
                   *{\section}{0pt}{10pt}{0pt}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -358,7 +511,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.62 \titlespacing*{\section
+l.76 \titlespacing*{\section
                             }{0pt}{10pt}{0pt}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -367,7 +520,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.63 \titlespacing
+l.77 \titlespacing
                   *{\subsection}{0pt}{10pt}{0pt}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -376,7 +529,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.63 \titlespacing*{\subsection
+l.77 \titlespacing*{\subsection
                                }{0pt}{10pt}{0pt}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -385,7 +538,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.64 \titlespacing
+l.78 \titlespacing
                   *{\subsubsection}{0pt}{10pt}{0pt}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -394,7 +547,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.64 \titlespacing*{\subsubsection
+l.78 \titlespacing*{\subsubsection
                                   }{0pt}{10pt}{0pt}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -403,22 +556,22 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Overfull \hbox (76.82pt too wide) in paragraph at lines 61--65
+Overfull \hbox (76.82pt too wide) in paragraph at lines 75--79
 []\TU/lmr/m/n/12 *0pt0pt0pt
  []
 
 
-Overfull \hbox (62.7pt too wide) in paragraph at lines 61--65
+Overfull \hbox (62.7pt too wide) in paragraph at lines 75--79
 \TU/lmr/m/n/12 *0pt10pt0pt
  []
 
 
-Overfull \hbox (62.7pt too wide) in paragraph at lines 61--65
+Overfull \hbox (62.7pt too wide) in paragraph at lines 75--79
 \TU/lmr/m/n/12 *0pt10pt0pt
  []
 
 
-Overfull \hbox (62.7pt too wide) in paragraph at lines 61--65
+Overfull \hbox (62.7pt too wide) in paragraph at lines 75--79
 \TU/lmr/m/n/12 *0pt10pt0pt 
  []
 
@@ -429,14 +582,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.78 \renewcommand{\marginnote}
+l.92 \renewcommand{\marginnote}
                                [1]{%
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.89 \titleformat
-                 {\chapter}[display]
+l.103 \titleformat
+                  {\chapter}[hang]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -444,8 +597,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.89 \titleformat{\chapter
-                          }[display]
+l.103 \titleformat{\chapter
+                           }[hang]
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -459,14 +612,23 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.89 \titleformat{\chapter}[
-                            display]
+l.103 \titleformat{\chapter}[
+                             hang]
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.91   {\normalfont\huge
-                        \bfseries}
+l.105   {\normalfont\huge
+                         \bfseries}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.107   {\thechapter
+                    .\quad}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -474,25 +636,30 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! You can't use `macro parameter character #' in horizontal mode.
-l.97   {#
-         1}
+l.111   {#
+          1}
 Sorry, but I'm not programmed to handle this case;
 I'll just pretend that you didn't ask for it.
 If you're in the wrong mode, you might be able to
 return to the right one by typing `I}' or `I$' or `I\par'.
 
 
-Overfull \hbox (62.504pt too wide) in paragraph at lines 89--98
-[]\TU/lmr/m/n/12 [display]
+Overfull \hbox (51.344pt too wide) in paragraph at lines 103--112
+[]\TU/lmr/m/n/12 [hang]
  []
 
 
-Overfull \hbox (16.98pt too wide) in paragraph at lines 89--98
+Overfull \hbox (3.264pt too wide) in paragraph at lines 103--112
+\TU/lmr/m/n/12 .
+ []
+
+
+Overfull \hbox (16.98pt too wide) in paragraph at lines 103--112
 \TU/lmr/m/n/12 0pt
  []
 
 
-Overfull \hbox (5.88pt too wide) in paragraph at lines 89--98
+Overfull \hbox (5.88pt too wide) in paragraph at lines 103--112
 \TU/lmr/m/n/12 1 
  []
 
@@ -503,7 +670,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.105 \renewcommand{\headrulewidth}
+l.119 \renewcommand{\headrulewidth}
                                    {0pt}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -515,7 +682,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.112 \renewcommand{\chaptermark}
+l.126 \renewcommand{\chaptermark}
                                  [1]{\markboth{#1}{}}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -527,13 +694,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.114 \renewcommand{\@chapapp}
+l.128 \renewcommand{\@chapapp}
                               {}
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.153 \fancyhead
+l.160 \fancyhead
                 [LO,RO]{\headerRecto}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -548,15 +715,15 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.153 \fancyhead[
+l.160 \fancyhead[
                  LO,RO]{\headerRecto}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-\headerRecto ->\colorbox 
-                         {my_orange}{\makebox [\textwidth ][l]{\parbox [t]{\...
-l.153 \fancyhead[LO,RO]{\headerRecto
+\headerRecto ->\AddToShipoutPictureFG 
+                                      *{\begin {tikzpicture}[remember pictur...
+l.160 \fancyhead[LO,RO]{\headerRecto
                                     }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -564,35 +731,58 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+! LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 \fancyhead[LO,RO]{\headerRecto
+                                    }
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   [
+l.160 \fancyhead[LO,RO]{\headerRecto
+                                    }
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.160 \fancyhead[LO,RO]{\headerRecto
+                                    }
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.153 \fancyhead[LO,RO]{\headerRecto
+l.160 \fancyhead[LO,RO]{\headerRecto
                                     }
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 153.
+(Font)              <12> on input line 160.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 153.
+(Font)              <8> on input line 160.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 153.
-! Extra }, or forgotten $.
-\headerRecto ->\colorbox {my_orange}
-                                    {\makebox [\textwidth ][l]{\parbox [t]{\...
-l.153 \fancyhead[LO,RO]{\headerRecto
-                                    }
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
+(Font)              <6> on input line 160.
 ! Undefined control sequence.
-<argument> \color 
-                  {white}\bfseries \thepage 
-l.153 \fancyhead[LO,RO]{\headerRecto
+\headerRecto ...t]current page.north east); \node 
+                                                  [anchor=west, text=white, ...
+l.160 \fancyhead[LO,RO]{\headerRecto
                                     }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -600,10 +790,21 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 \fancyhead[LO,RO]{\headerRecto
+                                    }
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
 ! Undefined control sequence.
-<argument> \color {white}\bfseries \thepage 
-                                            
-l.153 \fancyhead[LO,RO]{\headerRecto
+\headerRecto ...orth west) {\phantom {00}}; \node 
+                                                  [anchor=east, text=white, ...
+l.160 \fancyhead[LO,RO]{\headerRecto
                                     }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -611,41 +812,133 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument> \color 
-                  {white}\bfseries \leftmark 
-l.153 \fancyhead[LO,RO]{\headerRecto
-                                    }
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-! Extra }, or forgotten $.
-l.153 \fancyhead[LO,RO]{\headerRecto}
-                                     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 \fancyhead[LO,RO]{\headerRecto
+                                    }
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
+
+! LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.160 \fancyhead[LO,RO]{\headerRecto
+                                    }
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.154 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+l.160 \fancyhead[LO,RO]{\headerRecto
+                                    }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (8306.33832pt too wide) in paragraph at lines 153--154
-[]\TU/lmr/m/n/12 [LO,RO]my$[]\OML/cmm/m/it/12 range[]$ 
+Overfull \hbox (123.812pt too wide) in paragraph at lines 160--161
+[]\TU/lmr/m/n/12 [LO,RO]*[remember
+ []
+
+
+Overfull \hbox (18.924pt too wide) in paragraph at lines 160--161
+\TU/lmr/m/n/12 pic-
+ []
+
+
+Overfull \hbox (24.156pt too wide) in paragraph at lines 160--161
+\TU/lmr/m/n/12 ture,
+ []
+
+
+Overfull \hbox (25.14pt too wide) in paragraph at lines 160--161
+\TU/lmr/m/n/12 over-
+ []
+
+
+Overfull \hbox (18.288pt too wide) in paragraph at lines 160--161
+\TU/lmr/m/n/12 lay]
+ []
+
+
+Overfull \hbox (111.20197pt too wide) in paragraph at lines 160--161
+\TU/lmr/m/n/12 [my$[]\OML/cmm/m/it/12 range\OT1/cmr/m/n/12 ]([\OML/cmm/m/it/12 yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (261.7177pt too wide) in paragraph at lines 160--161
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 30\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 currentpage:northwest\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 rectangle\OT1/cmr/m/n/12 ([\OML/cmm/m/it/12 yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (213.53256pt too wide) in paragraph at lines 160--161
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 60\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 currentpage:northeast\OT1/cmr/m/n/12 ); [\OML/cmm/m/it/12 anchor \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (62.29034pt too wide) in paragraph at lines 160--161
+\OML/cmm/m/it/12 west; text \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (70.89726pt too wide) in paragraph at lines 160--161
+\OML/cmm/m/it/12 white; font \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (51.51834pt too wide) in paragraph at lines 160--161
+\OML/cmm/m/it/12 ; yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (83.25914pt too wide) in paragraph at lines 160--161
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 45\OML/cmm/m/it/12 pt; xshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (233.48361pt too wide) in paragraph at lines 160--161
+\OT1/cmr/m/n/12 90\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 at\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 currentpage:northwest\OT1/cmr/m/n/12 )[]; [\OML/cmm/m/it/12 anchor \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (59.7362pt too wide) in paragraph at lines 160--161
+\OML/cmm/m/it/12 east; text \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (70.89726pt too wide) in paragraph at lines 160--161
+\OML/cmm/m/it/12 white; font \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (51.51834pt too wide) in paragraph at lines 160--161
+\OML/cmm/m/it/12 ; yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (83.25914pt too wide) in paragraph at lines 160--161
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 45\OML/cmm/m/it/12 pt; xshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (272.64702pt too wide) in paragraph at lines 160--161
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 90\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 at\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 currentpage:northeast\OT1/cmr/m/n/12 )[];$
  []
 
 ! Undefined control sequence.
-l.156 \fancyhead
+l.163 \fancyhead
                 [LE,RE]{\headerVerso}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -660,45 +953,68 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.156 \fancyhead[
+l.163 \fancyhead[
                  LE,RE]{\headerVerso}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-\headerVerso ->\colorbox 
-                         {my_orange}{\makebox [\textwidth ][l]{\parbox [t]{\...
-l.156 \fancyhead[LE,RE]{\headerVerso
+\headerVerso ->\AddToShipoutPictureFG 
+                                      *{\begin {tikzpicture}[remember pictur...
+l.163 \fancyhead[LE,RE]{\headerVerso
                                     }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.163 \fancyhead[LE,RE]{\headerVerso
+                                    }
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   [
+l.163 \fancyhead[LE,RE]{\headerVerso
+                                    }
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.163 \fancyhead[LE,RE]{\headerVerso
+                                    }
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.156 \fancyhead[LE,RE]{\headerVerso
+l.163 \fancyhead[LE,RE]{\headerVerso
                                     }
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-! Extra }, or forgotten $.
-\headerVerso ->\colorbox {my_orange}
-                                    {\makebox [\textwidth ][l]{\parbox [t]{\...
-l.156 \fancyhead[LE,RE]{\headerVerso
-                                    }
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 ! Undefined control sequence.
-<argument> \color 
-                  {white}\bfseries \leftmark 
-l.156 \fancyhead[LE,RE]{\headerVerso
+\headerVerso ...t]current page.north east); \node 
+                                                  [anchor=west, text=white, ...
+l.163 \fancyhead[LE,RE]{\headerVerso
                                     }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -706,10 +1022,21 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.163 \fancyhead[LE,RE]{\headerVerso
+                                    }
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
 ! Undefined control sequence.
-<argument> \color 
-                  {white}\bfseries \thepage 
-l.156 \fancyhead[LE,RE]{\headerVerso
+\headerVerso ...west) {Creating the World}; \node 
+                                                  [anchor=east, text=white, ...
+l.163 \fancyhead[LE,RE]{\headerVerso
                                     }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -717,41 +1044,133 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument> \color {white}\bfseries \thepage 
-                                            
-l.156 \fancyhead[LE,RE]{\headerVerso
-                                    }
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-! Extra }, or forgotten $.
-l.156 \fancyhead[LE,RE]{\headerVerso}
-                                     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.163 \fancyhead[LE,RE]{\headerVerso
+                                    }
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
+
+! LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.163 \fancyhead[LE,RE]{\headerVerso
+                                    }
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.157 
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+l.163 \fancyhead[LE,RE]{\headerVerso
+                                    }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (8304.35832pt too wide) in paragraph at lines 156--157
-[]\TU/lmr/m/n/12 [LE,RE]my$[]\OML/cmm/m/it/12 range[]$ 
+Overfull \hbox (121.832pt too wide) in paragraph at lines 163--164
+[]\TU/lmr/m/n/12 [LE,RE]*[remember
+ []
+
+
+Overfull \hbox (18.924pt too wide) in paragraph at lines 163--164
+\TU/lmr/m/n/12 pic-
+ []
+
+
+Overfull \hbox (24.156pt too wide) in paragraph at lines 163--164
+\TU/lmr/m/n/12 ture,
+ []
+
+
+Overfull \hbox (25.14pt too wide) in paragraph at lines 163--164
+\TU/lmr/m/n/12 over-
+ []
+
+
+Overfull \hbox (18.288pt too wide) in paragraph at lines 163--164
+\TU/lmr/m/n/12 lay]
+ []
+
+
+Overfull \hbox (111.20197pt too wide) in paragraph at lines 163--164
+\TU/lmr/m/n/12 [my$[]\OML/cmm/m/it/12 range\OT1/cmr/m/n/12 ]([\OML/cmm/m/it/12 yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (261.7177pt too wide) in paragraph at lines 163--164
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 30\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 currentpage:northwest\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 rectangle\OT1/cmr/m/n/12 ([\OML/cmm/m/it/12 yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (213.53256pt too wide) in paragraph at lines 163--164
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 60\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 currentpage:northeast\OT1/cmr/m/n/12 ); [\OML/cmm/m/it/12 anchor \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (62.29034pt too wide) in paragraph at lines 163--164
+\OML/cmm/m/it/12 west; text \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (70.89726pt too wide) in paragraph at lines 163--164
+\OML/cmm/m/it/12 white; font \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (51.51834pt too wide) in paragraph at lines 163--164
+\OML/cmm/m/it/12 ; yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (83.25914pt too wide) in paragraph at lines 163--164
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 45\OML/cmm/m/it/12 pt; xshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (319.87619pt too wide) in paragraph at lines 163--164
+\OT1/cmr/m/n/12 90\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 at\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 currentpage:northwest\OT1/cmr/m/n/12 )[]; [\OML/cmm/m/it/12 anchor \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (59.7362pt too wide) in paragraph at lines 163--164
+\OML/cmm/m/it/12 east; text \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (70.89726pt too wide) in paragraph at lines 163--164
+\OML/cmm/m/it/12 white; font \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (51.51834pt too wide) in paragraph at lines 163--164
+\OML/cmm/m/it/12 ; yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (83.25914pt too wide) in paragraph at lines 163--164
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 45\OML/cmm/m/it/12 pt; xshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (186.25444pt too wide) in paragraph at lines 163--164
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 90\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 at\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 currentpage:northeast\OT1/cmr/m/n/12 )[];$
  []
 
 ! Undefined control sequence.
-l.161 \fancypagestyle
+l.168 \fancypagestyle
                      {plain}{%
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -766,13 +1185,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.161 \fancypagestyle{p
+l.168 \fancypagestyle{p
                        lain}{%
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 ! Undefined control sequence.
-l.163   \fancyhf
+l.170   \fancyhf
                 {}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -781,7 +1200,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.167   \fancyhead
+l.174   \fancyhead
                   [LO,RO]{\headerRecto}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -790,39 +1209,62 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-\headerRecto ->\colorbox 
-                         {my_orange}{\makebox [\textwidth ][l]{\parbox [t]{\...
-l.167   \fancyhead[LO,RO]{\headerRecto
+\headerRecto ->\AddToShipoutPictureFG 
+                                      *{\begin {tikzpicture}[remember pictur...
+l.174   \fancyhead[LO,RO]{\headerRecto
                                       }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174   \fancyhead[LO,RO]{\headerRecto
+                                      }
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   [
+l.174   \fancyhead[LO,RO]{\headerRecto
+                                      }
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.174   \fancyhead[LO,RO]{\headerRecto
+                                      }
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.167   \fancyhead[LO,RO]{\headerRecto
+l.174   \fancyhead[LO,RO]{\headerRecto
                                       }
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-! Extra }, or forgotten $.
-\headerRecto ->\colorbox {my_orange}
-                                    {\makebox [\textwidth ][l]{\parbox [t]{\...
-l.167   \fancyhead[LO,RO]{\headerRecto
-                                      }
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 ! Undefined control sequence.
-<argument> \color 
-                  {white}\bfseries \thepage 
-l.167   \fancyhead[LO,RO]{\headerRecto
+\headerRecto ...t]current page.north east); \node 
+                                                  [anchor=west, text=white, ...
+l.174   \fancyhead[LO,RO]{\headerRecto
                                       }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -830,10 +1272,21 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174   \fancyhead[LO,RO]{\headerRecto
+                                      }
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
 ! Undefined control sequence.
-<argument> \color {white}\bfseries \thepage 
-                                            
-l.167   \fancyhead[LO,RO]{\headerRecto
+\headerRecto ...orth west) {\phantom {00}}; \node 
+                                                  [anchor=east, text=white, ...
+l.174   \fancyhead[LO,RO]{\headerRecto
                                       }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -841,28 +1294,43 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument> \color 
-                  {white}\bfseries \leftmark 
-l.167   \fancyhead[LO,RO]{\headerRecto
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174   \fancyhead[LO,RO]{\headerRecto
                                       }
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Please use the math alphabet \mathbf instead of the \bfseries command. 
 
-! Extra }, or forgotten $.
-l.167   \fancyhead[LO,RO]{\headerRecto}
-                                       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
+
+! LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174   \fancyhead[LO,RO]{\headerRecto
+                                      }
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.174   \fancyhead[LO,RO]{\headerRecto
+                                      }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
 ! Undefined control sequence.
-l.169   \fancyhead
+l.176   \fancyhead
                   [LE,RE]{\headerVerso}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -871,9 +1339,9 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-\headerVerso ->\colorbox 
-                         {my_orange}{\makebox [\textwidth ][l]{\parbox [t]{\...
-l.169   \fancyhead[LE,RE]{\headerVerso
+\headerVerso ->\AddToShipoutPictureFG 
+                                      *{\begin {tikzpicture}[remember pictur...
+l.176   \fancyhead[LE,RE]{\headerVerso
                                       }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -881,10 +1349,52 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+! LaTeX Error: Environment tikzpicture undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.176   \fancyhead[LE,RE]{\headerVerso
+                                      }
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   [
+l.176   \fancyhead[LE,RE]{\headerVerso
+                                      }
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.176   \fancyhead[LE,RE]{\headerVerso
+                                      }
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.176   \fancyhead[LE,RE]{\headerVerso
+                                      }
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 ! Undefined control sequence.
-<argument> \color 
-                  {white}\bfseries \leftmark 
-l.169   \fancyhead[LE,RE]{\headerVerso
+\headerVerso ...t]current page.north east); \node 
+                                                  [anchor=west, text=white, ...
+l.176   \fancyhead[LE,RE]{\headerVerso
                                       }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -892,10 +1402,21 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.176   \fancyhead[LE,RE]{\headerVerso
+                                      }
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
 ! Undefined control sequence.
-<argument> \color 
-                  {white}\bfseries \thepage 
-l.169   \fancyhead[LE,RE]{\headerVerso
+\headerVerso ...west) {Creating the World}; \node 
+                                                  [anchor=east, text=white, ...
+l.176   \fancyhead[LE,RE]{\headerVerso
                                       }
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -903,20 +1424,828 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-<argument> \color {white}\bfseries \thepage 
-                                            
-l.169   \fancyhead[LE,RE]{\headerVerso
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.176   \fancyhead[LE,RE]{\headerVerso
                                       }
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
+
+! LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.176   \fancyhead[LE,RE]{\headerVerso
+                                      }
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.176   \fancyhead[LE,RE]{\headerVerso
+                                      }
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (45.464pt too wide) in paragraph at lines 168--178
+[]\TU/lmr/m/n/12 plain
+ []
+
+
+Overfull \hbox (103.812pt too wide) in paragraph at lines 168--178
+\TU/lmr/m/n/12 [LO,RO]*[remember
+ []
+
+
+Overfull \hbox (18.924pt too wide) in paragraph at lines 168--178
+\TU/lmr/m/n/12 pic-
+ []
+
+
+Overfull \hbox (24.156pt too wide) in paragraph at lines 168--178
+\TU/lmr/m/n/12 ture,
+ []
+
+
+Overfull \hbox (25.14pt too wide) in paragraph at lines 168--178
+\TU/lmr/m/n/12 over-
+ []
+
+
+Overfull \hbox (18.288pt too wide) in paragraph at lines 168--178
+\TU/lmr/m/n/12 lay]
+ []
+
+
+Overfull \hbox (111.20197pt too wide) in paragraph at lines 168--178
+\TU/lmr/m/n/12 [my$[]\OML/cmm/m/it/12 range\OT1/cmr/m/n/12 ]([\OML/cmm/m/it/12 yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (261.7177pt too wide) in paragraph at lines 168--178
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 30\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 currentpage:northwest\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 rectangle\OT1/cmr/m/n/12 ([\OML/cmm/m/it/12 yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (213.53256pt too wide) in paragraph at lines 168--178
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 60\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 currentpage:northeast\OT1/cmr/m/n/12 ); [\OML/cmm/m/it/12 anchor \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (62.29034pt too wide) in paragraph at lines 168--178
+\OML/cmm/m/it/12 west; text \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (70.89726pt too wide) in paragraph at lines 168--178
+\OML/cmm/m/it/12 white; font \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (51.51834pt too wide) in paragraph at lines 168--178
+\OML/cmm/m/it/12 ; yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (83.25914pt too wide) in paragraph at lines 168--178
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 45\OML/cmm/m/it/12 pt; xshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (233.48361pt too wide) in paragraph at lines 168--178
+\OT1/cmr/m/n/12 90\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 at\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 currentpage:northwest\OT1/cmr/m/n/12 )[]; [\OML/cmm/m/it/12 anchor \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (59.7362pt too wide) in paragraph at lines 168--178
+\OML/cmm/m/it/12 east; text \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (70.89726pt too wide) in paragraph at lines 168--178
+\OML/cmm/m/it/12 white; font \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (51.51834pt too wide) in paragraph at lines 168--178
+\OML/cmm/m/it/12 ; yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (83.25914pt too wide) in paragraph at lines 168--178
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 45\OML/cmm/m/it/12 pt; xshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (272.64702pt too wide) in paragraph at lines 168--178
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 90\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 at\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 currentpage:northeast\OT1/cmr/m/n/12 )[];$
+ []
+
+
+Overfull \hbox (101.832pt too wide) in paragraph at lines 168--178
+\TU/lmr/m/n/12 [LE,RE]*[remember
+ []
+
+
+Overfull \hbox (18.924pt too wide) in paragraph at lines 168--178
+\TU/lmr/m/n/12 pic-
+ []
+
+
+Overfull \hbox (24.156pt too wide) in paragraph at lines 168--178
+\TU/lmr/m/n/12 ture,
+ []
+
+
+Overfull \hbox (25.14pt too wide) in paragraph at lines 168--178
+\TU/lmr/m/n/12 over-
+ []
+
+
+Overfull \hbox (18.288pt too wide) in paragraph at lines 168--178
+\TU/lmr/m/n/12 lay]
+ []
+
+
+Overfull \hbox (111.20197pt too wide) in paragraph at lines 168--178
+\TU/lmr/m/n/12 [my$[]\OML/cmm/m/it/12 range\OT1/cmr/m/n/12 ]([\OML/cmm/m/it/12 yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (261.7177pt too wide) in paragraph at lines 168--178
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 30\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 currentpage:northwest\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 rectangle\OT1/cmr/m/n/12 ([\OML/cmm/m/it/12 yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (213.53256pt too wide) in paragraph at lines 168--178
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 60\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 currentpage:northeast\OT1/cmr/m/n/12 ); [\OML/cmm/m/it/12 anchor \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (62.29034pt too wide) in paragraph at lines 168--178
+\OML/cmm/m/it/12 west; text \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (70.89726pt too wide) in paragraph at lines 168--178
+\OML/cmm/m/it/12 white; font \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (51.51834pt too wide) in paragraph at lines 168--178
+\OML/cmm/m/it/12 ; yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (83.25914pt too wide) in paragraph at lines 168--178
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 45\OML/cmm/m/it/12 pt; xshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (319.87619pt too wide) in paragraph at lines 168--178
+\OT1/cmr/m/n/12 90\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 at\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 currentpage:northwest\OT1/cmr/m/n/12 )[]; [\OML/cmm/m/it/12 anchor \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (59.7362pt too wide) in paragraph at lines 168--178
+\OML/cmm/m/it/12 east; text \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (70.89726pt too wide) in paragraph at lines 168--178
+\OML/cmm/m/it/12 white; font \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (51.51834pt too wide) in paragraph at lines 168--178
+\OML/cmm/m/it/12 ; yshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (83.25914pt too wide) in paragraph at lines 168--178
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 45\OML/cmm/m/it/12 pt; xshift \OT1/cmr/m/n/12 =
+ []
+
+
+Overfull \hbox (186.25444pt too wide) in paragraph at lines 168--178
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 90\OML/cmm/m/it/12 pt\OT1/cmr/m/n/12 ]\OML/cmm/m/it/12 at\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 currentpage:northeast\OT1/cmr/m/n/12 )[];$
+ []
+
+
+Underfull \vbox (badness 6608) has occurred while \output is active []
+
+
+
+[1]
+! Undefined control sequence.
+l.186 \newtcolorbox
+                   {tipp}[1]{
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.186 \newtcolorbox{t
+                     ipp}[1]{
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+l.200 fonttitle=\sffamily\bfseries\Large
+                                        ,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.202 title=#
+             1,
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in horizontal mode.
+l.204 title={\vspace{2.5mm}#
+                            1\vspace{2.5mm}},
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.228     \node
+               [anchor=north west]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.230 ... ([xshift=10pt,yshift=-1.75\baselineskip]
+                                                  frame.north west)
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.230 ... ([xshift=10pt,yshift=-1.75\baselineskip]
+                                                  frame.north west)
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+l.232        {\includegraphics
+                              [width=1cm]{"icons/info.png"}};}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (53.3pt too wide) in paragraph at lines 186--233
+[]\TU/lmr/m/n/12 tipp[1]
+ []
+
+
+Overfull \hbox (15.984pt too wide) in paragraph at lines 186--233
+\TU/lmr/m/n/12 be-
+ []
+
+
+Overfull \hbox (31.66801pt too wide) in paragraph at lines 186--233
+\TU/lmr/m/n/12 fore=,
+ []
+
+
+Overfull \hbox (13.38pt too wide) in paragraph at lines 186--233
+\TU/lmr/m/n/12 af-
+ []
+
+
+Overfull \hbox (26.772pt too wide) in paragraph at lines 186--233
+\TU/lmr/m/n/12 ter=,
+ []
+
+
+Overfull \hbox (15.66pt too wide) in paragraph at lines 186--233
+\TU/lmr/m/n/12 en-
+ []
+
+
+Overfull \hbox (39.168pt too wide) in paragraph at lines 186--233
+\TU/lmr/m/n/12 hanced,
+ []
+
+
+Overfull \hbox (50.94pt too wide) in paragraph at lines 186--233
+\TU/lmr/m/n/12 arc=10pt,
+ []
+
+
+Overfull \hbox (18.276pt too wide) in paragraph at lines 186--233
+\TU/lmr/m/n/12 col-
+ []
+
+
+Overfull \hbox (113.94pt too wide) in paragraph at lines 186--233
+\TU/lmr/m/n/12 frame=green!75!black,
+ []
+
+
+Overfull \hbox (18.276pt too wide) in paragraph at lines 186--233
+\TU/lmr/m/n/12 col-
+ []
+
+
+Overfull \hbox (103.812pt too wide) in paragraph at lines 186--233
+\TU/lmr/m/n/12 back=green!5!white,
+ []
+
+
+Overfull \hbox (24.156pt too wide) in paragraph at lines 186--233
+\TU/lmr/m/n/12 font-
+ []
+
+
+Overfull \hbox (11.748pt too wide) in paragraph at lines 186--233
+\TU/lmr/m/n/12 ti-
+ []
+
+
+Overfull \hbox (25.872pt too wide) in paragraph at lines 186--233
+\TU/lmr/m/n/12 tle=\TU/lmss/bx/n/12 ,
+ []
+
+
+Overfull \hbox (12.324pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 ti-
+ []
+
+
+Overfull \hbox (34.59601pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 tle=1,
+ []
+
+
+Overfull \hbox (12.324pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 ti-
+ []
+
+
+Overfull \hbox (34.59601pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 tle=1,
+ []
+
+
+Overfull \hbox (17.64pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 lef-
+ []
+
+
+Overfull \hbox (9.252pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 t-
+ []
+
+
+Overfull \hbox (17.868pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 up-
+ []
+
+
+Overfull \hbox (64.78801pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 per=2.5cm,
+ []
+
+
+Overfull \hbox (44.12401pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 rounded
+ []
+
+
+Overfull \hbox (20.964pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 cor-
+ []
+
+
+Overfull \hbox (26.064pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 ners,
+ []
+
+
+Overfull \hbox (15.552pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 at-
+ []
+
+
+Overfull \hbox (23.748pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 tach
+ []
+
+
+Overfull \hbox (32.196pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 boxed
+ []
+
+
+Overfull \hbox (12.324pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 ti-
+ []
+
+
+Overfull \hbox (14.052pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 tle
+ []
+
+
+Overfull \hbox (11.448pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 to
+ []
+
+
+Overfull \hbox (21.852pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 top,
+ []
+
+
+Overfull \hbox (31.332pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 frame
+ []
+
+
+Overfull \hbox (20.94pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 hid-
+ []
+
+
+Overfull \hbox (23.268pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 den,
+ []
+
+
+Overfull \hbox (32.196pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 boxed
+ []
+
+
+Overfull \hbox (12.324pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 ti-
+ []
+
+
+Overfull \hbox (14.052pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 tle
+ []
+
+
+Overfull \hbox (35.016pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 style=
+ []
+
+
+Overfull \hbox (17.268pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 en-
+ []
+
+
+Overfull \hbox (42.168pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 hanced,
+ []
+
+
+Overfull \hbox (19.944pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 col-
+ []
+
+
+Overfull \hbox (125.688pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 frame=green!75!black,
+ []
+
+
+Overfull \hbox (19.944pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 col-
+ []
+
+
+Overfull \hbox (119.628pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 back=green!75!black,
+ []
+
+
+Overfull \hbox (54.98401pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 arc=10pt,
+ []
+
+
+Overfull \hbox (22.956pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 bot-
+ []
+
+
+Overfull \hbox (26.256pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 tom-
+ []
+
+
+Overfull \hbox (52.524pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 rule=0pt,
+ []
+
+
+Overfull \hbox (81.912pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 rightrule=0pt,,
+ []
+
+
+Overfull \hbox (27.6pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 over-
+ []
+
+
+Overfull \hbox (25.272pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 lay=
+ []
+
+
+Overfull \hbox (21.552pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 [an-
+ []
+
+
+Overfull \hbox (62.56801pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 chor=north
+ []
+
+
+Overfull \hbox (28.716pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 west]
+ []
+
+
+Overfull \hbox (11.148pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 at
+ []
+
+
+Overfull \hbox (122.14801pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 ([xshift=10pt,yshift=-
+ []
+
+
+Overfull \hbox (91.59601pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 1.75]frame.north
+ []
+
+
+Overfull \hbox (29.73601pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 west)
+ []
+
+
+Overfull \hbox (166.164pt too wide) in paragraph at lines 186--233
+\TU/lmss/bx/n/12 [width=1cm]”icons/info.png”; 
+ []
+
+! Undefined control sequence.
+l.238 \newtcolorbox
+                   [auto counter]{exercise}[2][]{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.238 \newtcolorbox[
+                    auto counter]{exercise}[2][]{
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.248 colframe=blender_
+                       blue,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Command \sffamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.252 fonttitle=\sffamily
+                         \bfseries\Large,
+Please use the math alphabet \mathsf instead of the \sffamily command. 
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.252 fonttitle=\sffamily\bfseries
+                                  \Large,
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
+! Undefined control sequence.
+l.252 fonttitle=\sffamily\bfseries\Large
+                                        ,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.254 title=Übung~\thetcbcounter
+                                ,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.262   \node
+             [anchor=north west]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.264 ...t ([xshift=10pt,yshift=-.65\baselineskip]
+                                                  frame.north west)
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.264 ...t ([xshift=10pt,yshift=-.65\baselineskip]
+                                                  frame.north west)
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+l.266      {\includegraphics
+                            [width=1cm,height=1cm]{"icons/exercise.png"}};},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.298     \node
+               [anchor=west,font=\sffamily\bfseries,color=blue]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Command \sffamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.298     \node[anchor=west,font=\sffamily
+                                          \bfseries,color=blue]
+Please use the math alphabet \mathsf instead of the \sffamily command. 
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.298 ...\node[anchor=west,font=\sffamily\bfseries
+                                                  ,color=blue]
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
+! Undefined control sequence.
+l.300     at (title.east) {{\Large
+                                   #2}};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in math mode.
+l.300     at (title.east) {{\Large #
+                                    2}};
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.302     \node
+               [anchor=north west]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.304 ...([xshift=10pt, yshift=-1.75\baselineskip]
+                                                  frame.north west)
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.304 ...([xshift=10pt, yshift=-1.75\baselineskip]
+                                                  frame.north west)
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+l.306      {\includegraphics
+                            [width=1.5cm]{"icons/exercise.png"}};},#1}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in math mode.
+l.306 ...s[width=1.5cm]{"icons/exercise.png"}};},#
+                                                  1}
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
 ! Extra }, or forgotten $.
-l.170 }
-       
+l.306 ...width=1.5cm]{"icons/exercise.png"}};},#1}
+                                                  
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
 you forgot something else, as in `\hbox{$x}'. In such cases
@@ -926,44 +2255,548 @@ deleted material, e.g., by typing `I$}'.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.171 
+l.307 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no Ü ("DC) in font cmmi12!
+
+Overfull \hbox (46.12401pt too wide) in paragraph at lines 238--307
+ []\TU/lmr/m/n/12 [auto 
+ []
+
+
+Overfull \hbox (99.948pt too wide) in paragraph at lines 238--307
+ \TU/lmr/m/n/12 counter]exercise[2][] 
+ []
+
+
+Overfull \hbox (15.984pt too wide) in paragraph at lines 238--307
+ \TU/lmr/m/n/12 be- 
+ []
+
+
+Overfull \hbox (31.66801pt too wide) in paragraph at lines 238--307
+ \TU/lmr/m/n/12 fore=, 
+ []
+
+
+Overfull \hbox (13.38pt too wide) in paragraph at lines 238--307
+ \TU/lmr/m/n/12 af- 
+ []
+
+
+Overfull \hbox (26.772pt too wide) in paragraph at lines 238--307
+ \TU/lmr/m/n/12 ter=, 
+ []
+
+
+Overfull \hbox (15.66pt too wide) in paragraph at lines 238--307
+ \TU/lmr/m/n/12 en- 
+ []
+
+
+Overfull \hbox (39.168pt too wide) in paragraph at lines 238--307
+ \TU/lmr/m/n/12 hanced, 
+ []
+
+
+Overfull \hbox (50.94pt too wide) in paragraph at lines 238--307
+ \TU/lmr/m/n/12 arc=15pt, 
+ []
+
+
+Overfull \hbox (165.39287pt too wide) in paragraph at lines 238--307
+ \TU/lmr/m/n/12 colframe=blender$[]\OML/cmm/m/it/12 lue; colback \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (163.10284pt too wide) in paragraph at lines 238--307
+ \OML/cmm/m/it/12 blender[]lue\OT1/cmr/m/n/12 !5!\OML/cmm/m/it/12 white; fonttitle \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (39.43999pt too wide) in paragraph at lines 238--307
+ \OML/cmm/m/it/12 ; title \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (170.69193pt too wide) in paragraph at lines 238--307
+ \OML/cmm/m/it/12 bung ; sharpcorners; leftupper \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (87.0025pt too wide) in paragraph at lines 238--307
+ \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 5\OML/cmm/m/it/12 cm; overlay \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (743.07pt too wide) in paragraph at lines 238--307
+ []\OML/cmm/m/it/12 ; roundedcorners \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (278.83069pt too wide) in paragraph at lines 238--307
+ \OML/cmm/m/it/12 northeast; attachboxedtitletotopleft; boxedtitlestyle \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (843.76584pt too wide) in paragraph at lines 238--307
+ []\OML/cmm/m/it/12 ; interiorstyle \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (77.46867pt too wide) in paragraph at lines 238--307
+ []\OML/cmm/m/it/12 ; framestyle \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (321.73296pt too wide) in paragraph at lines 238--307
+ []\OML/cmm/m/it/12 ; overlayunbrokenandfirst \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (862.37009pt too wide) in paragraph at lines 238--307
+ []\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1$ 
+ []
+
+! Undefined control sequence.
+l.312 \newtcolorbox
+                   {remember}[1]{
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.312 \newtcolorbox{r
+                     emember}[1]{
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.322 colframe=remember_
+                        gold,
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.326 fonttitle=\color
+                      {black}\sffamily\bfseries\Large,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Command \sffamily invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 fonttitle=\color{black}\sffamily
+                                      \bfseries\Large,
+Please use the math alphabet \mathsf instead of the \sffamily command. 
+
+
+! LaTeX Error: Command \bfseries invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.326 fonttitle=\color{black}\sffamily\bfseries
+                                               \Large,
+Please use the math alphabet \mathbf instead of the \bfseries command. 
+
+! Undefined control sequence.
+l.326 ...tle=\color{black}\sffamily\bfseries\Large
+                                                  ,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `macro parameter character #' in math mode.
+l.328 title=#
+             1,
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! You can't use `macro parameter character #' in math mode.
+l.330 title={\vspace{2.5mm}#
+                            1\vspace{2.5mm}},
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Undefined control sequence.
+l.354     \node
+               [anchor=north west]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.356 ... ([xshift=10pt,yshift=-1.75\baselineskip]
+                                                  frame.north west)
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.356 ... ([xshift=10pt,yshift=-1.75\baselineskip]
+                                                  frame.north west)
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+! Undefined control sequence.
+l.358        {\includegraphics
+                              [width=1cm]{"icons/remember.png"}};}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten $.
+l.358 ...hics[width=1cm]{"icons/remember.png"}};}}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.359 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Overfull \hbox (45.464pt too wide) in paragraph at lines 161--171
-[]\TU/lmr/m/n/12 plain
+Overfull \hbox (63.324pt too wide) in paragraph at lines 312--359
+ []\TU/lmr/m/n/12 remember[1] 
  []
 
 
-Overfull \hbox (16576.89021pt too wide) in paragraph at lines 161--171
-\TU/lmr/m/n/12 [LO,RO]my$[]\OML/cmm/m/it/12 range[]\OT1/cmr/m/n/12 [\OML/cmm/m/it/12 LE; RE\OT1/cmr/m/n/12 ][]$ 
+Overfull \hbox (15.984pt too wide) in paragraph at lines 312--359
+ \TU/lmr/m/n/12 be- 
  []
 
 
-! LaTeX Error: Command \figurename undefined.
+Overfull \hbox (31.66801pt too wide) in paragraph at lines 312--359
+ \TU/lmr/m/n/12 fore=, 
+ []
+
+
+Overfull \hbox (13.38pt too wide) in paragraph at lines 312--359
+ \TU/lmr/m/n/12 af- 
+ []
+
+
+Overfull \hbox (26.772pt too wide) in paragraph at lines 312--359
+ \TU/lmr/m/n/12 ter=, 
+ []
+
+
+Overfull \hbox (15.66pt too wide) in paragraph at lines 312--359
+ \TU/lmr/m/n/12 en- 
+ []
+
+
+Overfull \hbox (39.168pt too wide) in paragraph at lines 312--359
+ \TU/lmr/m/n/12 hanced, 
+ []
+
+
+Overfull \hbox (50.94pt too wide) in paragraph at lines 312--359
+ \TU/lmr/m/n/12 arc=10pt, 
+ []
+
+
+Overfull \hbox (178.76552pt too wide) in paragraph at lines 312--359
+ \TU/lmr/m/n/12 colframe=remember$[]\OML/cmm/m/it/12 old; colback \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (136.5731pt too wide) in paragraph at lines 312--359
+ \OML/cmm/m/it/12 remember[]old; fonttitle \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (65.93831pt too wide) in paragraph at lines 312--359
+ []\OML/cmm/m/it/12 ; title \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (45.31493pt too wide) in paragraph at lines 312--359
+ \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; title \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (73.6854pt too wide) in paragraph at lines 312--359
+ []\OML/cmm/m/it/12 ; leftupper \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (325.80579pt too wide) in paragraph at lines 312--359
+ \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 5\OML/cmm/m/it/12 cm; roundedcorners; attachboxedtitletotop; boxedtitlestyle \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (619.13594pt too wide) in paragraph at lines 312--359
+ []\OML/cmm/m/it/12 ; overlay \OT1/cmr/m/n/12 = 
+ []
+
+
+Overfull \hbox (582.3208pt too wide) in paragraph at lines 312--359
+ []$ 
+ []
+
+! Undefined control sequence.
+l.402 \AtBeginShipout
+                     {%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.403   \ifthenelse
+                   {%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.404     \NOT
+              \(\value{page}=1 \OR \value{page}=2\)%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.177 \renewcommand{\figurename}
-                                {Abbildung}
-Try typing  <return>  to proceed.
+l.404     \NOT\(
+                \value{page}=1 \OR \value{page}=2\)%
+You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+! Undefined control sequence.
+l.404     \NOT\(\value{page}=1 \OR
+                                   \value{page}=2\)%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-! LaTeX Error: Command \fnum@figure undefined.
+! Undefined control sequence.
+\seitenzahlInFusszeile ->\AddToShipoutPictureFG 
+                                                *{\begin {tikzpicture}[remem...
+l.406     \seitenzahlInFusszeile
+                                %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Environment tikzpicture undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.179 \renewcommand{\fnum@figure}
-                                 {\figurename~\thefigure}
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.406     \seitenzahlInFusszeile
+                                %
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+\seitenzahlInFusszeile ...epage }}}}; \else \node 
+                                                  [anchor=south east, font=\...
+l.406     \seitenzahlInFusszeile
+                                %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\seitenzahlInFusszeile ...font=\normalfont \small 
+                                                  , text=black] at ([xshift=...
+l.406     \seitenzahlInFusszeile
+                                %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\seitenzahlInFusszeile ...outh east) {\thechapter 
+                                                  .\ \leftmark }; \node [anc...
+l.406     \seitenzahlInFusszeile
+                                %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\seitenzahlInFusszeile ...r .\ \leftmark }; \node 
+                                                  [anchor=south west] at ([x...
+l.406     \seitenzahlInFusszeile
+                                %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> \colorbox 
+                     {blue_box}{\parbox [c][1.25\baselineskip ][t]{0.5cm}{\v...
+l.406     \seitenzahlInFusszeile
+                                %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.406     \seitenzahlInFusszeile
+                                %
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<argument> \colorbox {blue_box}
+                               {\parbox [c][1.25\baselineskip ][t]{0.5cm}{\v...
+l.406     \seitenzahlInFusszeile
+                                %
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+<argument> ....28\baselineskip }\centering \color 
+                                                  {white}\bfseries \small \t...
+l.406     \seitenzahlInFusszeile
+                                %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...ring \color {white}\bfseries \small 
+                                                  \thepage \@@par 
+l.406     \seitenzahlInFusszeile
+                                %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> ...or {white}\bfseries \small \thepage 
+                                                  \@@par 
+l.406     \seitenzahlInFusszeile
+                                %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (13.84164pt too wide) in paragraph at lines 406--406
+ []\TU/lmr/m/n/12 white 
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.406     \seitenzahlInFusszeile
+                                %
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.406     \seitenzahlInFusszeile
+                                %
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: \begin{document} ended by \end{tikzpicture}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.406     \seitenzahlInFusszeile
+                                %
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 )
 ! Emergency stop.
@@ -973,11 +2806,11 @@ If that doesn't work, type  X <return>  to quit.
 
  
 Here is how much of TeX's memory you used:
- 56 strings out of 472240
- 795 string characters out of 5527703
- 416770 words of memory out of 5000000
- 26646 multiletter control sequences out of 15000+600000
- 629577 words of font info for 51 fonts, out of 8000000 for 9000
+ 73 strings out of 470407
+ 1149 string characters out of 5487635
+ 426657 words of memory out of 5000000
+ 28473 multiletter control sequences out of 15000+600000
+ 629593 words of font info for 53 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 23i,7n,35p,110b,230s stack positions out of 10000i,1000n,20000p,200000b,200000s
-No pages of output.
+ 24i,6n,32p,126b,249s stack positions out of 10000i,1000n,20000p,200000b,200000s
+Output written on styles.pdf (1 page).

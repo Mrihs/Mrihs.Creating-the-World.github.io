@@ -60,7 +60,7 @@ editor: source
             Michael Rihs\\
             Flurina Brodwolf\\
             Romina Schmid\\
-            Fred Mast\\
+            Fred Mast
           };
       \end{tikzpicture}
     };
@@ -440,6 +440,7 @@ files <- files[order(numbers)]
 
 # For all chapter-files
 for (fileindex in 1:length(files)){
+
   # Get the current chapter-file
   current_file <- files[fileindex]
   

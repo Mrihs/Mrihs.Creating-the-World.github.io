@@ -135,9 +135,9 @@
     \begin{tikzpicture}[remember picture, overlay]
       \fill[my_orange] ([yshift=-30pt]current page.north west) rectangle ([yshift=-60pt]current page.north east);
       \node[anchor=west, text=white, font=\bfseries, yshift=-45pt, xshift=90pt]
-        at (current page.north west) {\thepage};
-      \node[anchor=east, text=white, font=\bfseries, yshift=-45pt, xshift=-90pt]
-        at (current page.north east) {\leftmark};
+        at (current page.north west) {\phantom{00}};
+      \node[anchor=east, text=white, font=\bfseries, yshift=-45pt, xshift=-80pt]
+        at (current page.north east)  {Creating the World};
     \end{tikzpicture}%
   }
 }
@@ -147,10 +147,10 @@
   \AddToShipoutPictureFG*{%
     \begin{tikzpicture}[remember picture, overlay]
       \fill[my_orange] ([yshift=-30pt]current page.north west) rectangle ([yshift=-60pt]current page.north east);
-      \node[anchor=west, text=white, font=\bfseries, yshift=-45pt, xshift=90pt]
-        at (current page.north west) {\leftmark};
+      \node[anchor=west, text=white, font=\bfseries, yshift=-45pt, xshift=80pt]
+        at (current page.north west) {Creating the World};
       \node[anchor=east, text=white, font=\bfseries, yshift=-45pt, xshift=-90pt]
-        at (current page.north east) {\thepage};
+        at (current page.north east) {\phantom{00}};
     \end{tikzpicture}%
   }
 }
@@ -365,28 +365,34 @@ boxed title style={
     \begin{tikzpicture}[remember picture, overlay]
       \ifodd\value{page}
         % Odd pages - box left
-        \node[anchor=south west] at ([xshift=2.0cm]current page.south west) {%
-          \raisebox{-0.15\baselineskip}{%
-            \colorbox{blue_box}{%
-              \parbox[c][1.25\baselineskip][t]{0.5cm}{%
-                \vspace{0.28\baselineskip}% ← etwa 3mm nach unten
-                \centering\color{white}\bfseries\small\thepage%
+        \node[anchor=south west, font=\normalfont\small, text=black] 
+          at ([xshift=29mm, yshift=0.65cm]current page.south west) {\thechapter.\ \leftmark};
+        \node[anchor=south east] 
+          at ([xshift=-2.0cm]current page.south east) {%
+            \raisebox{-0.15\baselineskip}{%
+              \colorbox{blue_box}{%
+                \parbox[c][1.25\baselineskip][t]{0.5cm}{%
+                  \vspace{0.28\baselineskip}%
+                  \centering\color{white}\bfseries\small\thepage%
+                }%
               }%
             }%
-          }%
-        };
+          };
       \else
         % even pages - box right
-        \node[anchor=south east] at ([xshift=-2.0cm]current page.south east) {%
-          \raisebox{-0.15\baselineskip}{%
-            \colorbox{blue_box}{%
-              \parbox[c][1.25\baselineskip][t]{0.5cm}{%
-                \vspace{0.28\baselineskip}% ← etwa 3mm nach unten
-                \centering\color{white}\bfseries\small\thepage%
+        \node[anchor=south east, font=\normalfont\small, text=black] 
+          at ([xshift=-29mm, yshift=0.65cm]current page.south east) {\thechapter.\ \leftmark};
+        \node[anchor=south west] 
+          at ([xshift=2.0cm]current page.south west) {%
+            \raisebox{-0.15\baselineskip}{%
+              \colorbox{blue_box}{%
+                \parbox[c][1.25\baselineskip][t]{0.5cm}{%
+                  \vspace{0.28\baselineskip}%
+                  \centering\color{white}\bfseries\small\thepage%
+                }%
               }%
             }%
-          }%
-        };
+          };
       \fi
     \end{tikzpicture}%
   }

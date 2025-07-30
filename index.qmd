@@ -2,8 +2,6 @@
 title: "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modellierung mit Blender)"
 ---
 
-## Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modellierung mit Blender)
-
 Willkommen auf der Kurs-Website der Lehrveranstaltung "Creating the World: Grafik, Design & Animation (inkl. Einführung in die 3D Modellierung mit Blender). Auf dieser Seite werden die Unterrichts-Materialien des Kurses als Open-Education-Ressourcen zur Verfügung gestellt.
 
 Der Kurs wurde erstmals im Jahr 2021 als Methodenkurs für Masterstudierende der philosophisch-humanwissenschaftlichen Fakultät der Universität angeboten. Der Kurs wurde durch das Förderprogramm "*Der Mensch in der digitalen Transformation*" von der philosophisch-humanwissenschaftlichen Fakultät gefördert. In der Veranstaltung wurde der Prozess der Erstellung virtueller 3D-Objekte, -Welten und Animationen vor dem Hintergrund aktueller Forschung erläutert und durch praktische Beispiele veranschaulicht. Die Studierenden erlernten die Inhalte praxisnah mithilfe der frei zugänglichen Software *Blender* und erhielten dabei fundierte Einblicke in die grundlegenden Merkmale von 3D-Objekten, -Welten und Animationen.
